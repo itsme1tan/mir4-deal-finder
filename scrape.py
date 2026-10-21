@@ -44,7 +44,7 @@ def detail(c):
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
-    c['build']=build(h)
+    c['build']=build(h); c['stats']=stats(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
     return c
@@ -85,10 +85,38 @@ def build(h):
     pets=[dict(n=tr(H.unescape(n)),g=int(gr),t=int(t),img=icon(img)) for gr,n,t,img in
           re.findall(r'equip-card grade-bg-(\d)" title="([^"|]*?) \| [^|]*\| 超越(\d+)">\s*<div[^>]*>\s*<img src="([^"]+)"',sp)]
     return dict(gear=g,skills=sk,spirits=pets)
-FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential']
+STATMAP={'ADDPhysicalDamage':'patk','ADDMagicDamage':'satk','ADDMagicDamagePer':'skill_dmg','AddSmiteSkillDamage':'smite_dmg',
+ 'ADDAllDamagePer':'all_dmg','Critical':'crit','CriticalOutcome':'crit_dmg','Accuracy':'acc','ADDPVPDamagePer':'pvp_dmg','ADDBossDamagePer':'boss_dmg',
+ 'Dodge':'eva','DefensePhysical':'pdef','DefenseMagic':'sdef','FallPVPDamagePer':'pvp_red','AtkNormalMonDamagePer':'pve_dmg'}
+def stats(h):
+    out={}
+    for icon,v in re.findall(r'Ico_Status_(\w+)\.png"[^>]*>\s*<span class="stat-name-text"[^>]*>[^<]+</span>\s*</span>\s*</td>\s*<td class="col-num[^"]*">\s*([\d,.]+)',h):
+        k=STATMAP.get(icon)
+        if k and k not in out: out[k]=num(v)
+    if 'patk' in out or 'satk' in out: out['atk']=max(out.get('patk') or 0,out.get('satk') or 0)
+    if 'pdef' in out or 'sdef' in out: out['def']=(out.get('pdef') or 0)+(out.get('sdef') or 0)
+    return out
+FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats']
 def load_cache():
     try: return json.load(open('cache/features.json'))
     except Exception: return {}
+def rank_builds(lst,sold):
+    """Percentile of main ATK and skill dmg boost within class (pool = listings + recent sales); build score = their mean."""
+    for c in lst+sold:
+        st=c.get('stats') or {}; c['atk']=st.get('atk'); c['skill_dmg']=st.get('skill_dmg'); c['crit_dmg']=st.get('crit_dmg')
+        for k in ('pvp_dmg','def','eva','pvp_red','pdef','sdef','acc','crit'): c[k]=st.get(k)
+    for cls in set(c['cls'] for c in lst):
+        pool=[c for c in lst+sold if c['cls']==cls and c.get('atk') and c.get('skill_dmg') is not None]
+        pr=lambda k,v:100*sum((p.get(k) or 0)<v for p in pool)/max(1,len(pool)-1)
+        for c in lst:
+            if c['cls']==cls and c.get('atk') and c.get('skill_dmg') is not None:
+                c['atk_pct']=round(pr('atk',c['atk'])); c['skd_pct']=round(pr('skill_dmg',c['skill_dmg']))
+                for k in ('pvp_dmg','def','eva'):
+                    if c.get(k) is not None: c[k+'_pct']=round(pr(k,c[k]))
+                c['build_score']=round((c['atk_pct']+c['skd_pct'])/2); c['class_pool']=len(pool)
+    for c in lst:
+        same=[x['build_score'] for x in lst if x['cls']==c['cls'] and x.get('build_score') is not None]
+        c['strong']=bool(c.get('build_score') is not None and sum(v<c['build_score'] for v in same)>=0.75*len(same) if len(same)>=4 else (c.get('build_score') or 0)>=75)
 def main(ps_min=600000, max_new=400):
     usd=json.loads(get('https://api.coingecko.com/api/v3/simple/price?ids=wemix-token&vs_currencies=usd'))['wemix-token']['usd']
     lst=cards('sale',ps_min); sold=cards('sold',int(ps_min*0.85))
@@ -102,7 +130,7 @@ def main(ps_min=600000, max_new=400):
     new=0
     for s in sold:
         k=str(s['id'])
-        if k not in cache and new<max_new:
+        if (k not in cache or 'eva' not in (cache[k].get('stats') or {})) and new<max_new:
             try: detail(s); cache[k]={f:s.get(f) for f in FEATS}; new+=1
             except Exception as e: print('sold detail failed',k,e)
             time.sleep(1.5)
@@ -127,6 +155,7 @@ def main(ps_min=600000, max_new=400):
         c['discount']=round((fv-c['wemix'])/fv*100,1) if fv else None
         c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
         c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
+    rank_builds(lst,sold)
     json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
