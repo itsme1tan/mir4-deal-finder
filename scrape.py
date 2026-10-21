@@ -44,9 +44,47 @@ def detail(c):
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
+    c['build']=build(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
     return c
+import hashlib, os, io
+_DICT=None
+def tr(n):
+    global _DICT
+    if _DICT is None:
+        try: _DICT=json.loads(get('https://nft.hofgamer.com/mir4/api/dict/en'))
+        except Exception: _DICT={}
+    return _DICT.get(n) or n
+ICON_MAP='cache/icons.json'
+def icon(url):
+    """Download once, shrink to 64px webp in icons/, return repo-relative path (falls back to remote URL)."""
+    try: m=json.load(open(ICON_MAP))
+    except Exception: m={}
+    if url in m and (m[url]=='' or os.path.exists(m[url])): return m[url]
+    try:
+        from PIL import Image
+        raw=urllib.request.urlopen(urllib.request.Request(url,headers=UA),timeout=30).read()
+        p='icons/'+hashlib.md5(url.encode()).hexdigest()[:12]+'.webp'; os.makedirs('icons',exist_ok=True)
+        Image.open(io.BytesIO(raw)).convert('RGBA').resize((64,64),Image.LANCZOS).save(p,'WEBP',quality=80)
+        m[url]=p; json.dump(m,open(ICON_MAP,'w'),indent=0); return p
+    except Exception as e:
+        print('icon failed',url,e)
+        if '404' in str(e): m[url]=''; json.dump(m,open(ICON_MAP,'w'),indent=0)
+        return ''
+def panel(h,p):
+    i=h.find(f'id="panel-{p}"')
+    if i<0: return ''
+    s=h[i:]; j=s.find('id="panel-',20); return s[:j] if j>0 else s
+def build(h):
+    g=[dict(n=tr(H.unescape(n)),g=int(gr),img=icon(img),e=int(e or 0),r=int((re.findall(r'Dragon Refine(\d)',rest) or [0])[0]))
+       for gr,n,img,e,rest in re.findall(r'<div class="equip-card grade-bg-(\d)[^"]*wear-card" title="([^"]*)">\s*<div class="equip-icon[^>]*>\s*<img src="([^"]+)".*?<span class="equip-enhance">\+?(\d*)</span>(.*?)</div>\s*</div>\s*</div>',panel(h,'equip'),re.S)]
+    sk=[dict(n=tr(H.unescape(n)),x=-int(x)//128,y=-int(y)//128,t=int(t))
+        for x,y,n,t in re.findall(r'background-position:\s*(-?\d+)px\s+(-?\d+)px;"\s*title="([^"]*)".*?Tier (\d+)',panel(h,'skills'),re.S)]
+    sp=panel(h,'spirit'); i=sp.find('id="spiritEquip-1"'); j=sp.find('id="spiritEquip-',i+10); sp=sp[i:j if j>0 else None] if i>=0 else ''
+    pets=[dict(n=tr(H.unescape(n)),g=int(gr),t=int(t),img=icon(img)) for gr,n,t,img in
+          re.findall(r'equip-card grade-bg-(\d)" title="([^"|]*?) \| [^|]*\| 超越(\d+)">\s*<div[^>]*>\s*<img src="([^"]+)"',sp)]
+    return dict(gear=g,skills=sk,spirits=pets)
 FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential']
 def load_cache():
     try: return json.load(open('cache/features.json'))
