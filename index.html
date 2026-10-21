@@ -75,6 +75,7 @@ fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;
  [...new Set(d.listings.map(c=>c.cls))].sort().forEach(c=>fcls.add(new Option(c,c)));
  document.querySelector('#t thead').innerHTML='<tr>'+COLS.map(([k,l,a])=>`<th class="${a?'l':''}" data-k="${k}">${l}</th>`).join('')+'</tr>';
  document.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(['sel','link','badges','last','why'].includes(k))return;sortD=sortK==k?-sortD:-1;sortK=k;draw()});
+ {const q=new URLSearchParams(location.search).get('sort');if(q)fsort.value=q}
  ['fsort','fcls','fps','fusd','fq','fdeal','fnoflip','fstrong'].forEach(i=>document.getElementById(i).oninput=draw);draw()});
 function rows(){const c=fcls.value,ps=+fps.value||0,u=+fusd.value||1e12,q=fq.value.toLowerCase();
  return D.listings.filter(x=>(!c||x.cls==c)&&x.ps>=ps&&x.usd<=u&&(!q||(x.name+x.server).toLowerCase().includes(q))&&(!fdeal.checked||x.deal)&&(!fnoflip.checked||!x.flip)&&(!fstrong.checked||x.strong))
