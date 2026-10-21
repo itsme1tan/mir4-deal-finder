@@ -74,7 +74,7 @@ function rows(){const c=fcls.value,ps=+fps.value||0,u=+fusd.value||1e12,q=fq.val
  return D.listings.filter(x=>(!c||x.cls==c)&&x.ps>=ps&&x.usd<=u&&(!q||(x.name+x.server).toLowerCase().includes(q))&&(!fdeal.checked||x.deal)&&(!fnoflip.checked||!x.flip))
  .sort((a,b)=>{let A=a[sortK],B=b[sortK];if(A==null)return 1;if(B==null)return -1;return (A>B?1:A<B?-1:0)*sortD})}
 
-const pct=x=>x.discount==null?'–':(x.discount>0?x.discount+'% under':(-x.discount)+'% over');
+const pct=x=>{if(x.discount==null)return '–';const f=x.fair_basis=='full build'?x.fair_full:x.fair_wemix;let d='';if(f&&x.wemix&&x.usd){const v=Math.round(Math.abs(f-x.wemix)*x.usd/x.wemix);d=' ($'+v.toLocaleString()+')'}return x.discount>0?x.discount+'% under'+d:(-x.discount)+'% over'+d};
 function icons(arr,fn){return '<div class="ig">'+arr.map(fn).join('')+'</div>'}
 const RN=['','I','II','III','IV','V','VI','VII','VIII','IX','X'],rn=n=>RN[n]||n;
 function buildHtml(x){const b=x.build;if(!b||!(b.gear||[]).length)return '<div class="cl">Build details not loaded yet.</div>';
