@@ -1,0 +1,89 @@
+Altar of Darkness
+The Altar of Darkness is a war content for the ownership of Altar of Darkness in the Hidden Valley 4th Floor between Valley Owner plus their alliance (as Defense) and opponents not allied with them (as Offense).
+Altar of Darkness
+General Information
+Progression and rules
+Rewards of Altar of Darkness Battle
+Altar of Darkness
+General Information
+Information
+- Battle Area : Bicheon Valley 4F / Snake Valley 4F / Redmoon Valley 4F
+- Battle Schedule: Every Thursday 22:00~23:00 (Based on regional server times)
+- Participants: Defense: Altar Owner (Valley Owner) and alliance
+Offense: Natives or Expedition members not allied with them
+Bicheon Castle Ruling Clan: A clan that reigns the Bicheon Castle
+(*Bicheon Castle Ruling Clan ought to request an alliance to Valley Owner to participate as Defense. If not allied, they will be defined as enemy and can attack the Altar of Darkness)
+Preparation
+- Valley Owner must protect the Altar of Darkness. However, if getting destroyed, the Bicheon Castle Tax rate will be decreased as well as Hidden Valley. Recruit your alliance to protect the Altar of Darkness together.
+-Players can either move to the Hidden Valley 4F to destroy the Altar of Darkness or protect the Altar of Darkness in each Valley's 4F from Offense.
+Progression and rules
+Progression
+1) Destroy [Altar of Darkness] located at each Valley 4F in the targeted server every Thursday from 22:00 ~ 23:00 (Server regional times)
+2) If protected, Tax rate of the storage of a specific Valley and that of Bicheon Castle will not decrease.
+3) If getting destroyed, Tax rate of the storage of a specific Valley and that of Bicheon Castle will decrease. Altar of Darkness will be re-summoned at 21:50 in the same location after 28 days and then you can participate in War from 22:00.
+4) The HP of Altar of Darkness does not recover itself and will only recover when there are Valley Owner(s) in the Circle of Recovery. (Not applied to alliance)
+- The HP recovery speed will increase if there are more Valley Owner(s) in the Circle of Recovery.
+5) In Bicheon Castle Ruling Clan’s case, they will be defined as enemy and can attack Altar of Darkness if not allied with Valley Owner.
+Requirements to success
+-(Offense): Destroy the Altar of Darkness located in each Valley 4F.
+-(Defense): Protect the Altar of Darkness located in each Valley 4F.
+-(Bicheon Castle Ruling Clan): Make their own strategy to attack or defend Altar of Darkness to achieve their goal
+Penalties given upon the destruction of Altar of Darkness
+Stage
+Penalty
+Hidden Valley
+- Decrease in Darksteel Tax rate paid to the Valley Storage (15%→7%)
+Bicheon Castle
+- Decrease in Darksteel Tax rate paid to Bicheon Castle (10%→ 5%)
+※ The penalty on the Tax rate will be maintained until the regeneration of the next Altar of Darkness. (It will last until the regeneration of the next Altar regardless of the change in Valley Owner.
+Status
+Stage
+Status of the Altar
+Impossible to battle
+- Protected : The Altar is unsealed but is currently unavailable to attack.
+- Sealed : The Altar is in sealed status and unattackable
+- Summoning : The Altar is currently getting resummoned after being destroyed from the previous battle  (Decrease in Darksteel Tax rate upon destruction)
+Possible to battle
+- In battle : The Altar is in vulnerable status and is available for battle.
+① An 'icon' that shows the progress of the Altar of Darkness will appear on the left side of the map indicator, on the top right corner of the screen.
+Rewards of Altar of Darkness Battle
+-Offense and Defense can get their rewards upon accomplishing their own goal.
+Side
+Rewards & Results
+Defense
+- (Success) Protected the Altar: No changes in Tax rate of Valley storage and that of Bicheon Castle
+- (Fail) Altar gets destroyed:  Decrease in the Tax rate of Valley storage and Bicheon Castle (Tax rate gets lowered)
+Offense
+- (Success) Destroyed the Altar : Decrease in the Tax rate of targeted Valley Storage and Bicheon Castle in the targeted server (Tax rate gets lowered), and a reward box will be obtainable.
+- (Fail) Failed to destroy the Altar : No change in Darksteel Tax rate
+Bicheon Castle Ruling Clan
+- They can either participate as Defense or Offense to maintain the Tax rate or attack the Altar to decrease the Bicheon Castle Tax rate based on their own strategy.
+*Reward box will be available for both Defense and Offense.
+Document update date : 2022-11-01
+Like
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,57 @@
+Territory
+Territory is a system to manage Clan Territories that can be obtained from War Content of MIR4.
+Hidden Valley
+Bicheon Castle
+Sabuk Castle
+Hidden Valley
+1. Hidden Valley Interface
+You can view information about Valley Capture and Altar of Darkness (Valley-basis War Contents) in detail.
+2. Hidden Valley War Content
+1) Hidden Valley Capture
+- Please refer to [Game Encyclopedia > War > Hidden Valley Capture] for further details.
+2) Altar of Darkness
+- Please refer to [Game Encyclopedia > War > Altar of Darkness] for further details.
+Bicheon Castle
+1. Bicheon Castle Interface
+You can get information about Bicheon Castle Siege, a war content based on Bicheon Castle.
+The Clan Leader who won the Bicheon Castle Siege will become the King and has the right to assign Appoint Positions and Titles. Issue Mandates, register characters to Wanted Lists, and distribute prizes.
+2. Bicheon Castle War Content
+1) Bicheon Castle Siege
+- Please refer to [Game Encyclopedia > War > Bicheon Castle Siege] for further details.
+2) Heist
+- Please refer to [Game Encyclopedia > War > Heist] for further details.
+Sabuk Castle
+1. Sabuk Castle Interface
+- Informations for Sabuk Clash will be viewable here.
+- The leader of the victorious clan in Sabuk Clash becomes the emperor and has the right to assign government positions and adjust Tax Rates, declare Imperial Decree, grant Imperial Title, register characters to Wanted Lists, and distribute prizes.
+2. Sabuk Castle War content
+1) Sabuk Clash
+- Please refer to [Game Encyclopedia > War > Sabuk Clash] for further details.
+Document update date : 2023-03-20
+Like151
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,22 +1,561 @@
-{"updated":"2026-10-20","note":"Only times stated in official MIR4 Global posts. 'server' times follow each region's server clock; 'fixed' times are absolute.",
-"regions":{"ASIA":8,"INMENA":6,"EU":2,"SA":-3,"NA":-4},
-"events":[
-{"name":"Castle Siege Eve (cheer + Drum of Victory)","kind":"event","tz":"server","start":"2026-10-19T01:00","end":"2026-10-24T23:59","src":"https://forum.mir4global.com/post/2674"},
-{"name":"Bicheon Castle Siege","kind":"siege","tz":"server","start":"2026-10-25T22:00","end":"2026-10-25T23:00","detail":"Entry opens 21:50. Date from the Siege Eve notice; time from the official siege rules.","src":"https://forum.mir4global.com/post/2674","src2":"https://forum.mir4global.com/post/1093"},
-{"name":"Bicheon Castle Siege (next, 4-week cycle)","kind":"siege","tz":"server","start":"2026-11-22T22:00","end":"2026-11-22T23:00","detail":"Projected from the official every-4-weeks rule, not yet announced.","projected":true,"src":"https://forum.mir4global.com/post/1093"},
-{"name":"Cheonho's Gift Box drops","kind":"event","tz":"fixed","off":8,"start":"2026-10-13T09:30","end":"2026-10-26T23:59","detail":"Start is the Oct 13 maintenance end (ASIA 9:30).","src":"https://forum.mir4global.com/post/2667"},
-{"name":"Full Moon 14-Day Check-in","kind":"event","tz":"fixed","off":8,"start":"2026-09-29T00:00","end":"2026-10-26T23:59","src":"https://forum.mir4global.com/post/2648"},
-{"name":"Piggio's Happy Recharge","kind":"event","tz":"fixed","off":8,"start":"2026-09-29T00:00","end":"2026-10-26T23:59","src":"https://forum.mir4global.com/post/2657"},
-{"name":"Ringring's 28-Day Check-in","kind":"event","tz":"fixed","off":8,"start":"2026-09-15T00:00","end":"2026-10-26T23:59","src":"https://forum.mir4global.com/post/2633"},
-{"name":"Bountiful Festival 14-Day Check-in","kind":"event","tz":"fixed","off":8,"start":"2026-10-13T09:30","end":"2026-11-09T23:59","src":"https://forum.mir4global.com/post/2666"},
-{"name":"Yiun's 28-Day Accumulated Check-in II","kind":"event","tz":"fixed","off":8,"start":"2026-09-29T00:00","end":"2026-11-09T23:59","src":"https://forum.mir4global.com/post/2653"},
-{"name":"Boosting World Piggio's Happy Recharge","kind":"event","tz":"fixed","off":8,"start":"2026-10-13T09:30","end":"2026-11-09T23:59","src":"https://forum.mir4global.com/post/2669"},
-{"name":"Yiun's Bountiful Festival Training shop","kind":"event","tz":"fixed","off":8,"start":"2026-10-13T09:30","end":null,"end_text":"Nov 10 update maintenance (time not announced yet)","end_date":"2026-11-10","src":"https://forum.mir4global.com/post/2668"},
-{"name":"Boosting World Welcome Check-in & Level Box","kind":"event","tz":"fixed","off":8,"start":"2026-08-18T17:00","end":"2026-11-23T23:59","src":"https://forum.mir4global.com/post/2586"},
-{"name":"Yiun's Boosting World Scroll","kind":"event","tz":"fixed","off":8,"start":"2026-08-18T17:00","end":"2026-12-31T23:59","src":"https://forum.mir4global.com/post/2586"},
-{"name":"Boosting World Mail Rewards (Sat and Sun)","kind":"event","tz":"fixed","off":8,"start":"2026-08-22T12:30","end":"2027-01-03T23:59","src":"https://forum.mir4global.com/post/2586"},
-{"name":"Boosting World Mission Pass, Level and Power Score rewards","kind":"event","tz":"fixed","off":8,"start":"2026-08-18T17:00","end":null,"end_text":"Jan 5, 2027 update maintenance (time not announced yet)","end_date":"2027-01-05","src":"https://forum.mir4global.com/post/2586"}
-],
-"recurring":[
-{"name":"Daily reset (daily limits like Drum of Victory)","tz":"server","time":"00:00","src":"https://forum.mir4global.com/post/2674"}
-]}
+{
+ "updated": "2026-10-20",
+ "note": "Only times stated in official MIR4 Global posts. 'server' times follow each region's server clock; 'fixed' times are absolute.",
+ "regions": {
+  "ASIA": 8,
+  "INMENA": 6,
+  "EU": 2,
+  "SA": -3,
+  "NA": -4
+ },
+ "events": [
+  {
+   "name": "Castle Siege Eve (cheer + Drum of Victory)",
+   "kind": "event",
+   "tz": "server",
+   "start": "2026-10-19T01:00",
+   "end": "2026-10-24T23:59",
+   "src": "https://forum.mir4global.com/post/2674"
+  },
+  {
+   "name": "Bicheon Castle Siege",
+   "kind": "siege",
+   "tz": "server",
+   "start": "2026-10-25T22:00",
+   "end": "2026-10-25T23:00",
+   "detail": "Entry opens 21:50. Date from the Siege Eve notice; time from the official siege rules.",
+   "src": "https://forum.mir4global.com/post/2674",
+   "src2": "https://forum.mir4global.com/post/1093"
+  },
+  {
+   "name": "Bicheon Castle Siege (next, 4-week cycle)",
+   "kind": "siege",
+   "tz": "server",
+   "start": "2026-11-22T22:00",
+   "end": "2026-11-22T23:00",
+   "detail": "Projected from the official every-4-weeks rule, not yet announced.",
+   "projected": true,
+   "src": "https://forum.mir4global.com/post/1093"
+  },
+  {
+   "name": "Cheonho's Gift Box drops",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": "2026-10-26T23:59",
+   "detail": "Start is the Oct 13 maintenance end (ASIA 9:30).",
+   "src": "https://forum.mir4global.com/post/2667"
+  },
+  {
+   "name": "Full Moon 14-Day Check-in",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-09-29T00:00",
+   "end": "2026-10-26T23:59",
+   "src": "https://forum.mir4global.com/post/2648"
+  },
+  {
+   "name": "Piggio's Happy Recharge",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-09-29T00:00",
+   "end": "2026-10-26T23:59",
+   "src": "https://forum.mir4global.com/post/2657"
+  },
+  {
+   "name": "Ringring's 28-Day Check-in",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-09-15T00:00",
+   "end": "2026-10-26T23:59",
+   "src": "https://forum.mir4global.com/post/2633"
+  },
+  {
+   "name": "Bountiful Festival 14-Day Check-in",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": "2026-11-09T23:59",
+   "src": "https://forum.mir4global.com/post/2666"
+  },
+  {
+   "name": "Yiun's 28-Day Accumulated Check-in II",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-09-29T00:00",
+   "end": "2026-11-09T23:59",
+   "src": "https://forum.mir4global.com/post/2653"
+  },
+  {
+   "name": "Boosting World Piggio's Happy Recharge",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": "2026-11-09T23:59",
+   "src": "https://forum.mir4global.com/post/2669"
+  },
+  {
+   "name": "Yiun's Bountiful Festival Training shop",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": null,
+   "end_text": "Nov 10 update maintenance (time not announced yet)",
+   "end_date": "2026-11-10",
+   "src": "https://forum.mir4global.com/post/2668"
+  },
+  {
+   "name": "Boosting World Welcome Check-in & Level Box",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-08-18T17:00",
+   "end": "2026-11-23T23:59",
+   "src": "https://forum.mir4global.com/post/2586"
+  },
+  {
+   "name": "Yiun's Boosting World Scroll",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-08-18T17:00",
+   "end": "2026-12-31T23:59",
+   "src": "https://forum.mir4global.com/post/2586"
+  },
+  {
+   "name": "Boosting World Mail Rewards (Sat and Sun)",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-08-22T12:30",
+   "end": "2027-01-03T23:59",
+   "src": "https://forum.mir4global.com/post/2586"
+  },
+  {
+   "name": "Boosting World Mission Pass, Level and Power Score rewards",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-08-18T17:00",
+   "end": null,
+   "end_text": "Jan 5, 2027 update maintenance (time not announced yet)",
+   "end_date": "2027-01-05",
+   "src": "https://forum.mir4global.com/post/2586"
+  },
+  {
+   "name": "Castle Siege bidding (auction)",
+   "kind": "siege",
+   "tz": "server",
+   "start": "2026-10-22T00:00",
+   "end": "2026-10-23T23:59",
+   "detail": "Thu 00:00 to Fri 23:59 of siege week; can extend up to 6 hours. Dates derived from the Oct 25 siege and the official auction rule.",
+   "src": "https://forum.mir4global.com/post/1093"
+  },
+  {
+   "name": "Sage Sovereign White Tiger special summon",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": null,
+   "end_text": "Nov 10 update (time not announced yet)",
+   "end_date": "2026-11-10",
+   "src": "https://forum.mir4global.com/post/2664"
+  },
+  {
+   "name": "Scripture Hall Skill Tome summon event",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-13T09:30",
+   "end": null,
+   "end_text": "Oct 27 update (time not announced yet)",
+   "end_date": "2026-10-27",
+   "src": "https://forum.mir4global.com/post/2664"
+  },
+  {
+   "name": "Next update maintenance",
+   "kind": "maint",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-27T00:00",
+   "end": null,
+   "end_text": "Oct 27 (UTC+8); exact window not announced yet. Recent ones: ASIA 07:00-09:30 = NA Mon 19:00-21:30.",
+   "end_date": "2026-10-27",
+   "date_only": true,
+   "src": "https://forum.mir4global.com/post/2664",
+   "src2": "https://forum.mir4global.com/post/2670"
+  }
+ ],
+ "recurring": [
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Resets",
+   "name": "Daily reset (daily limits, e.g. Siege Eve drums)",
+   "days": null,
+   "times": [
+    "00:00"
+   ],
+   "src": "https://forum.mir4global.com/post/2674"
+  },
+  {
+   "tz": "fixed",
+   "official": true,
+   "cat": "Resets",
+   "name": "Raid / Boss Raid free entries reset",
+   "off": 8,
+   "days": null,
+   "times": [
+    "00:00"
+   ],
+   "src": "https://forum.mir4global.com/post/42",
+   "note": "Same instant on every region: 00:00 UTC+8."
+  },
+  {
+   "tz": "fixed",
+   "official": true,
+   "cat": "Resets",
+   "name": "Arena and Competitive Raid entries reset",
+   "off": 8,
+   "days": null,
+   "times": [
+    "00:00"
+   ],
+   "src": "https://forum.mir4global.com/post/2325",
+   "src2": "https://forum.mir4global.com/post/2401",
+   "note": "16:00 UTC = NA 12:00 pm server time."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Resets",
+   "name": "Competitive Raid weekly rotation",
+   "days": [
+    1
+   ],
+   "times": [
+    "00:00"
+   ],
+   "src": "https://forum.mir4global.com/post/2401"
+  },
+  {
+   "tz": "server",
+   "official": false,
+   "cat": "Resets",
+   "name": "Weekly reset (Mirage Ship progress etc.)",
+   "days": [
+    1
+   ],
+   "times": [
+    "00:00"
+   ],
+   "src": "https://raidhours.com/en/guide/mir4-mirage-ship/",
+   "note": "Community, unverified: \"Monday server time\"; exact hour not stated, 00:00 assumed."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Resets",
+   "name": "Tower of Black Dragon reset",
+   "days": null,
+   "times": [
+    "04:00"
+   ],
+   "src": "https://forum.mir4global.com/post/1029"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "Special Boss: Demon Spider of Hell Krukan",
+   "days": [
+    1
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/776"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "World Boss: Black Flame Arch Demon Nerkan (attackable)",
+   "days": [
+    2
+   ],
+   "times": [
+    "23:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/703",
+   "note": "Spawns sealed; alert at 19:00, active from 23:00. Random server."
+  },
+  {
+   "tz": "fixed",
+   "official": true,
+   "cat": "World bosses",
+   "name": "Helbar (Redmoon Purgatory)",
+   "off": 8,
+   "days": [
+    3
+   ],
+   "times": [
+    "23:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/2096",
+   "note": "Official: Wednesday 23:00 UTC+8 (same instant on all regions)."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "World Boss: Violet Demon God Turkan (attackable)",
+   "days": [
+    4
+   ],
+   "times": [
+    "23:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/703",
+   "note": "Spawns sealed; alert at 19:00, active from 23:00. Random server."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "Special Boss: Crimson Emperor Utukan",
+   "days": [
+    5
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/776"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "Redmoon Purgatory quest bosses",
+   "days": null,
+   "times": [
+    "00:00",
+    "06:00",
+    "12:00",
+    "18:00"
+   ],
+   "src": "https://forum.mir4global.com/post/2096"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "World bosses",
+   "name": "Tower of Black Dragon field boss + chest",
+   "days": null,
+   "times": [
+    "11:00",
+    "17:00",
+    "23:00"
+   ],
+   "src": "https://forum.mir4global.com/post/1029"
+  },
+  {
+   "tz": "server",
+   "official": false,
+   "cat": "World bosses",
+   "name": "Secret Peak Lower Red boss",
+   "days": null,
+   "times": [
+    "01:00",
+    "07:00",
+    "13:00",
+    "19:00"
+   ],
+   "dur": 15,
+   "src": "https://raidhours.com/en/guide/mir4-secret-peak-bosses/",
+   "note": "Community, unverified; may vary by server."
+  },
+  {
+   "tz": "server",
+   "official": false,
+   "cat": "World bosses",
+   "name": "Secret Peak Upper Red boss",
+   "days": null,
+   "times": [
+    "04:00",
+    "10:00",
+    "16:00",
+    "22:00"
+   ],
+   "dur": 15,
+   "src": "https://raidhours.com/en/guide/mir4-secret-peak-bosses/",
+   "note": "Community, unverified; may vary by server."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Wars",
+   "name": "Hidden Valley Capture (Valley war)",
+   "days": [
+    3
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/1094"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Wars",
+   "name": "Attack of the Living Wraiths",
+   "days": [
+    4
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/233"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Wars",
+   "name": "Altar of Darkness battle",
+   "days": [
+    4
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/1095",
+   "note": "Altar respawns 28 days after it is destroyed."
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Wars",
+   "name": "Heist",
+   "days": [
+    5
+   ],
+   "times": [
+    "22:00"
+   ],
+   "dur": 60,
+   "src": "https://forum.mir4global.com/post/879"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Wars",
+   "name": "Domination Server open windows",
+   "days": null,
+   "times": [
+    "09:00",
+    "15:00",
+    "21:00"
+   ],
+   "dur": 240,
+   "src": "https://forum.mir4global.com/post/1028"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Clan",
+   "name": "Expedition (daily, 4 h)",
+   "days": null,
+   "times": [
+    "21:00"
+   ],
+   "dur": 240,
+   "src": "https://forum.mir4global.com/post/748"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Clan",
+   "name": "Clan Expedition (all Saturday)",
+   "days": [
+    6
+   ],
+   "times": [
+    "00:00"
+   ],
+   "dur": 1440,
+   "src": "https://forum.mir4global.com/post/290"
+  },
+  {
+   "tz": "server",
+   "official": true,
+   "cat": "Clan",
+   "name": "Clan Challenge (all Sunday)",
+   "days": [
+    0
+   ],
+   "times": [
+    "00:00"
+   ],
+   "dur": 1440,
+   "src": "https://forum.mir4global.com/post/290"
+  },
+  {
+   "tz": "server",
+   "official": false,
+   "cat": "Dungeons",
+   "name": "Magic Square: Chamber of Fury",
+   "days": null,
+   "times": [
+    "00:30",
+    "03:30",
+    "12:30",
+    "15:30",
+    "18:30"
+   ],
+   "dur": 60,
+   "src": "https://raidhours.com/en/guide/mir4-server-time/",
+   "note": "Community, unverified."
+  },
+  {
+   "tz": "server",
+   "official": false,
+   "cat": "Dungeons",
+   "name": "Magic Square: Chamber of Frenzy",
+   "days": null,
+   "times": [
+    "02:00",
+    "08:00",
+    "14:00",
+    "20:00"
+   ],
+   "dur": 60,
+   "src": "https://raidhours.com/en/guide/mir4-server-time/",
+   "note": "Community, unverified."
+  }
+ ],
+ "not_scheduled": [
+  "Bicheon Castle Siege: every 4 weeks (dated cards above).",
+  "Sabuk Clash: every 8 weeks on the Domination server, 3 Sundays 22:00-23:00 after a Castle Siege week (F1239). Which siege starts the next cycle is not announced, so no timer.",
+  "Clan Match: every 8 weeks (F1757); next date not announced.",
+  "Drakazan (Domination world boss): dormant Monday 02:00, wakes on a random weekday, appears 21:10 on its day (F703). Random, so no timer.",
+  "Valley of Life and Death: biweekly seasons; current season dates not published."
+ ],
+ "dst_note": "Server clocks are fixed offsets and do not use daylight saving: a Feb 2026 notice still lists NA as UTC-4 (F2377). Pacific time leaves daylight saving on Sun Nov 1, 2026 (UTC-7 to UTC-8), so from Nov 1 every server-time event shows 1 hour EARLIER in PT (e.g. NA 22:00 = 7:00 pm PT now, 6:00 pm PT after Nov 1). The countdowns handle this automatically."
+}

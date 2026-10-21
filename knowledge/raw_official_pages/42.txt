@@ -1,0 +1,68 @@
+Raid
+Raids are contents in which you face various boss monsters that appeared in the normal fields. Cooperating with other players in a party to defeat the boss is recommended.
+Basic Information
+Raid
+Boss Raid
+Hell Raid
+Basic Information
+- Upon proceeding with the Raid/Boss Raid/Hell Raid, you can create a party with Dragonians within your region to raid various Boss Monsters.
+- To participate in the raid, you need to create or join a Raid Party from each raid tab or that of Recruit.
+- When joined, You can communicate with Raid Party members from other servers through the Raid Party Chat.
+- When entered, the name of the home server and that of their character will be simultaneously displayed.
+* You cannot enter a raid while using Clan Expedition/Clan Challenge/Bicheon Castle Siege/Heist/Sabuk Clash.
+* You cannot access Clan Expedition/Clan Challenge/Bicheon Castle Siege/Heist/Sabuk Clash while joining in a Raid Party.
+Raid
+- Tap Raid > Raid tab in the Menu.
+- Raid is unlocked when your character reaches the Entry Power Score.
+- You have 2 free daily entries for Raids, and the daily free entry counter resets everyday at 12 am. (UTC+8)
+- When you do not have enough tickets to enter, you can recharge additional Raid Tickets with Gold up to 2 times a day.
+- Tapping the 'Search Raids' button opens the Recruit Member window where you can view parties that are looking for members, and tapping the 'Create Raid' button lets you create a Raid party.
+Boss Raid
+- Tap Raid > Boss Raid tab in the Menu.
+- The list of Boss Raid is shown on the left of the screen, and each Boss Raid is unlocked when your character reaches the Entry Power Score.
+- You can see the player limit, Entry Power Score, and boss level of the selected Boss Raid on the right of the screen.
+- You have 1 free daily entry for Boss Raids, and the daily free entry counter is reset daily at 12 am. (UTC+8)
+- When you do not have enough tickets to enter, you can tap the Recharge button to recharge Boss Raid Tickets with Gold up to 2 times a day.
+- Tapping the 'Search Raids' button at the bottom right of the screen opens the Recruit Member window where you can view parties that are looking for members, and tapping the 'Create Raid' button lets you create a Boss Raid party.
+Hell Raid
+1. Introduction
+- You can move to the field by touching Menu > Raid > Hell Raid.
+- Bosses in Hell Raid will be stronger compared to Boss Raid.
+- It will be opened upon reaching level 90, and you can enter the Hell Raid using Hell Raid Ticket.
+※ Free Entry Ticket will not be provided for the Hell Raid.
+2. Way to obtain the Entry Ticket
+●  You can obtain 1 Hell Raid ticket upon completion of request from NPC <Bicheon Castle Centurion> Back Beomryeong in Bicheon Castle.
+●  It will be obtainable from 'Daily Tasks Reward Chest' that can be obtained for completing the Daily tasks 10 times (Characters above level 90 only)
+3. Interface
+- You can view Hell Raid list at the left, and each Hell Raid will be opened upon accomplishing the Required Power Score.
+- Max Number of players, Required Power Score, and Boss Level will be viewable at the right window.
+- No Free Entry count exists, and you have to own the Entry ticket for the Hell Raid.
+- Touch 'Search Raids' button located at the bottom right corner of the window to check parties created for a specific Hell Raid in Recruit member, and you can create a party for Hell Raid by touching 'Create a Raid' button.
+Document update date : 2023-08-08
+Like98
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

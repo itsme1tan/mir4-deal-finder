@@ -1,0 +1,131 @@
+Clan
+In Mir 4, you can cooperate and make friends with other players through clans. Build your clan into a mighty and influential powerhouse.
+Join/Create Clan
+Clan Info
+Member
+Clan Management
+Support
+Supply
+Technique
+Shop
+Warehouse
+Kill
+Diplomacy
+Clan Cooperation Mission
+Join/Create Clan
+- Tap Clan> Clan List tab in the Menu to open the Clan List window.
+① Tap the Search button to search for clans with keywords.
+② View the Clan Power Score, level, number of members, join method, and introduction.
+③ Tap the clan you want to join and click the Join Request button to apply for the clan.
+※. If the clan's join method is 'Free', you join the clan automatically. If it is 'Approval', then you need the clan's approval to join.
+④ Creating a clan: Tap the Clan icon at the top right or click Clan > Clan Info tab in the Menu, then press the Create button in the window that opens to create a new clan.
+Your character has to be at least Lv. 10, and the cost of creating a clan is 50,000 Copper.
+Clan Info
+- Tap the Clan icon at the top right of the main screen or click Clan - Clan Info tab in the Menu.
+- View the clan's basic information, introduction, Clan Techniques, and other clan features.
+Member
+- Tap the Member tab in the Clan Info window.
+- You can view member information by rank.
+- Tap Member to open the Member Info window and set or change the Aliases of members.
+- You can set ranks to members in the Member Info window, and up to 8 Elders can be appointed.
+- You can give Elders permission for Personnel, Finance, Diplomacy, or Warfare.
+- You can transfer the clan leadership to an Elder.
+- An Elder can appoint another member as a Chaperone and share their authority.
+Clan Management
+- Tap the Clan Management tab in the Clan Info tab to open the Clan Management window.
+① Change the clan's name and crest, and check the clan leader and the number of members.
+② Set whether the clan is recruiting, the method of joining the clan, and the Power Score requirement.
+③ Set whether to receive Alliance Requests.
+④ Disband or leave the clan.
+⑤ Tapping the Join Requests tab shows the players who are awaiting to join the clan.
+Support
+- Tap the Support tab in the Clan Info window. - You can check the requests for support made by clan members.
+- You can support other members' Unsealing or Conquest building promotion efforts in return for Clan Coins. You can earn up to 150 Clan Coins a day.
+Supply
+- You can report activities completed by playing the game such as gathering and entering contents.
+- All activities can be completed and reported a set number of times each day.
+- Daily counter is reset at 12 am(UTC+8), and the progress rate does not reset if you do not claim rewards via reporting.
+- Tap the 'Clan Gift' tab to open the Clan Gift window.
+Tap the Receive Gift button within the time limit to claim the obtained boxes.
+As your Gift level increases by claiming gifts, the rewards from Blessed Boxes increase at certain levels, which can be obtained by collecting Golden Keys.
+Technique
+- Tap the Technique tab in the Clan Info window.
+- You can use your resources to level up Clan Techniques.
+- Clan Techniques include Clan Advancement/Arcane Development/Secret War Technique, and leveling up each technique brings various benefits to the clan and members.
+Shop
+- Tap the Shop icon in the Clan Info window.
+- The Leader and an Elder with Finance permission can spend the Clan Fund to register items in the shop, which can be purchased with Clan Coins.
+Warehouse
+- Tap the Warehouse icon in the Clan Info window.
+- You can check the resources owned by the clan. The Leader and the member with Finance permission can distributes the resources in the Clan Warehouse to clan members or other users.
+- Members who donate resources to the clan receive a certain proportion of their donations back in Clan EXP and Clan Coins.
+- Members can donate Copper, Darksteel, Energy, and Gold to their clan.
+Kill
+- Tap the Kill icon in the Clan Info window.
+- The Leader and the member with Diplomacy permission can register any character except clan members as a Kill Target, and registering someone as a Kill Target consumes resources in the Clan Warehouse. Also, you receive rewards each time you hunt down a Kill Target.
+- Characters registered as Kill Targets are removed from the list when they are defeated.
+Diplomacy
+- Tapping the Diplomacy icon in the Clan Info window opens the Diplomacy window, where you can view the list of allied and hostile clans.
+- The Leader or the member with Diplomacy permission can request or break an alliance.
+- The Leader or the member with Diplomacy permission can declare war against other clans.
+There are rewards for defeating members of warring clans, and Alignment penalty does not apply.
+The hostile relation is removed automatically when the duration of war ends.
+Clan Cooperation Mission
+Explanation
+Clan Cooperation Mission is a clan-based content proceeding specific missions, accumulating Cooperation points, summoning and defeating the Boss that is randomly set every week to obtain rewards.
+Requirements
+You have to accomplish 'Path of Cooperation' level above 1 in Clan Technology to access Clan Cooperation Mission.
+Way to access
+You can move to Clan Cooperation Mission through Clan Info  → [Support] → [Cooperation] tab which is located at the top.
+Interface
+① You can view Mission details and obtainable Cooperation points and rewards.
+- Clan Cooperation Mission will be changed upon accumulating the Cooperation point to its maximum or at 00:00 (UTC+8) every Monday.
+② You can view the amount of accumulated weekly cooperation points and Cooperation Boss that is specifically set.
+- Cooperation Boss list will be differentiated with the following level of 'Path of Cooperation' and Cooperation Boss will be randomly selected from the list at 00:00 (UTC+8) every Monday.
+- Upon accumulating the Cooperation point to maximum, Available Summons for Cooperation Boss will be increased by 1.
+③ You can view the progress of the Daily Cooperation Mission, and the mission can be completed up to 5 missions per day.
+④ Click [Cooperation Status] to check the accumulation progress of each clan members.
+⑤ Click [Cooperation Boss] to check the information about Cooperation Boss.
+Cooperation Boss
+① You can view Cooperation Boss that can be summoned in your clan.
+- You can defeat stronger bosses with the following growth of 'Path of Cooperation' skill level.
+② You can view information about the selected Cooperation Boss.
+- Available Summons will be reset at 00:00 (UTC+8), every Monday.
+③ You can view obtainable rewards upon defeating the Cooperation Boss.
+- MVP reward will be provided to the player who dealt the last strike to the Cooperation Boss, and Defeat rewards will be provided for clan members.
+- Reward box will not appear after defeating the Cooperation Boss, and rewards will be provided via mail.
+- Clan members who have joined earlier than 24 hours cannot obtain a Defeat reward.
+- If a clan member who deserved to obtain the Defeat reward has participated in Expedition or Domination Server, rewards will be provided after returning to the Home server.
+④ Click the [Move] button to move the Cooperation Boss Summon Area.
+Cooperation Boss Summons
+- Cooperation boss can be summoned by interacting with Summon object after reaching the Summon Area.
+※ Cooperation Boss can be summoned from 'Leader' or Clan members who have 'War' permission.
+※ Cooperation Boss will not be additionally summoned until defeated or disappeared.
+Document update date : 2024-06-28
+Like192
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

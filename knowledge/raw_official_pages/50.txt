@@ -1,0 +1,43 @@
+Divine Dragon's Promise
+Divine Dragon's Promise is a system that accumulates points each time you summon an Uncommon or Rare item through summoning. When the points reach 1,000, you are guaranteed to summon an 'Epic' item.
+Basic Mechanics
+NOTE
+Basic Mechanics
+- 1 Point will be accumulated per each summoned Uncommon/Rare grade item after summoning in the [Summon] tab of the Shop menu.
+① Divine Dragon's Promise Point will stack up separately on each summons category.
+Summoning through purchasing the products in the 'Common Product' menu will not make the Promise Point to be stacked.
+② Earning 1,000 points allows you to use Divine Dragon's Promise Summon 1 time which guarantees an 'Epic' grade item. You can accumulate up to 100 Divine Dragon's Promise Summons.
+Epic grade item can be summoned by clicking the added 'summoning count 1' and an alert message like below will appear. Promise Point will not stack up if a player tries to use the normal summon when the Divine Dragon's Promise Summon has already reached the maximum number 100.
+An alert screen that pops up after clicking the
+Divine Dragon's Promise Summon.
+Using the Divine Dragon's Promise Summon will grant Epic grade item.
+NOTE
+All the Divine Dragon's promissing points will reset, becoming impossible to be recovered if a 'Epic' grade item gets summoned before reaching 1,000 points.
+Document update date : 2022-03-30
+Like40
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

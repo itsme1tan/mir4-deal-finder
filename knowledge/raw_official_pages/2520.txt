@@ -1,0 +1,130 @@
+Divine Manifestation Chart
+Divine Manifestation Chart is a mysterious painting that captures the manifestation (現身) of a great god. Each time you piece together the scattered Divine Pages to restore the painting, additional stats are granted, and upon reaching certain Restoration stages, you can acquire a unique passive skill effect.
+Divine Manifestation Chart
+Scripture Page Restoration
+Scripture Page Bonding
+Divine Manifestation Chart Passive Effects
+Divine Manifestation Chart Achievements
+Divine Manifestation Chart
+- The Divine Manifestation Chart is content that unlocks once a character reaches Level 80.
+- You can move to the Divine Manifestation Chart screen through [Menu > Conquests > Divine Manifestation Chart].
+① Select the Divine Manifestation Chart you wish to restore on the left/right side of the screen.
+- Restorable Divine Manifestation Charts are divided into a total of 4 types (Hwayang / Haryeon / Yuwoon / Gangrim).
+- The Restoration stages of the Divine Pages are [Common → Rare (32) → Epic (8) → Legendary (2)], and each Divine Manifestation Chart contains a total of 42 Divine Pages.
+② The Power Score gained through the Divine Manifestation Chart is shown at the top left of the screen. Tap it to view the detailed stats and passive skill effects applied through the Divine Manifestation Chart.
+③ Summary information about the Divine Manifestation Chart is shown at the top right of the screen.
+- Tap it to view detailed information on the Restoration materials of the Divine Pages that make up the Divine Manifestation Chart and the stats obtainable upon Restoration.
+Scripture Page Restoration
+- Through Scripture Page Restoration, you can raise the Restoration stage of the Divine Pages that make up a Divine Manifestation Chart.
+※ The Restoration stages of the Divine Pages consist of [Common → Rare (32) → Epic (8) → Legendary (2)].
+① Select a Divine Page to restore within a Divine Manifestation Chart to view the required materials, success rate, stats gained, and more.
+- The Restoration success rate and the amount of materials consumed vary depending on the type of stats gained upon Restoration.
+Scripture Page Bonding
+- Each time you restore 4 adjacent Divine Pages, Scripture Page Bonding occurs, and slots where Scripture Page Bonding has taken place can advance to the next stage of Scripture Page Restoration.
+[Before Rare → Epic Stage Scripture Page Bonding]
+[After Rare → Epic Stage Scripture Page Bonding]
+Divine Manifestation Chart Passive Effects
+- When you restore every Divine Page of a single grade within a Divine Manifestation Chart, you gain that painting's unique passive effect.
+- As the Restoration grade climbs to higher stages ([Rare → Epic → Legendary]), the power of the passive skill increases, granting even stronger effects.
+Painting Name
+Passive Skill Name
+Skill Stage
+Skill Effect
+Hwayang
+Full Bloom Bloodlust
+Stage 1 (Restore all Rare grade Divine Pages)
+Upon attacking, has a 10% chance to gain Spring Energy. When Spring Energy stacks 20 times, it dissipates and increases Bash ATK DMG by 15% for 15 sec. (Cooldown: 50 sec)
+Stage 2 (Restore all Epic grade Divine Pages)
+Upon attacking, has a 20% chance to gain Spring Energy. When Spring Energy stacks 15 times, it dissipates and increases Bash ATK DMG by 20% for 15 sec. (Cooldown: 50 sec)
+Stage 3 (Restore all Legendary grade Divine Pages)
+Upon attacking, has a 30% chance to gain Spring Energy. When Spring Energy stacks 10 times, it dissipates and increases Bash ATK DMG by 25% and CRIT ATK DMG by 25% for 15 sec. (Cooldown: 50 sec)
+Haryeon
+Midsummer Mirage
+Stage 1 (Restore all Rare grade Divine Pages)
+Upon evading an enemy's attack, increases PHYS ATK by 100 and Spell ATK by 100 for 5 sec. (Cooldown: 20 sec)
+Stage 2 (Restore all Epic grade Divine Pages)
+Stage 2 (Restore all Epic grade Divine Pages)
+Upon evading an enemy's attack, increases PHYS ATK by 200 and Spell ATK by 200 for 5 sec. (Cooldown: 20 sec)
+Stage 3 (Restore all Legendary grade Divine Pages)
+Stage 3 (Restore all Legendary grade Divine Pages)
+Upon evading an enemy's attack, increases PHYS ATK by 300 and Spell ATK by 300 for 5 sec. (Cooldown: 20 sec)
+Yuwoon
+Yuwoon
+Cloud Sea Wall
+Stage 1 (Restore all Rare grade Divine Pages)
+Upon being hit, has a 5% chance to increase Evade by 200 for 10 sec. (Cooldown: 50 sec)
+Stage 2 (Restore all Epic grade Divine Pages)
+Upon being hit, has a 10% chance to increase Evade by 300 and reduce All DMG Taken by 10% for 10 sec. (Cooldown: 50 sec)
+Stage 3 (Restore all Legendary grade Divine Pages)
+Upon being hit, has a 15% chance to increase Evade by 400 and reduce All DMG Taken by 15% for 10 sec. Additionally, grants a Shield that absorbs damage equal to 15% of Max HP. (Cooldown: 50 sec)
+Gangrim
+Celestial Flower Dance
+Stage 1 (Restore all Rare grade Divine Pages)
+When HP falls to 30% or below, increases CRIT by 300 for 25 sec. (Cooldown: 90 sec)
+Stage 2 (Restore all Epic grade Divine Pages)
+When HP falls to 30% or below, increases CRIT by 400 and Basic ATK DMG by 40% for 25 sec. (Cooldown: 90 sec)
+Stage 3 (Restore all Legendary grade Divine Pages)
+When HP falls to 30% or below, increases CRIT by 500, Basic ATK DMG by 50%, and Debilitation Success Chance by 35% for 25 sec. (Cooldown: 90 sec)
+Divine Manifestation Chart Achievements
+- These are rewards you can claim in the [Achievement] tab based on the number of successful Divine Manifestation Chart Restorations.
+Achievement Name
+Stages
+Achievement Condition
+Main Rewards
+Restoration Master I
+8
+Restore Divine Manifestation Chart 1 Time
+Epic Enhancement Stone/Mystic Enhancement Stone/Darkened Enhancement Stone
+Epic Magic Stone Box (Tier 1, Tier 2)
+Epic Eternal Snow Panax/Azureum Mineral Fluid Selection Box
+Epic Noirsoul Herb, Rare/Epic Dragon Breath
+Rare/Epic Dragonsteel Box
+Epic Gold Goblin
+Legendary Enhancement Stone/Mystic Enhancement Stone/Darkened Enhancement Stone
+Legendary Magic Stone Box (Tier 1, Tier 2)
+Legendary Herbalist Hong Box
+Legendary Blue Dragon Statue
+Legendary Blessed Spectrumite Box
+Legendary Dragon Sphere
+Legendary Mystical Piece/Magical Soul Orb Coffer
+Restoration Master II
+8
+Restore Divine Manifestation Chart 2 Times
+Restoration Master III
+8
+Restore Divine Manifestation Chart 4 Times
+Restoration Master IV
+8
+Restore Divine Manifestation Chart 6 Times
+Restoration Master V
+8
+Restore Divine Manifestation Chart 8 Times
+※ Each achievement consists of 8 stages, and once all 8 stages are completed, you can proceed to the next achievement.
+Document update date : 2026-07-06
+Like
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

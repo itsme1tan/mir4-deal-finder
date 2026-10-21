@@ -1,0 +1,134 @@
+Craft
+In Craft, you can use materials obtained by hunting or summoning to craft new equipment, combine equipment to obtain higher grade equipment, or exchange items.
+Crafting
+Combine
+Combine - Mystic Incense Burner
+Unseal
+Exchange
+Special Exchange
+Crafting
+- Tap Craft - Crafting tab in the Menu to open the Exchange window.
+① You can craft equipment, medicine, equipment materials, promotion materials, or Codex armor.
+② Tap the Enhance button in Crafting Equipment to open Forge > Enhance window.
+③ Selecting a crafting material shows how it can be obtained.
+④ Crafting requires Copper, and Darksteel or Energy may also be used depending on the recipe.
+⑤ When crafting a Rare or higher equipment, tier 4 & enhancement level 8+ equipment of the previous grade can replace key materials.
+Combine
+- Tap Craft > Combine tab in the Menu.
+- Combine Types
+Types
+Item
+Combine I
+Dragon Scale / Dragon Leather / Dragon Horn / Dragon Claw / Dragon Eye / Dragon Heart
+Combine II
+Spirit Stone / Skill Tome / Spirit Treasure / Magic Stone / Codex Gear / Forsaken Badge / Spectrumite
+※ Spirit Treasure/Magic Stone/Spectrumite Tier II items can be combined.
+(Upon combining Tier II Rare/Epic items, you can obtain XDRACO property items with very low chance.
+Combine Unidentified
+Unidentified Magic Stone / Unidentified Spirit Treasure / Unidentified Codex Gear / Unidentified Mystical Piece
+※ Epic Combine is unavailable for Unidentified Codex Gear / Mystical Piece. (Impossible to acquire Legendary grade)
+※ Items with ‘Tradable’ and ‘XDRACO’ properties can’t be obtained through these combines.
+① You can combine Dragon Materials, Spirit Stones, Skill Tomes, Spirit Treasures, Magic Stones, and Unidentified items.
+② Combining requires 4 items of the same type and grade.
+③ Choose sets of 4 items of the same type/grade that you want to combine, then tap the Combine button to combine them.
+④ Combining yields a same grade item or a higher-grade item at a certain chance.
+Combine - Mystic Incense Burner
+- When combining Rare/Epic items fails, you gain 1 Mystic Incense Burner point.
+When combining 4 Rare Spirit Stones fails, you gain 1 Spirit Stone Epic Incense Burner point. When combining 8 Epic Spirit Stones fails, you gain 2 Spirit Stone Legendary Incense Burner points.
+- When you obtain 25 Incense Burner Points, you will receive the guaranteed reward for the grade you attempted.
+- For guaranteed rewards, the Combine I and Combine Unidentified categories guarantee the grade you attempted, while the Combine II category grants a random reward from among the grades you attempted.
+Unseal
+- Tap Craft - Unseal tab in the Menu to open the Unseal window.
+- You can unseal sealed boxes in the Unseal window.
+- Unsealing time can be reduced by receiving Clan Support or using Speed-ups.
+Exchange
+- Tap Craft > Exchange tab in the Menu.
+- Equipment can be exchanged for items of the same grade and tier. Skill Tomes and Spirit Stones are exchanged for random items of the same grade.
+- Exchanging an equipment resets its enhancement level and enchantment.
+Special Exchange
+Special Exchange is a feature that can be used to exchange other classes' equipment with the current class of the character.
+1.  Special Exchange
+- Tap Craft > Exchange > Special Exchange tab from the menu to move to the Special Exchange screen.
+ⓛ You can select the equipment to exchange into from the left side of the screen.
+- Special Exchange can be used with the Epic tier equipment or above.
+- Equipment that is locked/Time Limited, or that did not complete Enchant/Special Enchant can not be registered to be exchanged.
+- Special Exchange can be used to change equipment (Weapon, Secondary Weapon, Armor, Accessory) and Skill Tomes.
+② You can check the registered item for the exchange and the result item.
+③ The types (A type/B type) of the exchanged Epic items can be changed by clicking the Type Change button.
+④ You can check the required Gold or the grade and number of required Special Exchange Tickets for the Special Exchange.
+- Required Gold or the grade and number of required Special Exchange Tickets change depending on the grade and tier of the registered exchange item.
+- Special Exchange Ticket will be shown and used first and Gold as secondary if you have the required Special Exchange Ticket in your bag.
+※ Please be aware that the Special Exchange Tickets stored in your Warehouse do not get counted.
+[Required materials for the Special Exchange on Equipment]
+Grade
+Tier
+Required Special Exchange Ticket
+Required Gold
+Epic
+1
+Epic Special Exchange Ticket x1
+2,400 Gold
+2
+Epic Special Exchange Ticket x2
+4,800 Gold
+3
+Epic Special Exchange Ticket x3
+7,200 Gold
+4
+Epic Special Exchange Ticket x4
+9,600 Gold
+Legendary
+1
+Legendary Special Exchange Ticket x1
+18,000 Gold
+2
+Legendary Special Exchange Ticket x2
+36,000 Gold
+3
+Legendary Special Exchange Ticket x3
+54,000 Gold
+4
+Legendary Special Exchange Ticket x4
+72,000 Gold
+[Required materials for the Special Exchange on Skill Tome]
+Grade
+Required Special Exchange Ticket
+Required Gold
+Epic
+Epic Special Exchange Ticket x2
+4,800 Gold
+Legendary
+Legendary Special Exchange Ticket x2
+36,000 Gold
+⑤ An alert pop-up screen regarding the Special Exchange will appear upon clicking the Exchange button.
+⑥ You can check the cautions from the alert pop-up that can be seen upon trying Special Exchange, and the Special Exchange will be processed after clicking the OK button.
+- Registered item's Enhancement level, Enchant, and Special Enchant will be transferred.
+- Tradable items will be changed into untradable items if exchanged through Special Exchange.
+Document update date : 2026-09-28
+Like232
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

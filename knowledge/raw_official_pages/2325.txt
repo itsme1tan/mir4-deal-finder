@@ -1,0 +1,132 @@
+Arena
+The Arena is a content feature where players can test their skills through combat against other users.
+Arena Basic Information
+Arena Party Creation
+Arena Team Information
+Arena Match Flow
+Arena Daily Task Rewards
+Arena Achievements
+Arena Basic Information
+1. The Arena is available to characters who have reached Level 80 or higher and 100,000 Power Score or higher.
+2. The Arena is divided into two teams. Each team must have at least one participant to proceed. Up to 5 players per team can participate, with a maximum of 10 players total.
+3. No death penalties are applied while participating in the Arena.
+4. The Arena can be entered up to 10 times per day, and entry counts are reset daily at 16:00 (UTC) based on each server region’s local time.
+- ASIA (UTC+8): 12:00 am
+- INMENA (UTC+6): 10:00 pm
+- EU (UTC+2): 06:00 pm
+- SA (UTC-3): 01:00 pm
+- NA (UTC-4): 12:00 pm
+※ Arena entry counts are consumed at 1 entry per match, regardless of the selected mode (Single Match or Best of 3).
+Arena Party Creation
+- You can access the Arena screen through [Menu > War > Arena].
+① You can check the Arena entry requirements and available play time, then select the match mode (Single Match / Best of 3).
+② You can view your remaining Arena entry count.
+③ Press the [Find Arena] button to join an existing Arena party.
+④ Press the [Create Arena Party] button to set the conditions for a new Arena party.
+⑤ You can configure the party description, visibility settings, and Power Score requirement for the Arena party you are creating.
+- Public Party: Players can freely join the party without a password.
+- Private Party: A password can be set, and only users who enter the correct password can join the party.
+- Clan Party: Only users belonging to the same Clan can join, without requiring a password.
+⑥ Press the [Create Arena Party] button to complete the Arena party creation.
+Arena Team Information
+① You can view information about the members currently participating in the Arena party.
+- The Party Leader can select party members to transfer leadership, remove members, or forcibly move them between teams.
+② You can select [Leave Party] or [Move Team].
+- These options are available to both the Party Leader and party members.
+③ The Party Leader can press the [Start] button to begin the Arena match.
+- When entering the Arena, 1 Arena entry count will be consumed for both the Party Leader and all party members.
+④ The Party Leader can enable this option to automatically start the match as soon as all party slots are filled.
+Arena Match Flow
+① Upon entering the Arena, the character’s PK Mode will be fixed to Hostile.
+② From the top left of the screen, you can use the [Leave] button to leave the Arena or check the waiting time and match duration.
+- Each match begins after a 30-second waiting period and proceeds for 5 minutes.
+③ No death penalties are applied while an Arena match is in progress.
+④ If a character is defeated during combat, they will revive in the preparation area after 3 seconds and will no longer be able to participate in the ongoing match.
+- Characters defeated in the Arena are not affected by revival or death delay effects from skills, Spirits, or items.
+- If a character is revived through a skill or Spirit, they will revive immediately at the location of death and can rejoin the match.
+⑤ After the match ends, players can view the results and the number of eliminations.
+⑥ You can leave the Arena using the [Leave] button.
+Arena Daily Task Rewards
+- Two new Daily Tasks have been added.
+Character Level
+Task Details
+Reward Items
+80 ~ 99
+Participate in Arena 1 Time
+Copper x2,500 / Energy x10,000
+Win Arena Match 1 Time
+Copper x5,000 / Dragonsteel x2
+100 ~ 119
+Participate in Arena 1 Time
+Copper x5,000 / Energy x20,000
+Win Arena Match 1 Time
+Copper x10,000 / Dragonsteel x4
+120 ~ 210
+Participate in Arena 1 Time
+Copper x10,000 / Energy x30,000
+Win Arena Match 1 Time
+Copper x20,000 / Dragonsteel x6
+Arena Achievements
+- A total of 100 Win Arena Match achievements have been added. Upon completing these achievements, players can obtain a variety of rewards that support character growth, including Blue Dragon Statue, Dragon Material Chest, Magic Stone Chest, Spectrumite Chest, Spirit Treasure Chest, Mystic Enhancement Stone, Darkened Enhancement Stone, Divine Dragon’s Enhancement Stone, Eternal Snow Panax Selection Box, Azureum Mineral Fluid Selection Box, Divine Dragon’s Dragon Artifact Enhancement Stone, and Spirit Stone Summon Box.
+Achievement Name
+Stages
+Completion Requirement
+Arena Victor I
+10
+Win 5 Arena Matches
+Arena Victor II
+10
+Win 10 Arena Matches
+Arena Victor III
+10
+Win 15 Arena Matches
+Arena Victor IV
+10
+Win 20 Arena Matches
+Arena Victor V
+10
+Win 25 Arena Matches
+Arena Victor VI
+10
+Win 45 Arena Matches
+Arena Victor VII
+10
+Win 55 Arena Matches
+Arena Victor VIII
+10
+Win 65 Arena Matches
+Arena Victor IX
+10
+Win 75 Arena Matches
+Arena Victor X
+10
+Win 85 Arena Matches
+※ Each achievement consists of 10 stages. After completing all 10 stages, players can proceed to the next achievement.
+Document update date : 2026-01-15
+Like1
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

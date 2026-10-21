@@ -1,0 +1,118 @@
+Dragon Artifact
+Dragon Artifacts are Mir Continent’s valuable and exotic equipment that wields the dragon’s energy. Dragon Artifacts, that have the dragon’s energy inherited from the Black Dragon or the White Dragon, can be further enhanced and strengthened above the initial limits, to a whole new level of power and skill!
+Dragon Artifact
+Craft
+Dragon Artifact Inheritance
+Upgrade
+Enchant
+Dragon Artifact Benediction
+Dragon Artifact
+- Dragon Artifact will be unlocked after reaching character level 60.
+- How to access: [Menu → Character → Equipment → Dragon Artifact]
+① You can view the power score and status reinforced by Dragon Artifact at the top left.
+② You can check the Dragon Artifact equipped at the bottom of the screen.
+- There are 5 ‘Black Dragon’ Artifacts that wield the power of the Black Dragon, and there are 5 ‘White Dragon’ Artifacts that wield the power of the White Dragon.
+1) Artifacts that can be equipped in the 'Black Dragon' tab: Majestic Scepter, Majestic Cape, Majestic Crown, Majestic Seal, Majestic Tome
+2) Artifacts that can be equipped in the 'White Dragon' tab: Ornate Blade, Heavenly Bell, Incense Burner, Crescent Jade, Bronze Mirror
+③ You can check Dragon Artifact you have owned at the right.
+④ If pressing Auto-equip, Dragon Artifacts which have the highest power score will be equipped to your character.
+⑤ Press the craft button to move Craft Dragon Artifact.
+Craft
+① Dragon Artifact can be crafted from the Craft Dragon Artifact menu.
+② Crafting will require [Eternal Material] and [Dragon Sphere] that have the same grade as the targeted Dragon Artifact.
+- Eternal Material can be obtained from Crafting.
+- Dragon Sphere can be obtained from Request / Summon / Summon Boss.
+※ Dragonsteel will be consumed to craft Dragon Artifact.
+Dragon Artifact Inheritance
+- Access the Dragon Artifact Inheritance window by clicking the [Inherit] button on a Dragon Artifact you own, or go to Menu > Character > Equipment > Dragon Artifact, then click on the [Inherit] button on the bottom right side of the screen.
+① Select the Dragon Artifact to inherit the power of the Black Dragon or the White Dragon on the left side of the screen.
+- Dragon Artifact’s Enhancement Stage and Enchantments will remain the same when inheriting the power of the Black Dragon / White Dragon.
+- Base stats of the Dragon Artifact will increase when inheriting the power of the Black Dragon / White Dragon.
+- The Dragon Artifact will be changed to a ‘Bound(Bind)’ item when the Dragon Artifact inherits the power of the Black Dragon / White Dragon
+- Black Dragon / White Dragon Artifact Equipment can be Enhanced up to 10 stages for Rare and Epic Equipment and up to 15 stages for Legendary Equipment.
+- Enhancement Great Failure will not result in the destruction of a Dragon Artifact that inherited the power of the Black Dragon / White Dragon, but instead will decrease the enhancement stage.
+※ Enchantment properties remain the same for Dragon Artifacts that inherited the power of the Black Dragon / White Dragon, and there will be no additional properties available to obtain.
+② Materials required for a Dragon Artifact to inherit the power of the Dragons and the result of the process will be displayed on the right side of the screen.
+- Materials required for the inheritance process differ depending on the type of Dragon Artifact that will inherit the power of the Black Dragon / White Dragon.
+Upgrade
+① You can view Success chance and information concerning Danger Zone.
+- Upgrade will result in 3 options (Success / Failure / Great Failure); when resulting in Great Failure, Dragon Artifact will be destroyed.
+- Dragon Artifacts can be enhanced up to the 7th stage, but Legendary Dragon Artifacts can be enhanced up to the 10th stage.
+- Rare and Epic Black Dragon / White Dragon Artifacts can be enhanced up to the 10th stage and Legendary Black Dragon / White Dragon Artifacts can be enhanced up to the 15th stage.
+※ Black Dragon / White Dragon Artifact will not be destroyed upon Great Failure, and will instead decrease its enhancement stage by at most 3 stages.
+※ Black Dragon / White Dragon Artifact’s Enhancement stage will not decrease upon Failure after enhancing the Articact with a Divine Dragon's Dragon Artifact Enhancement Stone.
+② Upgrading Dragon Artifact will require the Dragon Artifact Enhancement Stone as same as the grade of Dragon Artifact.
+- Dragon Artifact Enhancement Stone is obtainable from Raid / Mission / NPC Shop / NPC Palace Craftsman.
+③ In the Upgrading process, the Success chance can be increased by 5% to use Dragon Oil of Blessing graded equal to Dragon Artifact.
+- Dragon Oil of Blessing can be obtained from(Mission) / NPC Shop / NPC Palace Craftsman.
+※ Dragonsteel will be consumed to upgrade Dragon Artifact.
+Enchant
+① You can view resources required for Enchant.
+- Enchant will cost [Dragonsteel / Darksteel / Dragon Artifact Enchant Scroll], and Dragon Artifact Enchant Scroll can be obtained from Mission / NPC Shop / NPC <Palace Craftsman>.
+- You can obtain up to S-graded option as maximum in Dragon Artifact Enchant.
+② Abilities will be randomly set and not be changed if not pressing Apply after enchanting the Dragon Artifact.
+- If you have closed the Window after enchanting the equipment with no abilities applied, abilities that are resulted in the last enchant will be applied.
+③ You can compare the current status and that of later per Enchant.
+④ In Auto Enchant, you can use Objective Grade Quantity to repeat the Enchant until accomplish the result you have set.
+Dragon Artifact Benediction
+- Dragon Artifact Benediction is activated for slots equipped with Black Dragon or White Dragon Artifacts, providing additional stats.
+- You can access the Dragon Artifact Benediction screen by clicking the [Character > Equipment > Dragon Artifact > Benediction] tab in the menu.
+① You can select the slot to enhance from the top right of the screen.
+- The stats gained through Dragon Artifact Benediction are assigned to each slot as follows:
+Equip Slot
+Applied Stat
+Majestic Scepter
+Accuracy
+Majestic Cape
+PHYS DEF
+Majestic Crown
+All ATK DMG Boost
+Majestic Seal
+CRIT
+Majestic Tome
+PvP ATK DMG Boost
+Ornate Blade
+Spell DEF
+Heavenly Bell
+CRIT EVA
+Incense Burner
+EVA
+Crescent Jade
+All DMG Reduction
+Bronze Mirror
+PvP DMG Reduction
+② You can select items to use as upgrade materials from the bottom right of the screen.
+- The ‘Dragon’s Breath’ item can be obtained through Disenchant.
+③ You can check the items registered as upgrade materials, as well as the upgrade level, EXP, and stats of the Benediction.
+- Dragon Artifact Benediction can be enhanced up to Level 25.
+- The higher the grade and enhancement level of the registered equipment, the more EXP you will gain.
+④ You can check the stats currently applied through Dragon Artifact Benediction.
+- Slots without Black Dragon or White Dragon Artifacts equipped will not activate the effects of Dragon Artifact Benediction.
+Document update date : 2025-01-06
+Like29
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

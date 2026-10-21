@@ -1,0 +1,159 @@
+Portal
+Portal is a special area that drops great rewards. It is only available at certain hours and players compete fiercely for better rewards.
+Magic Square
+Secret Peak
+Fissured Magic Square/Secret Peak
+Magic Square
+- Tap Portal > Magic Square tab in the Menu.
+① Magic Square consists of floors and each floor is unlocked as your character reaches the Entry Power Score.
+② You can view the Entry Power Score and monster levels of the selected Magic Square floor.
+③ The entry count of Magic Square can be recharged up to 99 by using 'Magic Suqare Ticket' or Gold' that you own by clicking the 'Recharge' button. The maximum free entry count will vary depending on the character's Conquest level and it will reset on every 16:00 (UTC) which defers based on regional server times.
+- ASIA (UTC+8) : 12:00 am
+- INMENA (UTC+6) 10:00 pm
+- EU (UTC+2) : 06:00pm
+- SA (UTC-3) : 01:00pm
+- NA (UTC-4) : 12:00pm
+※ Players can recharge the entry count up to 2 per day by using Gold. (150 Gold is needed for the 1st recharge and 200 Gold is needed for the 2nd recharge.)
+④ You can access the Spacetime Shop where you can spend Ancient Coins obtained in the Magic Square.
+⑤ View available rewards.
+⑥ Tapping the Enter button allows you to use a ticket to enter the Magic Square.
+⑦ You begin in the 'Primordial Chamber', a safe zone where combat is disabled.
+⑧ Tap the [ i ] button ⑨ to view a list of Magic Square chambers and chances of moving.
+⑩ You can leave the Magic Square before the time runs out by tapping the Leave button, and clicking the Loot List button shows the loot, EXP, and the resources you have obtained in the Magic Square.
+⑪ Tapping the Move button at the top right moves you to a different chamber, and there is a 5-second cooldown after moving.
+- You can fight inside the Magic Square, and are returned to the Primordial Chamber upon death.
+⑫ Magic Square can be used for 30 minutes and the Time Limit can be extended by clicking the [ + ] button located on the right side of the screen, using Magic Square Ticket and Gold.
+- ⓐ Time Limit can be extended by using Entry Count or Magic Square Ticket and Gold when the remaining time is below 30 minutes.
+- ⓑ Auto-Extend feature can be used by consuming the Entry Count or Magic Square Ticket. (Auto-Extend can be set to maximum of 20)
+(※ Auto-Extend will stop if the character dies/exits, the content is locked due to maintenance, or there is no method to recharge the Time Limit)
+- ⓒ Auto-Extend can be done by using Gold, and you can activate or deactivate this feature of using Gold.
+※ 'Entry Count, Time-Extend, Auto-Extend' counts added by using Gold are shared and players can only recharge maximum twice a day.
+- ⓓ Materials used in Auto-Extend will be used in following order. Remaining Entry Count → Gold → Magic Square Ticket
+Secret Peak
+- Tap Portal > Secret Peak tab in the Menu.
+① Secret Peak consists of floors and each floor is unlocked as your character reaches the Entry Power Score.
+② You can view the Entry Power Score and monster levels of the selected Secret Peak floor.
+③ The entry count of Secret Peak can be recharged up to 99 by using 'Secret Peak Ticket' or Gold' that you own by clicking the 'Recharge' button. The maximum free entry count will vary depending on the character's Conquest level and it will reset on every 16:00 (UTC) which defers based on regional server times.
+- ASIA (UTC+8) : 12:00 am
+- INMENA (UTC+6) 10:00 pm
+- EU (UTC+2) : 06:00pm
+- SA (UTC-3) : 01:00pm
+- NA (UTC-4) : 12:00pm
+※ Players can recharge the entry count up to 2 per day by using Gold. (150 Gold is needed for the 1st recharge and 200 Gold is needed for the 2nd recharge.)
+④ You can access the Spacetime Shop where you can spend Ancient Coins obtained in the Secret Peak.
+⑤ View available rewards.
+⑥ Tapping the Enter button allows you to use a ticket to enter the Secret Peak.
+⑦ You begin in the 'Primordial Chamber', a safe zone where combat is disabled.
+⑧ You can use the Secret Peak for 30 minutes after entering, and extend the usage time by tapping the [ + ] button on the right and using Secret Peak Tickets.
+- ⓐ Time Limit can be extended by using Entry Count or Secret Peak Ticket and Gold when the remaining time is below 30 minutes.
+- ⓑ Auto-Extend feature can be used by consuming the Entry Count or Secret Peak Ticket. (Auto-Extend can be set to maximum of 20)
+(※ Auto-Extend will stop if the character dies/exits, the content is locked due to maintenance, or there is no method to recharge the Time Limit)
+- ⓒ Auto-Extend can be done by using Gold, and you can activate or deactivate this feature of using Gold.
+※ 'Entry Count, Time-Extend, Auto-Extend' counts added by using Gold are shared and players can only recharge maximum twice a day.
+- ⓓ Materials used in Auto-Extend will be used in following order. Remaining Entry Count → Gold → Secret Peak Ticket
+⑨ You can leave the Secret Peak before the time runs out by tapping the Leave button, and clicking the Loot List button shows the loot, EXP, and the resources you have obtained in the Secret Peak.
+⑩ You can access special crafting through a crafting merchant at a landmark in the Secret Peak, and use summoning items at demon Spawn Points to summon specific monsters.
+The boss monster of Secret Peak appears at a regular intervals, and defeating it gives great rewards.
+Fissured Magic Square/Secret Peak
+1. Basic Information
+- Enter through the Portal > Magic Square/Secret Peak tab in the menu.
+- The Power Score that allows entry into Fissured Magic Square/Secret Peak and the monster levels that appear are as follows.
+Type
+Appearance Monster
+Power Score Needed
+Fissured Magic Square 11F
+175 ~ 200
+270,000
+Fissured Secret Peak 11F
+180 ~ 200
+275,000
+- Fissured Magic Square/Secret Peak is free of charge and cannot be recharged with Gold, but can be entered using an Exclusive Ticket.
+- Exclusive Tickets can be obtained through Crafting, Purchase, and Hunting.
+① Craft
+Craft NPC
+Craft Item
+Craft Material
+Bicheon Castle Sabuk Castle<Palace Craftsman>
+Hyo Janggyeong
+Fissured Magic Square Ticket x1
+Magic Square Ticket x3
+Mystic Stone x10
+Old Silver x10
+Darksteel x10,000
+Fissured Secret Peak Ticket x1
+Secret Peak Ticket x3
+Darkened Stone x10
+Old Silver x10
+Darksteel x10,000
+※ You can obtain a total of 3 Tickets (non-tradable) upon crafting a Ticket with a Great Success outcome.
+② Purchase
+- You can purchase Tickets (Shop > Mileage > Consumable) with Mileage up to twice a week.
+- With Clan Coins, you can purchase Tickets (Clan > Shop > Consumable) up to 3 times a week.
+※ The number of weekly purchases is reset every Monday at 12:00 AM (UTC+8).
+③ Hunting
+- Can be obtained by defeating monsters in Magic Square/Secret Peak 8~10F.
+- Can be obtained by unsealing at Magic Square 8~10F Sealing Chamber.
+※ There is a low probability of obtaining a tradable Ticket.
+2. Chamber List at Fissured Magic Square 11F
+Chamber Name
+Information
+Lucky Chamber
+When defeating Unique and Boss Grade monsters, a Treasure Chest will appear with a certain probability.
+Great Fortune Chamber
+When defeating a monster, a Treasure Chest appears with a certain probability.
+Resource Chamber
+Gathered items of Epic Grade or higher appear randomly.
+Frenzy Chamber
+Many monsters continue to appear during certain periods.
+Fury Chamber
+Living Wraith's Chamber
+Monsters only appear during certain periods, and when you defeat the monsters that appear, you can defeat the higher level monsters that appear and obtain the Treasure Chest.
+Void Chamber
+- In addition to the list, there are ‘Magic Stone Chamber, Experience Chamber, Leader’s Chamber, Training Chamber, Antidemon Chamber I/II/III, Sealing Chamber, and Demon’s Chamber’.
+- In the case of the Lucky Chamber, monsters can be summoned with the ‘Goblin Summon Badge’ crafted from <Fissure Craftsman> Jinman at Fissured Magic Square 11F and <Fissure Craftsman> Soman at Fissured Secret Peak 11F.
+- You can also enter Frenzy/Fury/Living Wraith/Void Chamber through the ‘Starting Chamber’ portal.
+3. List of New Monster Summons at Fissured Secret Peak 11F
+Summon Name
+Required Summoning Badge
+Acquired Items
+Goblin Altar
+Goblin Summon Badge
+‘Goblin Stele’ required for crafting Demon Summon Badge and various crystals available in Secret Peak Exchange Shop.
+Altar of L. Officer
+L. Officer Summon Badge
+Netherworld King Summon Badge required for ‘Netherworld King's Cursesake’
+Altar of Master Protector
+Master Protector Summon Badge
+Altar of R. Officer
+R. Officer Summon Badge
+Altar of Netherworld King
+Netherworld King Summon Badge
+Powerful items that help with character upgrades and combat.
+Document update date : 2024-05-27
+Like62
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

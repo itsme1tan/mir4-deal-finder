@@ -1,0 +1,95 @@
+Divine Dragon Descent
+Divine Dragon Descent allows you to unlock your Pressure Points using Dragon Materials, drawing out hidden potential and enabling extraordinary growth.
+Divine Dragon Descent
+Unlock Divine Dragon Descent
+Yearn Divine Dragon Descent
+Divine Dragon Descent
+- Divine Dragon Descent is unlocked when the character reaches Level 110.
+- Access the feature by navigating to the Conquest > Divine Dragon Descent tab in the menu.
+① Divine Dragon Descent consists of three tabs:
+- Divine Dragon Descent: Check the stats and unlock status of each Pressure Point.
+- Unlock Divine Dragon Descent: Unlock or re-unlock Pressure Points.
+- Yearn Divine Dragon Descent: Adjust the stats granted to Pressure Points.
+② Displays the Power Score gained through Divine Dragon Descent, with detailed stats available by clicking the magnifying glass icon on the right.
+③ Divine Dragon Descent consists of six Pressure Points, each unlocked with different Dragon Materials:
+Category (From Left to Right)
+Required Dragon Material
+First Pressure Point
+Dragon Scale
+Second Pressure Point
+Dragon Claw
+Third Pressure Point
+Dragon Leather
+Fourth Pressure Point
+Dragon Eye
+Fifth Pressure Point
+Dragon Horn
+Sixth Pressure Point
+Dragon Sphere
+④ Check the unlock status and stats of the selected Pressure Point.
+- For locked Pressure Points, view the material items required for unlocking.
+- For unlocked Pressure Points, review the currently applied stats.
+⑤ Use the buttons at the bottom right of the screen to navigate directly to the Unlock Divine Dragon Descent or Yearn tab.
+Unlock Divine Dragon Descent
+- Unlocking a Pressure Point grants multiple stats, with higher-grade materials yielding more stats.
+① Select a Pressure Point to unlock or re-unlock from the right side of the screen.
+② Dragon Materials and Dragonsteel are consumed when unlocking or re-unlocking Pressure Points.
+- The ‘Divine Dragon’s Key’ item can also be used for unlocking or re-unlocking Pressure Points.
+Pressure Point Grade
+Required Material
+Resources Consumed
+Rare
+10 Rare Dragon Materials or 20 Rare Divine Dragon’s Keys
+Dragonsteel x4
+Epic
+3 Epic Dragon Materials or 6 Epic Divine Dragon’s Keys
+Dragonsteel x20
+Legendary
+1 Legendary Dragon Material or 2 Legendary Divine Dragon’s Keys
+Dragonsteel x100
+- The number of stats granted when unlocking or re-unlocking depends on the grade.
+③ Review the stats applied to the selected Pressure Point and the stats that can be obtained.
+④ After re-unlocking, select which stats to apply.
+- Click the [Apply] button to apply the ‘Changed Unlocked Stats.’
+- Click the [Cancel] button to keep the "Previous Unlocked Stats."
+※ If you proceed with Wayfarer’s Travel before confirming the re-unlocked Pressure Point stats, the ‘Changed Unlocked Stats’ will not be saved and will disappear.
+Yearn Divine Dragon Descent
+- Yearn allows you to adjust the stats of an unlocked Pressure Point.
+① Yearn uses Pledge Scroll of Yearning, Dragonsteel, and Copper.
+- The more stats assigned to a Pressure Point, the more materials are required.
+- Pledge Scroll of Yearning can be obtained through Disenchant.
+② Check the types of stats available for the selected Pressure Point.
+- There are 20 types of stats for each Pressure Point, and when Yearn occurs, the types and grades of all stats are readjusted at once.
+- The highest stat grade achievable through Yearn is SS-grade.
+③ When you proceed with Yearn,  you can compare the current stats with the new stats on the right side of the screen.
+- Click the [Cancel] button to keep the ‘Current Stats.’
+- Click the [Apply] button to apply the "New Stats."
+※ If you proceed with Wayfarer’s Travel before confirming the stats of an Yearn, the ‘New Stats’ will not be saved and will disappear.
+Document update date : 2025-01-06
+Like
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

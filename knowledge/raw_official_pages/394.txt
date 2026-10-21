@@ -1,0 +1,68 @@
+XDRACO
+'Sealing' is a system that enables items with XDRACO properties to be traded in XDRACO market.
+XRACO Sealing
+XRACO Sealing
+XDRACO sealing is a system that enables items with XDRACO properties to be traded in XDRACO market.
+Items that can be piled can become tradable by giving XDRACO properties through XDRACO Sealing Box.
+※ Certain amount of resources will be consumed to seal XDRACO item or to make Sealing Box with XDRACO property out of plillable items.
+[XDRACO Sealing Limitations]
+Grade
+Sealing Cost
+Rare
+100 Gold
+Epic
+500 Gold
+Legendary
+2,000 Gold
+Mythic
+10,000 Gold
+[XDRACO Sealing Limitations]
+- Usable to characters above level 40.
+- Has to be linked with WEMIX account.
+[XDRACO Warehouse]
+① It's a space where items with XDRACO properties get stored.
+② Item with XDRACO property that is not sealed yet. If you seal the item by using some resources it will move to XDRACO Warehouse becoming unavailable to use. It will move to your bag and become usable after unsealing it.
+※ There is no cost for Unsealing.
+※ You can store sealed items in XDRACO Warehouse and it is unique to character.
+(Character in the same account can't check the item)
+※ Item will be marked as 'Trading...' when registered in the XDRACO market.
+[Crafting XDRACO Box]
+You can seal items that can be piled (ex. Medicine, Equipments and etc.) into XDRACO sealing box and give XDRACO property to proceed Sealing.
+① Sealing Box can be made in every grades
+② Crafting lists per each resources.
+③ Needed resources when crafting.
+※ Only tradable items can be crafted into boxes.
+[Sealing XDRACO Box]
+① Sealed XDRACO Box will move to the bag when crafted, and XDRACO property will be granted on the Sealed Box.
+② If you seal the item by using some resources it will move to XDRACO Warehouse becoming unavailable to use. It will move to your bag and become usable after unsealing it.
+※ There is no cost for Unsealing.
+※ You can store sealed items in XDRACO Warehouse and it is unique to character.
+(Character in the same account can't check the item)
+Document update date : 2024-11-27
+Like287
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

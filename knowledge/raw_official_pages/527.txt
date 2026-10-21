@@ -1,0 +1,353 @@
+NFT Character
+'NFT Character' is a system that enables trading characters by creating and sealing NFT with your character.
+Creating NFT Character
+Seal&Unseal NFT Character
+Load NFT Character
+Creating NFT Character
+[Creating NFT Character]
+■ Preworks in order to seal Character NFT.
+[Creating Conditions]
+■ Character
+- Characters over Lv 60 that has more than 100,000 Power Score can be created as NFT.
+※ Character can still be played even if NFT is created.
+■ Account
+- Character's account must be linked with at least one of the social accounts of Google, Apple and Facebook.
+- WEMIX Play must be linked with the account that has the character to be sealed as NFT, and creating NFT will become available after logging in to the linked WEMIX Play.
+■ Cost
+- 4,000 Gold
+[How to create NFT character]
+■ 'Create NFT Character' Menu
+1) In-game Menu(+) > XDRACO > NFT
+① Click In-game Menu(+) > 'XDRACO'
+② Click 'NFT' button
+■ Create NFT Character
+① Has to check and fulfill all the requirements on the list.
+② Consume 4,000 Gold to create NFT.
+※ Character that has finished creating NFT will have the 'NFT' tag on the Character Selection screen.
+■ Precautions
+※ Be cautious when you delete the account that has the NFT Character since the character that has created NFT will also be deleted.
+Seal&Unseal NFT Character
+[Seal&Unseal NFT Character]
+■ Seal NFT Character : To sell character after creating NFT
+■ Unseal NFT Character : To play the character that did not get traded after sealing.
+[Sealing Condition]
+■ Character
+- NFT has to be created on the character.
+- Character has to be located on the Bicheon Castle.
+- Character's Alignment points is more than 0
+※ Character will become unplayable after sealing the NFT character.
+■ Item
+- No item to be claimed in the Shop > Storage
+- No item registered for unsealing
+- XDRACO item not stored in the XDRACO Warehouse
+- No time-limited items being equipped.
+■ Contents
+- Not in a Clan
+- No Mail to be checked
+- Not in a party (Raid party)
+- No internal injuries, Lost items, EXP to be stored.
+- No items registered or to be settled in the market.
+- No Conquest buildings in the promoting state.
+- No cool-down in Wayfarer Travel & NFT sealing (5 days)
+- Tempo restante devido ao Cerco do Castelo
+■ Accounts
+- Character's account must be linked with at least 1 of the social accounts of Google, Apple and Facebook.
+- WEMIX Play must be linked with the account that has the character to be sealed as NFT, and sealing NFT will become available after logging in to the linked WEMIX Play.
+■ Cost
+- 1,000 Gold
+[How to seal NFT Character]
+■ 'Seal NFT Character' menu
+1) In-game Menu(+) > XDRACO > NFT
+① Click In-game Menu(+) > 'XDRACO'
+② Click 'NFT' button
+※ Only characters that has finished creating NFT can enter the 'Seal' menu.
+■ Seal NFT Character
+- Has to check and fulfill all the requirements on the list to proceed sealing on NFT character.
+- Consume 1,000 Gold to seal NFT.
+※ Character that has finished sealing NFT will move to the linked WEMIX Play.
+※ Character that has finished sealing will be removed from the character selection screen.
+※ The Sealed Character can only be loaded into the server it was sealed in.
+1. Information to be sealed
+Category (Details)
+Information
+Server
+Continent / Region / Server
+Character
+Name
+Class
+Level
+Power Score
+Alignment point
+Holding Resources (Copper, Energy, Darksteel, Dragon Jade, Speed-Up Point, Ancient Coin)
+※ Excluding Gold
+Ability Stats
+Level of each Skill (Total 13 Skill's level details)
+Character Restriction State
+Purchase limit of Shop
+Account purchase limit
+Server purchase limit
+Character purchase limit
+Daily / Weekly / Monthly character purchase limit
+Daily Package (14 Days)
+Battle Pass item (ex. Sarmati's Mission Scroll and etc.)
+Equipped item
+(Grade, Tier, Enhancement level, Additional Properties (Maximum 8), Primal Force stats, Void Resonance Slots)
+Weapon
+Bottoms
+Gloves
+Shoes
+Necklace
+Bracelet
+Ring
+Earrings
+Secondary Weapon
+Dragon Artifact
+Ancient Treasure
+Possessing Equipments
+(Grade, Tier, Enhancement level, Additional Properties (Maximum 8))
+All equipments
+Spirits
+Spirits in use and owned (Equipped Spirit Treasures included)
+Magical Soul Orb
+Equipped and owned Magical Soul Orbs
+Equipped Magic Stone
+(Grade, Stats)
+Magic Stone
+Equipped Mystical Piece
+(Grade, Stats)
+Mystical Piece
+Equipped Transference Equipment
+(Grade, Stat)
+Transference Equipment
+Training_Constitution (Levels reached until now)
+Constitution
+Training_Inner Force
+(Levels reached until now)
+Muscle Strength Manual
+Nine Yin Manual
+Nine Yang Manual
+Violet Mist Art
+Northern Profound Art
+Toad Stance
+Training_Potential (Levels reached until now)
+Potential
+Training_Solitude Training (Levels reached until now)
+Enhancement Level
+Codex
+(Levels reached until now)
+Character
+Reputation
+Server
+Time Limited
+Collection Codex
+Conquest
+Conquest Stage and Effects
+Mystique Info
+Cosmic HarmonyInfo
+Others
+Inventory
+Event and Repeatable Mission Information
+Divine Dragon's Promissing Points
+※ Gold (Unsealable)
+Category
+Information
+Details
+Possessing Resources
+Gold
+Gold will remain on the server of the account after sealing NFT character.
+1. Remaining Gold will be shared with other characters of the same server.
+2. If there are no other characters on the same server, Gold can be shared by creating a new character.
+■ Precautions
+※ If you delete the account that proceeded with sealing of NFT character, only targeted account will be deleted and sealed character will remain on WEMIX Play.
+[Unsealing Conditions]
+■ Accounts
+- You can only unseal the NFT character with the account that you sealed with.
+※ NFT characters can only be unsealed in the server that you proceeded sealing.
+※ Character will appear again on the server that it belonged to before sealing.
+* Please refer to Basic TIP  - [Choose Server] for further details. (Click here)
+■ Cost
+- Free
+[How to unseal NFT]
+■ 'Unseal NFT Character' Menu
+1. Connect to an account you wish to unseal your NFT character to (Unsealing will be available for the server the NFT character was sealed in)
+① Click ' Load NFT'
+2. Select sealed character from the list
+3. Click 'Check' button on the Load NFT screen.
+4. You can find the unsealed character from the character selection screen of that server after unsealing gets done.
+※ 'Create NFT' settings won't disappear even after unsealing NFT character.
+■ Loading information after unsealing
+- You can load all the sealed information.
+※ Regardless of acquisition or not, you are not able to acquire Septaria from Sanctuary of HYDRA on day of unsealing.
+※ Free entry counts of Portal & Raids, Repetitive Mission counts, and Daily Task counts will be reset or remained depending on the unsealing time.
+※ Information related to Karma will remain.
+※ Server/Reputation/Time-Limited Codex will be combined with the Codex registered in the account that you proceeded on unsealing.
+※ Time-Limited Codex effect won't be applied if the duration has expired at the moment of unsealing.
+※ Duration (Rewards) of Time-Limited products will automatically be consumed from the sealing moment to unsealing moment.
+EX)
+Product
+Product Period
+Sealing Time
+Unsealing Time
+Result
+Daily Package (14d)
+12/1~12/13
+12/5
+12/9
+- Rewards : Rewards of 12/6~12/8 period can't be claimed. Rewards of the remaining period can be claimed.
+- Remaining Period : 12/9 ~ 12/13
+12/14
+- Rewards : Rewards of 12/5 ~ 12/13 period can't be claimed.
+- Remaining Period : Expired
+※ Purchase limit of products with Daily / Weekly / Monthly purchase limit will be remained or reset by comparing the sealing/unsealing time.
+EX)
+Product
+Purchase Limit
+Sealing Time
+Unsealing Time
+Result
+Essential Package 1
+1 per day
+12/15
+12/15
+- Purchase Limit : Remains Purchase Limit Count
+12/16
+- Purchase Limit : Reset Purchase Limit Count
+Spirit + Equipment Package 1
+1 per Week
+12/17
+- Purchase Limit : Remains Purchase Limit Count
+12/23
+- Purchase Limit : Reset Purchase Limit Count
+Monthly Boost Package
+1 per Month
+12/20
+- Purchase Limit : Remains Purchase Limit Count
+1/1
+- Purchase Limit : Reset Purchase Limit Count
+■ Precautions
+※ Wayfarer Travel & NFT sealing cool-down (5 days) will be applied on the character after completing unsealing.
+※ You have to proceed from the NFT sealing stage once again to trade unsealed character.
+Load NFT Character
+[Load NFT Character]
+■ Stage to use purchased character from the market.
+[Loading Conditions]
+■ Accounts
+- Character's account must be linked with at least 1 of the social accounts of Google, Apple and Facebook.
+※ NFT system can't be used with Guest accounts.
+- Only game accounts that are linked with WEMIX Play that has purchased the character can load NFT Characters.
+- The NFT Character can only be loaded into the Server the character was sealed in. There must be 1 spare empty slot to load the Character into.
+[How to load NFT Character]
+■ 'Load NFT Character' Menu
+1. Log in with the game account that is linked with WEMIX Play that has the character to load.
+2. Select Continent / Region / Server to load character.
+① Click 'Load NFT' button.
+3. Select character to load from the list
+4. Click 'Confirm' button from the load screen
+※ Extra unsealing procedure is not needed when you load the character.
+※ If the purchased character doesn't show up on the list, you can press 'refresh' button to renew the list.
+5. Game will restart when loading character gets done and loaded character will show up on the character selection screen.
+※ NFT property won't disappear even if the load gets done.
+■ Loading Details
+- You can load all the details that got sealed.
+※ Regardless of acquisition or not, you are not able to acquire Septaria from Sanctuary of HYDRA on day of loading.
+※ Free entry counts of Portal & Raids, Repetitive Mission counts, and Daily Task counts will be reset.
+※ All the Karma lists registered in the character will be deleted.
+※ Server/Reputation/Time-Limited Codex of the character will be combined with the Codex registered in the loading account.
+※ Codex effect of the expired Time-Limited Codex won't get applied.
+※ In case of products that has server purchase limits will be maintained or initialized in accordance with purchase history of 'load Character and the server that load the character'.
+EX)
+Information of purchase character
+Information of server that load the character
+Purchase limit
+Server
+Whether purchase or not
+Server
+Whether purchase or not
+ASIA24
+Purchase
+ASIA24
+Non-purchase
+Keep purchase limit
+ASIA31
+Non-purchase
+Initialize purchase limit
+Purchase
+Keep purchase limit
+Non-purchase
+ASIA24
+Purchase
+Keep purchase limit
+※ Products that have account purchase limits will have their count remaining after loading the character.
+※ Time-limited products (Rewards) will automatically be consumed during the sealed time.
+EX)
+Product
+Product Period
+Sealing Time
+Unsealing Time
+Result
+Daily Package (14d)
+12/1~12/13
+12/5
+12/9
+- Rewards : Rewards of 12/6~12/8 period can't be claimed. Rewards of the remaining period can be claimed.
+- Remaining Period : 12/9 ~ 12/13
+12/14
+- Rewards : Rewards of 12/5 ~ 12/13 period can't be claimed.
+- Remaining Period : Expired
+※ Purchase Limit of Daily / Weekly / Monthly products will be remained or reset by comparing sealing time and loading time.
+EX)
+Product
+Purchase Limit
+Sealing Time
+Unsealing Time
+Result
+Essential Package 1
+1 per day
+12/15
+12/15
+- Purchase Limit : Remains Purchase Limit Count
+12/16
+- Purchase Limit : Reset Purchase Limit Count
+Spirit + Equipment Package 1
+1 per Week
+12/17
+- Purchase Limit : Remains Purchase Limit Count
+12/23
+- Purchase Limit : Reset Purchase Limit Count
+Monthly Boost Package
+1 per Month
+12/20
+- Purchase Limit : Remains Purchase Limit Count
+1/1
+- Purchase Limit : Reset Purchase Limit Count
+■ Precautions
+- Wayfarer Travel & NFT sealing cool-down (5 days) will be applied on the character after completing loading.
+※ MIR4 Character NFTs can only be traded on the Mainnet Chain. [Link]
+Document update date : 2026-09-28
+Like121
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

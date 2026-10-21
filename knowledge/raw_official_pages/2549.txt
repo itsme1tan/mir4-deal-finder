@@ -1,0 +1,86 @@
+Hall of Dragonians
+Hall of Dragonians is a place where Dragonians can cast their votes to decide who truly deserves the title of supreme master of the Mir Continent, chosen from among the strongest Dragonians who have proven their skills.
+Hall of Dragonians Basic Information
+Hall of Dragonians Reset Time
+Voting Method
+Hall of Dragonians Rewards
+Hall of Dragonians Basic Information
+1. Candidate Selection: Every Monday, the top 5 users in the overall Power Score ranking are selected as 'Hall of Dragonians' voting candidates.
+2. Participation Conditions: All Dragonians Level 10 or higher can cast a 'Like' vote for one of the voting candidates once per day.
+3. Voting Process: Voting runs for one week, and Dragonians who participate in voting are immediately given a special buff reward.
+4. Final Selection: When the voting period ends, the single Dragonian who received the most 'Like' votes is given the Most Votes reward.
+Hall of Dragonians Reset Time
+1. Hall of Dragonians Progress and Voting Period
+Based on every Monday 02:00 (UTC+8), the Hall of Dragonians candidates and rankings are reset, and a new vote begins for one week immediately after the reset.
+[Reset Time by Region (Weekly)]
+- ASIA: Monday 02:00
+- INMENA: Monday 00:00
+- EU: Sunday 20:00
+- SA: Sunday 15:00
+- NA: Sunday 14:00
+2. 'Like' Vote Count Reset Time
+Every day, the number of available 'Like' votes (once per day) resets at the times specified below.
+[Reset Time by Region (Daily)]
+- ASIA: 02:00
+- INMENA: 00:00
+- EU: 20:00
+- SA: 15:00
+- NA: 14:00
+Voting Method
+1. Enter the Hall of Dragonians tab in [Menu > Ranking].
+2. You can check the overall Power Score ranking or participate in voting by pressing the 'Like' button for one of the 5 Dragonians registered as Hall of Dragonians candidates.
+Hall of Dragonians Rewards
+1. Voting Rewards
+- Each time you participate in the 'Like' vote daily, the powerful buff benefits below are immediately applied.
+- Duration: 1 hour after the buff is applied.
+Buff Item
+Effect
+Hunting EXP Boost
++ 10%
+Hunting Copper Gain Boost
++ 10%
+Drop Chance Boost
++ 10%
+2. Most Votes Reward
+- After the weekly voting results are tallied, a special reward is given via mail to the single Dragonian who received the most votes.
+Reward Item
+Qty
+Legendary Blue Dragon Statue
+20
+Fissured Portal Ticket Selection Box
+20
+Epic Dragonsteel Box
+10
+Legendary Herbalist Hong Box
+5
+Legendary Divine Water
+10
+※ The Most Votes reward is sent after the Hall of Dragonians reset is completed, but please note that delays may occur.
+Document update date : 2026-07-21
+Like
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

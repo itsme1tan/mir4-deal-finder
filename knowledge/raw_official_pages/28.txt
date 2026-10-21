@@ -1,0 +1,50 @@
+Target/Auto-combat
+Target settings
+Auto-combat
+Applying in combat
+Target settings
+- Targeting method can be set as List method or Tab method.
+[List Method]
+① Clicking the icon opens a target list that can be used to look for targets. (Tab key on a PC)
+② Tapping a target on the list gets your character to attack it automatically. (On a PC, you can click your mouse to select and attack a target.)
+③ You can tap the icon to set your target.
+④ Pressing X removes the target window.
+[Tab Method]
+- Switches targets between nearby enemies.
+Auto-combat
+- Tapping it gets your character to automatically engage nearby enemies in combat, using skills and potions in quick slots automatically.
+Applying in combat
+- It is important to use combo skills according to the situation to deal damage or subdue the enemy.
+- A Debilitation skill should be followed by a combo skill that can deal extra damage.
+(E.g. Elementalist: After using Frost Orb to inflict Chill on a target, use Thunderstorm to inflict Bash and DMG Boost)
+- It is recommended to remove the manual skill as needed and use a combo skill manually.
+- When using Auto-combat, it is recommended to only assign skills that your character should use automatically to quick slots.
+- When the enemy uses a powerful skill such as a Lethal Move or a Debilitation skill followed by Bash and DMG Boost, it is recommended to use Roll to reduce damage.
+Document update date : 2021-08-21
+Like94
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

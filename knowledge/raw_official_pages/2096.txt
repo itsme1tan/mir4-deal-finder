@@ -1,0 +1,152 @@
+Redmoon Purgatory
+Redmoon Purgatory is a labyrinth-type region where players can obtain large amounts of equipment and materials, including the Burnt Skill Tome and Ancient/Skill Arcane Tomes, which are used in the Scripture Hall.
+Entering Redmoon Purgatory
+Redmoon Purgatory Info
+Hidden/Forbidden Sector Summoning Badge Info
+Entering Redmoon Purgatory
+- Redmoon Purgatory is accessible to characters who have reached Level 120 or higher.
+- You can enter Redmoon Purgatory from the [Spiritual Center] region.
+- Each floor of Redmoon Purgatory has its own level requirement.
+[Redmoon Purgatory Floor Entry Level Requirements]
+Floor
+Entry Level Requirement
+Redmoon Purgatory 1F
+120
+Redmoon Purgatory 2F
+130
+Redmoon Purgatory 3F
+135
+Redmoon Purgatory 4F
+140
+Redmoon Purgatory 5F
+145
+Redmoon Purgatory 6F
+150
+Redmoon Purgatory 7F
+155
+Redmoon Purgatory Info
+1. Quest Boss Monsters
+- Each floor of Redmoon Purgatory contains a Quest Boss Monster.
+- Quest Boss Monsters appear four times daily (06:00, 12:00, 18:00, and 24:00 server time).
+- Each Quest Boss remains active for 5 minutes after spawning. If not defeated within that time, it will disappear automatically.
+- Defeating a Quest Boss will spawn a treasure chest containing various items.
+2. Summon Boss Monsters
+- Floors 1 through 6 of Redmoon Purgatory feature special zones called ‘Hidden Sector’ and ‘Forbidden Sector,’ where boss monsters can be summoned using dedicated summoning items.
+- Summoning badges for ‘Hidden Sector’ and ‘Forbidden Sector’ zones can be purchased from NPC merchants or obtained as rewards from Repeatable Achievements.
+- Summoned bosses in these zones must be defeated within a limited time, or they will disappear.
+- Monthly Repeatable Missions can be completed in the Hidden/Forbidden Sectors. These missions reset every month on the 1st at 00:00 (UTC+8).
+3. Special Boss Monster
+- On Redmoon Purgatory 7F, you can encounter the special boss <Hellish Lord> Helbar.
+- Helbar spawns every Wednesday at 23:00 (UTC+8).
+- Defeating Helbar spawns a treasure chest with various items, including a low chance to obtain an Ancient Box, which can be opened using the Rare Ancient Key.
+4. Boss Monster Rewards
+- Defeating normal, quest, or special boss monsters offers a chance to obtain a Burnt Skill Tome.
+- Quest and special boss monsters also have a low chance of dropping Ancient/Skill Arcane Tomes.
+Hidden/Forbidden Sector Summoning Badge Info
+1. Summoning badges used in the Hidden and Forbidden Sector zones of Redmoon Purgatory 1–6F can be obtained by completing Repeatable Achievements.
+Achievement Name
+Completion Requirement
+Reward Item
+Summon Location
+Complete All Common Missions in Phantasia Labyrinth
+Complete 250 Common Missions Across All Floors of Phantasia Labyrinth
+Bloodsword-Smashing Hammer x1
+Redmoon Purgatory 1F Hidden Sector
+Complete All Common Missions in Phantasia Valley
+Complete 250 Common Missions Across All Floors of Phantasia Valley
+Blackblood Tribe Chief's Horn x1
+Redmoon Purgatory 2F Hidden Sector
+Complete All Common Missions in [Elite] Sagittarion Temple
+Complete 250 Common Missions Across All Floors of [Elite] Sagittarion Temple
+Ritual Blade x1
+Redmoon Purgatory 3F Forbidden Sector
+Complete All Common Missions in  [Domination] Black Dragon Valley
+Complete 80 Common Missions in [Domination] Black Dragon Valley
+Ragran's Torch x1
+Redmoon Purgatory 4F Forbidden Sector
+Complete All Missions in Mirage Ship Layer 3
+Complete 80 Common Missions in Mirage Ship Layer 3
+Stone of Balance x1
+Redmoon Purgatory 5F Forbidden Sector
+Complete All Missions in [Domination] Black Dragon Abaddon
+Complete 4 Common Missions in [Domination] Black Dragon Abaddon
+Dragon Horn Stone x1
+Redmoon Purgatory 6F Hidden Sector
+2. Summoning badges for Redmoon Purgatory 1–6F (Hidden/Forbidden Sector zones) can also be crafted through the NPC <Reclusive Craftsman> Gu Majin in Phantom Woods.
+Crafting NPC
+Craft Item
+Required Materials
+Summon Location
+Phantom Woods NPC
+<Reclusive Craftsman>
+Gu Majin
+Mirror of Soul x1
+Uncommon Skill Arcane Tome x10
+Redmoon Purgatory 1F Forbidden Sector
+Uncommon Ancient Arcane Tome x1
+Divine Dragon's Fragment x100
+Demon Summoning Scroll x5
+Energy x100,000
+Barharr's War Drum x1
+Uncommon Skill Arcane Tome x20
+Redmoon Purgatory 2F Forbidden Sector
+Uncommon Ancient Arcane Tome x2
+Divine Dragon's Fragment x200
+Demon Summoning Scroll x5
+Energy x200,000
+Berserker's Chains x1
+Rare Skill Arcane Tome x10
+Redmoon Purgatory 3F Hidden Sector
+Rare Ancient Arcane Tome x1
+Divine Dragon's Fragment x300
+Demon Summoning Scroll x10
+Energy x300,000
+Galdrik's Broken Hilt x1
+Rare Skill Arcane Tome x20
+Redmoon Purgatory 4F Hidden Sector
+Rare Ancient Arcane Tome x2
+Divine Dragon's Fragment x400
+Demon Summoning Scroll x10
+Energy x500,000
+Ashen Fire of the Void x1
+Epic Skill Arcane Tome x2
+Redmoon Purgatory 5F Hidden Sector
+Epic Ancient Arcane Tome x1
+Divine Dragon's Fragment x500
+Demon Summoning Scroll x20
+Energy x1,000,000
+Dragon's Seal x1
+Epic Skill Arcane Tome x4
+Redmoon Purgatory 6F Forbidden Sector
+Epic Ancient Arcane Tome x2
+Divine Dragon's Fragment x600
+Demon Summoning Scroll x20
+Energy x3,000,000
+Document update date : 2025-06-23
+Like1
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

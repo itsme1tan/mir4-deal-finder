@@ -1,0 +1,289 @@
+EXDRA
+EXDRA
+EXDRA Season4
+EXDRA Crafting
+EXDRA Exchange
+EXDRA Season 1
+EXDRA Season 2
+EXDRA Season3
+EXDRA
+EXDRA (Expansion of DRACO) is a new seasonal token aimed at enhancing the value of existing tokens. Through PNIX DEX, users can trade their stored tokens with others at any time and use EXDRA as a material to craft powerful equipment.
+[EXDRA Important Notice]
+1. EXDRA is a seasonal token that can only be obtained during the season period.
+2. A maximum issuance limit is set for each season, and once this limit is reached, EXDRA tokens can no longer be acquired.
+3. Gas fees (WEMIX) are required when crafting EXDRA.
+[EXDRA Primary Uses]
+1. Crafting ‘Ancient Equipment’ in MIR4.
+- Ancient Treasure
+- Special Magical Soul Orb
+2. Free trading through PNIX DEX.
+- EXDRA tokens can be freely traded on PNIX DEX even after the season ends.
+[Season Information]
+Season
+Duration
+Core Items
+Status
+Season 4 (EXDRA4)
+July 7, 2026 ~ January 5, 2027
+Jade Septaria
+- Ragnos's Earrings
+- Gu Mado Magical Soul Orb
+In Progress
+Season 3 (EXDRA3)
+December 23rd, 2025 ~ June 23rd, 2026
+Gold Septaria
+- Ragnos's Bracelet
+- Helbar Magical Soul Orb
+Ended
+Season 2 (EXDRA2)
+June 10, 2025 – December 9, 2025
+Blue Septaria
+- Ragnos's Necklace
+- Diabolic Skydragon Magical Soul Orb
+Ended
+Season 1 (EXDRA1)
+November 26, 2024 – May 27, 2025
+Red Septaria
+- Ragnos's Ring
+- Drakazan Magical Soul Orb
+Ended
+EXDRA Season4
+The fourth season of the seasonal token EXDRA runs for 26 weeks, from after the July 7, 2026 update ~ before the January 5, 2027 update. The token name for EXDRA Season 4 is 'EXDRA4'.
+[EXDRA4]
+1. 7,000,000 EXDRA4 tokens are issued during the season period, and they can be obtained through MIR4’s in-game crafting.
+[EXDRA4 Minting]
+1. 'Jade Septaria' is used as an essential material in the EXDRA4 token Minting process.
+2. The uses of Minted EXDRA4 tokens are as follows.
+1) 'Ragnos's Earrings Box' and 'Gu Mado Magical Soul Orb Box' exchange material.
+- It can be used as exchange material for boxes that allow you to obtain the new Ancient equipment 'Ragnos's Earrings' and the new Magical Soul Orb 'Gu Mado Magical Soul Orb'.
+2) Free trading through PNIX DEX
+[Jade Septaria]
+1. Jade Septaria is an essential material for EXDRA4 token Minting.
+- You can craft (Mint) EXDRA4 tokens at [Menu > XDRACO > Season Token > Crafting Station].
+- EXDRA4 Recipe: Jade Septaria x5 / Copper x10,000
+2. Jade Septaria can be obtained through the methods below.
+- Mission Scroll and Monthly Check-in Rewards
+- Limited Product Purchases
+- Transference Equipment Enhancement Failure (Destruction) Rewards (+4 or Higher)
+- All-Server Power Score Ranking Rewards
+- Disenchant Rewards
+- Field Boss Defeat Rewards
+- Conquest Treasure Rewards
+※ Please refer to [Game Encyclopedia - Conquest Treasure] for more information.
+[EXDRA4 Exchange]
+1. List of items that can be exchanged using EXDRA4 tokens:
+- Ragnos's Earrings Box
+- Gu Mado Magical Soul Orb Box
+2. Ragnos's Earrings Box
+- Ragnos's Earrings Box Exchange Recipe: EXDRA4 Token x3
+- When using the 'Ragnos's Earrings Box', you can randomly obtain one of various items, including Ragnos's Earrings, Ancient Treasure Enhancement Stone, and Ancient Treasure Enchant Scroll.
+※ Refer to [Game Encyclopedia - Ancient Treasure] for details.
+3. Gu Mado Magical Soul Orb Box
+- Gu Mado Magical Soul Orb Box Exchange: EXDRA4 Token x2
+- When using the 'Gu Mado Magical Soul Orb Box', you can randomly obtain one of various items, including Gu Mado Magical Soul Orb, Goblin, Magical Soul Orb Enchant Scroll, and Special Magical Soul Orb Enchant Scroll.
+※ Refer to [Game Encyclopedia - Magical Soul Orb] for details.
+EXDRA Crafting
+[EXDRA Menu]
+1. The EXDRA menu is accessible from Level 40.
+2. Menu Access Method
+1) Game Menu (+) > XDRACO > Season Token
+① Game Menu (+) > Click ‘XDRACO’
+② Click the ‘Season Token’ button.
+2) If a WEMIX PLAY account is not linked, a pop-up will guide you to link your account.
+※ Each WEMIX PLAY account can be linked to only one game account, and once linked, it cannot be unlinked.
+3) After linking your WEMIX PLAY account, the EXDRA balance owned in your WEMIX PLAY App will be displayed.
+[EXDRA Crafting Precautions]
+- A maximum of 1,000 EXDRA tokens can be crafted per account per day.
+- The daily reset time is 00:00 (UTC+8).
+- Crafting will be unavailable once the season’s maximum issuance limit is reached.
+[EXDRA Crafting]
+1) Go to [Game Menu (+) > XDRACO > Season Token > Crafting Station] in-game.
+2) You can check the number of tokens you currently have, the materials required to craft tokens, the token issuance amount, the end of the season, and the remaining daily crafting amount.
+3) Enter the crafting amount, check the required materials, and then press the [Craft] button to craft.
+※ If your WEMIX PLAY App account is not linked, crafting will proceed after linking your account.
+4) Results from crafting will be delivered via in-game mail.
+EXDRA Exchange
+[EXDRA Exchange]
+1) Go to [Game Menu (+) > XDRACO > Season Token > Exchange Station] in-game.
+2) You can check the list of exchangeable items, the number of tokens required to craft the item, and the number of tokens you have.
+3) Enter the exchange amount, check the required materials, and click the [Exchange] button to proceed with the exchange.
+※ If your WEMIX PLAY App account is not linked, the exchange will proceed after linking the account.
+4) Results of the exchange and the items obtained will be delivered via in-game mail.
+EXDRA Season 1
+The first season of the seasonal token, EXDRA, will run for 24 weeks, starting from the update on November 26th, 2024 until May 27th, 2025. The token name for EXDRA Season 1 is ‘EXDRA1’.
+[EXDRA1]
+1. A total of 10,000,000 EXDRA1 tokens will be issued, and they can be acquired through the following methods:
+Source
+Ratio
+Total Issuance
+Crafting in MIR4
+70%
+7,000,000
+HYDRA Staking Program For EXDRA
+10%
+1,000,000
+Purchase via Play Token
+(WEMIX PLAY Webshop)
+20%
+2,000,000
+[EXDRA1 Minting]
+1. When minting EXDRA1 Tokens, the materials: ‘Red Nebula Powder’ and ‘Red Septaria.’ are required.
+2. The uses for minted EXDRA1 tokens are as follows:
+1) Crafting materials for ‘Ancient Equipment Box’ and ‘Special Magical Soul Orb Box.’
+- You can obtain ‘Ancient Treasure’ and ‘Special Magical Soul Orb’ by using ‘Ancient Equipment Box’ and ‘Special Magical Soul Orb Box.’
+2) Freely Trade on PNIX DEX.
+3. The minting process for EXDRA1 is as follows:
+1) Use Red Nebula Powder to craft a ‘Flame Bead.’
+2) Use ‘Flame Bead’ to obtain ‘Red Septaria.’
+3) Use ‘Red Septaria’ to craft EXDRA1 tokens.
+[Materials for EXDRA1 Token Minting]
+The materials required for EXDRA1 token minting are as follows:
+1. Red Nebula Powder
+1) Required for crafting Flame Bead, which yields Red Septaria.
+2) Red Nebula Powder can be acquired through:
+- Mission Scroll rewards.
+- Specific limited item purchases.
+- Enhancement Great Failure (destruction) of Transference Equipment (Enhancement Stage 3 or higher).
+2. Flame Bead
+1) You can randomly obtain Red Septaria by using Flame Bead.
+2) Flame Bead crafting requirements:
+- 5x Red Nebula Powder, 1x Rare Pomegranate Flower, and 10,000 Energy.
+- Crafting NPC: Sanctuary of Hydra NPC <Flame Bead Craftsman> Poipoi
+<Flame Bead Craftsman> Poipoi
+3. Red Septaria
+1) Red Septaria is required for crafting EXDRA1 tokens.
+2) Red Septaria can be acquired through:
+- All Servers Power Score Ranking rewards.
+- Flame Bead.
+[Ancient Equipment Box and Special Magical Soul Orb Box]
+1) Items that can be exchanged with EXDRA1 tokens include 'Ancient Equipment Box' and 'Special Magical Soul Orb Box.'
+2) Ancient Equipment Box
+- Ancient Equipment Box Crafting Recipe: 3x EXDRA1 tokens.
+- By using ‘Ancient Equipment Box,’ you have a chance to randomly obtain one of several items, including ‘Ancient Treasure Ragnos'sRing’, ‘Ancient Treasure EnhancementStone,’ or ‘Ancient Treasure Enchant Scroll’.
+※ Refer to [Game Encyclopedia - Ancient Treasure] for details.
+3) Special Magical Soul Orb Box
+- Special Magical Soul Orb Box Crafting Recipe: 2x EXDRA1 tokens.
+- By using ‘Special Magical Soul Orb Box,’ you have a chance to randomly obtain one of several items, including ‘Sealed Magical Soul Orb,’ ‘Goblin,’ ‘Magical Soul Orb Enchant Scroll,’ or ‘Special Magical Soul Orb Enchant Scroll.’
+※ Refer to [Game Encyclopedia - Magical Soul Orb] for details.
+EXDRA Season 2
+The second season of the seasonal token EXDRA will run for 26 weeks from the June 10th, 2025 Update until December 9th, 2025. The token for EXDRA Season 2 is named ‘EXDRA2.’
+[EXDRA2]
+1. A total of 10,000,000 EXDRA2 tokens will be issued and can be obtained through the following methods:
+Source
+Ratio
+Total Issuance
+Crafting in MIR4
+70%
+7,000,000
+HYDRA Staking Program For EXDRA
+10%
+1,000,000
+Purchase via Play Token
+(WEMIX PLAY Webshop)
+20%
+2,000,000
+[EXDRA2 Minting]
+1. Blue Septaria is a required material for minting EXDRA2 tokens.
+2. Minted EXDRA2 tokens can be used in the following ways:
+1) As crafting material for ‘Ragnos's Necklace Box’ and ‘Diabolic Skydragon Magical Soul Orb Box.’
+- These boxes grant access to new items: the Ancient Equipment ‘Ragnos's Necklace’ and the new Magical Soul Orb ‘Diabolic Skydragon Magical Soul Orb.’
+2) Freely tradeable via PNIX DEX.
+[Blue Septaria]
+1. Blue Septaria is an essential material for minting EXDRA2 tokens.
+- Go to [Menu > XDRACO > Season Token > Crafting Station] to mint EXDRA2 tokens.
+- EXDRA2 Crafting Recipe: Blue Septaria x5 / Dragonsteel x1
+2. Blue Septaria can be obtained through the following methods:
+- Mission Scrolls and Monthly Check-in Rewards
+- Purchasing Limited-Time Products
+- Transference Equipment Enhancement Great Failure (Destruction on +4 or higher) Reward
+- All Server Power Score Ranking Rewards
+- Disenchant Rewards
+- Conquest Treasure Rewards
+※ Please refer to [Game Encyclopedia - Conquest Treasure] for more information.
+[EXDRA2 Exchange Station]
+1. Exchange EXDRA2 tokens for the following items:
+- Ragnos's Necklace Box
+- Diabolic Skydragon Magical Soul Orb Box
+2. Ragnos's Necklace Box
+- Ragnos's Necklace Box Exchange: EXDRA2 Token x3
+- When used, the Ragnos's Necklace Box grants one random item from a list that includes Ragnos's Necklace, Ancient Treasure Enhancement Stones, and Ancient Treasure Enchant Scrolls.
+※ Refer to [Game Encyclopedia - Ancient Treasure] for details.
+3. Diabolic Skydragon Magical Soul Orb Box
+- Diabolic Skydragon Magical Soul Orb Exchange: EXDRA2 Token x2
+- When used, ‘Diabolic Skydragon Magical Soul Orb Box’ grants one random item from a list that includes Diabolic Skydragon Magical Soul Orb, Goblins, Magical Soul Orb Enchant Scrolls, and Special Magical Soul Orb Enchant Scrolls.
+※ Refer to [Game Encyclopedia - Magical Soul Orb] for details.
+EXDRA Season3
+The third season of the seasonal token EXDRA will be conducted for 26 weeks, from after the update on December 23rd, 2025 until before the update on June 23rd, 2026. The token name of EXDRA Season 3 is “EXDRA3”.
+[EXDRA3]
+1. The total issuance of EXDRA3 tokens is 10,000,000, and they can be obtained through the following methods.
+Source
+Ratio
+Total Issuance
+MIR4 Crafting (In-Game)
+70%
+7,000,000
+HYDRA Staking Program For EXDRA
+10%
+1,000,000
+Obtained via WEMIX PLAY & WEMIX PAY
+20%
+2,000,000
+[EXDRA3 Minting]
+1. “Gold Septaria” is used as a required material in the EXDRA3 token minting process.
+2. The usage of minted EXDRA3 tokens is as follows.
+1) Exchange material for “Ragnos’s Bracelet Box” and “Helbar Magical Soul Orb Box”
+- It can be used as an exchange material for boxes that allow you to obtain the new Ancient Equipment “Ragnos’s Bracelet” and the new Spirit Stone “Helbar Magical Soul Orb”.
+2) Free trading through PNIX DEX
+[Gold Septaria]
+1. The Gold Septaria is a required material for EXDRA3 token minting.
+- You can craft (mint) EXDRA3 tokens at [Menu > XDRACO > Season Token > Crafting Station].
+- EXDRA3 crafting recipe: 5 Gold Septaria / 10,000 Copper
+2. Gold Septarias can be obtained through the following methods.
+- Mission Scrolls and Monthly Login Rewards
+- Limited product purchases
+- Transference Equipment enhancement failure (destruction) rewards (Enhancement +4 or higher)
+- All-server Power Score Ranking Rewards
+- Disenchant Rewards
+- Field Boss defeat rewards (Target: Hydra's Depths 5F, Lord Ragnos)
+- Conquest Treasure Rewards
+※ Please refer to [Game Encyclopedia - Conquest Treasure] for more information.
+[EXDRA3 Exchange Shop]
+1. List of items that can be exchanged using EXDRA3 tokens
+- Ragnos's Bracelet Box
+- Helbar Magical Soul Orb Box
+2. Ragnos's Bracelet Box
+- Ragnos’s Bracelet Box exchange recipe: 3 EXDRA3 Tokens
+- When using the “Ragnos’s Bracelet Box”, you can randomly obtain one item from various items such as Ragnos’s Bracelet, Ancient Treasure Enhancement Stone, Ancient Treasure Enchant Scroll, and more.
+※ Refer to [Game Encyclopedia - Ancient Treasure] for details.
+3. Helbar Magical Soul Orb Box
+- Helbar Magical Soul Orb Box exchange: 2 EXDRA3 Tokens
+- When using the “Helbar Magical Soul Orb Box”, you can randomly obtain one item from various items such as Helbar Magical Soul Orb, Goblin, Magical Soul Orb Enchant Scroll, Special Magical Soul Orb Enchant Scroll, and more.
+※ Refer to [Game Encyclopedia - Magical Soul Orb] for details.
+Document update date : 2026-07-06
+Like3
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,183 @@
+Heist
+Heist
+Conditions
+Heist Interface
+Heist Rules
+Heist Beginning
+Heist Rewards
+Heist
+Heist is a grand-scale of war content that competes between the ruling clan and their opponents for Darksteel stored in Bicheon Castle Underground Vault.
+- As Heister, you must destroy the Iron Gate, defeat the Master Guardian Cheol Mujin, and open the reward box to succeed in Heist whereas Defenders ought to prevent their attack and heistings.
+Conditions
+Heist Period
+- Every Friday 22:00 ~ 23:00 (1 hour) based on regional server times
+※ Some clan functions will be locked when Heist undergoes. (Leave Clan, Kicked, Clan Approval, Disband Clan, Alliance Request, Accept Alliance, Break Alliance)
+※ Declare Clan War and Unattackable clan will still be available.
+Heist Partipants
+- Defenders: Ruling clan and their alliance
+※ Alliance from different server can participate as Defenders through Expedition.
+- Heisters: Any clans and clan members that are not allied with ruling clan. (Ranked in top 20)
+※ Opponent clans from different server can participate in Heist as Heisters through Expedition.
+Number of participants
+- Maximum of 400 players can enter Heist.
+※ If player counts have reached their maximum, only ruling clan members can still enter Heist (Not applied to alliance)
+Heist Requirements
+1) Pre-requirements
+Native server player (Natives)
+Expedition (Different server)
+Defenders
+- Ruling clan and their allies
+1) Ruling clan and their alliance
+2) Above Level 70
+Heisters
+1) Clans that are not allied with the ruling clan
+2) Clans ranked in top 20
+1) Clans that are not allied with the ruling clan
+2) Clans ranked in top 20
+3) Above Level 70
+- Expedition PK mode will be available for Expedition members.
+- General PK mode will be applied to native server players (Natives).
+- Most Wanted, Wanted List and Clan Targets will not be applied in Bicheon Castle Underground Vault.
+- Regarding Expedition members, life will be deducted upon death
+Heist Interface
+1) Interface
+- You can choose [Heist] in [War] menu.
+① You can check the ruling clan, the ruler, remaining time and qualification.
+② You can check the total amount of heist-able Darksteel and Avaliable Loots.
+③ You can check the accessibility, and there are two ways mentioned below to enter Heist.
+- Enter through the [Avaliable Area] in Expedition
+- Click [Enter Now] button located at the bottom of Bicheon Castle Underground Vault
+2) Heist Status
+Normal
+Preparation
+Combat
+Restoration
+Progression
+Practicable
+Practicable
+In process
+Impracticable
+Explanation
+A circumstance that can proceed Heist with no Remained Heist Damage
+enable to move Bicheon Castle Underground Vault (Heist field)
+Heist is in process
+A circumstance that cannot proceed Heist due to Remained Heist Damage
+※ Heist will not be proceeded if clans do not have ownership of territory.
+※ If Heist cannot be proceeded due to [restoration], Heist Damage will be carried over to the next battle.
+※ Heist cannot be proceeded due to unprecedented issues including Maintenance (Temporal/regular) or changed ownership of territory.
+Heist Rules
+Features
+1) Name tag
+- Enemies and allies can recognize themselves with the colour of Name tag.
+Sky blue
+Green
+Blue
+Red
+Pink
+Joined as
+Normal Party
+Clan
+Alliance
+Hostile
+Extra
+2) Further Explanations in detail
+- Bicheon Castle Underground Vault: Heist Field
+- Heist Device (Anti-Heist Device/Flameshooter Device) : Device that can be launched for Defenders to protect Heist, costs 15,000 clan resources.
+- Iron Gate: Heisters will need to destory this gate to enter the inside of Bicheon Castle Underground Vault
+- Master Guardian Cheol Mujin: A field monster, who protects the Bicheon Castle Underground Vault, appears after the destruction of the Iron Gate (Reward boxes will appear when gets defeated)
+※ Iron Gate, Heist Device controller, and Master Guardian Cheol Mujin will be influenced by the Clan Tech level of [Castle Siege Strategy] in [Clan Warfare]. (All DMG reduction will be applied to the following tech level.)
+3) Further Rules
+- Heist will be accessible 5 minutes before the initiation, and both Defenders and Heisters will start from the safety area of Bicheon Castle Underground Vault.
+- Natives and Expedition members will be resurrected from specific destination (Bicheon Castle / Outpost) upon death and re-access to Heist will be indefinitely conducted.
+- Only King and ruling clan members who are qualified for War Permission can launch the Heist Device, and it can be launched from NPC Device manager by consuming clan funds after the beginning.
+- Defenders ought to defend Heisters' looting until the end.
+- Natives and Expedition members will be returned to specified destination (Bicheon Castle / Outpost) at the end of Heist.
+Heist Target
+- Defenders (Ruling Clan)
+They ought to prevent Heisters until the end. (Protecting the Iron Gate / Master Guardian Cheol Mujin and preventing their looting for reward boxes)
+- Heisters
+They ought to heist Bicheon Castle Underground Vault until the end. (Destroying the Iron Gate / Defeating the Master Guardian Cheol Mujin / Looting for reward boxes)
+Caution
+- Heist will not be proceeded if clans do not have ownership of territory.
+- Heist cannot be proceeded due to unprecedented issues such as Maintenance (Temporal/regular) or changed ownership of territory.
+- You cannot enter Heist while in a party (raid/Boss raid/Clan Expedition).
+- Heist will not be proceeded if any Heist Damage remains.
+※ Far and Quick travel/Summoning/Alignment/EXP penalties will not be applied in Bicheon Castle Underground Vault. (Penalties applied to: Air Walk/Mount/PK/Internal Injuries/Lost Item)
+Heist Beginning
+-Expedition members can create a party with Expedition members in the same server, and Expedition PK mode will be applied.
+- As natives, field PK mode will be applied.
+※ Clans that are not allied with ruling clan will become Heisters although they already have allied with defenders because the alliance will be given a top priority.
+Heist Map
+①Defenders standby
+②Heisters standby
+③Defenders pathway
+④ Iron Gate
+⑤ Master Guardian Cheol Mujin (Warden)
+⑥ Anti-Heist Device Controller (Heist Device)
+⑦ Flameshooter Device Controller (Heist Device)
+① Defenders standby
+-Defenders including ruling clan standby
+-Heist Device can be launched through Device Manger by consuming clan resources.
+- Heisters cannot enter.
+② Heisters standby
+-Heister location
+-They can move to Iron Gate or Device Controller through pathways on either side.
+-They ought to destroy the Iron Gate to enter into the Vault.
+- Defenders cannot enter.
+③Defenders pathway
+- A pathway for Defenders in order to prevent Heisting.
+- You cannot return to inside after going down through the pathway. (Access to inside will be avaliable upon death or if the Iron Gate has been destroyed)
+- An important pathway to prevent Heisters' attack toward Iron Gate/Device Controller.
+④ Iron Gate
+- An only way for Heisters to enter into the inside of the Vault.
+- Master Guardian Cheol Mujin as warden will appear until the Iron Gate gets destroyed.
+- Flameshooter Device can be built in front of Iron Gate.
+⑤ Master Guardian Cheol Mujin
+- Heisters are ought to defeat this monster to obtain reward boxes after destroying the Iron Gate.
+- Anti-Heist Device can be built inside of the Vault.
+- When Master Guardian Cheol Mujin is defeated, Darksteel Boxes appear
+⑥⑦ Heist Device (Anti-Heist Device/Flameshooter Device)
+- ⑥ Anti-Heist Device Controller, activated inside of the Vault, is to prevent the reward looting.
+- ⑦ Flameshooter Device Controller, activated at the entrance of Iron Gate, is to protect the Iron Gate.
+- Device Controllers can be built per each and each controllers require 30 seconds to launch. (Duration for 10 minutes)
+Heist Progression Monitor
+- You can check whole progressions from the round-shaped icon located at the top right.
+- You can check whole progression of Heist, remaining time, and loot-able/stored amount of Darksteel.
+Heist Rewards
+Reward for Heisters
+- Heisters will obtain Darksteel as well as the heisted currency with 30% loss.
+- The obtainable amount of Darksteel will be differentiated with reward box grades, and extra rewards can also be obtainable with the following chance.
+(※ Total amount of Darksteel with 30% loss: Uncommon:525,000 / Epic: 1,575,000 / Legendary: 5,250,000)
+- If participated in Heist as Expedition, you will get Expedition Token.  If participated as Native, you will get Raid Token.
+Rewards or Loss for Defenders
+- The heisted Darksteel will be deducted from your tax. If the received tax is insufficient, it will be carried over to the next month.
+- Heisted currency will be maintained regardless of change in ruling clan.
+- If participated in Heist as Expedition, you will get Expedition Token.  If participated as Native, you will get Raid Token.
+Document update date : 2022-11-01
+Like9
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

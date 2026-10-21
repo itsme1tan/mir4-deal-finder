@@ -1,0 +1,132 @@
+Competitive Raid
+Competitive Raid is a content mode where players are divided into two teams and compete to defeat a single boss.
+Competitive Raid Basic Information
+Competitive Raid Party
+Competitive Raid Progression
+Competitive Raid Rewards
+Competitive Raid Basic Information
+1. Characters that have reached Level 120 can participate in Competitive Raid.
+2. Competitive Raid is a content mode that proceeds with two teams. A minimum of 20 players (10 vs 10) is required to begin, and up to 30 players (15 vs 15) can participate.
+- The number of players on each team is randomly assigned when the Competitive Raid begins.
+3. Competitive Raid consists of ‘Magical Square Suppression Operation (Tactical Type)’ and ‘Durcas Subjugation (Clash Type)’.
+- The available raid changes each week, and the active raid will rotate every Monday at 12:00 AM (region time).
+4. Competitive Raid takes place in a special battlefield with no death penalty. Teams will compete for 10 minutes to defeat the boss monster, and the team that lands the final blow on the boss will be declared the winner.
+5. Competitive Raid can be entered once per day for free. The daily free entry count resets every day at 12:00 AM (UTC+8).
+- ASIA (UTC+8) : 12:00 AM
+- INMENA (UTC+6) 10:00 PM
+- EU (UTC+2) : 06:00 PM
+- SA (UTC-3) : 01:00 PM
+- NA (UTC-4) : 12:00 PM
+Competitive Raid Party
+- You can enter the Competitive Raid screen through [Menu > Raid > Competitive Raid].
+① You can check the raid name and map layout of the Competitive Raid.
+② You can check information about the Competitive Raid.
+③ You can check the remaining entry attempts and obtainable rewards for the Competitive Raid.
+④ Press the [Search Raids] button to participate in a Competitive Raid party.
+⑤ Press the [Create Raid] button to create a Competitive Raid party.
+Competitive Raid Progression
+- Depending on the type of raid in progress, different boss monsters will appear, and the team that deals the final blow to the boss monster will win.
+1) Magic Square Suppression Operation: Adon
+2) Durcas Subjugation: Durcas
+① When entering Competitive Raid, the PK Mode of all characters will be fixed to [Hostile] mode.
+② The time limit for Competitive Raid is 10 minutes. If the boss monster is not defeated within the time limit, both teams will be considered defeated.
+③ You can press the button to leave the ongoing raid.
+- If you leave before the boss monster is defeated, no rewards will be given and the consumed entry attempt will not be restored.
+- If you leave after the boss monster is defeated, rewards based on the raid result (Victory/Defeat) will be granted, but you cannot rejoin the raid even if there are Treasure Chests remaining.
+[Magic Square Suppression Operation (Tactical Type)]
+1. After the battle preparation time ends, you can move to a random room through the portal located at the center of the map.
+2. When all monsters in the room are defeated, there is a chance that a portal leading to the boss monster ‘Adon’ will appear.
+- The portal leading to Adon will appear in only one room.
+3. When 2 minutes remain, an additional portal leading to Adon will appear in a room where no monsters are present.
+[Durcas Subjugation (Clash Type)]
+1. After the battle preparation time ends, players can begin the battle to defeat the boss monster ‘Durcas’ at the center of the map.
+④ The team that deals the final blow to the boss monster wins the raid. Afterwards, a 5-minute reward period begins during which Treasure Chests can be opened.
+- Treasure Chests can be opened by all characters regardless of victory or defeat, allowing them to obtain rewards.
+⑤ When leaving the raid after it ends, rewards will be granted based on the raid result.
+- The result screen reward list will display both the Victory/Defeat rewards and the rewards obtained from Treasure Chests.
+Competitive Raid Rewards
+There are three types of rewards that can be obtained from Competitive Raid.
+1. Raid Result Rewards
+- Rewards granted when leaving the raid after it ends based on the result.
+- Both the winning and losing teams receive rewards, but the winning team receives better rewards.
+2. Additional Rewards
+- After the boss monster is defeated, Treasure Chests appear for 5 minutes, which can be opened by all characters regardless of victory or defeat. Opening a Treasure Chest grants additional individual rewards.
+3. Achievement Rewards
+- Achievement Rewards that can be obtained based on cumulative participation and victory counts in Competitive Raid through the [Achievements] tab.
+Achievement Name
+Stage Count
+Achievement Condition
+Master of Competitive Raid I
+10
+Participate in Competitive Raid 1 Time
+Master of Competitive Raid II
+10
+Participate in Competitive Raid 5 Times
+Master of Competitive Raid III
+10
+Participate in Competitive Raid 10 Times
+Master of Competitive Raid IV
+10
+Participate in Competitive Raid 20 Times
+Master of Competitive Raid V
+10
+Participate in Competitive Raid 35 Times
+Victor of Durcas I
+10
+Win Durcas Subjugation 1 Time
+Victor of Durcas II
+10
+Win Durcas Subjugation 2 Times
+Victor of Durcas III
+10
+Win Durcas Subjugation 3 Times
+Victor of Durcas IV
+10
+Win Durcas Subjugation 5 Times
+Victor of Durcas V
+10
+Win Durcas Subjugation 7 Times
+Ruler of Magic Square I
+10
+Win Magical Square Suppression Operation 1 Time
+Ruler of Magic Square II
+10
+Win Magical Square Suppression Operation 2 Times
+Ruler of Magic Square III
+10
+Win Magical Square Suppression Operation 3 Times
+Ruler of Magic Square IV
+10
+Win Magical Square Suppression Operation 5 Times
+Ruler of Magic Square V
+10
+Win Magical Square Suppression Operation 7 Times
+※ Each Achievement consists of 10 Stages, and you can proceed to the next Achievement when you complete all 10 Stages.
+Document update date : 2026-03-16
+Like
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

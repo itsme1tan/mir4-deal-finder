@@ -1,0 +1,112 @@
+Altar of Sublimation
+The Altar of Sublimation is a new system that allows you to use Legendary-grade Magic Stones / Spectrumite / Spirit Treasures as materials to attempt to obtain Mythic-grade Magic Stones / Spectrumite / Spirit Treasures.
+Basic Information of the Altar of Sublimation
+How to Perform Altar of Sublimation
+Crafting Mythic Magic Stones / Spectrumite / Spirit Treasure Chests
+Basic Information of the Altar of Sublimation
+1. You can access the Altar of Sublimation through the Spiritual Center NPC ‘<Altar of Sublimation> Enlightened Great Matron’.
+2. To perform Sublimation, you must use three Legendary Magic Stones / Spectrumite / Spirit Treasures of the same tier, along with Darksteel and Dragonsteel.
+3. The higher the Special Enhancement level of the material items, the higher the success rate of Sublimation.
+4. If you register two or more of the same type of item, the chance of obtaining that specific type upon success will increase.
+- Example: Registering two or more Legendary Magic Stones of Vigor will increase the chance of obtaining a Mythic Magic Stone of Vigor when successful
+5. Mythic-grade items obtained through Sublimation are non-tradable.
+How to Perform Altar of Sublimation
+① Select the material items for Altar of Sublimation.
+- Three Legendary Magic Stones / Spectrumite / Spirit Treasures of the same tier are required as materials.
+② Use the button at the bottom left to configure whether tradable items can be used.
+- This prevents mistakes of accidentally using tradable items as materials.
+③ You can check the items registered as materials in the center of the screen.
+- If Sublimation fails, all materials except for the first registered item (center) will disappear.
+④ Check the success rate and possible obtainable items.
+- The higher the Special Enhancement level of the registered items, the greater the chance of success.
+- The success rate is calculated as the sum of the success rates of the registered items.
+Special Enhancement Level
+Success Rate
+0
+0.8%
+1
+2.4%
+2
+4%
+3
+7.2%
+4
+10.4%
+5
+15.2%
+6
+20%
+7
+28%
+⑤ Check the required resources for Altar of Sublimation.
+⑥ Click the [Altar of Sublimation] button to proceed.
+Crafting Mythic Magic Stones / Spectrumite / Spirit Treasure Chests
+- You can craft guaranteed chests that yield Mythic Magic Stones / Spectrumite / Spirit Treasures through the NPC <Dragonsteel Merchant> Bunny Guru Hoppy in the Arcadia Spirit Village.
+Crafted item
+Crafting Materials
+Success Rate
+Mythic Blessed Magic Stone Box x1
+Mythic Treasure Shard x50
+70%
+Purified Soul Stone x1,000
+Dragonsteel x10
+Darksteel x2,000,000
+Mythic Blessed Treasure Chest Box x1
+Mythic Treasure Shard x50
+70%
+Purified Soul Stone x1,000
+Dragonsteel x10
+Darksteel x2,000,000
+Mythic Blessed Spectrumite Box x1
+Mythic Treasure Shard x400
+70%
+Purified Soul Stone x2,000
+Dragonsteel x50
+Darksteel x10,000,000
+Mythic Blessed Magic Stone Box II x1
+Mythic Treasure Shard x250
+50%
+Purified Soul Stone x2,000
+Dragonsteel x40
+Darksteel x10,000,000
+Mythic Blessed Treasure Chest Box II x1
+Mythic Treasure Shard x250
+50%
+Purified Soul Stone x2,000
+Dragonsteel x40
+Darksteel x10,000,000
+Mythic Blessed Spectrumite Box II x1
+Mythic Treasure Shard x600
+20%
+Purified Soul Stone x5,000
+Dragonsteel x200
+Darksteel x20,000,000
+※ Mythic-grade items obtained from crafted chests are non-tradable.
+Document update date : 2025-09-15
+Like2
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

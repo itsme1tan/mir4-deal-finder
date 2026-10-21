@@ -1,0 +1,98 @@
+Mystique
+An upgrading system that additionally increases character abilities can be activated upon reaching level 90.
+Mystique
+Mystique
+- A Content that is available for characters over level 90 only.
+- Tap the Mystique - Conquest in the Menu.
+- There are 5 Mystiques in total, and each of them can be upgraded up to Stage 10.
+① View the [Power Score] promoted by Mystique at the top left.
+② View the [Mystique Stage] and [Applied Stat] at the top right.
+- Mystique will start from Stage 1 after unlocking the feature, and Mystique's blessing will be applied after promoting to Stage 2.
+- When upgraded, one of the four Fixed Stats will be randomly increased.
+※ All four Fixed stats can be enhanced up to 5 stages maximum and Promotion will be available when succeeding in upgrading all four Fixed Stats in each stage.
+③ The blessing level of the Mystique can be viewed from the bottom center of the screen.
+- Stats and Blessing level will be further upgraded per 2 promotion stages. (stage 2,4,6,8,10)
+Mystique Name
+Blessing Effect
+Stats per Blessing Level
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Unicorn Lion
+HP Potion Effect
+2.0%
+4.0%
+6.0%
+8.0%
+10.0%
+MP Potion Effect
+1.0%
+2.0%
+3.0%
+4.0%
+5.0%
+Vermilion Bird
+All ATK DMG Boost
+5.0%
+6.5%
+8.0%
+9.5%
+11%
+Black Tortoise
+Skill ATK DMG Boost
+5.0%
+6.5%
+8.0%
+9.5%
+11%
+White Tiger
+CRIT EVA
+5.0%
+6.5%
+8.0%
+9.5%
+11%
+Blue Dragon
+Item Drop Chance
+5.0%
+10.0%
+15.0%
+20.0%
+25.0%
+Lucky Drop Chance
+5.0%
+10.0%
+15.0%
+20.0%
+25.0%
+④ You can use the required materials and other necessities including in-game currencies per each Mystique's Enhancement/Promotion while enhancement success chance can also be viewed.
+Document update date : 2022-09-22
+Like82
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

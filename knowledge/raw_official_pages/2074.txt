@@ -1,0 +1,97 @@
+Conquest Treasure
+Conquest Treasures are a new type of equipment that can be equipped in the Sanctuary of Hydra. The Sanctuary of Hydra absorbs the energy contained within the Conquest Treasures to generate special daily rewards. The stronger the equipped Conquest Treasures, the greater the rewards produced.
+[Conquest Treasure Basic Information]
+1. Up to 3 Conquest Treasures can be equipped in [Conquest - Sanctuary of Hydra] and higher-grade Conquest Treasure yield greater rewards.
+2. Contribution rewards are distributed daily at 00:00 (UTC+8) based on the currently equipped Conquest Treasures. Unclaimed rewards will not accumulate and will be lost.
+3. Equipped Conquest Treasures can be unequipped at any time.
+4. Conquest Treasure and reward distribution follow the same schedule as the EXDRA Season.
+Season
+Duration
+Conquest Treasure Name
+Reward Item
+Season 4 (EXDRA4)
+July 7, 2026 ~ January 5, 2027
+Quartz of Jade Breath
+Jade Septaria
+Season 3 (EXDRA3)
+December 23rd, 2025 ~ June 23rd, 2026
+Quartz of Gold Breath
+Gold Septaria
+Season 2 (EXDRA2)
+June 10, 2025 – December 9, 2025
+Quartz of Blue Breath
+Blue Septaria
+[Quartz of Jade Breath]
+Quartz of Jade Breath
+Jade Septaria
+- The Conquest Treasure given as a reward during the fourth EXDRA season is the 'Quartz of Jade Breath', and when equipped, 'Jade Septaria' is given as a Conquest Reward.
+Conquest Treasure Grade
+Conquest Reward Amount (Jade Septaria)
+Uncommon
+2
+Rare
+10
+Epic
+100
+Legendary
+2000
+- Quartz of Jade Breath Equip and Reward Payout Period: July 7, 2026 Update Maintenance ~ January 4, 2027, 23:59 (by server region).
+- When the fourth EXDRA season ends, Conquest Treasures in your possession are scheduled to be exchanged for other items, and the target items will be disclosed through a follow-up notice later.
+[How to Obtain Conquest Treasure]
+1. Purchase of limited-time products via WEMIX PAY
+2. Trading via the XDRACO website
+- All Conquest Treasures come with the XDRACO attribute.
+3. Trading via the in-game Unified Market
+[Conquest Treasure Promotion]
+1. Conquest Treasures can be promoted to a higher grade through the Promote system.
+2. Only Conquest Treasures of Rare to Epic grade are eligible for promotion.
+3. Promotion requires 4 Conquest Treasures of the same grade as materials.
+4. On a Great Success, the promoted Conquest Treasure will gain a special XDRACO attribute.
+5. On failure, the first registered material will be returned, while the remaining materials and resources will be consumed.
+[Conquest Treasure Promotion Process]
+1. Access the Promotion Menu
+1) [Conquest > Conquest Treasure Equip Slot above Sanctuary of Hydra > Promote Conquest Treasure]
+2) [Equipment > Select the Conquest Treasure to Promote > Promote]
+2. Select the Conquest Treasure to Promote, check the required materials, and proceed with the promotion attempt.
+※ When a Conquest Treasure is selected, three materials of the same grade will be automatically selected. If the promotion fails, the selected Conquest Treasure will be retained, but the other three materials will be consumed.
+[Quartz of Blue Breath]
+- During EXDRA Season 2, the featured Conquest Treasure is 'Quartz of Blue Breath,' and when equipped, it grants 'Blue Septaria' as a Conquest Reward.
+Conquest Treasure Grade
+Conquest Reward Quantity (Blue Septaria)
+Uncommon
+2
+Rare
+10
+Epic
+100
+Legendary
+2000
+- Equip and reward period for Quartz of Blue Breath: From the June 10th, 2025 Update to December 8, 2025 at 23:59 (per region).
+- Once EXDRA Season 2 ends, any remaining Conquest Treasures will be replaced with other items. Details on the replacement items will be announced in a future notice.
+Like4
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

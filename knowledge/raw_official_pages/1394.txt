@@ -1,0 +1,132 @@
+Altar of Black Dragon
+Altar of Black Dragon is a consecrated infrastructure imbued with the blessing of Black Dragon, and it can be built in the designated area in Domination Server.
+Content among powerful clans within the region competes for advantageous buff granted to the Domination Server and their home server.
+Altar of Black Dragon
+Process
+Occupation Effect
+Altar of Black Dragon
+[Basic Information and Notes]
+- Area: Domination Labyrinth (1~4 F)/ Tower of Black Dragon (1~4 F) / Black Dragon Valley(1~4 F)
+- Schedule: Domination Server Operation Period
+- Qualification: Any Dragonians joined a clan meeting the specific criteria
+- Clan Criteria: Clans that have achieved the clan technology (Surprise Attack II)
+- Requirement: Altar of Black Dragon Summon Badge
+※ Altar of Black Dragon Summon Badge can be crafted from NPC <Scute Collector> Uhm Jinho located at the [Domination] Sabuk Castle.
+- Launch Reward: Reward buff targeting a specific clan and their home server will be granted to the clan who have built the Altar of Black Dragon and their home server.
+[Preparation]
+- Clan members who have learned the clan technology (Surprise Attack II) can occupy the Altar of Black Dragon placed in the designated area.
+- There will be 4 conditions depending on the progression (Can be built/Prepared to be protected/Protected/Unprotected/Sealed).
+- Altar of Black Dragon can be occupied by using the 'Altar of Black Dragon Summon Badge'.
+[Precaution]
+- No limitations for the occupation. However, the buff with the highest value will only be activated for each area (Domination Labyrinth/Tower of Black Dragon/Black Dragon Valley)
+- If you have launched more than 2 Altars of Black Dragon and the Altar of higher grade gets destroyed, a reward buff for the lower-graded Altar of Black Dragon will be activated.
+- Notification and mail will be sent to clan members of the Altar of Black Dragon owning clan alerting the construction/deduction of HP/destruction/Expiration of the Altar. (Domination/Home Server)
+- Upon being built or destroyed, a notification will display at the center of your game screen. (Domination Server Only)
+- Any clans who have built the Altar of Black Dragon cannot be disbanded.
+- Above 'Clan Member' grade can build the Altar of Black Dragon (Not allowed for new clan members)
+Process
+[Procedure]
+1) Check the condition of the Altar and build an Altar of Black Dragon to the designated area you want to occupy within the Domination Server operation period.
+2) The Altar of Black Dragon can be built with the 'Altar of Black Dragon Summon Badge' (Takes 180 seconds)
+3) The protection will start after 600 seconds once getting built, and you cannot attack the Altar while getting protected (30 hours).
+4) After the protection period (30 hours) gets expired, the Altar will be shifted to Unprotected, which can be attacked or destroyed. (Even if not getting attacked by other clans, the Altar of Black Dragon of Unprotected will be automatically destroyed after 42 hours.)
+※ Allies cannot recover their HP around the Altar of Black Dragon.
+※ Altar of Black Dragon does not recover its HP by itself.
+[Status]
+Category
+Status
+Duration
+Unattackable
+Protected: Cannot attack the Altar of Black Dragon which is under protection
+30 hours
+Sealed: Cannot attack the Altar of Black Dragon which is being sealed (Buff will be granted or not depending on the condition of the Altar while sealing)
+Unlimited
+Attackable
+Prepared to be protected: The Altar of Black Dragon has been occupied but the protection and reward buff has not been granted yet
+600 seconds
+Unprotected: Can attack the Altar of Black Dragon which is not protected
+42 hours (Automatically destroyed after the duration)
+Can be built
+Can be built: You can occupy the Altar of Black Dragon
+Unlimited
+[Altar of Black Dragon Statusboard]
+- You can view the occupation status, attackable/unattackable eligibility/duration/and occupying clan of 12 Altars of Black Dragon in the Domination Server.
+[How to view the progression]
+1) Click the Altar of Black Dragon through Map > Domination Area.
+2) Click the [Altar of Black Dragon] icon located at the right of the Domination Server screen.
+Occupation Effect
+- Reward buff will be activated upon occupying the Altar of Black Dragon.
+- Only 1 buff will be activated per area among (Domination Labyrinth/Tower of Black Dragon/Black Dragon Valley)
+- If occupying more than 1 Altar of Black Dragon in an area, the buff with the higher value will be activated.
+- The priority to activate the reward buff will be based on the higher floor you have occupied.
+- The clan who launched the Altar will be benefited from the Clan reward buff and that of the server both.
+- The reward buff targeting either clan and server will be granted to the clan who launched the Altar and their home server.
+[Buff Details]
+Launch Area
+Clan Reward Buff
+Server Reward Buff
+Domination Labyrinth 1F
+EVA/CRIT EVA +5
+EVA/CRIT EVA +5
+Domination Labyrinth 2F
+EVA/CRIT EVA +10
+EVA/CRIT EVA +10
+Domination Labyrinth 3F
+EVA/CRIT EVA +15
+EVA/CRIT EVA +15
+Domination Labyrinth 4F
+EVA/CRIT EVA +20
+EVA/CRIT EVA +20
+Tower of Black Dragon 1F
+EXP/Antidemon Power +2%
+EXP/Antidemon Power +2%
+Tower of Black Dragon 2F
+EXP/Antidemon Power +4%
+EXP/Antidemon Power +4%
+Tower of Black Dragon 3F
+EXP/Antidemon Power +6%
+EXP/Antidemon Power +6%
+Tower of Black Dragon 4F
+EXP/Antidemon Power +8%
+EXP/Antidemon Power +8%
+Black Dragon Valley 1F
+Accuracy/CRIT +5
+Accuracy/CRIT +5
+Black Dragon Valley 2F
+Accuracy/CRIT +10
+Accuracy/CRIT +10
+Black Dragon Valley 3F
+Accuracy/CRIT +15
+Accuracy/CRIT +15
+Black Dragon Valley 4F
+Accuracy/CRIT +20
+Accuracy/CRIT +20
+※ The reward buff will be activated upon completion of the launch after 10 minutes.
+Document update date : 2024-11-26
+Like1
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

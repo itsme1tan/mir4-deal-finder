@@ -1,0 +1,195 @@
+Wayfarer Travel
+'Wayfarer Travel' is a service that helps you to freely move your chosen character to different servers or regions and even travel to new continents.
+Conditions for the Wayfarer Travel
+How to use Wayfarer Travel
+Transferring character data
+Conditions for the Wayfarer Travel
+[Character]
+- Will be enabled after reaching level 40 and character must be placed in Bicheon Castle.
+- Internal Injuries(Major or above), Lost Item, EXP to be restored caused by death must not exist.
+- Items that are registered or needs to be settled in market must not exist.
+- No items registered in EXD
+[Contents]
+- Must not be joined in Clan.
+- Magic Square, Secret Peak, Raid, Boss Raid must be ended at the moment of the Wayfarer Travel.
+- Must not be joined in Party (Including Raid Party).
+- Claimable items must not exist in Shop > Storage.
+- Items that are currently being unsealed must not exist.
+- Conquests that are being promoted must not exist.
+- Wayfarer Travel & NFT sealing cool-down (5 days) must not exist.
+- When participating in Castle Siege, a Wayfarer Travel wait time of 24 hours must be fulfilled.
+- No Tangled Inner Force for Cosmic Harmony, no progress for Celestial Cycle
+[Server Conditions]
+- At least 1 spare character slot must be empty on the server that you want to transfer to.
+- 5 days of cooldown will be applied after completing the Wayfarer Travel.
+※ You can transfer to any servers regardless of the region or continent. (Wayfarer Travel Pass needed will vary depending on the distance)
+※ Regional server time will be differently applied based on your destination continent.
+※ Conditions above may change.
+[Wayfarer Travel Pass]
+- Item used to do Wayfarer Travel.
+- Can be purchased in Shop > Common Product > Travel Pass
+Item
+Contains
+Price
+Purchase Number
+Wayfarer Travel PassI
+1 Wayfarer Travel Pass
+1 Million Copper
+Can be purchased only once per each character
+Wayfarer Travel PassII
+1 Wayfarer Travel Pass
+1,200 Gold
+Can be purchased once per month by each character
+- Number of Wayfarer Travel Pass needed to do Wayfarer Travel
+Transfer
+Ex
+Quantity
+Transferring to different server of the same region
+Transferring to ASIA44 from ASIA11 of ASIA1 region
+1 Pass
+Transferring to different region of the same continent
+Transferring to server of ASIA2 from server of ASIA1
+1 Pass
+Transferring to different continent's server
+Transferring to server of EU continent from ASIA continent
+2 Pass
+How to use Wayfarer Travel
+1. Route to the Wayfarer Travel menu
+1) In-game menu(+) > Transfer > Wayfarer Travel
+① Click In-game menu (+) > Transfer
+② Click 'Wayfarer Travel' button
+2) Global Map > Transfer Character > Wayfarer Travel
+① Click ‘Transfer Character’ icon on the Global Map.
+② Click ‘Wayfarer Travel’ button
+3) Using Wayfarer Travel Pass
+① You can move to the Wayfarer Travel menu by clicking 'Use' button from the Wayfarer Travel Pass inside your Bag > Sundry.
+2. How to use Wayfarer Travel
+① Choose server to move
+② Check and complete all the pre-conditions listed to use Wayfarer Travel
+※ You can use Wayfarer Travel only if you have fulfilled the pre-conditions on the list.
+※ At least 1 empty character slot must exist on the server that you want to transfer to.
+3. Completion of Wayfarer Travel
+- You will be moved to the log-in screen after registering Wayfarer Travel.
+- Leaving server and destination server will become unaccessible until the Wayfarer Travel is done.
+Transferring character data
+[Transferable Data]
+Criteria
+Main Details
+Character
+Character Creation Date and Character Name
+Alignment point / Level / Buffs
+Death restoration info(Restoration Count)
+System Settings
+Quickslot Registration info
+Resources
+Gold, Copper, Mileage, Energy, Darksteel, Dragon Jade
+Speed-Up Points
+Ancient Coin, Clan Coin
+Item
+All equipped items/Every item inside bag/Personal Warehouse
+Outfit
+Weapon/Helmet/Armor/Cape
+Mount
+Mount Info
+Skill
+Skill List, Grade
+Skill Assign
+Spirits
+Summoned Spirit
+Equipped Spirit Treasure
+Owned Spirit Treasure
+Spirit Slots Info
+Training
+Constitution/Inner Force
+Codex
+Character
+Server (Codex of the previous server will reset)
+Reputation (Codex of the previous server will reset)
+Time-Limited (Codex of the previous server will reset)
+Collection Codex (Codex/Collection List)
+Quest
+Main Quest
+Mission
+Mission Info
+Requests Info
+Conquests
+Conquests Info
+Mystique Info
+Cosmic Harmony Info
+Mystery
+Mystery Info
+Tasks
+Daily Task Info
+Achievement Info
+Portal
+Transfer Info of Magic Square, Secret Peak
+Maintains number of tickets and charged Time
+Raid/Boss Raid
+Transfer Info of Raid/Boss Raid
+Maintains number of tickets and charged Time
+Vigor
+Remaining Vigor Time
+Event
+28-Day Attendance Event
+Official Launch Attendance Event
+Completed Mysteries
+Reached Levels
+Sarmati's Mission Scroll
+Combine
+Mystic Incense Burner Points
+Shop
+Number of maximum purchase (Maintains in previous server)
+※ Regardless of acquisition or not, you are not able to acquire Septaria from Sanctuary of HYDRA on day of Wayfarer Travel.
+※ You cannot use Wayfarer Travel while you are succumbed to Tangled Inner Force, or if Divine Ascension Promotion is in progress.
+[Non-transferable Data]
+Criteria
+Main Details
+Character
+Party(Including Party lists)
+Market
+Info of Registered Sale, Settlement and Settlement History
+Ranking
+Overall Power Score
+Class
+Level
+Overall Progress of Codex
+Karma
+Friends (Including Block List)
+Bounties (Will be canceled if registered)
+Wanted List (Will be canceled if registered)
+Mail
+All Mail
+Craft
+Unseal
+Shop
+Shop Storage
+Chat
+Previous Chat List/Records
+Document update date : 2024-07-05
+Like221
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

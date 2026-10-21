@@ -1,0 +1,52 @@
+Steam
+You can find out the install guide and path to use MIR4 on Steam
+Install Guide
+Language Settings
+Install notes
+Install Guide
+1. Go to the Steam store
+2. Type MIR4 to search the game.
+3. Start installation.
+4. Select your destination folder to install MIR4, and click the [NEXT] button.
+5. Steam will automatically download the game, so click the [Finish] button.
+6. If the download is finished, click on [Play] button
+Language Settings
+If the game starts with language settings that you can’t understand, follow the instructions to change the language settings
+1. Click on [Settings]
+2. Click the [Options] tab, and find [Language]. You can choose from 12 languages that we support.
+Install notes
+Dragonians who are installing Unreal Engine for the first time to run the PC version of MIR4 have to download the file below before installing the PC version.
+[Download Unreal Engine_64bit]
+※ Please update your Windows version to the latest to download the latest version of DirectX.
+You can check out the details regarding DirectX from the [How to install the latest version of DirectX].
+※ If you can’t run the game even after installing the game successfully, you can solve the problem by installing Visual C++ Redistributable package.
+[Windows 64bit]
+※  We don’t support Dual client on Steam, so if you want to use the dual client, please use our PC launcher.
+Document update date : 2021-08-30
+Like47
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

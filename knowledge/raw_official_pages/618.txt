@@ -1,0 +1,137 @@
+DRACO
+DRACO is a FT(Fungible Token) asset that can be smelted by using Darksteel that you own. You can store your DRACO in Play Wallet or exchange with other users from Wemix App's market. DRACO can be refined into the higher asset, HYDRA, by using DRACO and Septaria. Refined HYDRA can also be stored in Play Wallet or exchanged with other users in WEMIX App's market.
+DRACO
+Smelt
+Exchange
+HYDRA
+Refine
+Septaria
+DRAGON STEEL
+DRACO
+DRACO is a FT(Fungible Token) asset that can be exchanged with other users from WEMIX App's market. You can keep it on your Play Wallet by paying some exchange fee including [DERBY(Darksteel Exchange Rate) + smelting fee (Set by the ‘Trinity algorithm’)] by using smelt, or exchange DRACO into Darksteel.
+「What is DERBY (Daily Exchange Rate By Yield)?」
+- DERBY is the exchange rate between 1 DRACO and Darksteel. The amount of Darksteel received when exchanging DRACO for Darksteel is based on the day’s DERBY. It is decided by a fixed number of 100k Darksteel plus 1 out of 1 billion total Darksteel mined from the day before the smelt and will be announced based on 00:00 (UTC+8) every day. However, smelting Darksteel into DRACO is subject to a dynamic smelting fee per DRACO determined by the ‘Trinity algorithm’.
+To smelt Darksteel into DRACO, you must possess Darksteel equal to the sum of DERBY(Darksteel Exchange Rate) + smelting fee (Set by the ‘Trinity algorithm’) per DRACO.
+「What is Trinity algorithm?」
+- A multi-layered AI algorithm that works to achieve an equilibrium in economic activities among three gaming spheres, which consist of Players of MIR4, Earners, and Holders of Draco. Trinity algorithm continuously adjusts DRACO smelting fees each day to relieve the imbalance of the inter-sphere ecosystem.
+[DRACO Menu]
+1. You can use DRACO menu from level 40.
+※ DRACO menu won't be available during 00:00 ~ 00:30 (UTC+8) every day.
+2. Menu Roadmap
+1) In-game Menu(+) > XDRACO > DRACO
+① Click In-game Menu(+) > 'XDRACO'
+② Click 'DRACO' button
+2) Visit NPC Jae Joman in Bicheon Castle and move to the menu
+3) A pop-up screen to connect to the Play Wallet will be displayed if you are not linked with the Play Wallet account
+※ You can link Play Wallet with one account only, and it can't be unlinked.
+4) After linking with Play Wallet account, you can check the number of DRACO that you own in Play Wallet by clicking the refresh button.
+Smelt
+You can smelt 1 DRACO by consuming a certain amount of Darksteel decided by [DERBY + Smelting fee calculated and adjusted through Trinity algorithm] of the day. DERBY and smelting fee (Fee adjusted through Trinity Algorithm) adjustments will be automatically updated once a day at 00:00 (UTC+8).
+1. You can register the number of DRACO that you want to smelt by clicking the Smelt button.
+※ You can smelt 100 DRACO for maximum per day and 1,000,000 DRACO will be issued for the whole game.
+※ You have to possess at least 500,000 Darksteels for smelting DRACO.
+※ Smelt will proceed after linking your Play Wallet account if it's not linked.
+2. The result of the Smelt will be sent through the in-game mailbox.
+Exchange
+You can exchange DRACO that you own with Darksteel with DERBY of the day.
+1. You can register the number of DRACO that you want to exchange by clicking the Exchange button.
+※ Exchange will proceed after linking your Play Wallet account if it's not linked.
+2. The result of the Exchange will be sent through the in-game mailbox.
+HYDRA
+HYDRA is an abbreviation of 'High Yield of DRACO' which is a FT(asset) that can be refined by consuming 20 DRACO + Refining fee (Septaria and DRACO calculated and adjusted through the metamorphic stage of the day). It can be stored in Play Wallet after the refine, and can be exchanged with other users in WEMIX App's market.
+[HYDRA Menu]
+1. You can use HYDRA menu from level 40.
+※ HYDRA menu won't be available during 00:00 ~ 00:30 (UTC+8) every day.
+2. Menu Roadmap
+1) In-game Menu(+) > XDRACO > DRACO > HYDRA
+① Click In-game Menu(+) > 'XDRACO'
+② Click 'DRACO' button
+③ Click ‘HYDRA’ button
+2) Visit NPC Jae Joman in Bicheon Castle and move to HYDRA tab.
+3) A pop-up screen to connect to the Play Wallet will be displayed if you are not linked with the Play Wallet account.
+※ You can link Play Wallet with one account only, and it can't be unlinked.
+4) After linking with Play Wallet account, you can check the number of HYDRA and DRACO that you own in Play Wallet by clicking the refresh button.
+Refine
+You can refine 1 HYDRA by using 20 DRACOs as base materials plus the refining fee of the day (DRACO and Septaria) calculated and adjusted through the metamorphic staging.
+「What is Metamorphic Stage?」
+- Metamorphic Stage will increase by 1 level each time 100,000 HYDRA gets refined, and the required number of DRACO and Septaria per HYDRA will increase.
+※ Metamorphic Stage will be automatically updated once a day at 00:00 (UTC+8)
+※ Metamorphic Stage will increase up to level 500 from level 1.
+- You can check the required number of DRACO and Septaria per stage through the 'Refining Cost Calculator' on the HYDRA page.
+>> Go and Check
+1. You can register the number of HYDRA that you want to refine by clicking the Refine button.
+※ Refine will proceed after linking your Play Wallet account if it's not linked.
+※ There is no daily limit on refining HYDRA.
+2. The result of the Refine will be sent through the in-game mailbox.
+※ HYDRA CANNOT be converted back into DRACOs.
+Septaria
+Septaria is an item required in refining HYDRA which can be acquired per day with a certain amount depending on the stage of the Sanctuary of HYDRA.
+1. Sanctuary of HYDRA
+1) A conquest that gives Septaria required in refining HYDRA.
+2) The number of acquirable Septaria per day will increase each time the stage of the Sanctuary of HYDRA gets promoted. (Increased number of acquirable Septaria will be applied at 00:00 (UTC+8) from the day of the promotion.
+3) Unlock Conditions
+- Character level above 60
+- Portal stage over 7 on conquest
+- Mystery 'A noble cause' is complete
+2. Method to acquire Septaria
+1) Conquest > Click Septaria icon displayed on top of Sanctuary of HYDRA.
+※ Septaria can only be claimed once per day. (Reset on 00:00 (UTC+8) every day)
+※ Septaria that you didn't claim until the reset time of the day will disappear.
+※ In case of character that proceeded Wayfarer Travel or NFT unsealing & loading, are not able to acquire Septaria from Sanctuary of HYDRA on that day regardless of acquisition or not.
+3. Septaria Shop
+1) You can exchange certain products from the NPC 'Sumacheon' in Arcadia Spirit Village with Septaria that you own.
+2) Product and Price
+DRAGON STEEL
+Dragonsteel is an in-game currency used for Dragon Artifact and Special Enchant.
+1. How to obtain
+- You can purchase Uncommon / Rare / Epic Dragonsteel box with 'Septaria' from NPC <Exchange Septaria> Sumacheon in Arcadia Spirit Village.
+- You can purchase Rare / Epic Dragonsteel box with 'Ancient Coin' from Spacetime Shop
+- You can use HYDRA Exchange to exchange HYDRA for a certain amount of Dragonsteel
+(Fixed Exchange Rate: 1 HYDRA = 10 Dragonsteel)
+2. Usage
+- To craft Dragon Artifact
+- Special Enchant
+- Upgrading Magic Stone, Spirit Treasure, Spectrumite, Mystical Piece
+- To purchase Dragon Artifact Enhancement Stone, Dragon Artifact Enchant Scroll, and Dragon Oil of Blessing from NPC 'Bunny Guru Hoppy' in Arcadia Spirit Village
+3.HYDRA Exchange
+① Dragonsteel : Dragonsteel is a core material to craft Dragon Artifact, and can be viewed at the right top beside Darksteel.
+② Owned: You can check the owned HYDRA Token and Dragonsteel in current.
+③ Exchange Rate: The rate is fixed (1:10) and you can obtain 10 Dragonsteel per 1 HYDRA.
+④ Exchange: You can press ‘Exchange’ button to set the amount of HYDRA you want to exchange for Dragonsteel.
+※ Note
+- HYDRA Exchange will be available when reaching character level 40.
+- HYDRA can be exchanged for Dragonsteel, however, you cannot do vice versa.
+- Exchange rate between HYDRA and Dragonsteel is 1:10 (1 HYDRA = 10 Dragonsteels), and the rate is fixed.
+- The maximum exchangeable amount at once is 200.
+- HYDRA Exchange will be available on an 'integer' basis.
+( HYDRA owned below 1 cannot be exchanged for Dragonsteel.)
+- You cannot use HYDRA Exchnge if not linked to Play Wallet.
+- HYDRA Exchange will be deactivated during the HYDRA value settlement period.
+Document update date : 2024-11-26
+Like78
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

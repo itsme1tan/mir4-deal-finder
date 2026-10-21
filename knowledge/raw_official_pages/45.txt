@@ -1,0 +1,129 @@
+Ranking
+Chat
+Competitive Raid
+Path of Fiery Battle
+Redmoon Purgatory
+Valley of Life and Death
+Dragonworld’s Rift
+Special Boss
+Expedition
+World Boss
+Clan Expedition/Clan Challenge
+Attack of the Living Wraiths
+Altar of Black Dragon
+Tower of Black Dragon
+Domination Server
+Altar of Sublimation
+Force Map
+Zoetrope
+NFT Character
+Wayfarer Travel
+Class Change
+Unified Market
+System
+Private Warehouse
+Divine Dragon's Promise
+Arena
+Clan Match
+Sabuk Clash
+Altar of Darkness
+Hidden Valley Capture
+Castle Siege
+Heist
+Territory
+Divine Manifestation Chart
+Scripture Hall
+Conquest Treasure
+Mythic Equipment
+Divine Dragon Descent
+Ancient Treasure
+Cosmic Harmony
+Transference Equipment
+Magical Soul Orb
+Dragon Artifact
+Mystique
+Character
+Training
+Conquest
+Codex
+Spirit
+Craft
+Forge
+Skill
+Ranking
+View your ranking in the game and check the bonus rewards you can get based on your ranking.
+Ranking
+All Servers Power Score Ranking
+Ranking
+- Tap the Ranking tab in the Menu.
+① You can check the rankings based on Power Score, Level, Codex progress, Raid score, Clan Power Score, and Collect Portraits.
+※ Collect Portraits ranking gets reset every 00:00 based on regional server times, while the others get reset every 00:00 based on UTC+8.
+② Rankings can be checked from the 1st to 100th depending on the ranking criteria.
+③ Click the button to check the Rankings of each class.
+④ Rewards can be checked by clicking the [Ranking Rewards] button.
+⑤  Ranking rewards can be achieved based on your rankings. Ranking rewards will be given as buffs or items and they will be valid until the next ranking refresh.
+All Servers Power Score Ranking
+[All Servers Power Score Rankings Basic Information]
+- The All Servers Power Score Rankings measure the Power Score of all Dragonians across all servers to determine rankings and distribute rewards based on those rankings (this includes the ‘Boosting World Server’).
+- Ranking Criteria: Rankings are calculated based on power score for all Dragonians across all servers, from 1st to 10,000th place.
+- All Servers Power Score Rankings cannot be checked through the in-game ranking system in MIR4.
+- Rankings are updated every 2 hours.
+- All Servers Power Score Ranking Calculation Time: Every Monday at 00:00 (UTC+8).
+- Reward Distribution Time: Every Monday at 02:00 (UTC+8).
+※ If the reward cannot be sent due to NFT sealing or Wayfarer Travel between the ranking calculation time and reward distribution time, All Servers Power Score Ranking rewards will not be distributed.
+- How to Check Rankings: Visit [Official Forum > Power Score Rankings] to view rankings.
+[All-server Power Score Ranking Reward]
+- All-server Power Score Ranking Reward: A box where Dragonians can obtain EXDRA Token Crafting Materials will be granted as a reward.
+- In the event that the maximum issuance limit for EXDRA tokens is reached or the EXDRA token crafting season is over, the All-Server Power Score Ranking rewards may be subject to change or may not be distributed.
+- All-Server Power Score Ranking rewards will be distributed differentially to players ranked from 1st to 10,000th.
+[Reward Distribution by Rank]
+Rank
+Number of Items
+1
+100
+2
+80
+3 ~ 5
+60
+6 ~ 10
+50
+11 ~ 50
+40
+51 ~ 100
+25
+101 ~ 500
+9
+501 ~ 1,000
+3
+1,001 ~ 5,000
+2
+5,001 ~ 10,000
+1
+Document update date : 2026-01-22
+Like45
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

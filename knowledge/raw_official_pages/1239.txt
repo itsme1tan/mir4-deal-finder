@@ -1,0 +1,314 @@
+Sabuk Clash
+Altar of Darkness
+Hidden Valley Capture
+Castle Siege
+Heist
+Territory
+Divine Manifestation Chart
+Scripture Hall
+Conquest Treasure
+Mythic Equipment
+Divine Dragon Descent
+Ancient Treasure
+Cosmic Harmony
+Transference Equipment
+Magical Soul Orb
+Dragon Artifact
+Mystique
+Character
+Training
+Conquest
+Codex
+Spirit
+Craft
+Forge
+Skill
+Sabuk Clash
+Sabuk Clash is a magnificent scale of Region-based war held by King clans per each server, assembling them into a Domination server and competing with each other to elect the true emperor of Sabuk Castle.
+The Clan leader of the victorious clan in Sabuk Clash will rule the Sabuk Castle as Emperor and will have the rights to assign Government positions, adjust Tax Rates, declare Imperial Decree, grant Imperial Title, register characters to Wanted Lists, and distribute prizes.
+Information
+Access route
+Procedure
+Ranking
+Sabuk Clash Reward
+Rule the Territory
+Information
+- Stage : Sabuk Clash will be conducted per 8 weeks in the Domination server per region
+- Sabuk Clash Time : It will begin from the week after Castle Siege week and undergo for 3 weeks every Sunday 22:00 ~ 23:00 (Regional Server Times)
+- Participants : Clan members of the King Clan in each server
+(# Only Clans who have passed the previous round can participate in the next gateway battle)
+1st Gateway: Clan Member of a King clan in each server and who can enter Domination Server
+2nd Gateway: Clan who have engraved the Monolith located at the Attack Route in 1st Gateway
+3rd Gateway: Clan who have engraved the Monolith located at the Castle Gate in 2nd Gateway
+※ Users who have joined the King Clan by Emergency Mobilization can participate in the Sabuk Clash.
+※ 1 region consists of up to 16 servers.
+※ Sabuk Clash will not be held if the number of servers does not meet the minimum requirements due to Server Merge or release of the new Region.
+Access route
+Press the [Enter] button after clicking the participation area from the 'in-game menu(+) > War > Sabuk Castle > War’.
+※ You can participate in Sabuk Clash in Domination Server, and those who are available for Sabuk Clash can freely enter Domination Server within Sabuk Clash Time.
+[Notes]
+1) Clans engaged in the Sabuk Clash cannot use the feature 'Leave/Disband/Kick Clan' during preparation (5 Minutes before getting started) and Sabuk Clash Time.
+2) Request/Accept/Break Alliance feature cannot be used while the 1st and 2nd Gateway of Sabuk Clash is undergoing.
+3) Only a Clan-based Party can be made inside the Sabuk Clash area.
+4) PvP Log, Bounty List, Wanted List, and Clan Kills will not be implemented in the Sabuk Clash area.
+5) PvP is unavailable in the Sabuk Clash area.
+6) Life will not be used, and Raid/Expedition Token will not be obtained from the Sabuk Clash area.
+7) Only the Internal injury penalty can be applied in the Sabuk Clash area.
+Procedure
+- PK mode as same as that of Domination Server will be applied upon entering the 1st and 2nd rounds in Sabuk Clash.
+※ "Unattackable" settings between users or clans will be available. (However, Outpost and Capture Stone cannot be set as Unattackable, and users can attack those even being allied.)
+- Exclusive PK mode will be applied in Sabuk Clash 3rd Gateway, and all participants except for your clan will be treated as enemies.
+※ If no Monolith has been engraved from the Sabuk Clash 1st and 2nd Gateways, the Sabuk Clash will automatically end and the vacancy to Emperor will be maintained until anyone wins the Sabuk Clash.
+- Maximum of 400 participants can enter the Sabuk Clash areas.
+※ If the maximum counts have been exceeded from the 1st and 2nd Gateway, you can access in order with the following waiting queue.
+1. Sabuk Clash 1st Gateway
+- You can access up to 8 attack routes, and Capture Stone exists in each route.
+- 8 Clans who have engraved a Monolith can proceed with the 2nd Gateway at the end of the war (23:00)
+- All attack routes are free to access while the Sabuk Clash is undergoing.
+2. Sabuk Clash 2nd Gateway
+- You can enter up to 4 gates (East/West/South/North) and Capture Stone exists in each gate.
+- 4 Clans who have engraved a Monolith can proceed with the 3rd Gateway at the end of the war (23:00)
+- The starting point will be determined based on the area your clan has captured at the end of 2nd round.
+<Attack Route and Gate Map>
+<Statusboard for 1st and 2nd Gateways>
+- Click the Capture Stone icon located at the top right to check the progression of the attack route.
+- Remaining HP of Capture Stone, Clan who are engraving the Capture Stone, Clan who are capturing the outpost, Respawn time for guardians will be viewable.
+3. Sabuk Clash 3rd Gateway
+- The war to take 1 Monolith will be held in Sabuk Castle battlefield.
+- Starting point will be placed based on the area where you have engraved the monolith.
+- The clan that has engraved the Monolith at the end of the war (23:00) wins, and the battle will be extended if no one succeeds until the end.
+<Status board for 3rd Gateway>
+- Click the map name located at the top right to view the Sabuk Castle map and battle progression.
+- You can view the remaining HP of Monolith, Outpost, and Castle gate.
+① You can view the participants for the 3rd gateway and the colors to distinguish their side.
+② You can view the strategic marking that your clan has registered.
+③ Click the ranking icon to view your individual ranking place.
+Ranking
+- You can view the accumulated Domination points of your clan and the ranking place for individual domination point you have obtained by Kill/Destruction/Capture in total.
+1. Individual/Clan Domination Point
+1) Individual Domination Point
+- Domination points will be obtainable based on the individual contribution in Sabuk Clash, and MVP who is ranked 1st place in individual points will be rewarded per gateway.
+2) Acquisition Method
+① Kill Point: Defeating opponents
+② Destruction Point: Defeating guardians or destroying the Monolith/Castle gate/outpost
+③ Capture Point: Building outpost
+3) Clan Domination point
+- The sum of individual points that each clan member has individually obtained.
+4) Notes on Domination Point
+① Individual Domination points obtained from the Sabuck Clash 1st and 2nd Gateway will be accumulated to the Clan Domination point.
+② The point obtained from the Sabuk Clash 3rd Gateway will be subjected to the individual ranking.
+③ All domination points will reset at the end of Sabuk Clash and when the next Sabuk Clash begins.
+5) Infrastructures and Neutral Monsters
+① Monolith
+- Can be engraved to be owned by the Clan that has a character who has dealt a final blow on it.
+- Engraving will be available for 1 Monolith only.
+- All players except for the clan members who have done the engraving will be moved to the starting point after the engraving is done.
+- Monolith recovers HP in proportion to the number of nearby Clan members that have ownership.
+② Outpost
+- Outposts that can be built on each attack route and castle gate will be provided in the Sabuk Clash 1st and 2nd gateway.
+- Exclusive outpost will be provided to each side in the Sabuk Clash 3rd gateway.
+- Protection Status (Invincible) will be implemented for 60 seconds when the outpost has been captured or regenerated.
+- Occupying Outposts reduces the resurrection cooldown, and if the clan that has occupied the Outpost is within its range, its members recover HP based on their numbers.
+- Occupying Outposts allows you to resurrect from the exclusive resurrection points per each gate.
+- You will resurrect from [Domination] Sabuk Castle if getting killed when the outpost gets destroyed or not occupied.
+③ Guardian
+- Guardian will appear randomly at the designated time in all gateway of Sabuk Clash.
+- Clan who defeat the guardian can obtain 10-minute buffs to support their combat.
+- The buffs only apply to alive clan members within the area where the Guardian was defeated and will not be available for members who were already killed or those who leave.
+Guardian Name
+Buff Effects
+Guardian of Fire
+Increases Skill ATK DMG Boost by 35%
+Guardian of Earth
+Increases Skill DMG Reduction by 35%
+Guardian of Water
+Increased Max HP +10,000, Max MP+1,000, Movement Spd +150
+Guardian of Light
+Increases Stun RES Boost, Debilitation RES Boost, and Silence RES Boost by 50%
+Guardian of Forest
+HP Potion Use Effect by 30%, Increases Skill HP Recovery Am't Boost By 30%
+Guardian of Wind
+Increases CRIT ATK DMG Boost and Bash ATK DMG Boost by 35%
+Sabuk Clash Reward
+■ Victorious Clan reward of the 1st Gateway
+- 35,000 Clan funds will be obtained.
+- Victory reward will be provided to victorious clan members, and a clan MVP will receive an MVP reward.
+Category
+Item Name
+Includes
+MVP Reward
+Sabuk Fierce General's Loots
+Legendary Blue Dragon Statue x6, Epic Blue Dragon Statue x30, Epic Dragon Oil of Blessing x1, Dragon Artifact Enchant Scroll x100, Epic Dragon Artifact Enhancement Stone x5, Legendary Dragon Artifact Enhancement Stone x1, Combat Buff Coffer x30, Epic Dragonsteel Box x1
+Victory Reward
+Sabuk Skirmish Loots
+Legendary Blue Dragon Statue x2, Epic Blue Dragon Statue x10, Epic Dragon Oil of Blessing x1, Dragon Artifact Enchant Scroll x50, Epic Dragon Artifact Enhancement Stone x2, Combat Buff Coffer x20, Rare Dragonsteel Box x5
+■ Victorious Clan reward of the 2nd Gateway
+- 40,000 Clan funds will be obtained.
+- Victory reward will be provided to victorious clan members, and a clan MVP will receive an MVP reward.
+Category
+Item Name
+Includes
+MVP Reward
+Sabuk Supreme General's Loots
+Legendary Blue Dragon Statue x8, Epic Blue Dragon Statue x40, Epic Dragon Oil of Blessing x3, Dragon Artifact Enchant Scroll x200, Epic Dragon Artifact Enhancement Stone x10, Legendary Dragon Artifact Enhancement Stone x2, Combat Buff Coffer x40, Epic Dragonsteel Box x2
+Victory Reward
+Sabuk Rush Loots
+Legendary Blue Dragon Statue x3, Epic Blue Dragon Statue x20, Epic Dragon Oil of Blessing x2, Dragon Artifact Enchant Scroll x100, Epic Dragon Artifact Enhancement Stone x3, Combat Buff Coffer x30, Rare Dragonsteel Box x5
+■ Victorious Clan reward of the 3rd Gateway
+- 50,000 Clan funds will be obtained.
+- The leader of the clan who won the final round in the 3rd Gateway becomes the Emperor and can rule the Sabuk Castle territory, becoming able to purchase the exclusive mount for Emperor.
+- Victory reward will be provided to victorious clan members, and the defeated clan will receive a Defeat reward.
+- clan MVP will receive MVP reward.
+Category
+Item Name
+Includes
+MVP Reward
+Sabuk Warrior God's Loots
+Legendary Blue Dragon Statue x10, Epic Blue Dragon Statue x50, Epic Dragon Oil of Blessing x5, Legendary Dragon Oil of Blessing x1, Dragon Artifact Enchant Scroll x300, Epic Dragon Artifact Enhancement Stone x15, Legendary Dragon Artifact Enhancement Stone x3, Combat Buff Coffer x50, Epic Dragonsteel Box x3
+Victory Reward
+Sabuk Clash Loots
+Legendary Blue Dragon Statue x5, Epic Blue Dragon Statue x30, Epic Dragon Oil of Blessing x3, Dragon Artifact Enchant Scroll x200, Epic Dragon Artifact Enhancement Stone x5, Combat Buff Coffer x40, Epic Dragonsteel Box x1
+Defeat Reward
+Sabuk Clash Supply Gift
+Legendary Blue Dragon Statue x3, Epic Blue Dragon Statue x20, Epic Dragon Oil of Blessing x2, Dragon Artifact Enchant Scroll x100, Epic Dragon Artifact Enhancement Stone x3, Combat Buff Coffer x30, Epic Dragonsteel Box x1
+※ All rewards will be sent via mail.
+Rule the Territory
+- The emperor who has won the Sabuk Clash will have the rights referred to below to rule the Sabuk Castle.
+1) Adjust the Tax Rate
+- The emperor can adjust the tax rate for taxes charged from home servers under his authority. The tax rate is implemented by 15% and can be adjusted from 0% to 50%. The adjusted tax will be reset when the next Sabuk Clash begins.
+2) Appoint Position
+- You can appoint government officials to aid his or her rule. Only members from the Emperor's clan can be appointed to positions, and they hold separate authorities from their clan positions. Also, Sabuk Castle government positions cannot be appointed to members who already have the Bicheon Castle government positions or titles.
+Position
+Right
+Emperor
+All authorities, All ATK DMG Boost 5%, All DMG Reduction 5%, EVA 100
+Prime Minister
+Warehouse authorities, All ATK DMG Boost 4%, All DMG Reduction 4%, Accuracy 100
+High Chancellor
+Prize granting authorities, Skill ATK DMG Boost 3%, Bash ATK DMG Boost 5%, CRIT 50
+Premier
+Imperial Title authorities, Skill ATK DMG Boost 3%, Bash ATK DMG Boost 5%, CRIT EVA 50
+Imperial Scion
+honorary position, Skill DMG Reduction 3%, Bash DMG Reduction 5%, CRIT 30
+Inspector
+honorary position, Skill DMG Reduction 3%, Bash DMG Reduction 5%, CRIT EVA 30
+3) Imperial Decree
+- The Emperor can use taxes to designate 1 server from the home servers under his or her reign and declare or undeclare an Imperial Decree. There is a limit on the number of Imperial Decrees that can be declared during the Emperor's reign, but the limit is reset at the end of the Sabuk Clash. Imperial Decrees have various buffs depending on the type of the decree, and all characters from the server that has been granted the decree receive its effect.
+Imperial Decree
+Cost
+Effect
+Duration
+Limit
+Peace and Prosperity
+5,000 Gold
+Hunting EXP Boost 15%
+3 days
+once
+Punishing Treason
+5,000 Gold
+Hunting EXP Boost -10%, Monster Damage received 10%
+3 days
+once
+Great Harvest
+5,000 Gold
+Drop Chance Boost 10%,  Lucky Drop Chance Boost 10%, Energy Gain Boost 10%
+3 days
+once
+Great Famine
+5,000 Gold
+Gathering Boost 40%
+3 days
+once
+4) Storage
+- Emperor and Prime Minister can manage the tax stored in the Sabuk Castle storage. Taxes charged from home servers under his or her reign will be accumulated in Sabuk Castle storage, and accumulated taxes can be moved to Clan Storage or be used for Prize or Imperial Decree.
+5) Imperial Title
+- The Emperor and Premier can designate 1 clan from the Emperor's region server and grant an Imperial Title. Imperial Titles have various buffs depending on the type of the title, and all members of the clan that has been granted the title receive its effect. Imperial Titles are reset at the start of the Sabuk Clash.
+Title
+Category
+Buff Effect
+Immaculate One
+Three Great Entities
+CRIT 10, CRIT ATK DMG Boost 8%, Bash ATK DMG Boost 8%
+Mighty One
+Three Great Entities
+PHYS ATK 100, Spell DEF 100
+Esteemed One
+Three Great Entities
+PHYS DEF 100, Spell DEF 100
+Mount Tai Sect
+Noble and Righteous
+Accuracy 30, CRIT EVA 10
+Mount Song Sect
+Noble and Righteous
+EVA 30
+Emei Sect
+Noble and Righteous
+Skill DMG Boost 3%
+Qingcheng Sect
+Noble and Righteous
+Skill DMG Reduction 3%
+Mount Hwa Sect
+Noble and Righteous
+Hunting EXP Boost 3%, Monster ATK DMG Boost 3%
+Beggar Gang
+Noble and Righteous
+Lucky Drop Chance Boost 3%, Copper Gain Boost 3%
+Twinway Clan
+Ignoble and Nefarious
+Hunting EXP Boost -3%, Drop Chance Boost -3%
+Zenith Syndicate
+Ignoble and Nefarious
+Monster DMG Reduction -5%, Boss Monster DMG Reduction -5%, Antidemon Power -5%
+Red Wolves
+Ignoble and Nefarious
+Darksteel Gain Boost -20%, Energy Gain Boost -20%
+6) Prize
+- The Emperor and High Chancellor can designate a certain character and grant a prize. The selected character receives a Prize Box by mail. There is a limit on the number of prizes that can be given, and the limit is reset at the end of the Sabuk Clash. A set amount of Cost has to be paid upon granting a prize.
+Prize Name
+Cost
+Distribution Limit
+Legendary Prize
+4,000 Gold
+1
+Epic Prize
+2,000 Gold
+4
+Rare Prize
+1,000 Gold
+8
+Uncommon Prize
+400 Gold
+16
+Normal Prize
+200 Gold
+50
+7) Exclusive Mount
+- Emperor can purchase or ride his exclusive mount ‘Sabuk Destrier’. Even if you already own the ‘Sabuk Destrier', you cannot ride it if you are currently not an Emperor.
+Document update date : 2023-06-07
+Like9
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

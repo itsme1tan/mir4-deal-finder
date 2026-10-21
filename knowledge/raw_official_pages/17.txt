@@ -1,0 +1,102 @@
+Default Interface
+This guide introduces you to the default game screen layout and features you will see when you login to Mir 4 for the first time.
+Default interface
+Default interface
+① Character Level/Power Score
+* You can view the level and Power Score of your logged in character.
+② Character status info & PK mode control icon
+* You can change your alignment modes to Peaceful/Lawful/Hostile/Carnal and also enable/disable the 'ATK users only' feature.
+③ Character HP/MP
+* You can view the maximum/remaining HP and MP of your logged in character.
+④ Mail icon
+* You can receive news and rewards through the mail in Mir 4.
+⑤ Event icon
+* You can check the current events. (Login rewards/Special/Achievements/Mission Scrolls etc.)
+⑥ Vigor effect icon
+You can use the Vigor charging item to charge Vigor energy
+⑦ Clan support icon
+* Appears when a member of your clan requests support, and tapping the icon allows you to respond to all requests at once.
+⑧ Internal injury, Restore EXP, Restore lost item icon
+* You can remove the debuff or restore EXP/items lost due to the death penalty.
+⑨ Create Party/Recruit Member icon
+* You can create your party as Public/Private/Clan Party.
+* You can join a Raid/Boss Raid/Party/Clan Party that other players have created.
+⑩ Show/Hide Party Members icon
+* You can show or hide the names and remaining HP of characters in your party.
+⑪ Change Deck icon
+* You can change the deck to one of the saved Spirit Stone or Magic Stone decks.
+⑫ Chat icon
+* You can use chat functions such as All/Clan/Party/Whisper.
+⑬ Emote icon
+* Actions include Greet/Bow/Bouquet/Dance, and tapping an icon gets the character to perform the corresponding action.
+⑭ Camera mode
+* Close/Distant/Manual modes are available, and can change automatically or manually.
+⑮ Ride icon
+* If you have set a mount for riding, tapping the icon enables you to ride the mount.
+① Clan
+* Shows a basic description of your clan, or activates Join/Create functionality if you aren't in a clan.
+② Mission
+* You can view and accept missions and requests available in each area.
+③ Equipment
+* You can view the equipment and items you currently own, your character's information, and equipped Magic Stones.
+④ Notification
+* You can check notifications on newly available activities.
+⑤ Menu
+* You can check the Main Menu.
+⑥ Area Properties
+* You can check the properties of your current area.
+⑦ Area
+* Displays the name of your current area, and tapping it shows the full map.
+⑧ Channel
+* You can check your character's channel, and tap to change to another channel.
+⑨ Mission List
+* You can view your character's ongoing main quest and missions/requests, and tap to auto-play them.
+① Auto-gather
+* You can gather/mine/meditate at the nearest resource node from your character's location.
+② Auto-combat
+* You can get your character to fight the nearest target within the range set in Combat Settings.
+③ Potion Quick Slots
+* Pressing the icon uses a potion or a remedy, or use items automatically according to the settings in ④.
+④ Quick Slot Combat Settings
+* You can press the icon to assign potions or remedies to the slot, and check HP/potion auto-use settings and locations of potion merchants.
+* You can also adjust the range for auto-combat and apply settings for Auto-return on resurrection, counterattack options, and the frequency of skill use.
+⑤ Skill
+* Displays the list of skills assigned to the character. Skills can be used by pressing the icon.
+⑥ Target
+* Tapping it displays targets near your character, and only designated targets can be attacked.
+⑦ Default ATK
+* Tapping it gets your character to perform the default attack motion.
+⑧ Lethal Move
+* Using skills or normal attacks fills up the Lethal Move gauge, and you can use the Lethal Move by pressing the icon when the gauge is full.
+⑨ Evade
+* You can evade during combat by tapping the icon, and there is a 10 sec cooldown.
+⑩ Air Walk
+* You can tap the icon to perform a double jump.
+Document update date : 2021-08-21
+Like35
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

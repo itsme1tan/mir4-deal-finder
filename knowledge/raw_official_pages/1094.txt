@@ -1,0 +1,101 @@
+Hidden Valley Capture
+Castle Siege
+Heist
+Territory
+Divine Manifestation Chart
+Scripture Hall
+Conquest Treasure
+Mythic Equipment
+Divine Dragon Descent
+Ancient Treasure
+Cosmic Harmony
+Transference Equipment
+Magical Soul Orb
+Dragon Artifact
+Mystique
+Character
+Training
+Conquest
+Codex
+Spirit
+Craft
+Forge
+Skill
+Hidden Valley Capture
+Hidden Valley Capture is a competitive content that determines the master of Bicheon Valley, Snake Valley, and Redmoon Valley. Clans who captured Valleys can earn taxes imposed on Darksteel which is mined from captured valley before the next Valley Capture begins.
+Default and Preparation for Hidden Valley Capture
+Rules of Hidden Valley Capture
+Benefits of Hidden Valley Capture
+Default and Preparation for Hidden Valley Capture
+Default setting of the Hidden Valley Capture
+- Region : Bicheon Valley 4th floor / Snake Valley 4th floor / Redmoon Valley 4th floor
+- Time Period : Every Wednesday, 22:00 ~ 23:00 (Based on regional server times)
+- Participation target : All Clan members of the Clan
+※ Clans that intend to participate Hidden Valley Capture must have completed Clan Tech - Taxation Bureau level 1 research in order to deal damage to the monolith.
+Preparation before the Hidden Valley Capture
+- Identification of friend or foe can be checked through name tag.
+Party members - Sky-blue / Your Clan and ally clan - Green / Opposition Clan - Red
+- Change PVP mode to [Hostile]. All the users and monsters except Party/Clan/Friend are identified as foes.
+※ You can exclude monsters from your foes by setting the 'ATK Players Only' ON/OFF from the bottom of the screen.
+Rules of Hidden Valley Capture
+Process of Hidden Valley Capture
+- All the players except the defense clan of the valley will be kicked out from the 4th floor of each valleys to the safe zone from 5 seconds before the start.
+- If the ownership has changed due to the destruction of the monolith by the offense clan, all the characters that don't have ownership get kicked out to the safe zone after 1 minute. Clan members that teleported to the safe zone can regroup to retrieve the monolith.
+- If the ownership has changed due to the destruction of the monolith, the marking of the Clan that owns the monolith will be carved. It takes 10 minutes until the marking gets done.
+- The monolith's HP recovers when a member who has ownership of it is in the circle of recovery under the monolith. As the number of members in the circle of recovery increases, HP recovers faster.
+- You can check out the rules from the exclamation mark icon of the left corner of occupying clan screen.
+Winning conditions of the Hidden Valley Capture
+- Clan that has marked the monolith at the end of the Hidden Valley Capture.
+Status of the monolith
+- Sealed : The clan that has the ownership after the destruction of the monolith is defending.
+(Monolith that has its ownership changed after getting destroyed is invincible for 1 minute)
+- Protected : Hidden Valley Capture has ended and monolith can't be attacked.
+- In battle : Hidden Valley Capture has started and monolith can be attacked.
+Cautions for the Hidden Valley Capture
+- Anyone can participate each valley's Hidden Valley Capture that occurs on the 4th floor. If you are not part of any clans or the clan that you are in has not completed Taxation Bureau level 1 research of the Clan Tech, you can attack the monolith but unable to deal any damage.
+Benefits of Hidden Valley Capture
+Rewards
+Victorious clan
+- Clan resources will be given to the clan that occupied the Hidden Valley as a reward.
+- Clan coins will be given to all the clan members as reward.
+- Clan member that delivered the final blow to the monolith is selected as MVP and extra clan coins will be given.
+Tax
+- You will gain the authority to collect the taxes for 1 week from the Darksteel that are mined at the Hidden Valley as the owner of the valley until the next Hidden Valley Capture.
+- 15% of the Darksteel that are mined at the valley will be sent to the owner's Territory Warehouse.
+- If there is no ruling clan, tax can be accumulated up to maximum of 1 trillion.
+- Daily amount of mined Darksteel can be found at the Menu > War > Territory tab in real-time.
+- Accumulated Darksteels of the Territory Warehouse can be sold through "Darksteel merchant" at any time except for the time period of the Hidden Valley Capture.
+- If you try to retrieve the Darksteels that exceed the limit of the Warehouse, the exceeding amount will be lost.
+- You can set a price per "10,000 Darksteels" and the profits will be sent to your Clan's warehouse without deducting the taxes.
+Darksteel Merchant
+- Darksteel Merchants are located on the 4th floor of each valley / Bicheon Castle / Snake Valley / Spiritual Center.
+- You can reset the price or sell until the next Hidden Valley Capture regardless of the time duration.
+- Darksteel can be bought by anyone and the selling price is set by the owner clan through the Darksteel merchant.
+Document update date : 2022-11-01
+Like2
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

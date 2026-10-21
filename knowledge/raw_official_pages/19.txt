@@ -1,0 +1,47 @@
+Character Status Info
+Character status info
+Alignment
+Death penalty
+PK Mode
+Character status info
+- You can view your character status information.
+Alignment
+① You can check the notorious figures and propensity status.
+When you have low Alignment Points, you suffer a penalty to your Hunting EXP gain and there may be additional penalties when your character dies.
+You lose Alignment Points when you kill characters of Normal or higher Alignment.
+Recovering Alignment Points: When your Alignment Points fall below 5,000, you can recover the points by defeating monsters. However, the monsters you defeat must be within 5 levels of your character. (e.g. A Lv. 70 character can recover Alignment Points by defeating a Lv. 65 monster, but defeating a Lv. 64 monster doesn't change the Alignment Points)
+Death penalty
+If your character dies at a location that is not a safe area, there may be a death penalty depending on the area.
+Death penalties include Internal Injury (stat reduction for a period of time)/EXP Loss/Item Loss.
+PK Mode
+You can change your PK mode to Peaceful/Lawful/Hostile/Carnal.
+Players from warring clans or Most Wanted targets can be attacked regardless of the PK mode.
+When you join a Bicheon Siege, you enter the War state and can only attack users of the opposing side.
+Document update date : 2021-08-21
+Like123
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

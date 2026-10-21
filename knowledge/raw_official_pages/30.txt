@@ -1,0 +1,77 @@
+Launcher
+Choose Server
+Sign In
+Create Character
+Delete character
+Map
+Chat
+Character Status Info
+Menu
+Default Interface
+Hotkeys (PC)
+Air Walk
+Evade
+Character Movement
+Target/Auto-combat
+Quick Slots
+Default Attack/Skill
+Quests
+Steam
+Launcher
+Launcher
+You can find out the Launcher install guide and path to use MIR4 on PC.
+Install Guide
+Install notes
+Install Guide
+1. Go to the MIR4 Launcher site.
+2. Click on the [Windows] button to download the file and run it.
+3. Start installation.
+※ If a message called 'Do you want to allow this app to make changes to your device?' pops up, click ‘Yes’ to run the file. After that, please choose the language and go to the next step.
+4. Press [I Agree] to the License Agreement of MIR4Launcher.
+※ If you don't agree with the terms, press [Cancel] button. But if you disagree with the terms, you won't be able to install or play the game and the launcher.
+5. Select your Destination folder to install MIR4Launcher, and click the [Install] button.
+6. After MIR4Launcher is installed, click the [Finish] button.
+※ If you don't have Unreal Engine installed, Unreal Engine file will automatically be installed. If you already have Unreal Engine installed and leave the checkbox checked, MIR4Launcher will automatically run when you click the [Finish] button.
+7. Run MIR4Launcher and click the [Install] button to download the game file.
+8. When the game file is downloaded, you can use the dual client by pressing [1 Game] and [2 Game] buttons.
+[MIR4Launcher Guides]
+①You can move to various communities such as MIR4 Global brand site / Global forum / Facebook / Twitter / Youtube / Discord.
+②You can change your language and graphic settings used in the game. Total 12 languages can be set, and you can choose between DirectX/Opengl for the graphic option.
+③You can change the slide image.
+Install notes
+Dragonians who are installing Unreal Engine for the first time to run the PC version of MIR4 have to download the file below before installing the PC version.
+[Download Unreal Engine_64bit]
+※ Please update your Windows version to the latest to download the latest version of DirectX.
+You can check out the details regarding DirectX from the [How to install the latest version of DirectX].
+※ Playing with PC can only be done by PC launcher provided by MIR4 and any kind of app players are not supported.
+※ If you can’t run the game by clicking [1 Game] and [2 Game] buttons even after installing the launcher successfully, you can solve the problem by installing Visual C++ Redistributable package.
+[Windows 64bit]
+※ When you start the second client for the dual client, you must log-out your account before choosing the server. (If you start the game before changing the account of the second client, it senses as double connection and logs out the game that was logged in before.)
+Document update date : 2025-10-29
+Like53
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

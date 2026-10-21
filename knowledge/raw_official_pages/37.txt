@@ -1,0 +1,92 @@
+Codex
+Registering items obtained through Hunting, Crafting, Summoning, etc., in the Codex and Collection Codex can grant various stats that help in character growth.
+Codex
+Reputation Codex
+Collection Codex
+Codex
+- Tap the Codex tab in the Menu to open the Codex window.
+- Completing a Codex increases your character's stats, and a server Codex applies its effects to all characters in the server.
+- Limited time Codices apply to your character for a specific period of time only.
+- Items registered in Codices disappear.
+Reputation Codex
+- You can craft armor, enhance it, and register it in the 'Reputation Codex' to gain various upgrade stats.
+■ How to obtain Demon Charms
+Crafting armor requires Demon Charms, which can be obtained by hunting monsters.
+Field bosses have a chance to drop completed 'Rare armor'.
+■ Crafting and enhancing armor
+- You can craft in Craft > Crafting > Crafting Materials > Codex Armor menu.
+- Armor have grades of Uncommon/Rare/Epic/Legendary, and you can obtain tradable armor when crafting is a Great Success.
+- Armor can be enhanced by using Enhancement Stones of the same grade.
+- Enhancing can fail from Lv. 1, and the armor is destroyed upon failure.
+■ Combining Demon Charms
+- You can combine items to obtain higher grade items in Craft > Combine > Demon Shard menu.
+- The promotion chances for each combining level are 10% for Rare attempt and 7% for Epic attempt.
+- Failing a Rare/Epic combining charges up your Mystic Incense Burner points.
+Collection Codex
+- When you acquire an item required for the Codex, it is automatically registered in the ‘Collection Codex’, and additional Stats can be acquired based on Codex Completion.
+- You can use the Collection Codex from character Level 10.
+- The Collection Codex window can be accessed through the Codex > Collection Codex menu.
+① The Collection Codex consists of Codex and Collection List.
+- In the Codex, you can check the completion and applied stats of each category, and in the Collection List, you can check whether each item has been collected.
+※ Unlike Codex, Collection Codex does not have a separate register process, and is automatically registered each time the target item is acquired.
+※ The information registered in the Collection Codex is stored permanently, and even if all registered items are consumed and no longer in possession, the information stored in the Collection Codex does not disappear.
+② You can check the desired Codex based on the acquired stats.
+③ You can check the items you need to collect for each Codex and the stats you can obtain upon completion.
+④ You can check the desired Codex by searching the item name.
+⑤ On the right side of the screen, you can check the stats applied through the Collection Codex and information about the completion or item selected in the Codex list.
+※ The stats obtained through the Collection Codex are only applied to the target character, and the information of the Collection Codex can be transferred together when the character is sealed as an NFT and during Wayfarer Travel.
+⑥ You can sort the Collection List by selecting the sorting criteria.
+⑦ You can check the items that can be collected and the collection status for each category.
+⑧ You can check detailed information of the selected item in the Collection List.
+■ Collection Codex Ranking
+- The ranking is updated daily at 00:00 (UTC+8).
+- The ranking is calculated based on the completion of the Collection Codex, and buff effects are applied according to the achieved rank.
+Rank
+Rank Reward
+1
+Hunting EXP Boost 5%, Lucky Drop Chance Boost 5%
+2
+Hunting EXP Boost 4%, Lucky Drop Chance Boost 4%
+3
+Hunting EXP Boost 3%, Lucky Drop Chance Boost 3%
+4 ~ 10
+Hunting EXP Boost 2%, Lucky Drop Chance Boost 2%
+11 ~ 20
+Hunting EXP Boost 1.5%, Lucky Drop Chance Boost 1.5%
+21 ~ 50
+Hunting EXP Boost 1.2%, Lucky Drop Chance Boost 1.2%
+51 ~ 100
+Hunting EXP Boost 1%, Lucky Drop Chance Boost 1%
+101 ~ 200
+Hunting EXP Boost 0.8%, Lucky Drop Chance Boost 0.8%
+201 ~ 500
+Hunting EXP Boost 0.5%, Lucky Drop Chance Boost 0.5%
+※ If there are Dragonians with the same score in the Collection Codex Ranking, the character who achieved the score first will be ranked higher.
+Document update date : 2024-04-16
+Like262
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

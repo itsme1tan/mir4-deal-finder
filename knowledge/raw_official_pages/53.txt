@@ -1,0 +1,66 @@
+Unified Market
+Dragonians who are eager to become the ruler of mir continent need not only Power Score but also advanced political senses and abundant resources are required.
+The foundation of all these factors lies with the Unified Market, which makes you trade with other Dragonians in the same region as a core of the economy.
+Basic Information
+Interface
+Purchase
+Selling
+Settlement
+Basic Information
+Unified Market is a market system enabling the trade with Dragoninas of other servers within your region.
+- Requirement: Unlocked upon completing the quest 'Escape Gingko Valley'
+- Level Requirement for Selling : 40
+[Caution]
+1. It cannot be used while using Expedition or Domination Server.
+2. The minimum tax charge is 1 Gold.
+3. Amount of Unified Market taxes can be deducted depending on the Tower of Conquest stage.
+4. You can either register or purchase products from servers within your region.
+(E.g: ASIA1 (All servers belonging to the ASIA1 region, from ASIA011 to ASIA043)
+Interface
+* Tap the Unified Market in the in-game menu to move to the Unified Market windows.
+① Unified Market feature will be implemented in each tab (Search/Register for Sales/Settlement/Settlement History/Purchase History).
+② You can search or filter items on sale with the following option.
+③ Choose the category on the left side to check the list of items for sale.
+④ You can view the sales list and minimum price in the Register for Sales.
+- Up to 60 items can be registered or excluded to Favoirte with the (★) icon located at the left.
+- Click the item icon at the left to view its details.
+(For equipment items, you can compare the stats of the listed one to that of equipped.
+Purchase
+① Click the registered item in Unified Market to make a purchase or to view the average price, purchase quantity, and price.
+② You can view the remaining time for registered items.
+Selling
+① You can check tradable items or register items for sale in Register for Sale tab.
+- Copper will cost as a registration fee.
+② Your registration will be made after a certain period of waiting time and can be canceled with the Cancel button.
+- If your registration has expired or canceled on your own, items can be retrieved from Register for Sale tab, however, the registration fee will not be reimbursed.
+Settlement
+① Click the Settlement button on the Settlement tab to claim the revenue except for tax charges with the Market Tax rate.
+② Click the (i) icon located at the top right to view the Market Tax rate.
+Document update date : 2024-06-28
+Like344
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

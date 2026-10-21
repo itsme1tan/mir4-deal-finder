@@ -1,0 +1,96 @@
+Training
+A core character upgrading system that improves your character's basic attack/defense abilities with Constitution, Inner Force, Solitude Training, and Potential. After leveling up those stats, your character can grow further through promotion.
+Constitution
+Inner Force
+Solitude Training
+Potential
+Constitution
+- Press [Menu > Training > Constitution] to move to the Constitution screen.
+Constitution can be promoted every 5 levels, and all Constitution levels must be identical in order to promote.
+① You can check the Power Score increased through Constitution enhancement.
+② You can select the Constitution to enhance.
+③ You can check the current Constitution stage and stats.
+④ You can check the enhancement success chance.
+⑤ You can check the materials required for enhancement.
+⑥ You can enhance by pressing the enhance button. When enhancement is performed with the 'Increase All' option enabled, enhancement will continue automatically up to the stage immediately before the next Promotion.
+※ If there are not enough required materials, enhancement will continue up to the highest level possible with the materials currently owned.
+Inner Force
+- Press [Menu > Training > Inner Force] to move to the Inner Force screen.
+① You can check the stage of each Inner Force and the Power Score increased through Inner Force training.
+② You can select the Inner Force to train.
+③ You can check the stage and stats of the selected Inner Force.
+④ You can check the training success chance and Tangled Inner Force chance.
+⑤ You can check the materials required for training.
+⑥ You can train by pressing the train button. When training is performed with the 'Increase All' option enabled, training will continue automatically up to the stage immediately before the next Promotion.
+※ If there are not enough required materials, training will continue up to the highest level possible with the materials currently owned.
+Solitude Training
+- Tap Train - Solitude Training tab in the Menu or click the Solitude Training tab at the top left of the Constitution window.
+① There are 4 Inner Force Loci and each locus has 8 stats.
+② You can view the stats that can be gained at each slot.
+③ Power Score gained by Solitude Training and the achieved level based on overall enhancements are shown. You can gain additional stats based on the achieved level.
+④ View the stats increased by promotion and the success/Tangled Inner Force chances. Enhancement level decreases by 1-3 levels if you are afflicted by Tangled Inner Force. Each time Tangled Inner Force is triggered, your resistance increases by 0.1%.
+⑤ Information about materials and currencies required for stat enhancement.
+Potential
+- You can move to the Potential window by tapping it from Menu > Training > Potential.
+- Potential menu will be unlocked at Character Level 90.
+① The Potential consists of 3 types (Hunt/PVP/Secondary).
+- The potential will grow up sequentially from each spot point on the bottom stages.
+- Stats that can be increased and passive skills you can learn will vary based on the type of Potential.
+② You can view the total power scores increased by Potential.
+- Click the 'magnifier' icon on the right of the window to view the increase in the amount of each stat and activated passive skills.
+③ You can view the total training stages of the Potential.
+④ You can search for the stats owned in each spot point.
+- Click the (≡) icon on the right to search for multiple types of stats simultaneously.
+⑤ You can check the requirements (Skill Tomes, Dragonsteel, and other materials) for potential training.
+⑥ You can check the stat values that increase through training in each spot point.
+⑦ Click the ‘(magnifying glass)’ icon to check the increase in stat values per stage.
+⑧ If you train the Potential up to a certain stage, you can learn a new passive skill.
+- The passive skills that can be learned vary depending on the type of potential.
+- Passive skills can be trained up to Max. stage 9.
+Type
+Passive Skill
+Passive Skill Effect (Stage 1 ~ Stage 6)
+Hunt
+Valiant Hunter
+After defeating an enemy, increases Antidemon Power by 2%~6% and Monster ATK DMG Boost by 2%~6% for 60 sec (max 10 stacks). Cooldown 30 sec.
+Mystery of Growth
+Hunting EXP will be increased by 15%~135%.
+PVP
+Bind Body
+(PvP) Upon attacking, reduces the enemy's EVA by 200~600 and CRIT EVA by 200~600 for 15 sec. Cooldown 60 sec.
+Iron Walls Protection
+(PVP) Upon a hit, increases All DMG Reduction by 20%, PHYS DEF by 200~1000, and Spell DEF by 200~1000 for 20 sec. Cooldown 60 sec.
+Secondary
+Miraculous Recovery
+Instantly Recovers 10%~34% of Max HP and 30%~70% of Max HP for 10 sec when your HP falls under 30%. Cooldown 200 sec.
+Helping Each Other
+Upon a successful skill attack, there is a 20% chance to increase the player and the party members item Drop Chance by 20%~60%, Lucky Drop Chance by 20%~60%, and Hunting EXP by 20%~100% for 60 sec. Cooldown 30 sec. (Party Leaders will share the effect with any party member within 30m)
+※ Increase in Passive Skill stat values per stage is viewable from the Magnifier icon on the left top of the Potential Window.
+Document update date : 2026-08-20
+Like279
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

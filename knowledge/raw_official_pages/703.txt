@@ -1,0 +1,88 @@
+World Boss
+World Boss is a boss monster that spawns in random servers with a certain chance at a designated schedule.
+It is a weekly content that all Natives and Expedition members can participate in through the expedition.
+Nerkan/Turkan
+Drakazan
+Nerkan/Turkan
+1. Basic Information
+- Black Flame Arch Demon Nerkan will spawn in a random server as Sealed on Tuesday, and Violet Demon God Turkan will spawn with the same condition on Thursday.
+- Both Nerkan and Turkan will become active for battle from Sealed status at 23:00.
+※ The schedule will be determined based on Regional Server Time.
+※ There will be servers where the boss does not appear.
+■ Black Flame Arch Demon Nerkan
+■ Violet Demon God Turkan
+2. Spawn Area
+- [Black Flame Arch Demon Nerkan] : The boss will spawn in 'Black Flame Abaddon', which can be entered from the portal located on Redmoon Valley 4F
+- [Violet Demon God Turkan] : The boss will spawn in 'Violet Abaddon, which can be entered from the portal located on Phantasia Valley 4F.
+※ Criteria: All players who are located in a server where the World Boss has spawned. (Including players who moved by expedition)
+3. Areal Trait
+- Maximum of 450 players can be entered in this area and players over this number will be enlisted to the waiting queue.
+- PK is enabled in this area, there is no reduction of alignment points due to the PK. (Loss of EXP will still be affected upon death)
+- If a player dies not by PK, death penalties such as loss of EXP and items and extension of revival cooldown will be applied.
+■ Black Flame Abaddon (Black Flame Arch Demon Nerkan)
+■ Violet Abaddon (Violet Demon God Turkan)
+4. Notification
+- An alert message shown below will appear every Tuesday and Thursday when the World Boss spawns at 19:00 of regional server times.
+If the boss spawns in your server
+If the boss spawns in a different server
+- After checking the spawned server, Expedition players can access the content through the following: [Transfer] menu > Expedition > Visiting Server.
+※ Expedition allows players only to move within the same region.
+5. Seal Status
+- Red Background  : Unsealed status of the World Boss
+- Orange Background : Sealed status of the World Boss
+Drakazan
+1. Default Information
+- Drakazon will be spawned as 'Dormant' at 02:00 every Monday.
+- Dormant will be lifted on a random day at 04:10 am except for the weekend, and the status will be switched to 'Standby'.
+- The Standby status will be changed to 'Appear' on the appearance day at 9:10 pm, and it can be encountered upon entering the Domination Server.
+※ The Spawn time will be determined based on Regional Server Times.
+■ Blackhorn Winged Drakin Drakazan
+2. Spawn Area
+- [Blackhorn Winged Drakin Drakazan]: It will be spawned at Blackdragon Abaddon where you can enter through the portal located at Black Dragon Valley 4F in Domination Server.
+※ Criteria: All users entering into Domination Server on the appearance day
+3. Areal Trait
+- Maximum of 450 players can be entered in this area and players over this number will be enlisted into the waiting queue.
+- Upon death, Death Penalty including EXP/Item loss, and extended cooldown on revival will be applied. (There is no deduction of alignment points upon death by PK)
+■ Black Dragon Abaddon (Blackhorn Winged Drakin Drakazan)
+4. Detailed Information
+- Drakazan’s ‘current status’ information can be checked in the window before entering the domination server.
+- The boss monster will switch its status among Dormant, Standby, and Appear at a designated schedule and become the Vanquished status.
+※ Each Status and schedule will be determined by Regional Server Times.
+① You can check Drakazan's 'Dormant' status on every Monday, at 2:00 am.
+② You can check Drakazan's 'Standby' status on random days except for weekends, at 4:10 am.
+③ You can check Drakazan's 'Appear' status on the day it is stated as 'Standby' at 9:10 pm.
+④ You can check Drakazan’s ‘Vanquished’ status
+5. Precautions
+- Drakazan is normally armed with a high value of ATK. Depending on the amount of remaining HP, a special pattern will be initiated or various monsters will be summoned
+- Defeating Drakazan is a competition against every player who can enter the Domination Server, cooperation will be necessary for players on the same side.
+- Be aware that Drakazan will go dormant and disappear if it is not defeated until the next Monday.
+- A debuff 'Hemotoxin Host' will be enchanted to players in constant, and you will be under Instant Death when the debuff accumulated has reached its thresholds.
+- Hemotoxin Host debuff can be lifted through a special method in Black Dragon Abaddon.
+Document update date : 2024-10-04
+Like53
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,214 @@
+Attack of the Living Wraiths
+Attack of the Living Wraiths is a weekly content that proceeds on every Thursday, 22:00 ~ 23:00. You can claim valuable rewards by hunting Named>Semi-boss>Boss monsters in order that appear on the 4th floor of each valley.
+Preparations
+Details
+Monsters
+Preparations
+✔ Content Area : Bicheon Valley 4th floor / Snake Valley 4th floor / Redmoon Valley 4th floor
+✔ Time Period : Every Thursday, 22:00~23:00 (1 hour)
+※ Monsters do not appear after 23:00, and those that appeared before 23:00 remain.
+Details
+Only Named monsters will appear at assigned places of each valley's 4th floor.
+There is a chance of semi-boss monsters appearing once named monsters are defeated.
+There is a chance of boss monsters appearing once semi-boss monsters are defeated.
+Named monsters will respawn periodically during the time period of the content.
+Assigned spawn places for every valley's 4th floor are the same.
+Named monster gets spawned for every 3 minutes, maxiumum of 12 at each places, and 60 in total.
+Treasure Chest does not drop by defeating Named monster.
+Treasure Chest drops only by defeating Semi-boss or Boss monster.
+Number of Treasure Chest drops by defeating Semi-boss : 5
+Number of Treasure Chest drops by defeating Boss : 15
+Monsters
+Monsters of the Attack of the Living Wraiths that appear at each valley are as follows.
+Place/Tier
+Named Monster
+Semi-boss
+Boss
+Bicheon Valley 4th floor
+Fiend Demoniac Gun Maryeong
+Living Wraith Gunwol Ravenspirit
+Phantomgeist Death Guardian
+Snake Valley 4th floor
+Fiend Demoniac Lee Gwiryeong
+Living Wraith Taeo Ravenspirit
+Phantomgeist Void Guardian
+Redmoon Valley 4th floor
+Fiend Demoniac Lee Gwiryeong
+Living Wraith Ichae Ravenspirit
+Phantomgeist Drake Guardian
+Rewards that you can claim for a certain chance by killing Named, Semi-boss, Boss monsters of each valley's 4th floor are as follows.
+[Rewards that you can get for a certain chance by defeating Named Monster]
+Bicheon Valley 4th floor
+Snake Valley 4th floor
+Redmoon Valley 4th floor
+[R] Tier 1 Equipment
+[R] Tier 1 Equipment
+[R] Tier 2 Equipment
+[R] Mystic Enhancement Stone
+[R] Mystic Enhancement Stone
+[R] Mystic Enhancement Stone
+[R] Magic Stone
+[R] Magic Stone
+[R] Magic Stone
+[R] Spirit Treasure
+[R] Spirit Treasure
+[R] Spirit Treasure
+Combat Buff Coffer
+Combat Buff Coffer
+Combat Buff Coffer
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Snow Panax
+[R] Snow Panax
+[R] Snow Panax
+[R] Oil
+[R] Oil
+[R] Oil
+[R]/[E] Purified Water
+[R]/[E] Purified Water
+[R]/[E] Purified Water
+[R]/[E] Virtue Pill
+[R]/[E] Virtue Pill
+[R]/[E] Virtue Pill
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[Rewards that you can get for a certain chance by defeating Semi-boss monster]
+Bicheon Valley 4th floor
+Snake Valley 4th floor
+Redmoon Valley 4th floor
+[E] Dragon Scale/Leather/Horn
+[E] Dragon Scale/Leather/Horn
+[E] Dragon Scale/Leather/Horn
+[R] Tier 1 Equipment
+[R] Tier 1 Equipment
+[R] Tier 2 Equipment
+[R]/[E]/[L] Mystic Enhancement Stone
+[R]/[E]/[L] Mystic Enhancement Stone
+[R]/[E]/[L] Mystic Enhancement Stone
+[E]/[L] Enhancement Stone
+[E]/[L] Enhancement Stone
+[E]/[L] Enhancement Stone
+[R]/[E] Magic Stone
+[R]/[E] Magic Stone
+[R] Magic Stone
+[R]/[E] Spirit Treasure
+[R]/[E] Spirit Treasure
+[R] Spirit Treasure
+Combat Buff Coffer
+Combat Buff Coffer
+Combat Buff Coffer
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Snow Panax
+[R] Snow Panax
+[R] Snow Panax
+[R] Oil
+[R] Oil
+[R] Oil
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[Rewards that you can get for a certain chance by defeating Boss monster]
+Bicheon Valley 4th floor
+Snake Valley 4th floor
+Redmoon Valley 4th floor
+[E] Dragon Scale/Leather/Horn
+[E] Dragon Scale/Leather/Horn
+[E] Dragon Scale/Leather/Horn
+[R] Tier 1 Equipment
+[R] Tier 1 Equipment
+[R] Tier 2 Equipment
+[R]/[E]/[L] Mystic Enhancement Stone
+[R]/[E]/[L] Mystic Enhancement Stone
+[R]/[E]/[L] Mystic Enhancement Stone
+[E]/[L] Enhancement Stone
+[E]/[L] Enhancement Stone
+[E]/[L] Enhancement Stone
+[R]/[E] Magic Stone
+[R]/[E] Magic Stone
+[R] Magic Stone
+[R]/[E] Spirit Treasure
+[R]/[E] Spirit Treasure
+[R] Spirit Treasure
+Combat Buff Coffer
+Combat Buff Coffer
+Combat Buff Coffer
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon's Spirit Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+Ancient Dragon Skill Token
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Noirsoul Herb
+[R] Snow Panax
+[R] Snow Panax
+[R] Snow Panax
+[R] Oil
+[R] Oil
+[R] Oil
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R]/[E] Blue Dragon Statue
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+[R] Equipment Resources
+(Evil Minded Orb/Quintessence/Illuminating Fragment/Exorcism Bauble/Anima Stone)
+Document update date : 2022-03-24
+Like779
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

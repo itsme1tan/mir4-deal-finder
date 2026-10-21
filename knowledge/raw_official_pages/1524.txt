@@ -1,0 +1,112 @@
+Transference Equipment
+Equipment that embeds the force of masters from another dimension, granting you enormous strength. It is categorized as a Secondary Weapon like Magic Stone and Mystical Piece, and inner stats can be upgraded through Enhancement and Enchant.
+Transference Equipment
+Enhancement
+Enchant
+Transference Equipment
+1.  Basic Information
+- Item Description: Gifts embedding inner forces of people in World 4 Layer 8 connected through Mirage Ship can be used for your Character Growth.
+- Level Requirement: Character Level 100 or higher
+- Obtaining Method: Transference Equipment can be purchased from the In-game Shop or NPC <Darksteel Exchanger> located at Bicheon Castle/Snake Pit/Spiritual Center
+2. Interface
+- You can access the Transference Equipment tab through [Character > Secondary Weapon] on the menu.
+① You can view power score and stats applied by equipping the Transference Equipment.
+② There are a total of 10 slots for Transcendence Equipment, with 5 equipment slots available per page.
+Locked slots will be gradually unlocked through future updates.
+③ You can check the equipped status of Transcendence Equipment.
+④ You can view the Transference Equipment that you own.
+⑤ Click the Transference Equipment to view its details.
+- Transference Equipment has hidden stats and passive skills which are activated upon reaching a corresponding Enhancement Stage.
+※ Precautions
+Transference Equipment can be used in common for every class of MIR4.
+It will be transferred upon taking the Wayfarer Travel or NFT Sealing.
+Consume the exclusive material 'Transference Equipment Enhancement Stone' for Enhancement.
+Consume the exclusive item 'Transference Enchant Scroll' for Enchant
+Combining / Special Enhancement / Dragon Forge is unavailable for the Transference Equipment.
+Enhancement
+① Choose your targeted Transference Equipment at the right of the game screen.
+- It consumes Legendary Transference Equipment Enhancement Stone, Darksteel, and Copper.
+② You can view the chance to succeed and increase in stats per each Enhancement Stage.
+- Failure Chance will be applied from Enhancement Stage 2, and it will be destroyed upon resulting in Failure.
+- Hidden Stats will be activated upon reaching Enhancement Stage 3/6/9/12, and Passive skill will be activated upon reaching Enhancement Stage 8.
+- After getting activated, hidden stats will be upgraded depending on the corresponding Enhancement Stage.
+- Up to Stage 12 can be enhanced as Max.
+- You can view a related achievement that can obtain rewards with the following failure counts in a specific Enhancement Stage through Menu > Mission > Achievement > Transference Equipment.
+③ Click the Enhance button or use Auto-Enhance to upgrade your Transference Equipment(s) to your goals.
+[Success Chance and Enhancement Requirements]
+Enhancement Stage
+Success Chance
+Enhancement Material
+1
+100%
+Transference Equipment Enhancement Stone x1 / 10,000 Darksteel / 200,000 Copper
+2
+80%
+Transference Equipment Enhancement Stone x1 / 15,000 Darksteel / 300,000 Copper
+3
+50%
+Transference Equipment Enhancement Stone x1 / 20,000 Darksteel / 400,000 Copper
+4
+40%
+Transference Equipment Enhancement Stone x1 / 25,000 Darksteel / 500,000 Copper
+5
+30%
+Transference Equipment Enhancement Stone x1 / 40,000 Darksteel / 1,000,000 Copper
+6
+25%
+Transference Equipment Enhancement Stone x1 / 45,000 Darksteel / 2,000,000 Copper
+7
+20%
+Transference Equipment Enhancement Stone x1 / 50,000 Darksteel / 3,000,000 Copper
+8
+18%
+Transference Equipment Enhancement Stone x1 / 55,000 Darksteel / 4,000,000 Copper
+9
+16%
+Transference Equipment Enhancement Stone x1 / 70,000 Darksteel / 10,000,000 Copper
+10
+14%
+Transference Equipment Enhancement Stone x1 / 80,000 Darksteel / 20,000,000 Copper
+11
+12%
+Transference Equipment Enhancement Stone x1 / 90,000 Darksteel / 30,000,000 Copper
+12
+10%
+Transference Equipment Enhancement Stone x1 / 100,000 Darksteel / 50,000,000 Copper
+Enchant
+① Choose the targeted Transference Equipment at the right of the game screen.
+② You can view the status and requirements for Enchant.
+③ Access the Enchant windows by clicking the Enchant button.
+④ Upon enchanting, you can compare the changes in stats before and after at the right of the game screen.
+⑤ Additional stats will be randomized, and they won’t be applied until clicking the Apply button.
+⑥ You can view required currencies and Max grade possibility for Enchant.
+⑦ You can set the goals for a specific grade and repeat your Enchant automatically until reaching the goal.
+- Up to 999 Auto-Enchant can be set.
+Document update date : 2025-03-17
+Like15
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

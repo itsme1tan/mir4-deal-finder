@@ -1,0 +1,44 @@
+Skill
+Skills are a means of combat that involves using more powerful martial arts than normal attacks. On the Skill screen, you can learn new skills or enhance the skills you already have.
+Skill
+Assign Skill
+Skill
+- Tap the Skill tab in the Menu.
+① View each skill's name, MP cost, cooldown, and the assigned slot.
+② Tap each skill to view the details and skill effects.
+③ Tap the Awakening button to check each skill's Awakening effects by level.
+④ View the Energy and Skill Tomes required for skill enhancement.
+⑤ Tap the left and right buttons to view the Awakening effects at each skill enhancement level.
+⑥ When you meet a skill's requirement, you can tap the Learn button to acquire the skill.
+Assign Skill
+- Tap the Assign Skill button at the top left of the Skill window to access the Assign Skill window.
+You can assign a skill by tapping it and then selecting the slot you want.
+Skill Slot 2 is unlocked when its unlocking condition is met.
+Document update date : 2023-12-28
+Like130
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,81 @@
+Spirit
+You can view the stats of your Spirits and deploy or remove them. You can also equip treasures on your Spirits to give them special abilities.
+Spirit
+Treasure
+Transcend
+Spirit
+- Tap the Spirit tab in the Menu to open the Spirit window.
+① You can view the name and Power Score of the selected Spirit.
+② You can check the skills your Spirits have.
+③ You can check the Spirits equipped in the current deck and deploy or remove them to configure the deck.
+※ Up to 10 Spirits can be deployed, and additional slots can be unlocked by enhancing the “Portal” or by using “Spirit's Powder”.
+Spirit Deployment Slots
+Unlock Conditions
+Slot 1
+Reach Character Level 5
+Slot 2
+Reach Character Level 10
+Slot 3
+Reach Character Level 15
+Slot 4
+Reach Portal Level 5
+Slot 5
+Reach Portal Level 10
+Slot 6
+Reach Character Level 115 and use 20 Spirit's Powder
+Slot 7
+Reach Character Level 135 and use 30 Spirit's Powder
+Slot 8
+Reach Character Level 155 and use 60 Spirit's Powder
+Slot 9
+Reach Character Level 175 and use 120 Spirit's Powder
+Slot 10
+Reach Character Level 195 and use 500 Spirit's Powder
+④ Up to 10 Spirit Decks can be used, and you can change decks from the top of the screen.
+⑤ You can summon a Spirit by consuming 1 Spirit Stone, and Spirit Stones that are the same as the summoned Spirit can be used for combining or registering in Codices.
+⑥ Tapping the Combine Spirits button opens Craft > Combine window.
+⑦ You can check the deployment effects of all deployed Spirits.
+Treasure
+- Tap the Treasure tab on the Spirit window to view your treasures.
+- You can select a treasure to give to a Spirit or lock it.
+- Once given, the treasure becomes bound to the Spirit and cannot be retrieved. Placing another treasure in the same slot replaces and destroys the previously given treasure.
+- The number of treasures you can give increases as your Spirit level increases.
+※ Epic/Legendary 'Spirit Treasure' can be enhanced up to Lv. 7, and there will be a failure chance existing on Lv. 1.
+※ Please refer to [Forge > Special Enhancement] for further details.
+Transcend
+Transcend Spirit button will be exposed upon owning the same spirit stone as the Legendary Spirit you have summoned, and you can transcend the spirit up to Lv. IV at maximum.
+(Ex. When owning the spirit stone as same as your summoned Legendary Spirit - Spirit Transcend Enabled / If not owning the spirit stone in the same condition - Spirit Transcend Disabled)
+-Blue arrow icon (▲) will be viewable on the Spirit tab upon owning the same spirit stone as your summoned Legendary Spirit.
+-Press the 'Transcend Spirit' button to move the Spirit Transcend window.
+①You can view stats that gets increased by Transcend.
+②You can view required resources for the Transcend: (Spirit stone as same as the summoned Legendary Spirit + Legendary Treasure Shards + Energy + Dragonsteel)
+③Spirit Treasure slots will be expanded and skill levels will be increased when Legendary spirit gets transcended.
+※ Failure chance still exists but the transcend Lv. will be sustained even if the transcendence fails.
+Document update date : 2025-12-22
+Like230
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,109 @@
+Ancient Treasure
+Unlike existing equipment, Ancient Treasure are powerful new equipment that grows sequentially through the ‘Promote’ system.
+Ancient Treasure
+Ancient Treasure Promotion
+Ancient Treasure
+[Ancient Treasure Basic Information]
+1. Ancient Treasures unlock when the character reaches Level 100.
+2. Ancient Treasures are divided into grades ranging from Uncommon to Mythic.
+3. Ancient Treasures are enhanced using an exclusive Enhancement Stone for Ancient Treasures.
+4. Ancient Treasures are enchanted using an exclusive Enchant Scroll for Ancient Treasures.
+[How to Obtain Ancient Treasures]
+1. Ancient Treasures can be acquired through the ‘Season Token’ Exchange Shop.
+- Navigate to [Menu > XDRACO > Season Token > Exchange Station] and use ‘Ancient Equipment Box’ crafted there to obtain Ancient Treasures at a low probability.
+[Ancient Treasure Interface]
+- Access the Ancient Treasure screen via [Menu > Character > Equipment > Ancient Treasures].
+① View the power score and stats increased by equipping the Ancient Treasure.
+② Check the unique effect abilities activated when equipping the Ancient Treasure.
+③ View or proceed with the promotion effects of Ancient Treasures by Stage.
+④ Review Ancient Treasures your own, select them to check their stats, or equip them.
+Ancient Treasure Promotion
+[Ancient Treasure Promotion Basic Information]
+1. Use the Promote system to increase the tier or grade of Ancient Treasures.
+2. Promotion requires materials that match the tier and grade of the target item.
+3. If the promotion is successful, the next tier item of the same grade will be given, and if the highest tier item within the grade is promoted, the next grade item will be given.
+※ If the promotion is successful at Uncommon [Tier 2] or higher, an item with tradable properties will be given.
+※ If you succeed in promoting to Rare [Tier 2] or higher, you will receive an item with XDRACO properties.
+[Important Notes on Promotion]
+1. Regardless of the result, all materials used in promotion are destroyed.
+2. When promoting equipment of Epic grade or higher, both the target and material items must meet a required enhancement level for the promotion to proceed.
+3. If the promotion is successful, the enhancement level and enchantment are reset.
+[Ancient Treasure Promotion Effect]
+- Increased Quantity of Unlocked Stats:
+Ancient Treasure Grade
+Ragnos's Ring, Ragnos’s Bracelet
+Ragnos's Necklace
+Uncommon
+4
+3
+Rare
+5
+4
+Epic
+6
+5
+Legendary & Mythic
+7
+6
+- Increased Quantity of Enchant Abilities:
+Ancient Treasure Grade
+Number of Enchant Abilities
+Uncommon
+2
+Rare
+3
+Epic, Legendary [Tier 1]
+4
+Legendary [Tier 2]
+5
+Legendary [Tier 3]
+6
+Legendary [Tier 4] & Mythic
+7
+- Unlock Unique Effects:
+Ancient Treasure Grade
+Unlocked Unique Effects
+Uncommon ~ Rare
+None
+Epic
+General Unique Effects
+Legendary
+General & Special Unique Effects
+Mythic
+General, Special, and Party Leader Effects
+- Equipping Legendary or higher grade Ancient Treasures display unique effects around the character.
+Legendary Grade Effect
+Mythic Grade Effect
+[Ancient Treasure Promotion Process]
+① Select the target item and the material item, and check the item that will be acquired upon successful promotion.
+② View the stat increases that will apply upon successful promotion.
+③ Review the list of equipment available for use as the target or materials, and make your selection.
+④ Check the required resources for promotion, and press the [Promote] button to proceed.
+Document update date : 2025-12-22
+Like6
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,63 @@
+WEMIX PAY
+What is WEMIX PAY?
+Menu
+Purchase
+WEMIX PAY Notes
+What is WEMIX PAY?
+- WEMIX PAY is a new payment method in WEMIX PLAY designed to lower onboarding platform fees for games while also offering in-game benefits for players. A portion of revenue from WEMIX PAY is used to support preserving the value of WEMIX, contributing to the sustainable growth of the WEMIX ecosystem.
+- WEMIX PAY uses WEMIX Coin as its payment currency.
+- Due to the nature of blockchain technology, purchases made with WEMIX PAY are non-refundable. Please keep this in mind when making purchases.
+Menu
+① Click the Shop icon in the top right corner to access the Shop.
+- In the Shop, click the [WEMIX PAY] tab to switch to the WEMIX PAY payment method.
+Purchase
+Products in the in-game Shop and Event tabs can be purchased using WEMIX PAY.
+[Shop]
+1) Interface
+① WEMIX PAY: Switches the payment method to WEMIX PAY.
+② Cart: When using WEMIX PAY, the cart allows you to select and purchase multiple types of products in your desired quantities at once.
+③ Storage: Products purchased using WEMIX PAY are delivered to your Storage.
+2) Products
+① To purchase multiple products at once, click the “Add to Cart” button.
+② To purchase a single product, click on the desired item, review the purchase notice, and complete the transaction.
+※ The 'Cart' feature will be added in a future update.
+[Event Tab Products]
+- Products such as Monthly Mission Scrolls and Attendance Event rewards can also be purchased using WEMIX PAY.
+- Select the product you wish to purchase.
+- On the payment screen, click WEMIX PAY to complete the purchase.
+WEMIX PAY Notes
+1. Products purchased with WEMIX PAY are non-refundable.
+2. To use WEMIX PAY, you must link your WEMIX PLAY Wallet.
+3. WEMIX PAY is only available on the official PC version.
+4. Purchased items are delivered to your Storage.
+5. Products purchased with currencies other than USD (Gold, Mileage, Copper, etc.) cannot be purchased using WEMIX PAY.
+6. WEMIX PAY cannot be used while in the Domination Server, Expedition, or Valley of Life and Death.
+7. Since WEMIX PAY reflects the real-time market price of WEMIX, the final payment amount may differ from the price displayed on the product.
+Document update date : 2025-05-26
+Like60
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

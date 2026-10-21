@@ -1,0 +1,144 @@
+Scripture Hall
+Scripture Hall is a special archive in the Mir Continent that stores Peerless Skills. In this content, you can complete the forms of the archived skills to gain additional stats and exclusive rewards.
+Scripture Hall
+Restoration Center
+Crafting/Exchange Info
+Scripture Hall
+- Scripture Hall unlocks once your character reaches Level 120.
+- Navigate to [Menu > Codex > Scripture Hall] to access the Scripture Hall window.
+① You can view the total Power Score gained from the Scripture Hall at the top left of the screen.
+- Click the magnifying glass button on the right to view the stat bonuses obtained through the Scripture Hall.
+② The magnifying glass icon on the right also provides a summary of relevant Scripture Hall details.
+③ The Scripture Hall is composed of the 1st Scripture Hall, 2nd Scripture Hall, and the Restoration Center.
+- 1st Scripture Hall / 2nd Scripture Hall: Register various Skill Tomes and Arcane Tomes to earn stat bonuses and rewards.
+- Restoration Center: Restore Skill Arcane Tomes and Ancient Arcane Tomes using Burnt Skill Tomes.
+④ Use the list on the left to select the Peerless Skill you want to register.
+⑤ Select a Form to restore within that skill.
+- Each Peerless Skill contains up to 10 Forms, and completing each Form grants unique stat bonuses and rewards.
+⑥ Check the required materials for each Form and the rewards/stats granted upon completion.
+- Click the [Reward] button on the right to manually receive the completed Form’s reward.
+⑦ You can filter Forms by progress, acquired stats, or required materials within the selected Peerless Skill.
+⑧ View the total stats gained from completed Forms and utilize the various functions at the bottom.
+- Auto-Register: Automatically registers required materials for the selected Form.
+- Progress: View the number of Forms completed or currently in progress.
+Restoration Center
+- Through the Restoration Center, you can use Burnt Skill Tomes to obtain Skill Arcane Tomes and Ancient Arcane Tomes.
+※ Burnt Skill Tomes can be obtained from the ‘Redmoon Purgatory’ in the Spiritual Center Area.
+[Game Encyclopedia - Redmoon Purgatory Shortcut]
+① Select the Arcane Tome you wish to restore from the right side of the screen.
+② Check the materials required and the resulting item for the restoration.
+- Restoring an Arcane Tome requires a matching-grade Burnt Skill Tome, Purified Soul Stone, and Energy.
+Restored Item
+Required Materials
+Uncommon Skill Arcane Tome x1
+Uncommon Burnt Skill Tome x5 / Purified Soul Stone x5 / Energy x2,000
+Rare Skill Arcane Tome x1
+Rare Burnt Skill Tome x5 / Purified Soul Stone x10 / Energy x10,000
+Epic Skill Arcane Tome x1
+Epic Burnt Skill Tome x5 / Purified Soul Stone x20 / Energy x50,000
+Legendary Skill Arcane Tome x1
+Legendary Burnt Skill Tome x5 / Purified Soul Stone x50 / Energy x250,000
+※ All materials used during restoration will be consumed regardless of the restoration result.
+③ Check the success rate of the restoration and the bonus rewards that can be obtained on a Great Success.
+- On a Great Success, one of the following may be obtained based on the grade: Ancient Arcane Tome (Non-tradable), Ancient Arcane Tome (Tradable), Skill Arcane Tome (Tradable)
+Crafting/Exchange Info
+- At the NPC <Palace Craftsman> Hyo Janggyeong in Bicheon Castle, Sabuk Castle, and [Domination] Sabuk Castle, you can craft higher-grade Burnt Skill Tomes or exchange Skill / Ancient Arcane Tomes for other items.
+■ Crafting Info
+Crafting NPC
+Craft Item
+Craft Material
+Bicheon Castle/Sabuk Castle/[Domination] Sabuk Castle
+<Palace Craftsman> Hyo Janggyeong
+Rare Burnt Skill Tome x1
+Uncommon Burnt Skill Tome x20
+Copper x100,000
+Epic Burnt Skill Tome x1
+Rare Burnt Skill Tome x20
+Rare Blue Dragon Statue x10
+Copper x500,000
+Legendary Burnt Skill Tome x1
+Epic Burnt Skill Tome x20
+Epic Blue Dragon Statue x5
+Copper x2,500,000
+■ Exchange Info
+Exchange NPC
+Exchange Item
+Required Materials
+Bicheon Castle/Sabuk Castle/[Domination] Sabuk Castle
+<Palace Craftsman> Hyo Janggyeong
+Skill Tome Summon Ticket x1
+Uncommon Skill Arcane Tome x5
+Copper x10,000
+Spirit Stone Summon Ticket x1
+Uncommon Skill Arcane Tome x5
+Copper x10,000
+Skill Tome Summon Ticket x10
+Rare Skill Arcane Tome x5
+Copper x50,000
+Spirit Stone Summon Ticket x10
+Rare Skill Arcane Tome x5
+Copper x50,000
+Skill Tome Summon Ticket x50
+Epic Skill Arcane Tome x5
+Copper x100,000
+Spirit Stone Summon Ticket x50
+Epic Skill Arcane Tome x5
+Copper x100,000
+Skill Tome Summon Ticket x100
+Legendary Skill Arcane Tome x5
+Copper x500,000
+Spirit Stone Summon Ticket x100
+Legendary Skill Arcane Tome x5
+Copper x500,000
+Rare Skill Tome Box x1
+Uncommon Ancient Arcane Tome x5
+Copper x50,000
+Rare Spirit Stone Box x1
+Uncommon Ancient Arcane Tome x5
+Copper x50,000
+Rare Skill Tome Box x5
+Rare Ancient Arcane Tome x5
+Copper x100,000
+Rare Spirit Stone Box x5
+Rare Ancient Arcane Tome x5
+Copper x100,000
+Rare Skill Tome Box x10
+Epic Ancient Arcane Tome x5
+Copper x500,000
+Rare Spirit Stone Box x10
+Epic Ancient Arcane Tome x5
+Copper x500,000
+Epic Skill Tome Summon Box x1
+Legendary Ancient Arcane Tome x5
+Copper x2,000,000
+Epic Spirit Stone Summon Box x1
+Legendary Ancient Arcane Tome x5
+Copper x2,000,000
+Document update date : 2025-06-23
+Like2
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

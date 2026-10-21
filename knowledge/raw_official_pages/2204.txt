@@ -1,0 +1,45 @@
+Force Map
+The Force Map is a system that allows you to view the ruling power structure across the entire Mir continent at a glance.
+Force Map Information
+Changing Force Colors
+Force Map Effects
+Force Map Information
+You can access the Force Map by tapping [Menu > War > Force Map].
+1. Through the Force Map, you can view the force structure by Region and Server at a glance.
+2. By clicking on a Region, you can check the occupation status of Sabuk Castle and Bicheon Castle in that Region.
+Changing Force Colors
+Castellan of Sabuk Castle and Bicheon Castle can change the color of their force on the Force Map.
+① Go to [Menu > War > Bicheon Castle or Sabuk Castle].
+② Tap the Force Color Change function.
+③ Select your desired color and apply the change.
+Force Map Effects
+- For the server you belong to, a sparkling effect will be displayed.
+- For servers where Bicheon Castle bidding competition is in progress, a red circle effect will be displayed.
+Document update date : 2025-09-01
+Like2
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

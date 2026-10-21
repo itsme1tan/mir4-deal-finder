@@ -2,7 +2,7 @@
 (function(){
 const $=s=>document.querySelector(s),fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0}),usd=n=>n==null?'–':'$'+fm(n);
 const st=document.createElement('style');st.textContent=`
-#xnav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:10px 12px 0;position:sticky;top:0;z-index:5;background:#0f1218}
+#xnav{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px 12px 0;position:sticky;top:0;z-index:5;background:#0f1218}
 #xnav button{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:13px;font-weight:600}
 #xnav button.on{background:#f5c518;color:#1a1300;border-color:#f5c518}
 #xv{padding:10px 12px 40px;max-width:900px;margin:0 auto}#xv h2{font-size:17px;margin:16px 0 6px}#xv h3{font-size:15px;margin:14px 0 6px;color:#ffe08a}
@@ -16,14 +16,14 @@ const st=document.createElement('style');st.textContent=`
 .mt{color:#9aa3b8;font-size:12px;line-height:1.45}.bar{height:10px;border-radius:5px;background:#2b6cb0;display:inline-block;vertical-align:middle}
 .big{font-size:22px;font-weight:800;color:#ffe08a}.cmp2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cmp2>div{background:#0f1218;border:1px solid #2a3140;border-radius:10px;padding:8px}
 .hide-main .ctl,.hide-main .wrap,.hide-main #cards,.hide-main .note,.hide-main #cmp{display:none!important}`;document.head.appendChild(st);
-const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:Deals','ev:Events','lead:Leaders','trend:Trends','up:Upgrade'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
+const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:Deals','ev:Events','lead:Leaders','trend:Trends','up:Upgrade','guide:Guide'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
 $('header').after(nav);const xv=document.createElement('div');xv.id='xv';nav.after(xv);
 let E,cls,upId;
 fetch('data/extras.json?'+Date.now()).then(r=>r.json()).then(e=>{E=e;show(new URLSearchParams(location.search).get('view')||'deals')});
 nav.onclick=e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)};
 function show(v){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v==v));document.body.classList.toggle('hide-main',v!='deals');
  const u=new URL(location);if(v=='deals')u.searchParams.delete('view');else u.searchParams.set('view',v);history.replaceState(null,'',u);
- xv.hidden=v=='deals';if(!E||v=='deals')return;if(v=='ev'){evShow();return}xv.innerHTML=v=='lead'?lead():v=='trend'?trend():up();bind(v)}
+ xv.hidden=v=='deals';if(!E||v=='deals')return;if(v=='ev'){evShow();return}if(v=='guide'){xv.innerHTML=guide();return}xv.innerHTML=v=='lead'?lead():v=='trend'?trend():up();bind(v)}
 function bind(v){xv.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cls=b.dataset.c;show('lead')});
  const s=xv.querySelector('#upsel');if(s)s.onchange=()=>{upId=s.value;show('up')}}
 const H=id=>`https://nft.hofgamer.com/mir4/nft/${id}`;
@@ -78,12 +78,45 @@ function evShow(){if(!EV){fetch('data/events.json?'+Date.now()).then(r=>r.json()
  xv.innerHTML=`<h2>Events countdown</h2><label>Your server region<select id="evrg">${Object.entries(EV.regions).map(([k,o])=>`<option ${k==rg?'selected':''}>${k}</option>`).join('')}</select></label><div class="mt">All times in Pacific (PT). Siege and daily reset follow your region's server clock. Ended events hide automatically. Updated ${EV.updated}.</div><div id="evl"></div>`;
  xv.querySelector('#evrg').onchange=e=>{localStorage.mir4rg=e.target.value;evShow()};clearInterval(evT);evTick();evT=setInterval(()=>{if(xv.querySelector('#evl'))evTick();else clearInterval(evT)},1000)}
 function evTick(){const rg=localStorage.mir4rg||'NA',ro=EV.regions[rg],now=Date.now();const L=EV.events.map(e=>{const off=e.tz=='server'?ro:e.off;return {...e,s:evMs(e.start,0,off),e2:e.end?evMs(e.end,0,off):(e.end_date?evMs(e.end_date+'T23:59',0,off):null)}}).filter(e=>e.e2==null||e.e2>now).sort((a,b)=>(a.s>now?a.s:a.e2||9e15)-(b.s>now?b.s:b.e2||9e15));
- const [hh,mm]=EV.recurring[0].time.split(':').map(Number);let r=new Date();let nx=Date.UTC(r.getUTCFullYear(),r.getUTCMonth(),r.getUTCDate(),hh,mm)-ro*3600e3;while(nx<=now)nx+=864e5;while(nx-864e5>now)nx-=864e5;
  const card=(n,lab,ms,sub,src,cls)=>`<div class="xc" style="${cls}"><div style="display:flex;justify-content:space-between;gap:8px"><b>${n}</b></div><div class="big" style="font-size:20px">${lab} ${ms}</div><div class="mt">${sub} · <a href="${src}" target="_blank">source</a></div></div>`;
- let o=card(EV.recurring[0].name,'Resets in',dur(nx-now),`${PT.format(nx)} PT (${rg} 00:00)`,EV.recurring[0].src,'');
+ const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+ function nextOcc(R){const off=R.tz=='server'?ro:R.off;let best=null;for(let d=-1;d<=8;d++){const sv=new Date(now+off*3600e3+d*864e5);if(R.days&&!R.days.includes(sv.getUTCDay()))continue;for(const t of R.times){const[hh,mm]=t.split(':').map(Number);const st=Date.UTC(sv.getUTCFullYear(),sv.getUTCMonth(),sv.getUTCDate(),hh,mm)-off*3600e3,en=st+(R.dur||0)*6e4;if(en>now&&(R.dur?true:st>now)&&(!best||st<best.st))best={st,en}}}return best}
+ const groups={};for(const R of EV.recurring){const n=nextOcc(R);if(!n)continue;(groups[R.cat]=groups[R.cat]||[]).push({R,n})}
+ let o=`<div class="vd" style="margin-top:8px"><b>Daylight saving</b><p>${EV.dst_note}</p></div><h3>Recurring</h3>`;
+ for(const [g,L2] of Object.entries(groups)){o+=`<div class="mt" style="margin-top:10px;font-weight:700;color:#ffe08a">${g}</div>`;L2.sort((a,b)=>a.n.st-b.n.st).forEach(({R,n})=>{const live=n.st<=now;const sched=(R.days?R.days.map(d=>WD[d]).join('/')+' ':'Daily ')+R.times.join(', ')+(R.tz=='server'?` ${rg} server time`:` UTC+${R.off}`);
+  o+=`<div class="xc" style="${live?'border-color:#1f7a3a;background:#14251a':''}"><b>${R.name}</b> ${R.official?'<span class="bs" style="background:#1d4ed8">Official</span>':'<span class="bs" style="background:#7f1d1d">Community, unverified</span>'}<div class="big" style="font-size:19px">${live?'LIVE, ends in '+dur(n.en-now):'Next in '+dur(n.st-now)}</div><div class="mt">${PT.format(n.st)} PT · ${sched}${R.note?'<br>'+R.note:''} · <a href="${R.src}" target="_blank">source</a></div></div>`})}
+ o+=`<h3>Dated events</h3>`;
  o+=L.map(e=>{const up=e.s>now;const sub=(up?'Starts '+PT.format(e.s):'Started '+PT.format(e.s))+' PT · '+(e.end?'ends '+PT.format(e.e2)+' PT':'ends '+e.end_text)+(e.detail?'<br>'+e.detail:'')+(e.projected?' <b style="color:#f5c518">Projected</b>':'');
   const bd=e.kind=='siege'?'border-color:#a16207;background:#2a2410':up?'border-color:#2b6cb0':'';
-  return card(e.name,up?'Starts in':e.end?'Ends in':'Ends',up?dur(e.s-now):e.end?dur(e.e2-now):'date TBA',sub,e.src,bd)}).join('');
- xv.querySelector('#evl').innerHTML=o}
+  if(e.date_only)return card(e.name,'On',e.end_date,e.end_text,e.src,'border-color:#7c3aed');return card(e.name,up?'Starts in':e.end?'Ends in':'Ends',up?dur(e.s-now):e.end?dur(e.e2-now):'date TBA',sub,e.src,bd)}).join('');
+ o+=`<h3>No timer (not announced or random)</h3><div class="xc mt">${(EV.not_scheduled||[]).map(x=>'• '+x).join('<br>')}</div>`;xv.querySelector('#evl').innerHTML=o}
 
 })();
+
+function guide(){const F='https://forum.mir4global.com/post/',src=(id,t)=>`<a href="${F}${id}" target="_blank">${t||'source'}</a>`;
+ const tip=(t,b)=>`<div class="xc"><b>${t}</b><div class="mt" style="color:#cbd3e1;font-size:13px;margin-top:4px">${b}</div></div>`;
+ return `<h2>Buyer guide</h2><div class="mt">Short tips from the official MIR4 Game Encyclopedia and NFT rules. Full notes: knowledge/mir4_official.md in the repo.</div>
+ <h3>Before you buy</h3>
+ ${tip('Server is locked','You can only load the character on the server it was sealed in, and you need 1 empty character slot there. Check the server on the card. '+src(527))}
+ ${tip('Auction rules','WEMIX PLAY Marketplace runs an English auction: once you bid you cannot cancel. The winning bid wins if no one outbids within the window (default 3 hours). Seller pays 5% commission; every transaction needs WEMIX gas. '+src(1869))}
+ ${tip('Prices are in WEMIX','USD price moves with the WEMIX token. Our Trends tab shows the link.')}
+ <h3>What to look for</h3>
+ ${tip('Dragon Forge (blue numeral on gear)','7 stages with 60%, 45%, 30%, 15%, 10% success for the first five, each try 10M Darksteel + 200 Dragonsteel + dragon materials. Expensive to redo, so forged gear is real value. '+src(34))}
+ ${tip('Mythic gear','Legendary Tier IV at +15 can awaken to Mythic: max enhance +20 and a unique effect (only 1.5% roll Advanced grade). Mythic gear cannot be traded alone but stays on the character. '+src(2028))}
+ ${tip('Spirit slots and spirits','Slot 9 needs level 175, slot 10 needs level 195 plus Spirit\'s Powder. Count Legendary and Mythic spirits; Legendary can transcend to IV. '+src(36))}
+ ${tip('Magic stones and orbs','Epic+ magic stones special-enhance to Lv 7 (can break on Great Failure). Magical Soul Orb slots: 6 at levels 100 to 165. Yellow dots on gear icons are stone holes. '+src(34,'forge')+' '+src(1450,'orbs'))}
+ ${tip('Transference Equipment','10 slots, enhance to +12, hidden stats at +3/6/9/12 and passive at +8; it breaks on failure from +2, so +8 or higher is costly. '+src(1524))}
+ <h3>Red flags</h3>
+ ${tip('Time-limited codex','Server, Reputation and Time-Limited Codex merge with your account, and expired time-limited codex gives nothing. A high codex % may not last. '+src(527))}
+ ${tip('Power from consumables','Gold is not sealed with the character. Event buffs and time-limited items do not count after loading.')}
+ ${tip('Many relists or price cuts','Check the History tab: repeated relists can mean the ask is too high, or that a hidden issue keeps buyers away.')}
+ ${tip('Over fair price','Use the price vs fair badge. Our model is typically about 12% off, so treat a small gap as noise.')}
+ <h3>Classes (official descriptions)</h3>
+ ${tip('Warrior','Greatsword melee and front-line tank. Look for high DEF and HP with solid ATK; PvP DMG reduction matters in sieges.')}
+ ${tip('Sorcerer','Elemental burst caster, strongest when protected. Prioritize ATK and Skill ATK boost.')}
+ ${tip('Taoist','Sword and spells with divine healing (support). Clans value survivability: DEF and EVA, not only ATK.')}
+ ${tip('Lancer','Spear user that attacks and defends at once. Balanced ATK and DEF; PvP ATK for wars.')}
+ ${tip('Arbalist','Fast-firing ranged hunter with tracking and escape. ATK, EVA and PvP ATK.')}
+ ${tip('Darkist','Ranged poison and curses. Skill ATK boost and ATK.')}
+ ${tip('Spirit Summoner','8th class, added Aug 18, 2026: ranged spell class with MP control and buffs. Not seen in our NFT listings yet. '+src(2598))}
+ <div class="mt">The official site has no class tier list. Class tips on what to prioritize are our reading of each class's official role, not official rankings. Class Change (from level 50) lets a character switch classes and keep most growth, but gear and skills belong to each class. ${src(316)}</div>`}

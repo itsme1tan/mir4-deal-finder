@@ -1,0 +1,405 @@
+Valley of Life and Death
+A teamfight PVP where the Dragonians of each server compete with each other under the normalized area.
+Preparation
+Procedure
+Valley of Life and Death Reward
+Valley of Life and Death Ranking
+Preparation
+1. Season Details
+- It will be progressed for a week from Monday to Sunday.
+- It will progress in biweekly seasons.
+- It will be opened twice a day, totaling 14 times.
+■ Examples
+- 1st Season: March 25th, Monday ~ March 31st, Sunday, 2024
+- 2nd Season: April 8th, Monday ~ April 14th, Sunday, 2024
+- 3rd Season: April 22nd, Monday ~ April 28th, Sunday, 2024
+■ Entry Schedule
+Type
+Entry Hours
+Available Hours
+Round 1
+13:10 ~ 14:40
+1 hour 30 minutes
+Round 2
+19:10 ~ 20:40
+1 hour 30 minutes
+※ The Entry hour will be determined based on Regional Server Time.
+※ For a detailed Schedule, please check [Link]
+2. Entry
+- Press the Entry button displayed on the top right or access through the following: In-game menu (+) > Portal > Valley of Life and Death
+3. Criteria
+- Characters above Level 100 can enter.
+- You can enter the stage 2 times for free regardless of its numbering order (No.), and the free entry will reset the next day, 04:00 am (Regional Time basis)
+- Entry Count will be deducted upon pausing or quitting the game while it progresses, and re-entering the match will be restricted
+- You cannot participate in the Valley of Life and Death from combat-exclusive areas: Raid, Boss Raid, Hell Raid, Magic Square, Secret Peak, Castle Siege, Mission/Request/Mystery areas.
+- You can individually request for the entry and when joined, you will be automatically kicked from the party.
+- Cooldown for Re-Entry is 10 seconds.
+4. Rules
+- All participants in 'Valley of Life and Death' will have the same character (Level 100) and skill level (Tier 8), and their stats will be fixed according to their class.
+- Stat boost or deduction affected by external content will not be affected (E.g: Alignment, Clan Tech, Position, Imperial Title, Altar of Black Dragon, Codex, Constitution, Inner Force, Solitude Training, Potential, Secondary Weapon, Equipment, Conquest)
+- Spirit, Magical Soul Orb, Potential, and Transferrence Equipment will not be affected.
+- 5 members will be arranged for a team, a total of 10 teams exist.
+- PK mode will be fixed to 'Life and Death'
+- It will be progressed for 12 minutes.
+- Increase your character's stat with the Stat Beads obtained by defeating a character or monster or destroying Cintamani Stone.
+The higher the Grade of Stat Beads you get, the leveling will be boosted.
+Grade
+Stack
+Uncommon
++1 ~ +2
+Rare
++3
+Epic
++4
+Legendary
++5
+- Stat Bead of each stat can be enhanced up to Level 10.
+Obtainable Stats
+Min Stack (Lv.1) IncreasedMax Stack (Lv.10) Increased
+PHYS and Spell ATK Boost
+PHYS and Spell ATK Boost+200
+PHYS and Spell ATK+2,000
+PHYS and Spell DEF Boost
+PHYS and Spell DEF+150
+PHYS and Spell DEF Boost+1,500
+Skill ATK DMG Boost
+Skill ATK DMG Boost+30%
+Skill ATK DMG Boost+300%
+Skill DMG Reduction
+Skill DMG Reduction+20%
+Skill DMG Reduction+200%
+PvP ATK DMG Boost
+PvP ATK DMG Boost+10%
+PvP ATK DMG Boost+100%
+PvP DMG Reduction
+PvP DMG Reduction+8%
+PvP DMG Reduction+80%
+Boss ATK DMG Boost
+Boss ATK DMG Boost+15%
+Boss ATK DMG Boost+150%
+Boss DMG Reduction
+Boss DMG Reduction+10%
+Boss DMG Reduction+100%
+Accuracy Boost
+Accuracy+50
+Accuracy+500
+EVA Boost
+EVA+50
+EVA+500
+Stun Success Boost
+Stun Success Boost +10%
+Stun Success Boost +100%
+Stun RES Boost
+Stun RES Boost+8%
+Stun RES Boost+80%
+Knockdown Success Boost
+Knockdown Success Boost+10%
+Knockdown Success Boost+100%
+Knockdown RES Boost
+Knockdown RES Boost+8%
+Knockdown RES Boost+80%
+- The effect will vary depending on the sum of the level you increase.
+- Level 6: Green / Level 12: Blue / Level 24: Red / Level 48: Yellow
+- Pass through the Restoration Bead (Red for HP, Blue for MP) to restore the character's HP and MP.
+- Giant Lightning Circle area will be formed and expanded as time progresses and you will constantly receive damage in the area where the Great Lightning Circle is formed.
+- A player who scores 0 to 799 at the end of Valley of Life and Death will receive 1 penalty and cannot receive the match reward.
+- If receiving 5 penalties, Entry will be restricted during the whole season.
+Procedure
+1. Entry
+- Players will be directed to the Valley of Life and Death lobby.
+- Supplies including Treasure Chest, Scarecrow, and Recovery Bead will be placed, and totaling 10 treasure chests will be formed in a randomized area.
+- PK mode will be fixed in Peace.
+- You cannot utilize other external content in the Valley of Life and Death
+- The match begins when 50 members are recruited.
+- If 50 players are not recruited by the end of the Valley's recruitment time, the game will be automatically canceled.
+2. Procedure
+■ Remaining Time left for 12 minutes to 8 minutes
+- Uncommon Cintamani Stone will be spawned at a random location, and the spawning will last for 8 minutes.
+- Rare Cintamani Stone will appear at a designated location, and the spawning will last until the end.
+- When the remaining time is left for 11 minutes, a total of 5 small-size boss monsters will appear at the outskirt area of the battlefield.
+■ Remaining Time left for 8 minutes to 4 minutes
+- Giant Lightning Circle area forms.
+- 1 Legendary Cintamani Stone will randomly be spawned.
+- When the remaining time is left for 7 minutes 30 seconds, 1 medium-size boss monster will randomly appear marked with Alphabet, and it will be respawned per 70 seconds. (Totaling 3 boss monsters)
+- When the remaining time is left for 7 minutes, a total of 3 Epic Cintamani Stones will appear per minute.
+■ Remaining Time left for 4 minutes to zero
+- The Giant Lightning Circle area expands.
+- 1 Legendary Cintamani Stone will randomly be spawned.
+- Large-size Boss Monster will be spawned at the center of the battlefield.
+- When the remaining time is left for 3 minutes, a total of 3 Epic Cintamani Stones will appear per minute.
+- When 3 minutes are left, the Lucky Chest will be spawned at a random location centered from the circle area of the field.
+■ Boss Monster Spawn Area
+① Large (Agonizing Devilish Soul)
+② Medium (Sura Ghastly Soul)
+③ Small (Yaksha Ghastly Soul)
+④ Great Lightning Circle
+3. Goal
+- You can obtain scores within 12 minutes through the actions referred to in the table below, and the team with the highest score will win the match.
+- Dragonian with the highest score will be entitled the MVP, and the chosen one will receive a special reward.
+■ Score Table
+Type
+Scores Obtained
+Defeat an Enemy Character as a Warrior
+450
+Defeat an Enemy Character as a Sorcerer
+360
+Defeat an Enemy Character as a Taoist
+600
+Defeat an Enemy Character as a Lancer
+300
+Defeat an Enemy Character as a Arbalist
+450
+Defeat an Enemy Character as a Darkist
+360
+Resurrecting the allies
+300
+Defeat Small-SIZE Boss Monster
+150
+Defeat Medium-Size Boss Monster
+250
+Defeat Large-Size Boss Monster
+750
+Obtain Uncommon Stat Beads
+0 ~ 50
+Obtain Rare Stat Beads
+75
+Obtain Epic Stat Beads
+100
+Obtain Legendary Stat Beads
+125
+Destroy Uncommon Cintamani Stone
+50
+Destroy Rare Cintamani Stone
+50
+Destroy Epic Cintamani Stone
+50
+Destroy Legendary Cintamani Stone
+50
+4. Precautions
+- Upon death by PVP, Monster, and Great Lightning Circle, a Stat bead that involves 30% value of your stats reached above Level 3 will be dropped on the field. And stat targeted will be randomized.
+- Upon death by PVP, Monster, and Great Lightning Circle, the total stack of stats reached above Level 3 will be deducted by 30% as a death penalty.
+- Upon death by Fallen down, all accumulated stats, which are increased by absorbing Stat Beads, will be deducted by 30%.
+- 'ATK Players Only' can be activated on the character info screen, but when it is activated, you cannot directly attack the Valley of Life and Death monsters until getting engaged by a counterattack.
+- No restriction for tracking range, and the action will not be paused until the target dies.
+Valley of Life and Death Reward
+1. Valley of Life and Death Ranking Reward
+- Participate in the content to obtain the Soulguiding Badge and material for your growth: The Soulguiding Badge can be exchanged with various items from the designated NPC.
+- After a match ends, the ranking will be determined by the value summed up from each team.
+- Calculation will be team-based, and the entire team will be awarded depending on their ranking placement.
+※ Characters who have scored less than 800 will not be awarded for the match.
+Ranking
+Reward Details
+1st
+Soulguiding Badge x45, Epic Blue Dragon Statue x10, Legendary Hunting Potion x1
+2nd
+Soulguiding Badge x37, Epic Blue Dragon Statue x6, Epic Hunting Potion x3
+3rd
+Soulguiding Badge x30, Epic Blue Dragon Statue x6, Epic Hunting Potion x2
+4th
+Soulguiding Badge x24, Epic Blue Dragon Statue x6, Epic Hunting Potion x2
+5th
+Soulguiding Badge x21, Epic Blue Dragon Statue x5, Epic Hunting Potion x1
+6th
+Soulguiding Badge x18, Epic Blue Dragon Statue x4, Epic Hunting Potion x1
+7 ~ 10th
+Soulguiding Badge x15, Epic Blue Dragon Statue x3, Epic Hunting Potion x1
+2. MVP Reward
+- The one with the highest score will be elected as MVP, and the MVP reward will additionally be distributed.
+- MVP will be calculated individually, and the determined one will only be awarded.
+Type
+Reward
+MVP
++4 Transference Equipment Selection Box II x1, +4 Noh Wunjang Transference Equipment Box x1, Legendary Hunting Potion x3
+■ Soulguiding Badge Exchange Shop
+- You can exchange Soulguiding Badge with various items from NPC <Soulguiding Badge Exchange Merchant> Soul of Life and Death in Bicheon Castle.
+Item Name
+Quantity
+Required Amount
+Purchase Limit
++5 Transference Equipment Selection Box II
+1
+500
+1 Daily
++7 Transference Equipment Selection Box II
+1
+4,000
+1 Daily
+Legendary Blue Dragon Statue
+1
+200
+10 Monthly
+Epic Blue Dragon Statue
+1
+10
+1 Daily
+Legendary Divine Dragon’s Enhancement Stone
+1
+1,600
+1 Monthly
+Legendary Divine Dragon's Dragon Artifact Enhancement Stone
+1
+2,000
+1 Monthly
+Epic Divine Dragon’s Enhancement Stone
+1
+400
+1 Monthly
+Epic Divine Dragon's Dragon Artifact Enhancement Stone
+1
+500
+1 Monthly
+Legendary Noirsoul Herb
+1
+1,000
+1 Daily
+Epic Noirsoul Herb
+1
+200
+1 Daily
+Epic Gold Goblin
+1
+400
+1 Daily
+Rare White Silver Goblin
+1
+25
+1 Daily
+Epic Azureum Mineral Fluid
+1
+200
+1 Daily
+Epic Eternal Snow Panax
+1
+200
+1 Daily
+Rare Mineral Fluid
+1
+20
+10 Daily
+Rare Snow Panax
+1
+20
+10 Daily
+Legendary Dragon Material Box
+1
+8,000
+1 Monthly
+Legendary Spirit Stone Summon Box
+1
+8,000
+1 Monthly
+Legendary Skill Tome Summon Box
+1
+8,000
+1 Monthly
+Epic Dragonsteel Box
+1
+300
+3 Monthly
+Legendary Promotion Material Box
+1
+500
+2 Monthly
+Epic Promotion Material Box
+1
+100
+1 Daily
+Legendary Treasure Shard
+1
+50
+10 Monthly
+Legendary Black Dragon's Essence
+1
+100
+10 Monthly
+Legendary White Dragon's Essence
+1
+100
+10 Monthly
+※ Items obtained through the Soulguiding Badge Exchange Shop cannot be traded.
+Valley of Life and Death Ranking
+1. Information
+- Match Result will be calculated to the ranking every time a match ends.
+- Season Ranking reward will be distributed with the corresponding ranking calculated after the season ends.
+- If you are transferring to another server during the season, the ranking score will be implemented to the ranking of your destination server.
+※ Up to 20 minutes can be taken for the Calculation.
+※ Ranking will be determined for the players scoring the same through the following criteria:
+① Character who has a lower power score will be calculated higher
+② Character who has lower level will be calculated higher
+③ Character who has lower EXP will be calculated higher
+④ The Character who has the latest creation date will be calculated higher
+2. Season Ranking Reward
+- Calculation period will end at 00:00 (Regional Time Basis) the day after the season ends.
+- Characters ranked within 2,000 will receive Season Ranking rewards depending on their ranking placement.
+- Valley of Life and Death Season Ranking reward will be distributed via mailbox at a designated schedule after the calculation period.
+■ Mailing Period
+Type
+Reward Distribution Schedule
+ASIA(UTC+8)
+7:00 AM, Tuesday
+INMENA(UTC+6)
+5:00 AM, Tuesday
+EU(UTC+2)
+1:00 AM, Tuesday
+SA(UTC-3)
+8:00 PM, Monday
+NA(UTC-4)
+7:00 PM, Monday
+※ Ranking reward can be received within 3 weeks from the date the mail is sent.
+※ Upon using Wayfarer Travel, the calculated ranking score will be implemented to the ranking of your destination server.
+※ If you have transferred to a different server by Wayfarer Travel, the ranking reward may not be distributed.
+■ Reward Details
+Ranking
+Reward
+1st
+Legendary Blue Dragon Statue x50, Celestial Soul Pill x30, Pledge Scroll of Yearning x30
+2nd
+Legendary Blue Dragon Statue x30, Celestial Soul Pill x20, Pledge Scroll of Yearning x20
+3rd ~ 5th
+Legendary Blue Dragon Statue x25, Celestial Soul Pill x16, Pledge Scroll of Yearning x16
+6 ~ 10th
+Legendary Blue Dragon Statue x20, Celestial Soul Pill x14, Pledge Scroll of Yearning x14
+11 ~ 20th
+Legendary Blue Dragon Statue x15, Celestial Soul Pill x12, Pledge Scroll of Yearning x12
+21 ~ 50th
+Legendary Blue Dragon Statue x10, Celestial Soul Pill x10, Pledge Scroll of Yearning x10
+51 ~ 100th
+Legendary Blue Dragon Statue x8, Celestial Soul Pill x8, Pledge Scroll of Yearning x8
+101 ~ 200th
+Legendary Blue Dragon Statue x6, Celestial Soul Pill x6, Pledge Scroll of Yearning x6
+201 ~ 500th
+Legendary Blue Dragon Statue x5, Celestial Soul Pill x4, Pledge Scroll of Yearning x4
+501 ~ 1,000th
+Legendary Blue Dragon Statue x4, Celestial Soul Pill x3, Pledge Scroll of Yearning x3
+1,001 ~ 1,500th
+Legendary Blue Dragon Statue x3, Celestial Soul Pill x2, Pledge Scroll of Yearning x2
+1,501 ~ 2,000th
+Celestial Soul Pill x1, Pledge Scroll of Yearning x1
+Document update date : 2025-03-17
+Like7
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

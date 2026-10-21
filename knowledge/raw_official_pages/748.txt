@@ -1,0 +1,199 @@
+Expedition
+Expedition is a content that allows players to move and compete with various players from other servers and earn special rewards.
+Participation Conditions
+Preparations before Expedition
+Start of Expedition
+Expedition PK
+Expedition Portals
+Assassin Mode
+Participation Conditions
+Available Time of Expedition
+- Every 21:00 ~ 01:00 (4 Hours)
+Players can re-expedite to other servers if they still have more than 10 minutes remaining after coming back to their original server.
+Character will come back to its original server when it gets disconnected during the expedition.
+※ Expedition can be participated starting from 21:00 of regional server times.
+Character
+- Character must be above level 70 and located at Bicheon Castle to participate in expedition.
+- Character must not perform any acts such as gathering or using skills to participate in expedition.
+- Players can particiapte expedition even if there are no available character creation slots in the Visiting Server.
+- Maximum of 300 players can participate per server.
+Content
+- Characters that participate in expedition must not be included in the party. (Including Raid/Boss Raid/Clan Expedition)
+- The Clan that the character has joined must be ranked in top 20.
+The ranking of the Clan will be applied based on the rankings displayed in "Ranking > Clan" menu at the opening time of the expedition, and players can apply for the expedition even the Clan ranking drops after 00:00.
+Players can't participate expedition even if the clan ranking condition is fulfilled after 00:00 when it was not completed at the time of the opening of the expedition.
+Players can't participate expedition even after joining a Clan that is included in the top 20 Clans if the expedition schedule of the day has already started.
+Preparations before Expedition
+- You can enter the menu by clicking the 'Transfer'-'Expedition' tab or by clicking the 'Move Server' tab from the global map.
+① Check your Current Server and choose Visiting Server.
+- Current Server : Current server that you are logged in.
+- Visiting Server : Server to visit through Expedition.
+② Players must check and clear all the prior conditions to use expedition.
+③ Expedition button will be activated after clearing all the conditions and players can consume 1 Expedition Participation Ticket to participate expedition.
+※ Expedition Participation Ticket can be purchased in the shop through Gold, and maximum of 4 tickets can be purchased per week.
+※ Moving servers through the expedition can be done in the same region.
+(Ex. Can move from ASIA11 > ASIA24 in ASIA1 region, but not to a server in EU1 region)
+Terms of Expedition
+Categories
+Meaning
+Current Server
+The original server of the character before participating expedition.
+Visiting Server
+Another server that the character is trying to visit through the expedition.
+Outpost
+An area where only expedition members can stay.
+Natives
+Characters that were originally in the Visiting Server.
+Expedition Members
+Characters that have moved to different servers through the expedition.
+Water of Life
+An item that recharges the life of the expedition members.
+Expedition Token
+An item that can be obtained by expedition members from winning a PK against natives.
+Raid Token
+An item that can be obtained by natives from winning a PK against expedition members.
+Expedition Mode
+PK mode of expedition members.
+Start of Expedition
+- Players that moved to the visiting server will visit an expedition village and 5 life will be granted.
+- Expedition members can't move to other areas besides areas that are open to expedition content, and they can only create a party with players from the same original server.
+■ Available Areas in Expedition
+Name of the Area
+Categories
+Notes
+Outpost
+Expedition Village
+Revival Area for Expedition Members
+Training Cave
+Duel Arena
+Areas used by Expedition Members
+Bicheon Labyrinth 4F
+Labyrinth
+Can only move if there is more than 1 life left
+Players participating expedition can't attack the monolith of the valley.
+Demon Bull Labyrinth 4F
+Snake Pit Labyrinth 4F
+Abandoned Mine Labyrinth 4F
+Heaven's Way Labyrinth 4F
+Redmoon Labyrinth 4F
+Phantasia Labyrinth 4F
+Crimson Abaddon
+Valley
+Bicheon Valley 4F
+Snake Valley 4F
+Redmoon Valley 4F
+Expedition PK
+- Players can perform PK with native players of the visiting server by expedition and maximum of 20 Tokens can be obtained per day.
+Victorious Side
+Reward
+Native
+Expedition Token
+Expedition Member
+Raid Token
+- Obtained token items can be exchanged with items listed below from <Expedition Token Trader> Right Josan and <Raid Token Trader> Left Josan located in Bicheon Castle and Outpost.
+Exchangeable Item
+Required Amount
+Rare Noirsoul Herb Box
+10
+Water of Life
+2
+Epic Blue Dragon Statue
+15
+Ancient Dragon's Epic Equipment Box
+300
+Epic Magic Stone Box
+100
+Epic Spirit Treasure Box
+100
+Epic Material Box
+2
+Rare Heavy ATK Potion
+2
+Epic Heavy ATK Potion
+10
+Rare Adamant Potion
+2
+Epic Adamant Potion
+10
+Rare Divine Water
+2
+Epic Divine Water
+10
+Darknyan's Blessing
+5
+Epic Glittering Powder Box
+10
+Epic Life Elixir Box
+10
+PK Rules
+- The character name of the Natives will be shown as red and expedition members as yellow.
+- Players participating as expedition members will start the expedition with 5 lives and will lose 1 after each defeat.
+- Battles can occur between Natives vs Expedition Members / Expedition Members vs Expedition Members during the expedition period.
+※ Expedition status will be maintained even after coming back from the Visiting Server to the original server.
+※ Expedition members can battle with Natives from their Home Server but the tokens can't be obtained.
+- 1 Life can be recovered by using Water of Life and it can't be recovered if the life is already at its maximum count.
+- Only Outpost and Training Cave can be used if all of the lives are used.
+- Characters that got defeated from PK can be revived at the area where it died by the revival skill of the Spirit or Taoist, and it will not deduct the character's life count.
+Internal injuries, Drop of EXP, Loss of Items may occur by Expedition PK.
+Rewards and penalties obtained from the expedition PK will not be applied on Duel type areas such as Training Cave.
+Expedition Mode
+- Players participating in expedition can toggle Expedition Mode to do PK which is a different type of PK system.
+Joint Attack : Can attack natives in the visiting server.
+Expedition : Can attack natives in the visiting server and Expedition members from other servers.
+Hostile : Can attack all characters in the visiting server (With the exception of your party members, clan members, allied clan members, and friends)
+Carnal : Can attack all characters in the visiting server with the exception of your party members.
+Expedition Portals
+- Players can use Portals with Natives while participating in expeditions.
+- It can be entered by clicking the [Portal] menu after moving to a different server by expedition.
+- Players can enter Secret Peak and Magic Square but only certain floors will be accessible and unaccessible floors will be displayed as locked.
+※ Expedition members that have consumed all of their lives or got their expedition period expired will automatically exit from the portal content even if there is a remaining time.
+Assassin Mode
+- Assassin Mode is a PK mode that can kill other players, disguising yourself in Expedition.
+① You have to activate Assassin Mode firstly in Expedition window to become an Assassin.
+② ‘Assassin Transformation Ticket’ will be required for the Mode.
+- Assassin Transformation Ticket will be purchasable with 200 gold once per week. (Shop > Common Product > Travel Pass)
+③ Upon participating in Expedition as an Assassin, your PK mode will be set as assassin.
+- All users are killable or attackable except for party members.
+- You cannot use Clan Support.
+- Chat will be formed as a speech bubble limited to Party Chat.
+- Assassin can also be targeted regardless of PVP mode setting.
+④ Spirit will not be exposed, and character name/appearance/mount will be changed in Assassin Mode.
+- New Assassin Code will be granted instead of character name upon each participation.
+- Appearance and Mount will not be changed when Assassin Mode is undergoing.
+- Your status will be offline in Clan/Friend list.
+- Character information will not be revealed to other players during Assassin Mode.
+⑤ Press 'Leave' button to return to your home server.
+- Upon returning from Expedition, pk mode will be automatically set with the following setting of “Assassin PK mode Auto Change” (System > Game > Convenience)
+- PK mode will be set as Peaceful if “Assassin PK mode Auto Change” has been set as ON.
+- PK mode will be set as Carnal if “Assassin PK mode Auto Change” has been set as OFF.
+⑥ You can create a party that only consists of assassins.
+- Privacy Settings upon creation will be available for Public or Private.
+⑦ Click Assassin Settings or Unlock to activate/deactivate Assassin Mode in the Participation Expedition window.
+Document update date : 2022-09-19
+Like96
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

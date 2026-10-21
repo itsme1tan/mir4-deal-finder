@@ -1,0 +1,56 @@
+Default Attack/Skill
+This guide shows you how to use default attack and skills during combat.
+Using default attack and skills
+Applying skills
+Combat Settings
+Using default attack and skills
+- Tapping the Attack icon on the bottom right attacks a nearby target. (F key on a PC)
+① Tapping a skill activates that skill, and a cooldown is displayed for each skill that has been used.
+(On a PC, pressing the number buttons 6, 5, 4, 3, 2, 1 from the left uses the skill assigned to each key, while the R button activates the Lethal Move.)
+② Dragging up or down while pressing a skill assigned to a skill slot changes the skill from 'Manual' to 'Auto' or vice versa.
+③ You can assign or unassign skills using Skill > Assign Skill.
+Applying skills
+- You can deal additional damage through skill combos. Some skills can subdue the enemy.
+Quell and Chill inflict Debilitation Effects on the enemy.
+* Afterwards, using a skill that can inflict Bash and DMG Boost on each Debilitation Effect can deal additional damage to the target.
+- If you use a skill that has a knockdown effect, the target will fall. Attack or avoid combat without interruption to skill links against fallen targets.
+*Use the Reduce Movement Speed skill to slow down the target's movement. You can take advantage of battle by narrowing or widening the gap against a slower target.
+Combat Settings
+- You can quickly adjust combat-related settings.
+① Tapping the gear-shaped icon opens the settings window. (C key on a PC)
+② You can set options such as combat range, Party Leader-Centered Battle, and Auto-return.
+- Auto-combat Range: Sets a range within which your character will engage the enemy.
+- Party Leader-Centered Combat: Your character will fight near the party leader.
+- Party Target Sharing: Your character will attack the target shared by the party leader.
+- Auto-return When Resurrected: Your character will automatically return to the place of death after resurrecting and resume combat.
+- Auto-aim When Attacking: The targeting doesn't change to a different enemy during combat.
+- Counterattack When Hit: Your character will automatically counter upon receiving damage.
+- Skill Frequency: Sets the frequency of skill use
+Document update date : 2021-08-21
+Like74
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

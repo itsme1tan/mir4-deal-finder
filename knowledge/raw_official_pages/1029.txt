@@ -1,0 +1,231 @@
+Tower of Black Dragon
+Mysterious tower in Domination server including powerful monsters, plenty of rewards, and various events that are waiting for Dragonians.
+Preparation
+Interface
+Tower of Black Dragon Entry Ticket
+Tower of Black Dragon - Beginning
+Tower of Black Dragon Event
+Black Dragon's Battlefield
+Preparation
+- After entering the Domination Server, go to ‘Menu > Portal > Tower of Black Dragon’ to access the Tower of Black Dragon menu.
+Available hours
+- You may only enter the Tower of Black Dragon once out of the 3 rounds of the Domination Server, and only while the server remains open within the round’s 4-hour duration.
+- Participation will be up to 300 at maximum.
+※ All players will be automatically expelled from the Tower of Black Dragon after the round of the Domination Server ends.
+Floors in detail
+Floors
+Level required
+Power Score required
+Monster Level
+1st Floor
+95 or Above
+124,200 or Above
+Level 105 ~ 135
+2nd Floor
+105 or Above
+134,200 or Above
+Level 115 ~ 145
+3rd Floor
+115 or Above
+143,100 or Above
+Level 125 ~ 155
+4th Floor
+135 or Above
+159,700 or Above
+Level 155 ~ 200
+Black Dragon's Battlefield
+95 or Above
+124,200 or Above
+Level 200 ~ 205
+※ 1 'Tower of Black Dragon Entry Ticket' will be consumed upon access.
+※ Each floor will be opened after meeting all required levels and power scores.
+※ The ‘Black Dragon's Battlefield’ can be entered freely even after entering Floors 1–4.
+Interface
+Floors in detail
+① Tower of Black Dragon consists of many floors, and each floor will be opened after meeting all required levels and power scores.
+② You can view an explanation about the certain floor, required level/power score, and monster level.
+③ Many items including Upgrade materials and Sealed boxes can be purchased using Ancient Coin in 'Spacetime Shop'.
+④ You can view obtainable item lists on a certain floor.
+⑤ You will move to the starting point of the floor after choosing and clicking the 'Enter' button of the floor to enter which would consume the Tower of Black Dragon Entry ticket.
+※ No Free Access count exists, and tickets will be required per access.
+Tower of Black Dragon Entry Ticket
+Tower of Black Dragon Entry Ticket
+- 'Tower of Black Dragon Entry Ticket' will be consumed upon access.
+- After entering the Tower of Black Dragon, you can freely access/quit the tower with no further consumption of the Entry ticket.
+※ The content will be reset at 04:00 every day.
+How to obtain the Entry Ticket
+① Ticket will be obtainable from crafting and rewards of Domination Area Missions.
+- [Black Dragon Scute] will be obtainable from repeatable missions.
+- [Old Sword Fragment] will be obtainable from Sealing Chamber in Magic Square.
+※ You can craft the ticket from <Scute Collector> Uhm Jinho in [Domination] Sabuk Castle.
+Tower of Black Dragon - Beginning
+Tower of Black Dragon Lobby
+① Upon entering the tower, you will be moved to the lobby (Starting Point) on each floor, the safe area where PK is disabled.
+※ You will be resurrected from the 'Safe' zone upon death in the Tower of Black Dragon, however, if the Life reaches zero by PK, you will be resurrected from '[Domination] Sabuk Castle' and cannot move out from the Castle.
+② There will be no crafting merchant located in the lobby, but potions will be purchasable from Potion Merchant.
+Tower of Black Dragon Event
+Event Details
+- You can enjoy a surprise event that may occur after meeting a specific requirement other than the events that proceed in a specific timeline in Tower of Black Dragon.
+- Find out various events that may occur after meeting a specific requirement and get plenty of rewards with joy.
+1. Defeat Field Boss [Juja Neoul]
+- An event that requires you to defeat Field Bosses 'Juja Neoul' that are in charge of protecting treasure boxes appearing for a certain period.
+- Please be aware that there will be various traps regarding the treasure box; enjoy those to find out the hidden treasure.
+- Timeline set for Field Boss and Treasure Box: 11:00, 17:00, 23:00
+※ Both mentioned above will appear together.
+2. Attack of the Living Wraiths in Tower of Black Dragon
+- An event to defeat powerful monsters appearing in four fixed areas and in certain timelines.
+- Defeat the mighties and get plenty of benefits and rewards.
+- Starting Time: 10:00, 12:00, 16:00, 18:00, 22:00, 00:00
+3. Earn Summon Badge by finding 'Yongyong'
+- A Boss-summonable badge can be randomly obtained by defeating Yongyong which will randomly appear in the whole area.
+※ Badges can be obtained with a certain chance while the types of obtained badges may differ.
+4. Summoning Boss with the Summon Badge
+- You can summon Boss from Summoning Stone using the Summon Badge obtained from the Yongyong event.
+- There will be 3 Summoning Stones to summon Boss, while each Summoning Stone has its own designated Summon Badge to be used. Rewards boxes can be obtained by defeating the bosses summoned from the Summoning Stones.
+※ There will be 3 Summoning Stones on each floor, and bosses appearing from the Stone will differ.
+5. Defeat Unique Boss
+- Boss monster will randomly appear after defeating Unique monsters placed in each area.
+- 1 boss monster will randomly appear among hunting fields.
+※ The boss monster will be differentiated based on Unique monster you have defeated in a specific area.
+6. Find the Hidden Warp Point
+- Upon defeating monsters in any area of Tower of Black Dragon, a portal that is unviewable on the map will be randomly created with a certain chance after meeting a specific requirement.
+- The rewards will be differentiated - as same as the condition of Boss Monster Summon Event - with the following area you have moved.
+※ There will be four stages in the Warp event and it will be closed after defeating all monsters that appear in the Warp.
+※ Upon defeating monsters in the hidden space moved through the Warp, Named or Boss monsters can appear with a certain chance.
+7. Find Splendid gathering node
+- Upon collecting nodes placed in Tower of Black Dragon area, 'splendid gathering node' will appear when meeting specific requirements.
+- You can obtain unique material items from the 'Splendid gathering node'.
+※ If fulfilling a specific requirement while gathering in areas mentioned above, 'Splendid gathering node' will appear.
+Black Dragon's Battlefield
+- After entering the Domination Server, go to ‘Menu > Portal > Tower of Black Dragon > Black Dragon's Battlefield’ to access.
+1. Overview
+- Black Dragon's Battlefield is divided into a total of 15 zones, and is an area where you can obtain various rewards through battles with boss monsters that appear in each zone.
+- You can enter Black Dragon's Battlefield from character Level 95 and above, and can enter freely even after entering Floors 1-4 of Tower of Black Dragon.
+2. Boss Information
+No.
+Boss Name
+Appearance Condition
+1
+Syrence of Black Night
+Appears at 09:00, 15:00, 21:00 daily.
+2
+Caelion of White Night
+Appears at 10:00, 16:00, 22:00 daily.
+3
+Rivark of Moonlit Night
+Appears once at a random time while the Domination Server is available three times a day.
+4
+Red Chaotic Spider of Polar Night
+Appears when summoned using the 'Red Chaotic Spider Summon Badge' in a specific area.
+5
+Black Death Skelegore of Polar Night
+Appears when summoned using the 'Black Death Skelegore Summon Badge' in a specific area.
+- The boss monsters of 'Black Night/White Night/Moonlit Night' are divided into 4 stages in total, and when you defeat the boss monster of a lower stage, the boss monster of the next stage appears along with a notification message.
+Stage
+Boss Level
+Boss Name
+1
+200
+Syrence of Black Night
+Caelion of White Night
+Rivark of Moonlit Night
+2
+202
+Durak of Black Night
+Brikan of White Night
+Tritons of Moonlit Night
+3
+204
+Krifter of Black Night
+Morbas of White Night
+Orkaz of Moonlit Night
+4
+205
+Jarrgon of Black Night
+Kargis of White Night
+Tilion of Moonlit Night
+- A treasure chest will appear each time you defeat the boss monster of each stage, and when you defeat the boss monster of Stage 4, there is a certain probability that an Ancient Box which requires an ‘Ancient Key’ to open will appear.
+3. Crafting Ancient Keys and Summon Badges
+- You can craft items required for Black Dragon's Battlefield through the crafting NPC <Object Collector> Mo Bulwi located in [Domination] Sabuk Castle / Tower of Black Dragon / Black Dragon's Battlefield.
+Crafting Item
+Crafting MaterialsQuantity
+Epic Ancient Key
+Blood Seeker Stone
+3
+Blue Brilliant Jade
+3
+Yellow Moon Stone
+3
+Epic Pomegranate Flower
+5
+Darksteel
+300,000
+Legendary Ancient Key
+Blood Seeker Stone
+5
+Blue Brilliant Jade
+5
+Yellow Moon Stone
+5
+Epic Pomegranate Flower
+10
+Darksteel
+500,000
+Mythic Ancient Key
+Blood Seeker Stone
+20
+Blue Brilliant Jade
+20
+Yellow Moon Stone
+20
+Epic Pomegranate Flower
+40
+Darksteel
+2,000,000
+Red Chaotic Spider Summon Badge
+Black Dragon's Tear
+10
+Viperbeasts Chief's Bloody Inverted Scale
+1
+Demon Summoning Scroll
+2
+Energy
+500,000
+Black Death Skelegore Summon Badge
+Black Dragon's Tear
+10
+Epic Magic Stone of Precision
+1
+Demon Summoning Scroll
+2
+Energy
+500,000
+※ When crafting a Red Chaotic Spider/Black Death Skelegore Summon Badge, there is a 10% chance of a Great Success, and if the crafting is successful, you will obtain a tradable summoning badge.
+Document update date : 2025-04-01
+Like19
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

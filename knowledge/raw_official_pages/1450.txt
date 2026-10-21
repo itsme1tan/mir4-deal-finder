@@ -1,0 +1,146 @@
+Magical Soul Orb
+The Magical Soul Orb is a growth-oriented item with three types: Spirit, Boss, and Special Magical Soul Orbs. It can be leveled up, and upon reaching certain levels, it either gains unique stats or activates skills.
+Basic Information
+Magical Soul Orb
+Magical Soul Orb Growth
+Magical Soul Orb Enchantment
+Magical Soul Orb Promotion
+Basic Information
+1. Magical Soul Orbs are categorized into Spirit Magical Soul Orbs, Boss Magical Soul Orbs, and Special Magical Soul Orbs.
+2. Upon reaching Level 100, the Magical Soul Orb menu is unlocked, allowing you to equip Magical Soul Orbs.
+3. Magical Soul Orbs and Special Magical Soul Orbs use separate equipment slots.
+[Magical Soul Orb Slots]
+- Magical Soul Orb slots are unlocked upon reaching certain character levels. The number of equippable slots increases as your level rises.
+Slot
+Slots 1
+Slots 2
+Slots 3
+Slots 4
+Slots 5
+Slots 6
+Unlock Level
+Level 100
+Level 115
+Level 130
+Level 145
+Level 155
+Level 165
+[Special Magical Soul Orb Slots]
+- Each Special Magical Soul Orb slot is assigned to a specific Special Magical Soul Orb.
+Slot
+Slots 1
+Slots 2
+Slots 3
+Slots 4
+Slots 5
+Slots 6
+Equipable Special Magical Soul Orb
+Ragnos Magical Soul Orb
+Diabolic Skydragon Magical Soul Orb
+Helbar Magical Soul Orb
+Gu Mado Magical Soul Orb
+TBD
+TBD
+※ Locked slots will be opened in future updates as new Special Magical Soul Orbs are added.
+4. The crafting methods for Spirit Magical Soul Orbs and Boss Magical Soul Orbs are as follows:
+Crafting Magical Soul Orb
+Magical Soul Orb Coffer
+Required Material
+Required Currency
+Spirit Magical Soul Orb
+Epic Magical Soul Orb Coffer
+Epic Spirit Stone x 1
+Epic Dragon Sphere x1
+10,000,000 Copper
+1,000,000 Energy
+Legendary Magical Soul Orb Coffer
+Legendary Spirit Stone x 1
+Legendary Dragon Sphere x1
+40,000,000 Copper
+5,000,000 Energy
+Spirit Magical Soul Orb
+/ Boss Magical Soul Orb
+Epic Magical Soul Orb Special Coffer
+Epic Magical Soul Orb x2
+20,000,000 Copper
+2,000,000 Energy
+Legendary Magical Soul Orb Special Coffer
+Legendary Magical Soul Orb x2
+80,000,000 Copper
+10,000,000 Energy
+※ There is a low probability of obtaining Boss Magical Soul Orbs from Epic/Legendary Special Coffers.
+5. Navigate to ‘In-Game > Menu > XDRACO > Season Token > Exchange Station’ to craft Special Magical Soul Orb Boxes, which have a low probability of containing Special Magical Soul Orbs.
+Magical Soul Orb
+- You can access the content through Spirit > Magical Soul Orb on the menu.
+① Switch between the Magical Soul Orb and Special Magical Soul Orb categories.
+② View detailed information about each Magical Soul Orb.
+- Magical Soul Orbs have 2 basic options.
+- Special Magical Soul Orbs have 3 basic options.
+③ View all currently owned Magical Soul Orbs.
+④ Equip, unequip, or access the Upgrade tab for Magical Soul Orbs.
+⑤ Load the saved Magical Soul Orb deck presets.
+Magical Soul Orb Growth
+① At the right corner of the screen, you can select growth material items and Magical Soul Orb you want to upgrade.
+- Magical Soul Orbs can be enhanced using dedicated growth materials such as Epic Gold Goblin, Rare White Silver Goblin, Epic and Legendary Spirit Stones, and Epic or Legendary grade Magical Soul Orbs.
+- Special Magical Soul Orbs cannot be used as growth materials.
+② The registration for growth material can be managed through the Gear icon at the left, and you can upgrade the Magical Soul Orb by pressing the Growth button.
+③ View the level, current EXP, and registered materials for the selected Magical Soul Orb.
+- When a Magical Soul Orb reaches the max level (Level 12), excess EXP from used materials is not refunded, but unused materials are returned.
+- A "Great Success" may occur at a low probability, granting a large EXP bonus.
+④ Check detailed information about the Magical Soul Orb being upgraded.
+- At Levels 3/6/9, random additional stats are granted and at Level 12, a unique skill will be activated for the Magical Soul Orb.
+- Stats granted from Level 3/6/9 can be reset through Magical Soul Orb Enchant in the Enchant menu.
+※ Magical Soul Orb skills do not stack with existing Spirit skills. If the equipped Spirit and Magical Soul Orb are of the same type, the higher-grade effect is applied.
+Magical Soul Orb Enchantment
+- Access via In-Game > Menu > Forge > Enchant > Magical Soul Orb Enchant.
+① Select a Magical Soul Orb to enchant on the right side of the screen.
+② View the Magical Soul Orb's details and the materials required for enchanting.
+- Stats granted at Levels 3/6/9 can be changed using Enchant Scroll, Dragonsteel, and Energy (Special Magical Soul Orbs require Special Magical Soul Orb Enchant Scrolls, Dragonsteel, and Energy).
+③ Use the Enchant button to proceed.
+④ Check the materials required and the maximum obtainable grade.
+⑤ Enchant results are random and will only be applied when confirmed.
+⑥ Compare the Current Stats and with the New Stats every time you Enchant.
+⑦ Automatically repeat enchanting until you reach the target grade that you set.
+- Auto Enchant can be set up to 999 times as the max.
+Magical Soul Orb Promotion
+- This feature allows Special Magical Soul Orbs to increase in level through Promotion.
+- Unlike regular Magical Soul Orbs, which level up using growth materials, Special Magical Soul Orbs require same-level Special Orbs as Promotion materials.
+- Special Magical Soul Orbs can be promoted up to Level 15, with possible outcomes being Great Success, Success, or Failure.
+Great Success
+Success
+Failure
+Level Up
+/ Tradeable
+Level Up
+Only Promotion Materials are Consumed
+※ From Level 2, successful promotions have a 100% chance of having the tradeable property.
+※ From Level 5, successful promotions have a 100% chance of having the XDRACO property.
+※ When equipping a Special Magical Soul Orb of Level 12 or higher, a unique visual effect will appear on the representative Spirit's appearance.
+Document update date : 2026-07-06
+Like12
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

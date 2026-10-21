@@ -1,0 +1,484 @@
+Castle Siege
+Castle Siege is a war content aimed at determining the master of Bicheon Castle. The leader of the victorious clan becomes the King and has the right to assign government positions and titles, to issue mandates, place bounties, and distribute prizes.
+Preparation for the Castle Siege
+Rules of the Castle Siege
+Start of the Castle Siege
+Rewards for the Castle Siege
+Territory Management
+Castle Siege Eve
+Preparation for the Castle Siege
+[Clan Tech]
+- Clan Warfare : Qualify to participate by leveling Defense Formation more than 1.
+- Clan Warfare : Acquire Emergency Mobilization to increase the maximum number of clan members participating War.
+If you click 'Activate Technique > Emergency Mobilization' after leveling 'Clan Warfare > Emergency Mobilization' right before the Battle of Siege to adjust the number of pariticapting members, the maximum number of Clan members will increase for certain period and more than 50 Clan members will be able to participate in war.
+※ For instance, if you have reached level 5 on 'Emergency Mobilization' while having 50 Clan members, you can use the technique right before the Battle of Siege to increase the maximum number into 82 add 32 more Clan members for 3 hours, enabling them to participate in War.
+[Emergency Mobilization level effects]
+Lv. 01
+Lv. 02
+Lv. 03
+Lv. 04
+Lv. 05
+Lv. 06
+Lv. 07
+Lv. 08
+Lv. 09
+Lv. 10
+20
+23
+26
+29
+32
+35
+38
+42
+46
+50
+※ Effect Maintaining period : 3 Hours
+※ The maximum number of Clan members will be restored into 50 members after the effect of the Emergency Mobilization ends. If more Clan members are registered into your Clan than the maximum number of the Clan members due to the end of Emergency Mobilization effect, all of the Clan features will be temporarily locked. Locked Clan features will be normalized as soon as the total number of Clan members becomes equal or less than 50.
+[Castle Siege Auction Process]
+- Castle Siege Auction will proceed on 'Menu > War > Territory > Bicheon Castle', starting from 3 days before the start of the Castle Siege. (Thursday 00:00 / Wednesday 24:00)
+- If the bid is made 1 minute before the end of the auction, the auction period will be extended for 10 minutes, and it may get extended for maximum of 6 hours.
+※ If the Castle Siege starts on November 28th (Sun) 00:00, the auction will take place from November 25th (Thur) 00:00 to November 26th (Fri) 23:59 and it can be extended until maximum of November 27th (Sat) 06:00.
+※ Auction time will be based on Regional Server Times.
+[Schedules for the Castle Siege Auction]
+November 25th
+November 26th
+November 27th
+November 28th
+Auction Start
+Auction End
+Auction Extension End
+Castle Siege Period
+00:01:00
+23:59:59
+06:00:00
+22:00 ~ 23:00
+[Castle Siege Auction Limit]
+- Only Clans that have acquired Clan > Tech > Clan Warfare > Defense Formation Lv.1 or above can make a bid for the auction, and Clan leader or members with 'War' permission can make a bid.
+※ The occupying Clan can't participate in the auction after the first Castle Siege.
+[Procedures of Castle Siege Auction]
+- Castle Siege Auction can be participated by using Clan resources.
+- Clan resources needed to participate the Auction have to be used after exchanging Clan Gold into Clan resources from 'Convert Resources' of Clan Warehouse.
+- The cost of the first bid must be 100,000 Clan resources and the minimum bid after that will be set as 10% increased amount of the previous bid.
+- If there is a Clan that has placed a higher bid than the waiting Clan, the Clan waiting for the result will retrieve all the costs that were used to place bid.
+- Clan with the highest bid will become the winner and the resources used on bid are not retrievable.
+[Case of miscarriage of auction]
+- Case where Occupying (Defending) Clan (Including the first Battle of Siege) and clan with winning bid doesn't exist : Battle of Siege will be nullified with no owner of the castle.
+- Case where Occupying (Defending) Clan (Including the first Battle of Siege) and only 1 Clan place a bid : Castle Siege won't occur and the Offense (Bidding) Clan will be set as the owner of the castle.
+- Case where Occupying (Defending) Clan exists and Offense (Bidding) Clan doesn't exist : Castle Siege won't occur and the Defense Clan will remain as the owner.
+Rules of the Castle Siege
+[Information of the Castle Siege]
+- Schedules of Castle Siege : Once per 4 weeks. (First Castle Siege : Sunday, November 28th)
+- Time of the Castle Siege : Sunday 22:00 ~ 23:00
+※ Castle Siege time will be based on Regional Server Times.
+- Period of the Castle Siege : 60 Minutes
+- Entrance time of the Castle Siege
+- Entrance will be allowed from 21:50 which is 10 minutes before the start of the Castle Siege.
+- Entering Method : You can enter by clicking [Enter Castle Siege] from 'Menu (In-game) > War > Territory > 'Bicheon Castle'
+[Entrance Rule]
+- Entrance Qualification
+- Defense Side : Clan members of the defensive Clan (Maximum of 100) + Clan members of the ally Clan (Maximum of 50)
+- Offense Side : Clan members of the offensive Clan (Maximum of 100) + Clan members of the ally Clan (Maximum of 50)
+※ Maximum of 100 including the clan members that are added by acquiring Emergency Mobilization.
+※ Clan that is allied with both sides can't participate.
+※ Maximum number of alliable Clan is 20 but the number of members that can participate the Castle Siege is restricted to 50.
+- Restriction to maintain the Entrance Qualification
+- Clan can't be disbanded while the Auction or the Siege is on progress.
+- Leaving Clan will be disabled while the Siege is on progress (Joining is permitted).
+- Inviting/Accepting for the alliance while the Siege is on progress won't be permitted.
+- Disengaging with the allying Clan that has entrance qualification while the Siege is on progress is not permitted / It is possible when the allying Clan is allied with both of the offensive and defensive Clans.
+- If the Defensive Clan and the Offensive Clan are part of the alliance, it will be disbanded 10 minutes before the start of the Castle Siege.
+[Standard to decide the sides of the Castle Siege]
+Case
+Defense Side
+Offense Side
+Case where there is no occupying (defensive) Clan
+Clan with the highest bid
+Clan with the second highest bid
+Case where occupying (defensive) Clan exists
+Case where occupying (defensive) Clan exists
+Clan with the highest bid
+Start of the Castle Siege
+- Exclusive PK mode (War) will be applied after entering the Castle Siege and it is not possible to change into other PK mode.
+※ Even if you are in a party with a opponent, you can attack that opponent due to the priority order set by the exclusive PK mode (War).
+[Map of the Castle Siege]
+① Entrance lobby and Revival Point of each side
+② Neutral Outpost
+③ Siege Weapon Craftsman / Castle Siege Tower
+④ Siege Weapon Craftsman / Ballista
+⑤ Castle Gate
+⑥ Monolith
+⑦ Castle Gate Controller
+[Neutral Outpost]
+- Neutral Revival Point where Offense/Defense side can occupy. Offense side can revive from this point if they become the owner.
+- Capture Point can be gained if a character stays at certain area around the revival flag and capture will complete if you gain required amount of the Capture Point.
+- If an opponent comes into the territory while gaining the Capture Point, Capture Point will stop increasing.
+- Side that has captured the Neutral Outpost will revive from the nearest revival point that they have captured.
+[Castle Siege Tower/Ballista]
+Castle Siege Tower
+- It can be summoned by spending 2,500 Clan resources through Castle Siege Weapon Craftsman and it will be moved to the Castle Wall automatically.
+- You can easily climb up the Castle Wall by using Siege Tower.
+- Defense side can attack and destroy.
+Ballista
+- It can be summoned by spending 10,000 Clan resources through Castle Siege Weapon Craftsman and it will attack the offense side after placing it.
+- Maximum of 4 Siege Tower and 2 Ballistas can be summoned, damage reduction effect for ally's Siege Weapon and damage increasement effect for opponent's Castle Siege Weapon can be enforced by leveling Castle Siege Strategy.
+[Combat Status Board]
+- Combat Status of the Castle Siege can be seen in one sight through the Combat Status Board
+- Castle Siege Weapon, Revival Point, Castle Gate, Monolith can be checked.
+- Current location and the death location of the allies can be checked.
+- Party members and each Party's leader's location can be checked.
+- Tactical Marker can be shared when commanding the ally forces to attack or retreat.
+[Winning Condition of the Castle Siege]
+- Offense Clan that has destoryed the monolith within the Castle Siege period or the defensie Clan that has safely defended the monolith until the end of the Castle Siege.
+※ Ranking points can be gained by destroying the opponent's Caslte Siege Tower/Ballista or defeating opponent's characters. Copper and Clan Coins will be given as a reward following the points gained during the Castle Siege.
+Rewards for the Castle Siege
+[Benefits for the Victorious Clan]
+- 22,000 Clan resources will be given.
+- The king of the castle can purchase an exclusive mount for the king.
+- Exclusive item that can be registered and purchased by the owner clan of the castle will be given in Clan Shop.
+[Rewards for the Victorious Clan]
+Gained Ranking Points
+Reward Name
+Components of the Reward
+0
+Common Yellow Dragon Imperial Gift
+100,000 Copper + 100,000 Darksteel + 100,000 Energy + 2 Darknyan's Blessing + 4 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+1 ~ 50
+Third Place Yellow Dragon Imperial Gift
+200,000 Copper + 200,000 Darksteel + 200,000 Energy + 4 Darknyan's Blessing + 6 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+50 ~ 100
+Second Place Yellow Dragon Imperial Gift
+200,000 Copper + 200,000 Darksteel + 200,000 Energy + 6 Darknyan's Blessing + 8 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+101 ~ 500
+First Place Yellow Dragon Imperial Gift
+300,000 Copper + 300,000 Darksteel + 300,000 Energy + 8 Darknyan's Blessing + 10 Combat Buff Coffers + 2 Legendary Blue Dragon Statues
+501 ~ 1000
+Yellow Dragon Imperial Gift of Military Merit
+300,000 Copper + 300,000 Darksteel + 300,000 Energy + 10 Darknyan's Blessing + 15 Combat Buff Coffers + 2 Legendary Blue Dragon Statues
+1001 ~ 5000
+Yellow Dragon Imperial Gift of Patriotism
+500,000 Copper + 500,000 Darksteel + 500,000 Energy + 15 Darknyan's Blessing + 20 Combat Buff Coffers + 3 Legendary Blue Dragon Statues
+[Rewards for the Defeated Clan]
+Gained Ranking Points
+Reward Name
+Components of the Reward
+0
+Common Yellow Dragon Supply Gift
+50,000 Copper + 50,000 Darksteel + 50,000 Energy + 1 Darknyan's Blessing + 2 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+1 ~ 50
+Third Place Yellow Dragon Supply Gift
+100,000 Copper + 100,000 Darksteel + 100,000 Energy + 2 Darknyan's Blessing + 4 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+50 ~ 100
+Second Place Yellow Dragon Supply Gift
+100,000 Copper + 100,000 Darksteel + 100,000 Energy + 3 Darknyan's Blessing + 6 Combat Buff Coffers + 1 Legendary Blue Dragon Statue
+101 ~ 500
+First Place Yellow Dragon Supply Gift
+150,000 Copper + 150,000 Darksteel + 150,000 Energy + 4 Darknyan's Blessing + 8 Combat Buff Coffers + 2 Legendary Blue Dragon Statues
+501 ~ 1000
+Yellow Dragon Supply Gift of Military Merit
+150,000 Copper + 150,000 Darksteel + 150,000 Energy + 5 Darknyan's Blessing + 10 Combat Buff Coffers + 2 Legendary Blue Dragon Statues
+1001 ~ 5000
+Yellow Dragon Supply Gift of Patriotism
+250,000 Copper + 250,000 Darksteel + 250,000 Energy + 10 Darknyan's Blessing + 15 Combat Buff Coffers + 3 Legendary Blue Dragon Statues
+[MVP Clan Member]
+- A member with the highest ranking points regardless of the team will gain the MVP rewards.
+MVP Rewards
+1,000,000 Copper + 1,000,000 Darksteel + 1,000,000 Energy + 20 Darknyan's Blessing + 20 Combat Buff Coffers
+※ All the rewards will be given by mail.
+Territory Management
+[Tax]
+- The authority to retrieve taxes made with an accordance to the commission fee of the market and the gathering amount in the Valley will be given until the next victorious clan of the Castle Siege comes out.
+- 30% of the total amount of the commission fee made from the market everyday will be sent to the Castle Warehouse at every 4am.
+- 10% of the total amount of the Gathered resources in Valley everyday will be sent to the Castle Warehouse.
+- Gold and Darksteel stored in the Caslte Warehouse can be moved to the occupying Clan Warehouse and it can be given to other Clans. No additional commission fee will be made.
+- King or the Clan members with a position (permission) can use the features of Title, Mandate, Wanteds List, Prize by using Gold accumulated in the Warehouse.
+※ Gold and Darksteel accumulated in the Castle Warehouse are not usable starting from the next Castle Siege's Auction, and until the end of the Castle Siege.
+[Authority of the King]
+- Clan leader of the victorious Clan will be set as the King of the Castle automatically.
+- If the king, which is the clan leader transfers his status as a leader, his status as a king is also transferred.
+- The king may grant positions to his or her clan members, and members with position can receive up to one position effect.
+[Authorities of the Position]
+Position
+Effect
+Assign
+Mandate
+Title
+Wanted
+Finance
+Prize
+King
+All ATK DMG Boost 3%
+○
+○
+○
+○
+○
+○
+Prime Minister
+All DMG Reduction 3%
+○
+Royal Adviser
+Copper Gain Boost 10%
+○
+Grand GEN
+Bash ATK DMG Boost 10%
+○
+Chancellor
+Drop Chance Boost 15%
+○
+Marshall
+CRIT ATK DMG Boost 10%
+○
+[Mandate(Server Buff)]
+- The King and the Duke can provide a special buff effect on all characters on the server for a period of time.
+- Taxes stored in the Castle will be consumed when the mandate is used.
+Mandate
+Cost
+Effect
+Duration Time
+Number of Activation
+Training Codex
+5,000 Gold
+Hunting EXP Boost 15%
+3 Hours
+5 times per 3 weeks
+Hunting Codex
+5,000 Gold
+Copper Gain Boost 25%
+10 times per 3 weeks
+Collection Codex
+5,000 Gold
+Drop Chance Boost 15%
+5 times per 3 weeks
+Gathering Encouragement
+2,500 Gold
+Gathering Speed Boost 10%
+-
+Mining Encouragement
+2,500 Gold
+Mining Speed Boost 10%
+-
+Training Encouragement
+2,500 Gold
+Meditation Speed Boost 10%
+-
+[Title]
+✔ The King and the Marshall can grant a title to other characters. (Position and Title can't be granted at the same time)
+✔ Title can't be removed until the one who granted its title removes it.
+Title
+Criteria
+Effect1
+Effect2
+Challenger
+Hall of Glory
+All ATK DMG Boost +2%
+All DMG Reduction +2%
+Lionheart
+PHYS ATK +20
+PHYS DEF +20
+Sage
+Spell ATK +20
+Spell DEF +20
+Plutocrat
+Copper Gain Boost +3%
+Drop Chance Boost +3%
+Prophet
+Lucky Drop Chance Boost +3%
+-
+Priest
+MP % REGEN +3%
+-
+Gatherer
+Mining Boost +5%
+Gathering Boost +5%
+Hunter
+Monster ATK DMG Boost +3%
+-
+Traitor
+Loser
+PHYS ATK -50
+PHYS DEF -50
+Slave
+Monster DMG Boost +3%
+(Monster DMG Reduction -3%)
+-
+Fool
+HP Potion Effect -3%
+EXP Gain Rate -3%
+Beggar
+Drop Chance -3%
+Copper Gain Rate -3%
+[Wanteds List]
+✔ The King and the Grand GEN can register a certain character into the Wanteds List.
+✔ Gold will be given as a reward if a wanted person gets killed and the dead wanted character will get debuffs.
+Name of the Wanteds List
+Cost
+Duration Time
+Reward
+Death debuff of the Wanted
+Petty Thief
+500 Gold
+24 Hours
+350 Gold
+10% Reduction on Hunting Copper Gain Rate for 6 hours (Maximum of 5 at once)
+Felon
+1,500 Gold
+1 Day and 12 Hours
+1050 Gold
+10 % Reduction on Hunting EXP Gain Rate for 12 hours (Maximum of 3 at once)
+Heinous Criminal
+3,000 Gold
+2 Days and 8 Hours
+2100 Gold
+100 Reduction on All ATK DMG for 24 hours (Maximum of 1 at once)
+[Prize]
+✔ The King and the Prime Minister can grant a box that contains various items as a prize to certain characters.
+✔ Certain amount of cost will be paid to make prizes and server message will pop up as an alarm if the prize grade is over Uncommon.
+Name of the Box
+Cost
+Maximum Number
+Legendary Prize
+2,000 Gold
+1
+Epic Prize
+1,000 Gold
+3
+Rare Prize
+500 Gold
+5
+Uncommon Prize
+200 Gold
+10
+Normal Prize
+100 Gold
+50
+Castle Siege Eve
+Castle Siege Eve is an exclusive event for the Castle Siege where players can root for the side that they support and gain special items from the week before the Castle Siege.
+- Schedules of the Castle Siege Eve
+- It will proceed for 6 days starting from Monday to Saturday of the week before the Castle Siege.
+Ex) If the Castle Siege is scheduled on November 28th (Sun), Siege Eve will be from November 22nd (Mon) to November 27th (Sat).
+- Way to Participate Castle Siege Eve
+1. After logging in to the game, click the Event menu (Firecracker shaped icon on the top left corner).
+2. Select 'Castle Siege Eve' tab from the menu in the Event page.
+3. During the Event period, you can gain Drum of Victory for certain chance by hunting in Field, Elite, Labyrinth, Hidden Valley, and you can participate by pressing 'Cheer' button to the side that you root for which will cost you to use Drum of Victory item.
+- 'Drum of Victory' item can be gained for maximum of 100 per day during the event period.
+- 'Cheer' can be used 10 times per day and 60 times for maximum during the event period.
+- All of the Drum of Victory items will be deleted on Sunday 00:00 which is the D-day of the Castle Siege.
+4. You can check the side who has won the cheering competition on the D-day of the Siege (Sunday 00:00) and the victorious side will get an additional buff of 'Battlefield Drum' which will be applied only on the Castle Siege area.
+- Battlefield Drum will give All ATK DMG Boost 3% and All DMG Reduction 3%.
+- 'Battlefield Drum' effects will disappear if a player leaves the Castle Siege area.
+Participation reward of Caslte Siege Eve Cheering event
+- 'Offense Kingdom Coffer' will be given if you cheer for the Offensive Clan and 'Defense Kingdom Coffer' will be given if you cheer for the Defensive Clan. (1 item per 1 cheer)
+- You can gain 1 of the items listed below by using Offense Kingdom Coffer or Defense Kingdom Coffer.
+Acquirable Item
+Quantity
+Vigor Pill_Not Tradable
+5
+60 Minutes Speed-up Ticket_Not Tradable
+5
+Copper
+300,000
+Energy
+150,000
+Darksteel
+150,000
+3 Hours Speed-up Ticket_Not Tradable
+5
+Rare Oil_Not Tradable
+20
+Rare Snow Panax_Not Tradable
+20
+Rare Divine Water_Not Tradable
+5
+Magic Square Ticket_Not Tradable
+3
+Secret Peak Ticket_Not Tradable
+3
+Rare Noirsoul Herb_Not Tradable
+2
+Uncommon Mystic Enhancement Stone_Not Tradable
+2
+Epic Advancement Tonic_Not Tradable
+3
+Epic Greed Tonic_Not Tradable
+3
+Epic Prosperity Tonic_Not Tradable
+3
+Spirit Stone Summon Ticket_Not Tradable
+10
+Skill Tome Summon Ticket_Not Tradable
+10
+Dragon Material Summon Ticket_Not Tradable
+10
+Kingdom Codex Badge_Tradable
+1
+Kingdom Codex Badge_Not Tradable
+1
+※ Offense Kingdom Coffer and Defense Kingdom Coffer can be gained for maximum of 60 during the event period, and 'Kingdom Codex Badge' item that is gained by using the coffer can be registered into the codex after acquiring the item.
+Time Limited Codex of the Castle Siege Eve
+Name of Codex
+Effect
+Item
+Quantity
+Bicheon Conqueror's Blessing [1]
+Accuracy+15
+Kingdom Codex Badge
+1
+Bicheon Conqueror's Blessing [2]
+Evade+15
+1
+Bicheon Conqueror's Blessing [3]
+Monster ATK DMG Boost 6%
+1
+Bicheon Conqueror's Blessing [4]
+Boss ATK DMG Boost 6%
+1
+Bicheon Conqueror's Blessing [5]
+Lucky Drop Chance Boost 4%
+2
+Bicheon Conqueror's Blessing [6]
+Drop Chance Boost 4%
+2
+Bicheon Conqueror's Blessing [7]
+Hunting EXP Boost 4%
+3
+Bicheon Conqueror's Blessing [8]
+All ATK DMG Boost 2%
+3
+Bicheon Conqueror's Blessing [9]
+All ATK DMG Reduction 2%
+3
+Bicheon Conqueror's Blessing [10]
+Skill Cooldown Reduction 2%
+4
+Bicheon Conqueror's Blessing [11]
+Skill ATK DMG Boost 3%
+4
+Document update date : 2022-11-07
+Like1
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

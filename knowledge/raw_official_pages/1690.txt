@@ -1,0 +1,144 @@
+Cosmic Harmony
+Cosmic Harmony is growth content that can further strengthen characters who have reached high levels of Solitude Training.
+Cosmic Harmony
+Full Renewal
+Cosmic Harmony
+- Cosmic Harmony is unlocked when Limbo Realm Stage 1 (168 Tier or higher) is achieved in Solitude Training.
+- Cosmic Harmony can be found in ‘Menu > Conquests’.
+① Consists of ‘Cosmic Harmony’, which allows you to train your character, and ‘Full Renewal’, which allows you to change the Celestial Cycle effect obtained from Cosmic Harmony.
+② The Power Score that increases through Cosmic Harmony is displayed, and you can check detailed stats by clicking the magnifying glass button on the right.
+③ Cosmic Harmony consists of a total of 4 Trainings: ‘Heaven and Earth (I) / Heavenly Worship (II) / One Earth (III) / United Protection (IV)’.
+- There are 8 types of stats that can be upgraded sequentially in each Training List.
+Training List
+Unlocked Stats Order
+Heaven and Earth (I)
+Basic ATK DMG Boost > PHYS DEF > Stun Success Boost > Knockdown RES Boost > HP > Solitude Training Success Chance Boost > Monster DMG Reduction > Drop Chance Boost
+Heavenly Worship (II)
+Basic DMG Reduction > Spell DEF > Debilitation Success Boost > Silence RES Boost > MP > Max Vigor Boost (sec) > Monster ATK DMG Boost > Lucky Drop Chance Boost
+One Earth (III)
+CRIT > PHYS or Spell ATK > Hunting EXP Boost > Silence Success Boost > Debilitation RES Boost > Equipment Enhancement Success Chance Boost (All) > Boss ATK DMG Boost > Energy Gathering Boost
+United Protection (IV)
+CRIT EVA > PHYS or Spell ATK > Antidemon Power > Knockdown Success Boost > Stun RES Boost > Dragon Artifact Enhancement Success Chance Boost (All) > Boss DMG Reduction > Energy Gain Boost
+※ Whenever a stat reaches the maximum upgradeable level, the next stat is unlocked.
+④ By clicking the Stats icon, you can check the materials consumed during Training, the stats increase value, and the probability of success and Tangled Inner Force.
+- When you proceed with Training, an outcome of ‘Great Success/Success/Failure/Tangled Inner Force’ will occur. If Tangled Inner Force occurs, your Training level will decrease and you will be unable to train for a certain period of time.
+- Wayfarer Travel and NFT Character Sealing is unavailable when Tangled Inner Force or Celestial Cycle promotion is in progress.
+- The duration of Tangled Inner Force's effect can be shortened through Clan Support, Gold, and Speed-ups.
+⑤ When all 8 types of stats reach the maximum upgradeable level, you can Promote the Celestial Cycle Stage.
+⑥ You can view the materials required to Promote.
+- If you proceed with a promotion, a promotion waiting period will be applied and you will not be able to use Wayfarer Travel.
+- The promotion waiting time can be shortened by using Gold, Speed-ups, or Clan support.
+- Once the promotion is completed, one of the ‘Celestial Cycle Effect List’ will be applied randomly.
+- You can obtain one Celestial Cycle Effect each time you Promote each stage.
+- The same properties do not appear repeatedly in the Celestial Cycle Effect.
+⑦ You can check the currently applied Celestial Cycle Effect at the bottom left of the screen, and check detailed stats through the magnifying glass button.
+Celestial Cycle Stage
+Cosmic Harmony Training Stage
+Celestial Cycle Obtainable Level
+Max Upgrade Level (Stats)
+0
+Tier 1
+121
+5
+1
+Tier 2
+121
+10
+2
+Tier 3
+131
+15
+3
+Tier 4
+131
+20
+4
+Tier 5
+141
+25
+5
+Tier 6
+141
+30
+6
+Tier 7
+151
+35
+7
+Tier 8
+151
+40
+8
+Tier 9
+161
+45
+9
+Tier 10
+161
+50
+10
+Tier 11
+-
+50
+Full Renewal
+- With Full Renewal, the Celestial Cycle effect obtained from Cosmic Harmony can be changed to other stats.
+① You can move to the Full Renewal window.
+② You can select the Training List that requires Full Renewal.
+③ When performing Full Renewal for the selected Training List, you can check the necessary materials and the applied Celestial Cycle Effect.
+- Full Renewal is available from Stage 1 of the Celestial Cycle.
+- If you proceed with Full Renewal, the type and grade of all Stats will be changed at once.
+- Full Renewal uses Celestial Soul Pill/Dragonsteel/Energy, and Celestial Soul Pill can be obtained by crafting through an NPC.
+- When crafting a Celestial Soul Pill through the NPC <Palace Craftsman> Hyo Janggyeong, there is a 10% chance to obtain a tradeable Celestial Soul Pill .
+Crafting NPC
+Crafting Item
+Crafting Materials
+Required Quantity
+<Palace Craftsman> Hyo Janggyeong
+(Bicheon Castle, Sabuk Castle, [Domination] Sabuk Castle)
+Celestial Soul Pill x1
+Rare Pomegranate Flower
+20
+Spacetime Powder
+2
+Epic Mineral Fluid
+5
+Epic Snow Panax
+5
+Copper
+200,000
+Energy
+20,000
+④ You will be moved to a window where you can change the Celestial Cycle effect.
+⑤ In Full Renewal, all stats are changed randomly, and the changed stats can be applied through the [Apply] button.
+- A total of 21 types of stats appear in each list, and depending on the probability, you can obtain properties up to SS grade.
+⑥ You can compare ‘Current Stats’ and ‘Change Stats’ every time you attempt Full Renewal.
+⑦ By setting the quantity of the target grade (SS/S), Full Renewal can be automatically attempted repeatedly until the target result is achieved.
+- Repeat attempts can be set up to 999 times at a time.
+Document update date : 2024-07-05
+Like5
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

@@ -1,0 +1,411 @@
+Clan Match
+Clan Match is a tournament style combat where a total of 32 Clans battle each other in the Domination Server to determine the strongest Clan.
+Clan Match Information
+Apply for a Clan Match
+Clan Match Procedure
+Clan Match Composition
+Clan Match Rewards
+Clan Match Information
+1. Basic Information
+- Clan Match takes place in the Domination server. Characters must be level 50 and above to participate.
+- During the Clan Match Application Period, 32 Clans will be selected and then the finalized bracket will be revealed.
+- Clan Match will commence under a schedule with the selected Clans throughout 3 weeks.
+- Rewards will be distributed for the winner and loser of each Clan Match Round. Rewards for individual Dragonians and MVP Rewards will also be distributed.
+- Among the obtainable rewards, Dragonians can use the Guardian's Badge to exchange or craft items.
+- Clan Match will commence every 8 weeks.
+2. Schedule
+- The Clan Match Schedule and the example provided below will follow each Region’s times.
+Week No.
+Day
+Schedule
+Details
+Week 1
+Thursday
+00:00 ~ 23:55
+Application Period
+Friday
+20:00
+Bracket Finalization
+Saturday
+21:00 ~ 21:45
+Round 1 (Round of 32)
+Saturday
+22:00 ~ 22:45
+Round 2 (Round of 16)
+Week 2
+Saturday
+21:00 ~ 21:45
+Round 3 (Round of 8)
+Saturday
+22:00 ~ 22:45
+Round 4 (Round of 4)
+Week 3
+Saturday
+21:00 ~ 21:45
+Round 5 (Finals)
+※ Schedule Example (1st Clan Match Schedule)
+1) Clan Match application period: September 5th, 00:00 ~ 23:55
+2) Clan Match Bracket Finalization: September 6th, 20:00
+3) Clan Match Round of 32: September 7th, 21:00 ~ 21:45
+4) Clan Match Round of 16: September 7th, 22:00 ~ 22:45
+5) Clan Match Round of 8 : September 14th, 21:00 ~ 21:45
+6) Clan Match Round of 4: September 14th, 22:00 ~ 22:45
+7) Clan Match Finals: September 21st, 21:00 ~ 21:45
+Apply for a Clan Match
+1. Procedures to Apply① Apply for a Clan Match by going to the following: [Menu >War > Clan Match > Apply > ‘Apply’ button]
+② Remaining time left to apply for Clan Match and prerequisites to apply is being displayed.
+- The following prerequisites must be met before being able to apply for a Clan Match.
+1) Clan Technique > Clan development’s Commanding Officer level 5 and above.
+2) Clan Leader or a Clan member with war permission.
+③ Clan Match Bracket can be checked.
+④ Clan Match Rewards can be checked.
+- A ‘Regular Reward’ is obtained for each Round your Clan has won or lost. An individual Reward is granted depending on the amount of points the Dragonian has obtained.
+⑤ Dragonians can check the final winner of the Clan Match
+2. Bracket- Clan Match’s Bracket consists of 32 Clans.
+- If more than 32 Clans have applied for the Clan Match, the top 32 Clans with the highest Power Score among the Clans that have applied, will be selected.
+- Rounds will decrease if less than 32 Clans have applied.
+No. of Clans applied
+Clan Match Information
+17 ~ 32
+Begins in Round 1 (Round of 32)
+9 ~ 16
+Begins in Round 2 (Round of 16)
+5 ~ 8
+Begins in Round 3 (Round of 8)
+4
+Begins in Round 4 (Round of 4)
+0~3
+Will not commence
+Clan Match Procedure
+1. Match Preparation
+- Clan Match will commence on the 1st ~ 3rd Week on Saturday, 9:00 ~ 9:45 / 10:00 ~ 10:45. For each Round, a 5 minute wait time will take place before the Match. (Each Region’s standard time.)
+- Before entering the Clan Match, the Clan Leader or the Clan member with War Permission can set and save the ‘Commanding Officer’ Skill through the ‘Enter Match’ window.
+2. Match Begin
+- Obtain points in Clan Match by defeating opposing Clan members / obtaining territories / defeating monsters. Clan Match consists of 5 types of monsters and 6 obtainable territories.
+- When the Match is over, the Clan with the most points wins the Clan Match.
+- The ‘Combat Status Board’ as displayed in the image below, can be checked once entering the Clan Match.
+① Each side’s Clan Name, points, and remaining time can be checked.
+② When the Clan Match begins, Tactical Points will continue to replenish. Use the points and the Commanding Officer Skills to grant all Clan members a buff or grant all opposing Clan members a debuff.
+- Commanding Officer Skill can only be used by Clan Leaders or Clan Members with War Permission.
+③ The Clan Leader and the Clan member with War Permission can make a variety orders with Tactical Markers to Clan members through the Combat Status Board
+- Types of Markers: Attack, Rally, Defend, Retreat, Stand by
+④ Click on the Ranking button to display a window showing current rankings of all individual Clan members’ points
+⑤ Chat log with Clan members is displayed.
+3. Commanding Officer Skills Information
+- Commanding Officer Skill Buffs that have been obtained can only be removed from the skill: 'Curse of Nullification'.
+Skill Name
+Tactical Points Required
+Skill Effect
+Cooldown time (sec)
+Combat Instinct
+5
+ATK DMG 30% Increase to all allies for 60 seconds.
+180
+Will of Iron Wall
+5
+Reduce DMG Received by 30% to all allies for 60 seconds.
+180
+Cry of Resistance
+3
+Immune to all Crowd Control effects to all allies for 10 seconds.
+180
+Vermilion Bird's Blessing
+8
+All allies will not die from a potentially fatal blow for 15 seconds.
+120
+Mirror of Reflection
+5
+40% of the DMG received by an ally are reflected to the Attacker for 30 seconds to all allies
+150
+Overwhelmed
+5
+Reduces All ATK DMG Boost by 30% for 60 sec to all enemy clan members.
+180
+Wavering Resolve
+5
+Reduces All DMG Reduction by 30% for 60 sec to all enemy clan members.
+180
+Worsening Wound
+4
+Reduces Skill HP Recovery Am't Boost, HP Potion Effect Boost by 50% for 30 sec to all enemy clan members.
+180
+Touch of Corruption
+7
+Adds 3,000 Fixed DMG to the damage taken for 10 sec to all enemy clan members.
+120
+Curse of Nullification
+3
+Removes beneficial buffs applied to the enemy clan members.
+150
+Reviving the Dead
+10
+Resurrects all currently dead members of your clan on the spot with 100% of their total HP recovered.
+180
+Mass Transportation
+7
+Summons all clan members to the area around the user who used the skill.
+200
+Guard Barrier
+5
+All Allied Occupied Territories are unable to be occupied for 15 seconds.
+120
+Secret Passage
+5
+Removes the obstructing wall that prevents you from moving to the shortcut area for 90 sec.
+180
+4. Obtainable Points
+- If the two Clans obtained 0 points by the time the match is over, both Clans will be considered Losing clans and the opposing Clan for the next Round will win by default.
+Category
+Clan Points obtained
+Individual Points obtained
+Defeat Opponent Clan member
+5
+5
+Occupy Temple/Shrine of Gathering Force
+100
+100
+Occupy Temple/Shrine of Rallying
+100
+-
+Destroy Temple/Shrine of Restoration Monolith
+50
+50
+Maintain Occupying a Temple/Shrine (per second)
+1
+-
+Defeat Watchkeeper Monsters
+30
+30
+Defeated the 1st Guardian of the Ruins
+1,000
+-
+Defeated the 2nd Guardian of the Ruins
+1,500
+-
+Defeated the 3rd Guardian of the Ruins
+3,000
+-
+5. Rules
+- Clan Match will commence as a 50:50 Dragonians on the battlefield, totaling the capacity of participants to be 100 Dragonians.
+- All Clan members that meet the prerequisites to participate in the Clan Match can freely enter the domination server during the Clan Match.
+- If the Clan Match is entered while in a Party, the Dragonian will automatically leave the Party. (Excluding Clan Party)
+- All buffs will be removed when entering the Clan Match, except for all Clan Skill and Altar of Black Dragon. (ex- Title, Position, and Server Buffs.)
+- Disband Clan, Leave Clan, Kick will not be available when in the Clan Match map and Clan alliances will not be applied when in a Clan Match. All targets except for Clan members will be considered an enemy.
+- PVP Log, Bounty Hunt, Wanted List, Clan Target does not apply within the Clan Match’s map
+- Duels are unavailable in the Clan Match area.
+- ‘Life’ will not be used and Raid/Expedition Tokens can not be obtained when in the Clan Match map.
+- If the Point difference between the 2 Clans surmounts to 10,000 points during a Clan Match, the Clan with the higher points will automatically become the winner.
+Clan Match Composition
+1. Occupying Territories
+- There are a total of 6 Occupied Territories and 6 monoliths.
+- Occupied Territories are located in the higher areas of the Temple/Shrine. Dragonians must utilize Air Walk and the neutral monster (Giant Rock Fiend).
+- Methods to occupy each territory are different.
+Occupied Territory
+Occupy Method
+Temple of Gathering Force
+Interact with the Monolith of Gathering Force for 60 seconds to occupy
+Shrine of Gathering Force
+Temple of Rallying
+When Monolith of Rallying is approached within a certain range, the Occupy Gauge gets filled when in the vicinity for 60 seconds. When the Gauge is filled, the territory becomes occupied.
+Shrine of  Rallying
+Temple of Restoration
+Destroy Monolith of Restoration to occupy
+Shrine of Restoration
+- The Occupy Gauge in the Monolith of Rallying will be filled for the Clan that has the most surviving Clan members in the vicinity.
+- If the opposing Clan is already Occupying the Monolith of Rallying, the filled Gauge must first be decreased before filling the gauge for your allied Clan.
+- It is advantageous to have more Clan members when attacking and occupying the Monolith of Restoration because the damage taken by the Monolith is limited.
+- The last Clan member that hit the Monolith of Restoration to its destruction will occupy the territory. The monolith will respawn with a certain amount of HP.
+- The respawned Monolith of Restoration will continue to regenerate HP. The amount of HP restored will depend on the amount of surviving allied Clan members that are in the vicinity of the Monolith.
+2. Monster
+- In the Clan Match, there are 3 types of Watchkeepers, 1 type of Guardian,  1 type of Neutral Monster, which totals to 5 types of monsters.
+- The 3 Watchkeeper Monsters are: Iron Wall / Destruction / Gale Watchkeeper, and they have a Beast and a Demon Beast variant.
+- All Watchkeepers spawn 3 times during the Clan Match. If the Monster is not defeated within 5 minutes of its spawn, it will disappear.
+- The Clan that defeated the Watchkeeper will gain a buff effect for 5 minutes.
+Monster
+Buff Effect Applied
+Beast of Iron Wall/Demon Beast of Iron Wall
+PHYS/Spell DEF 20% Increase
+Beast of Destruction/Demon Beast of Destruction
+PHYS/Spell ATK 20% Increase
+Beast of Gale/Demon Beast of Gale
+Movement Spd. 20% Increase
+- Clan Match’s Guardian is the ‘Guardian of the Ruins’.
+- When the Guardian of the Ruins appears, a special area around the occupied Temple/Shrine appears as well.
+- The Guardian of the Ruins can not be defeated by attacking it.
+- Defeat the Guardian of the Ruins by getting the attention of the Guardian and have it follow you to the special area
+- Clan Match’s Neutral Monster is the ‘Giant Rock Fiend’.
+- There are 4 Giant Rock Fiend’s spawn location. The Giant Rock fiend can be jumped on to access the occupied Territory.
+- The Giant Rock Fiend can be defeated by attacking it. It will respawn after 5 minutes.
+Clan Match Rewards
+1. Winning Clan Reward
+Category
+Rewards
+Round 32 Winning Clan
+Clan Victory Box x1, Clan Coin x6,000
+Round 16 Winning Clan
+Clan Victory Box x1, Guardian's Badge x4, Clan Coin x12,000
+Round 8 Winning Clan
+Clan Victory Box x1, Guardian's Badge x8, Clan Coin x18,000
+Round 4 Winning Clan
+Clan Victory Box x1, Guardian's Badge x12, Clan Coin x24,000
+Finals Winning Clan
+Clan Victory Box x1, Guardian's Badge x16, Clan Coin x30,000
+2. Losing Clan Reward
+Category
+Rewards
+Round 32 Losing Clan
+Clan Cheer Box x1, Clan Coin x2,000
+Round 16 Losing Clan
+Clan Cheer Box x1, Clan Coin x4,000
+Round 8 Losing Clan
+Clan Cheer Box x1, Clan Coin x6,000
+Round 4 Losing Clan
+Clan Cheer Box x1, Clan Coin x8,000
+Finals Losing Clan
+Clan Cheer Box x1, Clan Coin x10,000
+3. Individual Rewards and MVP Reward
+- The MVP Reward is granted to Clan members that obtained the most points during the Round. The reward is additionally granted with the Winning / Losing Clan reward.
+Category
+Points Obtained
+Rewards
+Winning Clan
+1 ~ 50
+Transference Equipment Selection Box x2, Magical Soul Orb Growth Box x2
+51 ~ 100
+Transference Equipment Selection Box x4, Magical Soul Orb Growth Box x2
+101 ~ 500
+Transference Equipment Selection Box x6, Magical Soul Orb Growth Box x2
+501 ~ 1000
+Transference Equipment Selection Box x8, Magical Soul Orb Growth Box x3
+1001 ~ 5000
+Transference Equipment Selection Box x10, Magical Soul Orb Growth Box x4
+Losing Clan
+1 ~ 50
+Transference Equipment Selection Box x1, Magical Soul Orb Growth Box x1
+51 ~ 100
+Transference Equipment Selection Box x2, Magical Soul Orb Growth Box x1
+101 ~ 500
+Transference Equipment Selection Box x3, Magical Soul Orb Growth Box x1
+501 ~ 1000
+Transference Equipment Selection Box x4, Magical Soul Orb Growth Box x2
+1001 ~ 5000
+Transference Equipment Selection Box x5, Magical Soul Orb Growth Box x3
+MVP
+Most Points obtained per Round
+Spacetime Powder x5, Epic Dragonsteel Box x1, Legendary Blue Dragon Statue x1
+4. Box Item Composition
+Box Type
+Item
+Quantity
+Clan Victory Box
+Legendary Blue Dragon Statue
+1
+Epic Divine Water
+10
+Legendary Promotion Material Box
+1
+Noirsoul Herb Box
+2
+Clan Cheer Box
+Epic Blue Dragon Statue
+10
+Epic Divine Water
+5
+Epic Promotion Material Box
+5
+Noirsoul Herb Box
+1
+Transference Equipment Selection Box
+Sarmati Transference Equipment Box
+1
+Wu Yeogi Transference Equipment Box
+1
+Cheonpa Transference Equipment Box
+1
+5. Guardian's Badge Usage
+- Guardian’s Badge can be exchanged for items by interacting with ‘<Guardian's Badge Trader> Clan Match Heroic Spirit’, locate in Bicheon Castle and [Domination] Sabuk Castle
+Exchange Item
+Quantity
+No. of Guardian’s Badge Required
+Summon Ticket Selection Box
+5
+1
+Epic Ice Crystal
+1
+1
+Legendary Ice Crystal
+1
+4
+Rare White Silver Goblin
+1
+1
+Epic Gold Goblin
+1
+8
+Epic Blue Dragon Statue
+10
+1
+Legendary Blue Dragon Statue
+1
+10
+Epic Noirsoul Herb
+1
+6
+Legendary Noirsoul Herb
+1
+20
+Epic Divine Dragon's Enhancement Stone
+1
+40
+Legendary Noirsoul Herb Divine Dragon's Enhancement Stone
+1
+80
+Epic Divine Dragon's Dragon Artifact Enhancement Stone
+1
+40
+Legendary Divine Dragon's Dragon Artifact Enhancement Stone
+1
+80
+- Items can be crafted by Bicheon Castle’s ‘<Craft Master> Gusan’.
+Craft Item.
+Craft Material
+Quantity Required
+Guardian's Gold Dragon Exchange Ticket
+Rare Pomegranate Flower
+200
+Guardian’s Badge
+25
+Epic Azureum Mineral Fluid
+10
+Epic Eternal Snow Panax
+10
+Copper
+1,000,000
+Document update date : 2024-09-03
+Like15
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

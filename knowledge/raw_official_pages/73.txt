@@ -1,0 +1,51 @@
+Choose Server
+You can check out the guide before choosing the servers.
+Choose Server
+Choose Server
+1. Check your server after logging in.
+※ MIR4 has [ASIA], [INMENA], [EU], [SA], [NA] continents and each continent has multiple sub-regions, worlds, servers.
+Server : ASIA11, SA13, NA22, etc.
+World : ASIA11 ~ ASIA14 = ASIA1 world
+Region : ASIA11 ~ ASIA44 = ASIA1 Region
+Continent : ASIA, INMENA, EU, SA, NA
+2. Click on [Change server] to change your server.
+3. The changeable continents, regions and servers will be displayed.
+① Ping of continents might be high or low depending on the place you are logging in.
+② Please check the continent that is selected at the moment.
+③ Server time is different for every continent, meaning the opening time of the in-game contents and servers may vary.
+[ASIA] - UTC+8
+[INMENA] - UTC+6
+[EU] - UTC+2
+[SA] - UTC-3
+[NA] - UTC-4
+4. Click the continent, region, and server that you want to change into, and click the 'Select' button when the 'Select Region' pop-up comes up.
+※Please note that the network might be unstable if you have chosen a continent that has a high ping, making your gameplay unstabilized.
+5. Check the changed server at the lobby, and you can create your character after clicking the screen.
+Document update date : 2023-07-03
+Like185
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

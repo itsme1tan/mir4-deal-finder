@@ -1,0 +1,107 @@
+Class Change
+The Class Change system is a content that enables you to freely change into 5 different classes while maintaining the original character's growth and bag except for the equipments and skills. You can access by clicking Skill - Class Change from the menu.
+Conditions for the Class Change
+Class Creation
+Maintaining features after Class Change
+Conditions for the Class Change
+・It is accessible to Characters over level 50.
+・Character has to be in a status of not involved in a party (Including Raid Party).
+・Character has to be located in Bicheon Castle.
+Required resources to create new class differ by number and they are as below.
+- 1st Creation : 1,000,000 Copper
+- 2nd Creation : 4,000 Gold
+- 3rd Creation : 8,000 Gold
+- 4th Creation : 12,000 Gold
+※ The cost of switch between the original class and the created class is free.
+Class Creation
+- You can access by clicking Skill - Class Change tab on the menu.
+① You can create or change into different classes and play. However, it can't be created or changed into the class that you own already.
+② Requirements have to be checked and fulfilled before changing the class. 10 minutes of Class Change Cool will be applied after changing your class.
+③ You can check out the Skill Info of the class that you want to change into.
+④ After clicking 'Switch Class' button, you will be directed to the 'Choose Character' screen and will be able to play with the class that you changed into after the restart.
+Maintaining features after Class Change
+Info of the Original Character
+Maintaining info after Class Change
+Growth info
+Character Name/Title/Level/EXP/Propensity Points
+Shared
+Death Penalty/Vigor/PVP Mode
+Shared
+Equipments
+[Class Creation]
+- Equipped items will be locked and unequipped.
+- Unequipped equipments will be stored in your bag.
+- Unequipped equipments won't be auto-equipped.
+[Class Change]
+- Equipped items will be locked but won't be unequipped.
+Magic Stone
+Shared
+Mount
+Shared
+Spirit/Spirit Stone
+Shared
+Constitution/Inner Force/Solitude Training
+Shared
+Codex
+Shared
+Buff effect of the Buff items
+Shared
+Main Quest
+Shared
+Mission
+Shared
+Request/Mysteries
+Shared
+Daily Task/Achievement
+Shared
+Conquests
+Shared
+Portal(Magic Square, Secret Peak)
+Free entry tickets are shared by the Original and switched classes.
+Raid, Boss Raid, Clan Expedition
+Free entry tickets are shared by the Original and switched classes.
+Clan
+Shared
+Karma (Friends, PvP Log, Most Wanted, Wanteds List)
+Shared
+Ranking
+Shared
+Bag and Warehouse
+Shared
+Shop (Item, Summon, Storage)
+Shared
+Mailbox
+Shared
+Option Settings
+System Settings
+Shared
+Quick Slot item and combat settings
+Shared
+Document update date : 2022-05-31
+Like79
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

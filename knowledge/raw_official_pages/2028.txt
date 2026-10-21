@@ -1,0 +1,348 @@
+Mythic Equipment
+Mythic Equipment represents the pinnacle of power, accessible only to Dragonians who have transcended even the greatest masters of the Mir continent. Unlock abilities beyond imagination, far surpassing everything that came before it.
+Mythic NPC
+Equipment Awaken
+Equipment Invoke
+Manifest Ability
+Spirit Invoke
+Transcend Mythic Spirit
+Mythic Material Information
+Mythic NPC
+- You can obtain items related to Mythic Equipment through the Spiritual Center and Arcadia Spirit Village NPCs.
+1) Spiritual Center NPC <Mythic Dragon Material> Martial World Master: Mythic Equipment and Mythic Dragon Artifacts
+2) Arcadia Spirit Village NPC <Mythic Spirit> Diviner Octy: Mythic Spirits
+① You can obtain items related to Mythic Equipment and Mythic Dragon Artifacts through the Spiritual Center NPC <Mythic Dragon Material> Martial World Master.
+- Awaken: A feature that allows you to awaken Legendary equipment (Tier 4) and Legendary Dragon Artifacts (Black Dragon or White Dragon Artifact) that have been fully enhanced to Stage 15 into Mythic grade.
+- Invoke: A function that allows you to combine 3 Legendary Dragon Materials to obtain the 'Divine Dragon's Soul', one of the main materials for Awakening.
+② Mythic Spirits can be obtained through the Arcadia Spirit Village NPC <Mythic Spirit> Diviner Octy.
+- Invoke: Allows the combining of 3 Legendary Spirit Stones to obtain a Mythic Spirit Stone.
+Equipment Awaken
+① You can select the Legendary equipment or Legendary Dragon Artifact to awaken from the list on the right side of the screen.
+- Equipment Awakening can be performed with Legendary equipment (Tier 4) or Dragon Artifacts (Black Dragon or White Dragon Artifact) that have been fully enhanced to Stage 15.
+② On the left side of the screen, you can check the registered equipment, the materials required for Awakening, and the stats that change upon Awakening.
+- All equipment awakened to Mythic grade will become non-tradable.
+- When Awakening equipment, its Enhancement Stage and Dragon Forge Stage will be retained, but all additional options applied through Enchant will be reset.
+- Awakening equipment improves its base options, increases its maximum Enhancement Stage to 20, and grants a special unique effect exclusive to Mythic Equipment.
+- Mythic Equipment will not be destroyed upon Enhancement Failure, but its Enhancement Stage may decrease.
+- Mythic Dragon Artifacts cannot be used as growth materials for Dragon Artifact Benediction.
+③ Tap the [Awaken] button to awaken the registered equipment to Mythic Equipment.
+④ You can view the unique effect and stats of the Mythic Equipment once Awakening is complete.
+- The unique effect of Mythic Equipment differs depending on the equipment type.
+- Each type of equipment has 10 possible unique effects, and one of them is randomly applied.
+- The applied unique effect can be changed using the 'Manifest Ability' feature.
+Equipment Invoke
+① You can select the materials to use for Invoke from the list on the right side of the screen.
+- Equipment Invoke is a feature that allows you to combine 3 Legendary Dragon Materials to obtain a 'Divine Dragon's Soul'.
+② You can view the materials registered for Invoke, and proceed with Invoke by clicking the [Invoke] button.
+③ You can check the success rate of Equipment Invoke and the items obtainable upon success or failure.
+- If Invoke is successful, you will obtain a 'Divine Dragon's Soul' and your current Divine Dragon's Promise Points will be reset to 0.
+- If Invoke fails, you will receive 1 random Legendary Dragon Material and accumulate 1 Divine Dragon's Promise Point.
+④ Equipment Invoke includes the Divine Dragon's Promise system, where you can check your current Promise Points and perform a Guaranteed Summon.
+- Each time you accumulate 5 Divine Dragon's Promise Points, the number of available Guaranteed Summons increases.
+- When performing a Guaranteed Summon, you will obtain a 'Divine Dragon's Soul' and the available Guaranteed Summon count will decrease.
+※ 'Divine Dragon's Soul' can also be obtained, at a low probability, through Disenchanting a Rare Stage 3 or higher, or by opening a Mythic Ancient Box.
+Manifest Ability
+① There are two ways to access the Manifest Ability screen.
+- In-Game Menu (+) > Character > Equipment > Mythic Equipment > Manifest Ability Button
+- In-Game Menu (+) > Forge  > Enchant > Manifest Ability Tab > Select Equipment > Manifest Ability Button
+② You can view the unique effects available through Manifest Ability.
+③ You can check the required materials or proceed with Manifest Ability from this section.
+- Required materials for Manifest Ability: Stone of Manifest Ability x1, Energy x20,000, Copper x50,000
+④ After performing Manifest Ability, you can decide whether to apply the new effect from the right side of the screen.
+- Clicking the [Apply] button will apply the newly selected effect through Manifest Ability.
+- Clicking the [Cancel] button will retain the previously owned effect.
+[Mythic Equipment] Unique Effect Information by Part
+Type
+Unique Effect Name
+Effect Description
+Weapon/Secondary Weapon
+Scorn the Weak
+Upon attacking an enemy whose remaining HP is 40% or below, there is a 15% chance to increase DMG by 30%~45% (cooldown 55 sec).
+Sudden Strike
+Upon attacking an enemy whose remaining HP is 60% or higher, there is a 15% chance to increase DMG by 24%~36% (cooldown 55 sec).
+Giant's Bash
+Upon doing a Bash attack, there is a 30% chance to increase DMG by 16%~24% (cooldown 60 sec).
+Disrupt Recovery
+Upon attacking, there is a 10% chance to reduce the enemy's Skill HP Recovery Am't by 24%~36% and HP Potion Effect by 24%~36% for 10 sec (cooldown 48 sec).
+Destroy Shield
+When attacking an enemy with a Shield, removes the enemy's Shield (cooldown 60 - 90 sec).
+Power of Destruction
+Upon attacking, there is a 10% chance to increase All ATK DMG by 5%~7.5% for 30 sec (cooldown 75 sec).
+Focus Enhancement
+Upon attacking, there is a 10% chance to increase Accuracy by 80~120 for 30 sec (cooldown 75 sec).
+Sharpened Edge
+Upon attacking, there is a 10% chance to increase CRIT by 80~120 for 30 sec (cooldown 75 sec).
+Enhance Weapon
+Upon attacking, there is a 10% chance to increase PHYS ATK by 80~120 and Spell ATK by 80~120 for 30 sec (cooldown 75 sec).
+Abolish Immortality
+When attacking an enemy in the Immortal state, removes the enemy's Immortal state (cooldown 80 - 120 sec).
+Top/Bottoms
+Final Resistance
+When HP falls to 30% or below, grants a Shield that equals to 16%~24% of Max HP for 5 sec (cooldown 60 sec).
+Spreading Damage
+Upon being hit, grants the DMG Absorption state for 10 sec. When the DMG Absorption state reaches max stacks, deals 100%~150% of PHYS ATK and 100%~150% of Spell ATK as DMG to nearby enemies (max 8 stacks) (cooldown 2 - 3 sec).
+Speedy Growth
+Upon being hit, there is a 15% chance to increase Max HP by 6%~9% for 8 sec (cooldown 45 sec).
+Inherent Power
+Upon being hit while stunned, reduces All DMG Taken by 20%~30% for 5 sec (cooldown 60 sec).
+Defending Vital Points
+Upon being hit with a CRIT, there is a 20% chance to reduce All DMG Taken by 20%~30% for 2 sec (cooldown 60 sec).
+Nimble Evasion
+Upon being hit, there is a 15% chance to increase EVA by 80~120 for 30 sec (cooldown 75 sec).
+Critical Instinct
+Upon being hit, there is a 15% chance to increase CRIT EVA by 80~120 for 30 sec (cooldown 75 sec).
+Mana Defense
+Upon being hit, there is a 15% chance to increase Spell DEF by 80~120 for 30 sec (cooldown 75 sec).
+Incredible Defense
+Upon being hit, there is a 15% chance to increase PHYS DEF by 80~120 for 30 sec (cooldown 75 sec).
+Combat Preparation
+Upon being hit by a character, there is a 30% chance to increase PHYS DEF by 60~90 and Spell DEF by 60~90 for 30 sec (cooldown 75 sec).
+Gloves/Boots/Belt
+Wind of Recovery
+When HP falls to 50% or below, recovers 12%~18% of Max HP and increases Movement Spd. by 60~90 for 4 sec (cooldown 45 sec).
+Controlled Leap
+Upon using Evade, Evade is instantly enabled (cooldown 30 - 45 sec).
+Warfare Expert
+Upon attacking characters, there is a 10% chance to increase the enemy's PvP DMG Taken by 2%~3% for 7 sec (max 5 stacks) (cooldown 1 sec).
+Demon Hunter
+Upon attacking monsters, there is a 20% chance to reduce the enemy's PHYS ATK by 2%~3% and Spell ATK by 2%~3% for 5 sec (cooldown 45 sec).
+Accumulated Strike
+Upon doing a basic attack, there is a 20% chance to increase the enemy's Basic DMG Taken by 4%~6% for 5 sec (max 5 stacks) (cooldown 1 sec).
+Absorb Bash
+Upon being hit, there is a 15% chance to reduce Bash DMG Taken by 20%~30% for 30 sec (cooldown 75 sec).
+Protect Weakness
+Upon being hit, there is a 15% chance to reduce CRIT DMG Taken by 20%~30% for 30 sec (cooldown 75 sec).
+Gain Insight
+Upon being hit, there is a 15% chance to reduce Skill DMG Taken by 10%~15% for 30 sec (cooldown 75 sec).
+Condensed Energy
+Upon being hit, there is a 15% chance to reduce All DMG Taken by 5%~7.5% for 30 sec (cooldown 75 sec).
+Nullify
+Upon attacking a character, there is a 10% chance to block the enemy's Tonic Effect of Healing by 8 secs. (cooldown 40 - 60 sec).
+Necklace/Bracelet/Medallion
+Debilitate Mana
+Upon attacking characters, there is a 10% chance to instantly reduce the enemy's MP by 20%~30% (cooldown 52 sec).
+Weaken
+Upon attacking characters, there is a 10% chance to instantly reduce the enemy's Vitality by 20%~30% (cooldown 52 sec).
+Seal Evasion
+Upon using an Ultimate, there is a 40%~100% chance to grant the Cannot Evade state to the enemy for 6 sec (cooldown 90 sec).
+Block Vessel
+Upon attacking characters, there is a 10% chance to reduce the enemy's MP Potion Effect by 30%~45% for 6 sec (cooldown 30 sec).
+Slow Cognition
+Upon doing a Bash attack, there is a 30% chance to increase the enemy's Skill Cooldown by 12%~18% for 6 sec (cooldown 48 sec).
+Sword of Debilitation
+Upon attacking, there is a 10% chance to increase Debilitation Success Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Silent Oppression
+Upon attacking, there is a 10% chance to increase Silence Success Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Earthquake Bash
+Upon attacking, there is a 10% chance to increase Knockdown Success Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Enhance Impact
+Upon attacking, there is a 10% chance to increase Stun Success Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Surging Mana
+Upon using a skill, there is a 10% chance to increase the enemy's Skill MP Cost by 12%~18% for 8 sec (cooldown 36 sec).
+Ring/Earrings/Charm/Seal
+Accumulate Vitality
+Upon being hit, there is a 5% chance to recover 12%~18% of Vitality for 3 sec (cooldown 50 sec).
+Preserved Mana
+When MP falls to 15% or below upon using a skill, recovers 12%~18% of Max MP for 3 sec (cooldown 50 sec).
+Immovable Stance
+Upon being knocked down, Evade is instantly enabled (cooldown 48 - 72 sec).
+Dauntless Mind
+Upon being stunned, instantly recovers from the Stun state (cooldown 48 - 72 sec).
+Debilitate Mind
+Upon attacking, there is a 10% chance to reduce the enemy's Stun RES Chance by 10%~15% and Silence RES Chance by 10%~15% for 6 sec (cooldown 30 sec).
+Will to Resist
+Upon being hit, there is a 15% chance to increase Debilitation RES Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Concentration
+Upon being hit, there is a 15% chance to increase Silence RES Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Absorb Impact
+Upon being hit, there is a 15% chance to increase Knockdown RES Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Inner Will
+Upon being hit, there is a 15% chance to increase Stun RES Chance by 10%~15% for 15 sec (cooldown 60 sec).
+Weaken Balance
+Upon attacking, there is a 10% chance to reduce the enemy's Knockdown RES Chance by 10%~15% and Debilitation RES Chance by 10%~15% for 6 sec (cooldown 30 sec).
+[Mythic Dragon Artifact] Unique Effect Information by Part
+Type
+Unique Effect Name
+Effect
+Majestic Scepter/Majestic Cape/Majestic Crown/Seal/Majestic Tome (Black Dragon Artifact)
+Hammer of Divine Retribution
+Upon attacking, there is a 1% - 2% chance to grant the Stun Effect to the target for 2 sec (cooldown 90 sec).
+Bleed
+Upon a CRIT attack, there is a 5% chance to leave a fatal wound on the target, dealing damage equal to 100% - 200% of PHYS ATK for 5 sec (cooldown 20 sec).
+Vengeful Strike
+Upon a hit, there is a 2% - 4% chance to reflect 2x the damage they have taken back to the target. However, this only triggers against characters. (cooldown 120 sec).
+Meridian Block
+Upon attacking, there is a 5% - 9% chance to block the target's energy path, deducting 5% of Max MP every 1 sec. This lasts for 10 sec and deducts up to a maximum of 50% in total. (cooldown 120 sec).
+Bind
+Upon attacking, there is a 5% chance to reduce the target's Movement Spd. by 100 - 200 for 10 sec (cooldown 30 sec).
+Sweeping Kick
+Upon a CRIT attack, there is a 3% chance to deal damage equal to 50% - 150% of PHYS ATK/Spell ATK to nearby enemies. (cooldown 50 sec).
+Fierce Wind
+Upon a hit, there is a 10% chance to generate a Repelling Wind that strikes nearby enemies. Enemies caught in the Wind become unable to perform a roll. (cooldown 120 - 80 sec).
+Hawk's Eye
+Upon attacking, there is a 5% chance to grant the Focus state for 6 - 12 sec. Attacks made while in the Focus state are guaranteed to land as CRIT Hits. (However, CRIT Hits will not land against targets affected by Merciful Touch.) (cooldown 50 sec).
+Berserk
+Upon a hit, when their HP is 10% or below, there is a 50% chance to increase DMG by 50% for 8 - 12 sec. (cooldown 120 sec).
+Seal Technique
+Upon attacking, there is a 5% chance to eliminate all beneficial effects on the target for 10 - 20 sec (cooldown 45 sec).
+Ornate Blade/Heavenly Bell/Incense Burner/Crescent Jade/Bronze Mirror (White Dragon Artifact)
+Rebirth
+When you take fatal DMG, you are protected from death for 3 - 5 sec and simultaneously enter Stealth for 10 sec. (cooldown 120 - 80 sec)
+Tough Skin
+Upon a hit, there is a 50% chance to reduce PHYS DMG Taken by 5% - 11% for 10 sec (cooldown 15 sec).
+Magic Resistance
+Upon a hit, there is a 50% chance to reduce Spell DMG Taken by 5% - 11% for 10 sec (cooldown 15 sec).
+Trickery
+Upon a CRIT Hit, there is a 5% chance to grant themselves Mystic Power for 5 - 15 sec, reducing damage taken from attacks by 15%. (cooldown 45 sec).
+Spectral Formation
+Upon a hit, there is a 5% chance to summon a Spectre Formation that lasts for 10 - 14 sec, dealing damage equal to 50% of their own PHYS ATK to nearby enemies. (cooldown 45 sec).
+Sacred Blessing
+Upon a hit, there is a 5% - 15% chance to remove all harmful effects on themselves. (e.g. Blind, Movement Spd. reduction, Stun) (cooldown 50 sec).
+Divine Water Revival
+Upon using Divine Water, there is a 5% chance to grant themselves an Additional Life Recovery Effect for 7 - 21 sec, recovering 0.2% of Life per second.
+Merciful Touch
+Upon a hit, there is a 5% chance to grant themselves a Protection Spell for 5 - 15 sec, preventing CRIT Hits from occurring against them. (cooldown 90 sec).
+Earth of Prosperity
+Upon a hit, there is a 10% chance to create a Ground Effect at their location that recovers 0.2% - 0.6% of Max HP per second for 10 sec. (cooldown 20 sec).
+Nature's Touch
+Upon a hit, there is a 50% chance to increase their own Skill HP Recovery Am't by 30% for 10 - 20 sec. (cooldown 10 sec).
+※ The unique effects of each type all appear at an equal chance (10%).
+※ Unique effects have grades and are categorized into Lesser (90%) / Normal (8.5%) / Advanced (1.5%). The higher the grade of the unique effect, the more powerful the applied benefits.
+[Unique Effect Grade Examples]
+Type
+Unique Effect Name
+Grade (Probability)
+Effect Description
+Weapon/Secondary Weapon
+Weapon Enhancement
+Lesser (90%)
+Upon attacking, there is a 10% chance to increase PHYS ATK by 80 and Spell ATK by 80 for 30 sec (cooldown 75 sec).
+Normal (8.5%)
+Upon attacking, there is a 10% chance to increase PHYS ATK by 96 and Spell ATK by 96 for 30 sec (cooldown 75 sec).
+Advanced (1.5%)
+Upon attacking, there is a 10% chance to increase PHYS ATK by 120 and Spell ATK by 120 for 30 sec (cooldown 75 sec).
+Spirit Invoke
+① You can select the Spirit Stones to use for Invoke from the list on the right side of the screen.
+- Spirit Invoke is a feature that allows you to combine 3 Legendary Spirit Stones to obtain a 'Mythic Spirit Stone'.
+② You can view the registered materials for Invoke and proceed with Invoke by clicking the [Invoke] button.
+③ You can check the success rate of Spirit Invoke and the items obtainable upon success or failure.
+- If Invoke is successful, you will obtain 1 random 'Mythic Spirit Stone', and your current Divine Dragon's Promise Points will be reset to 0.
+- If Invoke fails, you will receive 1 Spirit Stone that does not have a Party Leader Skill, and 1 Divine Dragon's Promise Point will be accumulated.
+④ Spirit Invoke includes the Divine Dragon's Promise system, where you can check your current Promise Points or perform a Guaranteed Summon.
+- Each time you accumulate 15 Divine Dragon's Promise Points, the number of available Guaranteed Summons increases.
+- When performing a Guaranteed Summon, you will obtain 1 random 'Mythic Spirit Stone', and the number of available Guaranteed Summons will decrease.
+Transcend Mythic Spirit
+① If you possess a Spirit Stone identical to a Mythic Spirit you have already summoned, you can use the [Transcend Spirit] feature.
+② You can check the success rate for each Transcendence Stage and the effects granted upon successful Transcendence.
+- Mythic Spirit Transcendence has a set success rate for each stage, and the higher the stage, the greater the number of required materials.
+Transcendence Stage
+Transcendence Success Rate
+Transcendence Failure Rate
+Transcendence Materials
+1 → 2
+30%
+70%
+Identical Mythic Spirit Stone x1
+Mythic Spirit Transcendence Stone x1
+Dragonsteel x500
+Energy x30,000,000
+2 → 3
+25%
+75%
+Identical Mythic Spirit Stone x1
+Mythic Spirit Transcendence Stone x2
+Dragonsteel x600
+Energy x40,000,000
+3 → 4
+20%
+80%
+Identical Mythic Spirit Stone x1
+Mythic Spirit Transcendence Stone x3
+Dragonsteel x700
+Energy x50,000,000
+③ You can proceed with Transcendence by clicking the [Transcend Spirit] button or close the Transcendence screen by clicking the [Cancel] button.
+Mythic Material Information
+[Divine Dragon's Fragment]
+- Can be obtained at a certain probability as a reward from clearing Hell Raid or Clan Expedition, or from Disenchanting Uncommon Stage 2 or higher items.
+- Can be obtained at a certain probability by opening treasure chests that appear after defeating boss monsters on Floor 11 of Fissured Magic Square/Secret Peak (excludes bosses summoned through Badges).
+- Can be obtained at a certain probability by opening Epic/Legendary/Mythic Ancient Boxes that appear on the Domination Server.
+[Mythic Equipment Enhancement/Manifest Ability Materials]
+- You can craft items used for Mythic Equipment enhancement and Manifest Ability through the <Craftsman> NPC located in each area’s major village.
+Crafting NPC
+Crafting Item
+Crafting Materials
+Each Area’s Major Village
+<Craftsman> NPC
+Chaotic Enhancement Stone x1
+Legendary Mystic Enhancement Stone x5
+Legendary Darkened Enhancement Stone x5
+Radiant Spacetime Powder x1
+Legendary Divine Dragon’s Enhancement Stone x1
+Dragonsteel x100
+Chaotic Dragon Artifact Enhancement Stone x1
+Legendary Dragon Artifact Enhancement Stone x1
+Radiant Spacetime Powder x1
+Legendary Divine Dragon's Dragon Artifact Enhancement Stone x1
+Dragonsteel x100
+Stone of Manifest Ability x1
+Divine Dragon's Fragment x300
+Radiant Spacetime Powder x1
+Darksteel x20,000
+Craft NPC
+Crafted Item
+Crafting Material
+Bicheon Castle/Sabuk Castle/[Domination] Sabuk Castle NPC <Palace Craftsman> Hyo Janggyeong
+Mythic Dragon Oil of Blessing x1
+Epic Azureum Mineral Fluid x100
+Epic Eternal Snow Panax x100
+Glittering Powder x20,000
+Life Essence x20,000
+Dragonsteel x300
+Darksteel x10,000,000
+[Mythic Spirit Transcendence Materials]
+- You can craft items used for Mythic Spirit Transcendence through the Arcadia Spirit Village NPC <Dragonsteel Merchant> Bunny Guru Hoppy.
+Crafting NPC
+Crafting Item
+Crafting Materials
+Arcadia Spirit Village NPC<Dragonsteel Merchant>
+Bunny Guru Hoppy
+Mythic Spirit Transcendence Stone x1
+Divine Dragon's Soul x1
+Mythic Treasure Shard x100
+Copper x2,000,000
+Mythic Spirit Transcendence Stone x1
+Spirit's Powder x500
+Mythic Treasure Shard x100
+Copper x2,000,000
+Mythic Treasure Shard x1
+Legendary Treasure Shard x10
+Divine Dragon's Fragment x10
+Darksteel x20,000
+Document update date : 2026-09-28
+Like4
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.

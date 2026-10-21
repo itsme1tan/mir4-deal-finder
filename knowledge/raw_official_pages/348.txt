@@ -1,0 +1,56 @@
+Create Character
+This guide shows you how to create a character in MIR4.
+Creating a character
+Creating a character
+- You can choose either a Warrior, Sorcerer, Taoist, Lancer or Arbalist class to play the game.
+- After selecting a class, you can use a preset or customize the appearance to your liking.
+- You can customize and change the character's appearance to your liking.
+① You can customize the hairstyle and facial makeup.
+② You can customize facial features.
+③ You can dye outfits and preview them.
+④ You can see your character with their hair tied up.
+⑤ You can see your character gazing at the camera.
+⑥ You can remove the UI. (Can be restored by tapping or clicking the screen.)
+⑦ You can save the customized settings. (Tap or click the icon to return to the previous screen.)
+⑧ You can reset the customized settings. (Press OK after tapping or clicking the icon.)
+⑨ You can revert a customized setting to its previous state.
+⑩ You can restore a reverted element to its selected customization stage.
+⑪ Once you're done, tap to create your character.
+- You can adjust facial features.
+① You can customize the face shape and other facial features.
+② You can customize the face contour, eyebrows, eye shape, nose, and lips.
+- You can customize your character's outfit.
+① You can customize the outfit.
+② You can dye outfits, preview, and check different poses.
+③ You can choose the color of the outfit to your liking.
+④ Dyes are applied randomly.
+⑤ You can select and apply recommended dyes.
+- Once you're done with the customization, tap or click the [Create Character] button, name your character, and confirm to complete the character creation.
+Document update date : 2021-11-13
+Like281
+Favorite
+Share
+Share
+Facebook
+Twitter
+Copy url
+Please
+login to use official community.
+Login community
+Set Representative Character
+Check
+Terms of Service
+Privacy Policy
+California Privacy Statement
+-->
+MIR4 Operation Policy
+Cookie Policy
+Select the Policy
+MIR4 Operation Policy            Community Operation Policy
+Event Policy
+-->
+share
+facebook
+twitter
+URL
+ⓒ WEMADE Co., Ltd. All rights reserved.
