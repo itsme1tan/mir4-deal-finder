@@ -43,7 +43,8 @@ def apply(sold,lst,k=10):
     NUM=BASE; res={'base':cv(D,k)}; best=res['base']; chosen=[]; tried={}
     for feat in STAT:
         NUM=BASE+chosen+[feat]; r=cv(D,k); tried[feat[0]]=[round(r[0],1),round(r[1],1)]
-        if r[0]<best[0] and r[1]<=best[1]+0.3 or r[1]<best[1] and r[0]<=best[0]+0.3: chosen.append(feat); best=r
+        dm,da=r[0]-best[0],r[1]-best[1]
+        if (dm<=-0.2 and da<=0) or (da<=-0.2 and dm<=0): chosen.append(feat); best=r
     with_stats=bool(chosen); NUM=BASE+chosen; res['stats']=best; res['tried']=tried; res['chosen']=[c for c,_ in chosen]
     mf,af,mp,ap,npow=best
     return finish(D,lst,mf,af,mp,ap,npow,res,with_stats)
