@@ -4,14 +4,16 @@ NUM=[('logps','log power'),('lv','level'),('refined','dragon-refined piece'),('e
      ('myth_spirits','Mythical spirit'),('leg_spirits','Legendary spirit'),('potential','potential'),
      ('ldark','log Darksteel'),('lanc','log Ancient Coins')]
 LABEL={'refined':'refined gear','enhance':'gear enhance','myth_spirits':'Mythical spirits','leg_spirits':'Legendary spirits',
-       'potential':'potential','ldark':'Darksteel','lanc':'Ancient Coins','lv':'level','atk_rel':'ATK vs power','skill_dmg':'skill dmg boost','pvp_dmg':'PvP ATK','def_rel':'DEF vs power','eva_rel':'EVA vs power'}
-BASE=list(NUM); STAT=[('atk_rel','log ATK / power'),('skill_dmg','skill dmg boost %'),('pvp_dmg','PvP ATK boost %'),('def_rel','log DEF / power'),('eva_rel','log EVA / power')]
+       'potential':'potential','ldark':'Darksteel','lanc':'Ancient Coins','lv':'level','atk_rel':'ATK vs power','skill_dmg':'skill dmg boost','pvp_dmg':'PvP ATK','def_rel':'DEF vs power','eva_rel':'EVA vs power','codex_pct':'codex','ms_myth':'Mythic stones','ms_enh':'stone enhance','orb_lv':'orb levels','holes':'stone holes','relic_tiers':'holy relics'}
+BASE=list(NUM); STAT=[('atk_rel','log ATK / power'),('skill_dmg','skill dmg boost %'),('pvp_dmg','PvP ATK boost %'),('def_rel','log DEF / power'),('eva_rel','log EVA / power'),('codex_pct','codex %'),('ms_myth','Mythic magic stones'),('ms_enh','magic stone enhance'),('orb_lv','magic orb levels'),('holes','gear stone holes'),('relic_tiers','holy relic tiers')]
 def row(c):
     if any(c.get(k) is None for k in ('refined','enhance','myth_spirits','leg_spirits','potential','darksteel','ancient')): return None
     st=c.get('stats') or {}
     if not st.get('atk') or st.get('skill_dmg') is None: return None
     if not st.get('def') or not st.get('eva') or st.get('pvp_dmg') is None: return None
-    return dict(atk_rel=math.log(st['atk']/c['ps']),skill_dmg=st['skill_dmg'],pvp_dmg=st['pvp_dmg'],def_rel=math.log(st['def']/c['ps']),eva_rel=math.log(st['eva']/c['ps']),logps=math.log(c['ps']),lv=c['lv'],refined=c['refined'],enhance=c['enhance'],myth_spirits=c['myth_spirits'],
+    ex={k:c.get(k) for k in ('codex_pct','ms_myth','ms_enh','orb_lv','holes','relic_tiers')}
+    if any(v is None for v in ex.values()): return None
+    return dict(**ex,atk_rel=math.log(st['atk']/c['ps']),skill_dmg=st['skill_dmg'],pvp_dmg=st['pvp_dmg'],def_rel=math.log(st['def']/c['ps']),eva_rel=math.log(st['eva']/c['ps']),logps=math.log(c['ps']),lv=c['lv'],refined=c['refined'],enhance=c['enhance'],myth_spirits=c['myth_spirits'],
                 leg_spirits=c['leg_spirits'],potential=c['potential'],ldark=math.log1p(c['darksteel']),lanc=math.log1p(c['ancient']))
 class Ridge:
     def fit(s,R,classes,y,lam=1.0):

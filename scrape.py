@@ -44,6 +44,7 @@ def detail(c):
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
+    c.update(extras(h)); c['history']=history(rows)
     c['build']=build(h,c['id']); c['stats']=stats(h); c['sheet']=sheet(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
@@ -88,6 +89,35 @@ def xgear(seq):
         if not v: continue
         out.append(dict(slot=SLOTS[k],n=v['itemName'],g=int(v['grade']),t=int(v['tier']),e=int(v['enhance']),r=int(v['refineStep']),h=int(v['holeCount']),img=icon(v['itemPath'])))
     return out
+def extras(h):
+    """Codex, magic stones (best deck), magic orbs (deck 1), gear stone holes from the Hofgamer page."""
+    out={}
+    cx=panel(h,'codex')
+    cp=re.findall(r'stat-name"[^>]*>([^<]+)</span>\s*<div[^>]*>\s*<div[^>]*>\s*<div[^>]*></div>\s*</div>\s*<span class="stat-value"[^>]*>(\d+)/(\d+)',cx)[:5]
+    if cp:
+        out['codex_done']=sum(int(a) for _,a,_ in cp); out['codex_pct']=round(100*out['codex_done']/max(1,sum(int(b) for *_,b in cp)),1)
+        CXN={'服务器':'Server','角色':'Character','魔灵珠':'Magic Orb','声望':'Reputation','限时':'Time-limited'}
+        out['codex_parts']=[[CXN.get(n.strip(),tr(n.strip())),int(a),int(b)] for n,a,b in cp]
+    rel=re.findall(r'(\d+) Tier',re.sub('<[^>]+>',' ',cx)); out['relic_tiers']=sum(map(int,rel[:5])) if rel else None
+    ms=panel(h,'magicstone'); parts=re.split(r'id="msDeck-\d+"',ms)[1:]; best=None
+    for d in parts:
+        it=[(int(g),tr(n),int(e)) for g,n,e in re.findall(r'<div class="inven-item grade-bg-(\d)[^>]*data-name="([^"]*)"[^>]*data-enhance="(\d+)"',d)]
+        if it and (best is None or sum(3**(g-4)+e for g,_,e in it)>sum(3**(g-4)+e for g,_,e in best)): best=it
+    if best is not None:
+        out['ms_myth']=sum(g==6 for g,_,_ in best); out['ms_leg']=sum(g==5 for g,_,_ in best); out['ms_enh']=sum(e for _,_,e in best)
+        out['ms_list']=[[n,g,e] for g,n,e in best]
+    else: out.update(ms_myth=0,ms_leg=0,ms_enh=0) if 'Magic Stone' in ms else None
+    ob=panel(h,'magicorb'); i=ob.find('id="normalOrb-1"'); j=ob.find('id="normalOrb-2"')
+    orbs=re.findall(r'equip-card grade-bg-(\d)" title="[^"]*Lv\.(\d+)"',ob[i:j if j>0 else None]) if i>=0 else []
+    out['orb_lv']=sum(int(l) for _,l in orbs) if orbs else (0 if ob else None); out['orb_leg']=sum(g>='5' for g,_ in orbs)
+    eq=panel(h,'equip'); out['holes']=sum(len(x) for x in re.findall(r'equip-hole">(◆*)<',eq)) if eq else None
+    return out
+def history(rows):
+    ev=[]
+    for r in rows:
+        m=re.match(r'#(\d+) (.*?) (Sold) .*? ([\d,]+\.\d+) WEMIX (\d{4}-\d\d-\d\d)',r) or re.match(r'#(\d+) (.*?) (For Sale|Delisted|Listed|Cancel\w*) — ([\d,]+(?:\.\d+)?) .*?(\d{4}-\d\d-\d\d)',r)
+        if m: ev.append(dict(id=int(m[1]),name=m[2],ev=m[3],wemix=num(m[4]),date=m[5]))
+    return ev[:20]
 def build(h,seq=None):
     g=[dict(n=tr(H.unescape(n)),g=int(gr),img=icon(img),e=int(e or 0),r=int((re.findall(r'Dragon Refine(\d)',rest) or [0])[0]))
        for gr,n,img,e,rest in re.findall(r'<div class="equip-card grade-bg-(\d)[^"]*wear-card" title="([^"]*)">\s*<div class="equip-icon[^>]*>\s*<img src="([^"]+)".*?<span class="equip-enhance">\+?(\d*)</span>(.*?)</div>\s*</div>\s*</div>',panel(h,'equip'),re.S)]
@@ -138,7 +168,7 @@ def sheet(h):
     out=[[g,[[k]+list(raw.pop(k)) for k in ks if k in raw]] for g,ks in GROUP.items()]
     if raw: out.append(['Other',[[k]+list(v) for k,v in raw.items()]])
     return [g for g in out if g[1]]
-FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats']
+FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats','codex_done','codex_pct','relic_tiers','ms_myth','ms_leg','ms_enh','orb_lv','orb_leg','holes']
 def load_cache():
     try: return json.load(open('cache/features.json'))
     except Exception: return {}
@@ -174,13 +204,13 @@ def main(ps_min=600000, max_new=400):
     new=0
     for s in sold:
         k=str(s['id'])
-        if (k not in cache or 'eva' not in (cache[k].get('stats') or {})) and new<max_new:
+        if (k not in cache or 'codex_done' not in cache[k]) and new<max_new:
             try: detail(s); cache[k]={f:s.get(f) for f in FEATS}; new+=1
             except Exception as e: print('sold detail failed',k,e)
             time.sleep(1.5)
             if new%25==0: json.dump(cache,open('cache/features.json','w'))
         if k in cache: s.update(cache[k])
-        for f in ('past_sales','relists','flip'): s.pop(f,None)
+        for f in ('past_sales','relists','flip','history','ms_list','codex_parts','build','sheet'): s.pop(f,None)
     json.dump(cache,open('cache/features.json','w'))
     print('fetched',new,'new sold details; cache',len(cache))
     for c in lst:
@@ -200,10 +230,18 @@ def main(ps_min=600000, max_new=400):
         c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
         c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
     rank_builds(lst,sold)
+    try:
+        mc=json.loads(get('https://api.coingecko.com/api/v3/coins/wemix-token/market_chart?vs_currency=usd&days=365&interval=daily',tries=2))['prices']
+        day={dt.datetime.utcfromtimestamp(t/1000).strftime('%Y-%m-%d'):p for t,p in mc}
+    except Exception as e: print('history usd failed',e); day={}
+    for c in lst:
+        for ev in c.get('history') or []:
+            p=day.get(ev['date']); ev['usd']=round(ev['wemix']*p) if p else None
     for c in lst+sold:
         for k in [k for k in c if k.startswith('_')]: c.pop(k)
     json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
     print(f"{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}; model {info.get('summary')}")
+    import extras as mir4_extras; mir4_extras.main()  # leaderboards, trends, upgrade, data/new_deals.json
 if __name__=='__main__': main()
