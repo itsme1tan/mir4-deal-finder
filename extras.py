@@ -109,16 +109,23 @@ def deals(D,usd):
     by={}
     for x in L:
         if x.get('build_score') is not None: by.setdefault(x['cls'],[]).append(x['build_score'])
+    # first-seen log so hourly refreshes still report a deal as new for 24h (daily 8am alert reads this)
+    sp=os.path.join(DD,'deal_seen.json'); seen=json.load(open(sp)) if os.path.exists(sp) else {}
+    import relist; nowt=relist.norm(D['updated']); now=dt.datetime.strptime(nowt,'%Y-%m-%d %H:%M')
     out=[]
     for x in L:
         if x.get('build_score') is None or not x.get('fair_full'): continue
         cut=np.percentile(by[x['cls']],80)
         fair=(x.get('fair_head') or x['fair_full'])*usd
-        if x['build_score']>=cut and x['usd']<=fair and x['usd']<=BUDGET and (prev is None or x['id'] not in prev):
+        if x['build_score']>=cut and x['usd']<=fair and x['usd']<=BUDGET:
+            k=str(x['id'])
+            if k not in seen: seen[k]=nowt if prev is None or x['id'] not in prev else '2000-01-01 00:00'
+            if (now-dt.datetime.strptime(seen[k],'%Y-%m-%d %H:%M')).total_seconds()>86400: continue
             out.append({'id':x['id'],'name':x['name'],'cls':x['cls'],'ps':x['ps'],'build_score':x['build_score'],'usd':round(x['usd']),'fair_usd':round(fair),
                         'pct_under':round((1-x['usd']/fair)*100,1),'usd_under':round(fair-x['usd']),'link':f'https://nft.hofgamer.com/mir4/nft/{x["id"]}'})
     out.sort(key=lambda d:(-d['build_score'],d['usd']))
-    json.dump({'updated':D['updated'],'first_run':prev is None,'budget_usd':BUDGET,'rule':'new since last run, build score in top 20%% of class, price at or under fair, at most $%d'%BUDGET,'deals':out},open(os.path.join(DD,'new_deals.json'),'w'),indent=1,ensure_ascii=False)
+    json.dump({'updated':D['updated'],'first_run':prev is None,'budget_usd':BUDGET,'rule':'first seen in the last 24 hours, build score in top 20%% of class, price at or under fair, at most $%d'%BUDGET,'deals':out},open(os.path.join(DD,'new_deals.json'),'w'),indent=1,ensure_ascii=False)
+    live={str(x['id']) for x in L}; json.dump({k:v for k,v in seen.items() if k in live},open(sp,'w'))
     json.dump({'updated':D['updated'],'ids':[x['id'] for x in L]},open(prev_p,'w'))
     return len(out)
 def main():

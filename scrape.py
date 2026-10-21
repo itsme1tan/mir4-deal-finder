@@ -242,6 +242,8 @@ def main(ps_min=600000, max_new=400):
         try: detail(c); cache[str(c['id'])]={k:c.get(k) for k in FEATS}
         except Exception as e: print('detail failed',c['id'],e)
         time.sleep(1.5)
+    try: import xdetail; xdetail.enrich(lst)  # buildings, training, inventory summary from XDRACO public API
+    except Exception as e: print('xdetail enrich failed',e)
     new=0
     for s in sold:
         k=str(s['id'])

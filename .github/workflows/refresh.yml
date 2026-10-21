@@ -1,7 +1,8 @@
 name: refresh-data
 on:
-  schedule: [{cron: "30 14 * * *"}]
+  schedule: [{cron: "17 * * * *"}]  # hourly; sealed character details are cached, so each run mostly re-reads list pages
   workflow_dispatch:
+concurrency: {group: refresh-data, cancel-in-progress: false}
 permissions: {contents: write}
 jobs:
   scrape:
@@ -14,4 +15,4 @@ jobs:
       - run: python3 scrape.py
       - run: |
           git config user.name "mir4-bot"; git config user.email "actions@users.noreply.github.com"
-          git add data.json data cache/features.json cache/icons.json icons && git commit -m "Refresh data $(date -u +%F)" && git push || echo "no changes"
+          git add data.json data cache/features.json cache/xdetail.json cache/icons.json icons && git commit -m "Refresh data $(date -u +%F)" && (git push || (git pull --rebase -q && git push)) || echo "no changes"
