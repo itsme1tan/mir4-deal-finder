@@ -14,6 +14,7 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 
 .stc{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:13px}.stc span{background:#2a2410;border:1px solid #6b5a12;color:#ffe08a;border-radius:999px;padding:3px 9px}.stc em{font-style:normal;color:#c9b56a;font-size:11px}
 .spot{margin-top:10px;background:#2a2410;border:1px solid #6b5a12;border-radius:10px;padding:8px 12px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}.spot span{color:#c9b56a;font-size:12px;width:100%}.spot b{font-size:22px;color:#ffe08a}.spot i{font-style:normal;background:#a16207;color:#fff;border-radius:999px;padding:2px 8px;font-size:12px}.spot em{font-style:normal;color:#c9b56a;font-size:12px}
+.ic i.tr{background:#3b4252;color:#e5e7eb}.ic i.rf{background:#1d4ed8;color:#fff;border:1px solid #93c5fd}.ic i.rf.red{background:#b91c1c;border-color:#fca5a5}.ic s{position:absolute;left:0;right:0;bottom:-11px;text-align:center;text-decoration:none;color:#fde68a;font-size:11px;letter-spacing:1px;line-height:1}
 .bb{background:#15803d;color:#fff;border-radius:4px;padding:3px 8px;font-weight:700}.fi{display:none}.showflip .fi{display:inline}
 .strong{background:#a16207;color:#fff;border-radius:4px;padding:1px 6px;font-size:11px}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0 4px;position:sticky;top:0;z-index:2}.tab{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:15px;font-weight:600}.tab.on{background:#f5c518;color:#1a1300;border-color:#f5c518}
@@ -91,7 +92,8 @@ const RN=['','I','II','III','IV','V','VI','VII','VIII','IX','X'],rn=n=>RN[n]||n;
 function buildHtml(x){const b=x.build||{};
  const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}"><div class="ic ${cls}" style="${st}">${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
  const none='<div class="lt">Not loaded yet.</div>';
- const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+icons(b.gear,g=>it('g'+g.g,`background-image:url('${g.img}')`,g.e?'+'+g.e:'',rn(g.r),g.n))+'<div class="lt">+enhance, roman = Dragon refine. Gold = Legendary, red = Mythical. Tap an icon for its name.</div>':none,
+ const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+icons(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
+  return `<div class="it" title="${nm}"><div class="ic g${g.g}" style="background-image:url('${g.img}')">${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<s>${'•'.repeat(g.h)}</s>`:''}</div><div class="nmx">${nm}</div></div>`})+'<div class="lt">Like XDRACO: +number = enhance. Blue roman = Dragon reforge level (red at VII+). Grey roman = item tier (shown when not reforged; full tier in the tap label). Dots = magic stone holes. Tap an icon for slot, tier and reforge.</div>':none,
   spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>it('g'+p.g,p.img?`background-image:url('${p.img}')`:'',null,rn(p.t),p.n))+'<div class="lt">Roman = transcend. Gold = Legendary, red = Mythical.</div>':none,
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
   stats:statsHtml(x)};

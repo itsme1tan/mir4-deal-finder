@@ -44,7 +44,7 @@ def detail(c):
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
-    c['build']=build(h); c['stats']=stats(h); c['sheet']=sheet(h)
+    c['build']=build(h,c['id']); c['stats']=stats(h); c['sheet']=sheet(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
     return c
@@ -76,7 +76,19 @@ def panel(h,p):
     i=h.find(f'id="panel-{p}"')
     if i<0: return ''
     s=h[i:]; j=s.find('id="panel-',20); return s[:j] if j>0 else s
-def build(h):
+SLOTS={1:'Weapon',2:'Necklace',3:'Bracelet',4:'Ring',5:'Top',6:'Pants',7:'Gloves',8:'Shoes',9:'Sub-weapon',10:'Earrings',7011:'Medallion',7012:'Charm',7013:'Belt',7014:'Seal'}
+XORDER=[6,1,7,9,8,5,7013,10,2,7011,3,7012,4,7014]  # XDRACO layout: left column then right column
+def xgear(seq):
+    """Equipped gear from XDRACO's public read-only summary API (same call its character page makes)."""
+    d=json.loads(get(f'https://webapi.mir4global.com/nft/character/summary?seq={seq}&languageCode=en',tries=2))
+    e=(d.get('data') or {}).get('equipItem') or {}
+    out=[]
+    for k in XORDER:
+        v=e.get(str(k))
+        if not v: continue
+        out.append(dict(slot=SLOTS[k],n=v['itemName'],g=int(v['grade']),t=int(v['tier']),e=int(v['enhance']),r=int(v['refineStep']),h=int(v['holeCount']),img=icon(v['itemPath'])))
+    return out
+def build(h,seq=None):
     g=[dict(n=tr(H.unescape(n)),g=int(gr),img=icon(img),e=int(e or 0),r=int((re.findall(r'Dragon Refine(\d)',rest) or [0])[0]))
        for gr,n,img,e,rest in re.findall(r'<div class="equip-card grade-bg-(\d)[^"]*wear-card" title="([^"]*)">\s*<div class="equip-icon[^>]*>\s*<img src="([^"]+)".*?<span class="equip-enhance">\+?(\d*)</span>(.*?)</div>\s*</div>\s*</div>',panel(h,'equip'),re.S)]
     sk=[dict(n=tr(H.unescape(n)),x=-int(x)//128,y=-int(y)//128,t=int(t))
@@ -84,6 +96,11 @@ def build(h):
     sp=panel(h,'spirit'); i=sp.find('id="spiritEquip-1"'); j=sp.find('id="spiritEquip-',i+10); sp=sp[i:j if j>0 else None] if i>=0 else ''
     pets=[dict(n=tr(H.unescape(n)),g=int(gr),t=int(t),img=icon(img)) for gr,n,t,img in
           re.findall(r'equip-card grade-bg-(\d)" title="([^"|]*?) \| [^|]*\| 超越(\d+)">\s*<div[^>]*>\s*<img src="([^"]+)"',sp)]
+    if seq:
+        try:
+            xg=xgear(seq)
+            if xg: g=xg
+        except Exception as ex: print('xdraco gear failed',seq,ex)
     return dict(gear=g,skills=sk,spirits=pets)
 STATMAP={'ADDPhysicalDamage':'patk','ADDMagicDamage':'satk','ADDMagicDamagePer':'skill_dmg','AddSmiteSkillDamage':'smite_dmg',
  'ADDAllDamagePer':'all_dmg','Critical':'crit','CriticalOutcome':'crit_dmg','Accuracy':'acc','ADDPVPDamagePer':'pvp_dmg','ADDBossDamagePer':'boss_dmg',
