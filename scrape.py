@@ -140,7 +140,7 @@ def rank_builds(lst,sold):
                 for k in ('pvp_dmg','def','eva'):
                     if c.get(k) is not None: c[k+'_pct']=round(pr(k,c[k]))
                 c['sheet_rank']={ic:round(pr('_'+k,c['stats'][k])) for ic,k in STATMAP.items() if c['stats'].get(k) is not None}
-                c['build_score']=round((c['atk_pct']+c['skd_pct'])/2); c['class_pool']=len(pool)
+                c['build_score']=round(0.4*c['atk_pct']+0.2*c['skd_pct']+0.2*c.get('pvp_dmg_pct',0)+0.2*c.get('def_pct',0)); c['class_pool']=len(pool)
     for c in lst:
         same=[x['build_score'] for x in lst if x['cls']==c['cls'] and x.get('build_score') is not None]
         c['strong']=bool(c.get('build_score') is not None and sum(v<c['build_score'] for v in same)>=0.75*len(same) if len(same)>=4 else (c.get('build_score') or 0)>=75)
