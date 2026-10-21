@@ -50,7 +50,7 @@ The official site does not publish a class tier list; "strongest class" claims a
 - Power Score is the official headline stat and the main price driver (our 240 sales: price ~ power^6.7).
 - Things that are expensive to rebuild: Dragon Forge stages (low success, 10M Darksteel per try), Mythic awakening, Legendary/Mythic spirits, Legendary Transference +8 or higher, Magic Stone special enhance Lv 7.
 - Things that do not carry full value to the buyer: expired time-limited codex, Gold (not sealed).
-- Fees: WEMIX PLAY Marketplace takes 5% commission on completed trades, plus WEMIX gas per transaction (F1869, xdraco.com/nft/playbook). Unsold listings delist after 7 days. Minimum price 0.1 WEMIX.
+- Fees: WEMIX PLAY Marketplace takes 5% commission on completed trades, plus WEMIX gas per transaction (F1869, xdraco.com/nft/playbook). (An earlier note said unsold listings delist after 7 days; F1869 does not say that, and Oct 2026 data has listings live since Sep 17, so treat it as false.) Hofgamer listing times are UTC+8 (checked Oct 21, 2026 against its 'minutes ago' column). Minimum price 0.1 WEMIX.
 - Prices are set in WEMIX, so USD prices move with the WEMIX token.
 
 ## 5. NFT / XDRACO trade rules
@@ -77,3 +77,9 @@ The official site does not publish a class tier list; "strongest class" claims a
 - Look at Dragon Forge stages and Mythic gear: the costliest growth to rebuild.
 - Count spirit slots (Lv 175+ for slot 9, 195 for slot 10) and Legendary/Mythic spirits.
 - 5% marketplace fee is paid by the seller; gas is extra; bids cannot be cancelled.
+
+
+## 9. News log
+- Oct 21, 2026 (F2676): after the Oct 27 update the Boosting World buff stops at Lv 176+; new Lv 170-175 tier (+100% hunting EXP, +100% drop). One-time CM's Draught + Entry Ticket boxes per server, claim after Oct 27 update to Jan 4, 2027 23:59 UTC+8 (Oct 21 mail was bugged, resent).
+- Oct 20, 2026 (wemix.com news): WEMIX PLAY app + Marketplace update Oct 27 (UTC+0): signature screen shows actual WEMIX amounts; partial sale-cancel failures shown separately.
+- Oct 13, 2026 (F2672): WEMIX$ security incident (Jul 26) compensation: eqWEMIX$ issued 1:1, exchangeable to USDC.e via module.wemix.com (weekly batches). Affects WEMIX$ stablecoin holders, not WEMIX coin NFT prices directly.

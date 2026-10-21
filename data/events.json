@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "note": "Only times stated in official MIR4 Global posts. 'server' times follow each region's server clock; 'fixed' times are absolute.",
  "regions": {
   "ASIA": 8,
@@ -193,6 +193,40 @@
    "date_only": true,
    "src": "https://forum.mir4global.com/post/2664",
    "src2": "https://forum.mir4global.com/post/2670"
+  },
+  {
+   "name": "Boosting World buff change: no buff at Lv 176+ (new Lv 170-175 tier)",
+   "kind": "maint",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-27T00:00",
+   "end": null,
+   "end_text": "Takes effect after the Oct 27 update maintenance (UTC+8). Lv 170-175: +100% hunting EXP; Lv 176+: no Boosting World buff.",
+   "end_date": "2026-10-27",
+   "date_only": true,
+   "src": "https://forum.mir4global.com/post/2676"
+  },
+  {
+   "name": "Boosting World buff-change reward (CM's Draught + Entry Ticket boxes, once per server)",
+   "kind": "event",
+   "tz": "fixed",
+   "off": 8,
+   "start": "2026-10-27T09:30",
+   "end": "2027-01-04T23:59",
+   "detail": "Claim opens after the Oct 27 update; start time approximate. The Oct 21 mail had a bug, so it is resent after the update.",
+   "src": "https://forum.mir4global.com/post/2676"
+  },
+  {
+   "name": "WEMIX PLAY app and Marketplace update",
+   "kind": "maint",
+   "tz": "fixed",
+   "off": 0,
+   "start": "2026-10-27T00:00",
+   "end": null,
+   "end_text": "Oct 27 (UTC+0), time not announced; may change. Signature screen will show actual WEMIX amounts.",
+   "end_date": "2026-10-27",
+   "date_only": true,
+   "src": "https://www.wemix.com/news/wemix-play-update-b18cb5601b89"
   }
  ],
  "recurring": [
