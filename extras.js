@@ -16,7 +16,7 @@ const st=document.createElement('style');st.textContent=`
 .mt{color:#9aa3b8;font-size:12px;line-height:1.45}.bar{height:10px;border-radius:5px;background:#2b6cb0;display:inline-block;vertical-align:middle}
 .big{font-size:22px;font-weight:800;color:#ffe08a}.cmp2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cmp2>div{background:#0f1218;border:1px solid #2a3140;border-radius:10px;padding:8px}
 .hide-main .ctl,.hide-main .wrap,.hide-main #cards,.hide-main .note,.hide-main #cmp{display:none!important}`;document.head.appendChild(st);
-const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:Deals','ev:Events','lead:Leaders','trend:Trends','up:Upgrade','guide:Guide'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
+const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:🏷 Deals','ev:⏰ Events','lead:👑 Leaders','trend:📈 Trends','up:🔨 Upgrade','guide:📖 Guide'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
 $('header').after(nav);const xv=document.createElement('div');xv.id='xv';nav.after(xv);
 let E,cls,upId;
 fetch('data/extras.json?'+Date.now()).then(r=>r.json()).then(e=>{E=e;show(new URLSearchParams(location.search).get('view')||'deals')});
