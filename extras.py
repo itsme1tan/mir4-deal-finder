@@ -4,7 +4,7 @@ import json, math, statistics as st, datetime as dt, csv, os
 import numpy as np
 BUDGET=25000; ROOT=os.path.dirname(os.path.abspath(__file__)); DD=os.path.join(ROOT,'data')
 TS=os.path.join(ROOT,'..','mir4-top-sales')
-W={'atk':.4,'skill_dmg':.2,'pvp_dmg':.2,'def':.2}
+import buildscore
 BANDS=[(0,450000,'under 450k'),(450000,550000,'450k-550k'),(550000,650000,'550k-650k'),(650000,10**9,'650k+')]
 def pr(v,pool): return 100*sum(1 for p in pool if p<=v)/len(pool) if pool else None
 def score_pool(chars):
@@ -13,7 +13,7 @@ def score_pool(chars):
     for cls,L in by.items():
         for c in L:
             s=0;ok=True
-            for k,w in W.items():
+            for k,w in buildscore.weights(cls).items():
                 pool=[x[k] for x in L if x.get(k) is not None]
                 if c.get(k) is None: ok=False;break
                 s+=w*pr(c[k],pool)

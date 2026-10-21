@@ -184,10 +184,10 @@ def rank_builds(lst,sold):
         for c in lst:
             if c['cls']==cls and c.get('atk') and c.get('skill_dmg') is not None:
                 c['atk_pct']=round(pr('atk',c['atk'])); c['skd_pct']=round(pr('skill_dmg',c['skill_dmg']))
-                for k in ('pvp_dmg','def','eva'):
+                for k in ('pvp_dmg','def','eva','pvp_red'):
                     if c.get(k) is not None: c[k+'_pct']=round(pr(k,c[k]))
                 c['sheet_rank']={ic:round(pr('_'+k,c['stats'][k])) for ic,k in STATMAP.items() if c['stats'].get(k) is not None}
-                c['build_score']=round(0.4*c['atk_pct']+0.2*c['skd_pct']+0.2*c.get('pvp_dmg_pct',0)+0.2*c.get('def_pct',0)); c['class_pool']=len(pool)
+                import buildscore; c['build_score']=buildscore.score(c,{'atk':c['atk_pct'],'skill_dmg':c['skd_pct'],'pvp_dmg':c.get('pvp_dmg_pct'),'def':c.get('def_pct'),'eva':c.get('eva_pct'),'pvp_red':c.get('pvp_red_pct')}); c['class_pool']=len(pool)
     for c in lst:
         same=[x['build_score'] for x in lst if x['cls']==c['cls'] and x.get('build_score') is not None]
         c['strong']=bool(c.get('build_score') is not None and sum(v<c['build_score'] for v in same)>=0.75*len(same) if len(same)>=4 else (c.get('build_score') or 0)>=75)
