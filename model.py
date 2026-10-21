@@ -30,11 +30,12 @@ class Ridge:
             pct=(math.exp(0.5*s.w[i]*(r[k]-s.mu[k])/s.sd[k])-1)*100  # half weight: full = geometric blend with power-only
             out.append((LABEL[k],round(pct,1)))
         return sorted(out,key=lambda t:-abs(t[1]))[:3]
+POW_EXP=1.0
 def power_only(train,c):
     for f in (lambda s:s['cls']==c['cls'] and abs(s['ps']-c['ps'])<=0.05*c['ps'],lambda s:abs(s['ps']-c['ps'])<=0.05*c['ps'],lambda s:abs(s['ps']-c['ps'])<=0.10*c['ps']):
         comps=[s for s in train if f(s)]
         if len(comps)>=3: break
-    return statistics.median(s['wemix']/s['ps'] for s in comps)*c['ps'] if comps else None
+    return statistics.median(s['wemix']/s['ps'] for s in comps)*c['ps'] if comps else None  # linear within ±5-10%: best CV; headline comps are power-adjusted in scrape.price
 def apply(sold,lst,k=10):
     D=[(s,row(s)) for s in sold if s.get('wemix')]; D=[(s,r) for s,r in D if r]
     if len(D)<40: return {'use_full':False,'summary':f'too few sales with details ({len(D)})','n':len(D)}

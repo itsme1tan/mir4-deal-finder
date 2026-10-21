@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Read-only scraper: Hofgamer public pages -> data.json. Never signs in or transacts."""
-import re, json, time, statistics, datetime as dt, urllib.request, html as H
+import math, re, json, time, statistics, datetime as dt, urllib.request, html as H
 from concurrent.futures import ThreadPoolExecutor
 B='https://nft.hofgamer.com/mir4'
 UA={'User-Agent':'Mozilla/5.0 (mir4-tool read-only)'}
@@ -191,6 +191,38 @@ def rank_builds(lst,sold):
     for c in lst:
         same=[x['build_score'] for x in lst if x['cls']==c['cls'] and x.get('build_score') is not None]
         c['strong']=bool(c.get('build_score') is not None and sum(v<c['build_score'] for v in same)>=0.75*len(same) if len(same)>=4 else (c.get('build_score') or 0)>=75)
+def power_exp(sold):
+    """Fitted price-vs-power exponent (log WEMIX on log power, class levels). Price is strongly super-linear in power."""
+    import numpy as np
+    S=[s for s in sold if s.get('wemix') and s.get('ps')]
+    cls=sorted({s['cls'] for s in S}); X=np.column_stack([np.log([s['ps'] for s in S])]+[[1.0*(s['cls']==k) for s in S] for k in cls])
+    return float(np.linalg.lstsq(X,np.log([s['wemix'] for s in S]),rcond=None)[0][0])
+def price(lst,sold,usd):
+    import model; B=power_exp(sold)
+    for c in lst:
+        comps=[s for s in sold if s['cls']==c['cls'] and abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='same class, PS ±5%'
+        if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='any class, PS ±5%'
+        if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.10*c['ps']]; basis='any class, PS ±10%'
+        if comps:
+            # scale each comp to this power on the fitted curve (not linearly): price ~ power^B
+            fv=statistics.median(s['wemix']*(c['ps']/s['ps'])**B for s in comps)
+            gap=statistics.median(s['ps']/c['ps']-1 for s in comps)
+            c.update(fair_wemix=round(fv),comps_n=len(comps),comps_basis=basis+(f', comps {gap*100:+.0f}% power, power-adjusted' if abs(gap)>=0.03 else ', power-adjusted'),comp_ids=[s['id'] for s in sorted(comps,key=lambda s:s['sold'],reverse=True)[:8]],comps_gap=round(gap*100,1))
+        else: c.update(fair_wemix=None,comps_n=0)
+        c['usd']=round(c['wemix']*usd,2)
+    info=model.apply(sold,lst); info['power_exp']=round(B,2)
+    for c in lst:
+        use_full=c.get('fair_full') is not None and info['use_full'] and c.get('full_conf')=='ok'
+        weak_comps=c.get('fair_wemix') is None or c.get('comps_n',0)<3 or 'any class' in c.get('comps_basis','') or abs(c.get('comps_gap') or 0)>=5
+        if use_full: fv=c['fair_full']; c['fair_basis']='full build'
+        elif c.get('fair_model') and weak_comps:
+            fv=round(math.sqrt(c['fair_model']*c['fair_wemix'])) if c.get('fair_wemix') else c['fair_model']; c['fair_basis']='blend (model + comps, low confidence)'
+        else: fv=c['fair_wemix']; c['fair_basis']='power'
+        c['fair_head']=fv
+        c['discount']=round((fv-c['wemix'])/fv*100,1) if fv else None
+        c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
+        c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
+    return info
 def main(ps_min=600000, max_new=400):
     usd=json.loads(get('https://api.coingecko.com/api/v3/simple/price?ids=wemix-token&vs_currencies=usd'))['wemix-token']['usd']
     lst=cards('sale',ps_min); sold=cards('sold',int(ps_min*0.85))
@@ -213,22 +245,7 @@ def main(ps_min=600000, max_new=400):
         for f in ('past_sales','relists','flip','history','ms_list','codex_parts','build','sheet'): s.pop(f,None)
     json.dump(cache,open('cache/features.json','w'))
     print('fetched',new,'new sold details; cache',len(cache))
-    for c in lst:
-        comps=[s for s in sold if s['cls']==c['cls'] and abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='same class, PS ±5%'
-        if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='any class, PS ±5%'
-        if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.10*c['ps']]; basis='any class, PS ±10%'
-        if comps:
-            fv=statistics.median(s['wemix']/s['ps'] for s in comps)*c['ps']
-            c.update(fair_wemix=round(fv),comps_n=len(comps),comps_basis=basis,comp_ids=[s['id'] for s in sorted(comps,key=lambda s:s['sold'],reverse=True)[:8]])
-        else: c.update(fair_wemix=None,comps_n=0)
-        c['usd']=round(c['wemix']*usd,2)
-    import model; info=model.apply(sold,lst)
-    for c in lst:
-        use_full=c.get('fair_full') is not None and info['use_full'] and c.get('full_conf')=='ok'
-        fv=c['fair_full'] if use_full else c['fair_wemix']; c['fair_basis']='full build' if use_full else 'power'
-        c['discount']=round((fv-c['wemix'])/fv*100,1) if fv else None
-        c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
-        c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
+    info=price(lst,sold,usd)
     rank_builds(lst,sold)
     try:
         mc=json.loads(get('https://api.coingecko.com/api/v3/coins/wemix-token/market_chart?vs_currency=usd&days=365&interval=daily',tries=2))['prices']
