@@ -42,33 +42,55 @@ def detail(c):
         if m: sales.append({'wemix':num(m[1]),'date':m[2]})
     sales.sort(key=lambda s:s['date'],reverse=True)
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
-      refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),myth_spirits=sp('6'),leg_spirits=sp('5'),
+      refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
     return c
-def main(ps_min=600000):
+FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential']
+def load_cache():
+    try: return json.load(open('cache/features.json'))
+    except Exception: return {}
+def main(ps_min=600000, max_new=400):
     usd=json.loads(get('https://api.coingecko.com/api/v3/simple/price?ids=wemix-token&vs_currencies=usd'))['wemix-token']['usd']
     lst=cards('sale',ps_min); sold=cards('sold',int(ps_min*0.85))
     cut=(dt.date.today()-dt.timedelta(days=90)).isoformat()
     sold=[s for s in sold if s['sold'] and s['sold'][:10]>=cut and s['wemix']]
+    cache=load_cache()
     for c in lst:
-        try: detail(c)
+        try: detail(c); cache[str(c['id'])]={k:c.get(k) for k in FEATS}
         except Exception as e: print('detail failed',c['id'],e)
         time.sleep(1.5)
+    new=0
+    for s in sold:
+        k=str(s['id'])
+        if k not in cache and new<max_new:
+            try: detail(s); cache[k]={f:s.get(f) for f in FEATS}; new+=1
+            except Exception as e: print('sold detail failed',k,e)
+            time.sleep(1.5)
+            if new%25==0: json.dump(cache,open('cache/features.json','w'))
+        if k in cache: s.update(cache[k])
+        for f in ('past_sales','relists','flip'): s.pop(f,None)
+    json.dump(cache,open('cache/features.json','w'))
+    print('fetched',new,'new sold details; cache',len(cache))
     for c in lst:
         comps=[s for s in sold if s['cls']==c['cls'] and abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='same class, PS ±5%'
         if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.05*c['ps']]; basis='any class, PS ±5%'
         if len(comps)<3: comps=[s for s in sold if abs(s['ps']-c['ps'])<=0.10*c['ps']]; basis='any class, PS ±10%'
         if comps:
             fv=statistics.median(s['wemix']/s['ps'] for s in comps)*c['ps']
-            c.update(fair_wemix=round(fv),comps_n=len(comps),comps_basis=basis,comp_ids=[s['id'] for s in sorted(comps,key=lambda s:s['sold'],reverse=True)[:8]],
-              discount=round((fv-c['wemix'])/fv*100,1),flip_margin=round((fv*0.95-c['wemix'])/c['wemix']*100,1))
-        else: c.update(fair_wemix=None,comps_n=0,discount=None,flip_margin=None)
-        c['deal']=c['discount'] is not None and c['discount']>=15 and c['comps_n']>=3
+            c.update(fair_wemix=round(fv),comps_n=len(comps),comps_basis=basis,comp_ids=[s['id'] for s in sorted(comps,key=lambda s:s['sold'],reverse=True)[:8]])
+        else: c.update(fair_wemix=None,comps_n=0)
         c['usd']=round(c['wemix']*usd,2)
-    json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'listings':lst,
+    import model; info=model.apply(sold,lst)
+    for c in lst:
+        use_full=c.get('fair_full') is not None and info['use_full'] and c.get('full_conf')=='ok'
+        fv=c['fair_full'] if use_full else c['fair_wemix']; c['fair_basis']='full build' if use_full else 'power'
+        c['discount']=round((fv-c['wemix'])/fv*100,1) if fv else None
+        c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
+        c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
+    json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
-    print(f'{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}')
+    print(f"{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}; model {info.get('summary')}")
 if __name__=='__main__': main()
