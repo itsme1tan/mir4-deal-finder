@@ -44,7 +44,7 @@ def detail(c):
     c.update(darksteel=asset(a.get('Darksteel')),ancient=asset(a.get('Ancient Coin')),copper=asset(a.get('Copper')),
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
-    c['build']=build(h); c['stats']=stats(h)
+    c['build']=build(h); c['stats']=stats(h); c['sheet']=sheet(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
     return c
@@ -96,6 +96,31 @@ def stats(h):
     if 'patk' in out or 'satk' in out: out['atk']=max(out.get('patk') or 0,out.get('satk') or 0)
     if 'pdef' in out or 'sdef' in out: out['def']=(out.get('pdef') or 0)+(out.get('sdef') or 0)
     return out
+EN={'Hp':'HP','HPRecovery':'HP Regen (10s)','SP':'MP','AddRegenerationMana':'MP Regen (10s)','ADDPhysicalDamage':'PHYS ATK','ADDMagicDamage':'SPELL ATK',
+ 'DefensePhysical':'PHYS DEF','DefenseMagic':'SPELL DEF','Accuracy':'Accuracy','Dodge':'EVA','Critical':'Crit','AvoidCritical':'Crit EVA',
+ 'CriticalOutcome':'Crit DMG Boost','AddDefCriticalOutcome':'Crit DMG Reduction','AddSmiteSkillDamage':'Smite DMG Boost','AddDefSmiteSkillDamage':'Smite DMG Reduction',
+ 'AddAtkDemonsDamage':'Demon Slayer','ADDPVPDamagePer':'PvP ATK Boost','FallPVPDamagePer':'PvP DMG Reduction','AtkNormalMonDamagePer':'PvE (Monster) ATK Boost',
+ 'ADDBossDamagePer':'Boss ATK Boost','AddDefNormalMonDamage':'Monster DMG Reduction','FallBossDamagePer':'Boss DMG Reduction','ADDMagicDamagePer':'Skill ATK Boost',
+ 'AddDefSkillDamage':'Skill DMG Reduction','ADDAllDamagePer':'All ATK Boost','FallAllDamagePer':'All DMG Reduction','AddStunPer':'Stun Chance','AddDefStunPer':'Stun Resist',
+ 'AddDeBuffPer':'Debuff Chance','AddDefDeBuffPer':'Debuff Resist','AddCursePer':'Silence Chance','AddDefCursePer':'Silence Resist','AddKnockDownPer':'Knockdown Chance',
+ 'AddDefKnockDownPer':'Knockdown Resist','ReduceSkillCoolTime':'Skill Cooldown Reduction','SPCostPer':'MP Cost Reduction','AddNormalAtkDamage':'Basic ATK DMG Boost',
+ 'AddNormalAtkDefense':'Basic ATK DMG Reduction','AddSkillHPHealBooster':'Skill HP Heal Boost','AddItemHPHealBooster':'HP Potion Boost','AddItemMPHealBooster':'MP Potion Boost',
+ 'HuntExpPer':'Hunting EXP','HuntGoldPer':'Hunting Copper','RatioGetSpirit':'Energy Gain','BlackIronEarning_Increase':'Darksteel Gain','RatioRewardDrop':'Drop Rate',
+ 'LuckDrop':'Lucky Drop','MiningTime_Decrease':'Gathering Speed','RatioFallMeditationTime':'Energy Gathering Speed','FoaagingTime_Decrease':'Mining Speed',
+ 'AddNormalMonAccuracy':'Monster Accuracy','AddNormalMonDodge':'Monster EVA','AddMaxVigorRecharge':'Max Vigor','AddMagicOrbGrowExp':'Magic Orb EXP',
+ 'DecreaseDivineWaterCoolTime':'Holy Water Cooldown','DecreaseBoxCastingTime':'Box Opening Speed','AddClosedTrainingPer':'Closed Training Success'}
+GROUP={'Basic':['Hp','SP','ADDPhysicalDamage','ADDMagicDamage','DefensePhysical','DefenseMagic','Accuracy','Dodge','Critical','AvoidCritical','HPRecovery','AddRegenerationMana'],
+ 'Damage':['CriticalOutcome','AddDefCriticalOutcome','AddSmiteSkillDamage','AddDefSmiteSkillDamage','ADDMagicDamagePer','AddDefSkillDamage','ADDAllDamagePer','FallAllDamagePer',
+   'ADDPVPDamagePer','FallPVPDamagePer','AtkNormalMonDamagePer','AddDefNormalMonDamage','ADDBossDamagePer','FallBossDamagePer','AddAtkDemonsDamage','AddNormalAtkDamage','AddNormalAtkDefense'],
+ 'Status effects':['AddStunPer','AddDefStunPer','AddDeBuffPer','AddDefDeBuffPer','AddCursePer','AddDefCursePer','AddKnockDownPer','AddDefKnockDownPer'],
+ 'Skill & recovery':['ReduceSkillCoolTime','SPCostPer','AddSkillHPHealBooster','AddItemHPHealBooster','AddItemMPHealBooster']}
+def sheet(h):
+    raw={}
+    for icon,cn,v in re.findall(r'Ico_Status_(\w+)\.png"[^>]*>\s*<span class="stat-name-text"[^>]*>([^<]+)</span>\s*</span>\s*</td>\s*<td class="col-num[^"]*">\s*([^<]+?)\s*<',h):
+        if icon not in raw: raw[icon]=(EN.get(icon) or tr(cn.strip()),v.strip())
+    out=[[g,[[k]+list(raw.pop(k)) for k in ks if k in raw]] for g,ks in GROUP.items()]
+    if raw: out.append(['Other',[[k]+list(v) for k,v in raw.items()]])
+    return [g for g in out if g[1]]
 FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats']
 def load_cache():
     try: return json.load(open('cache/features.json'))
@@ -105,6 +130,7 @@ def rank_builds(lst,sold):
     for c in lst+sold:
         st=c.get('stats') or {}; c['atk']=st.get('atk'); c['skill_dmg']=st.get('skill_dmg'); c['crit_dmg']=st.get('crit_dmg')
         for k in ('pvp_dmg','def','eva','pvp_red','pdef','sdef','acc','crit'): c[k]=st.get(k)
+        for k,v in st.items(): c['_'+k]=v
     for cls in set(c['cls'] for c in lst):
         pool=[c for c in lst+sold if c['cls']==cls and c.get('atk') and c.get('skill_dmg') is not None]
         pr=lambda k,v:100*sum((p.get(k) or 0)<v for p in pool)/max(1,len(pool)-1)
@@ -113,6 +139,7 @@ def rank_builds(lst,sold):
                 c['atk_pct']=round(pr('atk',c['atk'])); c['skd_pct']=round(pr('skill_dmg',c['skill_dmg']))
                 for k in ('pvp_dmg','def','eva'):
                     if c.get(k) is not None: c[k+'_pct']=round(pr(k,c[k]))
+                c['sheet_rank']={ic:round(pr('_'+k,c['stats'][k])) for ic,k in STATMAP.items() if c['stats'].get(k) is not None}
                 c['build_score']=round((c['atk_pct']+c['skd_pct'])/2); c['class_pool']=len(pool)
     for c in lst:
         same=[x['build_score'] for x in lst if x['cls']==c['cls'] and x.get('build_score') is not None]
@@ -156,6 +183,8 @@ def main(ps_min=600000, max_new=400):
         c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
         c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
     rank_builds(lst,sold)
+    for c in lst+sold:
+        for k in [k for k in c if k.startswith('_')]: c.pop(k)
     json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
