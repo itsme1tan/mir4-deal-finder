@@ -102,5 +102,5 @@ function check(){Promise.all([fetch('data.json?'+Date.now()).then(r=>r.json()),f
 alon.onclick=()=>{if(alT){clearInterval(alT);alT=null;alon.textContent='Turn on alerts';alst.textContent='Off';return}
  if(window.Notification&&Notification.permission=='default')Notification.requestPermission();beep();check();alT=setInterval(check,3e5);alon.textContent='Turn off alerts'};
 altest.onclick=beep;
-const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(t);wl();prices();feed();draw()}},200);
+const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(t);wl();prices();feed();draw();if(new URLSearchParams(location.search).get('ask')){const c=document.querySelector('#cards details.xd');if(c){c.open=true;const a=c.nextElementSibling;a.open=true;a.querySelector('.aq').click()}}}},200);
 })();
