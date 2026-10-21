@@ -45,6 +45,7 @@ def detail(c):
       refined=len(re.findall(r'meta-tag refine">Dragon Refine',h)),enhance=sum(int(x) for x in re.findall(r'meta-tag trance">Enhance\+(\d+)',h)[:10]),myth_spirits=sp('6'),leg_spirits=sp('5'),
       potential=int(pot[0]) if pot else None,relists=delist,past_sales=sales[:5])
     c.update(extras(h)); c['history']=history(rows)
+    import features2; c.update({k:v for k,v in features2.parse(h,tr).items() if k!='sp_names'}); c['sp_names']=features2.parse(h,tr).get('sp_names')
     c['build']=build(h,c['id']); c['stats']=stats(h); c['sheet']=sheet(h)
     ls=sales[0] if sales else None
     c['flip']=bool(ls and c['wemix'] and ls['date']>=(dt.date.today()-dt.timedelta(days=240)).isoformat() and c['wemix']>1.4*ls['wemix'])
@@ -168,7 +169,8 @@ def sheet(h):
     out=[[g,[[k]+list(raw.pop(k)) for k in ks if k in raw]] for g,ks in GROUP.items()]
     if raw: out.append(['Other',[[k]+list(v) for k,v in raw.items()]])
     return [g for g in out if g[1]]
-FEATS=['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats','codex_done','codex_pct','relic_tiers','ms_myth','ms_leg','ms_enh','orb_lv','orb_leg','holes']
+NEW2=['te_n','te_enh','te_8','sp_myth_tr','sp_leg_tr','sp_white_tiger','inner_force','heaven','dragon_pts','dragon_n','conquest_lv','pot_hunt','pot_pvp','pot_sec','codex_limited','skill_sum','skill_11','energy','speedups','dragonsteel','dragon_jade']
+FEATS=NEW2+['lv','darksteel','ancient','copper','refined','enhance','myth_spirits','leg_spirits','potential','stats','codex_done','codex_pct','relic_tiers','ms_myth','ms_leg','ms_enh','orb_lv','orb_leg','holes']
 def load_cache():
     try: return json.load(open('cache/features.json'))
     except Exception: return {}
@@ -223,6 +225,13 @@ def price(lst,sold,usd):
         c['flip_margin']=round((fv*0.95-c['wemix'])/c['wemix']*100,1) if fv else None
         c['deal']=bool(fv and c['discount']>=15 and (use_full or c['comps_n']>=3))
     return info
+def draco():
+    """Live DRACO price and DERBY (Darksteel per DRACO) from XDRACO's public price endpoints."""
+    try:
+        req=lambda u,m='GET':json.loads(urllib.request.urlopen(urllib.request.Request(u,method=m,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read())
+        p=req('https://webapi.mir4global.com/wallet/prices/draco/lastest','POST')['data']; dby=req('https://webapi.mir4global.com/wallet/prices/derby','POST')['data'][-1]
+        return {'usd':float(p['USDDracoRate']),'wemix':float(p['DracoPriceWemix']),'derby_ds':int(dby['DS']),'smelt_ds':int(dby['SmeltingCost']),'date':dby['CreatedDate']}
+    except Exception as e: print('draco price failed',e); return None
 def main(ps_min=600000, max_new=400):
     usd=json.loads(get('https://api.coingecko.com/api/v3/simple/price?ids=wemix-token&vs_currencies=usd'))['wemix-token']['usd']
     lst=cards('sale',ps_min); sold=cards('sold',int(ps_min*0.85))
@@ -236,7 +245,7 @@ def main(ps_min=600000, max_new=400):
     new=0
     for s in sold:
         k=str(s['id'])
-        if (k not in cache or 'codex_done' not in cache[k]) and new<max_new:
+        if (k not in cache or 'codex_done' not in cache[k] or 'te_enh' not in cache[k]) and new<max_new:
             try: detail(s); cache[k]={f:s.get(f) for f in FEATS}; new+=1
             except Exception as e: print('sold detail failed',k,e)
             time.sleep(1.5)
@@ -256,7 +265,7 @@ def main(ps_min=600000, max_new=400):
             p=day.get(ev['date']); ev['usd']=round(ev['wemix']*p) if p else None
     for c in lst+sold:
         for k in [k for k in c if k.startswith('_')]: c.pop(k)
-    json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'listings':lst,
+    json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'model':info,'draco':draco(),'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
     print(f"{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}; model {info.get('summary')}")

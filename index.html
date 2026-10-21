@@ -23,7 +23,7 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .ctop{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#171c26;position:sticky;top:0;z-index:2}.ctop button{padding:10px 16px;border-radius:999px;font-size:15px}
 .bb{background:#15803d;color:#fff;border-radius:4px;padding:3px 8px;font-weight:700}.fi{display:none}.showflip .fi{display:inline}
 .strong{background:#a16207;color:#fff;border-radius:4px;padding:1px 6px;font-size:11px}
-.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0 4px;position:sticky;top:0;z-index:2}.tab{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:13px;font-weight:600}.tab.on{background:#f5c518;color:#1a1300;border-color:#f5c518}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 4px;position:sticky;top:0;z-index:2}.tab{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:13px;font-weight:600}.tab.on{background:#f5c518;color:#1a1300;border-color:#f5c518}
 .sg{background:rgba(0,0,0,.25);border-radius:10px;overflow:hidden}.sr{display:grid;grid-template-columns:1fr auto 64px;gap:8px;align-items:center;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px}.sr span{color:#cbd3e1}.sr b{color:#fff;font-variant-numeric:tabular-nums}.sr i{font-style:normal;font-size:11px;text-align:center;background:#202838;border-radius:999px;padding:2px 0;color:#9aa3b8}.sr i.hi{background:#a16207;color:#fff}.sr i.na{background:none}
 #cards{display:none;padding:0 12px 16px}
 .card{background:#171c26;border:1px solid #2a3140;border-radius:12px;margin:0 0 12px;overflow:hidden}
@@ -103,8 +103,8 @@ function buildHtml(x){const b=x.build||{};
   return `<div class="it" title="${nm}"><div class="ic g${g.g}" style="background-image:url('${g.img}')">${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<s>${'•'.repeat(g.h)}</s>`:''}</div><div class="nmx">${nm}</div></div>`})+'<div class="lt">Like XDRACO: +number = enhance. Blue roman = Dragon reforge level (red at VII+). Grey roman = item tier (shown when not reforged; full tier in the tap label). Dots = magic stone holes. Tap an icon for slot, tier and reforge.</div>':none,
   spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>it('g'+p.g,p.img?`background-image:url('${p.img}')`:'',null,rn(p.t),p.n))+'<div class="lt">Roman = transcend. Gold = Legendary, red = Mythical.</div>':none,
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
-  stats:statsHtml(x),hist:histHtml(x)};
- const T=[['gear','Gear'],['spirits','Spirits'],['skills','Skills'],['stats','Stats'],['hist','History']];
+  stats:statsHtml(x),hist:histHtml(x),value:valueHtml(x)};
+ const T=[['gear','Gear'],['spirits','Spirits'],['skills','Skills'],['stats','Stats'],['value','Value'],['hist','History']];
  return `<span class="pill">Listed ${x.listed||''}</span><div class="tabs">${T.map(([k,l],i)=>`<button class="tab${i?'':' on'}" data-t="${k}">${l}</button>`).join('')}</div>`+T.map(([k],i)=>`<div class="tp" data-p="${k}"${i?' hidden':''}>${P[k]}</div>`).join('')}
 function progHtml(x){let o='<h4>Progression</h4><div class="sg">';const r=(n,v)=>`<div class="sr"><span>${n}</span><b>${v}</b><i class="na"></i></div>`;
  if(x.codex_pct!=null)o+=r('Codex',`${x.codex_pct}% (${f(x.codex_done)})`)+(x.codex_parts||[]).map(([n,a,b])=>r('&nbsp;&nbsp;'+n,`${a}/${b}`)).join('');
@@ -112,6 +112,26 @@ function progHtml(x){let o='<h4>Progression</h4><div class="sg">';const r=(n,v)=
  if(x.orb_lv!=null)o+=r('Magic orbs (deck 1)',`Lv ${x.orb_lv} total, ${x.orb_leg} Legendary`);
  if(x.relic_tiers!=null)o+=r('Holy relic tiers',x.relic_tiers);if(x.holes!=null)o+=r('Gear stone holes (10 main)',x.holes);
  return o+'</div>'}
+
+function valueHtml(x){const V=x.value_bd,u=D.wemix_usd,w=n=>(n>=0?'+':'−')+f(Math.abs(n))+' WEMIX <small>($'+f(Math.abs(n)*u)+')</small>';
+ if(!V)return '<div class="lt">Not enough build data for a breakdown.</div>';
+ const head=x.fair_head??V.model,adj=head-V.model;
+ let o=`<h4>Where the fair price comes from</h4><table class="ct"><tr><td>Base: ${f(x.ps)} power ${x.cls}, average build</td><td><b>${f(V.base)} WEMIX</b><br><small>$${f(V.base*u)}</small></td><td><span class="bs" style="background:#1d4ed8">model</span></td></tr>`;
+ V.items.forEach(([l,d,p])=>o+=`<tr><td>${l} (${p>=0?'+':''}${p}% vs average)</td><td class="${d>=0?'pos':'neg'}">${w(d)}</td><td><span class="bs" style="background:#1d4ed8">model</span></td></tr>`);
+ o+=`<tr><td><b>Model value</b></td><td><b>${f(V.model)} WEMIX</b><br><small>$${f(V.model*u)}</small></td><td></td></tr>`;
+ if(Math.abs(adj)>=1)o+=`<tr><td>Blend with comparable sales (${x.fair_basis})</td><td class="${adj>=0?'pos':'neg'}">${w(adj)}</td><td><span class="bs" style="background:#334155">comps</span></td></tr>`;
+ o+=`<tr><td><b>Fair price shown</b></td><td><b>${f(head)} WEMIX</b><br><small>$${f(head*u)}</small></td><td></td></tr><tr><td>Asking</td><td>${f(x.wemix)} WEMIX<br><small>$${f(x.usd)}</small></td><td></td></tr></table>`;
+ const dr=D.draco,ds=x.darksteel||0,dv=dr&&dr.derby_ds?ds/dr.derby_ds*dr.usd:null;
+ const I=[['Darksteel',f(ds),dv!=null?`≈ $${dv.toFixed(2)} at the DRACO rate ($${dr.usd.toFixed(3)} per DRACO = ${f(dr.derby_ds)} Darksteel)`:'no live DRACO price'],
+  ['Energy',f(x.energy),'Not convertible to cash; no price effect in our sales (tested).'],['Copper',f(x.copper),'Not tradable for cash.'],['Ancient Coins',f(x.ancient),'Not tradable; no price effect in our sales (tested).'],
+  ['Transference gear',x.te_n!=null?`${x.te_n} pieces, +${x.te_enh} total, ${x.te_8} at +8 or higher`:'–','Collected; did not improve price accuracy.'],
+  ['Spirit transcend',x.sp_leg_tr!=null?`Legendary ${x.sp_leg_tr}, Mythic ${x.sp_myth_tr}${x.sp_white_tiger?', White Tiger':''}`:'–','Collected; Mythic spirit count is in the model, transcend levels did not help.'],
+  ['Skills',x.skill_sum!=null?`${x.skill_sum} total levels, ${x.skill_11} at 11+`:'–','Collected; small, not kept.'],['Inner force',x.inner_force??'–','Collected; not kept (no gain).'],
+  ['Divine Dragon Descent',x.dragon_pts??'–','Collected; not kept.'],['Conquest buildings',x.conquest_lv??'–','Collected; not kept.'],['Holy relics',x.relic_tiers??'–','Collected; not kept.'],
+  ['Codex',x.codex_pct!=null?`${x.codex_pct}% (${x.codex_limited??'?'} time-limited entries)`:'–','Collected; not kept. Time-limited entries can expire.'],
+  ['Mystique, Constitution, Mythic gear unique effects','not public','Not on Hofgamer or XDRACO pages, so not valued.']];
+ o+=`<h4>Also on this character (informational, not in the price)</h4><table class="ct">${I.map(([a,b,c])=>`<tr><td>${a}</td><td>${b}<br><small>${c}</small></td></tr>`).join('')}</table><div class="lt">Model = ridge regression on 240 recent sales (10-fold CV median error ${D.model.cv_mape_full}%). Each line is the % this character is above or below an average build at the same power and class.</div>`;
+ return o}
 function statsHtml(x){const S=x.sheet;if(!S||!S.length)return progHtml(x)+'<div class="lt">Stat sheet not loaded yet.</div>';const R=x.sheet_rank||{};
  return progHtml(x)+S.map(([g,rows])=>`<h4>${g}</h4><div class="sg">${rows.map(([ic,n,v])=>`<div class="sr"><span>${n}</span><b>${v}</b>${R[ic]!=null?`<i class="${R[ic]>=75?'hi':''}">Top ${Math.max(1,100-R[ic])}%</i>`:'<i class="na"></i>'}</div>`).join('')}</div>`).join('')
  +`<div class="lt">Top % = rank within ${x.cls} among current listings and recent sales.</div><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/${x.id}#stats" target="_blank">Open stats on Hofgamer</a>`}
@@ -180,4 +200,4 @@ bcmp.onclick=()=>{const cs=D.listings.filter(x=>sel.has(x.id));
  return `<tr><td>${l}</td>`+v.map(n=>`<td class="${n===best?'best':''}">${typeof n=='number'&&n>99999?big(n):typeof n=='number'?f(n,1):n??'–'}</td>`).join('')+'</tr>'}).join('')+'</table>';cmp.scrollIntoView()};
 document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{fsort.value=b.dataset.s;draw()});
 {const _d=draw;draw=function(){document.querySelectorAll('.qs button').forEach(b=>b.classList.toggle('on',b.dataset.s==fsort.value));return _d.apply(this,arguments)}}
-</script><script src="extras.js?v=6"></script></body></html>
+</script><script src="extras.js?v=7"></script></body></html>
