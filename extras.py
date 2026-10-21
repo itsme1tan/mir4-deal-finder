@@ -28,7 +28,7 @@ def leaderboards(D,usd):
         so=[s for s in S if s['cls']==cls and s.get('_bs') is not None]
         so.sort(key=lambda s:(-s['_bs'],-s['ps']))
         out[cls]={'listed':[{'id':x['id'],'name':x['name'],'ps':x['ps'],'lv':x['lv'],'bs':x['build_score'],'usd':round(x['usd']),
-                   'fair_usd':round(x['fair_full']*usd) if x.get('fair_full') else None,'disc':x.get('discount'),
+                   'fair_usd':round((x.get('fair_head') or x['fair_full'])*usd) if x.get('fair_full') else None,'disc':x.get('discount'),
                    'in_budget':x['usd']<=BUDGET} for x in li[:10]],
                   'sold':[{'id':s['id'],'name':s['name'],'ps':s['ps'],'lv':s['lv'],'bs':s['_bs'],'usd':round(s['wemix']*usd),'date':s['sold'][:10]} for s in so[:10]]}
     # all-time top sold by power from the research files (Hofgamer since ~Mar 2026 + XDRACO last 30d)
@@ -113,7 +113,7 @@ def deals(D,usd):
     for x in L:
         if x.get('build_score') is None or not x.get('fair_full'): continue
         cut=np.percentile(by[x['cls']],80)
-        fair=x['fair_full']*usd
+        fair=(x.get('fair_head') or x['fair_full'])*usd
         if x['build_score']>=cut and x['usd']<=fair and x['usd']<=BUDGET and (prev is None or x['id'] not in prev):
             out.append({'id':x['id'],'name':x['name'],'cls':x['cls'],'ps':x['ps'],'build_score':x['build_score'],'usd':round(x['usd']),'fair_usd':round(fair),
                         'pct_under':round((1-x['usd']/fair)*100,1),'usd_under':round(fair-x['usd']),'link':f'https://nft.hofgamer.com/mir4/nft/{x["id"]}'})
