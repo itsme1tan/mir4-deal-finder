@@ -67,7 +67,7 @@ def main(ps_min=600000):
         else: c.update(fair_wemix=None,comps_n=0,discount=None,flip_margin=None)
         c['deal']=c['discount'] is not None and c['discount']>=15 and c['comps_n']>=3
         c['usd']=round(c['wemix']*usd,2)
-    json.dump({'updated':dt.datetime.now().isoformat(timespec='minutes'),'wemix_usd':usd,'listings':lst,
+    json.dump({'updated':dt.datetime.now(__import__('zoneinfo').ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d %H:%M'),'wemix_usd':usd,'listings':lst,
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
     print(f'{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}')
