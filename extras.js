@@ -2,8 +2,8 @@
 (function(){
 const $=s=>document.querySelector(s),fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0}),usd=n=>n==null?'–':'$'+fm(n);
 const st=document.createElement('style');st.textContent=`
-#xnav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px 12px 0;position:sticky;top:0;z-index:5;background:#0f1218}
-#xnav button{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:14px;font-weight:600}
+#xnav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:10px 12px 0;position:sticky;top:0;z-index:5;background:#0f1218}
+#xnav button{background:#202838;color:#cbd3e1;border:1px solid #333c4d;border-radius:999px;padding:11px 0;font-size:13px;font-weight:600}
 #xnav button.on{background:#f5c518;color:#1a1300;border-color:#f5c518}
 #xv{padding:10px 12px 40px;max-width:900px;margin:0 auto}#xv h2{font-size:17px;margin:16px 0 6px}#xv h3{font-size:15px;margin:14px 0 6px;color:#ffe08a}
 .xc{background:#171c26;border:1px solid #2a3140;border-radius:12px;padding:10px 12px;margin:8px 0}
@@ -16,14 +16,14 @@ const st=document.createElement('style');st.textContent=`
 .mt{color:#9aa3b8;font-size:12px;line-height:1.45}.bar{height:10px;border-radius:5px;background:#2b6cb0;display:inline-block;vertical-align:middle}
 .big{font-size:22px;font-weight:800;color:#ffe08a}.cmp2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cmp2>div{background:#0f1218;border:1px solid #2a3140;border-radius:10px;padding:8px}
 .hide-main .ctl,.hide-main .wrap,.hide-main #cards,.hide-main .note,.hide-main #cmp{display:none!important}`;document.head.appendChild(st);
-const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:Deals','lead:Leaders','trend:Trends','up:Upgrade'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
+const nav=document.createElement('div');nav.id='xnav';nav.innerHTML=['deals:Deals','ev:Events','lead:Leaders','trend:Trends','up:Upgrade'].map(s=>{const[k,l]=s.split(':');return `<button data-v="${k}">${l}</button>`}).join('');
 $('header').after(nav);const xv=document.createElement('div');xv.id='xv';nav.after(xv);
 let E,cls,upId;
 fetch('data/extras.json?'+Date.now()).then(r=>r.json()).then(e=>{E=e;show(new URLSearchParams(location.search).get('view')||'deals')});
 nav.onclick=e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)};
 function show(v){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v==v));document.body.classList.toggle('hide-main',v!='deals');
  const u=new URL(location);if(v=='deals')u.searchParams.delete('view');else u.searchParams.set('view',v);history.replaceState(null,'',u);
- xv.hidden=v=='deals';if(!E||v=='deals')return;xv.innerHTML=v=='lead'?lead():v=='trend'?trend():up();bind(v)}
+ xv.hidden=v=='deals';if(!E||v=='deals')return;if(v=='ev'){evShow();return}xv.innerHTML=v=='lead'?lead():v=='trend'?trend():up();bind(v)}
 function bind(v){xv.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cls=b.dataset.c;show('lead')});
  const s=xv.querySelector('#upsel');if(s)s.onchange=()=>{upId=s.value;show('up')}}
 const H=id=>`https://nft.hofgamer.com/mir4/nft/${id}`;
@@ -69,5 +69,21 @@ function up(){const L=D.listings.filter(x=>E.upgrade.by_id[x.id]).sort((a,b)=>a.
   <div><div class="mt">Buy one already built</div>${b?`<div class="big">${usd(b.usd)}</div><div class="mt">cheapest listed ${x.cls} at ${fm(b.ps)}: <a href="${H(b.id)}" target="_blank">${b.name}</a></div>`:`<div class="big">–</div><div class="mt">No ${x.cls} listed at this power right now.</div>`}${t.built_sold_med?`<div class="mt">Sold median near this power: ${usd(t.built_sold_med)} (${t.built_sold_n} sales)</div>`:''}</div></div>`;
   if(b)o+=`<div class="mt">${b.usd<t.path_usd?`Buying built looks cheaper by about ${usd(t.path_usd-b.usd)}.`:`Growing looks cheaper by about ${usd(b.usd-t.path_usd)} on market value, but you pay in time and materials.`}</div>`});
  return o+`<h3>How this is estimated</h3><div class="mt">${E.upgrade.method}</div>`}
-window.addEventListener('load',()=>{});
+
+let EV,evT;const PT=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+function evMs(t,e,off){const[d,h]=t.split('T');const[y,m,dd]=d.split('-').map(Number),[hh,mm]=h.split(':').map(Number);return Date.UTC(y,m-1,dd,hh,mm)-off*3600e3+(t.endsWith('23:59')?59e3:0)}
+function dur(ms){const s=Math.max(0,ms/1e3|0),d=s/86400|0,h=(s%86400)/3600|0,m=(s%3600)/60|0,x=s%60;return (d?d+'d ':'')+String(h).padStart(2,'0')+'h '+String(m).padStart(2,'0')+'m '+String(x).padStart(2,'0')+'s'}
+function evShow(){if(!EV){fetch('data/events.json?'+Date.now()).then(r=>r.json()).then(e=>{EV=e;evShow()});xv.innerHTML='loading…';return}
+ const rg=localStorage.mir4rg||'NA';
+ xv.innerHTML=`<h2>Events countdown</h2><label>Your server region<select id="evrg">${Object.entries(EV.regions).map(([k,o])=>`<option ${k==rg?'selected':''}>${k}</option>`).join('')}</select></label><div class="mt">All times in Pacific (PT). Siege and daily reset follow your region's server clock. Ended events hide automatically. Updated ${EV.updated}.</div><div id="evl"></div>`;
+ xv.querySelector('#evrg').onchange=e=>{localStorage.mir4rg=e.target.value;evShow()};clearInterval(evT);evTick();evT=setInterval(()=>{if(xv.querySelector('#evl'))evTick();else clearInterval(evT)},1000)}
+function evTick(){const rg=localStorage.mir4rg||'NA',ro=EV.regions[rg],now=Date.now();const L=EV.events.map(e=>{const off=e.tz=='server'?ro:e.off;return {...e,s:evMs(e.start,0,off),e2:e.end?evMs(e.end,0,off):(e.end_date?evMs(e.end_date+'T23:59',0,off):null)}}).filter(e=>e.e2==null||e.e2>now).sort((a,b)=>(a.s>now?a.s:a.e2||9e15)-(b.s>now?b.s:b.e2||9e15));
+ const [hh,mm]=EV.recurring[0].time.split(':').map(Number);let r=new Date();let nx=Date.UTC(r.getUTCFullYear(),r.getUTCMonth(),r.getUTCDate(),hh,mm)-ro*3600e3;while(nx<=now)nx+=864e5;while(nx-864e5>now)nx-=864e5;
+ const card=(n,lab,ms,sub,src,cls)=>`<div class="xc" style="${cls}"><div style="display:flex;justify-content:space-between;gap:8px"><b>${n}</b></div><div class="big" style="font-size:20px">${lab} ${ms}</div><div class="mt">${sub} · <a href="${src}" target="_blank">source</a></div></div>`;
+ let o=card(EV.recurring[0].name,'Resets in',dur(nx-now),`${PT.format(nx)} PT (${rg} 00:00)`,EV.recurring[0].src,'');
+ o+=L.map(e=>{const up=e.s>now;const sub=(up?'Starts '+PT.format(e.s):'Started '+PT.format(e.s))+' PT · '+(e.end?'ends '+PT.format(e.e2)+' PT':'ends '+e.end_text)+(e.detail?'<br>'+e.detail:'')+(e.projected?' <b style="color:#f5c518">Projected</b>':'');
+  const bd=e.kind=='siege'?'border-color:#a16207;background:#2a2410':up?'border-color:#2b6cb0':'';
+  return card(e.name,up?'Starts in':e.end?'Ends in':'Ends',up?dur(e.s-now):e.end?dur(e.e2-now):'date TBA',sub,e.src,bd)}).join('');
+ xv.querySelector('#evl').innerHTML=o}
+
 })();
