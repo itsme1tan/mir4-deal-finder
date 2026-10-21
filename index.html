@@ -26,13 +26,20 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .more{color:#7cb3ff;font-size:14px;margin-top:10px}
 .cb{display:none;border-top:1px solid #2a3140;padding:12px 14px}.card.open .cb{display:block}
 .cb h4{margin:10px 0 8px;font-size:14px;color:#cbd3e1}
-.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px}
-.it{text-align:center;font-size:11px;line-height:1.25;color:#cbd3e1}
-.ic{position:relative;width:56px;height:56px;margin:0 auto 3px;border-radius:8px;border:2px solid #555;background:#0f1218 center/cover no-repeat}
-.g6{border-color:#e05252}.g5{border-color:#e0a630}.g4{border-color:#a855f7}.g3{border-color:#3b82f6}
-.ic b{position:absolute;right:1px;bottom:0;font-size:11px;background:rgba(0,0,0,.75);padding:0 3px;border-radius:4px}
-.ic i{position:absolute;left:1px;top:0;font-size:10px;font-style:normal;background:#8a1c1c;padding:0 3px;border-radius:4px}
-.sk{background-image:url(sp-skill.webp);background-size:728px 392px;border-color:#333c4d}
+.cb{background:linear-gradient(180deg,#3a3208 0%,#121a3a 45%,#0b1030 100%)}
+.cb h4{text-align:center;font-weight:500;font-size:16px;color:#fff;margin:14px 0 10px}
+.ig{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 6px}
+.it{width:52px;text-align:center}
+.ic{position:relative;width:46px;height:46px;margin:0 auto;border-radius:50%;background:#2a3140 center/86% no-repeat;border:2px solid #222}
+.g6{background-color:#c62828;border-color:#7f1010}.g5{background-color:#e3b215;border-color:#8a6a00}.g4{background-color:#7c3aed;border-color:#4c1d95}.g3{background-color:#2563eb;border-color:#1e3a8a}.g2{background-color:#16a34a}
+.ic b,.ic i{position:absolute;min-width:20px;height:20px;line-height:20px;border-radius:50%;background:#0b1024;color:#fff;font:700 10px system-ui;font-style:normal;padding:0 2px;box-sizing:border-box}
+.ic b{right:-8px;top:-6px}.ic i{left:-8px;bottom:-4px}
+.sk{background-image:url(sp-skill.webp);background-size:598px 322px;border-color:#c62828}
+.sk.top{width:60px;height:60px;background-size:780px 420px}
+.ic.sk b{display:none}.ic.sk i{background:#b91c1c;left:-4px;bottom:-4px}
+.nmx{display:none}.card.lbl .nmx{display:block;font-size:10px;color:#cbd3e1;margin-top:4px;line-height:1.2}
+.lt{text-align:center;color:#cbd3e1;font-size:12px;margin-top:10px}
+.pill{display:block;width:max-content;margin:0 auto 4px;background:#1d3fb8;color:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:14px}
 .btn{display:block;text-align:center;background:#2b6cb0;color:#fff;border-radius:8px;padding:13px;margin-top:14px;text-decoration:none;font-weight:600}
 @media (max-width:767px){.wrap,#cmp,#bcmp{display:none}#cards{display:block}
  header{padding:12px}h1{font-size:18px}.ctl{padding:10px 12px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.ctl label{min-width:0}.ctl input:not([type=checkbox]),.ctl select{width:100%;box-sizing:border-box}.ctl input[type=checkbox]{width:22px;height:22px;vertical-align:middle}.ctl label span{font-size:14px;color:#e6e6e6}#meta{font-size:12px}
@@ -68,11 +75,14 @@ function rows(){const c=fcls.value,ps=+fps.value||0,u=+fusd.value||1e12,q=fq.val
 
 const pct=x=>x.discount==null?'–':(x.discount>0?x.discount+'% under':(-x.discount)+'% over');
 function icons(arr,fn){return '<div class="ig">'+arr.map(fn).join('')+'</div>'}
+const RN=['','I','II','III','IV','V','VI','VII','VIII','IX','X'],rn=n=>RN[n]||n;
 function buildHtml(x){const b=x.build;if(!b||!(b.gear||[]).length)return '<div class="cl">Build details not loaded yet.</div>';
- let h='<h4>Gear</h4>'+icons(b.gear,g=>`<div class="it"><div class="ic g${g.g}" style="background-image:url('${g.img}')">${g.r?`<i>R${g.r}</i>`:''}<b>+${g.e}</b></div>${g.n}</div>`);
- h+='<h4>Skills</h4>'+icons(b.skills||[],k=>`<div class="it"><div class="ic sk" style="background-position:-${k.x*56}px -${k.y*56}px"><b>T${k.t}</b></div>${k.n}</div>`);
- h+='<h4>Spirits (main set)</h4>'+icons(b.spirits||[],p=>`<div class="it"><div class="ic g${p.g}" style="background-image:url('${p.img}')"><b>★${p.t}</b></div>${p.n}</div>`);
- return h+'<div class="cl" style="margin-top:8px">R = Dragon refine level, + = enhance, T = skill tier, ★ = spirit transcend. Red border = Mythical, gold = Legendary.</div>'}
+ const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}"><div class="ic ${cls}" style="${st}">${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
+ let h=`<span class="pill">Listed ${x.listed||''}</span><div class="lt">Fixed-price listing (no auction timer on the data source). Tap an icon to see its name.</div>`;
+ h+='<h4>Equip Items</h4>'+icons(b.gear,g=>it('g'+g.g,`background-image:url('${g.img}')`,g.e?'+'+g.e:'',rn(g.r),g.n));
+ h+='<h4>Spirits</h4>'+icons(b.spirits||[],p=>it('g'+p.g,p.img?`background-image:url('${p.img}')`:'',null,rn(p.t),p.n));
+ h+='<h4>Skills</h4>'+icons(b.skills||[],(k,i)=>it('sk'+(i==0?' top':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n));
+ return h+'<div class="lt">Gold = Legendary, red = Mythical. Equip: +enhance, roman = Dragon refine. Spirits: roman = transcend. Skills: number = skill tier.</div>'}
 function drawCards(){const L=rows().slice().sort((a,b)=>(b.discount??-1e9)-(a.discount??-1e9));
  cards.innerHTML=L.map(x=>{const fv=x.fair_basis=='full build'?x.fair_full:x.fair_wemix;return `<div class="card${x.deal?' isdeal':''}" data-id="${x.id}"><div class="ch">
  <div class="r1"><div><div class="nm">${x.name}</div><div class="cl">${x.cls} · Lv ${x.lv} · ${f(x.ps)} power</div></div><div class="disc ${x.discount>0?'pos':'neg'}">${pct(x)}</div></div>
@@ -80,6 +90,7 @@ function drawCards(){const L=rows().slice().sort((a,b)=>(b.discount??-1e9)-(a.di
  <div class="badges">${x.deal?'<span class="deal">DEAL</span>':''}${x.flip?'<span class="flip">FLIP</span>':''}<span class="${x.flip_margin>0?'pos':'neg'}">Flip margin ${x.flip_margin==null?'–':x.flip_margin+'%'}</span></div>
  <div class="why">${(x.drivers||[]).map(([n,p])=>`<span class="${p>0?'pos':'neg'}">${p>0?'+':''}${p}% ${n}</span>`).join('')}</div>
  <div class="more">▸ Tap for gear, skills, spirits</div></div><div class="cb"></div></div>`}).join('')||'<div class="cl">No listings match.</div>';
+ cards.querySelectorAll('.cb').forEach(cb=>cb.onclick=e=>{if(e.target.closest('.ic'))cb.parentElement.classList.toggle('lbl')});
  cards.querySelectorAll('.ch').forEach(el=>el.onclick=()=>{const c=el.parentElement,x=D.listings.find(y=>y.id==c.dataset.id),cb=c.querySelector('.cb');
   if(!cb.innerHTML)cb.innerHTML=buildHtml(x)+`<a class="btn" href="https://www.xdraco.com/nft/trade/${x.id}" target="_blank">Open on XDRACO</a><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/${x.id}" target="_blank">Full details (Hofgamer)</a>`;
   c.classList.toggle('open');el.querySelector('.more').textContent=c.classList.contains('open')?'▾ Hide':'▸ Tap for gear, skills, spirits'});
