@@ -8,7 +8,7 @@ const st=document.createElement('style');st.textContent=`
 .tr20 .rw{display:grid;grid-template-columns:30px 1fr auto;gap:8px;align-items:center;padding:10px;cursor:pointer}
 .tr20 .rk{width:28px;height:28px;line-height:28px;border-radius:50%;background:#2a3140;text-align:center;font-weight:800;font-size:13px}.tr20 .rk.g{background:#f5c518;color:#1a1300}
 .tr20 .n{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tr20 .m{color:#9aa3b8;font-size:12px;margin-top:3px;display:flex;gap:10px}
+.tr20 .m{color:#9aa3b8;font-size:12px;margin-top:3px;display:flex;gap:8px;flex-wrap:wrap}
 .tr20 .p{text-align:right;white-space:nowrap}.tr20 .p b{font-size:16px}.tr20 .p small{display:block;color:#9aa3b8;font-size:11px}
 .tr20 .d{font-size:11px;font-weight:600;opacity:.85}.tr20 .dt{display:block;width:100%;border:0;border-top:1px solid #2a3140;border-radius:0;background:#1d2330;color:#93c5fd;padding:8px;font-size:13px}
 .tr20 .slot .card{margin:0;border:0;border-radius:0}
@@ -24,12 +24,18 @@ const hdr=document.querySelector('header'),box=document.createElement('div');box
 const back=document.createElement('button');back.id='back20';back.textContent='🏆 Top 20';hdr.after(back);
 back.onclick=()=>{document.body.classList.add('simple');scrollTo(0,0)};
 const fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
-function score(L){const ps=L.map(x=>x.ps).sort((a,b)=>a-b);
- L.forEach(x=>{const pp=ps.filter(p=>p<=x.ps).length/ps.length*100;x.t20=0.7*x.build_score+0.3*pp});
+const TANK=['Taoist','Warrior','Lionheart'];
+const WA=[['atk',.35],['skill_dmg',.2],['pvp_dmg',.2],['def',.1],['pvp_red',.05],['ps',.1]],WT=[['def',.25],['eva',.2],['pvp_red',.2],['atk',.1],['skill_dmg',.05],['pvp_dmg',.1],['ps',.1]];
+function score(L){const A=D.listings;
+ const pool=x=>{const c=A.filter(y=>y.cls==x.cls);return c.length>=3?c:A};
+ const pr=(x,k)=>{const v=pool(x).map(y=>y[k]).filter(n=>n!=null);if(x[k]==null||!v.length)return 0;return v.filter(n=>n<=x[k]).length/v.length*100};
+ L.forEach(x=>{const W=TANK.includes(x.cls)?WT:WA;x.t20p={};W.forEach(([k])=>x.t20p[k]=pr(x,k));x.t20=W.reduce((s,[k,w])=>s+w*x.t20p[k],0)});
  return L.sort((a,b)=>b.t20-a.t20||b.ps-a.ps).slice(0,20)}
+const tp=p=>'top '+Math.max(1,Math.round(100-p))+'%';
+function keys(x){const t=TANK.includes(x.cls),p=x.t20p;return t?`<span title="DEF ${fm(x.def)}, ${tp(p.def)} in class">${I('shield')} ${fm(x.def/1000)}k</span><span title="EVA ${fm(x.eva)}, ${tp(p.eva)} in class">${I('footprints')} ${fm(x.eva)}</span>`:`<span title="ATK ${fm(x.atk)}, ${tp(p.atk)} in class">${I('swords')} ${fm(x.atk/1000)}k</span><span title="PvP ATK ${x.pvp_dmg}%, ${tp(p.pvp_dmg)} in class">${I('flame')} ${x.pvp_dmg??'–'}%</span>`}
 function render(){const L=score(D.listings.filter(x=>x.usd<=25000&&x.build_score!=null));
- box.innerHTML=`<div class="hd"><b>🏆 Top 20 deals</b><button id="mbtn">☰ More</button></div><div class="ex">Ranked by strength: build score (ATK, DEF, EVA, PvP stats) and power. Price shown for info. Under $25k, any class.</div>`+
- L.map((x,i)=>`<div class="tr20${x.discount>0?' u':''}" data-id="${x.id}"><div class="rw"><div class="rk${i<3?' g':''}">${i+1}</div><div style="min-width:0"><div class="n">${ci(x.cls)} ${x.name}</div><div class="m"><span>⚡ ${fm(x.ps/1000)}k</span><span>${I('gauge')} ${x.build_score}</span>${x.full_conf=='low'?'<span title="few similar sales">⚠</span>':''}</div></div><div class="p"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small><span class="d ${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</span></div></div><button class="dt">▸ Details</button><div class="slot"></div></div>`).join('');
+ box.innerHTML=`<div class="hd"><b>🏆 Top 20 deals</b><button id="mbtn">☰ More</button></div><div class="ex">Ranked by class role: ⚔ attackers by ATK, Skill and PvP ATK; 🛡 Taoist/Warrior by DEF, EVA and PvP reduction, vs their own class. Price shown for info. Under $25k, any class.</div>`+
+ L.map((x,i)=>`<div class="tr20${x.discount>0?' u':''}" data-id="${x.id}"><div class="rw"><div class="rk${i<3?' g':''}">${i+1}</div><div style="min-width:0"><div class="n">${ci(x.cls)} ${x.name} <small title="${TANK.includes(x.cls)?'Tank/support':'Attacker'}">${TANK.includes(x.cls)?'🛡':'⚔'}</small></div><div class="m">${keys(x)}<span>⚡ ${fm(x.ps/1000)}k</span><span>${I('gauge')} ${x.build_score}</span>${x.full_conf=='low'?'<span title="few similar sales">⚠</span>':''}</div></div><div class="p"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small><span class="d ${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</span></div></div><button class="dt">▸ Details</button><div class="slot"></div></div>`).join('');
  mbtn.onclick=()=>{document.body.classList.remove('simple');scrollTo(0,0)};
  box.querySelectorAll('.tr20').forEach(r=>{const tg=()=>{const s=r.querySelector('.slot'),b=r.querySelector('.dt');
   if(s.innerHTML){s.innerHTML='';b.textContent='▸ Details';return}
