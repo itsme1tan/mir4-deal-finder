@@ -9,3 +9,9 @@ const tick=()=>{const now=Date.now();const cur=d.events.find(e=>e.status=='annou
   el.textContent=nx?'🎁 Next recharge: '+(nx.window||new Date(nx.start).toLocaleDateString('en-US',{timeZone:'America/Los_Angeles'}))+(nx.status=='expected'?' (not announced)':''):'';el.title=nx?nx.name:''}};
 tick();setInterval(tick,60000);el.onclick=()=>{tip.style.display=tip.style.display=='none'?'block':'none'};
 const place=()=>{const a=document.getElementById('w1hdr')||document.getElementById('meta');if(!a)return setTimeout(place,500);a.after(el);el.after(tip)};place();}).catch(()=>{})})();
+(()=>{fetch('data/topup_events.json?t='+Date.now()).then(r=>r.json()).then(d=>{const el=document.createElement('div');el.style.cssText='font-size:12px;margin:2px 0;color:#ff9f43';
+const f=t=>new Date(t).toLocaleTimeString('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'});
+const tick=()=>{const now=Date.now();const m=(d.maintenance||[]).find(x=>new Date(x.end)>now&&new Date(x.lock)-now<36e6);
+ if(!m){el.textContent='';return}el.title=m.note;
+ el.textContent=new Date(m.lock)<=now?'🔧 Maintenance: market locked until '+f(m.end)+' PT (quiet is normal)':'🔧 Maintenance today '+f(m.start)+'-'+f(m.end)+' PT, market locks '+f(m.lock)};
+tick();setInterval(tick,60000);const place=()=>{const a=document.getElementById('tuhdr');if(!a)return setTimeout(place,500);a.after(el)};place()}).catch(()=>{})})();
