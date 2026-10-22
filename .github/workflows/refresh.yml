@@ -1,6 +1,6 @@
 name: refresh-data
 on:
-  schedule: [{cron: "17 * * * *"}]  # hourly; sealed character details are cached, so each run mostly re-reads list pages
+  schedule: [{cron: "17,47 * * * *"}]  # every 30 min; sealed character details are cached, so each run mostly re-reads list pages
   workflow_dispatch:
 concurrency: {group: refresh-data, cancel-in-progress: false}
 permissions: {contents: write}
