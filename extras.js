@@ -23,7 +23,7 @@ fetch('data/extras.json?'+Date.now()).then(r=>r.json()).then(e=>{E=e;show(new UR
 nav.onclick=e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)};
 function show(v){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v==v));document.body.classList.toggle('hide-main',v!='deals');
  const u=new URL(location);if(v=='deals')u.searchParams.delete('view');else u.searchParams.set('view',v);history.replaceState(null,'',u);
- xv.hidden=v=='deals';if(!E||v=='deals')return;if(v=='ev'){evShow();return}if(v=='guide'){xv.innerHTML=guide();return}xv.innerHTML=v=='lead'?lead():v=='trend'?trend():up();bind(v)}
+ xv.hidden=v=='deals';if(!E||v=='deals')return;if(v=='ev'){evShow();return}if(v=='guide'){xv.innerHTML=guide();return}xv.innerHTML=v=='lead'?lead():v=='trend'?'<div id="phist"></div>'+trend():up();bind(v);if(v=='trend'&&window.drawPH)drawPH()}
 function bind(v){xv.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cls=b.dataset.c;show('lead')});
  const s=xv.querySelector('#upsel');if(s)s.onchange=()=>{upId=s.value;show('up')}}
 const H=id=>`https://nft.hofgamer.com/mir4/nft/${id}`;
