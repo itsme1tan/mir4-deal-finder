@@ -1,0 +1,7 @@
+{
+  "tip": "Buy your character first, event rewards stay on the character you top up.",
+  "events": [
+    {"name": "Piggio's Happy Recharge", "start": null, "end": "2026-10-26T08:59:00-07:00", "status": "announced", "source": "https://forum.mir4global.com/"},
+    {"name": "Piggio's Happy Recharge (next)", "start": null, "end": null, "status": "expected", "window": "early Dec 2026 to early Jan 2027", "source": "estimate from past cadence (every 2-3 months)"}
+  ]
+}
