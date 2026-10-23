@@ -74,7 +74,10 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .ic.xs::before{inset:-2px}.ic.xs.g1::before{background-image:url(icons/xd/spirit-g1.webp)}.ic.xs.g2::before{background-image:url(icons/xd/spirit-g2.webp)}.ic.xs.g3::before{background-image:url(icons/xd/spirit-g3.webp)}.ic.xs.g4::before{background-image:url(icons/xd/spirit-g4.webp)}.ic.xs.g5::before{background-image:url(icons/xd/spirit-g5.webp)}.ic.xs.g6::before{background-image:url(icons/xd/spirit-g6.webp)}
 .ic.xs .im{inset:9%;background-size:100%}
 .ic.xf{overflow:visible!important}
-.ic.xs i{background:#2b2f38;border:1.5px solid #d9c58a;color:#fff;z-index:2}
+.ic.xs{width:50px!important;height:50px!important;aspect-ratio:1;flex:none;border:0!important;overflow:visible!important}.ic.xs::before{border-radius:50%}
+.ic.xs .im{border-radius:50%}
+.ic.xs i{left:-7px;bottom:-6px;min-width:22px;height:22px;line-height:18px;background:radial-gradient(circle at 50% 35%,#4a4a4a,#222 70%);border:2px solid #9f916c;color:#fff;font:500 10px system-ui;z-index:2}
+.ic.xs .nmx,.it .nmx{display:none!important}
 .sr .si{width:24px;height:24px;display:block}
 .sr.wi{grid-template-columns:24px 1fr auto 64px;border-bottom-color:rgba(255,255,255,.1)}
 .gr2 .ig.gl{flex-wrap:nowrap;gap:0;justify-content:center;margin:0 auto 14px;max-width:100%}
@@ -153,7 +156,7 @@ function buildHtml(x){const b=x.build||{};
   return '<div class="gr2"><div class="ig gl">'+w.map(fn).join('')+'</div><div class="ig gl">'+c.map(fn).join('')+'</div></div>'};
  const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+rows2(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
   return `<div class="it" title="${nm}"><div class="ic xf g${g.g}"><span class="im" style="background-image:url('${g.img}')"></span>${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<u style="background-image:url(icons/xd/hole-${Math.min(4,g.h)}.webp)"></u>`:''}</div><div class="nmx">${nm}</div></div>`}):none,
-  spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('xf xs g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)})+'<div class="lt">Roman = transcend. Backgrounds use XDRACO grade art: gold = Legendary, orange = Mythical.</div>':none,
+  spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('xf xs g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)}):none,
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
   stats:statsHtml(x),hist:histHtml(x),value:valueHtml(x)};
  const T=[['gear','Gear'],['spirits','Spirits'],['skills','Skills'],['stats','Stats'],['value','Value'],['hist','History']];
