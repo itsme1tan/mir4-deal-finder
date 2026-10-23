@@ -1,0 +1,15 @@
+// Sold-character search: shows archived sold characters matching #fq below live results.
+(function(){let A=null,L=false;const f=n=>Math.round(n).toLocaleString();
+const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dt=s=>{const m=String(s||'').match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);if(!m)return s||'?';let h=+m[4],ap=h<12?'am':'pm';h=h%12||12;return `${M[m[2]-1]} ${+m[3]}, ${h}:${m[5]}${ap}`};
+const ms=s=>{const m=String(s||'').match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);return m?Date.UTC(+m[1],m[2]-1,+m[3],+m[4],+m[5]):null};
+const dur=(a,b)=>{const x=ms(a),y=ms(b);if(x==null||y==null||y<x)return '?';const h=(y-x)/36e5;return h<1?Math.round(h*60)+' min':h<48?h.toFixed(h<10?1:0)+' h':(h/24).toFixed(1)+' days'};
+function box(){let b=document.getElementById('soldres');if(!b){b=document.createElement('div');b.id='soldres';b.style.padding='0 18px 10px';const t=document.getElementById('cards');t.parentNode.insertBefore(b,t.nextSibling);const st=document.createElement('style');st.textContent='body.simple #soldres,.hide-main #soldres{display:none!important}';document.head.appendChild(st)}return b}
+function load(cb){if(A)return cb();if(L)return;L=true;fetch('data/sold_archive.json?'+Date.now()).then(r=>r.ok?r.json():[]).catch(()=>[]).then(a=>{const m={};(a||[]).forEach(s=>m[s.id||s.name+s.server]=s);((typeof D!='undefined'&&D&&D.sales)||[]).forEach(s=>{const k=s.id||s.name+s.server;m[k]=m[k]||s});A=Object.values(m).filter(s=>s.sold);cb()})}
+function run(){const fq=document.getElementById('fq');if(!fq)return;const q=fq.value.trim().toLowerCase(),b=box();if(!q){b.innerHTML='';return}
+ load(()=>{if(fq.value.trim().toLowerCase()!==q)return;const u=(typeof D!='undefined'&&D&&D.wemix_usd)||null;
+ const r=A.filter(s=>((s.name||'')+' '+(s.server||'')).toLowerCase().includes(q)).sort((a,b)=>String(b.sold).localeCompare(String(a.sold))).slice(0,30);
+ if(!r.length){b.innerHTML='';return}
+ b.innerHTML=`<div style="font-weight:600;margin:6px 0">Sold characters matching "${q.replace(/[<>&"]/g,'')}" (${r.length})</div><div style="display:flex;flex-wrap:wrap;gap:8px">`+r.map(s=>`<div style="border:1px solid #444;border-radius:8px;padding:8px 10px;min-width:220px;opacity:.9"><div><span style="background:#7f1d1d;color:#fff;border-radius:4px;padding:1px 6px;font-size:12px;font-weight:700">SOLD</span> <b>${String(s.name).replace(/[<>&]/g,'')}</b></div><div>${s.cls||'?'} · Lv ${s.lv??'?'} · ${s.ps?f(s.ps):'?'} power · ${s.server||'?'}</div><div><b>${s.wemix?f(s.wemix):'?'} WEMIX</b>${u&&s.wemix?` (~$${f(s.wemix*u)} today)`:''}</div><div style="font-size:12px;opacity:.8">Listed ${dt(s.listed)} · Sold ${dt(s.sold)} PT · up ${dur(s.listed,s.sold)}</div></div>`).join('')+'</div>'})}
+function hook(){const fq=document.getElementById('fq');if(!fq)return setTimeout(hook,300);fq.addEventListener('input',run);const w=()=>{if(typeof D!='undefined'&&D&&D.listings)run();else setTimeout(w,500)};w()}
+document.readyState=='loading'?document.addEventListener('DOMContentLoaded',hook):hook()})();
