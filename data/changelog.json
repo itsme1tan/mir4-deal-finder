@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "📊",
+  "text": "Header status line is now simple gold icons with numbers"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "🎯",
   "text": "Stat chips on character pages now use XDRACO's in-game stat icons"
  },

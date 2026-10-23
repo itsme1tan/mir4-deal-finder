@@ -7,6 +7,7 @@
 .ib{background:#202838;border:1px solid #333c4d;border-radius:999px;width:28px;height:28px;padding:0;color:#93c5fd}.note.c{display:none}.note.c.show{display:block}
 .vb{background:#0e3a4a;color:#a5f3fc;border-radius:4px;padding:3px 8px;font-weight:700}
 .ctl label{font-size:12px}img.xsi{width:17px;height:17px;vertical-align:-3px;object-fit:contain}
+#meta .ico{color:#e8c872;background:#e8c872}
 footer{font-size:11px;color:#6b7280;padding:10px 18px 70px}
 body{font-family:system-ui,sans-serif;margin:0;background:#0f1218;color:#e6e6e6}
 header{padding:14px 18px;background:#171c26;border-bottom:1px solid #2a3140}h1{margin:0;font-size:20px}
@@ -138,7 +139,8 @@ const big=n=>n==null?'–':n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(
 const J=u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}));
 Promise.all([J('data.json'),J('data/relist.json'),J('data/summary.json')]).then(([d,rl,sm])=>{D=d;D.sum=sm;const RB=rl.by_id||{};
  d.listings.forEach(x=>{const r=RB[x.id];x.rl=r||null;x.price_cut=r&&r.pct<0?-r.pct:null});
- {const mt=document.getElementById('meta');mt.title=`${d.listings.length} listings (600k+ power) · ${d.sales.length} comparable sales since ${d.sales.at(-1).sold.slice(0,10)} · WEMIX $${d.wemix_usd} · updated ${d.updated.replace('T',' ')} PT · model: ${d.model?d.model.summary+(d.model.use_full?' (full build used)':' (power-only used)'):'n/a'}`;mt.innerHTML=`${I('layout-list')} ${d.listings.length} · ${I('badge-check')} ${d.sales.length} sales · ${I('coins')} $${d.wemix_usd} · ${I('clock')} ${d.updated.replace('T',' ')} · <span title="Model: ${d.model?d.model.summary:''}">ⓘ model ${d.model&&d.model.use_full?'full build':'power'}</span>`}
+ {const mt=document.getElementById('meta');mt.title=`${d.listings.length} listings (600k+ power) · ${d.sales.length} comparable sales since ${d.sales.at(-1).sold.slice(0,10)} · WEMIX $${d.wemix_usd} · updated ${d.updated.replace('T',' ')} PT · model: ${d.model?d.model.summary+(d.model.use_full?' (full build used)':' (power-only used)'):'n/a'}`;mt.innerHTML=(()=>{const u=d.updated,m=u.match(/(\d+)-(\d+)-(\d+)[T ](\d+):(\d+)/),ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+(u.includes('T')?0:7),+m[5]),z={timeZone:'America/Los_Angeles'},dd=t=>new Intl.DateTimeFormat('en-CA',z).format(t),n=Date.now(),hm=new Intl.DateTimeFormat('en-US',{...z,hour:'numeric',minute:'2-digit'}).format(ms),pre=dd(ms)==dd(n)?'':dd(ms)==dd(n-864e5)?'Yesterday ':new Intl.DateTimeFormat('en-US',{...z,month:'short',day:'numeric'}).format(ms)+' ';
+ return `<span title="For sale now (600k+ power)">${I('shopping-cart')} ${d.listings.length}</span> · <span title="Sold characters we compare against">${I('badge-check')} ${d.sales.length}</span> · <span title="WEMIX price in USD">${I('coins')} $${Number(d.wemix_usd).toFixed(2)}</span> · <span title="Last update (PT)">${I('clock')} ${pre}${hm}</span>`})()}
  [...new Set(d.listings.map(c=>c.cls))].sort().forEach(c=>fcls.add(new Option(c,c)));
  {const RC={};d.listings.forEach(c=>{const r=reg(c.server);RC[r]=(RC[r]||0)+1});Object.keys(RC).sort().forEach(r=>freg.add(new Option(`${r} (${RC[r]})`,r)));if(localStorage.mir4dreg&&RC[localStorage.mir4dreg])freg.value=localStorage.mir4dreg;{const q=new URLSearchParams(location.search).get('region');if(q&&RC[q])freg.value=q}freg.addEventListener('change',()=>localStorage.mir4dreg=freg.value)}
  document.querySelector('#t thead').innerHTML='<tr>'+COLS.map(([k,l,a])=>`<th class="${a?'l':''}" data-k="${k}">${l}</th>`).join('')+'</tr>';
