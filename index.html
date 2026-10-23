@@ -58,6 +58,19 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .ic.sk b{display:none}.ic.sk i{background:#b91c1c;left:-4px;bottom:-4px}
 .ic.sk.lg{border-color:#f5c518}.ic.sk.lg i{background:#f5c518;color:#1a1300}
 .nmx{display:none}.card.lbl .nmx{display:block;font-size:10px;color:#cbd3e1;margin-top:4px;line-height:1.2}
+.ic.xf{border:0;background-color:transparent}
+.ic.xf::before{content:'';position:absolute;inset:0;background:center/100% no-repeat;border-radius:50%}
+.ic.xf .im{position:absolute;inset:7%;background:center/88% no-repeat;border-radius:50%}
+.ic.xf.g1::before{background-image:url(icons/xd/frame-g1.webp)}.ic.xf.g2::before{background-image:url(icons/xd/frame-g2.webp)}.ic.xf.g3::before{background-image:url(icons/xd/frame-g3.webp)}.ic.xf.g4::before{background-image:url(icons/xd/frame-g4.webp)}.ic.xf.g5::before{background-image:url(icons/xd/frame-g5.webp)}.ic.xf.g6::before{background-image:url(icons/xd/frame-g6.webp)}
+.ic.xf b{background:none;right:-6px;top:-8px;font-size:12px;text-shadow:0 0 2px #000,0 0 3px #000}
+.ic.xf i{background:#3a3f4a;border:1.5px solid #cfd5df;left:-5px;bottom:-5px;font-size:9px}
+.ic.xf i.rf{background:#1d4ed8;border-color:#93c5fd}.ic.xf i.rf.red{background:#b91c1c;border-color:#fca5a5}
+.ic.xf u{position:absolute;right:-5px;bottom:-5px;width:20px;height:20px;background:center/100% no-repeat}
+.ring{position:relative;width:330px;height:380px;margin:0 auto}
+.ring .pt{position:absolute;left:50%;top:50%;width:150px;height:150px;transform:translate(-50%,-50%);background:center/contain no-repeat;opacity:.95;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
+.ring .it{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%)}
+.ring .nmx{display:none!important}
+.card.lbl .ring{width:auto;height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 6px}.card.lbl .ring .it{position:static;transform:none}.card.lbl .ring .pt{display:none}.card.lbl .ring .nmx{display:block!important}
 .lt{text-align:center;color:#cbd3e1;font-size:12px;margin-top:10px}
 .pill{display:block;width:max-content;margin:0 auto 4px;background:#1d3fb8;color:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:14px}
 .btn{display:block;text-align:center;background:#2b6cb0;color:#fff;border-radius:8px;padding:13px;margin-top:14px;text-decoration:none;font-weight:600}
@@ -117,11 +130,12 @@ const listedPT=x=>{const t=lms(x);return t?`${LPT.format(t)} PT · ${ago(t)}`:(x
 const RN=['','I','II','III','IV','V','VI','VII','VIII','IX','X'],rn=n=>RN[n]||n;
 function buildHtml(x){const b=x.build||{};
  const SPF={'Mermaid Princess Marina':'icons/06af17f4100c.webp','美人鱼公主玛丽娜':'icons/06af17f4100c.webp','Flame Dragon Volcano':'icons/5415e5be5681.webp','炎龙沃卡诺':'icons/5415e5be5681.webp','Sage Sovereign White Tiger':'icons/a3b4f2327805.webp','圣君白虎仲谋':'icons/a3b4f2327805.webp','Arcane Mage Aquiel':'icons/4f6172ad3bba.webp','魔道士阿奎尔':'icons/4f6172ad3bba.webp','Priest of Light Cheonho':'icons/21e71ed5b3e5.webp','光明司祭天虎':'icons/21e71ed5b3e5.webp'};
- const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}"><div class="ic ${cls}" style="${st}">${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
+ const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}">${/\bxf\b/.test(cls)?`<div class="ic ${cls}"><span class="im" style="${st}"></span>`:`<div class="ic ${cls}" style="${st}">`}${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
  const none='<div class="lt">Not loaded yet.</div>';
- const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+icons(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
-  return `<div class="it" title="${nm}"><div class="ic g${g.g}" style="background-image:url('${g.img}')">${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<s>${'•'.repeat(g.h)}</s>`:''}</div><div class="nmx">${nm}</div></div>`})+'<div class="lt">Like XDRACO: +number = enhance. Blue roman = Dragon reforge level (red at VII+). Grey roman = item tier (shown when not reforged; full tier in the tap label). Dots = magic stone holes. Tap an icon for slot, tier and reforge.</div>':none,
-  spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)})+'<div class="lt">Roman = transcend. Gold = Legendary, red = Mythical.</div>':none,
+ const ring=(arr,fn)=>{const n=arr.length,L=Math.ceil(n/2),R=n-L,C=165,r=135,pos=(k,m,left)=>{const a=(m<2?0:(-68+136*k/(m-1)))*Math.PI/180;return [C+(left?-1:1)*r*Math.cos(a),190+170*Math.sin(a)]};const cl=String(x.cls||'').toLowerCase().replace(/ /g,'');return '<div class="ring"><div class="pt" style="background-image:url(icons/class/'+cl+'.webp)"></div>'+arr.map((g,i)=>{const [px,py]=i<L?pos(i,L,1):pos(i-L,R,0);return fn(g).replace('<div class="it"',`<div class="it" style="--x:${px.toFixed(0)}px;--y:${py.toFixed(0)}px"`)}).join('')+'</div>'};
+ const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+ring(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
+  return `<div class="it" title="${nm}"><div class="ic xf g${g.g}"><span class="im" style="background-image:url('${g.img}')"></span>${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<u style="background-image:url(icons/xd/hole-${Math.min(4,g.h)}.webp)"></u>`:''}</div><div class="nmx">${nm}</div></div>`})+'<div class="lt">Like XDRACO: +number = enhance. Blue roman = Dragon reforge level (red at VII+). Grey roman = item tier (shown when not reforged; full tier in the tap label). Bottom-right socket = magic stone holes. Tap an icon for slot, tier and reforge.</div>':none,
+  spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('xf g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)})+'<div class="lt">Roman = transcend. Backgrounds use XDRACO grade art: gold = Legendary, orange = Mythical.</div>':none,
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
   stats:statsHtml(x),hist:histHtml(x),value:valueHtml(x)};
  const T=[['gear','Gear'],['spirits','Spirits'],['skills','Skills'],['stats','Stats'],['value','Value'],['hist','History']];
@@ -265,4 +279,4 @@ bcmp.onclick=()=>{const cs=D.listings.filter(x=>sel.has(x.id));
  return `<tr><td>${l}</td>`+v.map(n=>`<td class="${n===best?'best':''}">${typeof n=='number'&&n>99999?big(n):typeof n=='number'?f(n,1):n??'–'}</td>`).join('')+'</tr>'}).join('')+'</table>';cmp.scrollIntoView()};
 document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{fsort.value=b.dataset.s;draw()});
 {const _d=draw;draw=function(){document.querySelectorAll('.qs button').forEach(b=>b.classList.toggle('on',b.dataset.s==fsort.value));return _d.apply(this,arguments)}}
-</script><footer>Icons: <a href="https://lucide.dev" target="_blank">Lucide</a> (ISC license, self-hosted, see icons/ui/LICENSE-lucide.txt). Emoji are your device font. No MIR4 game art used except item icons shown by public NFT pages.</footer><script src="extras.js?v=9"></script><script src="premium.js?v=6"></script><script src="pricehist.js?v=1"></script><script src="wemix1h.js?v=2"></script><script src="topup.js?v=1"></script><script src="top20.js?v=5"></script><script src="soldsearch.js?v=2"></script></body></html>
+</script><footer>Icons: <a href="https://lucide.dev" target="_blank">Lucide</a> (ISC license, self-hosted, see icons/ui/LICENSE-lucide.txt). Emoji are your device font. No MIR4 game art used except item icons shown by public NFT pages.</footer><script src="extras.js?v=9"></script><script src="premium.js?v=6"></script><script src="pricehist.js?v=1"></script><script src="wemix1h.js?v=2"></script><script src="topup.js?v=1"></script><script src="top20.js?v=5"></script><script src="soldsearch.js?v=3"></script></body></html>
