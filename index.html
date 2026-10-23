@@ -57,7 +57,7 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .sk.top{width:60px;height:60px;background-size:780px 420px}
 .ic.sk b{display:none}.ic.sk i{background:#b91c1c;left:-4px;bottom:-4px}
 .ic.sk.lg{border-color:#f5c518}.ic.sk.lg i{background:#f5c518;color:#1a1300}
-.nmx{display:none}.card.lbl .nmx{display:block;font-size:10px;color:#cbd3e1;margin-top:4px;line-height:1.2}
+.nmx{display:none!important}
 .ic.xf{border:0;background-color:transparent}
 .ic.xf::before{content:'';position:absolute;inset:0;background:center/100% no-repeat;border-radius:50%}
 .ic.xf .im{position:absolute;inset:7%;background:center/88% no-repeat;border-radius:50%}
@@ -277,7 +277,7 @@ function drawCards(){bestBuy();const k=fsort.value,L=rows().slice().sort(k=='usd
  <div class="more">▸ 🛡 Gear · 📜 Skills · 👻 Spirits</div></div><button class="cmpb${csel.includes(x.id)?' on':''}" data-id="${x.id}">${csel.includes(x.id)?'☑':'☐'} ⚖ Compare</button><div class="cb"></div></div>`}).join('')||'<div class="cl">No listings match.</div>';
  cards.querySelectorAll('.cmpb').forEach(b=>b.onclick=()=>{const id=+b.dataset.id;csel=csel.includes(id)?csel.filter(i=>i!=id):[...csel,id].slice(-2);drawCards()});cbarUpd();cgo.onclick=cmpOpen;cclr.onclick=()=>{csel=[];drawCards()};
  if(csel.length==2&&!window._co){window._co=1;cmpOpen()}
- cards.querySelectorAll('.cb').forEach(cb=>cb.onclick=e=>{const t=e.target.closest('.tab');if(t){cb.querySelectorAll('.tab').forEach(z=>z.classList.toggle('on',z==t));cb.querySelectorAll('.tp').forEach(p=>p.hidden=p.dataset.p!=t.dataset.t);return}if(e.target.closest('.ic'))cb.parentElement.classList.toggle('lbl')});
+ cards.querySelectorAll('.cb').forEach(cb=>cb.onclick=e=>{const t=e.target.closest('.tab');if(t){cb.querySelectorAll('.tab').forEach(z=>z.classList.toggle('on',z==t));cb.querySelectorAll('.tp').forEach(p=>p.hidden=p.dataset.p!=t.dataset.t);return}});
  cards.querySelectorAll('.ch').forEach(el=>el.onclick=()=>{const c=el.parentElement,x=D.listings.find(y=>y.id==c.dataset.id),cb=c.querySelector('.cb');
   if(!cb.innerHTML)cb.innerHTML=buildHtml(x)+`<a class="btn" href="https://www.xdraco.com/nft/trade/${x.id}" target="_blank">Open on XDRACO</a><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/${x.id}" target="_blank">Full details (Hofgamer)</a>`;
   c.classList.toggle('open');el.querySelector('.more').textContent=c.classList.contains('open')?'▾ Hide':'▸ 🛡 Gear · 📜 Skills · 👻 Spirits'});
