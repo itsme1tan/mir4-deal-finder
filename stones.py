@@ -1,5 +1,5 @@
 """Magic stones (best deck) with main stat and substats, read-only from public Hofgamer pages + item-detail API.
-Substats: Hofgamer stores them ~100x the in-game value, so we divide by 100. Raw value kept as the 4th field."""
+Substats: raw Hofgamer values / 40 for stage II stones, / 20 for stage I (same as Hofgamer's page; verified on 2371297). Fields: [name, value, fmt, raw, trance bonus]."""
 import re,json,time,os
 import scrape
 C='cache/stones.json'
@@ -22,12 +22,12 @@ def item(a):
     try: j=json.loads(urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=20).read())
     except Exception as e: j={'ok':False,'error':str(e)}
     d=j.get('data') or {}
-    t=d.get('tier') or 1; dv=100
+    t=d.get('tier') or 1; dv=40 if t==2 else 20
     r=lambda v:round(float(v),2)
     return dict(n=scrape.tr(a['name']),g=int(a.get('grade',0)),e=int(a.get('enhance',0)),t=t,ps=d.get('powerScore'),
       img=scrape.icon(a['icon']) if a.get('icon') else '',
-      main=[[scrape.tr(o.get('optionName','')),r(o.get('optionValue',0)),o.get('optionFormat','')] for o in d.get('options',[])],
-      ok=bool(d),subs=[[scrape.tr(o.get('optionName','')),r(float(o.get('optionValue',0))/dv),o.get('optionAddFormat',''),o.get('optionValue')] for o in d.get('addOptions',[])])
+      main=[[scrape.tr(o.get('optionName','')),r(o.get('optionValue',0)),o.get('optionFormat',''),o.get('tranceValue') or 0] for o in d.get('options',[])],
+      ok=bool(d),subs=[[scrape.tr(o.get('optionName','')),r(float(o.get('optionValue',0))/dv),o.get('optionAddFormat',''),o.get('optionValue'),r(float(o.get('optionTranceStep') or 0)/dv)] for o in d.get('addOptions',[])])
 def for_id(i,h=None):
     h=h or scrape.get(f"{scrape.B}/nft/{i}")
     out=[];dead=False
