@@ -9,5 +9,6 @@ def save(x,src='live'):
     if not os.path.exists(p) or open(p).read()!=b: open(p,'w').write(b); return 1
     return 0
 if __name__=='__main__':
-    n=sum(save(x) for x in json.load(open('data.json')).get('listings',[]) if x.get('id'))
+    import stones
+    n=sum(save(stones.attach(x)) for x in json.load(open('data.json')).get('listings',[]) if x.get('id'))
     print(f'snapshots: {n} written, {len(os.listdir(D))} total')

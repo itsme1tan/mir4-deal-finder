@@ -77,6 +77,13 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .ic.xs{width:50px!important;height:50px!important;aspect-ratio:1;flex:none;border:0!important;overflow:visible!important}.ic.xs::before{border-radius:50%}
 .ic.xs .im{border-radius:50%}
 .ic.xs i{left:-7px;bottom:-6px;min-width:22px;height:22px;line-height:18px;background:radial-gradient(circle at 50% 35%,#4a4a4a,#222 70%);border:2px solid #9f916c;color:#fff;font:500 10px system-ui;z-index:2}
+.msg{display:grid;grid-template-columns:repeat(6,1fr);gap:12px 4px;justify-items:center;margin:4px auto 10px;max-width:360px}
+.msg .it{width:48px;cursor:pointer}.msg .ic.xf{width:42px;height:42px}.msg .ic.xf b{font-size:11px;right:-7px;top:-9px;min-width:0;padding:0}
+.msg .ic.xf i{min-width:0;width:16px;height:16px;font-size:8px;left:-4px;bottom:-4px;background:#333;border:1.5px solid #9f916c;color:#fff;display:flex;align-items:center;justify-content:center;line-height:1;padding:0}
+.msg .it.on .ic{box-shadow:0 0 0 2px #f5c518;border-radius:50%}
+.msd{background:rgba(0,0,0,.25);border-radius:10px;padding:8px 12px;max-width:340px;margin:0 auto}
+.msn{font-weight:700;font-size:13px;margin-bottom:4px;color:#fde68a}.msn em{font-style:normal;color:#fff}
+.msr{display:flex;justify-content:space-between;font-size:12px;padding:2px 0;color:#cbd5e1}.msr b{color:#fff;font-weight:600}.msr.mm{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:4px;margin-bottom:2px}.msr.mm b{color:#fde68a}
 .ic.xs .nmx,.it .nmx{display:none!important}
 .ic.xs i,.gr2 .ic.xf i{display:flex!important;align-items:center;justify-content:center;line-height:1!important;padding:0!important;letter-spacing:0!important;text-align:center;box-sizing:border-box;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif!important}
 .ic.xs i{width:22px;min-width:22px}
@@ -150,6 +157,7 @@ const LPT=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',weekda
 const ago=t=>{const s=Math.max(0,(Date.now()-t)/1e3),d=s/86400|0,h=s/3600|0,m=s/60|0;return d?d+'d ago':h?h+'h ago':m+'m ago'};
 const listedPT=x=>{const t=lms(x);return t?`${LPT.format(t)} PT · ${ago(t)}`:(x.listed||'')};
 const RN=['','I','II','III','IV','V','VI','VII','VIII','IX','X'],rn=n=>RN[n]||n;
+function msSel(e){const r=e.closest('.tp')||e.parentElement.parentElement,k=e.dataset.k;r.querySelectorAll('.msg .it').forEach(z=>z.classList.toggle('on',z==e));r.querySelectorAll('.msd').forEach(d=>d.hidden=d.dataset.k!=k)}
 function buildHtml(x){const b=x.build||{};
  const SPF={'Mermaid Princess Marina':'icons/06af17f4100c.webp','美人鱼公主玛丽娜':'icons/06af17f4100c.webp','Flame Dragon Volcano':'icons/5415e5be5681.webp','炎龙沃卡诺':'icons/5415e5be5681.webp','Sage Sovereign White Tiger':'icons/a3b4f2327805.webp','圣君白虎仲谋':'icons/a3b4f2327805.webp','Arcane Mage Aquiel':'icons/4f6172ad3bba.webp','魔道士阿奎尔':'icons/4f6172ad3bba.webp','Priest of Light Cheonho':'icons/21e71ed5b3e5.webp','光明司祭天虎':'icons/21e71ed5b3e5.webp'};
  const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}">${/\bxf\b/.test(cls)?`<div class="ic ${cls}"><span class="im" style="${st}"></span>`:`<div class="ic ${cls}" style="${st}">`}${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
@@ -161,9 +169,10 @@ function buildHtml(x){const b=x.build||{};
  const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+rows2(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
   return `<div class="it" title="${nm}"><div class="ic xf g${g.g}"><span class="im" style="background-image:url('${g.img}')"></span>${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<u style="background-image:url(icons/xd/hole-${Math.min(4,g.h)}.webp)"></u>`:''}</div><div class="nmx">${nm}</div></div>`}):none,
   spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('xf xs g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)}):none,
+  stones:(b.stones||[]).length?'<h4>Magic Stones</h4><div class="msg">'+b.stones.map((m,k)=>`<div class="it${k?'':' on'}" data-k="${k}" onclick="msSel(this)"><div class="ic xf g${m.g}"><span class="im" style="background-image:url('${m.img}')"></span>${m.e?`<b>+${m.e}</b>`:''}<i class="tr">${rn(m.t)}</i></div></div>`).join('')+'</div>'+b.stones.map((m,k)=>`<div class="msd" data-k="${k}"${k?' hidden':''}><div class="msn">${m.n.replace(/^\[[A-Z]\] /,'')}${m.e?' <em>+'+m.e+'</em>':''}</div>${m.ok?(m.main||[]).map(o=>`<div class="msr mm"><span>${o[0]}</span><b>${o[1].toLocaleString()}${o[2]}</b></div>`).join('')+(m.subs||[]).map(o=>`<div class="msr"><span>${o[0]}</span><b>${(+o[1]).toLocaleString()}${o[2]}</b></div>`).join(''):'<div class="msr na"><span>Stats not saved</span></div>'}</div>`).join(''):'',
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
   stats:statsHtml(x),hist:histHtml(x),value:valueHtml(x)};
- const T=[['gear','Gear'],['spirits','Spirits'],['skills','Skills'],['stats','Stats'],['value','Value'],['hist','History']];
+ const T=[['gear','Gear'],['spirits','Spirits'],...((b.stones||[]).length?[['stones','Stones']]:[]),['skills','Skills'],['stats','Stats'],['value','Value'],['hist','History']];
  return `<span class="pill">Listed ${listedPT(x)}</span><div class="tabs">${T.map(([k,l],i)=>`<button class="tab${i?'':' on'}" data-t="${k}">${l}</button>`).join('')}</div>`+T.map(([k],i)=>`<div class="tp" data-p="${k}"${i?' hidden':''}>${P[k]}</div>`).join('')}
 function progHtml(x){let o='<h4>Progression</h4><div class="sg">';const r=(n,v)=>`<div class="sr"><span>${n}</span><b>${v}</b><i class="na"></i></div>`;
  if(x.codex_pct!=null)o+=r('Codex',`${x.codex_pct}% (${f(x.codex_done)})`)+(x.codex_parts||[]).map(([n,a,b])=>r('&nbsp;&nbsp;'+n,`${a}/${b}`)).join('');
@@ -286,7 +295,7 @@ function drawCards(){bestBuy();const k=fsort.value,L=rows().slice().sort(k=='usd
  if(csel.length==2&&!window._co){window._co=1;cmpOpen()}
  cards.querySelectorAll('.cb').forEach(cb=>cb.onclick=e=>{const t=e.target.closest('.tab');if(t){cb.querySelectorAll('.tab').forEach(z=>z.classList.toggle('on',z==t));cb.querySelectorAll('.tp').forEach(p=>p.hidden=p.dataset.p!=t.dataset.t);return}});
  cards.querySelectorAll('.ch').forEach(el=>el.onclick=()=>{const c=el.parentElement,x=D.listings.find(y=>y.id==c.dataset.id),cb=c.querySelector('.cb');
-  if(!cb.innerHTML)cb.innerHTML=buildHtml(x)+`<a class="btn" href="https://www.xdraco.com/nft/trade/${x.id}" target="_blank">Open on XDRACO</a><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/${x.id}" target="_blank">Full details (Hofgamer)</a>`;
+  const fill=()=>{cb.innerHTML=buildHtml(x)+`<a class="btn" href="https://www.xdraco.com/nft/trade/${x.id}" target="_blank">Open on XDRACO</a><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/${x.id}" target="_blank">Full details (Hofgamer)</a>`};if(!cb.innerHTML){fill();if(!(x.build&&x.build.stones))fetch('data/snaps/'+x.id+'.json').then(r=>r.ok?r.json():null).then(sn=>{const st=sn&&sn.build&&sn.build.stones;if(st&&st.length){x.build=x.build||{};x.build.stones=st;const on=cb.querySelector('.tab.on')?.dataset.t;fill();on&&cb.querySelector(`.tab[data-t="${on}"]`)?.click()}}).catch(()=>{})};
   c.classList.toggle('open');el.querySelector('.more').textContent=c.classList.contains('open')?'▾ Hide':'▸ 🛡 Gear · 📜 Skills · 👻 Spirits'});
  if(location.hash.startsWith('#open1')&&!window._o){window._o=1;cards.querySelector('.ch')?.click();const t=location.hash.slice(6);if(t)cards.querySelector(`.tab[data-t=${t}]`)?.click()}}
 
