@@ -229,8 +229,9 @@ function histInfo(x){const H=(x.history||[]).filter(e=>e.wemix);const mine=[];fo
  const cur=x.wemix,first=mine.length?mine[mine.length-1].wemix:cur;let cuts=0;for(let i=mine.length-1;i>0;i--)if(mine[i-1].wemix<mine[i].wemix)cuts++;
  const sold=H.find(e=>e.ev=='Sold');return {cuts,chg:first?Math.round((cur-first)/first*100):0,sold}}
 function rlChip(x){const r=x.rl;if(!r)return '';const w=v=>f(v)+' WEMIX';const how=r.relists?'Relisted'+(r.relists>1?' '+r.relists+'x':''):'Price changed';
- if(r.pct<0)return `<span class="hc" style="border-color:#16a34a;color:#86efac" title="${how}, price cut ${-r.pct}% (from ${w(r.from)} to ${w(r.to)}, about $${f(r.usd_from-r.usd_to)} less)">${I('repeat')} ✂️ -${-r.pct}% · ${f(r.from)}→${f(r.to)}</span>`;
- if(r.pct>0)return `<span class="hc" style="border-color:#b91c1c;color:#fca5a5" title="${how}, price raised ${r.pct}% (from ${w(r.from)} to ${w(r.to)})">${I('repeat')} ⬆ +${r.pct}%</span>`;
+ const du=Math.round(Math.abs(r.to-r.from)*D.wemix_usd);
+ if(r.pct<0)return `<span class="hc" style="border-color:#16a34a;color:#86efac" title="${how}, price cut ${-r.pct}% (from ${w(r.from)} to ${w(r.to)}, about $${f(du)} less at today's WEMIX rate)">${I('repeat')} 🔥 ↓ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
+ if(r.pct>0)return `<span class="hc" style="border-color:#dc2626;color:#fca5a5" title="${how}, price raised ${r.pct}% (from ${w(r.from)} to ${w(r.to)}, about $${f(du)} more at today's WEMIX rate)">${I('repeat')} ↑ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
  return `<span class="hc" title="${how}, same price ${w(r.to)}">${I('repeat')} ${r.relists||''}x</span>`}
 function histChips(x){const h=histInfo(x);let o='';if(h.cuts)o+=`<span class="hc">Price cut ${h.cuts}x, ${h.chg}% since listed</span>`;
  if(h.sold)o+=`<span class="hc">Last sold ${big(h.sold.wemix)} WEMIX (${mon(h.sold.date)} ${h.sold.date.slice(0,4)})</span>`;return o}

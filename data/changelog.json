@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "🔥",
+  "text": "Price drop tags now show the dollar change with a fire icon in green; price increases show in red"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "📊",
   "text": "Header status line is now simple gold icons with numbers"
  },
