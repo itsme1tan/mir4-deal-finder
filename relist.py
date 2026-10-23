@@ -62,11 +62,49 @@ def summary(D,H,R,usd):
     span=ago(snaps[0])/24 if snaps else 0
     parts.append(f"{nr} relisted and {nc} with a price cut" + (f" since tracking started {dt.datetime.strptime(snaps[0][:10],'%Y-%m-%d'):%b %-d}" if snaps and snaps[0][:10]!=norm(D['updated'])[:10] else " (tracking started today)"))
     return parts
+def char_history(H,D,usd):
+    """Per character timeline (key name|server|class): listed, price change, delisted, relisted, sold. Times PT, WEMIX and USD at that day's rate."""
+    W=json.load(open(os.path.join(DD,'wemix_daily.json')))
+    def u(t,w):
+        r=W.get(t[:10]) or usd
+        return round(w*r) if w else None
+    snaps=sorted(H['snapshots']); idx={t:i for i,t in enumerate(snaps)}
+    sold={}
+    try: arch=json.load(open(os.path.join(DD,'sold_archive.json')))
+    except Exception: arch=[]
+    for s in list(arch)+list(D.get('sales',[])):
+        if s.get('sold') and s.get('id'): sold[s['id']]=s
+    lt={x['id']:norm_utc8(x['listed']) for x in list(D['listings'])+list(sold.values()) if x.get('listed')}
+    out={}
+    for k,o in H['chars'].items():
+        obs=sorted(o['obs'],key=lambda z:z['t']); ev=[]
+        def add(t,typ,w,fr=None,i=None):
+            if i in lt and typ in('listed','relisted') and lt[i]<=t: t=lt[i]  # exact Hofgamer listing time when known
+            ev.append({k2:v for k2,v in {'t':t,'type':typ,'wemix':w,'usd':u(t,w),'from':fr}.items() if v is not None})
+        add(obs[0]['t'],'listed',obs[0]['wemix'],None,obs[0]['id'])
+        for a,b in zip(obs,obs[1:]):
+            gap=idx[b['t']]-idx[a['t']]>1
+            if b['id']!=a['id'] or gap:
+                if gap: add(snaps[idx[a['t']]+1],'delisted',None)
+                add(b['t'],'relisted',b['wemix'],a['wemix'] if b['wemix']!=a['wemix'] else None,b['id'])
+            elif b['wemix']!=a['wemix']: add(b['t'],'price',b['wemix'],a['wemix'])
+        last=obs[-1]
+        if last['t']!=snaps[-1]:
+            s=sold.get(last['id'])
+            if s: add(norm_utc8(s['sold']),'sold',s.get('wemix') or last['wemix'])
+            else: add(snaps[idx[last['t']]+1],'delisted',None)
+        out[k]={'first_seen':min(obs[0]['t'],ev[0]['t']),'events':ev}
+    return out
+def norm_utc8(t):
+    # Hofgamer times are UTC+8; convert to PT (UTC-7)
+    try: return (dt.datetime.strptime(t[:16],'%Y-%m-%d %H:%M')-dt.timedelta(hours=15)).strftime('%Y-%m-%d %H:%M')
+    except Exception: return t
 def main():
     D=json.load(open(os.path.join(ROOT,'data.json'))); usd=D['wemix_usd']
     H=json.load(open(HP)) if os.path.exists(HP) else None
     if H is None: H={'snapshots':[],'chars':{}}; backfill(H)
     observe(H,D,'run'); json.dump(H,open(HP,'w'),ensure_ascii=False,separators=(',',':'))
+    json.dump({'updated':D['updated'],'chars':char_history(H,D,usd)},open(os.path.join(DD,'char_history.json'),'w'),ensure_ascii=False,separators=(',',':'))
     R=analyze(H,D,usd); json.dump({'updated':D['updated'],'by_id':R},open(os.path.join(DD,'relist.json'),'w'),ensure_ascii=False)
     json.dump({'updated':D['updated'],'parts':summary(D,H,R,usd)},open(os.path.join(DD,'summary.json'),'w'),ensure_ascii=False)
     return D,H,R,usd

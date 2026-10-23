@@ -45,8 +45,19 @@ let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getEl
  draw();const c=cards.querySelector(`.card[data-id="${id}"]`);
  o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div><div class="bd"></div>`;
  if(c){SV=[c,c.parentNode,c.nextSibling];o.querySelector('.bd').appendChild(c);const h=c.querySelector('.ch');if(h&&!c.classList.contains('open'))h.click()}else o.querySelector('.bd').innerHTML='<div class="cl">Details not available.</div>';
- SV&&(SV.y=scrollY);o.classList.add('on');box.style.display='none';o.scrollTop=0;
+ SV&&(SV.y=scrollY);hist20(x,o.querySelector('.bd'));o.classList.add('on');box.style.display='none';o.scrollTop=0;
  sback.onclick=()=>{o.classList.remove('on');box.style.display='';if(SV){SV[1].insertBefore(SV[0],SV[2]);scrollTo(0,SV.y||0);SV=null}}}
+let CH=null;const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const pt=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);const ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+7,+m[5]);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
+ return (d(ms)==d(n)?'Today':d(ms)==d(n-864e5)?'Yesterday':f(['en-US',{month:'short',day:'numeric'}])(ms))+' at '+f(['en-US',{hour:'numeric',minute:'2-digit'}])(ms)};
+const ptOld=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);let h=+m[4];const ap=h<12?'AM':'PM';h=h%12||12;return `${MO[m[2]-1]} ${+m[3]} ${h}:${m[5]} ${ap}`};
+function hist20(x,bd){const go=c=>{const r=c&&c[`${x.name}|${x.server||''}|${x.cls}`];if(!r)return;const L={listed:'Listed',relisted:'Relisted',price:'Price change',delisted:'Delisted',sold:'Sold'};
+ const ln=r.events.slice().reverse().map(e=>{const p=e.from&&e.wemix&&e.from!=e.wemix?` <span class="${e.wemix<e.from?'dn':'up'}">(${e.wemix>e.from?'+':''}${((e.wemix/e.from-1)*100).toFixed(1)}%)</span>`:'';
+  const v=e.wemix?(e.from&&e.from!=e.wemix?`${fm(e.from)} → ${fm(e.wemix)} W`:`${fm(e.wemix)} W`)+(e.usd?` <small>$${fm(e.usd)}</small>`:'')+p:'';
+  return `<div class="hl"><span class="ht">${pt(e.t)}</span><b>${L[e.type]||e.type}</b><span>${v}</span></div>`}).join('');
+ const d=document.createElement('div');d.className='h20';d.innerHTML=`<div class="hh">🕘 History <small>First seen ${pt(r.first_seen).replace(/ at .*/,'')}</small></div>${ln}`;bd.prepend(d)};
+ if(CH)go(CH);else fetch('data/char_history.json?'+Date.now()).then(r=>r.ok?r.json():{}).then(j=>{CH=j.chars||{};go(CH)}).catch(()=>{})}
+const hs=document.createElement('style');hs.textContent=`.h20{margin:4px 0 12px;padding:10px 12px;background:#161c28;border:1px solid #2a3140;border-radius:10px;font-size:13px}.h20 .hh{font-weight:700;margin-bottom:6px}.h20 .hh small{color:#9aa3b8;font-weight:400;margin-left:6px}.h20 .hl{display:grid;grid-template-columns:132px 74px 1fr;gap:6px;padding:4px 0;border-top:1px solid #232a37}.h20 .ht{color:#9aa3b8}.h20 small{color:#9aa3b8}.h20 .dn{color:#4ade80}.h20 .up{color:#f87171}`;document.head.appendChild(hs);
 window.solo20=id=>solo(id,D.listings);
 const w=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(w);render()}},100);
 })();

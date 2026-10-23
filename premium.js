@@ -83,6 +83,8 @@ document.addEventListener('click',e=>{if(e.target.closest('details.xd'))e.stopPr
 document.addEventListener('click',e=>{const b=e.target.closest('.wst');if(!b)return;e.stopPropagation();e.preventDefault();const k=decodeURIComponent(b.dataset.w);
  if(W[k])delete W[k];else{const x=D.listings.find(z=>key(z)==k);W[k]={wemix:x.wemix,usd:Math.round(x.usd),t:new Date().toISOString().slice(0,10),id:x.id}}sv();draw();wl()},true);
 const sms=s=>Date.parse(s.replace(' ','T')+':00+08:00');// Hofgamer times are UTC+8
+const dPT=t=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}).format(t);
+const relPT=t=>{const d=dPT(t),n=Date.now(),hm=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'}).format(t),md=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric'}).format(t);return (d==dPT(n)?'Today':d==dPT(n-864e5)?'Yesterday':md)+' at '+hm};
 const PT=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 function wl(){const ks=Object.keys(W);wcnt.textContent=ks.length;if(!ks.length){wlist.innerHTML='Tap ☆ Watch on any card. You will see price changes, relists and sales here after each refresh, about every 30 minutes (not real time).';return}
  wlist.innerHTML=ks.map(k=>{const w=W[k],[n,sv2,c]=k.split('|');const x=D.listings.find(z=>key(z)==k);
@@ -98,7 +100,7 @@ function prices(){const now=Date.parse(D.updated.replace(' ','T')+':00-07:00'),S
 function feed(){const now=Date.parse(D.updated.replace(' ','T')+':00-07:00');const ev=[];
  D.listings.forEach(x=>{if(x.listed&&x.ps>=650000){const t=sms(x.listed);if(now-t<2*864e5)ev.push({t,h:`<b style="color:#60a5fa">Listed</b> <a class="fn" data-l="${x.id}">${x.name}</a> · ${x.cls} Lv ${x.lv} · ${f(x.ps)} power · ${f(x.wemix)} WEMIX ($${f(x.usd)})`})}});
  D.sales.forEach(s=>{if(s.sold&&s.wemix&&s.ps>=650000){const t=sms(s.sold);if(now-t<2*864e5)ev.push({t,h:`<b style="color:#4ade80">Sold</b> <span class="fs" data-s="${s.id||''}">${s.name}</span> · ${s.cls} Lv ${s.lv} · ${f(s.ps)} power · ${f(s.wemix)} WEMIX ($${f(s.wemix*D.wemix_usd)})`})}});
- ev.sort((a,b)=>b.t-a.t);flist.innerHTML=(ev.length?ev.map(e=>`<div style="padding:6px 0;border-bottom:1px solid #232a37"><span class="mt">${PT.format(e.t)} PT</span><br>${e.h}</div>`).join(''):'Nothing in the last 48h.')+'<div class="mt" style="margin-top:6px">Built from the 30 minute refresh, so it can be about 30 minutes behind. Listings and sales shown are 650k+ power.</div>';
+ ev.sort((a,b)=>b.t-a.t);flist.innerHTML=(ev.length?ev.map(e=>`<div style="padding:6px 0;border-bottom:1px solid #232a37"><span class="mt">${relPT(e.t)} PT</span><br>${e.h}</div>`).join(''):'Nothing in the last 48h.')+'<div class="mt" style="margin-top:6px">Built from the 30 minute refresh, so it can be about 30 minutes behind. Listings and sales shown are 650k+ power.</div>';
  if(!document.getElementById('fnst')){const y=document.createElement('style');y.id='fnst';y.textContent='#flist a.fn,#flist .fs.on{color:#e8c872;text-decoration:underline dotted rgba(232,200,114,.5);text-underline-offset:3px;cursor:pointer}';document.head.appendChild(y)}
  flist.querySelectorAll('a.fn').forEach(a=>a.onclick=()=>window.solo20&&solo20(a.dataset.l));
  flist.querySelectorAll('.fs').forEach(a=>{const id=a.dataset.s;if(!id)return;fetch('data/snaps/'+id+'.json',{method:'HEAD'}).then(r=>{if(!r.ok)return;a.classList.add('on');a.onclick=()=>window.soloSold&&soloSold(id,a.textContent)}).catch(()=>{})})}

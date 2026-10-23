@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What's new · MIR4 deal finder</title>
+<style>body{margin:0;background:#0f131b;color:#e6e9ef;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.sb{position:sticky;top:0;display:flex;align-items:center;gap:10px;padding:10px;background:#141925;border-bottom:1px solid #2a3140}.sb a{background:#2a3140;color:#fff;border-radius:9px;padding:7px 12px;font-weight:700;text-decoration:none}main{max-width:640px;margin:0 auto;padding:8px 12px 30px}h2{font-size:14px;color:#e8c872;margin:18px 0 6px}.it{display:flex;gap:10px;padding:8px 10px;background:#161c28;border:1px solid #232a37;border-radius:10px;margin:6px 0}.it span:first-child{width:22px;text-align:center}</style></head>
+<body><div class="sb"><a href="./">← Back</a><b>✨ What's new</b></div><main id="m">Loading…</main>
+<script>
+const tz={timeZone:'America/Los_Angeles'},d=t=>new Intl.DateTimeFormat('en-CA',tz).format(t),n=Date.now();
+const lab=s=>s==d(n)?'Today':s==d(n-864e5)?'Yesterday':new Date(s+'T12:00:00Z').toLocaleDateString('en-US',{timeZone:'UTC',weekday:'short',month:'short',day:'numeric'});
+const e=s=>String(s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+fetch('data/changelog.json?'+n).then(r=>r.json()).then(L=>{const g={};L.forEach(x=>(g[x.date]=g[x.date]||[]).push(x));
+m.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h2>${lab(k)}</h2>`+g[k].map(x=>`<div class="it"><span>${e(x.emoji||'•')}</span><span>${e(x.text)}</span></div>`).join('')).join('')}).catch(()=>m.textContent='Could not load changes.')
+</script></body></html>
