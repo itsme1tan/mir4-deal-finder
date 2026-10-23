@@ -155,6 +155,7 @@ function buildHtml(x){const b=x.build||{};
  const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}">${/\bxf\b/.test(cls)?`<div class="ic ${cls}"><span class="im" style="${st}"></span>`:`<div class="ic ${cls}" style="${st}">`}${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
  const none='<div class="lt">Not loaded yet.</div>';
  const rows2=(arr,fn)=>{const A=['Weapon','Sub-weapon','Top','Helmet','Pants','Gloves','Shoes'],C=['Necklace','Bracelet','Earrings','Ring','Medallion','Charm','Belt','Seal'],o=(L,g)=>{const k=L.indexOf(g.slot);return k<0?99:k};
+  const AK=[['Necklace',/necklace|项链/i],['Bracelet',/bracelet|手镯|手环/i],['Earrings',/earring|耳环/i],['Ring',/\bring\b|戒指/i],['Medallion',/medallion|奖章|徽章/i],['Charm',/charm|护符/i],['Belt',/belt|腰带/i],['Seal',/\bseal\b|印/i]];arr=arr.map(g=>{if(g.slot)return g;const m=AK.find(([,r])=>r.test(g.n||''));return m?{...g,slot:m[0]}:g});
   const w=arr.filter(g=>A.includes(g.slot)||!C.includes(g.slot)).sort((a,b)=>o(A,a)-o(A,b)),c=arr.filter(g=>C.includes(g.slot)).sort((a,b)=>o(C,a)-o(C,b));
   return '<div class="gr2"><div class="ig gl">'+w.map(fn).join('')+'</div><div class="ig gl">'+c.map(fn).join('')+'</div></div>'};
  const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+rows2(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
