@@ -47,5 +47,6 @@ let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getEl
  if(c){SV=[c,c.parentNode,c.nextSibling];o.querySelector('.bd').appendChild(c);const h=c.querySelector('.ch');if(h&&!c.classList.contains('open'))h.click()}else o.querySelector('.bd').innerHTML='<div class="cl">Details not available.</div>';
  SV&&(SV.y=scrollY);o.classList.add('on');box.style.display='none';o.scrollTop=0;
  sback.onclick=()=>{o.classList.remove('on');box.style.display='';if(SV){SV[1].insertBefore(SV[0],SV[2]);scrollTo(0,SV.y||0);SV=null}}}
+window.solo20=id=>solo(id,D.listings);
 const w=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(w);render()}},100);
 })();

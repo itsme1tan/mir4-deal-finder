@@ -21,5 +21,8 @@ function open1(c,e){const d=c.querySelector('.sdet'),m=c.querySelector('.soldmor
   d.innerHTML=hd+'<div class="cb" style="display:block;border-radius:10px">'+h+'</div><a class="btn" style="background:#202838" href="https://nft.hofgamer.com/mir4/nft/'+id+'" target="_blank">Full details (Hofgamer)</a>';
   d.querySelectorAll('.tabs,.pill').forEach(e=>e.remove());d.querySelectorAll('.tp').forEach(p=>p.hidden=['value','hist'].includes(p.dataset.p));
   d.querySelectorAll('a').forEach(a=>a.addEventListener('click',ev=>ev.stopPropagation()))})}
+window.soloSold=(id,nm)=>{let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}const y=scrollY;
+ o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${String(nm||'').replace(/[<>&]/g,'')}</b></div><div class="bd"><div class="soldc" data-sid="${id}"><div class="soldmore" hidden></div><div class="sdet" hidden></div></div></div>`;
+ const c=o.querySelector('.soldc');c.onclick=e=>open1(c,e);open1(c);o.classList.add('on');o.scrollTop=0;sback.onclick=()=>{o.classList.remove('on');scrollTo(0,y)}};
 function hook(){const fq=document.getElementById('fq');if(!fq)return setTimeout(hook,300);fq.addEventListener('input',run);const w=()=>{if(typeof D!='undefined'&&D&&D.listings)run();else setTimeout(w,500)};w()}
 document.readyState=='loading'?document.addEventListener('DOMContentLoaded',hook):hook()})();
