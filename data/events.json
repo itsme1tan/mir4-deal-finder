@@ -227,6 +227,15 @@
    "end_date": "2026-10-27",
    "date_only": true,
    "src": "https://www.wemix.com/news/wemix-play-update-b18cb5601b89"
+  },
+  {
+   "name": "Yellow Dragon Wayfarer",
+   "kind": "event",
+   "tz": "server",
+   "start": "2026-10-26T01:00",
+   "end": "2026-11-09T01:00",
+   "detail": "Sellers grinding this event may come out with better stones, spirits and gear, so listings after Nov 9 could be stronger for the same price.",
+   "src": "https://forum.mir4global.com/post/2680"
   }
  ],
  "recurring": [
