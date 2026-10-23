@@ -57,7 +57,9 @@ def tr(n):
     if _DICT is None:
         try: _DICT=json.loads(get('https://nft.hofgamer.com/mir4/api/dict/en'))
         except Exception: _DICT={}
-    return _DICT.get(n) or n
+    return _DICT.get(n) or CN_FIX.get(n) or n
+# names the hofgamer dictionary leaves untranslated (newer spirits)
+CN_FIX={'美人鱼公主玛丽娜':'Mermaid Princess Marina','炎龙沃卡诺':'Flame Dragon Volcano','圣君白虎仲谋':'Sage Sovereign White Tiger','魔道士阿奎尔':'Arcane Mage Aquiel','光明司祭天虎':'Priest of Light Cheonho','魔女阿尔卡纳':'Witch Arcana','大天使亚列':'Archangel Ariel','千里传令 马鲁':'Maru the Messenger'}
 ICON_MAP='cache/icons.json'
 def icon(url):
     """Download once, shrink to 64px webp in icons/, return repo-relative path (falls back to remote URL)."""
