@@ -77,6 +77,12 @@ td.l,th.l{text-align:left}tr:hover td{background:#1a202b}.deal{background:#1f7a3
 .ic.xs i{background:#2b2f38;border:1.5px solid #d9c58a;color:#fff;z-index:2}
 .sr .si{width:24px;height:24px;display:block}
 .sr.wi{grid-template-columns:24px 1fr auto 64px;border-bottom-color:rgba(255,255,255,.1)}
+.gr2 .ig.gl{flex-wrap:nowrap;gap:0;justify-content:center;margin:0 auto 14px;max-width:100%}
+.gr2 .ig.gl .it{width:54px;flex:0 1 54px;padding:7px 0}
+.gr2 .ic.xf{width:42px;height:42px}
+.gr2 .ic.xf b{font-size:11px;right:-7px;top:-9px;min-width:0;padding:0}
+.gr2 .ic.xf i{min-width:16px;height:16px;line-height:14px;font-size:8px;left:-4px;bottom:-4px;padding:0 1px}
+.gr2 .ic.xf u{width:16px;height:16px;right:-4px;bottom:-4px}
 .lt{text-align:center;color:#cbd3e1;font-size:12px;margin-top:10px}
 .pill{display:block;width:max-content;margin:0 auto 4px;background:#1d3fb8;color:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:14px}
 .btn{display:block;text-align:center;background:#2b6cb0;color:#fff;border-radius:8px;padding:13px;margin-top:14px;text-decoration:none;font-weight:600}
@@ -138,8 +144,10 @@ function buildHtml(x){const b=x.build||{};
  const SPF={'Mermaid Princess Marina':'icons/06af17f4100c.webp','美人鱼公主玛丽娜':'icons/06af17f4100c.webp','Flame Dragon Volcano':'icons/5415e5be5681.webp','炎龙沃卡诺':'icons/5415e5be5681.webp','Sage Sovereign White Tiger':'icons/a3b4f2327805.webp','圣君白虎仲谋':'icons/a3b4f2327805.webp','Arcane Mage Aquiel':'icons/4f6172ad3bba.webp','魔道士阿奎尔':'icons/4f6172ad3bba.webp','Priest of Light Cheonho':'icons/21e71ed5b3e5.webp','光明司祭天虎':'icons/21e71ed5b3e5.webp'};
  const it=(cls,st,top,bot,n)=>`<div class="it" title="${n}">${/\bxf\b/.test(cls)?`<div class="ic ${cls}"><span class="im" style="${st}"></span>`:`<div class="ic ${cls}" style="${st}">`}${top?`<b>${top}</b>`:''}${bot?`<i>${bot}</i>`:''}</div><div class="nmx">${n}</div></div>`;
  const none='<div class="lt">Not loaded yet.</div>';
- const ring=(arr,fn)=>{const n=arr.length,L=Math.ceil(n/2),R=n-L,C=165,r=135,pos=(k,m,left)=>{const a=(m<2?0:(-68+136*k/(m-1)))*Math.PI/180;return [C+(left?-1:1)*r*Math.cos(a),190+170*Math.sin(a)]};const cl=String(x.cls||'').toLowerCase().replace(/ /g,'');return '<div class="ring"><div class="pt" style="background-image:url(icons/class/'+cl+'.webp)"></div>'+arr.map((g,i)=>{const [px,py]=i<L?pos(i,L,1):pos(i-L,R,0);return fn(g).replace('<div class="it"',`<div class="it" style="--x:${px.toFixed(0)}px;--y:${py.toFixed(0)}px"`)}).join('')+'</div>'};
- const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+ring(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
+ const rows2=(arr,fn)=>{const A=['Weapon','Sub-weapon','Top','Helmet','Pants','Gloves','Shoes'],C=['Necklace','Bracelet','Earrings','Ring','Medallion','Charm','Belt','Seal'],o=(L,g)=>{const k=L.indexOf(g.slot);return k<0?99:k};
+  const w=arr.filter(g=>A.includes(g.slot)||!C.includes(g.slot)).sort((a,b)=>o(A,a)-o(A,b)),c=arr.filter(g=>C.includes(g.slot)).sort((a,b)=>o(C,a)-o(C,b));
+  return '<div class="gr2"><div class="ig gl">'+w.map(fn).join('')+'</div><div class="ig gl">'+c.map(fn).join('')+'</div></div>'};
+ const P={gear:(b.gear||[]).length?'<h4>Equip Items</h4>'+rows2(b.gear,g=>{const rf=+g.r>=1;const nm=`${g.slot?g.slot+': ':''}${g.n} · +${g.e} · Tier ${rn(g.t)||'–'}${rf?' · Dragon reforge '+rn(g.r):''}${g.h?' · '+g.h+' stone holes':''}`;
   return `<div class="it" title="${nm}"><div class="ic xf g${g.g}"><span class="im" style="background-image:url('${g.img}')"></span>${g.e?`<b>+${g.e}</b>`:''}${rf?`<i class="rf${g.r>=7?' red':''}">${rn(g.r)}</i>`:(g.t!=null?`<i class="tr">${rn(g.t)}</i>`:'')}${g.h?`<u style="background-image:url(icons/xd/hole-${Math.min(4,g.h)}.webp)"></u>`:''}</div><div class="nmx">${nm}</div></div>`})+'<div class="lt">Like XDRACO: +number = enhance. Blue roman = Dragon reforge level (red at VII+). Grey roman = item tier (shown when not reforged; full tier in the tap label). Bottom-right socket = magic stone holes. Tap an icon for slot, tier and reforge.</div>':none,
   spirits:(b.spirits||[]).length?'<h4>Spirits</h4>'+icons(b.spirits,p=>{const im=p.img||SPF[p.n];return it('xf xs g'+p.g,im?`background-image:url('${im}')`:'',null,rn(p.t),p.n)})+'<div class="lt">Roman = transcend. Backgrounds use XDRACO grade art: gold = Legendary, orange = Mythical.</div>':none,
   skills:(b.skills||[]).length?'<h4>Skills</h4>'+icons(b.skills,(k,i)=>it('sk'+(i==0?' top':'')+(+k.t>=10?' lg':''),`background-position:-${k.x*(i==0?60:46)}px -${k.y*(i==0?60:46)}px`,null,k.t,k.n))+'<div class="lt">Number = skill level; gold = 10+.</div>':none,
