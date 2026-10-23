@@ -27,20 +27,16 @@ const back=document.createElement('button');back.id='back20';back.textContent='�
 back.onclick=()=>{document.body.classList.add('simple');scrollTo(0,0)};
 const fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const TANK=['Taoist','Warrior','Lionheart'];
-const WA=[['atk',.35],['skill_dmg',.2],['pvp_dmg',.2],['def',.1],['pvp_red',.05],['ps',.1]],WT=[['def',.25],['eva',.2],['pvp_red',.2],['atk',.1],['skill_dmg',.05],['pvp_dmg',.1],['ps',.1]];
-function score(L){const A=D.listings;
- const pool=x=>{const c=A.filter(y=>y.cls==x.cls);return c.length>=3?c:A};
- const pr=(x,k)=>{const v=pool(x).map(y=>y[k]).filter(n=>n!=null);if(x[k]==null||!v.length)return 0;return v.filter(n=>n<=x[k]).length/v.length*100};
- L.forEach(x=>{const W=TANK.includes(x.cls)?WT:WA;x.t20p={};W.forEach(([k])=>x.t20p[k]=pr(x,k));x.t20=W.reduce((s,[k,w])=>s+w*x.t20p[k],0)});
- return L.sort((a,b)=>b.t20-a.t20||b.ps-a.ps).slice(0,10)}
+function score(L){return T20S.score(D.listings,L).slice(0,10)}
 const tp=p=>'top '+Math.max(1,Math.round(100-p))+'%';
 function cb(c){const k=(c||'').toLowerCase();return `<div class="ck"><img src="icons/class/${k}.webp" alt="${c}" loading="lazy"><small>${k}</small></div>`}
 function keys(x){const t=TANK.includes(x.cls),p=x.t20p;return t?`<span title="DEF ${fm(x.def)}, ${tp(p.def)} in class">${I('shield')} ${fm(x.def/1000)}k</span><span title="EVA ${fm(x.eva)}, ${tp(p.eva)} in class">${I('footprints')} ${fm(x.eva)}</span>`:`<span title="ATK ${fm(x.atk)}, ${tp(p.atk)} in class">${I('swords')} ${fm(x.atk/1000)}k</span><span title="PvP ATK ${x.pvp_dmg}%, ${tp(p.pvp_dmg)} in class">${I('flame')} ${x.pvp_dmg??'–'}%</span>`}
-function render(){const L=score(D.listings.filter(x=>x.usd<=25000&&x.build_score!=null));
- box.innerHTML=`<div class="hd"><b>🏆 Top 10 strongest</b><button id="mbtn">☰ More</button></div><div class="ft"><span>${I('scale')}Fair price vs ask</span><span>${I('repeat')}Price drop tracking</span><span title="XDRACO hides the build after a sale; we keep a saved copy">${I('eye')}Sold builds saved</span><span>${I('trophy')}Strength ranking</span></div>`+
+function render(){const L=score(T20S.pick(D.listings));
+ box.innerHTML=`<div class="hd"><b>🏆 Top 10 strongest</b><span style="display:flex;gap:8px;align-items:center"><a href="classes.html" id="bycls" style="color:#e8c872;font-weight:700;font-size:13px;text-decoration:none">Top by class →</a><button id="mbtn">☰ More</button></span></div><div class="ft"><span>${I('scale')}Fair price vs ask</span><span>${I('repeat')}Price drop tracking</span><span title="XDRACO hides the build after a sale; we keep a saved copy">${I('eye')}Sold builds saved</span><span>${I('trophy')}Strength ranking</span></div>`+
  L.map((x,i)=>`<div class="tr20${x.discount>0?' u':''}" data-id="${x.id}"><div class="rw">${cb(x.cls)}<div style="min-width:0"><div class="n">${x.name}</div><div class="m">${keys(x)}<span>⚡ ${fm(x.ps/1000)}k</span><span>${I('gauge')} ${x.build_score}</span>${x.full_conf=='low'?'<span title="few similar sales">⚠</span>':''}</div></div><div class="p"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small><small class="w1h" data-w="${x.wemix}"></small><span class="d ${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</span></div></div></div>`).join('');
  mbtn.onclick=()=>{document.body.classList.remove('simple');scrollTo(0,0)};
- box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)})}
+ box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)});
+ const cid=P.get('char');if(cid&&!window._c20){window._c20=1;if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
 let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
  draw();const c=cards.querySelector(`.card[data-id="${id}"]`);
  o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div><div class="bd"></div>`;

@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIR4 Top by class</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#0f1218;color:#e6e6e6}a{color:#7cb3ff}
+header{padding:14px 18px;background:#171c26;border-bottom:1px solid #2a3140;display:flex;justify-content:space-between;align-items:center}h1{margin:0;font-size:18px}
+header a{color:#e8c872;font-weight:700;font-size:13px;text-decoration:none}
+.ico{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.15em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+#w{padding:8px 10px 20px;max-width:640px;margin:0 auto}
+.fb{display:flex;gap:6px;overflow-x:auto;margin:4px 0 10px;padding-bottom:2px}.fb button{display:flex;align-items:center;gap:5px;background:#161c28;border:1px solid #2a3140;border-radius:999px;color:#d6dae3;padding:5px 10px 5px 6px;font-size:12px;cursor:pointer;white-space:nowrap}.fb button img{width:22px;height:22px}.fb button.on{border-color:#e8c872;color:#e8c872;font-weight:700;background:#2a2410}.fb .al{padding:5px 12px}
+.sec h2{display:flex;align-items:center;gap:8px;font-size:16px;margin:14px 2px 8px}.sec h2 img{width:34px;height:34px}.sec h2 small{color:#9aa3b8;font-weight:400;font-size:12px}
+.r{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;background:#171c26;border:1px solid #2a3140;border-radius:12px;margin:0 0 8px;padding:10px}.r.u{border-color:#1f7a3a}
+.rk{width:28px;height:28px;line-height:28px;border-radius:50%;background:#2a3140;text-align:center;font-weight:800;font-size:13px}.rk.g{background:#f5c518;color:#1a1300}
+.n{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.n a{color:#e8c872;text-decoration:underline dotted rgba(232,200,114,.5);text-underline-offset:3px}
+.m{color:#9aa3b8;font-size:12px;margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hc{border:1px solid #475569;border-radius:999px;padding:2px 8px;font-size:11px}
+.p{text-align:right;white-space:nowrap}.p b{font-size:16px}.p small{display:block;color:#9aa3b8;font-size:11px}.pos{color:#4ade80}.neg{color:#f87171}
+.ex{color:#9aa3b8;font-size:12px;margin:0 2px 6px}.em{color:#9aa3b8;font-size:13px;padding:6px 2px}
+footer{font-size:11px;color:#6b7280;padding:10px 18px 40px}
+</style></head><body>
+<header><h1>🏆 Top by class</h1><a href="index.html">← Top 10</a></header>
+<div id="w"><div class="fb" id="fb"></div><div class="ex">Same strength score as the Top 10, under $25k, listed now. Tap a name to open the character.</div><div id="out" class="em">Loading…</div></div>
+<footer><a href="changelog.html" style="color:#e8c872;font-weight:700">✨ What's new</a></footer>
+<script src="strength.js?v=1"></script>
+<script>
+const CL=['Taoist','Arbalist','Warrior','Lancer'];
+const f=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
+const I=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
+const ci=c=>`<img src="icons/class/${c.toLowerCase()}.webp" alt="${c}" title="${c}">`;
+const J=u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}));
+let D,sel=new URLSearchParams(location.search).get('c')||localStorage.mir4cls||'All';if(sel!='All'&&!CL.includes(sel))sel='All';
+function rl(x){const r=x.rl;if(!r)return '';const du=Math.round(Math.abs(r.to-r.from)*D.wemix_usd);
+ if(r.pct<0)return `<span class="hc" style="border-color:#16a34a;color:#86efac" title="Price cut ${-r.pct}%">${I('repeat')} 🔥 ↓ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
+ if(r.pct>0)return `<span class="hc" style="border-color:#dc2626;color:#fca5a5" title="Price raised ${r.pct}%">${I('repeat')} ↑ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
+ return `<span class="hc" title="Relisted, same price">${I('repeat')} ${r.relists||''}x</span>`}
+const row=(x,i)=>`<div class="r${x.discount>0?' u':''}"><div class="rk${i<3?' g':''}">${i+1}</div><div style="min-width:0"><div class="n"><a href="index.html?char=${encodeURIComponent(x.id)}">${x.name}</a></div><div class="m"><span>⚡ ${f(x.ps)}</span><span>${I('gauge')} ${x.build_score}</span>${rl(x)}</div></div><div class="p"><b>$${f(x.usd)}</b><small>${f(x.wemix)} W</small><small class="${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</small></div></div>`;
+function render(){fb.innerHTML=`<button class="al${sel=='All'?' on':''}" data-c="All">All</button>`+CL.map(c=>`<button data-c="${c}" class="${sel==c?'on':''}">${ci(c)}${c}</button>`).join('');
+ fb.querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=b.dataset.c;localStorage.mir4cls=sel;render()});
+ const R=T20S.score(D.listings,T20S.pick(D.listings));const n=sel=='All'?3:10;
+ out.className='';out.innerHTML=(sel=='All'?CL:[sel]).map(c=>{const L=R.filter(x=>x.cls==c).slice(0,n);
+  return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">None listed under $25k right now.</div>'}</div>`}).join('')}
+Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
+</script></body></html>
