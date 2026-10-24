@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-24",
+  "emoji": "🏆",
+  "text": "Top 10 rank numbers now sit in small gold-ringed circles that are easier to see."
+ },
+ {
+  "date": "2026-10-24",
   "emoji": "⚖️",
   "text": "Compare now works from Top 10 character pages: tap Compare on two characters, then Compare in the bottom bar."
  },
