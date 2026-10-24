@@ -1,5 +1,15 @@
 [
  {
+  "date": "2026-10-24",
+  "emoji": "🎨",
+  "text": "New anime-style app icon: a MIR4 warrior searching with a magnifying glass."
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "⏰",
+  "text": "Timer is now its own fold-out section in the features list."
+ },
+ {
   "date": "2026-10-23",
   "emoji": "✂️",
   "text": "Removed Clan Expedition from the Timer"
