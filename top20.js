@@ -45,7 +45,7 @@ function latest2(){const L=D.listings.filter(x=>x.listed&&x.ps>=650000).filter(x
 // Newly listed: slow auto-scroll; pauses on touch/hover/manual scroll, resumes after 4s idle
 function autoNL(){const g=box.querySelector('.nlg');if(!g||g._as)return;g._as=1;
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const SP=5;let base=0,off=0,last=0,idleUntil=0,back=false,on=false;
+ const SP=3;let base=0,off=0,last=0,idleUntil=0,back=false,on=false;
  const fx=v=>g.style.setProperty('--fx',(-v).toFixed(2)+'px');
  const commit=()=>{if(on){on=false;const L=base+off;off=0;fx(0);g.scrollLeft=L;g.style.scrollSnapType=''}};
  const pause=()=>{idleUntil=performance.now()+4000;commit()};

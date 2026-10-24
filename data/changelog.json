@@ -2,6 +2,11 @@
   {
     "date": "2026-10-24",
     "emoji": "➡️",
+    "text": "Newly listed autoscroll slowed to 3 pixels a second."
+  },
+  {
+    "date": "2026-10-24",
+    "emoji": "➡️",
     "text": "Newly listed autoscroll is slower and uses a smoother glide on phones."
   },
   {
