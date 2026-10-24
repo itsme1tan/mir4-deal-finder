@@ -1,5 +1,22 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What's new · MIR4 deal finder</title>
-<style>body{margin:0;background:#0f131b;color:#e6e9ef;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.sb{position:sticky;top:0;display:flex;align-items:center;gap:10px;padding:10px;background:#141925;border-bottom:1px solid #2a3140}.sb a{background:#2a3140;color:#fff;border-radius:9px;padding:7px 12px;font-weight:700;text-decoration:none}main{max-width:640px;margin:0 auto;padding:8px 12px 30px}h2{font-size:14px;color:#e8c872;margin:18px 0 6px}.it{display:flex;gap:10px;padding:8px 10px;background:#161c28;border:1px solid #232a37;border-radius:10px;margin:6px 0}.it span:first-child{width:22px;text-align:center}</style></head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap">
+<style>body{margin:0;background:#120a14;color:#f2e8f2;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.sb{position:sticky;top:0;display:flex;align-items:center;gap:10px;padding:10px;background:#1c1020;border-bottom:1px solid #3a2040}.sb a{background:#3a2040;color:#fff;border-radius:9px;padding:7px 12px;font-weight:700;text-decoration:none}main{max-width:640px;margin:0 auto;padding:8px 12px 30px}h2{font-size:14px;color:#e8c872;margin:18px 0 6px}.it{display:flex;gap:10px;padding:8px 10px;background:#1a0f1e;border:1px solid #2a1730;border-radius:10px;margin:6px 0}.it span:first-child{width:22px;text-align:center}/* Spirit Summoner theme */
+h1,h2,h3,.card>summary,.cd>summary{font-family:'Cinzel',Georgia,serif;letter-spacing:.03em}
+header{position:relative;isolation:isolate;min-height:300px;box-sizing:border-box;background:linear-gradient(180deg,rgba(194,24,91,.18),rgba(18,10,20,0));border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,#e8c872,transparent) 1}
+header h1{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#ffe08a,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(236,72,153,.35)}
+.card,.cd{background:rgba(32,14,36,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(236,72,153,.35);box-shadow:0 0 0 1px rgba(232,200,114,.08) inset,0 6px 22px rgba(0,0,0,.45),0 0 14px rgba(236,72,153,.12)}
+.cd[open],.card:hover{border-color:rgba(232,200,114,.55);box-shadow:0 0 0 1px rgba(232,200,114,.12) inset,0 0 20px rgba(236,72,153,.28)}
+hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#e8c872,transparent)}
+button{transition:box-shadow .2s,transform .1s}
+button:hover{box-shadow:0 0 14px rgba(236,72,153,.6),0 0 0 1px rgba(232,200,114,.5)}
+button:active{transform:scale(.98)}
+a{color:#f472b6}a:hover{color:#ffe08a;text-shadow:0 0 8px rgba(236,72,153,.6)}
+header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(18,10,20,.85) 0%,rgba(18,10,20,.35) 45%,transparent 70%),url(icons/banner.jpg?v=1) right 20% center/cover no-repeat;opacity:.45;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+@media (max-width:700px){header::before{height:340px;background-image:linear-gradient(90deg,rgba(18,10,20,.8) 0%,rgba(18,10,20,.3) 50%,transparent 75%),url(icons/banner-m.jpg?v=1);background-position:center,72% center;opacity:.5}header{min-height:240px}}
+@keyframes fall{to{transform:translate(-60px,110vh) rotate(540deg)}}
+:where(body>header,body>main,body>section,body>#app,body>.wrap){position:relative;z-index:1}
+body{position:relative;isolation:isolate}body::before{content:"";position:absolute;left:0;right:0;top:0;height:340px;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(18,10,20,.85),rgba(18,10,20,.3) 50%,transparent 75%),url(icons/banner-m.jpg?v=1) 72% center/cover no-repeat;opacity:.45;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent);mask-image:linear-gradient(180deg,#000 50%,transparent)}.sb{background:rgba(28,16,32,.6)!important;backdrop-filter:blur(6px);position:sticky;z-index:2}main{position:relative;z-index:1}
+</style></head>
 <body><div class="sb"><a href="./">← Back</a><b>✨ What's new</b></div><main id="m">Loading…</main>
 <script>
 const tz={timeZone:'America/Los_Angeles'},d=t=>new Intl.DateTimeFormat('en-CA',tz).format(t),n=Date.now();
