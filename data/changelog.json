@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "✂️",
+  "text": "Removed Clan Expedition from the Timer"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "🟢",
   "text": "Timer shows what's live now, with Spawned badges on bosses that are up"
  },
