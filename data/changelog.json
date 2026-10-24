@@ -2,6 +2,11 @@
   {
     "date": "2026-10-24",
     "emoji": "➡️",
+    "text": "Newly listed autoscroll is now half as fast and glides smoothly on phones."
+  },
+  {
+    "date": "2026-10-24",
+    "emoji": "➡️",
     "text": "Newly listed now scrolls slowly by itself and pauses while you touch or swipe it."
   },
   {
