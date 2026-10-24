@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "🔧",
+  "text": "Fixed: character pages always show full details, even with filters on"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "🎯",
   "text": "Filters+ now shows a Matches list right under the form"
  },

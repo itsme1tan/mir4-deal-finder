@@ -43,11 +43,12 @@ function render(){const L=score(T20S.pick(D.listings));
  box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)});
  const cid=P.get('char');if(cid&&!window._c20){window._c20=1;const u=new URL(location);u.searchParams.delete('char');history.replaceState(null,'',u.pathname+u.search+u.hash);if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
 let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
- draw();const c=cards.querySelector(`.card[data-id="${id}"]`);
+ draw();let c=cards.querySelector(`.card[data-id="${id}"]`),tmp=0;
+ if(!c&&D.listings.some(y=>y.id==id)){const _r=rows;rows=()=>D.listings.filter(y=>y.id==id);try{drawCards()}finally{rows=_r}c=cards.querySelector(`.card[data-id="${id}"]`);tmp=1}
  o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div><div class="bd"></div>`;
  if(c){SV=[c,c.parentNode,c.nextSibling];o.querySelector('.bd').appendChild(c);const h=c.querySelector('.ch');if(h&&!c.classList.contains('open'))h.click()}else o.querySelector('.bd').innerHTML='<div class="cl">Details not available.</div>';
  SV&&(SV.y=scrollY);hist20(x,o.querySelector('.bd'));o.classList.add('on');box.style.display='none';o.scrollTop=0;
- sback.onclick=()=>{o.classList.remove('on');box.style.display='';if(SV){SV[1].insertBefore(SV[0],SV[2]);scrollTo(0,SV.y||0);SV=null}}}
+ sback.onclick=()=>{o.classList.remove('on');box.style.display='';if(SV){SV[1].insertBefore(SV[0],SV[2]);scrollTo(0,SV.y||0);SV=null}if(tmp)draw()}}
 let CH=null;const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const pt=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);const ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+7,+m[5]);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
  return (d(ms)==d(n)?'Today':d(ms)==d(n-864e5)?'Yesterday':f(['en-US',{month:'short',day:'numeric'}])(ms))+' at '+f(['en-US',{hour:'numeric',minute:'2-digit'}])(ms)};
