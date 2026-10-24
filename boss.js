@@ -3,18 +3,26 @@
 const OFF={ASIA:8,INMENA:6,EU:2,SA:-3,NA:-4};// server region UTC offsets (official forum post 43)
 // [name, icon, days (0=Sun..6=Sat, null=daily), hours (server time), note]
 const B=[
- ['World boss','skull',{1:[22,'Krukan'],2:[23,'Nerkan'],4:[23,'Turkan'],5:[22,'Utukan']}],
+ ['World boss','skull',{1:[22,'Krukan'],2:[23,'Nerkan'],3:[23,'Helbar'],4:[23,'Turkan'],5:[22,'Utukan']}],
  ['Valley War','swords',{3:[22,'Hidden Valley']}],
  ['Castle Siege','castle',{0:[22,'Bicheon']},null,[Date.UTC(2026,9,25),28]],
  ['Bicheon Heist','castle',{5:[22,'1 hour']}],
  ['Living Wraiths','ghost',{4:[22,'chance boss']}],
  ['Labyrinth boss','skull',null,[10,20]],
  ['Hidden Valley boss','skull',null,[12,22]],
+ ['Rallying of Void','skull',{4:[23,'world boss']}],
+ ['Redmoon Purgatory','skull',null,[0,6,12,18]],
+ ['MS Fury Chamber','flame',null,[5,11,17,23]],
  ['MS Frenzy Chamber','flame',null,[2,8,14,20]],
+ ['Expedition','swords',null,[21]],
+ ['Domination','swords',null,[9,15,21]],
+ ['Clan Expedition','castle',{6:[0,'all day']}],
+ ['Clan Challenge','castle',{0:[0,'all day']}],
+ ['Server Reset','calendar-clock',null,[16],null,1],
  ['MS boss · Leader III','crown',null,[0,3,6,9,12,15,18,21]]];
 const css=document.createElement('style');css.textContent=`#boss{margin:0 12px 10px;background:#161c28;border:1px solid #9f916c;border-radius:10px;padding:8px 10px;font-size:12px;color:#d6dae3}#boss .bh{display:flex;justify-content:space-between;align-items:center;color:#e8c872;font-weight:700;margin-bottom:4px}#boss .bh select{background:#202838;color:#e8c872;border:1px solid #333c4d;border-radius:6px;font-size:11px;padding:2px 4px}#boss .br{display:grid;grid-template-columns:18px 1fr auto;gap:6px;align-items:center;padding:3px 0}#boss .ico{background:#e8c872}#boss b.cd{color:#86efac;font-variant-numeric:tabular-nums}#boss .th{margin:6px 0 2px;padding-top:5px;border-top:1px solid #2a3140;color:#9aa3b8;font-size:11px;font-weight:600}#boss .dm{opacity:.6;font-size:11px}#boss .dm b.cd{color:#9aa3b8}#boss small{display:block;color:#9aa3b8;font-size:11px}`;document.head.append(css);
 const reg=()=>{const v=localStorage.mir4breg||(localStorage.mir4dreg||'').replace(/^IN$/,'INMENA').replace(/^AS$/,'ASIA');return OFF[v]!=null?v:'NA'};
-function next(b,now,o){// returns [ms, label]
+function next(b,now,o){if(b[5])o=0;// returns [ms, label]
  let best=null;for(let d=0;d<36;d++){const s=new Date(now+o*36e5+d*864e5),Y=s.getUTCFullYear(),M=s.getUTCMonth(),D=s.getUTCDate(),wd=s.getUTCDay();
   const cyc=!b[4]||Math.round((Date.UTC(Y,M,D)-b[4][0])/864e5)%b[4][1]==0;const hs=!cyc?[]:b[2]?(b[2][wd]?[[b[2][wd][0],b[2][wd][1]]]:[]):b[3].map(h=>[h,'']);
   for(const [h,n] of hs){const t=Date.UTC(Y,M,D,h)-o*36e5;if(t>now-6e4&&(!best||t<best[0]))best=[t,n]}if(best)break}return best}

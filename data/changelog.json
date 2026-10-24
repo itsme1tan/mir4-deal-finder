@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "⏰",
+  "text": "Timer adds Helbar, Rallying of Void, Redmoon Purgatory, Fury Chamber, Expedition, Domination, Clan Expedition, Clan Challenge and Server Reset"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "⏭️",
   "text": "Timer now shows what's coming after the next event, so you can get ready"
  },
