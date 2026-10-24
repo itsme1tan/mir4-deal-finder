@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "✨",
+  "text": "Top 10 now shows the 2 newest 650k+ listings instead of feature boxes"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "🔧",
   "text": "Fixed: refreshing no longer reopens the last character page"
  },
