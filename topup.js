@@ -1,6 +1,6 @@
 (()=>{fetch('data/topup_events.json?t='+Date.now()).then(r=>r.json()).then(d=>{
 const el=document.createElement('div');el.id='tuhdr';el.style.cssText='font-size:12px;margin:2px 0;cursor:pointer;color:#f5c518';
-const tip=document.createElement('div');tip.style.cssText='display:none;font-size:11px;color:#9aa3b8';tip.textContent='💡 '+(d.tip||'');
+const tip=document.createElement('div');tip.style.cssText='display:none;font-size:11px;color:#b9a3bd';tip.textContent='💡 '+(d.tip||'');
 const tick=()=>{const now=Date.now();const cur=d.events.find(e=>e.status=='announced'&&e.end&&new Date(e.end)>now&&(!e.start||new Date(e.start)<=now));
  if(cur){let s=Math.floor((new Date(cur.end)-now)/1e3),dd=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
   el.textContent='🎁 Recharge ends in '+(dd?dd+'d '+h+'h':h+'h '+m+'m');
