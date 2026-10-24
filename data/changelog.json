@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "⏭️",
+  "text": "Timer now shows what's coming after the next event, so you can get ready"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "⏰",
   "text": "New Timer card: next boss and event countdown (World boss, Bicheon Heist, Valley War, Castle Siege, Magic Square and more), pick your server region"
  },
