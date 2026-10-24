@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-24",
+  "emoji": "🏷️",
+  "text": "Relisted characters with a price cut now show the old price crossed out on a slim corner ribbon in Newly listed."
+ },
+ {
+  "date": "2026-10-24",
   "emoji": "🏆",
   "text": "Top by class rank numbers now match the gold-ringed Top 10 circles."
  },
