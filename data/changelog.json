@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🎯",
+    "text": "Filters+ matches on Home are now simple Top 10-style rows that show only the stats you searched for. Tap a row to open the full page."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🧹",
     "text": "Tidier menu: swipe down to close sheets, tools open on their own, one Browse item, no duplicate links, gold badges instead of green, centered STRONG pill, and Feed now covers 36 hours."
   },

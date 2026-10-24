@@ -67,7 +67,7 @@ function render(){const L=score(T20S.pick(D.listings));
  box.querySelectorAll('.nb a.fn').forEach(a=>a.onclick=e=>{e.stopPropagation();solo(a.dataset.l,D.listings)});
  box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)});
  const cid=P.get('char');if(cid&&!window._c20){window._c20=1;const u=new URL(location);u.searchParams.delete('char');history.replaceState(null,'',u.pathname+u.search+u.hash);if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
-let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
+window.T20={solo:(i,L)=>solo(i,L),cb:(c,r)=>cb(c,r)};let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
  draw();let c=cards.querySelector(`.card[data-id="${id}"]`),tmp=0;
  if(!c&&D.listings.some(y=>y.id==id)){const _r=rows;rows=()=>D.listings.filter(y=>y.id==id);try{drawCards()}finally{rows=_r}c=cards.querySelector(`.card[data-id="${id}"]`);tmp=1}
  o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div><div class="bd"></div>`;
