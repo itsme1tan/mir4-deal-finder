@@ -120,8 +120,15 @@ function feed(){const now=Date.parse(D.updated.replace(' ','T')+':00-07:00');con
  ev.sort((a,b)=>b.t-a.t);flist.innerHTML=(ev.length?ev.map(e=>`<div style="padding:6px 0;border-bottom:1px solid #232a37"><span class="mt">${relPT(e.t)} PT</span><br>${e.h}</div>`).join(''):'Nothing in the last 48h.')+'<div class="mt" style="margin-top:6px">Built from the 30 minute refresh, so it can be about 30 minutes behind. Listings and sales shown are 650k+ power.</div>';
  lk(flist)}
 if(new URLSearchParams(location.search).get('pro'))box.querySelectorAll('details').forEach(d=>d.open=true);
-const beep=()=>{try{const a=new (window.AudioContext||window.webkitAudioContext)();[880,1320].forEach((h,i)=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=h;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.2,a.currentTime+i*.25);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+i*.25+.22);o.start(a.currentTime+i*.25);o.stop(a.currentTime+i*.25+.23)})}catch(e){}};
-const notify=(t,b)=>{beep();try{if(window.Notification&&Notification.permission=='granted')new Notification(t,{body:b})}catch(e){}alst.textContent=t+': '+b};
+let AC=null;const actx=()=>{try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}if(!AC){const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;AC=new C()}if(AC.state!='running')AC.resume().catch(()=>{});return AC};
+const unlock=()=>{const a=actx();if(!a)return;try{const b=a.createBuffer(1,1,22050),s=a.createBufferSource();s.buffer=b;s.connect(a.destination);s.start(0)}catch(e){}};
+['touchend','click'].forEach(ev=>document.addEventListener(ev,unlock,{once:true,capture:true}));
+const beep=()=>{try{const a=actx();if(!a)return;const t0=a.currentTime+.05;[880,1320].forEach((h,i)=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=h;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.0001,t0+i*.25);g.gain.exponentialRampToValueAtTime(.35,t0+i*.25+.02);g.gain.exponentialRampToValueAtTime(.001,t0+i*.25+.22);o.start(t0+i*.25);o.stop(t0+i*.25+.23)})}catch(e){}};
+let SWR=null;if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).then(r=>SWR=r).catch(()=>{});
+const banner=(t,b)=>{try{if(!window.Notification||Notification.permission!='granted')return false;const o={body:b,icon:'icons/app-192.png',tag:'mir4-'+Date.now()};
+ if(SWR&&SWR.showNotification){SWR.showNotification(t,o);return true}if(navigator.serviceWorker&&navigator.serviceWorker.ready)navigator.serviceWorker.ready.then(r=>r.showNotification(t,o)).catch(()=>{try{new Notification(t,o)}catch(e){}});else new Notification(t,o);return true}catch(e){return false}};
+const askPerm=()=>{try{if(window.Notification&&Notification.permission=='default')return Notification.requestPermission()}catch(e){}return Promise.resolve(window.Notification?Notification.permission:'unsupported')};
+const notify=(t,b)=>{beep();banner(t,b);alst.textContent=t+': '+b};
 const snap=(d,nd)=>({deals:(nd.deals||[]).map(z=>z.id),w:Object.fromEntries(Object.keys(W).map(k=>{const x=d.listings.find(z=>key(z)==k);return [k,x?x.id+':'+x.wemix:'gone']}))});
 let last=null,alT=null;
 function check(){Promise.all([fetch('data.json?'+Date.now()).then(r=>r.json()),fetch('data/new_deals.json?'+Date.now()).then(r=>r.json())]).then(([d,nd])=>{const s2=snap(d,nd);
@@ -129,7 +136,8 @@ function check(){Promise.all([fetch('data.json?'+Date.now()).then(r=>r.json()),f
   for(const k in s2.w)if(last.w[k]!==undefined&&last.w[k]!==s2.w[k])notify('Watchlist change',`${k.split('|')[0]}: ${s2.w[k]=='gone'?'no longer listed (sold or delisted)':'now '+f(+s2.w[k].split(':')[1])+' WEMIX'}`)}
  last=s2;alst.textContent='Last checked '+new Date().toLocaleTimeString()+', data from '+d.updated.replace('T',' ')})}
 alon.onclick=()=>{if(alT){clearInterval(alT);alT=null;alon.textContent='Turn on alerts';alst.textContent='Off';return}
- if(window.Notification&&Notification.permission=='default')Notification.requestPermission();beep();check();alT=setInterval(check,3e5);alon.textContent='Turn off alerts'};
-altest.onclick=beep;
+ unlock();askPerm();beep();check();alT=setInterval(check,3e5);alon.textContent='Turn off alerts'};
+altest.onclick=()=>{unlock();beep();const b=banner('Test alert','MIR4 Deal Finder alerts are working');setTimeout(()=>{const snd=AC&&AC.state=='running'?'Played a test sound. No sound? Check the ringer switch and volume.':'Sound blocked by the browser. Tap Test sound again.';
+ const p=!window.Notification?' Banners need the Home Screen app (iOS 16.4+).':Notification.permission=='granted'?(b?' Test banner sent.':''):Notification.permission=='denied'?' Banners are blocked: Settings, Notifications, MIR4 Deals.':' Tap Turn on alerts to allow banners.';alst.textContent=snd+p},400)};
 const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(t);wl();prices();feed();draw();if(new URLSearchParams(location.search).get('ask')){const c=document.querySelector('#cards details.xd');if(c){c.open=true;const a=c.nextElementSibling;a.open=true;a.querySelector('.aq').click()}}}},200);
 })();

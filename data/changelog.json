@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "📱",
+  "text": "iPhone Home Screen app: alert banners and a fixed alert sound"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "💵",
   "text": "Newly listed boxes now show just the $ price"
  },
