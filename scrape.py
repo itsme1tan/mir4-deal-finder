@@ -273,5 +273,6 @@ def main(ps_min=600000, max_new=400):
       'sales':sorted(sold,key=lambda s:s['sold'],reverse=True)},open('data.json.tmp','w'),ensure_ascii=False)
     import os; os.replace('data.json.tmp','data.json')
     print(f"{len(lst)} listings, {len(sold)} sales (90d), WEMIX ${usd}; model {info.get('summary')}")
+    import market; market.main()  # 14-day market factor on fair values + listing age (before extras so new deals use adjusted %)
     import extras as mir4_extras; mir4_extras.main()  # leaderboards, trends, upgrade, data/new_deals.json
 if __name__=='__main__': main()

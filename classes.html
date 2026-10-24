@@ -36,7 +36,7 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 <header><h1>🏆 Top by class</h1><a href="index.html">← Top 10</a></header>
 <div id="w"><div class="fb" id="fb"></div><div class="ex">Same strength score as the Top 10, under $25k, listed now. Tap a name to open the character.</div><div id="out" class="em">Loading…</div></div>
 <footer><a href="changelog.html" style="color:#e8c872;font-weight:700">✨ What's new</a></footer>
-<script src="strength.js?v=1"></script>
+<script src="strength.js?v=1"></script><script src="age.js?v=1"></script>
 <script>
 const CL=['Taoist','Arbalist','Warrior','Lancer'];
 const f=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
@@ -48,11 +48,11 @@ function rl(x){const r=x.rl;if(!r)return '';const du=Math.round(Math.abs(r.to-r.
  if(r.pct<0)return `<span class="hc" style="border-color:#c99a1e;color:#ffe08a" title="Price cut ${-r.pct}%">${I('repeat')} 🔥 ↓ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
  if(r.pct>0)return `<span class="hc" style="border-color:#dc2626;color:#fca5a5" title="Price raised ${r.pct}%">${I('repeat')} ↑ $${f(du)} · ${f(r.from)}→${f(r.to)}</span>`;
  return `<span class="hc" title="Relisted, same price">${I('repeat')} ${r.relists||''}x</span>`}
-const row=(x,i)=>`<div class="r${x.discount>0?' u':''}"><div class="rk${i<3?' g':''}">${i+1}</div><div style="min-width:0"><div class="n"><a href="index.html?char=${encodeURIComponent(x.id)}">${x.name}</a></div><div class="m"><span>⚡ ${f(x.ps)}</span><span>${I('gauge')} ${x.build_score}</span>${rl(x)}</div></div><div class="p"><b>$${f(x.usd)}</b><small>${f(x.wemix)} W</small><small class="${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</small></div></div>`;
+const row=(x,i)=>`<div class="r${x.discount>0?' u':''}"><div class="rk${i<3?' g':''}">${i+1}</div><div style="min-width:0"><div class="n"><a href="index.html?char=${encodeURIComponent(x.id)}">${x.name}</a></div><div class="m"><span>⚡ ${f(x.ps)}</span><span>${I('gauge')} ${x.build_score}</span>${AGE.chip(x)}${rl(x)}</div>${AGE.badges(x)?'<div>'+AGE.badges(x)+'</div>':''}</div><div class="p"><b>$${f(x.usd)}</b><small>${f(x.wemix)} W</small><small class="${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</small></div></div>`;
 function render(){fb.innerHTML=`<button class="al${sel=='All'?' on':''}" data-c="All">All</button>`+CL.map(c=>`<button data-c="${c}" class="${sel==c?'on':''}">${ci(c)}${c}</button>`).join('');
  fb.querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=b.dataset.c;localStorage.mir4cls=sel;render()});
  const R=T20S.score(D.listings,T20S.pick(D.listings));const n=sel=='All'?3:10;
  out.className='';out.innerHTML=(sel=='All'?CL:[sel]).map(c=>{const L=R.filter(x=>x.cls==c).slice(0,n);
   return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">None listed under $25k right now.</div>'}</div>`}).join('')}
-Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
+Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};document.querySelector('.ex').insertAdjacentHTML('beforeend',' '+AGE.note(d));D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
 </script></body></html>

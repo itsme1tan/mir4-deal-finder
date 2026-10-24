@@ -198,4 +198,5 @@ def main():
     p=os.path.join(DD,'extras.json'); E=json.load(open(p)); E['wemix']=wemix_study(json.load(open(os.path.join(ROOT,'data.json'))))
     json.dump(E,open(p,'w'),ensure_ascii=False,separators=(',',':'))
     import relist; relist.main()  # relist/price-change history + daily summary line
+    import market; market.main()  # refresh listing age with this run's char_history (idempotent)
 if __name__=='__main__': main()
