@@ -24,4 +24,4 @@ const lab=s=>s==d(n)?'Today':s==d(n-864e5)?'Yesterday':new Date(s+'T12:00:00Z').
 const e=s=>String(s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 fetch('data/changelog.json?'+n).then(r=>r.json()).then(L=>{const g={};L.forEach(x=>(g[x.date]=g[x.date]||[]).push(x));
 m.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h2>${lab(k)}</h2>`+g[k].map(x=>`<div class="it"><span>${e(x.emoji||'•')}</span><span>${e(x.text)}</span></div>`).join('')).join('')}).catch(()=>m.textContent='Could not load changes.')
-</script></body></html>
+</script><script src="nav.js?v=12"></script></body></html>

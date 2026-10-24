@@ -35,7 +35,7 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 </style></head><body>
 <header><h1>🏆 Top by class</h1><a href="index.html">← Top 10</a></header>
 <div id="w"><div class="fb" id="fb"></div><div class="ex">Same strength score as the Top 10, under $25k, listed now. Tap a name to open the character.</div><div id="out" class="em">Loading…</div></div>
-<footer><a href="changelog.html" style="color:#e8c872;font-weight:700">✨ What's new</a></footer>
+
 <script src="strength.js?v=1"></script><script src="age.js?v=2"></script>
 <script>
 const CL=['Taoist','Arbalist','Warrior','Lancer'];
@@ -55,4 +55,4 @@ function render(){fb.innerHTML=`<button class="al${sel=='All'?' on':''}" data-c=
  out.className='';out.innerHTML=(sel=='All'?CL:[sel]).map(c=>{const L=R.filter(x=>x.cls==c).slice(0,n);
   return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">None listed under $25k right now.</div>'}</div>`}).join('')}
 Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};document.querySelector('.ex').insertAdjacentHTML('beforeend',' '+AGE.note(d));D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
-</script></body></html>
+</script><script src="nav.js?v=12"></script></body></html>

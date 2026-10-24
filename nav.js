@@ -70,13 +70,18 @@ const vs=document.createElement('style');document.head.appendChild(vs);
 const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close';document.body.appendChild(nx);
 function closeOv(){const so=document.getElementById('solo');if(so&&so.classList.contains('on')){const b=document.getElementById('sback');if(b)b.click();so.classList.remove('on')}
  const cv=document.getElementById('cmpv');if(cv&&cv.classList.contains('show')){const x=document.getElementById('cx');if(x)x.click();cv.classList.remove('show')}}
+const IDX=!!document.querySelector('.ctl');
+function goHome(){if(!IDX){location.href='index.html';return}closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');const n=document.querySelector('.note');if(n)n.classList.remove('show');document.body.classList.add('simple');scrollTo({top:0,behavior:'instant'});setTimeout(()=>scrollTo({top:0,behavior:'instant'}),80);mark('top')}
+document.addEventListener('click',e=>{if(e.target.closest('#sback,#cx'))setTimeout(goHome,0)});
 function unmark(){document.querySelectorAll('.nva,.nvp').forEach(e=>e.classList.remove('nva','nvp'))}
 function shut(){unmark();delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
-nx.onclick=shut;
+nx.onclick=()=>goHome();
 function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
  close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
-function feats(){const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
+const XF=[['ptimer','Timer'],['pal','Alerts (page open only)'],['pwl','Watchlist'],['ppr','Sold prices'],['pfeed','Feed 36h']];
+function feats(){if(!IDX)return `<div class="gr"></div><h4>Tools</h4><div class="fl"><a class="it" href="index.html#nv=ctl">${sv('browse')}<span>Browse<small>Full list, sort, class, filters and Filters+</small></span><i>›</i></a>${XF.map(([k,l])=>`<a class="it" href="index.html#nv=${k}">${sv(k)}<span>${l}</span><i>›</i></a>`).join('')}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`;
+ const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
  return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse<small>Full list, sort, class, filters and Filters+</small></span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
 function close(){sh.classList.remove('show');pn.style.transform='';sh.querySelector('.bg').style.opacity='';mark(document.body.classList.contains('simple')?'top':'browse')}
 sh.querySelector('.bg').onclick=close;
@@ -100,15 +105,19 @@ function browse(){closeOv();unmark();document.body.classList.remove('simple');do
  pn.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{fc.value=b.dataset.c;fc.dispatchEvent(new Event('change',{bubbles:true}));fc.dispatchEvent(new Event('input',{bubbles:true}));close();scrollTo(0,0)});
  sh.classList.add('show');mark('browse')}
 function tools(){pn.innerHTML=feats();
- pn.querySelector('[data-b]').onclick=browse;
+ const db=pn.querySelector('[data-b]');if(db)db.onclick=browse;
  pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
  sh.classList.add('show');mark('browse')}
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
 <button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>`;
- pn.querySelector('#thow').onclick=()=>{closeOv();document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();setTimeout(()=>scrollTo({top:n.getBoundingClientRect().top+scrollY-((document.getElementById('xnav')||{}).offsetHeight||0)-12,behavior:'smooth'}),60)};
+ pn.querySelector('#thow').onclick=()=>{if(!IDX){location.href='index.html#nv=how';return}closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='how';const n=document.querySelector('.note');n.classList.add('show');close();setTimeout(()=>scrollTo({top:n.getBoundingClientRect().top+scrollY-((document.getElementById('xnav')||{}).offsetHeight||0)-12,behavior:'smooth'}),60)};
  sh.classList.add('show');mark('more')}
+if(IDX){const m=location.hash.match(/nv=([a-z]+)/);if(m){const k=m[1];history.replaceState(null,'',location.pathname+location.search);let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
+ if(k=='ctl'){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';mark('browse');scrollTo(0,0)}
+ else if(k=='how'){more();pn.querySelector('#thow').click()}else openF(k)}},150)}}
+else mark(/classes/.test(location.pathname)?'browse':'');
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
- if(t=='top'){closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
+ if(t=='top')goHome()
  else if(t=='browse')tools();else more()};
 })();
