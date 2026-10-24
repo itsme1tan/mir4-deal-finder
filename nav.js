@@ -106,7 +106,7 @@ function tools(){pn.innerHTML=feats();
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
 <button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>`;
- pn.querySelector('#thow').onclick=()=>{closeOv();document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();n.scrollIntoView({behavior:'smooth'})};
+ pn.querySelector('#thow').onclick=()=>{closeOv();document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();setTimeout(()=>scrollTo({top:n.getBoundingClientRect().top+scrollY-((document.getElementById('xnav')||{}).offsetHeight||0)-12,behavior:'smooth'}),60)};
  sh.classList.add('show');mark('more')}
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
  if(t=='top'){closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
