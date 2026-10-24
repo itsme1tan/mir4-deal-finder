@@ -37,14 +37,14 @@ const tsv=k=>{const set=TS[NV];if(!set)return sv(k);return `<svg class="nvi" vie
 const clean=t=>t.replace(/^[^A-Za-z0-9]+/,'').trim();
 
 const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:flex;background:rgba(20,8,22,.96);border-top:1px solid #5a2550;padding:4px 6px calc(4px + env(safe-area-inset-bottom));backdrop-filter:blur(6px)}
-#tnav button{flex:1;background:none;border:0;color:#b9a3bd;font-size:11px;padding:5px 0;display:flex;flex-direction:column;align-items:center;gap:1px;border-radius:10px}
+#tnav button{flex:1;background:none;border:0!important;box-shadow:none!important;outline:none;color:#b9a3bd;font-size:11px;padding:5px 0;display:flex;flex-direction:column;align-items:center;gap:1px;border-radius:10px}
 #tnav .nvi{width:22px;height:22px}#tnav[data-s=B] button.on .nvi,#tnav[data-s=C] button.on .nvi{filter:drop-shadow(0 0 3px rgba(200,80,170,.6))}#tnav[data-s=E] button{position:relative}#tnav[data-s=E] button.on{background:none}#tnav[data-s=E] button.on:after{content:'';position:absolute;bottom:0;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#e8c872}#tnav[data-s=E] button.on .nvi{filter:none}#tnav button.on .nvi{filter:drop-shadow(0 0 4px rgba(200,80,170,.7))}#tsh .it .nvi{width:20px;height:20px;color:#e8c872;flex:none}
 #tnav button.on{color:#ffdf8e;background:rgba(107,42,90,.35)}
 body{padding-bottom:64px}
 #cbar{bottom:56px!important;border-radius:14px 14px 0 0}
-#bycls,#mbtn,.ctl .qs,#ninfo,#ninfo+span{display:none!important}
+#bycls,#mbtn,#back20,.ctl .qs,#ninfo,#ninfo+span{display:none!important}
 #tsh{position:fixed;inset:0;z-index:1200;display:none}#tsh.show{display:block}
-#tsh .bg{position:absolute;inset:0;background:rgba(8,3,10,.55)}
+#tsh .bg{position:absolute;inset:0;background:rgba(8,3,10,.55);transition:opacity .25s}#tsh .pn{transition:transform .25s ease;touch-action:pan-y}#tsh.drag .pn,#tsh.drag .bg{transition:none}#tsh .gr{width:40px;height:5px;padding:0}
 #tsh .pn{position:absolute;left:0;right:0;bottom:0;background:#1c0b20;border-top:1px solid #e8c87255;border-radius:16px 16px 0 0;padding:8px 16px calc(18px + env(safe-area-inset-bottom));max-height:70vh;overflow:auto;box-shadow:0 -6px 24px rgba(0,0,0,.5)}
 #tsh .gr{width:36px;height:4px;background:#5a2550;border-radius:4px;margin:2px auto 10px}
 #tsh h4{margin:12px 0 6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b9a3bd;font-weight:600}
@@ -55,9 +55,9 @@ body{padding-bottom:64px}
 #tsh .it small{display:block;color:#b9a3bd;font-size:11px;margin-top:2px}
 #tsh .it:last-child{border-bottom:0!important}
 details.pro,.ctl{display:none!important}
-body[data-nv=ctl] .ctl{display:flex!important}
-#nvx{position:fixed;right:12px;bottom:64px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
-body[data-nv] #nvx{display:block}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
+body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:block!important}
+#nvx{position:fixed;right:12px;top:10px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx{display:none}.nva>*:not(.nva):not(.nvp):not(#tnav):not(#tsh):not(#nvx):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 const nav=document.createElement('nav');nav.id='tnav';
@@ -67,25 +67,34 @@ const sh=document.createElement('div');sh.id='tsh';sh.innerHTML='<div class="bg"
 const pn=sh.querySelector('.pn');
 const vs=document.createElement('style');document.head.appendChild(vs);
 const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close';document.body.appendChild(nx);
-function shut(){delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
+function unmark(){document.querySelectorAll('.nva,.nvp').forEach(e=>e.classList.remove('nva','nvp'))}
+function shut(){unmark();delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
 nx.onclick=shut;
 function openF(id){document.body.classList.remove('simple');document.body.dataset.nv=id;
- if(id=='ctl'){vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el)el.open=true}
- close();setTimeout(()=>{if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
-function feats(){const fs=[...document.querySelectorAll('details.pro[id]')].map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
- return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse full list<small>Sort and class</small></span><i>›</i></button><button class="it" data-f="ctl">${sv('ctl')}<span>Filters and sort</span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
-function close(){sh.classList.remove('show');mark(document.body.classList.contains('simple')?'top':'browse')}
+ if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
+ close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
+function feats(){const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
+ return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse<small>Full list, sort, class, filters and Filters+</small></span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
+function close(){sh.classList.remove('show');pn.style.transform='';sh.querySelector('.bg').style.opacity='';mark(document.body.classList.contains('simple')?'top':'browse')}
 sh.querySelector('.bg').onclick=close;
+(function(){let y0=0,dy=0,t0=0,on=false,dec=false,ly=0,lt=0,v=0;const bg=sh.querySelector('.bg');
+pn.addEventListener('touchstart',e=>{const r=pn.getBoundingClientRect(),ty=e.touches[0].clientY;
+ on=(ty-r.top<44)||pn.scrollTop<=0;dec=false;y0=ty;dy=0;t0=e.timeStamp;ly=ty;lt=t0;v=0},{passive:true});
+pn.addEventListener('touchmove',e=>{if(!on)return;dy=e.touches[0].clientY-y0;
+ if(!dec){if(Math.abs(dy)<6)return;dec=true;if(dy<0||pn.scrollTop>0){on=false;return}sh.classList.add('drag')}
+ if(e.cancelable)e.preventDefault();{const n=e.timeStamp,cy=e.touches[0].clientY;if(n>lt)v=(cy-ly)/(n-lt);ly=cy;lt=n}const d=Math.max(0,dy);pn.style.transform='translateY('+d+'px)';bg.style.opacity=Math.max(0,1-d/(pn.offsetHeight||400))},{passive:false});
+pn.addEventListener('touchend',()=>{if(!on||!dec){on=false;return}on=false;sh.classList.remove('drag');
+  if(dy>80||(v>0.5&&dy>20)){pn.style.transform='translateY(100%)';bg.style.opacity=0;setTimeout(close,240)}else{pn.style.transform='';bg.style.opacity=''}});
+})();
 function mark(t){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.t==t))}
-function browse(){document.body.classList.remove('simple');
+function browse(){unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';vs.textContent='';
  const cur=(document.getElementById('fsort')||{}).value, fc=document.getElementById('fcls');
  const sorts=[...document.querySelectorAll('.ctl .qs [data-s]')].map(b=>`<button class="ch${b.dataset.s==cur?' on':''}" data-s="${b.dataset.s}">${b.textContent}</button>`).join('');
  const cls=fc?[...fc.options].map(o=>`<button class="ch${o.value==fc.value?' on':''}" data-c="${o.value}">${o.value?o.text:'All classes'}</button>`).join(''):'';
- pn.innerHTML=`<div class="gr"></div><h4>Sort</h4><div class="row">${sorts}</div><h4>Class</h4><div class="row">${cls}</div><h4>Views</h4><div class="row"><button class="ch" id="tfull">📋 Full list</button><a class="ch" href="classes.html">🏅 Top by class</a></div>`;
+ pn.innerHTML=`<div class="gr"></div><h4>Sort</h4><div class="row">${sorts}</div><h4>Class</h4><div class="row">${cls}</div>`;
  pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
  pn.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{document.querySelector('.ctl .qs [data-s="'+b.dataset.s+'"]').click();close();scrollTo(0,0)});
  pn.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{fc.value=b.dataset.c;fc.dispatchEvent(new Event('change',{bubbles:true}));fc.dispatchEvent(new Event('input',{bubbles:true}));close();scrollTo(0,0)});
- pn.querySelector('#tfull').onclick=()=>{close();scrollTo(0,0)};
  sh.classList.add('show');mark('browse')}
 function tools(){pn.innerHTML=feats();
  pn.querySelector('[data-b]').onclick=browse;
@@ -93,12 +102,10 @@ function tools(){pn.innerHTML=feats();
  sh.classList.add('show');mark('browse')}
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
-<button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>
-<button class="it" id="tcmp">${sv('cmp')}<span>Compare<small>Tick 2 to 4 characters in the full list, then tap Compare</small></span></button>`;
+<button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>`;
  pn.querySelector('#thow').onclick=()=>{document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();n.scrollIntoView({behavior:'smooth'})};
- pn.querySelector('#tcmp').onclick=()=>{close();browse()};
  sh.classList.add('show');mark('more')}
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
- if(t=='top'){delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
+ if(t=='top'){unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
  else if(t=='browse')tools();else more()};
 })();

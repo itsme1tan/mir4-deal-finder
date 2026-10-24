@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🧹",
+    "text": "Tidier menu: swipe down to close sheets, tools open on their own, one Browse item, no duplicate links, gold badges instead of green, centered STRONG pill, and Feed now covers 36 hours."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🧰",
     "text": "Bottom tabs are now Home, Tools and More with new minimal icons. Tools lists every feature (Browse, Timer, Filters+, Alerts, Watchlist, Sold prices, Feed 48h, Top by class) so the page stays tidy."
   },

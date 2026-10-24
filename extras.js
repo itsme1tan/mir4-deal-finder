@@ -59,7 +59,7 @@ function wemixHtml(){const M=E.wemix;if(!M)return '';const c=v=>v[0]==null?'–'
 
 function trend(){const T=E.trends;return `<h2>Market trends</h2><div class="vd"><b>Verdict</b>${T.verdict.map(v=>`<p>${v}</p>`).join('')}</div>
  <h3>Price per power over time</h3><div class="xc">${chart(T)}</div>
- <h3>Day of week</h3><div class="xc">${bars(T.dow,'d')}<div class="mt">vs typical price per power point. Green = cheaper. ${T.tz_note}</div></div>
+ <h3>Day of week</h3><div class="xc">${bars(T.dow,'d')}<div class="mt">vs typical price per power point. Gold = cheaper. ${T.tz_note}</div></div>
  <h3>Time of day</h3><div class="xc">${bars(T.hours,'h')}<div class="mt">${T.tz_note}</div></div>`+wemixHtml()}
 function up(){const L=D.listings.filter(x=>E.upgrade.by_id[x.id]).sort((a,b)=>a.ps-b.ps);upId=upId&&E.upgrade.by_id[upId]?upId:String((L.find(x=>x.usd<=E.budget&&E.upgrade.by_id[x.id].some(t=>t.built_ask))||L[0]).id);const x=L.find(z=>z.id==upId),T=E.upgrade.by_id[upId];
  let o=`<h2>Upgrade vs buy built</h2><label>Start from this listing<select id="upsel">${L.map(z=>`<option value="${z.id}"${z.id==upId?' selected':''}>${z.name} · ${z.cls} · ${fm(z.ps)} · ${usd(z.usd)}</option>`).join('')}</select></label>
