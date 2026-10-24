@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "📱",
+    "text": "On iPhone the tab bar and menus now sit above the home line, so the last item isn't squeezed and taps at the bottom work."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🏷️",
     "text": "Filters+ matches on Home now say where they came from and show your active filters as small chips, with an Edit button."
   },

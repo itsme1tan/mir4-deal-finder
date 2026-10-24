@@ -36,16 +36,16 @@ E:{home:'<path d="M4 11.5 12 5l8 6.5V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 
 const tsv=k=>{const set=TS[NV];if(!set)return sv(k);return `<svg class="nvi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${NV=='E'?1.8:1.6}" stroke-linecap="round" stroke-linejoin="round">${set[k]}</svg>`};
 const clean=t=>t.replace(/^[^A-Za-z0-9]+/,'').trim();
 
-const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:flex;background:rgba(20,8,22,.96);border-top:1px solid #5a2550;padding:4px 6px calc(4px + env(safe-area-inset-bottom));backdrop-filter:blur(6px)}
+const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:flex;background:rgba(20,8,22,.96);border-top:1px solid #5a2550;padding:4px 6px calc(4px + var(--sab));backdrop-filter:blur(6px)}
 #tnav button{flex:1;background:none;border:0!important;box-shadow:none!important;outline:none;color:#b9a3bd;font-size:11px;padding:5px 0;display:flex;flex-direction:column;align-items:center;gap:1px;border-radius:10px}
 #tnav .nvi{width:22px;height:22px}#tnav[data-s=B] button.on .nvi,#tnav[data-s=C] button.on .nvi{filter:drop-shadow(0 0 3px rgba(200,80,170,.6))}#tnav[data-s=E] button{position:relative}#tnav[data-s=E] button.on{background:none}#tnav[data-s=E] button.on:after{content:'';position:absolute;bottom:0;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#e8c872}#tnav[data-s=E] button.on .nvi{filter:none}#tnav button.on .nvi{filter:drop-shadow(0 0 4px rgba(200,80,170,.7))}#tsh .it .nvi{width:20px;height:20px;color:#e8c872;flex:none}
 #tnav button.on{color:#ffdf8e;background:rgba(107,42,90,.35)}
-body{padding-bottom:64px}
-#cbar{bottom:56px!important;border-radius:14px 14px 0 0}
+:root{--sab:env(safe-area-inset-bottom,0px)}body{padding-bottom:calc(64px + var(--sab))}
+#cbar{bottom:calc(56px + var(--sab))!important;border-radius:14px 14px 0 0}
 #bycls,#mbtn,#back20,.ctl .qs,#ninfo,#ninfo+span{display:none!important}
 #tsh{position:fixed;inset:0;z-index:1200;display:none}#tsh.show{display:block}
 #tsh .bg{position:absolute;inset:0;background:rgba(8,3,10,.55);transition:opacity .25s}#tsh .pn{transition:transform .25s ease;touch-action:pan-y}#tsh.drag .pn,#tsh.drag .bg{transition:none}#tsh .gr{width:40px;height:5px;padding:0}
-#tsh .pn{position:absolute;left:0;right:0;bottom:0;background:#1c0b20;border-top:1px solid #e8c87255;border-radius:16px 16px 0 0;padding:8px 16px calc(18px + env(safe-area-inset-bottom));max-height:70vh;overflow:auto;box-shadow:0 -6px 24px rgba(0,0,0,.5)}
+#tsh .pn{position:absolute;left:0;right:0;bottom:0;background:#1c0b20;border-top:1px solid #e8c87255;border-radius:16px 16px 0 0;padding:8px 16px calc(18px + var(--sab));max-height:70vh;overflow:auto;box-shadow:0 -6px 24px rgba(0,0,0,.5)}
 #tsh .gr{width:36px;height:4px;background:#5a2550;border-radius:4px;margin:2px auto 10px}
 #tsh h4{margin:12px 0 6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b9a3bd;font-weight:600}
 #tsh .row{display:flex;flex-wrap:wrap;gap:6px}
@@ -59,6 +59,7 @@ body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:bl
 #nvx{position:fixed;right:12px;top:10px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
 body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx{display:none}.nva>*:not(.nva):not(.nvp):not(#tnav):not(#tsh):not(#nvx):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
+{const q=new URLSearchParams(location.search).get('sab');if(q)document.documentElement.style.setProperty('--sab',(+q)+'px')}
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 const nav=document.createElement('nav');nav.id='tnav';
 nav.innerHTML='<button data-t="top" class="on">'+tsv('home')+'Home</button><button data-t="browse">'+tsv('tools')+'Tools</button><button data-t="more">'+tsv('more')+'More</button>';
