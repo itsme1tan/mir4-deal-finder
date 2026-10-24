@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🏠",
+    "text": "Tapping Home on a character page now takes you back to Home, and opening a tool closes the character page first."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "📱",
     "text": "On iPhone the tab bar and menus now sit above the home line, so the last item isn't squeezed and taps at the bottom work."
   },

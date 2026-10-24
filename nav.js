@@ -68,10 +68,12 @@ const sh=document.createElement('div');sh.id='tsh';sh.innerHTML='<div class="bg"
 const pn=sh.querySelector('.pn');
 const vs=document.createElement('style');document.head.appendChild(vs);
 const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close';document.body.appendChild(nx);
+function closeOv(){const so=document.getElementById('solo');if(so&&so.classList.contains('on')){const b=document.getElementById('sback');if(b)b.click();so.classList.remove('on')}
+ const cv=document.getElementById('cmpv');if(cv&&cv.classList.contains('show')){const x=document.getElementById('cx');if(x)x.click();cv.classList.remove('show')}}
 function unmark(){document.querySelectorAll('.nva,.nvp').forEach(e=>e.classList.remove('nva','nvp'))}
 function shut(){unmark();delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
 nx.onclick=shut;
-function openF(id){document.body.classList.remove('simple');document.body.dataset.nv=id;
+function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
  close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
 function feats(){const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
@@ -88,7 +90,7 @@ pn.addEventListener('touchend',()=>{if(!on||!dec){on=false;return}on=false;sh.cl
   if(dy>80||(v>0.5&&dy>20)){pn.style.transform='translateY(100%)';bg.style.opacity=0;setTimeout(close,240)}else{pn.style.transform='';bg.style.opacity=''}});
 })();
 function mark(t){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.t==t))}
-function browse(){unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';vs.textContent='';
+function browse(){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';vs.textContent='';
  const cur=(document.getElementById('fsort')||{}).value, fc=document.getElementById('fcls');
  const sorts=[...document.querySelectorAll('.ctl .qs [data-s]')].map(b=>`<button class="ch${b.dataset.s==cur?' on':''}" data-s="${b.dataset.s}">${b.textContent}</button>`).join('');
  const cls=fc?[...fc.options].map(o=>`<button class="ch${o.value==fc.value?' on':''}" data-c="${o.value}">${o.value?o.text:'All classes'}</button>`).join(''):'';
@@ -104,9 +106,9 @@ function tools(){pn.innerHTML=feats();
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
 <button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>`;
- pn.querySelector('#thow').onclick=()=>{document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();n.scrollIntoView({behavior:'smooth'})};
+ pn.querySelector('#thow').onclick=()=>{closeOv();document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();n.scrollIntoView({behavior:'smooth'})};
  sh.classList.add('show');mark('more')}
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
- if(t=='top'){unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
+ if(t=='top'){closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
  else if(t=='browse')tools();else more()};
 })();
