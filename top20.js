@@ -36,7 +36,7 @@ function render(){const L=score(T20S.pick(D.listings));
  L.map((x,i)=>`<div class="tr20${x.discount>0?' u':''}" data-id="${x.id}"><div class="rw">${cb(x.cls)}<div style="min-width:0"><div class="n">${x.name}</div><div class="m">${keys(x)}<span>⚡ ${fm(x.ps/1000)}k</span><span>${I('gauge')} ${x.build_score}</span>${x.full_conf=='low'?'<span title="few similar sales">⚠</span>':''}</div></div><div class="p"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small><small class="w1h" data-w="${x.wemix}"></small><span class="d ${x.discount>0?'pos':'neg'}">${x.discount==null?'':x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</span></div></div></div>`).join('');
  mbtn.onclick=()=>{document.body.classList.remove('simple');scrollTo(0,0)};
  box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)});
- const cid=P.get('char');if(cid&&!window._c20){window._c20=1;if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
+ const cid=P.get('char');if(cid&&!window._c20){window._c20=1;const u=new URL(location);u.searchParams.delete('char');history.replaceState(null,'',u.pathname+u.search+u.hash);if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
 let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
  draw();const c=cards.querySelector(`.card[data-id="${id}"]`);
  o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div><div class="bd"></div>`;

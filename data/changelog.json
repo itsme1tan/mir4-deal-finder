@@ -1,6 +1,11 @@
 [
  {
   "date": "2026-10-23",
+  "emoji": "🔧",
+  "text": "Fixed: refreshing no longer reopens the last character page"
+ },
+ {
+  "date": "2026-10-23",
   "emoji": "🏆",
   "text": "New Top by class page: top Taoist, Arbalist, Warrior & Lancer with class filter"
  },
