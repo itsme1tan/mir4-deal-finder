@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🏷️",
+    "text": "Filters+ matches on Home now say where they came from and show your active filters as small chips, with an Edit button."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🎯",
     "text": "Filters+ matches on Home are now simple Top 10-style rows that show only the stats you searched for. Tap a row to open the full page."
   },
