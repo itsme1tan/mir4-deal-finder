@@ -1,6 +1,15 @@
 [
-  {"date": "2026-10-24", "emoji": "🕰", "text": "Every card now shows how long the character has been listed. New badges: ⚡ FRESH (under 24h and already 10%+ under fair, act fast), 🕰 STALE (7+ days on the market, seller may cut or take an offer) and ✂️ CUTTING (price cut 2+ times). Fair values now follow the last 14 days of sales (shown as \"market -7% vs model\"), so % under is more realistic. New sort and filters by listing age."},
-{
+  {
+    "date": "2026-10-24",
+    "emoji": "🔢",
+    "text": "Top 10 shows a small rank number on each photo. Stale and Cutting badges are smaller."
+  },
+  {
+    "date": "2026-10-24",
+    "emoji": "🕰",
+    "text": "Every card now shows how long the character has been listed. New badges: ⚡ FRESH (under 24h and already 10%+ under fair, act fast), 🕰 STALE (7+ days on the market, seller may cut or take an offer) and ✂️ CUTTING (price cut 2+ times). Fair values now follow the last 14 days of sales (shown as \"market -7% vs model\"), so % under is more realistic. New sort and filters by listing age."
+  },
+  {
     "date": "2026-10-24",
     "emoji": "🌸",
     "text": "Top by class and What's new pages now match the magenta theme. Falling petals removed."
