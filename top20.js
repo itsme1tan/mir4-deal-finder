@@ -45,18 +45,19 @@ function latest2(){const L=D.listings.filter(x=>x.listed&&x.ps>=650000).filter(x
 // Newly listed: slow auto-scroll; pauses on touch/hover/manual scroll, resumes after 4s idle
 function autoNL(){const g=box.querySelector('.nlg');if(!g||g._as)return;g._as=1;
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const SP=9;let pos=g.scrollLeft,last=0,idleUntil=0,set=-1,back=false;
- const fx=v=>g.style.setProperty('--fx',v?(-v).toFixed(2)+'px':'0px');
- const pause=()=>{idleUntil=performance.now()+4000;fx(0);g.style.scrollSnapType=''};
+ const SP=5;let base=0,off=0,last=0,idleUntil=0,back=false,on=false;
+ const fx=v=>g.style.setProperty('--fx',(-v).toFixed(2)+'px');
+ const commit=()=>{if(on){on=false;const L=base+off;off=0;fx(0);g.scrollLeft=L;g.style.scrollSnapType=''}};
+ const pause=()=>{idleUntil=performance.now()+4000;commit()};
  ['touchstart','pointerdown','wheel'].forEach(e=>g.addEventListener(e,pause,{passive:true}));
- g.addEventListener('mouseenter',()=>{idleUntil=Infinity;fx(0);g.style.scrollSnapType=''});g.addEventListener('mouseleave',pause);
- g.addEventListener('scroll',()=>{if(back)return;if(set>=0&&Math.abs(g.scrollLeft-set)<=1.5)return;pause();pos=g.scrollLeft;set=-1});
+ g.addEventListener('mouseenter',()=>{idleUntil=Infinity;commit()});g.addEventListener('mouseleave',pause);
  const step=t=>{if(!g.isConnected)return;const dt=last?Math.min(t-last,100)/1000:0;last=t;
   if(!document.hidden&&t>idleUntil&&g.scrollWidth>g.clientWidth+2){
-   if(back){if(g.scrollLeft<=1){back=false;pos=0;set=0;idleUntil=t+1500}}
-   else{g.style.scrollSnapType='none';pos+=SP*dt;const max=g.scrollWidth-g.clientWidth;
-    if(pos>=max){pos=max;fx(0);back=true;idleUntil=t+2000;setTimeout(()=>g.scrollTo({left:0,behavior:'smooth'}),2000)}
-    else{const i=Math.floor(pos);if(i!==set){set=i;g.scrollLeft=i}fx(pos-i)}}}
+   if(back){if(g.scrollLeft<=1){back=false;idleUntil=t+1500}}
+   else{if(!on){on=true;base=g.scrollLeft;off=0;g.style.scrollSnapType='none'}
+    const max=g.scrollWidth-g.clientWidth;off+=SP*dt;
+    if(base+off>=max){off=max-base;commit();back=true;idleUntil=t+2000;setTimeout(()=>g.scrollTo({left:0,behavior:'smooth'}),2000)}
+    else fx(off)}}
   requestAnimationFrame(step)};
  requestAnimationFrame(step)}
 function render(){const L=score(T20S.pick(D.listings));
