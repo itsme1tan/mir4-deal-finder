@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "📖",
+    "text": "How this works now opens on its own, with no character cards underneath, and the More tab stays lit while it's open."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🧭",
     "text": "Close and Back now take you to the top of Home, and the Home, Tools and More bar is on every page, including Top by class and What's new."
   },

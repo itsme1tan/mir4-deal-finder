@@ -111,7 +111,7 @@ function tools(){pn.innerHTML=feats();
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
 <button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>`;
- pn.querySelector('#thow').onclick=()=>{if(!IDX){location.href='index.html#nv=how';return}closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='how';const n=document.querySelector('.note');n.classList.add('show');close();setTimeout(()=>scrollTo({top:n.getBoundingClientRect().top+scrollY-((document.getElementById('xnav')||{}).offsetHeight||0)-12,behavior:'smooth'}),60)};
+ pn.querySelector('#thow').onclick=()=>{if(!IDX){location.href='index.html#nv=how';return}closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='how';const n=document.querySelector('.note');n.classList.add('show');n.classList.add('nvp');for(let q=n.parentElement;q;q=q.parentElement){q.classList.add('nva');if(q==document.body)break}close();mark('more');setTimeout(()=>scrollTo({top:0,behavior:'instant'}),60)};
  sh.classList.add('show');mark('more')}
 if(IDX){const m=location.hash.match(/nv=([a-z]+)/);if(m){const k=m[1];history.replaceState(null,'',location.pathname+location.search);let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
  if(k=='ctl'){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';mark('browse');scrollTo(0,0)}
