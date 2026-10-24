@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🧰",
+    "text": "Bottom tabs are now Home, Tools and More with new minimal icons. Tools lists every feature (Browse, Timer, Filters+, Alerts, Watchlist, Sold prices, Feed 48h, Top by class) so the page stays tidy."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🧭",
     "text": "New bottom tab bar (Top, Browse, More) tidies up the page. Sort, class and info options now live in the Browse and More sheets."
   },

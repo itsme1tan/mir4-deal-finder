@@ -1,9 +1,45 @@
 /* Tidy nav: bottom tab bar + sheets (preview) */
 (function(){
+const IC={
+home:'<path d="M2 9.5 12 4l10 5.5"/><path d="M4.5 9.5c0 0 1 1.2 0 2.2M19.5 9.5c0 0-1 1.2 0 2.2"/><path d="M6 11v9h12v-9"/><path d="M10 20v-5h4v5"/>',
+tools:'<path d="M5 3h11a3 3 0 0 1 3 3v12"/><path d="M5 3a2 2 0 0 0-2 2v1h4V5a2 2 0 0 0-2-2z"/><path d="M7 6v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1H11v1a2 2 0 0 1-2 2"/><path d="M10 9h6M10 13h6"/>',
+more:'<circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 1 0 9 4.5 4.5 0 0 0 0 9"/><circle cx="12" cy="7.5" r="1"/><circle cx="12" cy="16.5" r="1"/>',
+browse:'<path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>',
+ctl:'<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>',
+ptimer:'<path d="M7 3h10M7 21h10"/><path d="M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/>',
+padv:'<path d="M3 4h18l-7 8v6l-4 2v-8z"/>',
+pal:'<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/><path d="M12 2v3"/>',
+pwl:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+ppr:'<circle cx="12" cy="12" r="9"/><rect x="9.5" y="9.5" width="5" height="5"/>',
+pfeed:'<path d="M5 3h11l3 3v15H5z"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+cls:'<path d="M7 3h10v5a5 5 0 0 1-10 0z"/><path d="M7 5H4a3 3 0 0 0 3 4M17 5h3a3 3 0 0 1-3 4"/><path d="M12 13v4M8 21h8M9 21l1-4h4l1 4"/>',
+news:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>',
+how:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r=".6"/>',
+cmp:'<path d="M12 3v18M7 21h10M4 7h16"/><path d="M4 7l-2.5 6a2.5 2.5 0 0 0 5 0zM20 7l-2.5 6a2.5 2.5 0 0 0 5 0z"/>'};
+const sv=k=>`<svg class="nvi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${IC[k]||IC.browse}</svg>`;
+const NVI='E'; /* tab icon style: A line, B solid, C duotone, D eastern, E minimal+dot */
+const NV=(new URLSearchParams(location.search).get('nvi')||NVI).toUpperCase();
+const G='#e8c872',M='#7a2a6a';
+const TS={
+B:{home:'<path fill="currentColor" stroke="none" d="M12 3 1.5 9.2l1 1.6L4 10v10h6v-5h4v5h6V10l1.5.8 1-1.6z"/>',
+ tools:'<path fill="currentColor" stroke="none" d="M6 3h11a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2zm3 6v1.6h7V9zm0 4v1.6h7V13z"/>',
+ more:'<circle fill="currentColor" stroke="none" cx="5" cy="12" r="2.4"/><circle fill="currentColor" stroke="none" cx="12" cy="12" r="2.4"/><circle fill="currentColor" stroke="none" cx="19" cy="12" r="2.4"/>'},
+C:{home:'<path fill="'+M+'" stroke="none" d="M5 10.5 12 6l7 4.5V20H5z"/><path d="M2 10 12 4l10 6"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ tools:'<rect x="4" y="3" width="16" height="18" rx="3" fill="'+M+'" stroke="none"/><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+ more:'<circle cx="12" cy="12" r="9" fill="'+M+'" stroke="none"/><circle cx="12" cy="12" r="9"/><path d="M8 12h.01M12 12h.01M16 12h.01" stroke-width="2.6"/>'},
+D:{home:'<path d="M3 7c3 0 5-1.5 9-4 4 2.5 6 4 9 4"/><path d="M5 7v2h14V7"/><path d="M4 13c3 0 5-1 8-3 3 2 5 3 8 3"/><path d="M6 13v8h12v-8"/><path d="M10 21v-4h4v4"/>',
+ tools:'<path d="M19 3 9 13"/><path d="M7 11l6 6"/><path d="M8.5 15.5 4 20"/><circle cx="3.5" cy="20.5" r="1"/><path d="M15 3h4v4"/>',
+ more:'<path d="M12 2v2"/><path d="M8 4h8"/><path d="M7 7c0-1.5 2-3 5-3s5 1.5 5 3v8c0 1.5-2 3-5 3s-5-1.5-5-3z"/><path d="M7 11h10"/><path d="M12 18v3M10 21h4"/>'},
+E:{home:'<path d="M4 11.5 12 5l8 6.5V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/>',
+ tools:'<rect x="4" y="4" width="6.5" height="6.5" rx="2"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="2"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="2"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="2"/>',
+ more:'<path d="M5 8h14M5 12h14M5 16h14"/>'}};
+const tsv=k=>{const set=TS[NV];if(!set)return sv(k);return `<svg class="nvi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${NV=='E'?1.8:1.6}" stroke-linecap="round" stroke-linejoin="round">${set[k]}</svg>`};
+const clean=t=>t.replace(/^[^A-Za-z0-9]+/,'').trim();
+
 const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:flex;background:rgba(20,8,22,.96);border-top:1px solid #5a2550;padding:4px 6px calc(4px + env(safe-area-inset-bottom));backdrop-filter:blur(6px)}
 #tnav button{flex:1;background:none;border:0;color:#b9a3bd;font-size:11px;padding:5px 0;display:flex;flex-direction:column;align-items:center;gap:1px;border-radius:10px}
-#tnav button i{font-style:normal;font-size:17px;line-height:1.1}
-#tnav button.on{color:#e8c872;background:rgba(107,42,90,.35)}
+#tnav .nvi{width:22px;height:22px}#tnav[data-s=B] button.on .nvi,#tnav[data-s=C] button.on .nvi{filter:drop-shadow(0 0 3px rgba(200,80,170,.6))}#tnav[data-s=E] button{position:relative}#tnav[data-s=E] button.on{background:none}#tnav[data-s=E] button.on:after{content:'';position:absolute;bottom:0;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#e8c872}#tnav[data-s=E] button.on .nvi{filter:none}#tnav button.on .nvi{filter:drop-shadow(0 0 4px rgba(200,80,170,.7))}#tsh .it .nvi{width:20px;height:20px;color:#e8c872;flex:none}
+#tnav button.on{color:#ffdf8e;background:rgba(107,42,90,.35)}
 body{padding-bottom:64px}
 #cbar{bottom:56px!important;border-radius:14px 14px 0 0}
 #bycls,#mbtn,.ctl .qs,#ninfo,#ninfo+span{display:none!important}
@@ -17,13 +53,27 @@ body{padding-bottom:64px}
 #tsh .ch.on{border-color:#e8c872;color:#e8c872;background:#3a1640}
 #tsh .it{display:flex;align-items:center;gap:10px;width:100%;background:none;border:0;border-bottom:1px solid #3a1a3c;color:#f2e8f2;padding:12px 2px;font-size:14px;text-align:left;text-decoration:none}
 #tsh .it small{display:block;color:#b9a3bd;font-size:11px;margin-top:2px}
-#tsh .it:last-child{border-bottom:0!important}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
+#tsh .it:last-child{border-bottom:0!important}
+details.pro,.ctl{display:none!important}
+body[data-nv=ctl] .ctl{display:flex!important}
+#nvx{position:fixed;right:12px;bottom:64px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+body[data-nv] #nvx{display:block}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
+#tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 const nav=document.createElement('nav');nav.id='tnav';
-nav.innerHTML='<button data-t="top" class="on"><i>🏆</i>Top</button><button data-t="browse"><i>📋</i>Browse</button><button data-t="more"><i>☰</i>More</button>';
-document.body.appendChild(nav);
+nav.innerHTML='<button data-t="top" class="on">'+tsv('home')+'Home</button><button data-t="browse">'+tsv('tools')+'Tools</button><button data-t="more">'+tsv('more')+'More</button>';
+document.body.appendChild(nav);nav.dataset.s=NV;
 const sh=document.createElement('div');sh.id='tsh';sh.innerHTML='<div class="bg"></div><div class="pn"></div>';document.body.appendChild(sh);
 const pn=sh.querySelector('.pn');
+const vs=document.createElement('style');document.head.appendChild(vs);
+const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close';document.body.appendChild(nx);
+function shut(){delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
+nx.onclick=shut;
+function openF(id){document.body.classList.remove('simple');document.body.dataset.nv=id;
+ if(id=='ctl'){vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el)el.open=true}
+ close();setTimeout(()=>{if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
+function feats(){const fs=[...document.querySelectorAll('details.pro[id]')].map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
+ return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse full list<small>Sort and class</small></span><i>›</i></button><button class="it" data-f="ctl">${sv('ctl')}<span>Filters and sort</span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
 function close(){sh.classList.remove('show');mark(document.body.classList.contains('simple')?'top':'browse')}
 sh.querySelector('.bg').onclick=close;
 function mark(t){nav.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.t==t))}
@@ -32,18 +82,23 @@ function browse(){document.body.classList.remove('simple');
  const sorts=[...document.querySelectorAll('.ctl .qs [data-s]')].map(b=>`<button class="ch${b.dataset.s==cur?' on':''}" data-s="${b.dataset.s}">${b.textContent}</button>`).join('');
  const cls=fc?[...fc.options].map(o=>`<button class="ch${o.value==fc.value?' on':''}" data-c="${o.value}">${o.value?o.text:'All classes'}</button>`).join(''):'';
  pn.innerHTML=`<div class="gr"></div><h4>Sort</h4><div class="row">${sorts}</div><h4>Class</h4><div class="row">${cls}</div><h4>Views</h4><div class="row"><button class="ch" id="tfull">📋 Full list</button><a class="ch" href="classes.html">🏅 Top by class</a></div>`;
+ pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
  pn.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{document.querySelector('.ctl .qs [data-s="'+b.dataset.s+'"]').click();close();scrollTo(0,0)});
  pn.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{fc.value=b.dataset.c;fc.dispatchEvent(new Event('change',{bubbles:true}));fc.dispatchEvent(new Event('input',{bubbles:true}));close();scrollTo(0,0)});
  pn.querySelector('#tfull').onclick=()=>{close();scrollTo(0,0)};
  sh.classList.add('show');mark('browse')}
+function tools(){pn.innerHTML=feats();
+ pn.querySelector('[data-b]').onclick=browse;
+ pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
+ sh.classList.add('show');mark('browse')}
 function more(){pn.innerHTML=`<div class="gr"></div>
-<a class="it" href="changelog.html"><b>✨</b><span>What's new<small>Latest site updates</small></span></a>
-<button class="it" id="thow"><b>ⓘ</b><span>How this works<small>Fair value, build score and badges</small></span></button>
-<button class="it" id="tcmp"><b>⚖</b><span>Compare<small>Tick 2 to 4 characters in Browse, then tap Compare</small></span></button>`;
+<a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
+<button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>
+<button class="it" id="tcmp">${sv('cmp')}<span>Compare<small>Tick 2 to 4 characters in the full list, then tap Compare</small></span></button>`;
  pn.querySelector('#thow').onclick=()=>{document.body.classList.remove('simple');const n=document.querySelector('.note');n.classList.add('show');close();n.scrollIntoView({behavior:'smooth'})};
  pn.querySelector('#tcmp').onclick=()=>{close();browse()};
  sh.classList.add('show');mark('more')}
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
- if(t=='top'){sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
- else if(t=='browse')browse();else more()};
+ if(t=='top'){delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');document.body.classList.add('simple');scrollTo(0,0);mark('top')}
+ else if(t=='browse')tools();else more()};
 })();
