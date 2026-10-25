@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-25",
+    "emoji": "🧹",
+    "text": "Simpler site: removed the Extras tabs (Deals, Events, Leaders, Trends, Upgrade, Guide), the monthly sold price chart and the top-up countdown. Characters, Top 10, Browse, Feed 36h and Watchlist work as before.",
+    "ts": "2026-10-25T11:59:00-07:00"
+  },
+  {
+    "date": "2026-10-25",
     "emoji": "🔕",
     "text": "Removed the Alerts tool. Use Watchlist and Feed 36h to follow characters and price changes.",
     "ts": "2026-10-25T11:47:00-07:00"
