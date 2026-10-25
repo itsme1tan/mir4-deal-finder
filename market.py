@@ -39,6 +39,20 @@ def main():
     global TRACK0
     try: TRACK0=P(min(json.load(open(os.path.join(ROOT,'data','relist_history.json')))['snapshots']))
     except Exception: TRACK0=None
+    # Listing ids are sequential, so a listing's real start time can be read off nearby ids with a known 'listed' time.
+    try: RH=json.load(open(os.path.join(ROOT,'data','relist_history.json'))).get('chars',{})
+    except Exception: RH={}
+    try: AR=json.load(open(os.path.join(ROOT,'data','sold_archive.json')))
+    except Exception: AR=[]
+    PAIRS=sorted({(int(x['id']),x['listed']) for x in AR+D.get('sales',[])+D['listings'] if x.get('id') and x.get('listed')})
+    def id_time(i):
+        import bisect
+        ids=[p[0] for p in PAIRS]; k=bisect.bisect_left(ids,i)
+        if k<len(ids) and ids[k]==i: return P(PAIRS[k][1])-dt.timedelta(hours=15),0
+        if k==0 or k==len(ids): return None,None
+        (i0,t0),(i1,t1)=PAIRS[k-1],PAIRS[k]; t0,t1=P(t0),P(t1)
+        if t1<t0: return None,None
+        return t0+(t1-t0)*((i-i0)/(i1-i0))-dt.timedelta(hours=15),(t1-t0).total_seconds()/3600
     for c in D['listings']:
         k=f"{c['name']}|{c.get('server','')}|{c['cls']}"; h=CH.get(k)
         t=[P(c['listed'])-dt.timedelta(hours=15)] if c.get('listed') else []  # UTC+8 -> PT
@@ -46,6 +60,14 @@ def main():
         if h: t.append(P(h['first_seen']))
         if not t: continue
         lt=t[0] if c.get('listed') else None; first=min(t); c['age_plus']=bool(H0 and h and P(h['first_seen'])<=H0 and (lt is None or lt>H0))  # seen at the tracker's first snapshot: real age may be longer
+        c.pop('age_est',None)
+        if c['age_plus']:
+            ob=(RH.get(k) or {}).get('obs') or []
+            fid=min([o['id'] for o in ob if o.get('id')] or [0])
+            if fid:
+                et,span=id_time(int(fid))
+                if et and span is not None and span<=24:
+                    first=min(first,et); c['age_plus']=False; c['age_est']=round(span,1)  # estimated from the listing number; span = hours between the two known neighbours
         c['age_d']=round(max(0,(now-first).total_seconds()/86400),1); c['on_since']=first.strftime('%Y-%m-%d %H:%M')
         ev=h['events'] if h else []
         cuts=[e for e in ev if e['type'] in('price','relisted') and e.get('from') and e.get('wemix') and e['wemix']<e['from']]

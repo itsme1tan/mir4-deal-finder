@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🕰️",
+    "text": "Characters now show their real first-listed age, even if they were listed before our tracker started, with a tag-clock icon and a pink ↻ for the latest relist.",
+    "ts": "2026-10-24T23:20:00-07:00"
+  },
+  {
+    "date": "2026-10-24",
+    "emoji": "⚔️",
+    "text": "Timer: countdowns now read like a clock, and Altar of Darkness, the Black Dragon field boss and the Battlefield bosses were added. Clan Challenge was removed.",
+    "ts": "2026-10-24T23:19:00-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "💰",
     "text": "Sold prices and the price trend chart now sit at the bottom of Feed 36h.",
     "ts": "2026-10-24T22:53:46-07:00"
