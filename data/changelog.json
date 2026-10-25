@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🏷️",
+    "text": "Sold prices now shows a short class name under each picture.",
+    "ts": "2026-10-24T18:07:11-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "📊",
     "text": "Sold prices now fits your phone with no sideways swipe, with short icons for changes and a legend.",
     "ts": "2026-10-24T18:05:49-07:00"
