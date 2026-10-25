@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🔧",
+    "text": "Feedback sign-in fixed on iPhone: Google now opens in a popup."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "💬",
     "text": "Send feedback: sign in with Google from More or the button on Home, and tell us your ideas or bugs."
   },

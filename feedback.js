@@ -7,27 +7,25 @@ let A,F,auth,db,user=null,N;
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 async function init(){if(auth||MOCK)return;
  const [{initializeApp},a,f]=await Promise.all([import(CDN+'firebase-app.js'),import(CDN+'firebase-auth.js'),import(CDN+'firebase-firestore.js')]);
- A=a;F=f;const app=initializeApp(FIREBASE_CONFIG);auth=a.getAuth(app);db=f.getFirestore(app);
- await new Promise(r=>{const u=a.onAuthStateChanged(auth,x=>{user=x;u();r()})});}
+ A=a;F=f;const app=initializeApp(FIREBASE_CONFIG);auth=a.initializeAuth(app,{persistence:[a.browserLocalPersistence],popupRedirectResolver:a.browserPopupRedirectResolver});db=f.getFirestore(app);
+ await new Promise(r=>{let first=true;a.onAuthStateChanged(auth,x=>{user=x;if(first){first=false;r()}})});}
 function mockUser(){const e=localStorage.mockFbUser;return e?{email:e,uid:'mock',emailVerified:true}:null}
 const P=()=>N.pn,G='<div class="gr"></div>',H='<div class="fbt">💬 Feedback</div><div class="fbw">Every idea counts, thank you! 🙏</div>';
 const GICON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 12h8M16 12a4 4 0 1 1-1.2-2.8"/></svg>';
 export async function open(nav){N=nav;N.show();
  try{await init()}catch(e){return err('Could not reach sign-in right now. Try again later.')}
  if(MOCK)user=mockUser();
- if(!MOCK&&sessionStorage.fbRedirect){delete sessionStorage.fbRedirect;try{const r=await A.getRedirectResult(auth);if(r&&r.user)user=r.user}catch(e){return signin('Google sign-in did not finish. Try again.')}}
  user?form():signin()}
 function err(t){P().innerHTML=G+H+`<div class="ferr">${esc(t)}</div>`}
 function signin(msg=''){P().innerHTML=G+H+`<div class="fbw" style="color:#f2e8f2;margin-top:4px">Sign in first so we can keep spam out.</div>
 <button class="fgo" id="fg">${GICON} Continue with Google</button><div class="ferr" id="fx">${esc(msg)}</div>`;
  P().querySelector('#fg').onclick=google}
-const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1);
-async function google(){if(MOCK){localStorage.mockFbUser='juan@gmail.com';user=mockUser();return form()}
+function google(){if(MOCK){localStorage.mockFbUser='juan@gmail.com';user=mockUser();return form()}
  const pr=new A.GoogleAuthProvider();pr.setCustomParameters({prompt:'select_account'});
- if(IOS){sessionStorage.fbRedirect='1';return A.signInWithRedirect(auth,pr)}
- try{const r=await A.signInWithPopup(auth,pr);user=r.user;form()}
- catch(e){const c=e&&e.code||'';if(c=='auth/popup-blocked'||c=='auth/operation-not-supported-in-this-environment'){sessionStorage.fbRedirect='1';return A.signInWithRedirect(auth,pr)}
-  if(c!='auth/popup-closed-by-user'&&c!='auth/cancelled-popup-request')signin('Google sign-in did not finish. Try again.')}}
+ // Called directly in the tap handler, no await before it, so Safari keeps the popup.
+ A.signInWithPopup(auth,pr).then(r=>{user=r.user;form()}).catch(e=>{const c=e&&e.code||'';
+  if(c=='auth/popup-closed-by-user'||c=='auth/cancelled-popup-request')return;
+  signin(c=='auth/popup-blocked'?'Allow pop-ups for this site, then tap again.':'Google sign-in did not finish. Allow pop-ups for this site, then tap again.')})}
 function form(){let ty='Idea';P().innerHTML=G+H+`<div class="fme">Signed in as <b>${esc(user.email)}</b><button class="flink" id="fo">Sign out</button></div>
 <div class="fty"><button class="on" data-ty="Idea">💡 Idea</button><button data-ty="Bug">🐞 Bug</button><button data-ty="Other">✨ Other</button></div>
 <textarea id="fbm" maxlength="2000" placeholder="What should we add, or what's wrong?"></textarea>

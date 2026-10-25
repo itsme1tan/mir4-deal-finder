@@ -120,9 +120,9 @@ function tools(){pn.innerHTML=feats();
  pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
  sh.classList.add('show');mark('browse')}
 function feedback(){sh.classList.add('show');mark('more');pn.innerHTML='<div class="gr"></div><div class="fbw" style="padding:20px 0;text-align:center">Loading...</div>';
- import('./feedback.js?v=4').then(m=>m.open(window.NAV)).catch(()=>{pn.innerHTML='<div class="gr"></div><div class="ferr" style="padding:20px 0">Could not load feedback. Check your connection and try again.</div>'})}
+ import('./feedback.js?v=5').then(m=>m.open(window.NAV)).catch(()=>{pn.innerHTML='<div class="gr"></div><div class="ferr" style="padding:20px 0">Could not load feedback. Check your connection and try again.</div>'})}
 window.NAV={get pn(){return pn},show:()=>{sh.classList.add('show');mark('more')},close:()=>close(),sv,feedback};
-try{if(sessionStorage.fbRedirect)setTimeout(feedback,300)}catch(e){}
+
 if(IDX){const fbb=document.createElement('button');fbb.id='fbbtn';fbb.textContent='💬 Send feedback';fbb.onclick=()=>feedback();const t2=document.getElementById('t20');(t2?t2.parentNode:document.body).insertBefore(fbb,t2?t2.nextSibling:null)}
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
