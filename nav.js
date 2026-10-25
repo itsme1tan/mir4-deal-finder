@@ -90,7 +90,7 @@ nx.onclick=()=>goHome();
 function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
  close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
-const XF=[['ptimer','Timer'],['pal','Alerts (page open only)'],['pwl','Watchlist'],['ppr','Sold prices'],['pfeed','Feed 36h']];
+const XF=[['ptimer','Timer'],['pal','Alerts (page open only)'],['pwl','Watchlist'],['pfeed','Feed 36h']];
 function feats(){if(!IDX)return `<div class="gr"></div><h4>Tools</h4><div class="fl"><a class="it" href="index.html#nv=ctl">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></a>${XF.map(([k,l])=>`<a class="it" href="index.html#nv=${k}">${sv(k)}<span>${l}</span><i>›</i></a>`).join('')}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`;
  const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
  return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
@@ -131,9 +131,9 @@ function more(){pn.innerHTML=`<div class="gr"></div>
  pn.querySelector('#tfb').onclick=()=>feedback();
  pn.querySelector('#thow').onclick=()=>{if(!IDX){location.href='index.html#nv=how';return}closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='how';const n=document.querySelector('.note');n.classList.add('show');n.classList.add('nvp');for(let q=n.parentElement;q;q=q.parentElement){q.classList.add('nva');if(q==document.body)break}close();mark('more');setTimeout(()=>scrollTo({top:0,behavior:'instant'}),60)};
  sh.classList.add('show');mark('more')}
-if(IDX){const m=location.hash.match(/nv=([a-z]+)/);if(m){const k=m[1];history.replaceState(null,'',location.pathname+location.search);let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
+if(IDX){const m=location.hash.match(/nv=([a-z]+)/);if(m){let k=m[1];const toSold=k=='ppr';if(toSold)k='pfeed';history.replaceState(null,'',location.pathname+location.search);let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
  if(k=='ctl'){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';mark('browse');scrollTo(0,0)}
- else if(k=='how'){more();pn.querySelector('#thow').click()}else openF(k)}},150)}}
+ else if(k=='how'){more();pn.querySelector('#thow').click()}else{openF(k);if(toSold)setTimeout(()=>{const f=document.getElementById('fsold');if(f)scrollTo(0,f.getBoundingClientRect().top+scrollY-56)},800)}}},150)}}
 else mark(/classes/.test(location.pathname)?'browse':'');
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
  if(t=='top')goHome()

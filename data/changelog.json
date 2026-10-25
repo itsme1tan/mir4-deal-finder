@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "💰",
+    "text": "Sold prices and the price trend chart now sit at the bottom of Feed 36h.",
+    "ts": "2026-10-24T22:53:46-07:00"
+  },
+  {
+    "date": "2026-10-24",
+    "emoji": "🔎",
+    "text": "Icons and badges now explains every icon, including the ↻ relisted marker and the Today summary chips.",
+    "ts": "2026-10-24T22:53:46-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "📈",
     "text": "Sold prices now has a weekly price trend chart by class and power, with a rising, falling or flat note.",
     "ts": "2026-10-24T22:41:03-07:00"

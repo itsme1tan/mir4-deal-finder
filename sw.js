@@ -1,6 +1,6 @@
 // Service worker: fast repeat visits and offline support. Also handles notification clicks.
-const V='mir4-v3',SHELL=['./','index.html','classes.html','changelog.html','offline.html','manifest.json',
-'nav.js?v=20','age.js?v=2','strength.js?v=1','extras.js?v=11','premium.js?v=23','pricehist.js?v=2','trend.js?v=1','wemix1h.js?v=4','topup.js?v=2','top20.js?v=37','boss.js?v=16','soldsearch.js?v=5',
+const V='mir4-v4',SHELL=['./','index.html','classes.html','changelog.html','offline.html','manifest.json',
+'nav.js?v=21','age.js?v=2','strength.js?v=1','extras.js?v=11','premium.js?v=24','pricehist.js?v=2','trend.js?v=1','wemix1h.js?v=4','topup.js?v=2','top20.js?v=37','boss.js?v=16','soldsearch.js?v=5',
 'icons/banner-m.jpg?v=1','icons/app-192.png?v=4'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>Promise.all(SHELL.map(u=>c.add(u).catch(()=>{})))))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('mir4-')&&k!==V&&k!==V+'-data').map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
