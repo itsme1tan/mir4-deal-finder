@@ -55,4 +55,4 @@ function render(){fb.innerHTML=`<button class="al${sel=='All'?' on':''}" data-c=
  out.className='';out.innerHTML=(sel=='All'?CL:[sel]).map(c=>{const L=R.filter(x=>x.cls==c).slice(0,n);
   return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">None listed under $25k right now.</div>'}</div>`}).join('')}
 Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};document.querySelector('.ex').insertAdjacentHTML('beforeend',' '+AGE.note(d));D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
-</script><script src="nav.js?v=19"></script></body></html>
+</script><script src="nav.js?v=20"></script></body></html>
