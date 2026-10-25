@@ -24,7 +24,7 @@ document.head.insertAdjacentHTML('beforeend',`<style>
 .phc{margin:6px 0 12px;padding:10px;background:#1c1020;border:1px solid #3a2040;border-radius:12px}.phc h4{margin:0 0 6px;color:#e8c872;font-size:13px}
 .phc svg{display:block;width:100%;height:auto}.phl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:#d9c6dc;margin-top:6px}.phl span{display:inline-flex;align-items:center;gap:4px}.phl .ico{width:12px;height:12px;background:#e8c872}
 .phrl{display:inline-block;font-size:9px;font-weight:600;line-height:1;padding:1px 4px;border-radius:999px;border:1px solid #6b2a5a;color:#f9a8d4;background:rgba(42,15,46,.7)}
-.phn{font-size:11px;color:#b9a3bd;margin-top:4px}
+.phh{margin:0 0 6px;font-size:13px;color:#d9c6dc}.phh b{color:#e8c872;font-size:16px}.phh small{color:#b9a3bd}.phh .dn{color:#e8c872;font-size:12px;margin-top:2px}.phh .up{color:#f87171;font-size:12px;margin-top:2px}.phl{font-size:12px!important}.phn{font-size:12px;color:#b9a3bd;margin-top:4px}
 </style>`);
 // ---------- share ----------
 const btn=id=>`<button class="shb" data-sh="${id}" title="Share this character" aria-label="Share this character">${IC('share')}</button>`;
@@ -81,21 +81,27 @@ function chart(){const s=document.getElementById('solo');if(!s||!s.classList.con
  const sold=(RH.sold||[]).filter(y=>key(y)==key(x)&&y.sold).map(y=>({t:Date.parse(y.sold.replace(' ','T')+':00+08:00'),w:y.wemix,k:'sold'}));
  const now=Date.now();pts.push({t:now,w:x.wemix,k:'now'});
  const all=[...sold,...pts].sort((a,b)=>a.t-b.t);all.forEach(p=>p.u=p.k=='now'?x.usd:usd(p.w,p.t));
- if(all.length<3){box.innerHTML='<h4>📈 Price history</h4><div class="phn">Not enough price changes yet to draw a chart. We have tracked this character since '+(x.on_since||'Oct 20')+' PT.</div>';return}
- const W0=340,H0=170,L=44,R=10,TT=14,B=24,t0=all[0].t,t1=now,u=all.map(p=>p.u),lo=Math.min(...u)*0.96,hi=Math.max(...u)*1.04;
- const X=t=>L+(t-t0)/(t1-t0||1)*(W0-L-R),Y=v=>TT+(hi-v)/(hi-lo||1)*(H0-TT-B);
- const line=pts.map((p,i)=>(i?'L':'M')+X(p.t).toFixed(1)+' '+Y(p.u).toFixed(1)+(pts[i+1]?' H'+X(pts[i+1].t).toFixed(1):'')).join(' ');
+ const kf=v=>'$'+(v>=1e4?(v/1e3).toFixed(1)+'k':(v/1e3).toFixed(2)+'k');
+ const steps=pts.filter((p,i)=>i==0||p.k=='now'||p.w!=pts[i-1].w||p.k=='re');
+ const S=[...sold,...steps].sort((a,b)=>a.t-b.t);S.forEach(p=>p.u=p.w*D.wemix_usd);
+ const f0=pts[0],chg=x.usd-f0.w*D.wemix_usd,pc=Math.round(chg/(f0.w*D.wemix_usd)*1000)/10,cuts=pts.filter(p=>p.k=='re'&&p.w<p.old).length;
+ const head=`<div class="phh"><b>Now $${fm(x.usd)}</b> <small>${fm(x.wemix)} W</small><div class="${chg<0?'dn':'up'}">${Math.abs(chg)<1?'Same price since first listed':(chg<0?'▼ down':'▲ up')+` $${fm(Math.abs(chg))} (${Math.abs(pc)}%) since first listed`}</div></div>`;
+ if(S.length<2){box.innerHTML='<h4>📈 Price history</h4>'+head+'<div class="phn">No price changes yet. We have tracked this character since '+(x.on_since||'Oct 20')+' PT.</div>';return}
+ const n=S.length,W0=340,L=14,R=14,TT=30,B=34,H0=190,u=S.map(p=>p.u),lo=Math.min(...u),hi=Math.max(...u),pad=(hi-lo||hi*.05)*.18;
+ const X=i=>L+(n==1?0:i/(n-1))*(W0-L-R),Y=v=>TT+(hi+pad-v)/((hi-lo)+2*pad||1)*(H0-TT-B);
  const pd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric'});
- let g='';for(let i=0;i<=2;i++){const v=lo+(hi-lo)*i/2;g+=`<line x1="${L}" x2="${W0-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#3a2040" stroke-width="1"/><text x="${L-5}" y="${Y(v)+3}" text-anchor="end" fill="#b9a3bd" font-size="9">$${fm(v)}</text>`}
- const days=Math.max(1,Math.round((t1-t0)/864e5)),step=Math.ceil(days/4);for(let i=0;i<=days;i+=step){const t=t0+i*864e5;g+=`<text x="${X(t)}" y="${H0-8}" text-anchor="middle" fill="#b9a3bd" font-size="9">${pd.format(t)}</text>`}
- let m='';all.forEach(p=>{const cx=X(p.t),cy=Y(p.u),ti=`${pd.format(p.t)}: $${fm(p.u)} (${fm(p.w)} W)`;
-  if(p.k=='first')m+=`<g><title>First listed ${ti}</title><circle cx="${cx}" cy="${cy}" r="8" fill="#2a1030" stroke="#e8c872"/><g transform="translate(${cx-5.5} ${cy-5.5}) scale(.46)" fill="none" stroke="#e8c872" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 21.4 2.6 13.4a2 2 0 0 1 0-2.8L10.6 2.6A2 2 0 0 1 12 2h6a2 2 0 0 1 2 2v2.5"/><circle cx="16.5" cy="16.5" r="5.5"/><path d="M16.5 14v2.6l1.7 1.1"/></g></g>`;
-  else if(p.k=='re')m+=`<g><title>${p.w<p.old?'Price cut':'Relisted'} ${ti}, was ${fm(p.old)} W</title><circle cx="${cx}" cy="${cy}" r="6.5" fill="#2a0f2e" stroke="#6b2a5a"/><text x="${cx}" y="${cy+3}" text-anchor="middle" fill="#f9a8d4" font-size="9" font-weight="700">↻</text></g>`;
-  else if(p.k=='sold')m+=`<g><title>Sold ${ti}</title><rect x="${cx-5}" y="${cy-5}" width="10" height="10" rx="2" fill="#e8c872"/></g>`;
-  else m+=`<g><title>Now ${ti}</title><circle cx="${cx}" cy="${cy}" r="9" fill="rgba(232,200,114,.25)"/><circle cx="${cx}" cy="${cy}" r="4.5" fill="#e8c872"/><text x="${cx-6}" y="${cy-16}" text-anchor="end" fill="#e8c872" font-size="10" font-weight="700">Now $${fm(p.u)}</text></g>`});
- const cuts=pts.filter(p=>p.k=='re'&&p.w<p.old).length;
- box.innerHTML=`<h4>📈 Price history</h4><svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Price history chart"><path d="${line}" fill="none" stroke="#e8c872" stroke-width="2" stroke-linejoin="round"/>${g}${m}</svg>
-<div class="phl"><span>${IC('listed')} First listed</span><span><span class="phrl">↻</span> Relisted or price cut</span>${sold.length?'<span>🏷️ Sold</span>':''}<span><b style="color:#e8c872">●</b> Now</span></div>
-<div class="phn">${pts.length-1} price points${cuts?`, ${cuts} price cut${cuts>1?'s':''}`:''}. $ uses the WEMIX price of each day. Tap or hold a marker for details.</div>`}
+ const line=S.map((p,i)=>(i?'H'+X(i).toFixed(1)+' V':'M'+X(i).toFixed(1)+' ')+Y(p.u).toFixed(1)).join(' ');
+ const every=Math.ceil(n/6);let g='',m='',lb='',dl='',lastD='',lastLX=-99;
+ S.forEach((p,i)=>{const cx=X(i),cy=Y(p.u),ti=`${pd.format(p.t)}: ${fm(p.w)} W (~$${fm(p.u)} today)`,up=i%2==0||n<=6;
+  const ds=p.k=='now'?'Now':pd.format(p.t);if((i==0||i==n-1||i%every==0)&&ds!=lastD&&(lastD=ds))dl+=`<text x="${cx}" y="${H0-10}" text-anchor="${i==0?'start':i==n-1?'end':'middle'}" fill="#b9a3bd" font-size="11">${p.k=='now'?'Now':pd.format(p.t)}</text>`;
+  const chgd=i==0||Math.round(p.u)!=Math.round(S[i-1].u);if(chgd&&p.k!='now'&&cx-lastLX>34&&(lastLX=cx))lb+=`<text x="${i==0?cx-4:cx+2}" y="${cy-14}" text-anchor="start" fill="${p.k=='now'?'#e8c872':'#e3d3e6'}" font-size="${p.k=='now'?12:11}" font-weight="${p.k=='now'?700:500}">${kf(p.u)}</text>`;
+  const hit=`<circle cx="${cx}" cy="${cy}" r="14" fill="transparent"/>`;
+  if(p.k=='first')m+=`<g><title>First listed ${ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="8" fill="#2a1030" stroke="#e8c872"/><g transform="translate(${cx-5.5} ${cy-5.5}) scale(.46)" fill="none" stroke="#e8c872" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 21.4 2.6 13.4a2 2 0 0 1 0-2.8L10.6 2.6A2 2 0 0 1 12 2h6a2 2 0 0 1 2 2v2.5"/><circle cx="16.5" cy="16.5" r="5.5"/><path d="M16.5 14v2.6l1.7 1.1"/></g></g>`;
+  else if(p.k=='re')m+=`<g><title>${p.w<p.old?'Price cut':'Relisted'} ${ti}, was ${fm(p.old)} W</title>${hit}<circle cx="${cx}" cy="${cy}" r="7.5" fill="#2a0f2e" stroke="#be185d"/><text x="${cx}" y="${cy+3.5}" text-anchor="middle" fill="#f9a8d4" font-size="10" font-weight="700">↻</text></g>`;
+  else if(p.k=='sold')m+=`<g><title>Sold ${ti}</title>${hit}<rect x="${cx-6}" y="${cy-6}" width="12" height="12" rx="2" fill="#e8c872"/></g>`;
+  else m+=`<g><title>Now ${ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="10" fill="rgba(232,200,114,.25)"/><circle cx="${cx}" cy="${cy}" r="5" fill="#e8c872"/></g>`});
+ box.innerHTML=`<h4>📈 Price history</h4>${head}<svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Price history chart"><line x1="${L}" x2="${W0-R}" y1="${H0-B+6}" y2="${H0-B+6}" stroke="#3a2040"/><path d="${line}" fill="none" stroke="#e8c872" stroke-width="2.5" stroke-linejoin="round"/>${m}${lb}${dl}</svg>
+<div class="phl"><span>${IC('listed')} First listed</span><span><span class="phrl">↻</span> Price cut or relist</span>${sold.length?'<span>🏷️ Sold</span>':''}<span><b style="color:#e8c872">●</b> Now</span></div>
+<div class="phn">Each step is one price change, evenly spaced (not to time scale). ${cuts?`${cuts} price cut${cuts>1?'s':''}. `:''}$ uses today's WEMIX price so only the seller's changes show. Tap or hold a marker for the date.</div>`}
 ready(()=>{dotd();inject();openShared()});
 })();
