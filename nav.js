@@ -8,7 +8,6 @@ browse:'<path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1"/><circle 
 ctl:'<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>',
 ptimer:'<path d="M7 3h10M7 21h10"/><path d="M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9"/>',
 padv:'<path d="M3 4h18l-7 8v6l-4 2v-8z"/>',
-pal:'<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/><path d="M12 2v3"/>',
 pwl:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
 ppr:'<circle cx="12" cy="12" r="9"/><rect x="9.5" y="9.5" width="5" height="5"/>',
 pfeed:'<path d="M5 3h11l3 3v15H5z"/><path d="M8 9h8M8 13h8M8 17h5"/>',
@@ -90,7 +89,7 @@ nx.onclick=()=>goHome();
 function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
  close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
-const XF=[['ptimer','Timer'],['pal','Alerts (page open only)'],['pwl','Watchlist'],['pfeed','Feed 36h']];
+const XF=[['ptimer','Timer'],['pwl','Watchlist'],['pfeed','Feed 36h']];
 function feats(){if(!IDX)return `<div class="gr"></div><h4>Tools</h4><div class="fl"><a class="it" href="index.html#nv=ctl">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></a>${XF.map(([k,l])=>`<a class="it" href="index.html#nv=${k}">${sv(k)}<span>${l}</span><i>›</i></a>`).join('')}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`;
  const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
  return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}

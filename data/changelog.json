@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-25",
+    "emoji": "🔕",
+    "text": "Removed the Alerts tool. Use Watchlist and Feed 36h to follow characters and price changes.",
+    "ts": "2026-10-25T11:47:00-07:00"
+  },
+  {
+    "date": "2026-10-25",
     "emoji": "🏆",
     "text": "Deal of the day is now Top deal right now: every hour we check for a better deal among characters under $25k and switch only if one is found. The share button is also smaller.",
     "ts": "2026-10-25T11:02:00-07:00"

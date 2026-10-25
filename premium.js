@@ -36,7 +36,6 @@ const css=document.createElement('style');css.textContent=`.pro{margin:0 12px 10
 const ctl=document.querySelector('.ctl');const box=document.createElement('div');ctl.after(box);
 const on=Object.keys(LS).filter(k=>LS[k]!==''&&LS[k]!=null).length;
 box.innerHTML=`<details class="pro" id="padv"><summary>🎛 Filters+ <span id="pacnt" class="mt">${on?'('+on+' on)':''}</span></summary><div class="in">Minimum values. Leave blank to ignore. Saved on this phone. <b id="pmatch" style="color:#ffe08a"></b></div><div class="g">${F.map(([k,l])=>`<label>${l}<input type="number" data-adv="${k}" value="${LS[k]??''}" inputmode="decimal"></label>`).join('')}<label>Farmer profile<select id="ffarm"><option value="">Show all</option><option value="hide">Hide farmers</option><option value="only">Farmers only</option></select></label><label><span>&nbsp;</span><span><input type="checkbox" id="fwatch"> Watchlist only</span></label><button id="pclr" style="background:#45284c">Clear advanced filters</button></div></details>
-<details class="pro" id="pal"><summary>🔔 Alerts <span class="mt">(page open only)</span></summary><div class="in">Not instant push. The data refreshes about every 30 minutes on GitHub. While this page is open, it checks every 5 minutes and plays a sound and shows a browser notification when a watched character changes price, relists or sells, or a new strong deal appears. Nothing arrives when the page is closed. <div style="margin-top:8px"><button id="alon">Turn on alerts</button> <button id="altest" style="background:#45284c">Test sound</button> <span id="alst" class="mt"></span></div></div></details>
 <details class="pro" id="pwl"><summary>⭐ Watchlist (<span id="wcnt">0</span>)</summary><div class="in" id="wlist"></div></details>
 
 <details class="pro" id="pfeed"><summary>📰 Feed 36h</summary><div class="in" id="flist"></div><div class="in" id="fsold"><div class="fsh">💰 Sold prices</div><div id="plist"></div></div></details>`;
@@ -135,24 +134,6 @@ function feed(){const now=Date.parse(D.updated.replace(' ','T')+':00-07:00');con
  flist.querySelectorAll('[data-fp]').forEach(b=>b.onclick=()=>{localStorage.mir4feedps=b.dataset.fp;feed()});
  lk(flist)}
 if(new URLSearchParams(location.search).get('pro'))box.querySelectorAll('details').forEach(d=>d.open=true);
-let AC=null;const actx=()=>{try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}if(!AC){const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;AC=new C()}if(AC.state!='running')AC.resume().catch(()=>{});return AC};
-const unlock=()=>{const a=actx();if(!a)return;try{const b=a.createBuffer(1,1,22050),s=a.createBufferSource();s.buffer=b;s.connect(a.destination);s.start(0)}catch(e){}};
-['touchend','click'].forEach(ev=>document.addEventListener(ev,unlock,{once:true,capture:true}));
-const beep=()=>{try{const a=actx();if(!a)return;const t0=a.currentTime+.05;[880,1320].forEach((h,i)=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=h;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.0001,t0+i*.25);g.gain.exponentialRampToValueAtTime(.35,t0+i*.25+.02);g.gain.exponentialRampToValueAtTime(.001,t0+i*.25+.22);o.start(t0+i*.25);o.stop(t0+i*.25+.23)})}catch(e){}};
-let SWR=null;if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).then(r=>SWR=r).catch(()=>{});
-const banner=(t,b)=>{try{if(!window.Notification||Notification.permission!='granted')return false;const o={body:b,icon:'icons/app-192.png',tag:'mir4-'+Date.now()};
- if(SWR&&SWR.showNotification){SWR.showNotification(t,o);return true}if(navigator.serviceWorker&&navigator.serviceWorker.ready)navigator.serviceWorker.ready.then(r=>r.showNotification(t,o)).catch(()=>{try{new Notification(t,o)}catch(e){}});else new Notification(t,o);return true}catch(e){return false}};
-const askPerm=()=>{try{if(window.Notification&&Notification.permission=='default')return Notification.requestPermission()}catch(e){}return Promise.resolve(window.Notification?Notification.permission:'unsupported')};
-const notify=(t,b)=>{beep();banner(t,b);alst.textContent=t+': '+b};
-const snap=(d,nd)=>({deals:(nd.deals||[]).map(z=>z.id),w:Object.fromEntries(Object.keys(W).map(k=>{const x=d.listings.find(z=>key(z)==k);return [k,x?x.id+':'+x.wemix:'gone']}))});
-let last=null,alT=null;
-function check(){Promise.all([fetch('data.json?'+Date.now()).then(r=>r.json()),fetch('data/new_deals.json?'+Date.now()).then(r=>r.json())]).then(([d,nd])=>{const s2=snap(d,nd);
- if(last){s2.deals.filter(i=>!last.deals.includes(i)).forEach(i=>{const z=nd.deals.find(q=>q.id==i);notify('New strong deal',`${z.name}, ${z.cls}, $${f(z.usd)}, ${z.pct_under}% under fair`)});
-  for(const k in s2.w)if(last.w[k]!==undefined&&last.w[k]!==s2.w[k])notify('Watchlist change',`${k.split('|')[0]}: ${s2.w[k]=='gone'?'no longer listed (sold or delisted)':'now '+f(+s2.w[k].split(':')[1])+' WEMIX'}`)}
- last=s2;alst.textContent='Last checked '+new Date().toLocaleTimeString()+', data from '+d.updated.replace('T',' ')})}
-alon.onclick=()=>{if(alT){clearInterval(alT);alT=null;alon.textContent='Turn on alerts';alst.textContent='Off';return}
- unlock();askPerm();beep();check();alT=setInterval(check,3e5);alon.textContent='Turn off alerts'};
-altest.onclick=()=>{unlock();beep();const b=banner('Test alert','MIR4 Deal Finder alerts are working');setTimeout(()=>{const snd=AC&&AC.state=='running'?'Played a test sound. No sound? Check the ringer switch and volume.':'Sound blocked by the browser. Tap Test sound again.';
- const p=!window.Notification?' Banners need the Home Screen app (iOS 16.4+).':Notification.permission=='granted'?(b?' Test banner sent.':''):Notification.permission=='denied'?' Banners are blocked: Settings, Notifications, MIR4 Deals.':' Tap Turn on alerts to allow banners.';alst.textContent=snd+p},400)};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
 const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(t);wl();prices();feed();draw();if(new URLSearchParams(location.search).get('ask')){const c=document.querySelector('#cards details.xd');if(c){c.open=true;const a=c.nextElementSibling;a.open=true;a.querySelector('.aq').click()}}}},200);
 })();
