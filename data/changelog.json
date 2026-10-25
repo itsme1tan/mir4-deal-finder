@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "📈",
+    "text": "Sold prices now has a weekly price trend chart by class and power, with a rising, falling or flat note.",
+    "ts": "2026-10-24T22:41:03-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "⚡",
     "text": "Faster repeat visits, and the site now opens offline with the last data it saw.",
     "ts": "2026-10-24T21:20:10-07:00"
