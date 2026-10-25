@@ -16,12 +16,13 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 @keyframes fall{to{transform:translate(-60px,110vh) rotate(540deg)}}
 :where(body>header,body>main,body>section,body>#app,body>.wrap){position:relative;z-index:1}
 body{position:relative;isolation:isolate}body::before{content:"";position:absolute;left:0;right:0;top:0;height:340px;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(18,10,20,.85),rgba(18,10,20,.3) 50%,transparent 75%),url(icons/banner-m.jpg?v=1) 72% center/cover no-repeat;opacity:.45;-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent);mask-image:linear-gradient(180deg,#000 50%,transparent)}.sb{background:rgba(28,16,32,.6)!important;backdrop-filter:blur(6px);position:sticky;z-index:2}main{position:relative;z-index:1}
-</style></head>
+.it small.ts{display:block;margin-top:3px;font-size:11px;color:#9c86a0;letter-spacing:.02em}</style></head>
 <body><div class="sb"><a href="./">← Back</a><b>✨ What's new</b></div><main id="m">Loading…</main>
 <script>
 const tz={timeZone:'America/Los_Angeles'},d=t=>new Intl.DateTimeFormat('en-CA',tz).format(t),n=Date.now();
 const lab=s=>s==d(n)?'Today':s==d(n-864e5)?'Yesterday':new Date(s+'T12:00:00Z').toLocaleDateString('en-US',{timeZone:'UTC',weekday:'short',month:'short',day:'numeric'});
+const tsl=x=>{const md=new Date(x.date+'T12:00:00Z').toLocaleDateString('en-US',{timeZone:'UTC',month:'short',day:'numeric'});if(!x.ts)return md;const t=new Date(x.ts).toLocaleTimeString('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'});return md+' · '+t+' PT'};
 const e=s=>String(s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 fetch('data/changelog.json?'+n).then(r=>r.json()).then(L=>{const g={};L.forEach(x=>(g[x.date]=g[x.date]||[]).push(x));
-m.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h2>${lab(k)}</h2>`+g[k].map(x=>`<div class="it"><span>${e(x.emoji||'•')}</span><span>${e(x.text)}</span></div>`).join('')).join('')}).catch(()=>m.textContent='Could not load changes.')
-</script><script src="nav.js?v=18"></script></body></html>
+m.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h2>${lab(k)}</h2>`+g[k].map(x=>`<div class="it"><span>${e(x.emoji||'•')}</span><span>${e(x.text)}<small class="ts">${tsl(x)}</small></span></div>`).join('')).join('')}).catch(()=>m.textContent='Could not load changes.')
+</script><script src="nav.js?v=19"></script></body></html>

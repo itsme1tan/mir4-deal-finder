@@ -57,18 +57,18 @@ const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:fle
 #tsh .fbw{color:#b9a3bd;font-size:13px;margin:0 0 10px}#tsh .fbt{color:#e8c872;font-size:17px;font-weight:700;margin:4px 0 4px}
 #tsh .fty{display:flex;gap:6px;margin:0 0 12px}#tsh .fty button{flex:1;background:#26142b;color:#f2e8f2;border:1px solid #4a2348!important;border-radius:999px;padding:8px 0;font-size:13px}
 #tsh .fty button.on{border-color:#e8c872!important;color:#e8c872;background:#3a1640}
-#tsh textarea,#tsh .fin{width:100%;box-sizing:border-box;background:#140818;color:#f2e8f2;border:1px solid #4a2348;border-radius:12px;padding:10px 12px;font:inherit;font-size:14px;margin:0 0 10px}
+#tsh textarea,#tsh .fin{width:100%;box-sizing:border-box;background:#140818;color:#f2e8f2;border:1px solid #4a2348;border-radius:12px;padding:10px 12px;font:inherit;font-size:16px;margin:0 0 10px}
 #tsh textarea{min-height:110px;resize:vertical}#tsh textarea:focus,#tsh .fin:focus{outline:none;border-color:#e8c872}
 #tsh .fsend{width:100%;background:#e8c872;color:#2a1030;border:0!important;border-radius:999px;padding:12px;font-weight:800;font-size:15px}#tsh .fsend:disabled{opacity:.5}
 #tsh .ferr{color:#f48fb1;font-size:12px;margin:0 0 8px;min-height:0}#tsh .fok{text-align:center;padding:18px 6px 8px}#tsh .fok .nvi{width:44px;height:44px;color:#e8c872}
 #tsh .fme{display:flex;align-items:center;gap:8px;background:#1a0a1e;border:1px solid #4a2348;border-radius:12px;padding:8px 12px;margin:0 0 12px;font-size:13px;color:#cdb8d0}#tsh .fme b{color:#e8c872;font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#tsh .flink{background:none;border:0!important;color:#b9a3bd;font-size:12px;text-decoration:underline;padding:0}#tsh .fgo{width:100%;background:#26142b;color:#f2e8f2;border:1px solid #e8c87266!important;border-radius:999px;padding:11px;font-size:14px;font-weight:600;margin:0 0 10px;display:flex;align-items:center;justify-content:center;gap:8px}#tsh .for{text-align:center;color:#8a7290;font-size:12px;margin:2px 0 10px}#tsh .fsm{color:#8a7290;font-size:11px;margin:8px 0 0;text-align:center}
+#tsh .pn{box-sizing:border-box;width:100%;max-width:100vw;overflow-x:hidden}#tsh .pn *{box-sizing:border-box;max-width:100%}#tsh .fok p{white-space:normal;overflow-wrap:anywhere}#tsh .fsend{display:block;margin-left:auto;margin-right:auto}
 #tsh .fok b{display:block;color:#e8c872;font-size:19px;margin:10px 0 6px}#tsh .fok p{color:#cdb8d0;font-size:14px;margin:0 0 16px}
 #fbbtn{display:block;margin:6px auto 18px;background:none;border:1px solid #e8c87255!important;color:#e8c872;border-radius:999px;padding:7px 16px;font-size:12px;opacity:.85}
-body:not(.simple) #fbbtn{display:none}
 details.pro,.ctl{display:none!important}
 body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:block!important}
 #nvx{position:fixed;right:12px;top:10px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
-body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx{display:none}.nva>*:not(.nva):not(.nvp):not(#tnav):not(#tsh):not(#nvx):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
+body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx{display:none}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
 {const q=new URLSearchParams(location.search).get('sab');if(q)document.documentElement.style.setProperty('--sab',(+q)+'px')}
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
@@ -120,10 +120,10 @@ function tools(){pn.innerHTML=feats();
  pn.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>openF(b.dataset.f));
  sh.classList.add('show');mark('browse')}
 function feedback(){sh.classList.add('show');mark('more');pn.innerHTML='<div class="gr"></div><div class="fbw" style="padding:20px 0;text-align:center">Loading...</div>';
- import('./feedback.js?v=5').then(m=>m.open(window.NAV)).catch(()=>{pn.innerHTML='<div class="gr"></div><div class="ferr" style="padding:20px 0">Could not load feedback. Check your connection and try again.</div>'})}
+ import('./feedback.js?v=6').then(m=>m.open(window.NAV)).catch(()=>{pn.innerHTML='<div class="gr"></div><div class="ferr" style="padding:20px 0">Could not load feedback. Check your connection and try again.</div>'})}
 window.NAV={get pn(){return pn},show:()=>{sh.classList.add('show');mark('more')},close:()=>close(),sv,feedback};
 
-if(IDX){const fbb=document.createElement('button');fbb.id='fbbtn';fbb.textContent='💬 Send feedback';fbb.onclick=()=>feedback();const t2=document.getElementById('t20');(t2?t2.parentNode:document.body).insertBefore(fbb,t2?t2.nextSibling:null)}
+if(!document.getElementById('fbbtn')){const fbb=document.createElement('button');fbb.id='fbbtn';fbb.textContent='💬 Send feedback';fbb.onclick=()=>feedback();document.body.insertBefore(fbb,nav)}
 function more(){pn.innerHTML=`<div class="gr"></div>
 <a class="it" href="changelog.html">${sv('news')}<span>What's new<small>Latest site updates</small></span></a>
 <button class="it" id="thow">${sv('how')}<span>How this works<small>Fair value, build score and badges</small></span></button>
