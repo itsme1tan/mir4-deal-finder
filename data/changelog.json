@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-25",
+    "emoji": "📈",
+    "text": "Character details now show a price history chart with the first listing, relists, price cuts and the price now.",
+    "ts": "2026-10-25T08:01:00-07:00"
+  },
+  {
+    "date": "2026-10-25",
+    "emoji": "🏆",
+    "text": "New Deal of the day at the top of Home: the best buy under $25k, with a fresh pick every midnight Pacific time.",
+    "ts": "2026-10-25T08:00:30-07:00"
+  },
+  {
+    "date": "2026-10-25",
+    "emoji": "🔗",
+    "text": "Share any character: tap the share icon to copy or send a link that opens the site on that character.",
+    "ts": "2026-10-25T08:00:00-07:00"
+  },
+  {
     "date": "2026-10-24",
     "emoji": "🕰️",
     "text": "Characters now show their real first-listed age, even if they were listed before our tracker started, with a tag-clock icon and a pink ↻ for the latest relist.",
