@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "🔎",
+    "text": "Browse now starts empty until you pick a filter or search, with For sale now and Recently sold sections.",
+    "ts": "2026-10-24T18:36:22-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "🏷️",
     "text": "Browse now shows recently sold characters XDRACO hides, with the sold price and date.",
     "ts": "2026-10-24T18:27:48-07:00"
