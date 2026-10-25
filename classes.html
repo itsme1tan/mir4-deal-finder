@@ -41,7 +41,7 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 const CL=['Taoist','Arbalist','Warrior','Lancer'];
 const f=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const I=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
-const ci=c=>`<img src="icons/class/${c.toLowerCase()}.webp" alt="${c}" title="${c}">`;
+const ci=c=>`<img loading="lazy" decoding="async" src="icons/class/${c.toLowerCase()}.webp" alt="${c}" title="${c}">`;
 const J=u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}));
 let D,sel=new URLSearchParams(location.search).get('c')||localStorage.mir4cls||'All';if(sel!='All'&&!CL.includes(sel))sel='All';
 function rl(x){const r=x.rl;if(!r)return '';const du=Math.round(Math.abs(r.to-r.from)*D.wemix_usd);

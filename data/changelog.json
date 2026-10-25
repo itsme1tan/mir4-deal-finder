@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "⚡",
+    "text": "Faster repeat visits, and the site now opens offline with the last data it saw.",
+    "ts": "2026-10-24T21:20:10-07:00"
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "📰",
     "text": "Feed 36h now lets you pick the power cutoff, so you can see sales under 650k.",
     "ts": "2026-10-24T18:39:06-07:00"

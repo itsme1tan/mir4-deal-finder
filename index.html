@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/app-180.png?v=4"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MIR4 Deals">
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="manifest.json"><link rel="preload" as="image" href="icons/banner-m.jpg?v=1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="apple-touch-icon" href="icons/app-180.png?v=4"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MIR4 Deals">
 <title>MIR4 Character Deal Finder</title>
 <meta name="theme-color" content="#120a14">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap">
@@ -224,7 +224,7 @@ function valueHtml(x){const V=x.value_bd,u=D.wemix_usd,w=n=>(n>=0?'+':'−')+f(M
   ['Mystique, Constitution, Mythic gear unique effects','not public','Not on Hofgamer or XDRACO pages, so not valued.']];
  o+=`<h4>Also on this character (informational, not in the price)</h4><table class="ct">${I.map(([a,b,c])=>`<tr><td>${a}</td><td>${b}<br><small>${c}</small></td></tr>`).join('')}</table><div class="lt">Model = ridge regression on 240 recent sales (10-fold CV median error ${D.model.cv_mape_full}%). Each line is the % this character is above or below an average build at the same power and class.</div>`;
  return o}
-const SI=k=>`<img class="xsi" src="icons/stat/Ico_Status_${k}.png" alt="" width="17" height="17">`;
+const SI=k=>`<img loading="lazy" decoding="async" class="xsi" src="icons/stat/Ico_Status_${k}.png" alt="" width="17" height="17">`;
 function statsHtml(x){const S=x.sheet;if(!S||!S.length)return progHtml(x)+'<div class="lt">Stat sheet not loaded yet.</div>';const R=x.sheet_rank||{};
  return progHtml(x)+S.map(([g,rows])=>`<h4>${g}</h4><div class="sg">${rows.map(([ic,n,v])=>`<div class="sr wi"><img class="si" src="icons/stat/${ic=='ServerVisitLife'?'ServerVisitLife_Info':'Ico_Status_'+ic}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span>${n}</span><b>${v}</b>${R[ic]!=null?`<i class="${R[ic]>=75?'hi':''}">Top ${Math.max(1,100-R[ic])}%</i>`:'<i class="na"></i>'}</div>`).join('')}</div>`).join('')
  +`<div class="lt">Top % = rank within ${x.cls} among current listings and recent sales.</div><a class="btn" style="background:#26142b" href="https://nft.hofgamer.com/mir4/nft/${x.id}#stats" target="_blank">Open stats on Hofgamer</a>`}
@@ -273,7 +273,7 @@ function cmpOpen(){const [a,b]=csel.map(id=>D.listings.find(x=>x.id==id));if(!a|
  // Equipment
  const slots=[...new Set([...(a.build?.gear||[]),...(b.build?.gear||[])].map(g=>g.slot))];
  const gs=y=>y?y.g*1000+y.t*100+y.r*25+y.e:null;
- const gc=y=>y?`<div class="gp"><img src="${y.img}" alt="" title="${y.n}"><div><b style="color:${GC[y.g]||'#e3d3e6'}">${GN[y.g]||y.g} T${y.t}</b><br>${y.r?`🐉${y.r} `:''}+${y.e}${y.h?` <small>${'◆'.repeat(y.h)}</small>`:''}</div></div>`:'–';
+ const gc=y=>y?`<div class="gp"><img loading="lazy" decoding="async" src="${y.img}" alt="" title="${y.n}"><div><b style="color:${GC[y.g]||'#e3d3e6'}">${GN[y.g]||y.g} T${y.t}</b><br>${y.r?`🐉${y.r} `:''}+${y.e}${y.h?` <small>${'◆'.repeat(y.h)}</small>`:''}</div></div>`:'–';
  let eq=sec('🛡 Equipment <small>grade · tier · 🐉 Dragon Forge · +enhance</small>');
  slots.forEach(s=>{const g=x=>(x.build?.gear||[]).find(y=>y.slot==s),A=g(a),B=g(b),va=gs(A),vb=gs(B);if(va!=null&&vb!=null&&va!=vb)wins[va>vb?0:1]++;
   eq+=row(`<small>${s}</small>`,gc(A),gc(B),va,vb,1,()=>'')});
@@ -345,4 +345,4 @@ bcmp.onclick=()=>{const cs=D.listings.filter(x=>sel.has(x.id));
  return `<tr><td>${l}</td>`+v.map(n=>`<td class="${n===best?'best':''}">${typeof n=='number'&&n>99999?big(n):typeof n=='number'?f(n,1):n??'–'}</td>`).join('')+'</tr>'}).join('')+'</table>';cmp.scrollIntoView()};
 document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{fsort.value=b.dataset.s;draw()});
 {const _d=draw;draw=function(){document.querySelectorAll('.qs button').forEach(b=>b.classList.toggle('on',b.dataset.s==fsort.value));return _d.apply(this,arguments)}}
-</script><script src="extras.js?v=11"></script><script src="premium.js?v=22"></script><script src="pricehist.js?v=2"></script><script src="wemix1h.js?v=4"></script><script src="topup.js?v=2"></script><script src="strength.js?v=1"></script><script src="top20.js?v=36"></script><script src="boss.js?v=16"></script><script src="soldsearch.js?v=5"></script><script src="nav.js?v=20"></script></body></html>
+</script><script src="extras.js?v=11"></script><script src="premium.js?v=23"></script><script src="pricehist.js?v=2"></script><script src="wemix1h.js?v=4"></script><script src="topup.js?v=2"></script><script src="strength.js?v=1"></script><script src="top20.js?v=37"></script><script src="boss.js?v=16"></script><script src="soldsearch.js?v=5"></script><script src="nav.js?v=20"></script></body></html>
