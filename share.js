@@ -1,4 +1,4 @@
-/* Share links (?c=listing id), Deal of the day spotlight, and per-character price history chart. Display only. */
+/* Share links (?c=listing id), Top deal right now spotlight, and per-character price history chart. Display only. */
 (function(){
 const BASE='https://itsme1tan.github.io/mir4-deal-finder/';
 const fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
@@ -6,8 +6,8 @@ const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 const IC=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
 const ready=f=>{const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings&&document.getElementById('t20')){clearInterval(t);f()}},150)};
 document.head.insertAdjacentHTML('beforeend',`<style>
-.shb{display:inline-flex;align-items:center;justify-content:center;width:26px;height:24px;margin-left:6px;padding:0;border:1px solid #c9a7ff;border-radius:999px;background:rgba(201,167,255,.10);color:#d9c4ff;cursor:pointer;vertical-align:middle;flex:none}
-.shb .ico{width:13px;height:13px;background:#d9c4ff}
+.shb{position:relative;display:inline-flex;align-items:center;justify-content:center;width:20px;height:18px;margin-left:6px;align-self:center;padding:0;border:1px solid #c9a7ff;border-radius:999px;background:rgba(201,167,255,.10);color:#d9c4ff;cursor:pointer;vertical-align:middle;flex:none}
+.shb .ico{width:10px;height:10px;background:#d9c4ff}.shb::before{content:'';position:absolute;inset:-5px}
 .shtip{position:fixed;z-index:100001;transform:translate(-50%,-100%);background:#2a1030;color:#e8c872;border:1px solid #e8c872;border-radius:8px;padding:5px 10px;font-size:12px;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.5);pointer-events:none}
 .shglow{animation:shg 2.2s ease-out 1}@keyframes shg{0%,60%{box-shadow:0 0 0 2px #e8c872,0 0 18px 4px rgba(232,200,114,.7)}100%{box-shadow:none}}
 #shbar{position:sticky;top:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;background:#2a1030;border-bottom:1px solid #e8c872;color:#f2e8f2;font-size:13px}
@@ -52,21 +52,25 @@ function openShared(){if(!C)return;bar();const x=D.listings.find(y=>y.id==C);
  document.getElementById('dotd')?document.getElementById('dotd').before(m):document.getElementById('t20').before(m)}
 // ---------- deal of the day ----------
 const ptDay=t=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}).format(t);
-function pick(){const day=ptDay(Date.now());let s={};try{s=JSON.parse(localStorage.mir4dotd||'{}')}catch(e){}
- let x=s.day==day&&D.listings.find(y=>y.id==s.id);
- if(!x){const L=D.listings.filter(y=>y.usd<25000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>(b.build_score+1.5*b.discount)-(a.build_score+1.5*a.discount));x=L[0];if(x)localStorage.mir4dotd=JSON.stringify({day,id:x.id})}
+const bb=y=>y.build_score+1.5*y.discount;
+const slot=t=>{const d=new Date(t),f=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).format(d);return f};
+function pick(){const h=slot(Date.now());let s={};try{s=JSON.parse(localStorage.mir4dotd||'{}')}catch(e){}
+ const L=D.listings.filter(y=>y.usd<25000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>bb(b)-bb(a)),best=L[0];
+ let x=L.find(y=>y.id==s.id);
+ if(!x||(s.h!=h&&best&&bb(best)>bb(x)))x=best;
+ if(x)localStorage.mir4dotd=JSON.stringify({h,id:x.id});
  return x}
-function left(){const n=Date.now(),p=new Date(new Date(n).toLocaleString('en-US',{timeZone:'America/Los_Angeles'})),s=86400-(p.getHours()*3600+p.getMinutes()*60+p.getSeconds()),q=v=>String(v).padStart(2,'0');return Math.floor(s/3600)+':'+q(Math.floor(s%3600/60))+':'+q(s%60)}
+function left(){const n=new Date(),s=3600-(n.getMinutes()*60+n.getSeconds()),q=v=>String(v).padStart(2,'0');return q(Math.floor(s/60))+':'+q(s%60)}
 function dotd(){const x=pick();let o=document.getElementById('dotd');if(!x){o&&o.remove();return}
  if(!o){o=document.createElement('div');o.id='dotd';document.getElementById('t20').before(o)}
  const W=JSON.parse(localStorage.mir4watch||'{}'),w=W[key(x)],st=document.querySelector('.hwk .strong');
- o.innerHTML=`<div class="dh"><span>🏆 Deal of the day</span><small>New pick in <span id="dotdc">${left()}</span></small></div>
+ o.innerHTML=`<div class="dh"><span>🏆 Top deal right now</span><small title="Every hour we check for a better deal. The pick only changes if one is found, or if this character sells or is delisted.">Rechecks in <span id="dotdc">${left()}</span></small></div>
 <div class="db" data-id="${x.id}"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}" width="48" height="48"><div class="dm"><div class="dn">${x.name}</div><div class="ds"><span>${x.cls}</span><span>${IC('server')} ${x.server}</span><span>⚡ ${fm(x.ps/1000)}k</span><span>${IC('swords')} ${fm(x.atk/1000)}k</span><span>${IC('gauge')} ${x.build_score}</span></div></div>
 <div class="dp"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small><small class="${x.discount>0?'u':''}" style="${x.discount>0?'':'color:#f87171'}">${x.discount>0?'▼ '+x.discount+'% under':'▲ '+(-x.discount)+'% over'}</small></div></div>
 <div class="df">${x.strong&&st?st.outerHTML:''}<button class="wst ${w?'on':''}" data-w="${encodeURIComponent(key(x))}" title="${w?'Watching. Tap to stop':'Watch this character'}">${w?'★':'☆'}</button>${btn(x.id)}</div>`;
  o.querySelector('.db').onclick=()=>T20.solo(x.id,D.listings);
  o.querySelector('.wst').addEventListener('click',()=>setTimeout(dotd,50))}
-setInterval(()=>{const c=document.getElementById('dotdc');if(!c)return;const v=left();if(v=='24:00:00'||/^0:00:0[01]$/.test(v))dotd();c.textContent=v},1000);
+setInterval(()=>{const c=document.getElementById('dotdc');if(!c)return;const v=left();if(v=='60:00'||v=='00:00')dotd();c.textContent=v},1000);
 // ---------- price history chart ----------
 let RH=null,WD=null;
 function chart(){const s=document.getElementById('solo');if(!s||!s.classList.contains('on'))return;const c=s.querySelector('.bd .card[data-id]');if(!c||s.querySelector('.phc'))return;

@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-25",
+    "emoji": "🏆",
+    "text": "Deal of the day is now Top deal right now: every hour we check for a better deal among characters under $25k and switch only if one is found. The share button is also smaller.",
+    "ts": "2026-10-25T11:02:00-07:00"
+  },
+  {
+    "date": "2026-10-25",
     "emoji": "📈",
     "text": "Easier to read price history: the price now and how much it dropped sit on top, each price change gets its own space with its price, and markers no longer overlap.",
     "ts": "2026-10-25T08:12:00-07:00"
