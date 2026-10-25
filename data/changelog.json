@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-10-24",
+    "emoji": "💬",
+    "text": "Send feedback: sign in with Google from More or the button on Home, and tell us your ideas or bugs."
+  },
+  {
+    "date": "2026-10-24",
     "emoji": "📖",
     "text": "How this works now opens on its own, with no character cards underneath, and the More tab stays lit while it's open."
   },
