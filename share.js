@@ -6,8 +6,8 @@ const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 const IC=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
 const ready=f=>{const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings&&document.getElementById('t20')){clearInterval(t);f()}},150)};
 document.head.insertAdjacentHTML('beforeend',`<style>
-.shb{display:inline-flex;align-items:center;justify-content:center;width:26px;height:24px;margin-left:6px;padding:0;border:1px solid #6b2a5a;border-radius:999px;background:rgba(42,15,46,.7);color:#e8c872;cursor:pointer;vertical-align:middle;flex:none}
-.shb .ico{width:13px;height:13px;background:#e8c872}
+.shb{display:inline-flex;align-items:center;justify-content:center;width:26px;height:24px;margin-left:6px;padding:0;border:1px solid #c9a7ff;border-radius:999px;background:rgba(201,167,255,.10);color:#d9c4ff;cursor:pointer;vertical-align:middle;flex:none}
+.shb .ico{width:13px;height:13px;background:#d9c4ff}
 .shtip{position:fixed;z-index:100001;transform:translate(-50%,-100%);background:#2a1030;color:#e8c872;border:1px solid #e8c872;border-radius:8px;padding:5px 10px;font-size:12px;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.5);pointer-events:none}
 .shglow{animation:shg 2.2s ease-out 1}@keyframes shg{0%,60%{box-shadow:0 0 0 2px #e8c872,0 0 18px 4px rgba(232,200,114,.7)}100%{box-shadow:none}}
 #shbar{position:sticky;top:0;z-index:9000;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 14px;background:#2a1030;border-bottom:1px solid #e8c872;color:#f2e8f2;font-size:13px}

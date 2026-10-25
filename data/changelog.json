@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-25",
+    "emoji": "💜",
+    "text": "The share icon on characters is now lavender, so it stands apart from the gold watch star.",
+    "ts": "2026-10-25T08:08:00-07:00"
+  },
+  {
+    "date": "2026-10-25",
     "emoji": "📈",
     "text": "Character details now show a price history chart with the first listing, relists, price cuts and the price now.",
     "ts": "2026-10-25T08:01:00-07:00"
