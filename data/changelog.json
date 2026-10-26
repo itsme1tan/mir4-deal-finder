@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🔎",
+    "text": "Price history search is more forgiving: it now covers all tracked characters, ignores case, accents and symbols like 丨 or ツ, matches ø as o, and suggests the closest names when you make a typo.",
+    "ts": "2026-10-26T15:36:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "📈",
     "text": "New Price history tool in the Tools menu: search characters by current or old name, for sale or sold, and see their price line and full listing and sale history.",
     "ts": "2026-10-26T15:25:00-07:00"
