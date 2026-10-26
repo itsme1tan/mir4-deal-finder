@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🕘",
+    "text": "The History tab in character details now shows the full record (listings, relists, price cuts, sales and renames), the same as the History box.",
+    "ts": "2026-10-26T14:55:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
+    "emoji": "⭐",
+    "text": "Ultimate skills are now the same size as other skills, marked with a gold star. The star is explained under Skills.",
+    "ts": "2026-10-26T14:54:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🧩",
     "text": "Character details now show Gear, Spirits and Skills together, one under the other. Stones, Stats, Value and History stay as tabs below.",
     "ts": "2026-10-26T14:50:00-07:00"
