@@ -41,6 +41,26 @@ def update(r):
         else: ev.append(dict(t=t,type='transfer',to=to));owner=to
         r['blk']=int(l['blockNumber'],16)
     r['owner']=owner;r['price']=price
+META_H=float(os.environ.get('CHAIN_META_H','20'))  # reread each token's public metadata about once a day
+def meta(k,r):
+    """Current name/server/class/level/PS from the token's own metadata (tokenURI -> webapi.mir4global.com/wemix/nft/meta). Keeps past names."""
+    n=r.get('now') or {}
+    if n.get('t') and (datetime.datetime.now(LA)-datetime.datetime.strptime(n['t'],'%Y-%m-%d %H:%M').replace(tzinfo=LA)).total_seconds()<META_H*3600: return
+    h=rpc('eth_call',[dict(to=NFT,data='0xc87b56dd'+'%064x'%r['token']),'latest']);u=bytes.fromhex(h[130:130+2*int(h[66:130],16)]).decode()
+    if not u.startswith('https://webapi.mir4global.com/'): return
+    m=json.loads(urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30).read())
+    a={x.get('trait_type'):x.get('value') for x in m.get('attributes',[])}
+    t=datetime.datetime.now(LA).strftime('%Y-%m-%d %H:%M');nm=a.get('Character Name') or m.get('name')
+    if not nm: return
+    try: ps=int(str(a.get('Power Score','')).replace(',',''))
+    except Exception: ps=None
+    cls=a.get('Class');kc=k.split('|')[2]
+    if cls and cls!=kc: r['bad']=f'class {kc} on our record but {cls} on the token'  # class never changes, so this token was matched wrongly
+    else: r.pop('bad',None)
+    nn=dict(t=t,name=nm,server=a.get('Server') or None,cls=cls,lv=a.get('Level'),ps=ps)
+    names=r.setdefault('names',[])
+    if not names or names[-1]['name']!=nm: names.append(dict(name=nm,seen=t))
+    r['now']=nn
 def main():
     D=json.load(open(os.path.join(ROOT,'data.json')))
     try: O=json.load(open(OUT))
@@ -57,6 +77,9 @@ def main():
                 tid=token(x['id'])
                 if not tid: return
                 r={'token':tid}
+            try: meta(k,r)
+            except Exception as e: print('meta skip',k,str(e)[:60])
+            O[k]=r
             if r.get('blk',-1)>=head: return
             update(r);r['checked']=datetime.datetime.now(LA).strftime('%Y-%m-%d %H:%M');O[k]=r
             if len(O)%25==0: json.dump(O,open(OUT+'.part','w'),ensure_ascii=False)

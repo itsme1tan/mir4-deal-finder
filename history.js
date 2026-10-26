@@ -8,9 +8,17 @@ const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 let P=null;
 window.FH={
  load(){return P||(P=Promise.all(['data/relist_history.json','data/char_history.json','data/sold_archive.json','data/wemix_daily.json','data/chain_history.json'].map(u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))))
-  .then(([rh,ch,sa,wd,nc])=>({RH:rh.chars||{},CH:ch.chars||{},SA:Array.isArray(sa)?sa:[],WD:wd||{},NC:nc||{}})))},
+  .then(([rh,ch,sa,wd,nc])=>{const S={RH:rh.chars||{},CH:ch.chars||{},SA:Array.isArray(sa)?sa:[],WD:wd||{},NC:nc||{},TK:{}};
+   for(const k in S.NC){const r=S.NC[k];if(r.token&&!r.bad)(S.TK[r.token]=S.TK[r.token]||[]).push(k)}
+   window.FHS=S;document.dispatchEvent(new Event('fh-ready'));return S}))},
+ // Same token = same character, even after a rename or a server move. Records whose class does not match the token are left out (bad match).
+ who(x,S){S=S||window.FHS;if(!S)return null;const r=S.NC[key(x)];if(!r||r.bad||!r.token)return null;const ks=S.TK[r.token]||[key(x)];
+  let now=null;const nm=[];ks.forEach(k=>{const q=S.NC[k];if(q.now&&(!now||q.now.t>now.t))now=q.now;nm.push(k.split('|')[0]);(q.names||[]).forEach(n=>nm.push(n.name))});
+  const all=[...new Set(nm)];return {token:r.token,now,keys:ks,names:all,formerly:all.filter(n=>n!=x.name&&(!now||n!=now.name))}},
+ fold(t){return String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[øØ]/g,'o').toLowerCase()},
+ alias(x){const w=FH.who(x);if(!w)return '';const n=w.names.concat(w.now?[w.now.name]:[]).join(' ');return ' '+n+' '+FH.fold(n)},
  rate(S,t){for(let i=0;i<7;i++){const r=S.WD[new Date(t-i*864e5).toISOString().slice(0,10)];if(r)return r}return typeof D!='undefined'?D.wemix_usd:null},
- chain(x,S){const k=key(x),c=S.NC[k];if(!c||!c.events)return null;const E=[];
+ chain(x,S){const k=key(x);let c=S.NC[k];if(!c||!c.events||c.bad)return null;(S.TK[c.token]||[]).forEach(z=>{const q=S.NC[z];if(q.events&&(q.blk||0)>(c.blk||0))c=q});const E=[];
   const G=new Set(['0x7a53f80e849efda468f322f5401bdf71d5a5d1e5']);let own=null,hops=0;// custody wallet: moves out and back, not owner changes
   c.events.forEach(e=>{const t=PT(e.t),p=E[E.length-1];
    if(e.type=='minted'){own=e.to}else if(e.type=='transfer'){if(G.has(e.to)||e.to==own){hops++;return}own=e.to}else if(e.type=='sold')own=e.to;
@@ -35,3 +43,5 @@ window.FH={
   return {events:E,est:E.some(e=>e.est),tracked:ob.length?PT(ob[0].t):null}}
 };
 })();
+
+FH.load();

@@ -40,6 +40,7 @@ def chain_age(D,now=None):
     now=now or dt.datetime.strptime(D['updated'][:16],'%Y-%m-%d %H:%M')
     for c in D['listings']:
         r=C.get(f"{c['name']}|{c.get('server') or ''}|{c['cls']}") or {}
+        if r.get('bad'): continue
         f=chain_first(r.get('events') or [])
         if not f: continue
         c['on_since']=f;c['age_plus']=False;c.pop('age_est',None);c['age_src']='chain'

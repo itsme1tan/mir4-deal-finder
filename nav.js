@@ -67,7 +67,7 @@ const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:fle
 details.pro,.ctl{display:none!important}
 body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:block!important}
 #nvx{position:fixed;right:12px;top:10px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
-body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx{display:none}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
+body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx,body:has(#solo.on) #nvx{display:none!important}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(#solo):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
 {const q=new URLSearchParams(location.search).get('sab');if(q)document.documentElement.style.setProperty('--sab',(+q)+'px')}
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
