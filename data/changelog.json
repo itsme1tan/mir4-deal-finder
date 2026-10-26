@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-26",
+    "emoji": "🕘",
+    "text": "Full history for characters: History now shows every listing, relist, delist, sale and wallet move from the public WEMIX chain record, back to the day each character became an NFT. The price chart, listing age and History now agree. Older rows are in a collapsed Older records section.",
+    "ts": "2026-10-26T13:20:00-07:00"
+  },
+  {
     "date": "2026-10-25",
     "emoji": "🧹",
     "text": "Simpler site: removed the Extras tabs (Deals, Events, Leaders, Trends, Upgrade, Guide), the monthly sold price chart and the top-up countdown. Characters, Top 10, Browse, Feed 36h and Watchlist work as before.",

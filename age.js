@@ -1,7 +1,7 @@
 // Listing age + market note helpers (data from market.py). Shared by index, Top 10 and Top by class.
 const AGE={
  txt:x=>{if(x.age_d==null)return '?';const d=x.age_d,s=d<1?Math.max(1,Math.round(d*24))+'h':Math.floor(d)+'d';return s+(x.age_plus?'+':'')},
- tip:x=>x.age_d==null?'Listing time unknown':`First listed ${AGE.txt(x)} ago. `+(AGE.relH(x)!=null?`Relisted ${AGE.ago(AGE.relH(x))} (current listing). `:'')+`On the market since ${x.on_since} PT`+(x.age_est!=null?' (first listing date worked out from its listing number)':'')+(x.age_plus?' or earlier (our tracker started '+((typeof D!='undefined'&&D.age&&D.age.tracking_since)||'Oct 20')+' and the seller relisted since)':'')+(x.cut_n?`, price cut ${x.cut_n}x`:''),
+ tip:x=>x.age_d==null?'Listing time unknown':`First listed ${AGE.txt(x)} ago. `+(AGE.relH(x)!=null?`Relisted ${AGE.ago(AGE.relH(x))} (current listing). `:'')+`On the market since ${x.on_since} PT`+(x.age_src=='chain'?' (from the public WEMIX chain record)':x.age_est!=null?' (first listing date worked out from its listing number)':'')+(x.age_plus?' or earlier (our tracker started '+((typeof D!='undefined'&&D.age&&D.age.tracking_since)||'Oct 20')+' and the seller relisted since)':'')+(x.cut_n?`, price cut ${x.cut_n}x`:''),
  relH:x=>{if(!x.listed||!x.on_since)return null;const L=Date.parse(x.listed.replace(' ','T')+':00+08:00'),F=Date.parse(x.on_since.replace(' ','T')+':00-07:00');if(!(L-F>36e5))return null;return Math.max(0,(Date.now()-L)/36e5)},
  ago:h=>h<1?Math.max(1,Math.round(h*60))+'m ago':h<24?Math.round(h)+'h ago':Math.floor(h/24)+'d ago',
  lbl:x=>{const h=AGE.relH(x);return h==null?'Listed '+AGE.txt(x):'Relisted '+AGE.ago(h)+' · first listed '+AGE.txt(x)+' ago'},

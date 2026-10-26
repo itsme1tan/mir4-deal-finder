@@ -21,6 +21,30 @@ def factor(sales):
         pp=model.power_only([t for t,_ in D if t is not s],s)
         if pp: out.append(s['wemix']/math.sqrt(math.exp(m.pred([r],[s['cls']])[0])*pp))
     return (float(np.median(out)) if len(out)>=8 else 1.0),len(out)
+GAME={'0x7a53f80e849efda468f322f5401bdf71d5a5d1e5'}  # custody wallet (Nov 2025 to Jan 2026): moves out and back, not owner changes
+def chain_first(ev):
+    """First listing time of the current owner, from the public WEMIX chain record (data/chain_history.json)."""
+    own=None;start=0
+    for i,e in enumerate(ev):
+        if e['type']=='minted': own=e['to'];start=i+1
+        elif e['type']=='transfer':
+            if e['to'] in GAME or e['to']==own: continue
+            own=e['to'];start=i+1
+        elif e['type']=='sold': own=e.get('to');start=i+1
+    L=[e['t'] for e in ev[start:] if e['type']=='listed']
+    return L[0] if L else None
+def chain_age(D,now=None):
+    """Listing age from the chain record when we have it (exact, goes back before our tracker started)."""
+    try: C=json.load(open(os.path.join(ROOT,'data','chain_history.json')))
+    except Exception: return
+    now=now or dt.datetime.strptime(D['updated'][:16],'%Y-%m-%d %H:%M')
+    for c in D['listings']:
+        r=C.get(f"{c['name']}|{c.get('server') or ''}|{c['cls']}") or {}
+        f=chain_first(r.get('events') or [])
+        if not f: continue
+        c['on_since']=f;c['age_plus']=False;c.pop('age_est',None);c['age_src']='chain'
+        c['age_d']=round(max(0,(now-dt.datetime.strptime(f,'%Y-%m-%d %H:%M')).total_seconds()/86400),1)
+        c['stale']=c['age_d']>=STALE_D; c['fresh']=c['age_d']*24<FRESH_H and (c.get('discount') or -99)>=FRESH_DISC
 def main():
     fp=os.path.join(ROOT,'data.json'); D=json.load(open(fp))
     f,n=factor(D['sales']); f=min(1.15,max(0.85,f))
@@ -75,6 +99,7 @@ def main():
         c['stale']=c['age_d']>=STALE_D; c['fresh']=c['age_d']*24<FRESH_H and (c.get('discount') or -99)>=FRESH_DISC
     H=json.load(open(os.path.join(ROOT,'data','relist_history.json'))) if os.path.exists(os.path.join(ROOT,'data','relist_history.json')) else {'snapshots':[]}
     D['age']={'tracking_since':min(H['snapshots']) if H['snapshots'] else None,'stale_d':STALE_D,'fresh_h':FRESH_H,'fresh_disc':FRESH_DISC}
+    chain_age(D,now)
     json.dump(D,open(fp+'.tmp','w'),ensure_ascii=False); os.replace(fp+'.tmp',fp)
     print('market factor',f,'n',n)
 if __name__=='__main__': main()

@@ -78,13 +78,19 @@ let CH=null;const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct
 const pt=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);const ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+7,+m[5]);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
  return (d(ms)==d(n)?'Today':d(ms)==d(n-864e5)?'Yesterday':f(['en-US',{month:'short',day:'numeric'}])(ms))+' at '+f(['en-US',{hour:'numeric',minute:'2-digit'}])(ms)};
 const ptOld=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);let h=+m[4];const ap=h<12?'AM':'PM';h=h%12||12;return `${MO[m[2]-1]} ${+m[3]} ${h}:${m[5]} ${ap}`};
-function hist20(x,bd){const go=c=>{const r=c&&c[`${x.name}|${x.server||''}|${x.cls}`];if(!r)return;const L={listed:'Listed',relisted:'Relisted',price:'Price change',delisted:'Delisted',sold:'Sold'};
- const ln=r.events.slice().reverse().map(e=>{const p=e.from&&e.wemix&&e.from!=e.wemix?` <span class="${e.wemix<e.from?'dn':'up'}">(${e.wemix>e.from?'+':''}${((e.wemix/e.from-1)*100).toFixed(1)}%)</span>`:'';
-  const v=e.wemix?(e.from&&e.from!=e.wemix?`${fm(e.from)} → ${fm(e.wemix)} W`:`${fm(e.wemix)} W`)+(e.usd?` <small>$${fm(e.usd)}</small>`:'')+p:'';
-  return `<div class="hl"><span class="ht">${pt(e.t)}</span><b>${L[e.type]||e.type}</b><span>${v}</span></div>`}).join('');
- const d=document.createElement('div');d.className='h20';d.innerHTML=`<div class="hh">🕘 History <small>First seen ${pt(r.first_seen).replace(/ at .*/,'')}</small></div>${ln}`;bd.prepend(d)};
- if(CH)go(CH);else fetch('data/char_history.json?'+Date.now()).then(r=>r.ok?r.json():{}).then(j=>{CH=j.chars||{};go(CH)}).catch(()=>{})}
-const hs=document.createElement('style');hs.textContent=`.h20{margin:4px 0 12px;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;font-size:13px}.h20 .hh{font-weight:700;margin-bottom:6px}.h20 .hh small{color:#b9a3bd;font-weight:400;margin-left:6px}.h20 .hl{display:grid;grid-template-columns:132px 74px 1fr;gap:6px;padding:4px 0;border-top:1px solid #2a1730}.h20 .ht{color:#b9a3bd}.h20 small{color:#b9a3bd}.h20 .dn{color:#ffc94d}.h20 .up{color:#f87171}`;document.head.appendChild(hs);
+function hist20(x,bd){FH.load().then(S=>{const H=FH.build(x,S);if(!H.events.length)return;
+ const L={listed:'Listed',seen:'First seen',relisted:'Relisted',price:'Price change',delisted:'Delisted',sold:'Sold',minted:'Became an NFT',transfer:'Moved to another wallet'};
+ const fmt=ms=>{const s=new Date(ms).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).slice(0,16);return pt(s)+(s.slice(0,4)!=new Date().getFullYear()?', '+s.slice(0,4):'')},day=ms=>new Date(ms).toLocaleDateString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',year:'numeric'});
+ const row=e=>{const p=e.from&&e.w&&e.from!=e.w?` <span class="${e.w<e.from?'dn':'up'}">(${e.w>e.from?'+':''}${((e.w/e.from-1)*100).toFixed(1)}%)</span>`:'';
+  const v=e.est?'<small>Price not tracked yet. Date worked out from its listing number.</small>':e.w?(e.from&&e.from!=e.w?`${fm(e.from)} → ${fm(e.w)} W`:`${fm(e.w)} W`)+(e.usd?` <small>$${fm(e.usd)}</small>`:'')+p:e.to?`<small>wallet ${e.to.slice(0,6)}…${e.to.slice(-4)}</small>`:'';
+  return `<div class="hl"><span class="ht">${e.est?'~':''}${fmt(e.t)}</span><b>${L[e.type]||e.type}</b><span>${v}</span></div>`};
+ const R=H.events.slice().reverse(),N=6,top=R.slice(0,N).map(row).join(''),old=R.slice(N);
+ const f=H.chain?H.events.find(e=>e.type=='listed'&&!e.past):H.events.find(e=>e.type=='listed'&&!e.past)||H.events[0],m=H.events.find(e=>e.type=='minted');
+ const sub=H.chain?(f?'First listed '+day(f.t):'Not listed yet')+(m?' · NFT since '+day(m.t):''):H.est?'First listed about '+day(f.t)+' · tracked since '+day(H.tracked):'First listed '+day(f.t);
+ const src=H.chain?'From the public WEMIX chain record of this character, back to the day it became an NFT.'+(H.hops?` ${H.hops} moves to a holding wallet and back are left out.`:''):'From our tracker, which started Oct 20, 2026.';
+ const d=document.createElement('div');d.className='h20';d.innerHTML=`<div class="hh">🕘 History <small>${sub}</small></div>${top}${old.length?`<details class="hold"><summary>Older records (${old.length})</summary>${old.map(row).join('')}</details>`:''}<div class="hn">${src} $ is at the WEMIX price of each day. Times are Pacific.</div>`;
+ bd.querySelector('.h20')?.remove();bd.prepend(d)})}
+const hs=document.createElement('style');hs.textContent=`.h20{margin:4px 0 12px;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;font-size:13px}.h20 .hh{font-weight:700;margin-bottom:6px}.h20 .hh small{color:#b9a3bd;font-weight:400;margin-left:6px}.h20 .hl{display:grid;grid-template-columns:132px 74px 1fr;gap:6px;padding:4px 0;border-top:1px solid #2a1730}.h20 .ht{color:#b9a3bd}.h20 small{color:#b9a3bd}.h20 .dn{color:#ffc94d}.h20 .hn{margin-top:6px;font-size:11px;color:#b9a3bd}.h20 .up{color:#f87171}.h20 .hl>*{min-width:0;overflow-wrap:anywhere}.h20 .hold summary{cursor:pointer;color:#e8c872;padding:6px 0;border-top:1px solid #2a1730;font-weight:600}.h20 .hold[open] summary{margin-bottom:2px}`;document.head.appendChild(hs);
 window.solo20=id=>solo(id,D.listings);
 const w=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(w);render()}},100);
 })();

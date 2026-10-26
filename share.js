@@ -75,37 +75,36 @@ setInterval(()=>{const c=document.getElementById('dotdc');if(!c)return;const v=l
 let RH=null,WD=null;
 function chart(){const s=document.getElementById('solo');if(!s||!s.classList.contains('on'))return;const c=s.querySelector('.bd .card[data-id]');if(!c||s.querySelector('.phc'))return;
  const x=D.listings.find(y=>y.id==c.dataset.id);if(!x)return;
- if(!RH){RH=1;Promise.all([fetch('data/relist_history.json?'+Date.now()).then(r=>r.json()),fetch('data/wemix_daily.json?'+Date.now()).then(r=>r.json()),fetch('data/sold_archive.json?'+Date.now()).then(r=>r.json())]).then(([a,b,z])=>{RH=a;WD=b;RH.sold=z;chart()});return}
+ if(!RH){RH=1;FH.load().then(z=>{RH=z;WD=z.WD;chart()});return}
  if(RH===1)return;
  const box=document.createElement('div');box.className='phc';s.querySelector('.bd').prepend(box);
- const ob=(RH.chars[key(x)]||{}).obs||[],pts=[];
- const T=t=>Date.parse(t.replace(' ','T')+':00-07:00'),usd=(w,t)=>{const d=new Date(t).toISOString().slice(0,10);let r=null;for(let i=0;i<6&&!r;i++)r=WD[new Date(t-i*864e5).toISOString().slice(0,10)];return w*(r||D.wemix_usd)};
- if(x.on_since&&ob.length&&T(x.on_since)<T(ob[0].t)-36e5)pts.push({t:T(x.on_since),w:ob[0].wemix,k:'first'});
- ob.forEach((o,i)=>{const p=ob[i-1];if(!p){if(!pts.length)pts.push({t:T(o.t),w:o.wemix,k:'first'});return}if(o.id!=p.id||o.wemix!=p.wemix)pts.push({t:T(o.t),w:o.wemix,k:'re',old:p.wemix})});
- const sold=(RH.sold||[]).filter(y=>key(y)==key(x)&&y.sold).map(y=>({t:Date.parse(y.sold.replace(' ','T')+':00+08:00'),w:y.wemix,k:'sold'}));
+ const FE=FH.build(x,RH),pts=[];const ob=[{t:FE.tracked?new Date(FE.tracked).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).slice(0,16):''}];
+ const T=t=>Date.parse(t.replace(' ','T')+':00-07:00'),EST=FE.est;
+ FE.events.forEach(e=>{if(e.past||!e.w||e.type=='sold'||e.type=='delisted')return;if(FE.chain){pts.push(pts.length?{t:e.t,w:e.w,k:'re',old:e.from||pts[pts.length-1].w}:{t:e.t,w:e.w,k:'first'});return}if(e.est)pts.push({t:e.t,w:(FE.events.find(z=>z.type=='seen')||{}).w,k:'first',est:1});else if(e.type=='seen')pts.push({t:e.t,w:e.w,k:'seen'});else if(e.type=='listed')pts.push({t:e.t,w:e.w,k:'first'});else pts.push({t:e.t,w:e.w,k:'re',old:e.from})});
+ const sold=FE.events.filter(e=>e.type=='sold').map(e=>({t:e.t,w:e.w,k:'sold'}));
  const now=Date.now();pts.push({t:now,w:x.wemix,k:'now'});
- const all=[...sold,...pts].sort((a,b)=>a.t-b.t);all.forEach(p=>p.u=p.k=='now'?x.usd:usd(p.w,p.t));
+ const all=[...sold,...pts].sort((a,b)=>a.t-b.t);all.forEach(p=>p.u=p.k=="now"?x.usd:p.w*(FH.rate(RH,p.t)||D.wemix_usd));
  const kf=v=>'$'+(v>=1e4?(v/1e3).toFixed(1)+'k':(v/1e3).toFixed(2)+'k');
- const steps=pts.filter((p,i)=>i==0||p.k=='now'||p.w!=pts[i-1].w||p.k=='re');
+ const steps=pts.filter((p,i)=>i==0||p.k=='now'||p.k=='seen'||p.w!=pts[i-1].w||p.k=='re');
  const S=[...sold,...steps].sort((a,b)=>a.t-b.t);S.forEach(p=>p.u=p.w*D.wemix_usd);
  const f0=pts[0],chg=x.usd-f0.w*D.wemix_usd,pc=Math.round(chg/(f0.w*D.wemix_usd)*1000)/10,cuts=pts.filter(p=>p.k=='re'&&p.w<p.old).length;
- const head=`<div class="phh"><b>Now $${fm(x.usd)}</b> <small>${fm(x.wemix)} W</small><div class="${chg<0?'dn':'up'}">${Math.abs(chg)<1?'Same price since first listed':(chg<0?'▼ down':'▲ up')+` $${fm(Math.abs(chg))} (${Math.abs(pc)}%) since first listed`}</div></div>`;
+ const pd0=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric'});const head=`<div class="phh"><b>Now $${fm(x.usd)}</b> <small>${fm(x.wemix)} W</small><div class="${chg<0?'dn':'up'}">${Math.abs(chg)<1?'Same price since first listed':(chg<0?'▼ down':'▲ up')+` $${fm(Math.abs(chg))} (${Math.abs(pc)}%) since ${EST?'first seen '+pd0.format(T(ob[0].t)):'first listed'}`}</div></div>`;
  if(S.length<2){box.innerHTML='<h4>📈 Price history</h4>'+head+'<div class="phn">No price changes yet. We have tracked this character since '+(x.on_since||'Oct 20')+' PT.</div>';return}
  const n=S.length,W0=340,L=14,R=14,TT=30,B=34,H0=190,u=S.map(p=>p.u),lo=Math.min(...u),hi=Math.max(...u),pad=(hi-lo||hi*.05)*.18;
  const X=i=>L+(n==1?0:i/(n-1))*(W0-L-R),Y=v=>TT+(hi+pad-v)/((hi-lo)+2*pad||1)*(H0-TT-B);
  const pd=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric'});
- const line=S.map((p,i)=>(i?'H'+X(i).toFixed(1)+' V':'M'+X(i).toFixed(1)+' ')+Y(p.u).toFixed(1)).join(' ');
+ const i0=S[0].est?1:0,line=S.slice(i0).map((p,j)=>{const i=j+i0;return (j?'H'+X(i).toFixed(1)+' V':'M'+X(i).toFixed(1)+' ')+Y(p.u).toFixed(1)}).join(' ')+(i0?`" fill="none" stroke="#e8c872" stroke-width="2.5" stroke-linejoin="round"/><path d="M${X(0).toFixed(1)} ${Y(S[0].u).toFixed(1)} H${X(1).toFixed(1)}" stroke-dasharray="4 4" stroke-width="1.6" opacity=".7`:'');
  const every=Math.ceil(n/6);let g='',m='',lb='',dl='',lastD='',lastLX=-99;
  S.forEach((p,i)=>{const cx=X(i),cy=Y(p.u),ti=`${pd.format(p.t)}: ${fm(p.w)} W (~$${fm(p.u)} today)`,up=i%2==0||n<=6;
-  const ds=p.k=='now'?'Now':pd.format(p.t);if((i==0||i==n-1||i%every==0)&&ds!=lastD&&(lastD=ds))dl+=`<text x="${cx}" y="${H0-10}" text-anchor="${i==0?'start':i==n-1?'end':'middle'}" fill="#b9a3bd" font-size="11">${p.k=='now'?'Now':pd.format(p.t)}</text>`;
-  const chgd=i==0||Math.round(p.u)!=Math.round(S[i-1].u);if(chgd&&p.k!='now'&&cx-lastLX>34&&(lastLX=cx))lb+=`<text x="${i==0?cx-4:cx+2}" y="${cy-14}" text-anchor="start" fill="${p.k=='now'?'#e8c872':'#e3d3e6'}" font-size="${p.k=='now'?12:11}" font-weight="${p.k=='now'?700:500}">${kf(p.u)}</text>`;
+  const ds=p.k=='now'?'Now':(p.est?'~':'')+pd.format(p.t);if((i==0||i==n-1||(i%every==0&&cx<X(n-1)-44))&&ds!=lastD&&(lastD=ds))dl+=`<text x="${cx}" y="${H0-10}" text-anchor="${i==0?'start':i==n-1?'end':'middle'}" fill="#b9a3bd" font-size="11">${p.k=='now'?'Now':pd.format(p.t)}</text>`;
+  const chgd=i==0||Math.round(p.u)!=Math.round(S[i-1].u);if(p.est)lb+=`<text x="${cx-4}" y="${cy-14}" text-anchor="start" fill="#b9a3bd" font-size="11">price not tracked</text>`,lastLX=cx+60;else if((chgd||p.k=='seen')&&p.k!='now'&&cx-lastLX>34&&(lastLX=cx))lb+=`<text x="${i==0?cx-4:cx+2}" y="${cy-14}" text-anchor="start" fill="${p.k=='now'?'#e8c872':'#e3d3e6'}" font-size="${p.k=='now'?12:11}" font-weight="${p.k=='now'?700:500}">${kf(p.u)}</text>`;
   const hit=`<circle cx="${cx}" cy="${cy}" r="14" fill="transparent"/>`;
-  if(p.k=='first')m+=`<g><title>First listed ${ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="8" fill="#2a1030" stroke="#e8c872"/><g transform="translate(${cx-5.5} ${cy-5.5}) scale(.46)" fill="none" stroke="#e8c872" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 21.4 2.6 13.4a2 2 0 0 1 0-2.8L10.6 2.6A2 2 0 0 1 12 2h6a2 2 0 0 1 2 2v2.5"/><circle cx="16.5" cy="16.5" r="5.5"/><path d="M16.5 14v2.6l1.7 1.1"/></g></g>`;
+  if(p.k=='seen')m+=`<g><title>First seen by our tracker ${ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="4.5" fill="#2a1030" stroke="#e8c872" stroke-width="2"/></g>`;else if(p.k=='first')m+=`<g><title>${p.est?`First listed about ${pd.format(p.t)} (worked out from its listing number). Its price before we started tracking is not known.`:'First listed '+ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="8" fill="#2a1030" stroke="#e8c872"/><g transform="translate(${cx-5.5} ${cy-5.5}) scale(.46)" fill="none" stroke="#e8c872" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 21.4 2.6 13.4a2 2 0 0 1 0-2.8L10.6 2.6A2 2 0 0 1 12 2h6a2 2 0 0 1 2 2v2.5"/><circle cx="16.5" cy="16.5" r="5.5"/><path d="M16.5 14v2.6l1.7 1.1"/></g></g>`;
   else if(p.k=='re')m+=`<g><title>${p.w<p.old?'Price cut':'Relisted'} ${ti}, was ${fm(p.old)} W</title>${hit}<circle cx="${cx}" cy="${cy}" r="7.5" fill="#2a0f2e" stroke="#be185d"/><text x="${cx}" y="${cy+3.5}" text-anchor="middle" fill="#f9a8d4" font-size="10" font-weight="700">↻</text></g>`;
   else if(p.k=='sold')m+=`<g><title>Sold ${ti}</title>${hit}<rect x="${cx-6}" y="${cy-6}" width="12" height="12" rx="2" fill="#e8c872"/></g>`;
   else m+=`<g><title>Now ${ti}</title>${hit}<circle cx="${cx}" cy="${cy}" r="10" fill="rgba(232,200,114,.25)"/><circle cx="${cx}" cy="${cy}" r="5" fill="#e8c872"/></g>`});
  box.innerHTML=`<h4>📈 Price history</h4>${head}<svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Price history chart"><line x1="${L}" x2="${W0-R}" y1="${H0-B+6}" y2="${H0-B+6}" stroke="#3a2040"/><path d="${line}" fill="none" stroke="#e8c872" stroke-width="2.5" stroke-linejoin="round"/>${m}${lb}${dl}</svg>
-<div class="phl"><span>${IC('listed')} First listed</span><span><span class="phrl">↻</span> Price cut or relist</span>${sold.length?'<span>🏷️ Sold</span>':''}<span><b style="color:#e8c872">●</b> Now</span></div>
-<div class="phn">Each step is one price change, evenly spaced (not to time scale). ${cuts?`${cuts} price cut${cuts>1?'s':''}. `:''}$ uses today's WEMIX price so only the seller's changes show. Tap or hold a marker for the date.</div>`}
+<div class="phl"><span>${IC('listed')} First listed</span><span><span class="phrl">↻</span> Price cut or relist</span>${sold.length?'<span>🏷️ Sold</span>':''}${EST?'<span><b style="color:#e8c872">○</b> First seen</span>':''}<span><b style="color:#e8c872">●</b> Now</span></div>
+<div class="phn">Each step is one price change, evenly spaced (not to time scale). ${cuts?`${cuts} price cut${cuts>1?'s':''}. `:''}${EST?`First listed about ${pd.format(T(x.on_since))}, worked out from its listing number; we started tracking it ${pd.format(T(ob[0].t))}. `:''}$ here uses today's WEMIX price so only the seller's changes show; History below shows $ at each day's WEMIX price. Tap or hold a marker for the date.</div>`}
 ready(()=>{dotd();inject();openShared()});
 })();
