@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26 00:36",
+ "updated": "2026-10-26 00:53",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,7 +10,7 @@
    "cls": "Sorcerer",
    "ps": 660284,
    "build_score": 95,
-   "usd": 3999,
+   "usd": 4000,
    "fair_usd": 4191,
    "pct_under": 4.6,
    "usd_under": 192,
