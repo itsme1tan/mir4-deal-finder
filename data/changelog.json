@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🎒",
+    "text": "Removed the Bag section from character details and Compare. Conquest and Training stay; use Open on XDRACO for the full bag.",
+    "ts": "2026-10-26T15:00:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🕘",
     "text": "The History tab in character details now shows the full record (listings, relists, price cuts, sales and renames), the same as the History box.",
     "ts": "2026-10-26T14:55:00-07:00"
