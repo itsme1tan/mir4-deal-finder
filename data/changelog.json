@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🏰",
+    "text": "Cleaner Conquest and Training tiles on character details: the label now sits under the icon, the grid is evenly spaced, and the summary line uses the site's gold icons.",
+    "ts": "2026-10-26T15:05:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🎒",
     "text": "Removed the Bag section from character details and Compare. Conquest and Training stay; use Open on XDRACO for the full bag.",
     "ts": "2026-10-26T15:00:00-07:00"
