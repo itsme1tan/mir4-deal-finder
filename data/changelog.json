@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🏆",
+    "text": "Price history now opens with the Top 3 strongest sold characters of all time by power score at sale, with class, server, price in W and USD, and date. Typos now always suggest the 3 closest characters with their class icon and last price.",
+    "ts": "2026-10-26T15:45:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🔎",
     "text": "Price history search is more forgiving: it now covers all tracked characters, ignores case, accents and symbols like 丨 or ツ, matches ø as o, and suggests the closest names when you make a typo.",
     "ts": "2026-10-26T15:36:00-07:00"
