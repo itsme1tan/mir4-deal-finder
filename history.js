@@ -44,4 +44,22 @@ window.FH={
 };
 })();
 
+// Tools > Price history: search any character we track (current or old name) and show its full record here.
+FH.tool=function(){if(FH._t)return;FH._t=1;const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;let q,L,R;const g=()=>{q=document.getElementById('phq');L=document.getElementById('phl');R=document.getElementById('phres');return q};
+ const E=t=>String(t??'').replace(/[<>&"]/g,''),fmn=n=>Math.round(n).toLocaleString('en-US');
+ const pool=S=>{const m=new Map();((typeof D!='undefined'&&D.listings)||[]).forEach(x=>m.set(key(x),{x,live:1}));[...((typeof D!='undefined'&&D.sales)||[]),...S.SA].forEach(s=>{const k=key(s);if(!m.has(k)&&s.sold)m.set(k,{x:s,live:0})});return [...m.values()]};
+ const spark=H=>{const p=H.events.filter(e=>e.w&&(e.type=='listed'||e.type=='relisted'||e.type=='price'||e.type=='sold'||e.type=='seen'));if(p.length<2)return '';
+  const W=340,Hh=70,lo=Math.min(...p.map(e=>e.w)),hi=Math.max(...p.map(e=>e.w)),X=i=>8+i/(p.length-1)*(W-16),Y=v=>8+(hi-v)/((hi-lo)||1)*(Hh-16);
+  const d=p.map((e,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(e.w).toFixed(1)).join(' ');
+  return `<svg viewBox="0 0 ${W} ${Hh}" style="width:100%;height:auto;display:block;margin:6px 0"><path d="${d}" fill="none" stroke="#e8c872" stroke-width="2" stroke-linejoin="round"/>${p.map((e,i)=>e.type=='sold'?`<circle cx="${X(i)}" cy="${Y(e.w)}" r="4" fill="#d63384"/>`:'').join('')}</svg><div style="display:flex;justify-content:space-between;font-size:11px;color:#b9a3bd"><span>${fmn(p[0].w)} W</span><span><b style="color:#d63384">●</b> Sold · line = asking price</span><span>${fmn(p[p.length-1].w)} W</span></div>`};
+ const show=(it,S)=>{const x=it.x,w=FH.who(x,S),H=FH.build(x,S);
+  R.innerHTML=`<div style="margin:10px 0 6px;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><b style="color:#e8c872;overflow-wrap:anywhere">${E(x.name)}</b><span style="font-size:12px;color:#b9a3bd;white-space:nowrap">${it.live?'For sale':'Sold'}</span></div><div style="font-size:12px;color:#b9a3bd">${E(x.cls)} · ${E(x.server||'?')}${x.wemix?' · '+fmn(x.wemix)+' W':''}</div>${spark(H)}<button id="phopen" style="margin-top:6px;width:100%;background:#26142b;color:#f2e8f2;border:1px solid #e8c87266;border-radius:999px;padding:9px;font-size:14px">Open full details</button></div><div id="phh"></div>`;
+  window.hist20&&hist20(x,R.querySelector('#phh'));
+  R.querySelector('#phopen').onclick=()=>{if(it.live&&window.solo20)solo20(x.id);else if(window.soloSold)soloSold(x.id,x.name)}};
+ let seq=0;const run=()=>{const my=++seq;return FH.load().then(S=>{if(my!=seq||!g())return;const t=FH.fold(q.value.trim());R.innerHTML='';if(t.length<2){L.innerHTML='<div style="font-size:12px;color:#b9a3bd;margin-top:6px">Type at least 2 letters. Finds characters by current or old name, for sale or sold.</div>';return}
+  const hits=pool(S).filter(it=>FH.fold(it.x.name+' '+(it.x.server||'')+FH.alias(it.x)).includes(t)).slice(0,20);
+  L.innerHTML=hits.length?hits.map((it,i)=>{const w=FH.who(it.x,S),nn=w&&w.now&&w.now.name!=it.x.name?` <small style="color:#b9a3bd">now ${E(w.now.name)}</small>`:'';return `<button data-i="${i}" style="display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #3a2040;color:#f2e8f2;padding:9px 2px;font-size:14px"><span style="min-width:0;overflow-wrap:anywhere">${E(it.x.name)}${nn}</span><span style="color:#b9a3bd;font-size:12px;white-space:nowrap">${E(it.x.cls)} · ${it.live?'for sale':'sold'}</span></button>`}).join(''):'<div style="font-size:12px;color:#b9a3bd;margin-top:6px">No character found with that name.</div>';
+  L.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{show(hits[+b.dataset.i],S);L.innerHTML=''})})};
+ document.addEventListener('input',e=>{if(e.target&&e.target.id=='phq')run()},true);run()};
+const _ti=()=>{if(document.getElementById('phq'))FH.tool();else setTimeout(_ti,500)};_ti();
 FH.load();

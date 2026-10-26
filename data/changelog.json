@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "📈",
+    "text": "New Price history tool in the Tools menu: search characters by current or old name, for sale or sold, and see their price line and full listing and sale history.",
+    "ts": "2026-10-26T15:25:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
+    "emoji": "📌",
+    "text": "Character details now keep the name, portrait, price, class and power pinned at the top while you scroll, so screenshots of characters always show who they are and what they cost.",
+    "ts": "2026-10-26T15:24:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🏰",
     "text": "Cleaner Conquest and Training tiles on character details: the label now sits under the icon, the grid is evenly spaced, and the summary line uses the site's gold icons.",
     "ts": "2026-10-26T15:05:00-07:00"
