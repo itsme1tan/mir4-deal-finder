@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🕘",
+    "text": "Character details are tidier: the price chart now sits at the top of the History tab with one History list below it. In Price history, characters without saved details link to XDRACO instead, and Back returns you to the tool with your pick kept.",
+    "ts": "2026-10-26T16:26:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🏆",
     "text": "Price history now opens with the Top 3 strongest sold characters of all time by power score at sale, with class, server, price in W and USD, and date. Typos now always suggest the 3 closest characters with their class icon and last price.",
     "ts": "2026-10-26T15:45:00-07:00"

@@ -64,7 +64,13 @@ FH.tool=function(){if(FH._t)return;FH._t=1;const key=x=>x.name+'|'+(x.server||''
  const show=(it,S)=>{const x=it.x,w=FH.who(x,S),H=FH.build(x,S);
   R.innerHTML=`<div style="margin:10px 0 6px;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><b style="color:#e8c872;overflow-wrap:anywhere">${E(x.name)}</b><span style="font-size:12px;color:#b9a3bd;white-space:nowrap">${it.live?'For sale':it.tr?'Tracked':'Sold'}</span></div><div style="font-size:12px;color:#b9a3bd">${E(x.cls)} · ${E(x.server||'?')}${x.wemix?' · '+fmn(x.wemix)+' W':''}</div>${spark(H)}<button id="phopen" style="margin-top:6px;width:100%;background:#26142b;color:#f2e8f2;border:1px solid #e8c87266;border-radius:999px;padding:9px;font-size:14px">Open full details</button></div><div id="phh"></div>`;
   window.hist20&&hist20(x,R.querySelector('#phh'));
-  if(!x.id)R.querySelector('#phopen').remove();else R.querySelector('#phopen').onclick=()=>{if(it.live&&window.solo20)solo20(x.id);else if(window.soloSold)soloSold(x.id,x.name)}};
+  // Only offer saved details when they exist; otherwise link to XDRACO, or show nothing.
+  const bt=R.querySelector('#phopen'),xd=x.id?'https://www.xdraco.com/nft/trade/'+x.id:'';
+  const toX=()=>{if(!xd){bt.remove();return}const a=document.createElement('a');a.id='phopen';a.href=xd;a.target='_blank';a.rel='noopener';a.textContent='Open on XDRACO ↗';a.style.cssText=bt.style.cssText+';visibility:visible;display:block;text-align:center;text-decoration:none;box-sizing:border-box';bt.replaceWith(a)};
+  const go=()=>{FH._phd=1;history.pushState({phd:1},'');if(it.live)solo20(x.id);else soloSold(x.id,x.name)};
+  if(it.live&&window.solo20&&x.id&&typeof D!='undefined'&&D.listings.some(y=>y.id==x.id))bt.onclick=go;
+  else if(x.id&&window.soloSold){bt.style.visibility='hidden';fetch('data/snaps/'+x.id+'.json',{method:'HEAD'}).then(r=>{if(r.ok){bt.style.visibility='';bt.onclick=go}else toX()}).catch(toX)}
+  else toX()};
  const ico=c=>`<span title="${E(c)}" style="flex:none;display:inline-flex;width:26px;height:26px;border-radius:50%;background:#26142b;border:1px solid #e8c87255;align-items:center;justify-content:center;color:#e8c872">${typeof ci=='function'?ci(c):''}</span>`;
  const lastW=(it,S)=>{const x=it.x;if(x.wemix)return x.wemix;const r=S.NC[key(x)];if(r&&r.price)return r.price;const ev=FH.build(x,S).events.filter(e=>e.w);return ev.length?ev[ev.length-1].w:0};
  // Sold times are stored in UTC+8; shown in PT.
@@ -82,5 +88,9 @@ FH.tool=function(){if(FH._t)return;FH._t=1;const key=x=>x.name+'|'+(x.server||''
   bind(hits,S)})};
  const bind=(hits,S)=>L.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{show(hits[+b.dataset.i],S);L.innerHTML=''});
  document.addEventListener('input',e=>{if(e.target&&e.target.id=='phq')run()},true);run()};
+// Back from a detail opened in Price history: return to the tool with the selection kept.
+document.addEventListener('click',e=>{if(FH._phd&&e.target.closest('#sback')){e.stopPropagation();e.preventDefault();history.back()}},true);
+addEventListener('popstate',()=>{if(!FH._phd)return;FH._phd=0;const o=document.getElementById('solo'),b=document.getElementById('sback');if(o&&o.classList.contains('on')){if(b&&b.onclick)b.onclick();o.classList.remove('on')}
+ document.body.dataset.nv='phist';const d=document.getElementById('phist');if(d){d.open=true;(document.getElementById('phres')||d).scrollIntoView({block:'start'})}});
 const _ti=()=>{if(document.getElementById('phq'))FH.tool();else setTimeout(_ti,500)};_ti();
 FH.load();

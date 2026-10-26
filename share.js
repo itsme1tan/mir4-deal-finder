@@ -77,7 +77,7 @@ function chart(){const s=document.getElementById('solo');if(!s||!s.classList.con
  const x=D.listings.find(y=>y.id==c.dataset.id);if(!x)return;
  if(!RH){RH=1;FH.load().then(z=>{RH=z;WD=z.WD;chart()});return}
  if(RH===1)return;
- const box=document.createElement('div');box.className='phc';s.querySelector('.bd').prepend(box);
+ const box=document.createElement('div');box.className='phc';const htp=s.querySelector('.bd .tp[data-p=hist]');if(htp)htp.prepend(box);else s.querySelector('.bd').prepend(box);
  const FE=FH.build(x,RH),pts=[];const ob=[{t:FE.tracked?new Date(FE.tracked).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).slice(0,16):''}];
  const T=t=>Date.parse(t.replace(' ','T')+':00-07:00'),EST=FE.est;
  FE.events.forEach(e=>{if(e.past||!e.w||e.type=='sold'||e.type=='delisted')return;if(FE.chain){pts.push(pts.length?{t:e.t,w:e.w,k:'re',old:e.from||pts[pts.length-1].w}:{t:e.t,w:e.w,k:'first'});return}if(e.est)pts.push({t:e.t,w:(FE.events.find(z=>z.type=='seen')||{}).w,k:'first',est:1});else if(e.type=='seen')pts.push({t:e.t,w:e.w,k:'seen'});else if(e.type=='listed')pts.push({t:e.t,w:e.w,k:'first'});else pts.push({t:e.t,w:e.w,k:'re',old:e.from})});
