@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26 18:32",
+ "updated": "2026-10-26 19:12",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,8 +10,8 @@
    "cls": "Sorcerer",
    "ps": 660284,
    "build_score": 96,
-   "usd": 3841,
-   "fair_usd": 4068,
+   "usd": 3838,
+   "fair_usd": 4065,
    "pct_under": 5.6,
    "usd_under": 227,
    "link": "https://nft.hofgamer.com/mir4/nft/2371901"
