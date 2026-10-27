@@ -2,6 +2,12 @@
   {
     "date": "2026-10-26",
     "emoji": "🛠️",
+    "text": "Price history resets when you Close and open it again, so you are not stuck on the last character. A Back to search control also returns you to the list while you stay in the tool.",
+    "ts": "2026-10-26T19:35:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
+    "emoji": "🛠️",
     "text": "Top deal now shows how many dollars a character is under fair value, picking the best under-fair ask under $25k. Price history is steadier on phones: no sideways slide, Close stays reachable, and coming back from XDRACO no longer leaves you stuck.",
     "ts": "2026-10-26T19:29:00-07:00"
   },

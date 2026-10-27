@@ -82,12 +82,13 @@ const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close'
 function closeOv(){const so=document.getElementById('solo');if(so&&so.classList.contains('on')){const b=document.getElementById('sback');if(b)b.click();so.classList.remove('on')}
  const cv=document.getElementById('cmpv');if(cv&&cv.classList.contains('show')){const x=document.getElementById('cx');if(x)x.click();cv.classList.remove('show')}}
 const IDX=!!document.querySelector('.ctl');
-function goHome(){if(!IDX){location.href='index.html';return}closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show','drag');pn.style.transform='';try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}const n=document.querySelector('.note');if(n)n.classList.remove('show');document.body.classList.add('simple');scrollTo({top:0,behavior:'instant'});setTimeout(()=>scrollTo({top:0,behavior:'instant'}),80);mark('top')}
+function goHome(){if(!IDX){location.href='index.html';return}if(document.body.dataset.nv==='phist'&&window.FH&&FH.reset)try{FH.reset()}catch(e){}closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show','drag');pn.style.transform='';try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}const n=document.querySelector('.note');if(n)n.classList.remove('show');document.body.classList.add('simple');scrollTo({top:0,behavior:'instant'});setTimeout(()=>scrollTo({top:0,behavior:'instant'}),80);mark('top')}
 document.addEventListener('click',e=>{if(e.target.closest('#sback,#cx'))setTimeout(goHome,0)});
 function unmark(){document.querySelectorAll('.nva,.nvp').forEach(e=>e.classList.remove('nva','nvp'))}
 function shut(){unmark();delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
 nx.onclick=()=>goHome();
 function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
+ if(id==='phist'&&window.FH&&FH.reset)try{FH.reset()}catch(e){}
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
  close();setTimeout(()=>{try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
 const XF=[['ptimer','Timer'],['pwl','Watchlist'],['pfeed','Feed 36h'],['phist','Price history']];
