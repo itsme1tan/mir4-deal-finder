@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-27",
+    "emoji": "🛠️",
+    "text": "Closing a character opened from Home puts you back at the same scroll spot, so a Top 20 row like #15 stays in view. Works with Back, Close, and returning from another tab.",
+    "ts": "2026-10-27T04:20:00-07:00"
+  },
+  {
     "date": "2026-10-26",
     "emoji": "🛠️",
     "text": "Home Top strongest is now the Top 20, so every MIR4 class can show up (Darkist was sitting just outside the old Top 10). Class chips on that list cover all six classes and wrap on a phone. Browse and price-trend filters always keep Warrior, Sorcerer, Taoist, Arbalist, Lancer and Darkist.",

@@ -69,13 +69,31 @@ function render(){const R=score(T20S.pick(D.listings));const L=(selCls=='All'?R:
  box.querySelectorAll('.nb a.fn').forEach(a=>a.onclick=e=>{e.stopPropagation();solo(a.dataset.l,D.listings)});
  box.querySelectorAll('.tr20').forEach(r=>{r.querySelector('.rw').onclick=()=>solo(r.dataset.id,L)});
  const cid=P.get('char');if(cid&&!window._c20){window._c20=1;const u=new URL(location);u.searchParams.delete('char');history.replaceState(null,'',u.pathname+u.search+u.hash);if(D.listings.some(y=>y.id==cid))solo(cid,D.listings)}}
-window.T20={solo:(i,L)=>solo(i,L),cb:(c,r)=>cb(c,r)};let SV=null;function solo(id,L){const x=L.find(y=>y.id==id);let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
+window.T20={solo:(i,L)=>solo(i,L),cb:(c,r)=>cb(c,r)};let SV=null;
+// Remember Home scroll when opening a character, so Back/Close/pageshow can land on the same row.
+const HY='mir4homeY',HID='mir4homeId';
+const saveHY=(y,id)=>{try{sessionStorage[HY]=String(y|0);if(id!=null)sessionStorage[HID]=String(id)}catch(e){}};
+const readHY=()=>{try{return +sessionStorage[HY]||0}catch(e){return 0}};
+const readHID=()=>{try{return sessionStorage[HID]||''}catch(e){return ''}};
+const clearHY=()=>{try{sessionStorage.removeItem(HY);sessionStorage.removeItem(HID)}catch(e){}};
+function restoreHY(){const y=readHY(),id=readHID();if(!y&&!id)return;window._keepHomeY=1;
+ const go=()=>{const t=id&&document.querySelector(`#t20 .tr20[data-id="${CSS.escape?CSS.escape(id):id}"]`);
+  if(t){const top=t.getBoundingClientRect().top+scrollY-100;scrollTo({top:Math.max(0,top),behavior:'instant'})}
+  else if(y)scrollTo({top:y,behavior:'instant'})};
+ go();let n=0;const iv=setInterval(()=>{go();if(++n>=10||document.querySelectorAll('#t20 .tr20').length>=5){clearInterval(iv);go();setTimeout(()=>{go();/* keep HY briefly for goHome's delayed scroll, then drop */setTimeout(clearHY,500)},100)}},40)}
+function closeSoloLocal(tmp){const o=document.getElementById('solo');if(!o)return;o.classList.remove('on');box.style.display='';
+ if(SV){const id=SV.id;if(SV[2]&&SV[2].parentNode===SV[1]&&!SV[1].querySelector(`.card[data-id="${id}"]`))SV[1].insertBefore(SV[0],SV[2]);else{try{SV[0].remove()}catch(e){}}SV=null}
+ window._homeSolo=0;window._keepHomeY=1;restoreHY();if(tmp)draw()}
+function solo(id,L){const x=L.find(y=>y.id==id);if(!x)return;let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}
+ const y=scrollY;saveHY(y,id);SV&&(SV.y=y);
+ // Browser Back support from Home (Price history uses FH._phd + its own pushState; do not double-push).
+ if(!(window.FH&&FH._phd)){try{history.pushState({homeSolo:1,y,id},'')}catch(e){}window._homeSolo=1}
  draw();let c=cards.querySelector(`.card[data-id="${id}"]`),tmp=0;
  if(!c&&D.listings.some(y=>y.id==id)){const _r=rows;rows=()=>D.listings.filter(y=>y.id==id);window.BFBYPASS=1;try{drawCards()}finally{rows=_r;window.BFBYPASS=0}c=cards.querySelector(`.card[data-id="${id}"]`);tmp=1}
  o.innerHTML=`<div class="stk"><div class="sb"><button id="sback">← Back</button><b>${x.name}</b></div><div class="sh"><img loading="lazy" decoding="async" src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}"><div><b>$${fm(x.usd)}</b><small>${x.cls} · ${fm(x.wemix)} W · ⚡ ${fm(x.ps/1000)}k</small></div></div></div><div class="bd"></div>`;o.onscroll=()=>{const k=o.querySelector('.stk');k&&k.classList.toggle('sc',o.scrollTop>40)};
- if(c){SV=[c,c.parentNode,c.nextSibling];o.querySelector('.bd').appendChild(c);const h=c.querySelector('.ch');if(h&&!c.classList.contains('open'))h.click()}else o.querySelector('.bd').innerHTML='<div class="cl">Details not available.</div>';
- SV&&(SV.y=scrollY);o.classList.add('on');box.style.display='none';o.scrollTop=0;
- sback.onclick=()=>{o.classList.remove('on');box.style.display='';if(SV){const y=SV.y||0;if(SV[2]&&SV[2].parentNode===SV[1]&&!SV[1].querySelector(`.card[data-id="${id}"]`))SV[1].insertBefore(SV[0],SV[2]);else{SV[0].remove();tmp=1}scrollTo(0,y);SV=null}if(tmp)draw()}}
+ if(c){SV=[c,c.parentNode,c.nextSibling];SV.id=id;SV.y=y;o.querySelector('.bd').appendChild(c);const h=c.querySelector('.ch');if(h&&!c.classList.contains('open'))h.click()}else o.querySelector('.bd').innerHTML='<div class="cl">Details not available.</div>';
+ o.classList.add('on');box.style.display='none';o.scrollTop=0;
+ sback.onclick=()=>{if(window.FH&&FH._phd)return;if(window._homeSolo){history.back();return}closeSoloLocal(tmp)}}
 let CH=null;const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const pt=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);const ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+7,+m[5]);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
  return (d(ms)==d(n)?'Today':d(ms)==d(n-864e5)?'Yesterday':f(['en-US',{month:'short',day:'numeric'}])(ms))+' at '+f(['en-US',{hour:'numeric',minute:'2-digit'}])(ms)};
@@ -95,5 +113,10 @@ window.hist20=(x,bd)=>hist20(x,bd);function hist20(x,bd){FH.load().then(S=>{cons
  bd.querySelector('.h20')?.remove();bd.prepend(d)})}
 const hs=document.createElement('style');hs.textContent=`.h20{margin:4px 0 12px;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;font-size:13px}.h20 .hh{font-weight:700;margin-bottom:6px}.h20 .hh small{color:#b9a3bd;font-weight:400;margin-left:6px}.h20 .hl{display:grid;grid-template-columns:132px 74px 1fr;gap:6px;padding:4px 0;border-top:1px solid #2a1730}.h20 .ht{color:#b9a3bd}.h20 small{color:#b9a3bd}.h20 .dn{color:#ffc94d}.h20 .hn{margin-top:6px;font-size:11px;color:#b9a3bd}.h20 .up{color:#f87171}.h20 .hl>*{min-width:0;overflow-wrap:anywhere}.h20 .hid{color:#e3d3e6;padding:2px 0 6px;overflow-wrap:anywhere}.h20 .hid b{color:#e8c872;font-weight:700}.h20 .hold summary{cursor:pointer;color:#e8c872;padding:6px 0;border-top:1px solid #2a1730;font-weight:600}.h20 .hold[open] summary{margin-bottom:2px}`;document.head.appendChild(hs);
 window.solo20=id=>solo(id,D.listings);
+// Close character from Home via browser Back; keep Price history (FH._phd) on its own popstate handler.
+addEventListener('popstate',e=>{if(window.FH&&FH._phd)return;const o=document.getElementById('solo');
+ if(o&&o.classList.contains('on'))closeSoloLocal(0)});
+addEventListener('pageshow',()=>{if(document.getElementById('solo')?.classList.contains('on'))return;if(readHY())restoreHY()});
+
 const w=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings){clearInterval(w);render()}},100);
 })();
