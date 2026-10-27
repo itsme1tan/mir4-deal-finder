@@ -67,8 +67,8 @@ const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:fle
 #fbbtn{display:block;margin:6px auto 18px;background:none;border:1px solid #e8c87255!important;color:#e8c872;border-radius:999px;padding:7px 16px;font-size:12px;opacity:.85}
 details.pro,.ctl{display:none!important}
 body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:block!important}
-#nvx{position:fixed;right:12px;top:10px;z-index:1050;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
-body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx,body:has(#solo.on) #nvx{display:none!important}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(#solo):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
+#nvx{position:fixed;right:max(12px,env(safe-area-inset-right,0px));top:max(10px,env(safe-area-inset-top,0px));z-index:1300;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+html,body{max-width:100%;overflow-x:hidden}body[data-nv]{overflow-x:hidden}body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx,body:has(#solo.on) #nvx{display:none!important}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(#solo):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
 {const q=new URLSearchParams(location.search).get('sab');if(q)document.documentElement.style.setProperty('--sab',(+q)+'px')}
 const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
@@ -82,19 +82,19 @@ const nx=document.createElement('button');nx.id='nvx';nx.textContent='✕ Close'
 function closeOv(){const so=document.getElementById('solo');if(so&&so.classList.contains('on')){const b=document.getElementById('sback');if(b)b.click();so.classList.remove('on')}
  const cv=document.getElementById('cmpv');if(cv&&cv.classList.contains('show')){const x=document.getElementById('cx');if(x)x.click();cv.classList.remove('show')}}
 const IDX=!!document.querySelector('.ctl');
-function goHome(){if(!IDX){location.href='index.html';return}closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show');const n=document.querySelector('.note');if(n)n.classList.remove('show');document.body.classList.add('simple');scrollTo({top:0,behavior:'instant'});setTimeout(()=>scrollTo({top:0,behavior:'instant'}),80);mark('top')}
+function goHome(){if(!IDX){location.href='index.html';return}closeOv();unmark();delete document.body.dataset.nv;vs.textContent='';sh.classList.remove('show','drag');pn.style.transform='';try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}const n=document.querySelector('.note');if(n)n.classList.remove('show');document.body.classList.add('simple');scrollTo({top:0,behavior:'instant'});setTimeout(()=>scrollTo({top:0,behavior:'instant'}),80);mark('top')}
 document.addEventListener('click',e=>{if(e.target.closest('#sback,#cx'))setTimeout(goHome,0)});
 function unmark(){document.querySelectorAll('.nva,.nvp').forEach(e=>e.classList.remove('nva','nvp'))}
 function shut(){unmark();delete document.body.dataset.nv;vs.textContent='';scrollTo(0,0)}
 nx.onclick=()=>goHome();
 function openF(id){closeOv();document.body.classList.remove('simple');document.body.dataset.nv=id;
  if(id=='ctl'){unmark();vs.textContent='';var el=document.querySelector('.ctl')}else{vs.textContent='#'+id+'{display:block!important}';var el=document.getElementById(id);if(el){el.open=true;unmark();el.classList.add('nvp');for(let a=el.parentElement;a;a=a.parentElement){a.classList.add('nva');if(a==document.body)break}}}
- close();setTimeout(()=>{if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
+ close();setTimeout(()=>{try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}if(id!='ctl')scrollTo(0,0);else if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-16)},150)}
 const XF=[['ptimer','Timer'],['pwl','Watchlist'],['pfeed','Feed 36h'],['phist','Price history']];
 function feats(){if(!IDX)return `<div class="gr"></div><h4>Tools</h4><div class="fl"><a class="it" href="index.html#nv=ctl">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></a>${XF.map(([k,l])=>`<a class="it" href="index.html#nv=${k}">${sv(k)}<span>${l}</span><i>›</i></a>`).join('')}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`;
  const fs=[...document.querySelectorAll('details.pro[id]')].filter(d=>d.id!='padv').map(d=>{const t=(d.querySelector('summary')||{}).textContent||d.id;return `<button class="it" data-f="${d.id}">${sv(d.id)}<span>${clean(t)}</span><i>›</i></button>`}).join('');
  return `<div class="gr"></div><h4>Tools</h4><div class="fl"><button class="it" data-b="1">${sv('browse')}<span>Browse<small>Full list, including sold characters XDRACO hides.</small></span><i>›</i></button>${fs}<a class="it" href="classes.html">${sv('cls')}<span>Top by class</span><i>›</i></a></div>`}
-function close(){sh.classList.remove('show');pn.style.transform='';sh.querySelector('.bg').style.opacity='';mark(document.body.classList.contains('simple')?'top':'browse')}
+function close(){sh.classList.remove('show','drag');pn.style.transform='';const bg=sh.querySelector('.bg');if(bg)bg.style.opacity='';try{document.documentElement.scrollLeft=document.body.scrollLeft=0}catch(e){}mark(document.body.classList.contains('simple')?'top':'browse')}
 sh.querySelector('.bg').onclick=close;
 (function(){let y0=0,dy=0,t0=0,on=false,dec=false,ly=0,lt=0,v=0;const bg=sh.querySelector('.bg');
 pn.addEventListener('touchstart',e=>{const r=pn.getBoundingClientRect(),ty=e.touches[0].clientY;

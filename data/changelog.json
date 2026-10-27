@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-26",
+    "emoji": "🛠️",
+    "text": "Top deal now shows how many dollars a character is under fair value, picking the best under-fair ask under $25k. Price history is steadier on phones: no sideways slide, Close stays reachable, and coming back from XDRACO no longer leaves you stuck.",
+    "ts": "2026-10-26T19:29:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
     "emoji": "🧹",
     "text": "Cleanup across the site: character details now open only on XDRACO, Home no longer repeats the Top deal in Newly listed, Feed 36h is listings only with a link to Price history, and icons, price-cut sashes and price-down labels are clearer.",
     "ts": "2026-10-26T18:53:00-07:00"
