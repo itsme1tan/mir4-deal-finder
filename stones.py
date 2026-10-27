@@ -42,20 +42,24 @@ def item(a,tier=None):
       main=[[scrape.tr(o.get('optionName','')),r(o.get('optionValue',0)),o.get('optionFormat',''),o.get('tranceValue') or 0] for o in d.get('options',[])],
       ok=bool(d),subs=[[scrape.tr(o.get('optionName','')),r(float(o.get('optionValue',0))/dv),o.get('optionAddFormat',''),o.get('optionValue'),r(float(o.get('optionTranceStep') or 0)/dv)] for o in d.get('addOptions',[])])
 def for_id(i,h=None):
-    """Equipped deck (XDRACO activeDeck), each stone's stats from its own item detail, in game slot order."""
+    """Equipped deck (XDRACO activeDeck) in game slot order. Each slot gets its own stone UID from the XDRACO
+    inventory (Hofgamer repeats one UID for identical stones, which copied one stone's stats onto its twins)."""
     h=h or scrape.get(f"{scrape.B}/nft/{i}")
-    dk,XS=active(i); xs=[XS[k] for k in sorted(XS,key=int)]
+    dk,XS=active(i); hof=ids(h,dk)
+    if not XS: return [dict(item(a),deck=dk) for a in hof if a.get('uid')]
+    c=(_xj(f"{XD}/summary?seq={i}&languageCode=en").get('character') or {})
+    inv=_xj(f"{XD}/inven?transportID={c['transportID']}&class={c['class']}&languageCode=en")
+    pool=[z for z in (inv if isinstance(inv,list) else []) if z.get('mainType')==8]
     out=[]
-    for a in ids(h,dk):
-        if not a.get('uid'): continue
-        s=item(a); s['deck']=dk; out.append(s); time.sleep(0.3)
-    if xs:  # slot order and trance step as XDRACO shows them
-        pool=list(out); res=[]
-        for x in xs:
-            j=next((n for n,m in enumerate(pool) if m['n']==x['itemName'] and m['e']==int(x['tranceStep'])),None)
-            if j is None: j=next((n for n,m in enumerate(pool) if m['n']==x['itemName']),None)
-            if j is not None: res.append(pool.pop(j))
-        out=res+pool
+    for k in sorted(XS,key=int):
+        x=XS[k]; ts=int(x.get('tranceStep') or 0)
+        j=next((n for n,z in enumerate(pool) if z.get('itemID')==x.get('itemIdx') and int(z.get('tranceStep') or 0)==ts),None)
+        hf=next((a for a in hof if int(a.get('grade',0))==int(x['grade']) and a.get('icon')),{})
+        hf=next((a for a in hof if a.get('icon') and x['itemPath'].rsplit('/',1)[-1].split('.')[0] in a['icon']),hf)
+        uid=pool.pop(j)['itemUID'] if j is not None else next((a['uid'] for a in hof if scrape.tr(a['name'])==x['itemName']),None)
+        if not uid: continue
+        a=dict(transport=c['transportID'],**{'class':str(c['class'])},uid=uid,name=x['itemName'],grade=x['grade'],enhance=ts,icon=hf.get('icon',''))
+        s=item(a,int(x.get('tier') or 1)); s['deck']=dk; out.append(s); time.sleep(0.3)
     return out
 def attach(x,max_age=12*3600,budget=[int(os.environ.get('STONE_BUDGET','40'))]):
     """Add x['build']['stones'] from cache; refresh from Hofgamer if stale and budget left."""

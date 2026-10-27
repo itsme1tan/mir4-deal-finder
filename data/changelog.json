@@ -2,6 +2,12 @@
   {
     "date": "2026-10-27",
     "emoji": "🛠️",
+    "text": "Magic Stones: identical stones on the same characters no longer share one set of stats. Each equipped stone now shows its own substats, read from the character's own inventory on XDRACO.",
+    "ts": "2026-10-27T16:59:00-07:00"
+  },
+  {
+    "date": "2026-10-27",
+    "emoji": "🛠️",
     "text": "Magic Stones on character pages now show the deck the character has equipped in game, in slot order, with each stone's stats read from its own item detail. Tier II stones use the right scale, and the +N on a stone is labeled as its Trance step.",
     "ts": "2026-10-27T16:08:00-07:00"
   },
