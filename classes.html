@@ -33,12 +33,12 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 @keyframes fall{to{transform:translate(-60px,110vh) rotate(540deg)}}
 :where(body>header,body>main,body>section,body>#app,body>.wrap){position:relative;z-index:1}
 </style></head><body>
-<header><h1>🏆 Top by class</h1><a href="index.html">← Top 10</a></header>
-<div id="w"><div class="fb" id="fb"></div><div class="ex">Same strength score as the Top 10, under $25k, listed now. Tap a name to open the character.</div><div id="out" class="em">Loading…</div></div>
+<header><h1>🏆 Top by class</h1><a href="index.html">← Top 20</a></header>
+<div id="w"><div class="fb" id="fb"></div><div class="ex">Same strength score as the Top 20, under $25k, listed now. Tap a name to open the character.</div><div id="out" class="em">Loading…</div></div>
 
-<script src="strength.js?v=1"></script><script src="age.js?v=6"></script>
+<script src="strength.js?v=2"></script><script src="age.js?v=6"></script>
 <script>
-const CL=['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'];
+const CL=(window.T20S&&T20S.ALL)||['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'];
 const f=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const I=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
 const ci=c=>`<img loading="lazy" decoding="async" src="icons/class/${c.toLowerCase()}.webp" alt="${c}" title="${c}">`;

@@ -1,7 +1,7 @@
 /* Weekly sold price trend chart (Sold prices panel). Data: data/sold_archive.json + data.json sales, ~$ at the WEMIX price of the sale day (data/wemix_daily.json). Display only. */
 (function(){
 let A=null,W=null,CL=localStorage.mir4trc||'',MP=+(localStorage.mir4trp??0)||0;const NW=12;
-const OPT=[[650000,'650k+'],[600000,'600k+'],[550000,'550k+'],[500000,'500k+'],[0,'All']],CLS=['Arbalist','Darkist','Lancer','Sorcerer','Taoist','Warrior'];
+const OPT=[[650000,'650k+'],[600000,'600k+'],[550000,'550k+'],[500000,'500k+'],[0,'All']],CLS=(window.T20S&&T20S.ALL)||['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'];
 const med=a=>{a=[...a].sort((x,y)=>x-y);const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2};
 const ms=s=>Date.parse(s.replace(' ','T')+':00+08:00');
 const px=t=>{for(let i=0;i<7;i++){const k=new Date(t-i*864e5).toISOString().slice(0,10);if(W[k])return W[k]}return null};
