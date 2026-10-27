@@ -2,6 +2,12 @@
   {
     "date": "2026-10-27",
     "emoji": "🛠️",
+    "text": "Feed 36h now shows characters pulled from the market next to sold ones. A gold Sold or magenta Pulled tag shows how each one left, with the last price and time, and a 🏆 badge marks characters that were in the Top 20 strongest when they left.",
+    "ts": "2026-10-27T15:30:00-07:00"
+  },
+  {
+    "date": "2026-10-27",
+    "emoji": "🛠️",
     "text": "Closing a character opened from Home puts you back at the same scroll spot, so a Top 20 row like #15 stays in view. Works with Back, Close, and returning from another tab.",
     "ts": "2026-10-27T04:20:00-07:00"
   },
