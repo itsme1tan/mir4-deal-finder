@@ -2,12 +2,12 @@
 <title>MIR4 Top by class</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap">
 <style>
-body{font-family:system-ui,sans-serif;margin:0;background:#120a14;color:#f2e8f2}a{color:#f472b6}
+html,body{max-width:100%;overflow-x:hidden}body{font-family:system-ui,sans-serif;margin:0;background:#120a14;color:#f2e8f2}a{color:#f472b6}
 header{padding:14px 18px;background:#1c1020;border-bottom:1px solid #3a2040;display:flex;justify-content:space-between;align-items:center}h1{margin:0;font-size:18px}
 header a{color:#e8c872;font-weight:700;font-size:13px;text-decoration:none}
 .ico{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.15em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
-#w{padding:8px 10px 20px;max-width:640px;margin:0 auto}
-.fb{display:flex;gap:6px;overflow-x:auto;margin:4px 0 10px;padding-bottom:2px}.fb button{display:flex;align-items:center;gap:5px;background:#1a0f1e;border:1px solid #3a2040;border-radius:999px;color:#e8dcea;padding:5px 10px 5px 6px;font-size:12px;cursor:pointer;white-space:nowrap}.fb button img{width:22px;height:22px}.fb button.on{border-color:#e8c872;color:#e8c872;font-weight:700;background:#2a2410}.fb .al{padding:5px 12px}
+#w{padding:8px 10px 20px;max-width:640px;margin:0 auto;box-sizing:border-box;overflow-x:hidden}
+.fb{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px;max-width:100%;overflow-x:hidden;box-sizing:border-box}.fb button{display:inline-flex;align-items:center;gap:5px;background:#1a0f1e;border:1px solid #3a2040;border-radius:999px;color:#e8dcea;padding:5px 10px 5px 6px;font-size:12px;cursor:pointer;white-space:nowrap;max-width:100%;box-sizing:border-box}.fb button img{width:22px;height:22px;flex:none}.fb button.on{border-color:#e8c872;color:#e8c872;font-weight:700;background:#2a2410}.fb .al{padding:5px 12px}
 .sec h2{display:flex;align-items:center;gap:8px;font-size:16px;margin:14px 2px 8px}.sec h2 img{width:34px;height:34px}.sec h2 small{color:#b9a3bd;font-weight:400;font-size:12px}
 .r{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;background:#1c1020;border:1px solid #3a2040;border-radius:12px;margin:0 0 8px;padding:10px}.r.u{border-color:#8a6410}
 .rk{flex:none;width:22px;height:22px;margin:3px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;padding:0;line-height:1;border-radius:50%;border:1px solid rgba(232,200,114,.85);background:rgba(40,10,40,.85);color:#ffe9b0;font-weight:800;font-size:12px;font-variant-numeric:tabular-nums;box-shadow:0 1px 3px rgba(0,0,0,.5)}
@@ -38,7 +38,7 @@ header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-
 
 <script src="strength.js?v=1"></script><script src="age.js?v=6"></script>
 <script>
-const CL=['Taoist','Arbalist','Warrior','Lancer'];
+const CL=['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'];
 const f=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const I=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
 const ci=c=>`<img loading="lazy" decoding="async" src="icons/class/${c.toLowerCase()}.webp" alt="${c}" title="${c}">`;
@@ -53,6 +53,6 @@ function render(){fb.innerHTML=`<button class="al${sel=='All'?' on':''}" data-c=
  fb.querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=b.dataset.c;localStorage.mir4cls=sel;render()});
  const R=T20S.score(D.listings,T20S.pick(D.listings));const n=sel=='All'?3:10;
  out.className='';out.innerHTML=(sel=='All'?CL:[sel]).map(c=>{const L=R.filter(x=>x.cls==c).slice(0,n);
-  return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">None listed under $25k right now.</div>'}</div>`}).join('')}
+  return `<div class="sec"><h2>${ci(c)}${c} <small>top ${n}</small></h2>${L.length?L.map(row).join(''):'<div class="em">No listing under $25k.</div>'}</div>`}).join('')}
 Promise.all([J('data.json'),J('data/relist.json')]).then(([d,r])=>{D=d;const RB=r.by_id||{};document.querySelector('.ex').insertAdjacentHTML('beforeend',' '+AGE.note(d));D.listings.forEach(x=>x.rl=RB[x.id]||null);render()});
 </script><script src="nav.js?v=26"></script></body></html>

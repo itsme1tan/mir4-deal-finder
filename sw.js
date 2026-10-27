@@ -1,5 +1,5 @@
 // Service worker: fast repeat visits and offline support. Also handles notification clicks.
-const V='mir4-v26',SHELL=['./','index.html','classes.html','changelog.html','offline.html','manifest.json',
+const V='mir4-v27',SHELL=['./','index.html','classes.html','changelog.html','offline.html','manifest.json',
 'icons/ui/listed.svg','nav.js?v=26','age.js?v=6','strength.js?v=1','premium.js?v=30','share.js?v=8','icons/ui/share.svg','trend.js?v=2','wemix1h.js?v=5','history.js?v=8','top20.js?v=42','boss.js?v=17','soldsearch.js?v=7',
 'icons/banner-m.jpg?v=1','icons/app-192.png?v=4'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>Promise.all(SHELL.map(u=>c.add(u).catch(()=>{})))))});

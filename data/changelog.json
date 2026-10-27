@@ -2,6 +2,12 @@
   {
     "date": "2026-10-26",
     "emoji": "🛠️",
+    "text": "Top by class now lists all six MIR4 classes (Warrior, Sorcerer, Taoist, Arbalist, Lancer, Darkist) with chips and Top 3 sections. Empty classes show a short note instead of vanishing, and the chips wrap on a phone so nothing slides sideways.",
+    "ts": "2026-10-26T21:05:00-07:00"
+  },
+  {
+    "date": "2026-10-26",
+    "emoji": "🛠️",
     "text": "Price history resets when you Close and open it again, so you are not stuck on the last character. A Back to search control also returns you to the list while you stay in the tool.",
     "ts": "2026-10-26T19:35:00-07:00"
   },
