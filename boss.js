@@ -3,7 +3,7 @@
 const OFF={ASIA:8,INMENA:6,EU:2,SA:-3,NA:-4};// server region UTC offsets (official forum post 43)
 // [name, icon, days (0=Sun..6=Sat, null=daily), hours (server time), note]
 const B=[
- ['World boss','skull',{1:[22,'Krukan'],2:[23,'Nerkan'],3:[23,'Helbar'],4:[23,'Turkan'],5:[22,'Utukan']}],
+ ['World boss','skull',{1:[22,'Krukan · Shackling Abaddon'],2:[23,'Nerkan · Black Flame Abaddon'],3:[23,'Helbar'],4:[23,'Turkan · Violet Abaddon'],5:[22,'Utukan · Crimson Abaddon']}],
  ['Valley War','swords',{3:[22,'Hidden Valley']}],
  ['Castle Siege','castle',{0:[22,'Bicheon']},null,[Date.UTC(2026,9,25),28]],
  ['Bicheon Heist','castle',{5:[22,'']}],
