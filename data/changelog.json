@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-29",
+    "emoji": "⚡",
+    "text": "New Power tool: search any character to see its power score over time, from the daily global top 1000 ranking and our marketplace records. Character pages show a Power progression chart when we have two or more points. A Fastest growing list for the last 7 and 30 days starts once we have two days of rankings.",
+    "ts": "2026-10-29T10:00:00-07:00"
+  },
+  {
+    "date": "2026-10-29",
     "emoji": "👛",
     "text": "Character pages now have an Owners list: the wallets that held that character over time, from public WEMIX chain records, with what they paid and sold for. Each wallet shows the character name it usually used, which is a guess and not who owns it. Tap a wallet to see every character it held.",
     "ts": "2026-10-29T05:30:00-07:00"
