@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-29",
+    "emoji": "👛",
+    "text": "Character pages now have an Owners list: the wallets that held that character over time, from public WEMIX chain records, with what they paid and sold for. Each wallet shows the character name it usually used, which is a guess and not who owns it. Tap a wallet to see every character it held.",
+    "ts": "2026-10-29T05:30:00-07:00"
+  },
+  {
+    "date": "2026-10-29",
     "emoji": "🏷️",
     "text": "Character pages now have a Past names section listing every name we know for that character, newest first, with the date and the sold price. Feed shows current names too, with the old name in small text. Old sales are only linked to a character when the sale is on that character's own WEMIX record.",
     "ts": "2026-10-29T05:00:00-07:00"
