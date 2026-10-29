@@ -61,6 +61,22 @@ def meta(k,r):
     names=r.setdefault('names',[])
     if not names or names[-1]['name']!=nm: names.append(dict(name=nm,seen=t))
     r['now']=nn
+def verify(O,SA):
+    """A sold-archive record joins a token only if that sale is on the token's own chain record (same price, within 2 days). Otherwise mark nomatch."""
+    key=lambda x:f"{x['name']}|{x.get('server') or ''}|{x['cls']}";EV={}
+    for r in O.values():
+        if r.get('token') and len(r.get('events') or [])>len(EV.get(r['token'],[])): EV[r['token']]=r['events']
+    n=0
+    for x in SA:
+        r=O.get(key(x))
+        if not r or not r.get('token') or not x.get('sold'): continue
+        ev=EV.get(r['token'])
+        if not ev: continue
+        st=datetime.datetime.strptime(x['sold'],'%Y-%m-%d %H:%M').replace(tzinfo=ZoneInfo('Asia/Shanghai')).astimezone(LA).replace(tzinfo=None)
+        ok=any(e['type']=='sold' and abs((datetime.datetime.strptime(e['t'],'%Y-%m-%d %H:%M')-st).total_seconds())<2*86400 and (not e.get('wemix') or not x.get('wemix') or abs(e['wemix']-x['wemix'])<=1) for e in ev)
+        if ok: r.pop('nomatch',None)
+        else: r['nomatch']=f"sale {x['id']} is not on token {r['token']}'s record";n+=1
+    return n
 def main():
     D=json.load(open(os.path.join(ROOT,'data.json')))
     try: O=json.load(open(OUT))
@@ -87,6 +103,7 @@ def main():
             if len(O)%25==0: json.dump(O,open(OUT+'.part','w'),ensure_ascii=False)
         except Exception as e: print('chain skip',k,str(e)[:60])
     with ThreadPoolExecutor(8) as ex: list(ex.map(one,list(todo)))
+    print('nomatch:',verify(O,SA))
     tmp=OUT+'.tmp';json.dump(O,open(tmp,'w'),ensure_ascii=False);os.replace(tmp,OUT)
     import market;market.chain_age(D);json.dump(D,open(os.path.join(ROOT,'data.json'),'w'),ensure_ascii=False)
     print('chain_history:',len(O),'characters')

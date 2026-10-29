@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-29",
+    "emoji": "🏷️",
+    "text": "Character pages now have a Past names section listing every name we know for that character, newest first, with the date and the sold price. Feed shows current names too, with the old name in small text. Old sales are only linked to a character when the sale is on that character's own WEMIX record.",
+    "ts": "2026-10-29T05:00:00-07:00"
+  },
+  {
+    "date": "2026-10-29",
     "emoji": "🔙",
     "text": "Price history now shows each character's current name, with the old name in small text when it was renamed. Back from a character page now returns you to the page you opened it from, like Price history or Feed, instead of the home page.",
     "ts": "2026-10-29T04:00:00-07:00"

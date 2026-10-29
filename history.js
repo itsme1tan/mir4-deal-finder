@@ -7,18 +7,18 @@ const PT=t=>Date.parse(t.replace(' ','T')+':00-07:00'),H8=t=>Date.parse(t.replac
 const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 let P=null;
 window.FH={
- load(){return P||(P=Promise.all(['data/relist_history.json','data/char_history.json','data/sold_archive.json','data/wemix_daily.json','data/chain_history.json'].map(u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))))
-  .then(([rh,ch,sa,wd,nc])=>{const S={RH:rh.chars||{},CH:ch.chars||{},SA:Array.isArray(sa)?sa:[],WD:wd||{},NC:nc||{},TK:{}};
-   for(const k in S.NC){const r=S.NC[k];if(r.token&&!r.bad)(S.TK[r.token]=S.TK[r.token]||[]).push(k)}
+ load(){return P||(P=Promise.all(['data/relist_history.json','data/char_history.json','data/sold_archive.json','data/wemix_daily.json','data/chain_history.json','data/past_names.json'].map(u=>fetch(u+'?'+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))))
+  .then(([rh,ch,sa,wd,nc,pn])=>{const S={PN:(pn&&pn.tokens)||{},RH:rh.chars||{},CH:ch.chars||{},SA:Array.isArray(sa)?sa:[],WD:wd||{},NC:nc||{},TK:{}};
+   for(const k in S.NC){const r=S.NC[k];if(r.token&&!r.bad&&!r.nomatch)(S.TK[r.token]=S.TK[r.token]||[]).push(k)}
    window.FHS=S;document.dispatchEvent(new Event('fh-ready'));return S}))},
  // Same token = same character, even after a rename or a server move. Records whose class does not match the token are left out (bad match).
- who(x,S){S=S||window.FHS;if(!S)return null;const r=S.NC[key(x)];if(!r||r.bad||!r.token)return null;const ks=S.TK[r.token]||[key(x)];
+ who(x,S){S=S||window.FHS;if(!S)return null;const r=S.NC[key(x)];if(!r||r.bad||r.nomatch||!r.token)return null;const ks=S.TK[r.token]||[key(x)];
   let now=null;const nm=[];ks.forEach(k=>{const q=S.NC[k];if(q.now&&(!now||q.now.t>now.t))now=q.now;nm.push(k.split('|')[0]);(q.names||[]).forEach(n=>nm.push(n.name))});
   const all=[...new Set(nm)];return {token:r.token,now,keys:ks,names:all,formerly:all.filter(n=>n!=x.name&&(!now||n!=now.name))}},
  fold(t){return String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[øØ]/g,'o').toLowerCase()},
  alias(x){const w=FH.who(x);if(!w)return '';const n=w.names.concat(w.now?[w.now.name]:[]).join(' ');return ' '+n+' '+FH.fold(n)},
  rate(S,t){for(let i=0;i<7;i++){const r=S.WD[new Date(t-i*864e5).toISOString().slice(0,10)];if(r)return r}return typeof D!='undefined'?D.wemix_usd:null},
- chain(x,S){const k=key(x);let c=S.NC[k];if(!c||!c.events||c.bad)return null;(S.TK[c.token]||[]).forEach(z=>{const q=S.NC[z];if(q.events&&(q.blk||0)>(c.blk||0))c=q});const E=[];
+ chain(x,S){const k=key(x);let c=S.NC[k];if(!c||!c.events||c.bad||c.nomatch)return null;(S.TK[c.token]||[]).forEach(z=>{const q=S.NC[z];if(q.events&&(q.blk||0)>(c.blk||0))c=q});const E=[];
   const G=new Set(['0x7a53f80e849efda468f322f5401bdf71d5a5d1e5']);let own=null,hops=0;// custody wallet: moves out and back, not owner changes
   c.events.forEach(e=>{const t=PT(e.t),p=E[E.length-1];
    if(e.type=='minted'){own=e.to}else if(e.type=='transfer'){if(G.has(e.to)||e.to==own){hops++;return}own=e.to}else if(e.type=='sold')own=e.to;
@@ -102,3 +102,19 @@ function phUnlock(){try{document.documentElement.scrollLeft=document.body.scroll
 addEventListener('pageshow',phUnlock);addEventListener('visibilitychange',()=>{if(!document.hidden)phUnlock()});
 const _ti=()=>{if(document.getElementById('phq'))FH.tool();else setTimeout(_ti,500)};_ti();
 FH.load();
+
+// Past names on a character page: every name we know for this character (same NFT token), newest first. Hidden when only one name is known.
+FH.past=function(x,S){const w=FH.who(x,S);if(!w)return [];const PT=t=>Date.parse(t.replace(' ','T')+':00-07:00'),H8=t=>Date.parse(t.replace(' ','T')+':00+08:00'),R={};
+ const put=(n,t,ty,wm,src)=>{if(!n)return;const o=R[n];if(!o||t>o.t)R[n]={name:n,t,ty,w:wm,src}};const ks=new Set(w.keys),key=y=>y.name+'|'+(y.server||'')+'|'+y.cls;
+ [...S.SA,...((typeof D!='undefined'&&D.sales)||[])].forEach(s=>{if(s.sold&&ks.has(key(s)))put(s.name,H8(s.sold),'sold',s.wemix)});
+ ((typeof D!='undefined'&&D.listings)||[]).forEach(l=>{if(ks.has(key(l))&&l.listed)put(l.name,H8(l.listed),'listed',null)});
+ w.keys.forEach(k=>{const n=k.split('|')[0];((S.RH[k]||{}).obs||[]).forEach(o=>{if(!R[n])put(n,PT(o.t),'listed',null)});(S.NC[k].names||[]).forEach(q=>{if(!R[q.name])put(q.name,PT(q.seen),'seen',null)})});
+ (S.PN[w.token]||[]).forEach(q=>{if(!R[q.name])put(q.name,Date.parse(q.t),'seen',q.w||null,q.src)});
+ if(w.now&&!R[w.now.name])put(w.now.name,PT(w.now.t),'seen',null);
+ const L=Object.values(R).sort((a,b)=>b.t-a.t);L.forEach(r=>r.cur=w.now&&r.name==w.now.name);return L};
+FH.pastBox=function(x,bd,S){const p=bd.parentNode;if(!p)return;p.querySelectorAll('.pnames').forEach(e=>e.remove());const L=FH.past(x,S);if(L.length<2)return;
+ const E=t=>String(t??'').replace(/[<>&"]/g,''),fm=n=>Math.round(n).toLocaleString('en-US'),dy=ms=>new Date(ms).toLocaleDateString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',year:'numeric'});
+ const lab={sold:'Sold',listed:'Listed',seen:'Seen'},el=document.createElement('div');el.className='pnames';
+ el.style.cssText='margin:8px 0;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere';
+ el.innerHTML='<div style="font-weight:700;color:#e8c872;font-size:14px">🏷️ Past names <small style="font-weight:400;color:#b9a3bd">('+L.length+')</small></div>'+L.map(r=>`<div style="display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #2a1730;font-size:13px"><span style="min-width:0">${E(r.name)}${r.cur?' <span style="font-size:10px;font-weight:800;background:#e8c872;color:#2a1030;border-radius:999px;padding:2px 6px;vertical-align:1px">Current</span>':''}</span><span style="color:#b9a3bd;font-size:12px;text-align:right;white-space:nowrap">${lab[r.ty]} ${dy(r.t)}${r.ty=='sold'&&r.w?`<br><b style="color:#e8c872">${fm(r.w)} W</b>`:''}</span></div>`).join('')+'<div style="font-size:11px;color:#b9a3bd;margin-top:6px">Same character on the WEMIX chain (same NFT token). Dates are when that name was listed, sold or first seen by us.</div>';
+ bd.insertAdjacentElement('afterend',el)};
