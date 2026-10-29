@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-28",
+    "emoji": "🗂️",
+    "text": "Older sold characters now open a full page from Price history and search, with gear, skills, spirits and magic stones. These details were fetched after the sale, so the page says they may differ from when it sold. New sales that sell before a snapshot is saved get their details fetched automatically.",
+    "ts": "2026-10-28T21:05:00-07:00"
+  },
+  {
+    "date": "2026-10-28",
     "emoji": "🔗",
     "text": "Sold characters now have a Share button at the top of their page, and a shared link to a sold character opens its saved page. Open on XDRACO at the bottom of character pages is no longer hidden under the bottom menu, so it opens on phones.",
     "ts": "2026-10-28T18:20:00-07:00"
