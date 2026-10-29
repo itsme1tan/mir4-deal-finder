@@ -1,5 +1,5 @@
 // Sold-character search: shows archived sold characters matching #fq below live results.
-(function(){let A=null,L=false;const f=n=>Math.round(n).toLocaleString();
+(function(){document.head.insertAdjacentHTML('beforeend','<style>#solo::after{content:"";display:block;height:calc(84px + env(safe-area-inset-bottom))}#solo>.sb .shb{width:auto;height:28px;margin-left:auto;padding:0 12px;gap:6px;border-color:#e8c872;background:rgba(232,200,114,.12);color:#e8c872;font:inherit;font-size:13px;font-weight:700}#solo>.sb .shb .ico{width:14px;height:14px;background:#e8c872}body:has(#shbar) #solo{top:41px}</style>');let A=null,L=false;const f=n=>Math.round(n).toLocaleString();
 const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const dt=s=>{const m=String(s||'').match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);if(!m)return s||'?';const d=new Date(Date.UTC(+m[1],m[2]-1,+m[3],+m[4]-8,+m[5]));return d.toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}).replace(' AM','am').replace(' PM','pm')};// source times are UTC+8
 const ms=s=>{const m=String(s||'').match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);return m?Date.UTC(+m[1],m[2]-1,+m[3],+m[4],+m[5]):null};
@@ -22,7 +22,7 @@ function open1(c,e){const d=c.querySelector('.sdet'),m=c.querySelector('.soldmor
   d.querySelectorAll('.tabs,.pill').forEach(e=>e.remove());d.querySelectorAll('.tp').forEach(p=>p.hidden=['value','hist'].includes(p.dataset.p));
   d.querySelectorAll('a').forEach(a=>a.addEventListener('click',ev=>ev.stopPropagation()));if(window.hist20){const hb=document.createElement('div');d.insertBefore(hb,d.children[1]);hist20(x,hb)}})}
 window.soloSold=(id,nm)=>{let o=document.getElementById('solo');if(!o){o=document.createElement('div');o.id='solo';document.body.appendChild(o)}const y=scrollY;
- o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${String(nm||'').replace(/[<>&]/g,'')}</b></div><div class="bd"><div class="soldc" data-sid="${id}"><div class="soldmore" hidden></div><div class="sdet" hidden></div></div></div>`;
+ o.innerHTML=`<div class="sb"><button id="sback">← Back</button><b>${String(nm||'').replace(/[<>&]/g,'')}</b><button class="shb" data-sh="${id}" title="Share this character" aria-label="Share this character"><i class="ico" style="--i:url(icons/ui/share.svg)"></i>Share</button></div><div class="bd"><div class="soldc" data-sid="${id}"><div class="soldmore" hidden></div><div class="sdet" hidden></div></div></div>`;
  const c=o.querySelector('.soldc');c.onclick=e=>open1(c,e);open1(c);o.classList.add('on');o.scrollTop=0;sback.onclick=()=>{o.classList.remove('on');scrollTo(0,y)}};
 function hook(){const fq=document.getElementById('fq');if(!fq)return setTimeout(hook,300);fq.addEventListener('input',run);document.addEventListener('fh-ready',()=>{const b=document.getElementById('soldres');if(b)b.dataset.q='';run()});const w=()=>{if(typeof D!='undefined'&&D&&D.listings)run();else setTimeout(w,500)};w()}
 document.readyState=='loading'?document.addEventListener('DOMContentLoaded',hook):hook()})();

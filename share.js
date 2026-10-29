@@ -32,8 +32,8 @@ window.SHB=btn;
 function tip(el,txt){const r=el.getBoundingClientRect(),t=document.createElement('div');t.className='shtip';t.textContent=txt;t.style.left=Math.min(innerWidth-50,Math.max(50,r.left+r.width/2))+'px';t.style.top=(r.top-6)+'px';document.body.appendChild(t);setTimeout(()=>t.remove(),2000)}
 function copy(s){if(navigator.clipboard&&isSecureContext)return navigator.clipboard.writeText(s);const a=document.createElement('textarea');a.value=s;document.body.appendChild(a);a.select();try{document.execCommand('copy')}finally{a.remove()}return Promise.resolve()}
 document.addEventListener('click',e=>{const b=e.target.closest('.shb');if(!b)return;e.stopPropagation();e.preventDefault();
- const id=b.dataset.sh,x=D.listings.find(y=>y.id==id),url=BASE+'?c='+id;
- if(navigator.share&&matchMedia('(pointer:coarse)').matches){navigator.share({title:x?x.name+' · MIR4 Deal Finder':'MIR4 Deal Finder',text:x?`${x.name} · ${x.cls} · ${fm(x.ps/1000)}k power · $${fm(x.usd)}`:'',url}).catch(()=>{})}
+ const id=b.dataset.sh,x=D.listings.find(y=>y.id==id)||(D.sales||[]).find(y=>y.id==id),url=BASE+'?c='+id;
+ if(navigator.share&&matchMedia('(pointer:coarse)').matches){navigator.share({title:x?x.name+' · MIR4 Deal Finder':'MIR4 Deal Finder',text:x?`${x.name} · ${x.cls} · ${fm(x.ps/1000)}k power · ${x.usd!=null?'$'+fm(x.usd):'sold for '+fm(x.wemix)+' WEMIX'}`:'',url}).catch(()=>{})}
  else copy(url).then(()=>tip(b,'Link copied'),()=>tip(b,url))},true);
 function inject(){
  document.querySelectorAll('.card[data-id]:not([data-shd])').forEach(c=>{c.dataset.shd=1;const w=c.querySelector('.wst');if(w)w.insertAdjacentHTML('afterend',btn(c.dataset.id))});
@@ -47,7 +47,7 @@ function bar(){if(document.getElementById('shbar'))return;const b=document.creat
 function glow(el){if(!el)return;el.scrollIntoView({block:'center'});el.classList.remove('shglow');void el.offsetWidth;el.classList.add('shglow')}
 function openShared(){if(!C)return;bar();const x=D.listings.find(y=>y.id==C);
  if(x){const r=document.querySelector(`.tr20[data-id="${C}"]`);if(r){glow(r);return}T20.solo(C,D.listings);setTimeout(()=>{const c=document.querySelector('#solo .card');c&&c.classList.add('shglow')},100);return}
- const s=(D.sales||[]).find(y=>y.id==C),m=document.createElement('div');m.id='shmsg';
+ const s=(D.sales||[]).find(y=>y.id==C);if(window.soloSold){fetch('data/snaps/'+C+'.json',{method:'HEAD'}).then(r=>{if(r.ok)soloSold(C,s?s.name:'')}).catch(()=>{})}const m=document.createElement('div');m.id='shmsg';
  m.innerHTML=s?`🏷️ <b>${s.name}</b> (${s.cls}, ${fm(s.ps/1000)}k power) sold for ${fm(s.wemix)} WEMIX (~$${fm(s.wemix*D.wemix_usd)}). Here are today's best deals.`:'This character is no longer listed. Here are today\'s best deals.';
  document.getElementById('dotd')?document.getElementById('dotd').before(m):document.getElementById('t20').before(m)}
 // ---------- deal of the day ----------
