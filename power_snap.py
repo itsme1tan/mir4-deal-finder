@@ -1,4 +1,5 @@
 """Daily power snapshot (read-only, public): global top 1000 from forum.mir4global.com/rank?ranktype=1, about 1 request per second.
+Also the top 100 of every server -> data/power_history/servers/<YYYY-MM-DD>.json.
 Writes data/power_history/<YYYY-MM-DD>.json ([rank,name,server,classicon,power]) and rebuilds data/power_history/series.json:
 power over time per character (name|server) from ranking snapshots plus our XDRACO records (sales, listings, saved pages, chain metadata).
 Usage: python3 power_snap.py [--no-fetch]"""
@@ -20,9 +21,26 @@ def fetch():
         if not new or len(out)>=1000: break
         time.sleep(1)
     return sorted(out)[:1000]
+def fetch_servers():
+    """Top 100 of every server (one page each). On a server page the forum shows the clan where the server would be, so the server comes from the world list."""
+    h=urllib.request.urlopen(urllib.request.Request('https://forum.mir4global.com/rank?ranktype=1',headers=UA),timeout=30).read().decode('utf8','ignore')
+    W=sorted(set(re.findall(r"set_world\('(\d+)', '[^']*', '(\d+)', '([^']*)'\)",h)));out=[]
+    for g,w,name in W:
+        if g=='0' or w=='999': continue
+        u=f'https://forum.mir4global.com/rank?ranktype=1&worldgroupid={g}&worldid={w}&classtype=&searchname=&loaded=1&liststyle=ol&page=1'
+        try: t=urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30).read().decode('utf8','ignore')
+        except Exception as e: print('server skip',name,str(e)[:60]);time.sleep(2);continue
+        for r,ci,n in re.findall(r'<span class="num">(\d+)</span>.*?char_(\d+)\.png.*?<span class="user_name">(.*?)</span>',t,re.S)[:0]: pass
+        rows=re.findall(r'<span class="num">(\d+)</span>.*?char_(\d+)\.png.*?<span class="user_name">(.*?)</span>.*?<td class="text_right">\s*<span>([\d,]+)</span>',t,re.S)
+        for r,ci,n,pw in rows[:100]: out.append([int(r),html.unescape(n).strip(),name,ci,int(pw.replace(',',''))])
+        time.sleep(1)
+    return out
 def series():
     S={};add=lambda n,sv,t,p,src:(n and sv and p) and S.setdefault(f'{n}|{sv}',{}).setdefault(t[:10],[int(p),src])
     for f in sorted(glob.glob(os.path.join(PH,'20*.json'))):
+        d=os.path.basename(f)[:10]
+        for r,n,sv,ci,pw in json.load(open(f)): add(n,sv,d,pw,'r')
+    for f in sorted(glob.glob(os.path.join(PH,'servers','20*.json'))):
         d=os.path.basename(f)[:10]
         for r,n,sv,ci,pw in json.load(open(f)): add(n,sv,d,pw,'r')
     H8=lambda s:datetime.datetime.strptime(s,'%Y-%m-%d %H:%M').replace(tzinfo=ZoneInfo('Asia/Shanghai')).astimezone(LA).strftime('%Y-%m-%d')
@@ -77,4 +95,7 @@ if __name__=='__main__':
         R=fetch();d=datetime.datetime.now(LA).strftime('%Y-%m-%d')
         if len(R)>=500: json.dump(R,open(os.path.join(PH,d+'.json'),'w'),ensure_ascii=False,separators=(',',':'))
         print('ranking rows',len(R))
+        V=fetch_servers();os.makedirs(os.path.join(PH,'servers'),exist_ok=True)
+        if len(V)>=1000: json.dump(V,open(os.path.join(PH,'servers',d+'.json'),'w'),ensure_ascii=False,separators=(',',':'))
+        print('server rows',len(V))
     S,days=series();print('characters',len(S),'with 2+ points',sum(1 for v in S.values() if len(v)>=2),'ranking days',days)
