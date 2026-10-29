@@ -25,4 +25,4 @@ const tsl=x=>{const md=new Date(x.date+'T12:00:00Z').toLocaleDateString('en-US',
 const e=s=>String(s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 fetch('data/changelog.json?'+n).then(r=>r.json()).then(L=>{const g={};L.forEach(x=>(g[x.date]=g[x.date]||[]).push(x));
 m.innerHTML=Object.keys(g).sort().reverse().map(k=>`<h2>${lab(k)}</h2>`+g[k].map(x=>`<div class="it"><span>${e(x.emoji||'•')}</span><span>${e(x.text)}<small class="ts">${tsl(x)}</small></span></div>`).join('')).join('')}).catch(()=>m.textContent='Could not load changes.')
-</script><script src="nav.js?v=27"></script></body></html>
+</script><script src="nav.js?v=28"></script></body></html>

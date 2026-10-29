@@ -67,7 +67,9 @@ def main():
     except Exception: O={}
     key=lambda x:f"{x['name']}|{x.get('server') or ''}|{x['cls']}"
     todo={}
-    for x in D['listings']+D.get('sales',[]): todo.setdefault(key(x),x)
+    try: SA=json.load(open(os.path.join(ROOT,'data','sold_archive.json')))
+    except Exception: SA=[]
+    for x in D['listings']+D.get('sales',[])+SA: todo.setdefault(key(x),x)  # sold archive too, so renamed sold characters show their current name
     head=int(rpc('eth_blockNumber',[]),16)
     def one(k):
         if time.time()-T0>BUDGET: return
