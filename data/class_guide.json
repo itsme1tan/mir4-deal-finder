@@ -87,6 +87,18 @@
   "kr57525": [
    "MIR4 Korea Official Community: Arbalist rework and revive notes",
    "https://forum.mir4.co.kr/post/57525"
+  ],
+  "kr83872": [
+   "MIR4 Korea Official: patch note with Darkist skill changes",
+   "https://forum.mir4.co.kr/post/83872"
+  ],
+  "kr84007": [
+   "MIR4 Korea Official: Backflow description fix",
+   "https://forum.mir4.co.kr/post/84007"
+  ],
+  "wkS": [
+   "MIR4 Wiki: Skill effect info",
+   "https://www.mir4.wiki/wiki/Skill"
   ]
  },
  "classes": {
@@ -953,7 +965,7 @@
      "n": "Piercing Blades",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "5 Sword Force arrows; Bash on Quelled, Chaos or Chill targets, stuns at Tier 5+.",
      "desc": "An advanced sword skill that creates a great number of sharp arrows made of Sword Force and fires them forward.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
@@ -1095,13 +1107,14 @@
      "what": "Spear of light through all enemies in a line, 9 hits.",
      "desc": "If you focus the divine energy on your fingertips and stretch out your hands, the energy forms a spear of light that penetrates all enemies in your path.",
      "fx": [
-      "X% PHYS ATK +X% Spell ATK as combo DMG (Number of hits: 9)"
+      "370% PHYS ATK + 370% Spell ATK as combo DMG (Number of hits: 9), after the Sep 2023 patch"
      ],
      "cd": "10s",
      "icon": "icons/skills/taoist-ray-of-light.webp",
      "src": [
       "mdb",
-      "kg"
+      "kg",
+      "p1421"
      ],
      "kx": [
       "Invincible 3s after casting; heals you and party in range (10% + flat).",
@@ -1225,7 +1238,7 @@
      "n": "Quick Shot",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "12 rapid arrows; Bash damage, builds Focus for CRIT.",
      "desc": "Countless arrows are shot instantly. A rapid shooting skill that makes enemies helpless.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 12)"
@@ -1244,7 +1257,7 @@
      "n": "Illusion Arrow",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Arrows in all directions; Knockdown and Stun immune while casting, Evasion up.",
      "desc": "Shoots arrows in all directions while brushing off the enemy's attacks with quick movements fast enough to create an illusion.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
@@ -1265,7 +1278,7 @@
      "n": "Burst Shell",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Explosion that lowers DEF and burns.",
      "desc": "A powerful explosion that burns down a wide range and confuses the enemies' sense of balance and subdues them.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
@@ -1322,7 +1335,7 @@
      "n": "Painstrike Gale",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Kick and leap back; brief invincibility, Marker, short Stun.",
      "desc": "Rushes suddenly, deals a kick attack, and maintains a favorable range to shoot from.",
      "fx": [
       "X% PHYS ATK as PHYS DMG"
@@ -1342,7 +1355,7 @@
      "n": "Flash Arrow",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Blinding shot; lowers Accuracy and CRIT, Marker and Darkness.",
      "desc": "A shooting technique to temporarily block the enemy's line of sight and prevent them from preparing a follow-up attack.",
      "fx": [
       "X% PHYS ATK as PHYS DMG"
@@ -1361,7 +1374,7 @@
      "n": "Heavenly Bow",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Rain of 8 arrows from the sky.",
      "desc": "When a rain of arrows summoned from the heavens hits your enemies, they have no choice but to perish.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 8)"
@@ -1376,7 +1389,7 @@
      "n": "Obliterate Shell",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Heavy shell; Bash and knockdown, more DMG on Stunned targets.",
      "desc": "The condensed chi arrows uses an unbelievable power to destroy even the area upon which it falls.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 2)"
@@ -1395,7 +1408,7 @@
      "n": "Seeking Bolt",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Long range homing arrow; cannot be evaded, can Stun on CRIT.",
      "desc": "Shoots arrows that track the enemy's soul from a remarkably far distance. These arrows never miss their target.",
      "fx": [
       "X% PHYS ATK as PHYS DMG"
@@ -1894,26 +1907,34 @@
      "n": "Ghostly Flame",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Blue ghost flame that burns the target.",
      "desc": "The blue flame in the form of a ghost burns the enemy's soul and body.",
-     "fx": [],
+     "fx": [
+      "250% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-ghostly-flame.webp",
      "src": [
-      "offD"
+      "offD",
+      "kr83872",
+      "p1421"
      ]
     },
     {
      "n": "Infernal Abyss",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Opens an abyss that drags enemies in.",
      "desc": "The gates of hell shall open, and the eternal pain of the dead shall drag the enemies into the abyss.",
-     "fx": [],
+     "fx": [
+      "280% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-infernal-abyss.webp",
      "src": [
-      "offD"
+      "offD",
+      "kr83872",
+      "p1421"
      ]
     },
     {
@@ -1922,13 +1943,16 @@
      "type": "skill",
      "what": "Area attack; at high tiers a successful Bash adds an MP Cost Boost debuff.",
      "desc": "The dark art that summons a Craveling from its den to let it devour everything within the target area.",
-     "fx": [],
+     "fx": [
+      "320% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-summon-craveling.webp",
      "src": [
       "offD",
       "offD2",
-      "p1421"
+      "p1421",
+      "kr83872"
      ],
      "kx": [
       "T8: MP Cost Boost +50% on Bash (T10-11: +100%, T12: +150%)."
@@ -1938,7 +1962,7 @@
      "n": "Sanguine Awakening",
      "xd": null,
      "type": "util",
-     "what": "",
+     "what": "Self buff: briefly unlocks power beyond limits.",
      "desc": "The forbidden spell that uses dark blood to temporarily wield the power beyond all limits with the outburst of inner demonic aura.",
      "fx": [],
      "cd": null,
@@ -1953,13 +1977,16 @@
      "type": "skill",
      "what": "Scattering petals; at high tiers lowers Silence resistance on hit.",
      "desc": "Those allured by the beautiful blooming of the flowers of death shall soon be split into pieces by the sharp scatter of the petals.",
-     "fx": [],
+     "fx": [
+      "300% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-bursting-crimson-flowers.webp",
      "src": [
       "offD",
       "offD2",
-      "p1421"
+      "p1421",
+      "kr83872"
      ],
      "kx": [
       "Silence RES -30% for 10s at T8-9 (T10-11: -50%, T12: -70%)."
@@ -1969,7 +1996,7 @@
      "n": "Decay",
      "xd": null,
      "type": "util",
-     "what": "",
+     "what": "Weakens nearby enemies.",
      "desc": "The dark art wields the power of purification in reverse, weakening nearby enemies by decaying the land and air.",
      "fx": [],
      "cd": null,
@@ -1984,38 +2011,50 @@
      "type": "skill",
      "what": "Hits many enemies and heals you.",
      "desc": "The forbidden spell that strikes many enemies with the chains of blood and extorts their blood energy to recover health.",
-     "fx": [],
+     "fx": [
+      "340% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-chain-of-blood.webp",
      "src": [
       "offD",
-      "offD2"
+      "offD2",
+      "kr83872",
+      "p1421"
      ]
     },
     {
      "n": "Eldritch Dragon Strike",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Dragon claw strike that shatters the ground.",
      "desc": "When the Evil Dragon lacerates the earth with its claws, lands will be shattered and nothing will remain.",
-     "fx": [],
+     "fx": [
+      "350% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-eldritch-dragon-strike.webp",
      "src": [
-      "offD"
+      "offD",
+      "kr83872",
+      "p1421"
      ]
     },
     {
      "n": "Annihilation",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Curse mark that breaks the target down from inside.",
      "desc": "The absolute curse that leaves the mark of annihilation on the enemy, breaking down the body and soul from the inside.",
-     "fx": [],
+     "fx": [
+      "380% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-annihilation.webp",
      "src": [
-      "offD"
+      "offD",
+      "kr83872",
+      "p1421"
      ]
     },
     {
@@ -2030,24 +2069,30 @@
      "src": [
       "offD",
       "offD2",
-      "p1421"
+      "p1421",
+      "kr84007"
      ],
      "kx": [
       "Removes target MP: 7% (T1-4) up to 42% (T12).",
-      "In Asura form: Sanguine Backflow 10s; if the target heals, it takes DMG equal to 30% (T10-12: 40%) of current HP."
+      "In Asura form: Sanguine Backflow 10s; if the target heals, it takes DMG equal to 30% (T10-12: 40%) of current HP.",
+      "T8: in Asura form, 40%/60%/80% chance to Stun 1s, by Curse stacks."
      ]
     },
     {
      "n": "Terrify",
      "xd": null,
      "type": "util",
-     "what": "",
+     "what": "Summons a devil figure that terrifies nearby enemies.",
      "desc": "The gruesome figure of the devil is summoned to terrify the enemies nearby.",
-     "fx": [],
+     "fx": [
+      "260% Spell ATK as Spell DMG at Tier 1 (after the 10% damage buff)"
+     ],
      "cd": null,
      "icon": "icons/skills/darkist-terrify.webp",
      "src": [
-      "offD"
+      "offD",
+      "kr83872",
+      "p1421"
      ]
     },
     {
@@ -2080,12 +2125,14 @@
   "src": [
    "wkE",
    "off26",
-   "krT"
+   "krT",
+   "wkS",
+   "kg"
   ],
   "items": [
    [
     "Bash",
-    "Extra damage a skill deals when the target already has the debuff it needs. How much depends on the skill and its tier: Warrior finishers get +50% DMG boost on Dazed or Confused targets at Tier 1, and Splitting Slash +80% from Tier 8. Our sources give no figures for the other classes."
+    "Extra damage a finisher deals when the target already has the debuff it needs. Warrior, Sorcerer, Taoist and Lancer finishers start at +50% DMG Boost at Tier 1 and reach +80% at Tier 8 and +100% at Tier 10 (some Warrior skills +120%)."
    ],
    [
     "Daze",
@@ -2101,15 +2148,43 @@
    ],
    [
     "Quell",
-    "A debilitation effect; skills with Bash and DMG Boost on Quelled targets deal extra damage."
+    "Inflicted by Taoist Moonlight Wave and Moonlight Orb. Sunbeam Sword, Sorcerer Flame Orb and Flame Strike, and some Warrior and Lancer finishers deal Bash damage on Quelled targets."
    ],
    [
     "Chaos",
-    "Name used in the Korean Taoist guide for the effect from Rain of Blades; Soaring Slash deals extra Bash damage to it. Our English sources do not define it further."
+    "Taoist debuff from Moonlight Orb (Tier 8+) and Piercing Blades Bash; Soaring Slash and Rain of Blades deal Bash damage on it. Japanese sources use the same term as Warrior Confusion."
    ],
    [
     "Knockdown",
     "The target falls; keep attacking or move away while it is down."
+   ],
+   [
+    "Burn",
+    "DMG boost for some skills, cannot be removed, max 3 stacks."
+   ],
+   [
+    "Darkness",
+    "Raises the chance to be Silenced or Blinded, max 3 stacks."
+   ],
+   [
+    "Marker",
+    "Triggers Bash (does not stack)."
+   ],
+   [
+    "Freeze",
+    "Severe Cold from Chill stacks; works like a Stun."
+   ],
+   [
+    "Silence",
+    "Cannot use most skills for a while."
+   ],
+   [
+    "Blind",
+    "Misses most attacks for a while."
+   ],
+   [
+    "Stun",
+    "Cannot act. Taoist Guardian Circle (Tier 8+) and Greater Heal remove it from the party."
    ]
   ]
  }

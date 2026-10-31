@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-31",
+    "emoji": "📖",
+    "text": "Class guide polish: Darkist skills now show damage and summaries, Arbalist skills have short summaries, and the Debuff guide adds Burn, Darkness, Marker, Freeze, Silence, Blind and Stun plus Bash values for every class.",
+    "ts": "2026-10-31T09:00:00-07:00"
+  },
+  {
+    "date": "2026-10-31",
     "emoji": "🔑",
     "text": "Class guide upgrade: 68 skills now list their key effects by tier, like stun and debuff removal, immunities, knockdown, freeze, heals, revives and buff durations. Guardian Circle now shows it removes party Stun from Tier 8.",
     "ts": "2026-10-31T08:30:00-07:00"
