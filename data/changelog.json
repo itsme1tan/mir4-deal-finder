@@ -1,8 +1,14 @@
 [
   {
     "date": "2026-10-31",
+    "emoji": "🔑",
+    "text": "Class guide upgrade: 68 skills now list their key effects by tier, like stun and debuff removal, immunities, knockdown, freeze, heals, revives and buff durations. Guardian Circle now shows it removes party Stun from Tier 8.",
+    "ts": "2026-10-31T08:30:00-07:00"
+  },
+  {
+    "date": "2026-10-31",
     "emoji": "📘",
-    "text": "New Class guide in Tools: every skill for all six classes with its icon, type, cooldown and full in-game description, plus a PvP combo, a hunting combo and a skill leveling priority for each class, with links to the sources.",
+    "text": "New Class guide in Tools: every skill for all six classes with its icon, type, cooldown and full in-game description, plus a PvP combo and a skill leveling priority for each class, with links to the sources.",
     "ts": "2026-10-31T06:00:00-07:00"
   },
   {

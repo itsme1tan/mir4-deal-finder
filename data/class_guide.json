@@ -51,6 +51,42 @@
   "off26": [
    "MIR4 Official Community: Applying skills",
    "https://forum.mir4global.com/post/26"
+  ],
+  "kg": [
+   "Kamigame MIR4 (Japanese): skill effects by tier, per class (2021, up to Tier 10)",
+   "https://kamigame.jp/mir4/page/171658429230760182.html"
+  ],
+  "kgW": [
+   "Kamigame: Warrior skills",
+   "https://kamigame.jp/mir4/page/171527879824306606.html"
+  ],
+  "kgS": [
+   "Kamigame: Sorcerer skills",
+   "https://kamigame.jp/mir4/page/171659780400620215.html"
+  ],
+  "kgL": [
+   "Kamigame: Lancer skills",
+   "https://kamigame.jp/mir4/page/171656552531378422.html"
+  ],
+  "lomW2": [
+   "LOMCN Wiki: Warrior skills by tier",
+   "https://www.lomcn.net/wiki/index.php/Mir4WarriorSkills"
+  ],
+  "lomS": [
+   "LOMCN Wiki: Sorcerer skills by tier",
+   "https://www.lomcn.net/wiki/index.php/Mir4WizardSkills"
+  ],
+  "p1421": [
+   "MIR4 Official: Patch Note, Sep 19 2023 skill balance",
+   "https://forum.mir4global.com/post/1421"
+  ],
+  "kr57112": [
+   "MIR4 Korea Official Community: Arbalist Tier 8 skills",
+   "https://forum.mir4.co.kr/post/57112"
+  ],
+  "kr57525": [
+   "MIR4 Korea Official Community: Arbalist rework and revive notes",
+   "https://forum.mir4.co.kr/post/57525"
   ]
  },
  "classes": {
@@ -68,7 +104,13 @@
      "cd": "25s",
      "icon": "icons/skills/warrior-void-slash.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW",
+      "lomW2"
+     ],
+     "kx": [
+      "Dazed 5s (T1), 8s (T5), 10s (T8+).",
+      "T8+: Knockdown RES -10% for 20s, PHYS and Spell ATK -100 for 10s (T10: -15% for 30s, -150)."
      ]
     },
     {
@@ -83,7 +125,13 @@
      "cd": "16s",
      "icon": "icons/skills/warrior-splitting-slash.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW",
+      "lomW2"
+     ],
+     "kx": [
+      "Knocks down monsters (characters 100% at T10).",
+      "T8+: your Accuracy +300 for 10s (T10: +500 for 15s); boss DMG taken -10%."
      ]
     },
     {
@@ -98,7 +146,12 @@
      "cd": "23s",
      "icon": "icons/skills/warrior-body-check.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Dazed 5s; knocks down monsters, characters 10% (T1), 60% (T8), 100% (T10).",
+      "T8+: on knockdown, Concussion with 50% chance of 2s extra Stun (T10: 70%, 5s) and a short bleed."
      ]
     },
     {
@@ -113,7 +166,12 @@
      "cd": "18s",
      "icon": "icons/skills/warrior-ground-smash.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Knocks down monsters, characters 10% (T1), 60% (T8), 100% (T10).",
+      "T8+: knocked down enemies PHYS and Spell DEF -120 for 10s (T10: -150)."
      ]
     },
     {
@@ -128,14 +186,18 @@
      "cd": "44s",
      "icon": "icons/skills/warrior-gale-slash.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "T8+: +30% skill DMG vs any debuffed enemy (T10: +50%); you take 4% less DMG (T10: 6%)."
      ]
     },
     {
      "n": "Lion's Roar",
      "xd": null,
      "type": "start",
-     "what": "Area around you; lowers enemy PHYS ATK, inflicts Daze and Confusion.",
+     "what": "Area roar; lowers enemy PHYS ATK, inflicts Daze and Confusion, stuns monsters.",
      "desc": "A roar unleashed by concentrating Inner Force drawn from deep within you, which becomes a weapon powerful enough to shake heaven and earth.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 2)"
@@ -143,7 +205,14 @@
      "cd": "39s",
      "icon": "icons/skills/warrior-lion-s-roar.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW",
+      "p1421"
+     ],
+     "kx": [
+      "PHYS ATK -80 for 10s (T8: -290, T10: -350); Daze and Confusion 5s (10s at T8+); stuns monsters 2s (T8: 4s, T10: 8s).",
+      "T8+: Knockdown RES -20% for 20s, skill DMG taken +20% for 15s.",
+      "Lowers Silence RES from T5 to T12."
      ]
     },
     {
@@ -158,7 +227,12 @@
      "cd": "25s",
      "icon": "icons/skills/warrior-riposte.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Knockdown and Stun immune while casting; taunts nearby monsters; DMG taken -24% for 3s (T8: -52%, T10: -60%).",
+      "T8+: heals 7% HP per character knocked down, max 35% (T10: 10%, max 50%)."
      ]
     },
     {
@@ -173,7 +247,13 @@
      "cd": "40s",
      "icon": "icons/skills/warrior-iron-shackle.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW",
+      "p1421"
+     ],
+     "kx": [
+      "T8+: enemies take +25% DMG for 6s (T10: +35% for 8s); T10: 1s Stun.",
+      "T10-11: 30% chance to reset Body Check cooldown on hit; T12: 50%."
      ]
     },
     {
@@ -188,7 +268,11 @@
      "cd": "19s",
      "icon": "icons/skills/warrior-crescent-strike.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "T8+: +35% skill DMG on Stunned targets, Stun and Knockdown RES -20% for 20s (T10: +50%, -30% for 30s); T10: cannot be evaded."
      ]
     },
     {
@@ -203,7 +287,12 @@
      "cd": "48s",
      "icon": "icons/skills/warrior-rampant.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Invincible 1.5s after casting; skill DMG +12% for 15s (T8: +26%); inflicts Confusion.",
+      "T8+: usable while Silenced; All DMG +50% and CRIT +300 for 6s, but you take 20% more DMG."
      ]
     },
     {
@@ -218,14 +307,19 @@
      "cd": "33s",
      "icon": "icons/skills/warrior-barbaric-charge.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Dazed 5s; knocks down monsters, characters 10% (T1), 60% (T8), 100% (T10).",
+      "T8+: on knockdown, Concussion with 50% chance of 2s extra Stun (T10: 70%, 5s)."
      ]
     },
     {
      "n": "Unbreakable Stance",
      "xd": null,
      "type": "util",
-     "what": "Raises your Evasion and lowers monster damage for a while.",
+     "what": "Evasion up and less damage taken; at Tier 8 usable while Stunned.",
      "desc": "A self-defense skill that creates a spiral whirlpool around the body to protect against threats.",
      "fx": [
       "X% PHYS ATK as PHYS DMG"
@@ -233,7 +327,12 @@
      "cd": "52s",
      "icon": "icons/skills/warrior-unbreakable-stance.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW"
+     ],
+     "kx": [
+      "Evasion +60 for 20s, monster DMG taken -20% for 10s.",
+      "T8+: usable while Stunned; Stun RES +50%, PHYS and Spell DEF +500 for 6s, boss DMG taken -30%; extra Evasion +250 if cast while Stunned."
      ]
     },
     {
@@ -248,7 +347,15 @@
      "cd": "10s",
      "icon": "icons/skills/warrior-dragon-flame.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgW",
+      "lomW2",
+      "p1421"
+     ],
+     "kx": [
+      "Invincible 3s after casting; last hit knocks down monsters (characters: 10% at T1, 80% T8).",
+      "T8+: +50% skill DMG on Stunned targets (+80% T10); bonus DMG on Burned targets.",
+      "T10-11: recover 10% HP after use; T12: 20%."
      ]
     }
    ],
@@ -388,7 +495,7 @@
      "n": "Flame Orb",
      "xd": null,
      "type": "util",
-     "what": "Exploding fireball.",
+     "what": "Exploding fireball; Burns (unremovable, up to 3 stacks).",
      "desc": "A spell that condenses the energy of fire into a small sphere and blasts it at an enemy. If the sphere hits, it causes a massive explosion.",
      "fx": [
       "X% Spell ATK as Spell DMG"
@@ -396,7 +503,12 @@
      "cd": "12s",
      "icon": "icons/skills/sorcerer-flame-orb.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Burned 5s (T8+: 20s), max 3 stacks, cannot be removed; Bash on Quelled targets."
      ]
     },
     {
@@ -411,14 +523,20 @@
      "cd": "15s",
      "icon": "icons/skills/sorcerer-frost-orb.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Chilled 5s (T8: 15s, T10: 20s), max 3 stacks; slows monsters.",
+      "T8+: on CRIT, 50% chance to Freeze (Stun) monsters 5s (T10: 80%); Accuracy +100 (T10: +250)."
      ]
     },
     {
      "n": "Dark Vortex",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "6 hit vortex; knocks down monsters, adds Darkness and cuts healing at high tiers.",
      "desc": "A spell that warps space to open a wind path to another space, creating a raging vortex that is impossible to escape.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 6)"
@@ -426,7 +544,13 @@
      "cd": "18s",
      "icon": "icons/skills/sorcerer-dark-vortex.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Last hit knocks down monsters, characters 10%.",
+      "T8+: Darkness 10s (max 3); targets take 25 to 35% more DMG for 6s (T10: 40 to 50%); HP potion and heal skill recovery -40% (T10: -60%)."
      ]
     },
     {
@@ -441,14 +565,21 @@
      "cd": "27s",
      "icon": "icons/skills/sorcerer-thunderstorm.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS",
+      "p1421"
+     ],
+     "kx": [
+      "T8+: extra skill DMG on Chilled targets by stacks (T10: +50%/+60% at 2 and 3 stacks).",
+      "T8-9: 5% chance to reset Chain Lightning on Bash (T10-11: 10%, T12: 20%)."
      ]
     },
     {
      "n": "Magic Shield",
      "xd": null,
      "type": "util",
-     "what": "Shield against attacks; drains MP quickly.",
+     "what": "Shield that cuts all damage taken; drains MP.",
      "desc": "A spell that creates a shield that absorbs all attacks to protect the caster. However, it costs a lot of MP.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 3)"
@@ -456,7 +587,13 @@
      "cd": "52s",
      "icon": "icons/skills/sorcerer-magic-shield.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Cuts all DMG taken by 24% for 25s (T8: 52%, T10: 60%); breaks after 20 hits or an absorb cap.",
+      "T8+: reflects 10% of melee DMG (T10: 20%); recovers MP from healing."
      ]
     },
     {
@@ -471,7 +608,13 @@
      "cd": "40s",
      "icon": "icons/skills/sorcerer-blizzard.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Chilled, max 3 stacks; slows monsters.",
+      "T8+: Freezes (Stuns) monsters 8s (50%, T10: 100%); Chilled characters 35 to 45% chance to Freeze 4s (T10: 60 to 70%)."
      ]
     },
     {
@@ -486,7 +629,13 @@
      "cd": "18s",
      "icon": "icons/skills/sorcerer-chain-lightning.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Bash on Chilled targets; less power per extra target.",
+      "T8+: extra skill DMG on Chilled targets by stacks; boss DMG +15% (T10: +20%)."
      ]
     },
     {
@@ -501,14 +650,20 @@
      "cd": "20s",
      "icon": "icons/skills/sorcerer-flame-strike.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Burned (unremovable, max 3); Bash on Quelled targets.",
+      "T8+: enemy heal skills -50% for 8s (T10: -90%) and a burn DoT; lowers monster aggro on you."
      ]
     },
     {
      "n": "Soul Devour",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "5 hit dark blast; Darkness, Blind and Silence.",
      "desc": "A spell that explodes the energy of darkness, dealing damage to the soul. Although an evil, heathen skill, its effect is hard to argue with.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 5)"
@@ -516,14 +671,19 @@
      "cd": "30s",
      "icon": "icons/skills/sorcerer-soul-devour.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "T8+: Darkness 15s (max 3); 50% Blind; Silences monsters 20s; Darkened characters 30 to 40% chance to be Silenced 10s and take 20% more DMG for 6s."
      ]
     },
     {
      "n": "Immolate",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "10 hit fire stream; Burns and a DoT at high tiers.",
      "desc": "A powerful fire spell that shoots fire taken from the burning river of hell and burns the enemies in front, one by one.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 10)"
@@ -531,27 +691,37 @@
      "cd": "45s",
      "icon": "icons/skills/sorcerer-immolate.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "lomS"
+     ],
+     "kx": [
+      "T10 (LOMCN): Bash on Quelled +50%, DoT 168% Spell ATK for 5s, Burned 8s, more DMG per Burn stack."
      ]
     },
     {
      "n": "Phoenix Embrace",
      "xd": "Vermilion Bird Embrace",
      "type": "skill",
-     "what": "",
+     "what": "Party Spell ATK buff; cuts cooldowns at high tiers.",
      "desc": "Causes Energy that maximizes the power of spells to cascade out by receiving the benediction of the Vermilion Bird, the divine guardian and symbol of Sorcerer.",
      "fx": [],
      "cd": "54s",
      "icon": "icons/skills/sorcerer-vermilion-bird-embrace.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Party Spell ATK +25 for 60s (T8: +60, T10: +70).",
+      "T8+: Skill Cooldown Reduction +40% for 16s (T10: +60%); MP potion effect +20% (T10: +30%)."
      ]
     },
     {
      "n": "Frozen Block",
      "xd": null,
      "type": "util",
-     "what": "Blocks attacks and freezes attackers.",
+     "what": "Ice Shield; ignores damage, removes and blocks debuffs, freezes attackers.",
      "desc": "Covers the whole body with cold to protect against all attacks and freezes enemies that pound on the ice shield.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 3)"
@@ -559,7 +729,13 @@
      "cd": "53s",
      "icon": "icons/skills/sorcerer-frozen-block.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "lomS"
+     ],
+     "kx": [
+      "Ice Shield 3s. At T10 (LOMCN): ignores DMG, immune to Knockdown and Stun, removes debuffs and is immune to debuffs.",
+      "T8+: melee attackers gain Chill and can be Frozen (Stun) 5s (T10: 70%, 7s); T10: Stun 3s when the shield breaks."
      ]
     },
     {
@@ -574,7 +750,14 @@
      "cd": "10s",
      "icon": "icons/skills/sorcerer-dragon-tornado.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgS",
+      "p1421"
+     ],
+     "kx": [
+      "Invincible 3s after casting; knocks down monsters.",
+      "T8+: bonus DMG on Burned targets; Darkened characters can be Silenced 10s.",
+      "T10-12: recover 2% Vitality per enemy hit (first hit)."
      ]
     }
    ],
@@ -672,7 +855,7 @@
      "n": "Moonlight Wave",
      "xd": null,
      "type": "start",
-     "what": "Palm strike of yin energy, 5 hits.",
+     "what": "Palm strike, 5 hits; Quells targets and lowers Stun RES.",
      "desc": "A Taoist palm skill that strikes enemies with waves of yin energy, like the moonlight pouring down on the ground.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 5)"
@@ -680,7 +863,12 @@
      "cd": "21s",
      "icon": "icons/skills/taoist-moonlight-wave.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Quelled 8s (T8: 12s, T10: 15s).",
+      "T5+: target Stun RES -10% for 10s (T8: -20%, T10: -30%); T8+: party Accuracy and Evasion +60, heal skills +15%."
      ]
     },
     {
@@ -695,14 +883,19 @@
      "cd": "16s",
      "icon": "icons/skills/taoist-sunbeam-sword.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Bash on Quelled targets (+50%, T10 +100%).",
+      "T8+: Bash lowers PvP Knockdown RES 10% for 15s."
      ]
     },
     {
      "n": "Moonlight Orb",
      "xd": null,
      "type": "start",
-     "what": "Holds enemies in place and crushes them, 9 hits.",
+     "what": "Holds enemies, 9 hits; Quells and strips enemy buffs.",
      "desc": "A moonlight bead created by a Taoist that holds enemies like the pull of a full moon on the ocean, and pulverizes them.",
      "fx": [
       "X% Spell ATK as Spell DMG (Number of hits: 9)"
@@ -710,7 +903,12 @@
      "cd": "24s",
      "icon": "icons/skills/taoist-moonlight-orb.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Quelled 8s (T10: 15s).",
+      "T5+: chance to remove enemy buffs (monsters 35%, PvP 20%; T10: 100% / 60%); T8+: inflicts Chaos 10s, can break Magic Shield and Cloaking (40%, T10: 60%); party PHYS and Spell DEF +60."
      ]
     },
     {
@@ -725,20 +923,30 @@
      "cd": "20s",
      "icon": "icons/skills/taoist-rain-of-blades.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "T8+: cannot be evaded; 40% chance to Silence 4s (T10: 60%, 6s); lowers enemy Evasion."
      ]
     },
     {
      "n": "Heal",
      "xd": null,
      "type": "util",
-     "what": "Heals you and nearby allies.",
+     "what": "Party heal over time; at Tier 8 removes debuffs and Silence.",
      "desc": "A magic spell that heals wounds with divine light energy. It heals both the caster and nearby allies.",
      "fx": [],
      "cd": "20s",
      "icon": "icons/skills/taoist-heal.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Party heal over 5s.",
+      "T8+: status immune while casting; removes your debuffs (100%) and party debuffs (50%, T10: 100%); usable while Silenced and removes party Silence; party boss DMG taken -10% for 30s.",
+      "T10: also removes Stun from party members."
      ]
     },
     {
@@ -753,14 +961,19 @@
      "cd": "20s",
      "icon": "icons/skills/taoist-piercing-blades.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "T5+: Stuns monsters 2s; 20% chance to Stun characters 2s (T8: 40%, 3s; T10: 60%, 5s).",
+      "T8+: Bash inflicts Chaos and Chill 8s (T10: 16s)."
      ]
     },
     {
      "n": "Guardian Circle",
      "xd": null,
      "type": "util",
-     "what": "Protects allies from PHYS DMG, buffs your PHYS power.",
+     "what": "Party PHYS DEF buff; at Tier 8 usable while Stunned and removes party Stun.",
      "desc": "A magic spell that summons Earth Energy to protect allies from PHYS DMG and enhance the caster's physical ability.",
      "fx": [
       "X% Spell ATK as Spell DMG"
@@ -768,7 +981,13 @@
      "cd": "46s",
      "icon": "icons/skills/taoist-guardian-circle.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Party PHYS DEF +25 and Bash DMG taken -10% for 60s (T10: +70, -28%).",
+      "T8+: usable while Stunned; removes Stun from the party; Stun RES +20% for 30s; party CRIT DMG taken -15% for 20s.",
+      "T10: your Stun RES +50% and party +20% for 60s; lowest HP member takes 30% less DMG for 15s."
      ]
     },
     {
@@ -783,14 +1002,19 @@
      "cd": "35s",
      "icon": "icons/skills/taoist-tai-chi.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Knockdown and Stun immune while casting; last hit knocks down monsters (characters 10%, T8: 60%, T10: 100%).",
+      "T5+: Evasion up; party heal skills +15% for 8s (T10: +50%)."
      ]
     },
     {
      "n": "Blasting Charm",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Talisman blast; Darkness, lowers DEF and Stun, Debuff and Silence RES.",
      "desc": "A thin talisman sheet thrown by a Taoist can cause an explosion strong enough to split a rock once it attaches to an enemy.",
      "fx": [
       "X% Spell ATK as Spell DMG"
@@ -798,7 +1022,13 @@
      "cd": "28s",
      "icon": "icons/skills/taoist-blasting-charm.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg",
+      "p1421"
+     ],
+     "kx": [
+      "Darkness 8s; PHYS DEF -50.",
+      "Lowers Debilitation/Silence/Stun RES: T8-9 -20%/-20%/-10%, T10 -40%/-40%/-20%, T12 -50%/-50%/-40%."
      ]
     },
     {
@@ -813,33 +1043,49 @@
      "cd": "31s",
      "icon": "icons/skills/taoist-soaring-slash.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "T8+: +50% skill DMG on targets with both Chaos and Chill (T10: +100%); party skill DMG taken -8%."
      ]
     },
     {
      "n": "Expulsion Circle",
      "xd": null,
      "type": "util",
-     "what": "Raises Spell resistance.",
+     "what": "Party Spell DEF buff; at Tier 8 removes party debuffs and Silence.",
      "desc": "Sharply increases your ability to resist spells and gives you the courage to fight wicked beings.",
      "fx": [],
      "cd": "46s",
      "icon": "icons/skills/taoist-expulsion-circle.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Party Spell DEF +25 for 60s (T10: +70).",
+      "T8+: usable while Silenced; removes party Silence and debuffs; party Debuff and Silence RES +20% for 30s."
      ]
     },
     {
      "n": "Greater Heal",
      "xd": null,
      "type": "util",
-     "what": "Big party heal; at high tiers can revive allies.",
+     "what": "Big party heal; removes Stun, revives allies at Tier 8+.",
      "desc": "This ultimate heal instantly cures all wounds by consuming all Focus. If this skill is improved to a certain level, it can even revive the dead.",
      "fx": [],
      "cd": "46s",
      "icon": "icons/skills/taoist-greater-heal.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg",
+      "kr57525"
+     ],
+     "kx": [
+      "Knockdown and Stun immune while casting; party heal.",
+      "T5+: 60% chance to remove party Stun (T8: 90%, T10: 100%).",
+      "T8+: usable while Silenced or Stunned; you and party invincible 3s; revives 1 ally at 20% HP (T10: up to 5 at 50%)."
      ]
     },
     {
@@ -854,7 +1100,12 @@
      "cd": "10s",
      "icon": "icons/skills/taoist-ray-of-light.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kg"
+     ],
+     "kx": [
+      "Invincible 3s after casting; heals you and party in range (10% + flat).",
+      "T8+: usable while Silenced; T10: casting while Silenced removes Silence."
      ]
     }
    ],
@@ -982,7 +1233,11 @@
      "cd": "12s",
      "icon": "icons/skills/arbalist-quick-shot.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Bash +80%; Darkened targets can be Silenced 4s; builds Focus stacks for CRIT."
      ]
     },
     {
@@ -997,7 +1252,13 @@
      "cd": "22s",
      "icon": "icons/skills/arbalist-illusion-arrow.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112",
+      "p1421"
+     ],
+     "kx": [
+      "Knockdown and Stun immune while casting; Evasion +200 for 5s.",
+      "T10-11: Debilitation RES +10 on Knockdown for 6s (T12: +20)."
      ]
     },
     {
@@ -1012,14 +1273,18 @@
      "cd": "26s",
      "icon": "icons/skills/arbalist-burst-shell.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: PHYS and Spell DEF -100 for 10s; burn DoT 10s."
      ]
     },
     {
      "n": "Venom Mist Shell",
      "xd": null,
      "type": "skill",
-     "what": "",
+     "what": "Poison mist; blocks invincibility and cuts healing.",
      "desc": "Enemies that breathe in the poisonous fog will be destroyed from the inside out. Their healing skill becomes critically damaged.",
      "fx": [
       "X% PHYS ATK as PHYS DMG (Number of hits: 9)"
@@ -1027,7 +1292,11 @@
      "cd": "40s",
      "icon": "icons/skills/arbalist-venom-mist-shell.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Marker and Darkness 10s; target cannot gain Invincible for 10s (unremovable); heal skills -40% for 15s."
      ]
     },
     {
@@ -1042,7 +1311,11 @@
      "cd": "33s",
      "icon": "icons/skills/arbalist-ice-cage.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Chilled 10s; Stuns monsters 3s; characters 20 to 30% Stun 3s by Chill stacks; can block Evade for 10s."
      ]
     },
     {
@@ -1057,7 +1330,12 @@
      "cd": "20s",
      "icon": "icons/skills/arbalist-painstrike-gale.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112",
+      "kr57525"
+     ],
+     "kx": [
+      "T8: Invincible 1s; Marker 10s; Stuns monsters 2s (T10: 3s), characters 50% for 1s; CRIT Evasion -200 for 5s."
      ]
     },
     {
@@ -1072,7 +1350,11 @@
      "cd": "35s",
      "icon": "icons/skills/arbalist-flash-arrow.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Accuracy -220 for 5s and CRIT -200 for 8s; Marker and Darkness; can Blind 3s."
      ]
     },
     {
@@ -1102,7 +1384,11 @@
      "cd": "28s",
      "icon": "icons/skills/arbalist-obliterate-shell.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Bash +80%; knocks down monsters, characters 60%; All DMG +80% vs Stunned targets."
      ]
     },
     {
@@ -1117,27 +1403,36 @@
      "cd": "38s",
      "icon": "icons/skills/arbalist-seeking-bolt.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112"
+     ],
+     "kx": [
+      "T8: Knockdown and Stun immune while casting; cannot be evaded; CRIT hits 50% chance to Stun 3s; target Evasion -200 for 5s."
      ]
     },
     {
      "n": "Mind's Eye",
      "xd": null,
      "type": "util",
-     "what": "Self buff, no damage.",
+     "what": "Self buff; removes Blindness.",
      "desc": "Instead of physical eyes, it searches for targets with the mind's eye. It assesses their weaknesses and fires a critical hit.",
      "fx": [],
      "cd": "30s",
      "icon": "icons/skills/arbalist-mind-s-eye.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112",
+      "kr57525"
+     ],
+     "kx": [
+      "T8: PHYS ATK +80 for 30s; Accuracy +160 and CRIT +80 for 10s; removes Blindness; all DMG taken -10%."
      ]
     },
     {
      "n": "Cloaking",
      "xd": null,
      "type": "util",
-     "what": "Stealth utility.",
+     "what": "Stealth for 4s; heals 20% HP, usable while Silenced.",
      "desc": "Loses enemies with tricks. Moves secretly and attacks suddenly.",
      "fx": [
       "X% PHYS ATK as PHYS DMG"
@@ -1145,7 +1440,12 @@
      "cd": "60s",
      "icon": "icons/skills/arbalist-cloaking.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112",
+      "kr57525"
+     ],
+     "kx": [
+      "T8: Stealth 4s, DMG taken -25%, heals 20% HP, skill DMG +25% for 2s after; usable while Silenced; Knockdown RES +20% and Move Speed +100 while hidden."
      ]
     },
     {
@@ -1160,7 +1460,13 @@
      "cd": "10s",
      "icon": "icons/skills/arbalist-arrow-rain.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kr57112",
+      "p1421"
+     ],
+     "kx": [
+      "Invincible 3s after casting; cannot be evaded; last hit Stuns 1s.",
+      "T10-11: 10% chance to reset Evade (T12: 20%)."
      ]
     }
    ],
@@ -1212,7 +1518,12 @@
      "cd": "24s",
      "icon": "icons/skills/lancer-ravaging-blow.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "Chilled 5s (T8: 10s), max 3 stacks.",
+      "T8+: Evasion +200 for 5s; party PHYS ATK +60; slows enemies."
      ]
     },
     {
@@ -1227,7 +1538,12 @@
      "cd": "16s",
      "icon": "icons/skills/lancer-crescent-blade.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "Bash on Chilled or Quelled targets; knocks down (characters 10%, T8: 60%, T10: 100%).",
+      "T8+: Knockdown RES -15% for 15s on targets not knocked down."
      ]
     },
     {
@@ -1242,7 +1558,13 @@
      "cd": "18s",
      "icon": "icons/skills/lancer-nirvana-kick.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL",
+      "p1421"
+     ],
+     "kx": [
+      "Knocks down monsters, characters 10%.",
+      "T8-9: knocked down enemies Debilitation RES -20% for 6s (T10-11: -30%, T12: -40%)."
      ]
     },
     {
@@ -1257,14 +1579,18 @@
      "cd": "24s",
      "icon": "icons/skills/lancer-double-strike.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "T8+: extra skill DMG on Chilled targets, +50 to 70% by stacks (T10: +90 to 110%)."
      ]
     },
     {
      "n": "Sweeping Storm",
      "xd": null,
      "type": "util",
-     "what": "Spinning storm, 6 hits; reportedly crowd control immune and lowers damage taken.",
+     "what": "Spinning storm, 6 hits; status immune while casting; lowers enemy ATK.",
      "desc": "A spear skill that whirls a spear like a storm, sweeping up enemies like fallen leaves, and then pulverizing them.",
      "fx": [
       "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 6)"
@@ -1272,7 +1598,12 @@
      "cd": "44s",
      "icon": "icons/skills/lancer-sweeping-storm.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "Status immune while casting.",
+      "T8+: lowers enemy PHYS and Spell ATK (characters -150 for 15s)."
      ]
     },
     {
@@ -1287,7 +1618,11 @@
      "cd": "29s",
      "icon": "icons/skills/lancer-dragon-tail.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "T8+: enemy heal skills -20% for 15s and MP potions -30% (T10: -30%)."
      ]
     },
     {
@@ -1302,7 +1637,11 @@
      "cd": "25s",
      "icon": "icons/skills/lancer-ascending-dragon.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "T8+: Chilled characters 40 to 50% chance to Freeze (Stun) 5s (T10: 60 to 70%, 7s)."
      ]
     },
     {
@@ -1317,14 +1656,19 @@
      "cd": "38s",
      "icon": "icons/skills/lancer-crushing-blow.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "Invincible 1s after casting; knocks down (characters 10%, T8: 60%, T10: 100%).",
+      "T8+: skill DMG +20% and Cooldown Reduction +30% for 15s (T10: +30%, +50% for 20s)."
      ]
     },
     {
      "n": "Wind Wall",
      "xd": null,
      "type": "util",
-     "what": "Wall of wind that blocks attacks.",
+     "what": "Wind wall; status immune while casting, party barrier at high tiers.",
      "desc": "Twirls a spear, creating a wall of wind to block attacks. If upgraded to its ultimate level, it can also create a shield of wind.",
      "fx": [
       "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 5)"
@@ -1332,7 +1676,12 @@
      "cd": "45s",
      "icon": "icons/skills/lancer-wind-wall.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL"
+     ],
+     "kx": [
+      "Status immune while casting; DMG taken -20% for 5s.",
+      "T8+: party barrier, DMG taken -50% for 6s (T10: -70% for 8s); party Spell ATK +60."
      ]
     },
     {
@@ -1347,7 +1696,13 @@
      "cd": "37s",
      "icon": "icons/skills/lancer-piercing-spear.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL",
+      "p1421"
+     ],
+     "kx": [
+      "Knocks down (characters 10%, T8: 60%, T10: 100%).",
+      "T10-12: guaranteed Chilled 10s on knocked down enemies."
      ]
     },
     {
@@ -1362,7 +1717,14 @@
      "cd": "63s",
      "icon": "icons/skills/lancer-absorption.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL",
+      "p1421"
+     ],
+     "kx": [
+      "Heals you for 100% of DMG dealt (T8: 500%); hitting a Chilled enemy Chills you.",
+      "T8+: removes enemy barrier and blocks barriers for 30s; 70% chance to remove Magic Shield.",
+      "T8-9: MP Cost Boost +50% for 10s (T10-11: +100%, T12: +150%)."
      ]
     },
     {
@@ -1377,7 +1739,13 @@
      "cd": "25s",
      "icon": "icons/skills/lancer-blitz-strike.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL",
+      "p1421"
+     ],
+     "kx": [
+      "Knocks down monsters, characters 10%.",
+      "T8-9: knocked down enemies Stun RES -20% for 6s (T10-11: -30%, T12: -40%)."
      ]
     },
     {
@@ -1392,7 +1760,13 @@
      "cd": "10s",
      "icon": "icons/skills/lancer-dragon-spear.webp",
      "src": [
-      "mdb"
+      "mdb",
+      "kgL",
+      "p1421"
+     ],
+     "kx": [
+      "Invincible 3s; lowers enemy CRIT for 10s (T10-11: 200, T12: 400); cone shaped.",
+      "T8+ (older data): bonus skill DMG on Burned or Chilled targets."
      ]
     }
    ],
@@ -1509,7 +1883,11 @@
      "icon": "icons/skills/darkist-asura.webp",
      "src": [
       "offD",
-      "offD2"
+      "offD2",
+      "p1421"
+     ],
+     "kx": [
+      "T8-9: recover 10% Vitality while in Asura form (T10-11: 15%, T12: 20%)."
      ]
     },
     {
@@ -1549,7 +1927,11 @@
      "icon": "icons/skills/darkist-summon-craveling.webp",
      "src": [
       "offD",
-      "offD2"
+      "offD2",
+      "p1421"
+     ],
+     "kx": [
+      "T8: MP Cost Boost +50% on Bash (T10-11: +100%, T12: +150%)."
      ]
     },
     {
@@ -1576,7 +1958,11 @@
      "icon": "icons/skills/darkist-bursting-crimson-flowers.webp",
      "src": [
       "offD",
-      "offD2"
+      "offD2",
+      "p1421"
+     ],
+     "kx": [
+      "Silence RES -30% for 10s at T8-9 (T10-11: -50%, T12: -70%)."
      ]
     },
     {
@@ -1643,7 +2029,12 @@
      "icon": "icons/skills/darkist-backflow.webp",
      "src": [
       "offD",
-      "offD2"
+      "offD2",
+      "p1421"
+     ],
+     "kx": [
+      "Removes target MP: 7% (T1-4) up to 42% (T12).",
+      "In Asura form: Sanguine Backflow 10s; if the target heals, it takes DMG equal to 30% (T10-12: 40%) of current HP."
      ]
     },
     {
