@@ -1,0 +1,1725 @@
+{
+ "sources": {
+  "mdb": [
+   "mir4db.wiki skills",
+   "https://mir4db.wiki/skills"
+  ],
+  "fdL": [
+   "MIR4 Fandom: Lancer",
+   "https://mir4.fandom.com/wiki/Lancer"
+  ],
+  "rdL": [
+   "r/MIR4 Basic guide: Lancer",
+   "https://www.reddit.com/r/MIR4/comments/qmfvgk/basic_guide_lancer/"
+  ],
+  "lomW": [
+   "LOMCN: The Warrior's Skill Guide",
+   "https://www.lomcn.net/forum/threads/the-warriors-skill-guide.106519/"
+  ],
+  "off28": [
+   "MIR4 Official Community: Combat guide",
+   "https://forum.mir4global.com/post/28"
+  ],
+  "ttpS": [
+   "Touch, Tap, Play: Sorcerer guide",
+   "https://www.touchtapplay.com/mir4-sorcerer-guide-and-build/"
+  ],
+  "krT": [
+   "MIR4 Korea Official Community: Taoist skill tree guide (Korean)",
+   "https://forum.mir4.co.kr/post/19852"
+  ],
+  "ttpT": [
+   "Touch, Tap, Play: Taoist guide",
+   "https://www.touchtapplay.com/mir4-taoist-guide-and-build/"
+  ],
+  "ilA": [
+   "Item Level Gaming: Arbalist PvP guide",
+   "https://itemlevel.net/mir4-ultimate-pvp-guide-for-arbalist/"
+  ],
+  "offD": [
+   "MIR4 Official Community: Darkist launch notes",
+   "https://forum.mir4global.com/post/1224"
+  ],
+  "offD2": [
+   "MIR4 Official Community: Darkist balance notes",
+   "https://forum.mir4global.com/post/1421"
+  ],
+  "wkE": [
+   "MIR4 Wiki: Effect",
+   "https://www.mir4.wiki/wiki/Effect"
+  ],
+  "off26": [
+   "MIR4 Official Community: Applying skills",
+   "https://forum.mir4global.com/post/26"
+  ]
+ },
+ "classes": {
+  "Warrior": {
+   "skills": [
+    {
+     "n": "Void Slash",
+     "xd": null,
+     "type": "start",
+     "what": "3 hits in a line; inflicts Daze.",
+     "desc": "A sword skill that sends a linear Sword Force wave by slashing the sword very quickly as if to cut through space.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 3)"
+     ],
+     "cd": "25s",
+     "icon": "icons/skills/warrior-void-slash.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Splitting Slash",
+     "xd": null,
+     "type": "fin",
+     "what": "Line hit; Bash and DMG Boost on Dazed targets.",
+     "desc": "A simple move that swings a weapon widely. However, its overwhelming power and energy neutralize all skills and tricks of enemies and destroy everything in its way.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "16s",
+     "icon": "icons/skills/warrior-splitting-slash.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Body Check",
+     "xd": null,
+     "type": "start",
+     "what": "Line hit; inflicts Daze, can knock down.",
+     "desc": "Combining the melee sparring skill of a Body Check with the powerful PHYS skill and armor weight of a Warrior, it can inflict a shock comparable to being hit by a giant boulder.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "23s",
+     "icon": "icons/skills/warrior-body-check.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Ground Smash",
+     "xd": null,
+     "type": "fin",
+     "what": "Area slam; Bash and DMG Boost on Dazed targets.",
+     "desc": "Jumping into the air and smashing down on a target point deals devastating damage like an earthquake.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "18s",
+     "icon": "icons/skills/warrior-ground-smash.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Gale Slash",
+     "xd": null,
+     "type": "fin",
+     "what": "9 hits, crowd control immune while casting; Bash on Confused or Quelled targets.",
+     "desc": "If swung wildly, the sword turns faster and faster, and an unstoppable storm of Sword Force rages in the area.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 9)"
+     ],
+     "cd": "44s",
+     "icon": "icons/skills/warrior-gale-slash.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Lion's Roar",
+     "xd": null,
+     "type": "start",
+     "what": "Area around you; lowers enemy PHYS ATK, inflicts Daze and Confusion.",
+     "desc": "A roar unleashed by concentrating Inner Force drawn from deep within you, which becomes a weapon powerful enough to shake heaven and earth.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 2)"
+     ],
+     "cd": "39s",
+     "icon": "icons/skills/warrior-lion-s-roar.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Riposte",
+     "xd": null,
+     "type": "util",
+     "what": "Area hit, crowd control immune while casting, taunts monsters, reduces damage taken.",
+     "desc": "A skill that enables a perfect defense stance when blocking all enemy attacks, and looks for a chance to tip the scales with a single slash of the sword.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "25s",
+     "icon": "icons/skills/warrior-riposte.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Iron Shackle",
+     "xd": null,
+     "type": "util",
+     "what": "Cone hit that pulls enemies toward you.",
+     "desc": "A wondrous binding skill that throws a chain around several nearby enemies and pulls them all toward you.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 3)\n - Pull enemies toward you."
+     ],
+     "cd": "40s",
+     "icon": "icons/skills/warrior-iron-shackle.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Crescent Strike",
+     "xd": null,
+     "type": "fin",
+     "what": "Long line hit; Bash on Confused or Quelled targets.",
+     "desc": "A sword skill that enables you to become one with the Sword Force and break through the enemy line by swinging a sword horizontally, creating a Sword Force in a big crescent shape.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "19s",
+     "icon": "icons/skills/warrior-crescent-strike.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Berserk",
+     "xd": "Rampant",
+     "type": "start",
+     "what": "Brief invincibility, skill damage up; can inflict Confusion.",
+     "desc": "A prohibited skill that instantly reverses the flow of the Inner Force Loci to forcefully blast open one's full potential.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "48s",
+     "icon": "icons/skills/warrior-rampant.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Barbaric Charge",
+     "xd": null,
+     "type": "start",
+     "what": "Charges the target and pulls nearby enemies in; inflicts Daze.",
+     "desc": "A brave Warrior's skill that enables you to charge at the center of the enemy camp and throw chains in all directions to pull and knockdown enemies.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 2)\n - Charges at the target and pulls in a nearby enemy."
+     ],
+     "cd": "33s",
+     "icon": "icons/skills/warrior-barbaric-charge.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Unbreakable Stance",
+     "xd": null,
+     "type": "util",
+     "what": "Raises your Evasion and lowers monster damage for a while.",
+     "desc": "A self-defense skill that creates a spiral whirlpool around the body to protect against threats.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "52s",
+     "icon": "icons/skills/warrior-unbreakable-stance.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Dragon Flame",
+     "xd": null,
+     "type": "ult",
+     "what": "Large circle hit, 4 hits; brief invincibility after casting.",
+     "desc": "A Warrior's Ultimate that creates Chi Fire with qigong of extreme yang, infuses it into a sword, and discharges it out all at once, burning the area to the ground.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 4)"
+     ],
+     "cd": "10s",
+     "icon": "icons/skills/warrior-dragon-flame.webp",
+     "src": [
+      "mdb"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": [
+     {
+      "s": [
+       "Void Slash",
+       "Body Check"
+      ],
+      "i": [
+       "icons/skills/warrior-void-slash.webp",
+       "icons/skills/warrior-body-check.webp"
+      ],
+      "note": "Daze",
+      "j": "or"
+     },
+     {
+      "s": [
+       "Splitting Slash"
+      ],
+      "i": [
+       "icons/skills/warrior-splitting-slash.webp"
+      ],
+      "note": "Bash on Dazed"
+     },
+     {
+      "s": [
+       "Ground Smash"
+      ],
+      "i": [
+       "icons/skills/warrior-ground-smash.webp"
+      ],
+      "note": "Bash on Dazed"
+     },
+     {
+      "s": [
+       "Lion's Roar"
+      ],
+      "i": [
+       "icons/skills/warrior-lion-s-roar.webp"
+      ],
+      "note": "Daze and Confusion"
+     },
+     {
+      "s": [
+       "Crescent Strike",
+       "Gale Slash"
+      ],
+      "i": [
+       "icons/skills/warrior-crescent-strike.webp",
+       "icons/skills/warrior-gale-slash.webp"
+      ],
+      "note": "Bash on Confused",
+      "j": "or"
+     },
+     {
+      "s": [
+       "Dragon Flame"
+      ],
+      "i": [
+       "icons/skills/warrior-dragon-flame.webp"
+      ],
+      "note": ""
+     }
+    ],
+    "prio": "Raise a Daze starter (Void Slash) with its Bash finishers (Splitting Slash, Ground Smash) first, then the Confusion pair (Lion's Roar with Gale Slash or Crescent Strike). Most skills get big boosts at Tier 5, 8, 9 and 10.",
+    "src": [
+     "lomW",
+     "mdb"
+    ],
+    "debuff": [
+     {
+      "name": "Daze",
+      "steps": [
+       {
+        "s": [
+         "Void Slash",
+         "Body Check"
+        ],
+        "i": [
+         "icons/skills/warrior-void-slash.webp",
+         "icons/skills/warrior-body-check.webp"
+        ],
+        "note": "inflict Daze",
+        "j": "or"
+       },
+       {
+        "s": [
+         "Splitting Slash",
+         "Ground Smash"
+        ],
+        "i": [
+         "icons/skills/warrior-splitting-slash.webp",
+         "icons/skills/warrior-ground-smash.webp"
+        ],
+        "note": "Bash on Dazed",
+        "j": "or"
+       }
+      ],
+      "bonus": "Void Slash and Body Check Daze for 5s; Splitting Slash and Ground Smash then deal Bash and DMG Boost +50% (Tier 1)."
+     },
+     {
+      "name": "Confusion",
+      "steps": [
+       {
+        "s": [
+         "Lion's Roar"
+        ],
+        "i": [
+         "icons/skills/warrior-lion-s-roar.webp"
+        ],
+        "note": "Daze and Confusion"
+       },
+       {
+        "s": [
+         "Gale Slash",
+         "Crescent Strike"
+        ],
+        "i": [
+         "icons/skills/warrior-gale-slash.webp",
+         "icons/skills/warrior-crescent-strike.webp"
+        ],
+        "note": "Bash on Confused",
+        "j": "or"
+       }
+      ],
+      "bonus": "Lion's Roar Dazes and Confuses for 5s; Gale Slash and Crescent Strike then deal Bash and DMG Boost +50% (Tier 1)."
+     }
+    ],
+    "pvp_bonus": "Finishers deal Bash and DMG Boost +50% on Dazed (Splitting Slash, Ground Smash) or Confused targets (Gale Slash, Crescent Strike), Tier 1. Lion's Roar cuts enemy PHYS ATK by 80."
+   }
+  },
+  "Sorcerer": {
+   "skills": [
+    {
+     "n": "Flame Orb",
+     "xd": null,
+     "type": "util",
+     "what": "Exploding fireball.",
+     "desc": "A spell that condenses the energy of fire into a small sphere and blasts it at an enemy. If the sphere hits, it causes a massive explosion.",
+     "fx": [
+      "X% Spell ATK as Spell DMG"
+     ],
+     "cd": "12s",
+     "icon": "icons/skills/sorcerer-flame-orb.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Frost Orb",
+     "xd": null,
+     "type": "start",
+     "what": "Inflicts Chill and slows the target.",
+     "desc": "A spell that fires a mass of cold that chills to the bone, slowing the enemy's movement.",
+     "fx": [
+      "X% Spell ATK as Spell DMG"
+     ],
+     "cd": "15s",
+     "icon": "icons/skills/sorcerer-frost-orb.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Dark Vortex",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A spell that warps space to open a wind path to another space, creating a raging vortex that is impossible to escape.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 6)"
+     ],
+     "cd": "18s",
+     "icon": "icons/skills/sorcerer-dark-vortex.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Thunderstorm",
+     "xd": null,
+     "type": "fin",
+     "what": "Bash and DMG Boost on Chilled targets.",
+     "desc": "Strikes an enemy with a thunderbolt by drawing on the power of the ancient mythical Dragon God who is known to have defeated enemies with lightning.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 4)"
+     ],
+     "cd": "27s",
+     "icon": "icons/skills/sorcerer-thunderstorm.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Magic Shield",
+     "xd": null,
+     "type": "util",
+     "what": "Shield against attacks; drains MP quickly.",
+     "desc": "A spell that creates a shield that absorbs all attacks to protect the caster. However, it costs a lot of MP.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 3)"
+     ],
+     "cd": "52s",
+     "icon": "icons/skills/sorcerer-magic-shield.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Blizzard",
+     "xd": null,
+     "type": "util",
+     "what": "Large area freeze, 7 hits.",
+     "desc": "An ultimate ice spell that summons a fierce snowstorm from the polar region to freeze all beings.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 7)"
+     ],
+     "cd": "40s",
+     "icon": "icons/skills/sorcerer-blizzard.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Chain Lightning",
+     "xd": null,
+     "type": "util",
+     "what": "Jumps between up to 7 targets.",
+     "desc": "A spell that draws out the energy of Lightning from the palm and fires it at a target. It also electrocutes enemies near the target one by one.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 1-7 depending on the number of targets)"
+     ],
+     "cd": "18s",
+     "icon": "icons/skills/sorcerer-chain-lightning.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Flame Strike",
+     "xd": null,
+     "type": "util",
+     "what": "Heatwave that knocks enemies back.",
+     "desc": "A fire spell that creates a heat storm by expanding air in a flash, knocking away nearby enemies.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 3)"
+     ],
+     "cd": "20s",
+     "icon": "icons/skills/sorcerer-flame-strike.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Soul Devour",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A spell that explodes the energy of darkness, dealing damage to the soul. Although an evil, heathen skill, its effect is hard to argue with.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 5)"
+     ],
+     "cd": "30s",
+     "icon": "icons/skills/sorcerer-soul-devour.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Immolate",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A powerful fire spell that shoots fire taken from the burning river of hell and burns the enemies in front, one by one.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 10)"
+     ],
+     "cd": "45s",
+     "icon": "icons/skills/sorcerer-immolate.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Phoenix Embrace",
+     "xd": "Vermilion Bird Embrace",
+     "type": "skill",
+     "what": "",
+     "desc": "Causes Energy that maximizes the power of spells to cascade out by receiving the benediction of the Vermilion Bird, the divine guardian and symbol of Sorcerer.",
+     "fx": [],
+     "cd": "54s",
+     "icon": "icons/skills/sorcerer-vermilion-bird-embrace.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Frozen Block",
+     "xd": null,
+     "type": "util",
+     "what": "Blocks attacks and freezes attackers.",
+     "desc": "Covers the whole body with cold to protect against all attacks and freezes enemies that pound on the ice shield.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 3)"
+     ],
+     "cd": "53s",
+     "icon": "icons/skills/sorcerer-frozen-block.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Dragon Tornado",
+     "xd": null,
+     "type": "ult",
+     "what": "Fires a 10 hit twister.",
+     "desc": "One of the Sorcerer's Ultimate that summons and fires forth a twister that is said to be the manifestation of the whirlwind that appears when a dragon ascends.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 10)"
+     ],
+     "cd": "10s",
+     "icon": "icons/skills/sorcerer-dragon-tornado.webp",
+     "src": [
+      "mdb"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": [
+     {
+      "s": [
+       "Frost Orb"
+      ],
+      "i": [
+       "icons/skills/sorcerer-frost-orb.webp"
+      ],
+      "note": "Chill"
+     },
+     {
+      "s": [
+       "Thunderstorm"
+      ],
+      "i": [
+       "icons/skills/sorcerer-thunderstorm.webp"
+      ],
+      "note": "Bash on Chilled"
+     },
+     {
+      "s": [
+       "Flame Orb"
+      ],
+      "i": [
+       "icons/skills/sorcerer-flame-orb.webp"
+      ],
+      "note": ""
+     },
+     {
+      "s": [
+       "Flame Strike",
+       "Frozen Block",
+       "Magic Shield"
+      ],
+      "i": [
+       "icons/skills/sorcerer-flame-strike.webp",
+       "icons/skills/sorcerer-frozen-block.webp",
+       "icons/skills/sorcerer-magic-shield.webp"
+      ],
+      "note": "",
+      "j": "or"
+     },
+     {
+      "s": [
+       "Dragon Tornado"
+      ],
+      "i": [
+       "icons/skills/sorcerer-dragon-tornado.webp"
+      ],
+      "note": ""
+     }
+    ],
+    "prio": "Frost Orb and Thunderstorm first (the official example combo), then the area skills for hunting (Blizzard, Chain Lightning). No source gives a fuller order.",
+    "src": [
+     "off28",
+     "ttpS",
+     "mdb"
+    ],
+    "debuff": [
+     {
+      "name": "Chill",
+      "steps": [
+       {
+        "s": [
+         "Frost Orb"
+        ],
+        "i": [
+         "icons/skills/sorcerer-frost-orb.webp"
+        ],
+        "note": "inflicts Chill"
+       },
+       {
+        "s": [
+         "Thunderstorm"
+        ],
+        "i": [
+         "icons/skills/sorcerer-thunderstorm.webp"
+        ],
+        "note": "Bash on Chilled"
+       }
+      ],
+      "bonus": "Thunderstorm gains Bash and DMG Boost against the Chilled target."
+     }
+    ],
+    "pvp_bonus": "Frost Orb Chills and slows the target; Thunderstorm then deals Bash and a DMG Boost on the Chilled target (no figure in our sources)."
+   }
+  },
+  "Taoist": {
+   "skills": [
+    {
+     "n": "Moonlight Wave",
+     "xd": null,
+     "type": "start",
+     "what": "Palm strike of yin energy, 5 hits.",
+     "desc": "A Taoist palm skill that strikes enemies with waves of yin energy, like the moonlight pouring down on the ground.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 5)"
+     ],
+     "cd": "21s",
+     "icon": "icons/skills/taoist-moonlight-wave.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Sunbeam Sword",
+     "xd": null,
+     "type": "fin",
+     "what": "Strikes vital spots, 7 hits; follow-up to Moonlight Orb or Wave.",
+     "desc": "A wondrous sword skill that infuses Spell Power into a sword, making it shine as bright as the sun to mesmerize the enemy and attack their vital spot.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 7)"
+     ],
+     "cd": "16s",
+     "icon": "icons/skills/taoist-sunbeam-sword.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Moonlight Orb",
+     "xd": null,
+     "type": "start",
+     "what": "Holds enemies in place and crushes them, 9 hits.",
+     "desc": "A moonlight bead created by a Taoist that holds enemies like the pull of a full moon on the ocean, and pulverizes them.",
+     "fx": [
+      "X% Spell ATK as Spell DMG (Number of hits: 9)"
+     ],
+     "cd": "24s",
+     "icon": "icons/skills/taoist-moonlight-orb.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Rain of Blades",
+     "xd": null,
+     "type": "start",
+     "what": "Sword phantoms, 3 hits; inflicts Chaos and Chill.",
+     "desc": "A sword skill that attacks enemies by pouring forth phantoms made of Sword Force. These phantoms are as destructive as the sword itself.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 3)"
+     ],
+     "cd": "20s",
+     "icon": "icons/skills/taoist-rain-of-blades.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Heal",
+     "xd": null,
+     "type": "util",
+     "what": "Heals you and nearby allies.",
+     "desc": "A magic spell that heals wounds with divine light energy. It heals both the caster and nearby allies.",
+     "fx": [],
+     "cd": "20s",
+     "icon": "icons/skills/taoist-heal.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Piercing Blades",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "An advanced sword skill that creates a great number of sharp arrows made of Sword Force and fires them forward.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
+     ],
+     "cd": "20s",
+     "icon": "icons/skills/taoist-piercing-blades.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Guardian Circle",
+     "xd": null,
+     "type": "util",
+     "what": "Protects allies from PHYS DMG, buffs your PHYS power.",
+     "desc": "A magic spell that summons Earth Energy to protect allies from PHYS DMG and enhance the caster's physical ability.",
+     "fx": [
+      "X% Spell ATK as Spell DMG"
+     ],
+     "cd": "46s",
+     "icon": "icons/skills/taoist-guardian-circle.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Tai Chi",
+     "xd": null,
+     "type": "util",
+     "what": "Pulls nearby enemies in, 6 hits, status immune while casting.",
+     "desc": "A Taoist's fist skill that creates a vacuum by circulating Taiji and sucks nearby enemies into it to pulverize them.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 6)"
+     ],
+     "cd": "35s",
+     "icon": "icons/skills/taoist-tai-chi.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Blasting Charm",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A thin talisman sheet thrown by a Taoist can cause an explosion strong enough to split a rock once it attaches to an enemy.",
+     "fx": [
+      "X% Spell ATK as Spell DMG"
+     ],
+     "cd": "28s",
+     "icon": "icons/skills/taoist-blasting-charm.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Soaring Slash",
+     "xd": null,
+     "type": "fin",
+     "what": "9 hit Sword Force disks; Bash on Chaos or Chill targets.",
+     "desc": "A sword skill that continuously throws sharp disks made of Sword Force. The Sword Force penetrates into the enemy's body and destroys them from the inside.",
+     "fx": [
+      "X% PHYS ATK +X% Spell ATK as combo DMG (Number of hits: 9)"
+     ],
+     "cd": "31s",
+     "icon": "icons/skills/taoist-soaring-slash.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Expulsion Circle",
+     "xd": null,
+     "type": "util",
+     "what": "Raises Spell resistance.",
+     "desc": "Sharply increases your ability to resist spells and gives you the courage to fight wicked beings.",
+     "fx": [],
+     "cd": "46s",
+     "icon": "icons/skills/taoist-expulsion-circle.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Greater Heal",
+     "xd": null,
+     "type": "util",
+     "what": "Big party heal; at high tiers can revive allies.",
+     "desc": "This ultimate heal instantly cures all wounds by consuming all Focus. If this skill is improved to a certain level, it can even revive the dead.",
+     "fx": [],
+     "cd": "46s",
+     "icon": "icons/skills/taoist-greater-heal.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Ray of Light",
+     "xd": null,
+     "type": "ult",
+     "what": "Spear of light through all enemies in a line, 9 hits.",
+     "desc": "If you focus the divine energy on your fingertips and stretch out your hands, the energy forms a spear of light that penetrates all enemies in your path.",
+     "fx": [
+      "X% PHYS ATK +X% Spell ATK as combo DMG (Number of hits: 9)"
+     ],
+     "cd": "10s",
+     "icon": "icons/skills/taoist-ray-of-light.webp",
+     "src": [
+      "mdb"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": [
+     {
+      "s": [
+       "Moonlight Orb"
+      ],
+      "i": [
+       "icons/skills/taoist-moonlight-orb.webp"
+      ],
+      "note": "hold"
+     },
+     {
+      "s": [
+       "Sunbeam Sword"
+      ],
+      "i": [
+       "icons/skills/taoist-sunbeam-sword.webp"
+      ],
+      "note": ""
+     },
+     {
+      "s": [
+       "Rain of Blades"
+      ],
+      "i": [
+       "icons/skills/taoist-rain-of-blades.webp"
+      ],
+      "note": "Chaos and Chill"
+     },
+     {
+      "s": [
+       "Soaring Slash"
+      ],
+      "i": [
+       "icons/skills/taoist-soaring-slash.webp"
+      ],
+      "note": "Bash on Chaos or Chill"
+     },
+     {
+      "s": [
+       "Tai Chi"
+      ],
+      "i": [
+       "icons/skills/taoist-tai-chi.webp"
+      ],
+      "note": ""
+     },
+     {
+      "s": [
+       "Ray of Light"
+      ],
+      "i": [
+       "icons/skills/taoist-ray-of-light.webp"
+      ],
+      "note": ""
+     }
+    ],
+    "prio": "Moonlight Orb (or Wave), Sunbeam Sword, Rain of Blades and Soaring Slash to 4 stars first; Moonlight Orb is the main pick toward 8 stars. For party play, Greater Heal to 8 stars later.",
+    "src": [
+     "krT",
+     "ttpT",
+     "mdb"
+    ],
+    "debuff": [
+     {
+      "name": "Chaos and Chill",
+      "steps": [
+       {
+        "s": [
+         "Moonlight Orb"
+        ],
+        "i": [
+         "icons/skills/taoist-moonlight-orb.webp"
+        ],
+        "note": "opener"
+       },
+       {
+        "s": [
+         "Sunbeam Sword"
+        ],
+        "i": [
+         "icons/skills/taoist-sunbeam-sword.webp"
+        ],
+        "note": "follow-up"
+       },
+       {
+        "s": [
+         "Rain of Blades"
+        ],
+        "i": [
+         "icons/skills/taoist-rain-of-blades.webp"
+        ],
+        "note": "Chaos and Chill"
+       },
+       {
+        "s": [
+         "Soaring Slash"
+        ],
+        "i": [
+         "icons/skills/taoist-soaring-slash.webp"
+        ],
+        "note": "Bash on Chaos or Chill"
+       }
+      ],
+      "bonus": "Each step sets up the next: Sunbeam Sword hits harder after Moonlight Orb, Soaring Slash hits harder on Chaos or Chill."
+     }
+    ],
+    "pvp_bonus": "Sunbeam Sword hits harder after Moonlight Orb; Soaring Slash gains Bash damage on Chaos or Chill from Rain of Blades (no figures in our sources)."
+   }
+  },
+  "Arbalist": {
+   "skills": [
+    {
+     "n": "Quick Shot",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "Countless arrows are shot instantly. A rapid shooting skill that makes enemies helpless.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 12)"
+     ],
+     "cd": "12s",
+     "icon": "icons/skills/arbalist-quick-shot.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Illusion Arrow",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "Shoots arrows in all directions while brushing off the enemy's attacks with quick movements fast enough to create an illusion.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
+     ],
+     "cd": "22s",
+     "icon": "icons/skills/arbalist-illusion-arrow.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Burst Shell",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A powerful explosion that burns down a wide range and confuses the enemies' sense of balance and subdues them.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
+     ],
+     "cd": "26s",
+     "icon": "icons/skills/arbalist-burst-shell.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Venom Mist Shell",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "Enemies that breathe in the poisonous fog will be destroyed from the inside out. Their healing skill becomes critically damaged.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 9)"
+     ],
+     "cd": "40s",
+     "icon": "icons/skills/arbalist-venom-mist-shell.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Ice Cage",
+     "xd": null,
+     "type": "util",
+     "what": "Traps enemies in ice, 8 hits.",
+     "desc": "Enemies are bound with a cold chain along with Severe Cold to prevent them from running away from the Arbalist.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 8)"
+     ],
+     "cd": "33s",
+     "icon": "icons/skills/arbalist-ice-cage.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Painstrike Gale",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "Rushes suddenly, deals a kick attack, and maintains a favorable range to shoot from.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "20s",
+     "icon": "icons/skills/arbalist-painstrike-gale.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Flash Arrow",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "A shooting technique to temporarily block the enemy's line of sight and prevent them from preparing a follow-up attack.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "35s",
+     "icon": "icons/skills/arbalist-flash-arrow.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Heavenly Bow",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "When a rain of arrows summoned from the heavens hits your enemies, they have no choice but to perish.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 8)"
+     ],
+     "cd": "20s",
+     "icon": "icons/skills/arbalist-heavenly-bow.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Obliterate Shell",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "The condensed chi arrows uses an unbelievable power to destroy even the area upon which it falls.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 2)"
+     ],
+     "cd": "28s",
+     "icon": "icons/skills/arbalist-obliterate-shell.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Seeking Bolt",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "Shoots arrows that track the enemy's soul from a remarkably far distance. These arrows never miss their target.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "38s",
+     "icon": "icons/skills/arbalist-seeking-bolt.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Mind's Eye",
+     "xd": null,
+     "type": "util",
+     "what": "Self buff, no damage.",
+     "desc": "Instead of physical eyes, it searches for targets with the mind's eye. It assesses their weaknesses and fires a critical hit.",
+     "fx": [],
+     "cd": "30s",
+     "icon": "icons/skills/arbalist-mind-s-eye.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Cloaking",
+     "xd": null,
+     "type": "util",
+     "what": "Stealth utility.",
+     "desc": "Loses enemies with tricks. Moves secretly and attacks suddenly.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "60s",
+     "icon": "icons/skills/arbalist-cloaking.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Arrow Rain",
+     "xd": null,
+     "type": "ult",
+     "what": "Rain of arrows, 5 hits, 10s cooldown.",
+     "desc": "The enemy's field of view is filled with a rain of an uncountable amount of arrows, removing their will to fight.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 5)"
+     ],
+     "cd": "10s",
+     "icon": "icons/skills/arbalist-arrow-rain.webp",
+     "src": [
+      "mdb"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": [
+     {
+      "s": [
+       "Arrow Rain"
+      ],
+      "i": [
+       "icons/skills/arbalist-arrow-rain.webp"
+      ],
+      "note": ""
+     },
+     {
+      "s": [],
+      "i": [],
+      "note": "Use ranged skills while keeping distance"
+     },
+     {
+      "s": [
+       "Arrow Rain"
+      ],
+      "i": [
+       "icons/skills/arbalist-arrow-rain.webp"
+      ],
+      "note": ""
+     }
+    ],
+    "prio": "No source gives a leveling order. Guides agree Arrow Rain (10s cooldown) is the core skill in every fight.",
+    "src": [
+     "ilA",
+     "mdb"
+    ],
+    "pvp_bonus": "No sourced damage bonus. Guides say to end every combo with Arrow Rain (10s cooldown), its main damage skill."
+   }
+  },
+  "Lancer": {
+   "skills": [
+    {
+     "n": "Ravaging Blow",
+     "xd": null,
+     "type": "start",
+     "what": "Pole strike, 6 hits; inflicts Chilled.",
+     "desc": "An irregular spear skill that surprises the enemy by attacking with the pole of the spear, and not its blade. It deals a quick, accurate strike, destroying the enemy's Inner Force Loci.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 6)"
+     ],
+     "cd": "24s",
+     "icon": "icons/skills/lancer-ravaging-blow.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Crescent Blade",
+     "xd": null,
+     "type": "fin",
+     "what": "Sweeping strikes that knock down enemies in the way.",
+     "desc": "Strikes enemies in front with a series of strong and vigorous swipes, knocking down everyone in the way.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 2)"
+     ],
+     "cd": "16s",
+     "icon": "icons/skills/lancer-crescent-blade.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Nirvana Kick",
+     "xd": null,
+     "type": "util",
+     "what": "Dashes to the target and kicks.",
+     "desc": "A Lancer's kick skill that repeats a sequence of rushing a short distance, cutting down an enemy, and moving back.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG\n - Charges at the target and deals an upper kick."
+     ],
+     "cd": "18s",
+     "icon": "icons/skills/lancer-nirvana-kick.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Double Strike",
+     "xd": null,
+     "type": "fin",
+     "what": "Ground strike, 3 hits; bonus damage on Chilled targets.",
+     "desc": "A skill that strikes the ground and shakes the earth, dealing a critical hit to enemies who lose their balance and fail to evade it.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 3)"
+     ],
+     "cd": "24s",
+     "icon": "icons/skills/lancer-double-strike.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Sweeping Storm",
+     "xd": null,
+     "type": "util",
+     "what": "Spinning storm, 6 hits; reportedly crowd control immune and lowers damage taken.",
+     "desc": "A spear skill that whirls a spear like a storm, sweeping up enemies like fallen leaves, and then pulverizing them.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 6)"
+     ],
+     "cd": "44s",
+     "icon": "icons/skills/lancer-sweeping-storm.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Dragon Tail",
+     "xd": null,
+     "type": "util",
+     "what": "Spinning tail swing, 3 hits.",
+     "desc": "Inspired by the motion of a dragon swinging its tail, this skill maximizes rotation force, dealing great damage.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 3)"
+     ],
+     "cd": "29s",
+     "icon": "icons/skills/lancer-dragon-tail.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Ascending Dragon",
+     "xd": null,
+     "type": "start",
+     "what": "Area spear strike, 3 hits; inflicts Chilled.",
+     "desc": "A spear skill that reproduces the image of a dragon ascending from the ocean and erupting lightning. It destroys a certain area in front with multiple Sword Force hits.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 3)"
+     ],
+     "cd": "25s",
+     "icon": "icons/skills/lancer-ascending-dragon.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Crushing Blow",
+     "xd": null,
+     "type": "util",
+     "what": "Spinning overhead smash, 4 hits.",
+     "desc": "An overlord's strike of a strong force created by spinning in the air and striking down, smashing everything to bits.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG (Number of hits: 4)"
+     ],
+     "cd": "38s",
+     "icon": "icons/skills/lancer-crushing-blow.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Wind Wall",
+     "xd": null,
+     "type": "util",
+     "what": "Wall of wind that blocks attacks.",
+     "desc": "Twirls a spear, creating a wall of wind to block attacks. If upgraded to its ultimate level, it can also create a shield of wind.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG (Number of hits: 5)"
+     ],
+     "cd": "45s",
+     "icon": "icons/skills/lancer-wind-wall.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Piercing Spear",
+     "xd": null,
+     "type": "util",
+     "what": "Spear throw; 1 extra hit near max range.",
+     "desc": "A throwing skill that focuses powerful energy on the tip of a spear and fires it away. The skill was invented to track down giant monsters and pierce through their hearts.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG\n - 1 additional hit when hit from near the max attack range"
+     ],
+     "cd": "37s",
+     "icon": "icons/skills/lancer-piercing-spear.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Absorption",
+     "xd": null,
+     "type": "util",
+     "what": "Drains health from enemies.",
+     "desc": "A qigong skill that uses only the key features of Life Leech, which has severe side effects. It has the wondrous effect of draining health from enemies.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG"
+     ],
+     "cd": "63s",
+     "icon": "icons/skills/lancer-absorption.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Blitz Strike",
+     "xd": null,
+     "type": "util",
+     "what": "Rushes a distant enemy and hurls them behind you.",
+     "desc": "Rushes a distant enemy in a flash, pierces them with a spear, and hurls them away behind the caster by using the spear's elasticity.",
+     "fx": [
+      "X% PHYS ATK as PHYS DMG\n - Charges at the target and hurls them behind your back."
+     ],
+     "cd": "25s",
+     "icon": "icons/skills/lancer-blitz-strike.webp",
+     "src": [
+      "mdb"
+     ]
+    },
+    {
+     "n": "Dragon Spear",
+     "xd": null,
+     "type": "ult",
+     "what": "Extremely strong spear throw.",
+     "desc": "A Lancer's Ultimate that fires extremely strong chi, crushing and piercing everything in front with a force that nearly defies the laws of nature.",
+     "fx": [
+      "X% PHYS ATK + X% Spell ATK as combo DMG"
+     ],
+     "cd": "10s",
+     "icon": "icons/skills/lancer-dragon-spear.webp",
+     "src": [
+      "mdb"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": [
+     {
+      "s": [
+       "Piercing Spear"
+      ],
+      "i": [
+       "icons/skills/lancer-piercing-spear.webp"
+      ],
+      "note": "from max range for an extra hit"
+     },
+     {
+      "s": [
+       "Nirvana Kick"
+      ],
+      "i": [
+       "icons/skills/lancer-nirvana-kick.webp"
+      ],
+      "note": "gap close"
+     },
+     {
+      "s": [
+       "Ravaging Blow",
+       "Ascending Dragon"
+      ],
+      "i": [
+       "icons/skills/lancer-ravaging-blow.webp",
+       "icons/skills/lancer-ascending-dragon.webp"
+      ],
+      "note": "Chilled"
+     },
+     {
+      "s": [
+       "Double Strike",
+       "Crescent Blade"
+      ],
+      "i": [
+       "icons/skills/lancer-double-strike.webp",
+       "icons/skills/lancer-crescent-blade.webp"
+      ],
+      "note": "bonus on Chilled"
+     },
+     {
+      "s": [
+       "Sweeping Storm"
+      ],
+      "i": [
+       "icons/skills/lancer-sweeping-storm.webp"
+      ],
+      "note": ""
+     },
+     {
+      "s": [
+       "Dragon Spear"
+      ],
+      "i": [
+       "icons/skills/lancer-dragon-spear.webp"
+      ],
+      "note": ""
+     }
+    ],
+    "prio": "The two Chilled starters (Ravaging Blow, Ascending Dragon) and their finishers (Double Strike, Crescent Blade) first, cast by hand. Codex: PHYS ATK and Debilitation success boost so Chilled lands reliably.",
+    "src": [
+     "rdL",
+     "fdL",
+     "mdb"
+    ],
+    "debuff": [
+     {
+      "name": "Chilled",
+      "steps": [
+       {
+        "s": [
+         "Ravaging Blow",
+         "Ascending Dragon"
+        ],
+        "i": [
+         "icons/skills/lancer-ravaging-blow.webp",
+         "icons/skills/lancer-ascending-dragon.webp"
+        ],
+        "note": "inflict Chilled"
+       },
+       {
+        "s": [
+         "Double Strike",
+         "Crescent Blade"
+        ],
+        "i": [
+         "icons/skills/lancer-double-strike.webp",
+         "icons/skills/lancer-crescent-blade.webp"
+        ],
+        "note": "bonus on Chilled"
+       }
+      ],
+      "bonus": "On a Chilled target, Bash is guaranteed and Double Strike deals extra damage. Debilitation success boost (Codex) helps Chilled land."
+     }
+    ],
+    "pvp_bonus": "Starters apply Chilled; on Chilled targets Bash always lands and Double Strike deals extra damage. Piercing Spear adds 1 hit near max range."
+   }
+  },
+  "Darkist": {
+   "skills": [
+    {
+     "n": "Asura",
+     "xd": null,
+     "type": "ult",
+     "what": "Transformation; at high tiers recovers Vitality while in Asura form.",
+     "desc": "Through the contract of blood, becomes incarnate of Asura, the lord of hell for a short while. The power of all dark arts become greatly increased.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-asura.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    },
+    {
+     "n": "Ghostly Flame",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "The blue flame in the form of a ghost burns the enemy's soul and body.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-ghostly-flame.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Infernal Abyss",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "The gates of hell shall open, and the eternal pain of the dead shall drag the enemies into the abyss.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-infernal-abyss.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Summon Craveling",
+     "xd": null,
+     "type": "skill",
+     "what": "Area attack; at high tiers a successful Bash adds an MP Cost Boost debuff.",
+     "desc": "The dark art that summons a Craveling from its den to let it devour everything within the target area.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-summon-craveling.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    },
+    {
+     "n": "Sanguine Awakening",
+     "xd": null,
+     "type": "util",
+     "what": "",
+     "desc": "The forbidden spell that uses dark blood to temporarily wield the power beyond all limits with the outburst of inner demonic aura.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-sanguine-awakening.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Bursting Crimson Flowers",
+     "xd": null,
+     "type": "skill",
+     "what": "Scattering petals; at high tiers lowers Silence resistance on hit.",
+     "desc": "Those allured by the beautiful blooming of the flowers of death shall soon be split into pieces by the sharp scatter of the petals.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-bursting-crimson-flowers.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    },
+    {
+     "n": "Decay",
+     "xd": null,
+     "type": "util",
+     "what": "",
+     "desc": "The dark art wields the power of purification in reverse, weakening nearby enemies by decaying the land and air.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-decay.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Chain of Blood",
+     "xd": null,
+     "type": "skill",
+     "what": "Hits many enemies and heals you.",
+     "desc": "The forbidden spell that strikes many enemies with the chains of blood and extorts their blood energy to recover health.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-chain-of-blood.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    },
+    {
+     "n": "Eldritch Dragon Strike",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "When the Evil Dragon lacerates the earth with its claws, lands will be shattered and nothing will remain.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-eldritch-dragon-strike.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Annihilation",
+     "xd": null,
+     "type": "skill",
+     "what": "",
+     "desc": "The absolute curse that leaves the mark of annihilation on the enemy, breaking down the body and soul from the inside.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-annihilation.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Backflow",
+     "xd": null,
+     "type": "util",
+     "what": "Weakens the target; at high tiers removes part of its MP.",
+     "desc": "The dark art that forces the energy of the target to flow backward, weakening the target and leaving it vulnerable to attacks.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-backflow.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    },
+    {
+     "n": "Terrify",
+     "xd": null,
+     "type": "util",
+     "what": "",
+     "desc": "The gruesome figure of the devil is summoned to terrify the enemies nearby.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-terrify.webp",
+     "src": [
+      "offD"
+     ]
+    },
+    {
+     "n": "Soul Dispersing Mist",
+     "xd": null,
+     "type": "util",
+     "what": "Ignores attacks for a moment and confuses enemies.",
+     "desc": "The dark art that ignores all attacks by transforming the caster's body into a mist. The enemies that inhale the mist fall into a state of confusion, almost as though their spirits were fading away.",
+     "fx": [],
+     "cd": null,
+     "icon": "icons/skills/darkist-soul-dispersing-mist.webp",
+     "src": [
+      "offD",
+      "offD2"
+     ]
+    }
+   ],
+   "guide": {
+    "pvp": null,
+    "prio": null,
+    "note": "We have not found a verified Darkist combo or leveling guide yet. Official notes say she is a ranged caster who weakens enemies with curses and poison; Backflow and Decay weaken targets before the damage skills.",
+    "src": [
+     "offD",
+     "offD2"
+    ]
+   }
+  }
+ },
+ "glossary": {
+  "src": [
+   "wkE",
+   "off26",
+   "krT"
+  ],
+  "items": [
+   [
+    "Bash",
+    "Extra damage a skill deals when the target already has the debuff it needs. How much depends on the skill and its tier: Warrior finishers get +50% DMG boost on Dazed or Confused targets at Tier 1, and Splitting Slash +80% from Tier 8. Our sources give no figures for the other classes."
+   ],
+   [
+    "Daze",
+    "Triggers Bash (does not stack). Warrior finishers like Splitting Slash hit harder on Dazed targets."
+   ],
+   [
+    "Chilled / Chill",
+    "Movement speed -50%. Triggers Bash, chance to Freeze (stun), DMG boost (max 3 stacks)."
+   ],
+   [
+    "Confusion",
+    "Triggers Bash (does not stack)."
+   ],
+   [
+    "Quell",
+    "A debilitation effect; skills with Bash and DMG Boost on Quelled targets deal extra damage."
+   ],
+   [
+    "Chaos",
+    "Name used in the Korean Taoist guide for the effect from Rain of Blades; Soaring Slash deals extra Bash damage to it. Our English sources do not define it further."
+   ],
+   [
+    "Knockdown",
+    "The target falls; keep attacking or move away while it is down."
+   ]
+  ]
+ }
+}

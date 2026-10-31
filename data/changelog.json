@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-31",
+    "emoji": "📘",
+    "text": "New Class guide in Tools: every skill for all six classes with its icon, type, cooldown and full in-game description, plus a PvP combo, a hunting combo and a skill leveling priority for each class, with links to the sources.",
+    "ts": "2026-10-31T06:00:00-07:00"
+  },
+  {
     "date": "2026-10-29",
     "emoji": "🔎",
     "text": "Power now saves every server's top 100 each day, not only the global top 1000. Power search ignores decorative symbols and reads lookalike letters as normal ones, so typing Archer finds ・Archєr・. When nothing matches, it says No match yet.",

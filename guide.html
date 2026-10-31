@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MIR4 Class guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap">
+<style>
+html,body{max-width:100%;overflow-x:hidden}body{font-family:system-ui,sans-serif;margin:0;background:#120a14;color:#f2e8f2}a{color:#f472b6}
+header{padding:14px 18px;background:#1c1020;border-bottom:1px solid #3a2040;display:flex;justify-content:space-between;align-items:center}h1{margin:0;font-size:18px}
+header a{color:#e8c872;font-weight:700;font-size:13px;text-decoration:none}
+.ico{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.15em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+#w{padding:8px 10px 20px;max-width:640px;margin:0 auto;box-sizing:border-box;overflow-x:hidden}
+.fb{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px;max-width:100%;overflow-x:hidden;box-sizing:border-box}.fb button{display:inline-flex;align-items:center;gap:5px;background:#1a0f1e;border:1px solid #3a2040;border-radius:999px;color:#e8dcea;padding:5px 10px 5px 6px;font-size:12px;cursor:pointer;white-space:nowrap;max-width:100%;box-sizing:border-box}.fb button img{width:22px;height:22px;flex:none}.fb button.on{border-color:#e8c872;color:#e8c872;font-weight:700;background:#2a2410}.fb .al{padding:5px 12px}
+.sec h2{display:flex;align-items:center;gap:8px;font-size:16px;margin:14px 2px 8px}.sec h2 img{width:34px;height:34px}.sec h2 small{color:#b9a3bd;font-weight:400;font-size:12px}
+.r{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;background:#1c1020;border:1px solid #3a2040;border-radius:12px;margin:0 0 8px;padding:10px}.r.u{border-color:#8a6410}
+.rk{flex:none;width:22px;height:22px;margin:3px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center;padding:0;line-height:1;border-radius:50%;border:1px solid rgba(232,200,114,.85);background:rgba(40,10,40,.85);color:#ffe9b0;font-weight:800;font-size:12px;font-variant-numeric:tabular-nums;box-shadow:0 1px 3px rgba(0,0,0,.5)}
+.n{font-weight:700;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.n a{color:#e8c872;text-decoration:underline dotted rgba(232,200,114,.5);text-underline-offset:3px}
+.m{color:#b9a3bd;font-size:12px;margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hc{border:1px solid #5a3a60;border-radius:999px;padding:2px 8px;font-size:11px}
+.p{text-align:right;white-space:nowrap}.p b{font-size:16px}.p small{display:block;color:#b9a3bd;font-size:11px}.pos{color:#ffc94d}.neg{color:#f87171}
+.ex{color:#b9a3bd;font-size:12px;margin:0 2px 6px}.em{color:#b9a3bd;font-size:13px;padding:6px 2px}
+footer{font-size:11px;color:#8a7290;padding:10px 18px 40px}
+/* Spirit Summoner theme */
+h1,h2,h3,.card>summary,.cd>summary{font-family:'Cinzel',Georgia,serif;letter-spacing:.03em}
+header{position:relative;isolation:isolate;min-height:300px;box-sizing:border-box;background:linear-gradient(180deg,rgba(194,24,91,.18),rgba(18,10,20,0));border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,#e8c872,transparent) 1}
+header h1{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#ffe08a,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(236,72,153,.35)}
+.card,.cd{background:rgba(32,14,36,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(236,72,153,.35);box-shadow:0 0 0 1px rgba(232,200,114,.08) inset,0 6px 22px rgba(0,0,0,.45),0 0 14px rgba(236,72,153,.12)}
+.cd[open],.card:hover{border-color:rgba(232,200,114,.55);box-shadow:0 0 0 1px rgba(232,200,114,.12) inset,0 0 20px rgba(236,72,153,.28)}
+hr{border:0;height:1px;background:linear-gradient(90deg,transparent,#e8c872,transparent)}
+button{transition:box-shadow .2s,transform .1s}
+button:hover{box-shadow:0 0 14px rgba(236,72,153,.6),0 0 0 1px rgba(232,200,114,.5)}
+button:active{transform:scale(.98)}
+a{color:#f472b6}a:hover{color:#ffe08a;text-shadow:0 0 8px rgba(236,72,153,.6)}
+header::before{content:"";position:absolute;left:0;right:0;top:0;height:420px;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(18,10,20,.85) 0%,rgba(18,10,20,.35) 45%,transparent 70%),url(icons/banner.jpg?v=1) right 20% center/cover no-repeat;opacity:.45;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+@media (max-width:700px){header::before{height:340px;background-image:linear-gradient(90deg,rgba(18,10,20,.8) 0%,rgba(18,10,20,.3) 50%,transparent 75%),url(icons/banner-m.jpg?v=1);background-position:center,72% center;opacity:.5}header{min-height:240px}}
+@keyframes fall{to{transform:translate(-60px,110vh) rotate(540deg)}}
+:where(body>header,body>main,body>section,body>#app,body>.wrap){position:relative;z-index:1}
+
+.sk{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #2a1730;max-width:100%;box-sizing:border-box}.sk img{width:46px;height:46px;flex:none;border-radius:8px;border:1px solid #5a3a5e;background:#1a0f1e}.sk .b{min-width:0;flex:1;overflow-wrap:anywhere}
+.sk .t{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}.sk .t b{color:#f2e8f2;font-size:15px}.cdn{margin-left:auto;font-size:12px;color:#e8c872;white-space:nowrap}
+.ty{font-size:10px;font-weight:800;border-radius:999px;padding:2px 7px;white-space:nowrap}.ty.ult{background:#e8c872;color:#2a1030}.ty.start{background:#c2185b;color:#fff0f6}.ty.fin{background:#7b2d8b;color:#fff0f6}.ty.util{background:#2a1030;color:#e8c872;border:1px solid #e8c87299}.ty.skill{background:#26142b;color:#b9a3bd;border:1px solid #5a3a5e}
+.wd{font-size:13px;color:#f2e8f2;margin-top:3px}.ds{font-size:12px;color:#b9a3bd;margin-top:3px;font-style:italic}.fx{font-size:12px;color:#e8c872cc;margin-top:2px;white-space:pre-line}.al{font-size:11px;color:#b9a3bd}
+.gd{margin:12px 0;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px}.gd h3{margin:0 0 6px;font-size:14px;color:#e8c872}.gd ol{margin:4px 0 8px;padding-left:20px;font-size:13px}.gd p{font-size:13px;margin:4px 0}
+.cr{display:flex;flex-wrap:wrap;align-items:flex-start;gap:6px 4px;margin:6px 0 10px;max-width:100%}.st{display:flex;flex-direction:column;align-items:center;max-width:100%}.ics{display:flex;align-items:flex-start;gap:2px}.ic{display:flex;flex-direction:column;align-items:center;width:58px}.ic img{width:42px;height:42px;border-radius:8px;border:1px solid #e8c87288;background:#1a0f1e}.ic span{font-size:10px;line-height:1.2;color:#f2e8f2;text-align:center;margin-top:3px;overflow-wrap:anywhere}.jn{font-size:10px;color:#b9a3bd;align-self:center;margin-top:-14px}.ar{color:#e8c872;font-weight:800;font-size:18px;align-self:flex-start;margin-top:10px}.sn{font-size:10px;color:#d63384;text-align:center;max-width:120px;margin-top:1px}.tx{font-size:12px;color:#f2e8f2;background:#26142b;border:1px solid #5a3a5e;border-radius:8px;padding:6px 8px;max-width:150px}.gl{font-size:12.5px;line-height:1.45;padding:4px 0;border-bottom:1px solid #2a1730;overflow-wrap:anywhere}.gl b{color:#e8c872;margin-right:4px}.bn{font-size:12px;line-height:1.45;color:#f2e8f2;background:#26142b;border-left:3px solid #e8c872;border-radius:6px;padding:5px 8px;margin:-4px 0 10px}.dn{font-size:12px;font-weight:700;color:#d63384;margin-top:4px}
+.nt{font-size:12px;color:#b9a3bd;margin:10px 0}.nt a,.src a{color:#e8c872}.src{font-size:11px;color:#b9a3bd;margin-top:6px;line-height:1.7}.lg{display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#b9a3bd;margin:6px 0}
+h2{display:flex;align-items:center;gap:8px;color:#e8c872;font-size:18px;margin:14px 0 4px}h2 img{width:28px;height:28px}
+</style></head><body>
+<header><h1>📘 Class guide</h1><a href="index.html">← Top 20</a></header>
+<div id="w"><div class="fb" id="fb"></div>
+<div class="nt">Skills, cooldowns and descriptions from the game data at mir4db.wiki and official notes. Combos and leveling tips come from community guides and may be older than recent patches. X% means the value grows with the skill tier. Listed cooldowns are base values before Cooldown Reduction.</div>
+<div class="lg"><span class="ty ult">Ultimate</span><span class="ty start">Combo starter</span><span class="ty fin">Combo finisher</span><span class="ty util">Utility</span><span class="ty skill">Skill</span></div>
+<div id="out" class="em">Loading…</div></div>
+<script>
+const CL=['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'],TY={ult:'Ultimate',start:'Combo starter',fin:'Combo finisher',util:'Utility',skill:'Skill'};
+const E=t=>String(t??'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const ci=c=>`<img loading="lazy" decoding="async" src="icons/class/${c.toLowerCase()}.webp" alt="${c}">`;
+let G,sel=new URLSearchParams(location.search).get('c')||localStorage.mir4guide||'Lancer';if(!CL.includes(sel))sel='Lancer';
+function render(){fb.innerHTML=CL.map(c=>`<button data-c="${c}" class="${sel==c?'on':''}">${ci(c)}${c}</button>`).join('');
+ fb.querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=b.dataset.c;localStorage.mir4guide=sel;render();scrollTo(0,0)});
+ const C=G.classes[sel],g=C.guide,S=G.sources,ol=L=>L?'<ol>'+L.map(x=>'<li>'+E(x)+'</li>').join('')+'</ol>':'<p class="al">No verified source yet.</p>';
+ const lb=n=>E(n),cr=L=>{if(!L||!L.length)return '<p class="al">No verified source yet.</p>';return '<div class="cr">'+L.map((st,k)=>(k?'<span class="ar">→</span>':'')+`<div class="st"><div class="ics">${st.i.length?st.i.map((u,j)=>(j?`<span class="jn">${st.j||'+'}</span>`:'')+`<div class="ic"><img src="${u}" alt="${E(st.s[j])}" loading="lazy"><span>${lb(st.s[j])}</span></div>`).join(''):`<div class="tx">${E(st.note)}</div>`}</div>${st.i.length&&st.note?`<div class="sn">${E(st.note)}</div>`:''}</div>`).join('')+'</div>'};
+ const src=ks=>'<div class="src">Sources: '+ks.map(k=>`<a href="${S[k][1]}" target="_blank" rel="noopener">${E(S[k][0])}</a>`).join(' · ')+'</div>';
+ out.className='';out.innerHTML=`<h2>${ci(sel)}${sel}</h2>
+ <div class="gd"><h3>⚔️ PvP combo</h3>${cr(g.pvp)}${g.pvp_bonus?`<div class="bn">💥 ${E(g.pvp_bonus)}</div>`:''}${g.debuff?'<h3>🌀 Debuff setup</h3>'+g.debuff.map(b=>`<div class="dn">${E(b.name)}</div>`+cr(b.steps)+(b.bonus?`<div class="bn">💥 ${E(b.bonus)}</div>`:'')).join(''):''}<h3>⭐ Skill leveling priority</h3><p>${E(g.prio||'No verified source yet.')}</p>${g.note?`<p class="al">${E(g.note)}</p>`:''}<p class="al">Guides may be older than recent patches. Check in game before spending skill books.</p>${src(g.src)}</div>
+ ${G.glossary?`<div class="gd"><h3>📖 Debuff guide</h3>${G.glossary.items.map(([k,v])=>`<div class="gl"><b>${E(k)}</b> ${E(v)}</div>`).join('')}${src(G.glossary.src)}</div>`:''}<h3 style="color:#e8c872;font-size:15px;margin:14px 0 2px">All skills (${C.skills.length})</h3>`+C.skills.map(s=>`<div class="sk">${s.icon?`<img loading="lazy" src="${s.icon}" alt="${E(s.n)}">`:''}<div class="b"><div class="t"><b>${E(s.n)}</b><span class="ty ${s.type}">${TY[s.type]}</span><span class="cdn">${s.cd?'⏱ '+E(s.cd):'⏱ not published'}</span></div>${s.xd?`<div class="al">Shown as ${E(s.xd)} on XDRACO</div>`:''}${s.what?`<div class="wd">${E(s.what)}</div>`:''}<div class="ds">${E(s.desc)}</div>${s.fx.length?`<div class="fx">${s.fx.map(E).join('\n')}</div>`:''}</div></div>`).join('')+src([...new Set(C.skills.flatMap(s=>s.src))]);}
+fetch('data/class_guide.json?v=6').then(r=>r.json()).then(j=>{G=j;render()}).catch(()=>{out.textContent='Could not load the guide.'});
+</script><script src="nav.js?v=30"></script></body></html>
