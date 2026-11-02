@@ -84,8 +84,11 @@ def series():
         for w in (7,30):
             cut=(datetime.date.fromisoformat(last)-datetime.timedelta(days=w)).isoformat();L=[]
             for k,pts in S.items():
-                r=[p for p in pts if p[2]=='r'];a=[p for p in r if p[0]>=cut]
-                if len(a)>=2 and a[-1][0]==last: L.append([k,a[-1][1]-a[0][1],a[0][0],a[-1][1]])
+                # deck swaps (EXP spirit and magic stone setups) cause sudden dips: measure from the running peak so dips and bounce backs never count
+                r=[p for p in pts if p[2]=='r'];pk=[];m=-1
+                for p in r: m=max(m,p[1]);pk.append(m)
+                i=next((j for j,p in enumerate(r) if p[0]>=cut),None)
+                if i is not None and i<len(r)-1 and r[-1][0]==last and pk[-1]>pk[i]: L.append([k,pk[-1]-pk[i],r[i][0],pk[-1]])
             G[str(w)]=sorted(L,key=lambda x:-x[1])[:50]
     json.dump({'days':days,'growth':G,'s':S},open(os.path.join(PH,'series.json'),'w'),ensure_ascii=False,separators=(',',':'))
     return S,days

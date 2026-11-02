@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-02",
+    "emoji": "🏆",
+    "text": "Power tool now opens with a Top power leaderboard, with Fastest growing one tap away. Charts show each character's highest power and date. Sudden power drops are marked as deck swaps (EXP spirit and magic stone setups) and no longer count as losses or inflate growth.",
+    "ts": "2026-11-02T04:30:00-08:00"
+  },
+  {
     "date": "2026-10-31",
     "emoji": "📖",
     "text": "Class guide polish: Darkist skills now show damage and summaries, Arbalist skills have short summaries, and the Debuff guide adds Burn, Darkness, Marker, Freeze, Silence, Blind and Stun plus Bash values for every class.",
