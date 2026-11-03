@@ -8,5 +8,5 @@ fetch('data/wemix_price.json?'+Date.now()).then(r=>r.ok?r.json():null).then(h=>{
  const n=L(Date.now()/1000),day=n.slice(0,10)<n.slice(0,10)+' 05:00'&&n.slice(11)<'05:00'?L(Date.now()/1000-86400).slice(0,10):n.slice(0,10);
  const b=P.find(p=>{const s=L(p[0]);return s>=day+' 05:00'&&s<day+' 07:00'}); // 5am PT baseline (or nearest after, within 2h)
  if(!b||!(b[1]>0)||!(c>0))return;dl=c-b[1];const pc=dl/b[1]*100;
- const hd=document.createElement('div');hd.id='w1hdr';hd.innerHTML=`WEMIX $${c.toFixed(4)} <span data-f="1" class="w1h ${pc>=0?'up':'dn'}" style="font-size:11px">${pc>=0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% since 5am</span>`;hd.title='Source: CoinGecko, recorded hourly. Baseline: '+L(b[0])+' PT $'+b[1];
+ const hd=document.createElement('div');hd.id='w1hdr';hd.innerHTML=`WEMIX $<span class="wxl">${c.toFixed(4)}</span> <span data-f="1" class="w1h ${pc>=0?'up':'dn'}" style="font-size:11px">${pc>=0?'▲':'▼'} ${Math.abs(pc).toFixed(1)}% since 5am</span>`;hd.title='Source: CoinGecko, recorded hourly. Baseline: '+L(b[0])+' PT $'+b[1];
  const m=document.getElementById('meta');m&&m.after(hd);fill();new MutationObserver(fill).observe(document.body,{childList:true,subtree:true})}).catch(()=>{})})();

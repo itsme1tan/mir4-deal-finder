@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-03",
+    "emoji": "🪙",
+    "text": "The WEMIX price at the top now shows 4 decimals and updates live every minute while the page is open. Dollar prices for listings still use the price from the last data update, so every figure stays consistent.",
+    "ts": "2026-11-03T10:30:00-08:00"
+  },
+  {
     "date": "2026-11-02",
     "emoji": "🏆",
     "text": "Power tool now opens with a Top power leaderboard, with Fastest growing one tap away. Charts show each character's highest power and date. Sudden power drops are marked as deck swaps (EXP spirit and magic stone setups) and no longer count as losses or inflate growth.",
