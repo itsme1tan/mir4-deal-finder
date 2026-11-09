@@ -2,6 +2,12 @@
   {
     "date": "2026-11-09",
     "emoji": "🏆",
+    "text": "Top power ranks for characters now use the same gold circle badges as the class lists (plain numbers, no hash). Applies to All servers, per-server, and Fastest growing.",
+    "ts": "2026-11-09T11:30:00-08:00"
+  },
+  {
+    "date": "2026-11-09",
+    "emoji": "🏆",
     "text": "Top power now shows the top 100 characters and adds a server picker so you can rank within one server (All servers is still the default). Same deck swap handling as before.",
     "ts": "2026-11-09T11:20:00-08:00"
   },
