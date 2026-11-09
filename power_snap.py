@@ -1,17 +1,19 @@
 """Daily power snapshot (read-only, public): global top 1000 from forum.mir4global.com/rank?ranktype=1, about 1 request per second.
-Also the top 100 of every server -> data/power_history/servers/<YYYY-MM-DD>.json.
+Also the top 100 of every live server -> data/power_history/servers/<YYYY-MM-DD>.json.
 Writes data/power_history/<YYYY-MM-DD>.json ([rank,name,server,classicon,power]) and rebuilds data/power_history/series.json:
 power over time per character (name|server) from ranking snapshots plus our XDRACO records (sales, listings, saved pages, chain metadata).
 Usage: python3 power_snap.py [--no-fetch]"""
-import json,os,re,sys,time,html,glob,datetime,urllib.request
+import json,os,re,sys,time,html,glob,datetime,urllib.request,hashlib
 from zoneinfo import ZoneInfo
 ROOT=os.path.dirname(os.path.abspath(__file__));PH=os.path.join(ROOT,'data','power_history');LA=ZoneInfo('America/Los_Angeles')
 UA={'User-Agent':'Mozilla/5.0 (mir4-deal-finder; read-only)'}
 SCAN=os.environ.get('SEQSCAN','/tmp/seqscan.jsonl')  # box-side XDRACO listing scan, optional
+MIN_SERVERS=15  # blank/closed worlds are skipped; only live servers must clear this floor
+def _bust(): return str(int(time.time()*1000))
 def fetch():
     out=[];seen=set()
     for p in range(1,40):
-        u=f'https://forum.mir4global.com/rank?ranktype=1&worldgroupid=0&worldid=0&classtype=&searchname=&loaded=1&liststyle=ol&page={p}'
+        u=f'https://forum.mir4global.com/rank?ranktype=1&worldgroupid=0&worldid=0&classtype=&searchname=&loaded=1&liststyle=ol&page={p}&_={_bust()}'
         h=urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30).read().decode('utf8','ignore')
         rows=re.findall(r'<span class="num">(\d+)</span>.*?char_(\d+)\.png.*?<span class="user_name">(.*?)</span>.*?<td>\s*<span>(.*?)</span>.*?<td class="text_right">\s*<span>([\d,]+)</span>',h,re.S)
         new=0
@@ -22,19 +24,46 @@ def fetch():
         time.sleep(1)
     return sorted(out)[:1000]
 def fetch_servers():
-    """Top 100 of every server (one page each). On a server page the forum shows the clan where the server would be, so the server comes from the world list."""
-    h=urllib.request.urlopen(urllib.request.Request('https://forum.mir4global.com/rank?ranktype=1',headers=UA),timeout=30).read().decode('utf8','ignore')
-    W=sorted(set(re.findall(r"set_world\('(\d+)', '[^']*', '(\d+)', '([^']*)'\)",h)));out=[]
+    """Top 100 of every live server (one page each). Blank bodies mean closed/merged worlds and are skipped."""
+    h=urllib.request.urlopen(urllib.request.Request(f'https://forum.mir4global.com/rank?ranktype=1&_={_bust()}',headers=UA),timeout=30).read().decode('utf8','ignore')
+    W=sorted(set(re.findall(r"set_world\('(\d+)', '[^']*', '(\d+)', '([^']*)'\)",h)));out=[];empty=[];errors=[]
     for g,w,name in W:
         if g=='0' or w=='999': continue
-        u=f'https://forum.mir4global.com/rank?ranktype=1&worldgroupid={g}&worldid={w}&classtype=&searchname=&loaded=1&liststyle=ol&page=1'
-        try: t=urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30).read().decode('utf8','ignore')
-        except Exception as e: print('server skip',name,str(e)[:60]);time.sleep(2);continue
-        for r,ci,n in re.findall(r'<span class="num">(\d+)</span>.*?char_(\d+)\.png.*?<span class="user_name">(.*?)</span>',t,re.S)[:0]: pass
+        u=f'https://forum.mir4global.com/rank?ranktype=1&worldgroupid={g}&worldid={w}&classtype=&searchname=&loaded=1&liststyle=ol&page=1&_={_bust()}'
+        t='';raw=b''
+        for attempt in range(3):
+            try:
+                raw=urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30).read()
+                t=raw.decode('utf8','ignore')
+                # blank/whitespace body = closed or merged world; skip without burning retries
+                if len(raw.strip())==0:
+                    break
+                if len(raw.strip())>=100: break
+                time.sleep(2)
+            except Exception as e:
+                errors.append((name,str(e)[:60]));t='';raw=b'';time.sleep(2)
         rows=re.findall(r'<span class="num">(\d+)</span>.*?char_(\d+)\.png.*?<span class="user_name">(.*?)</span>.*?<td class="text_right">\s*<span>([\d,]+)</span>',t,re.S)
+        if not rows:
+            empty.append(name);time.sleep(1);continue
         for r,ci,n,pw in rows[:100]: out.append([int(r),html.unescape(n).strip(),name,ci,int(pw.replace(',',''))])
         time.sleep(1)
+    print('server ok',len({r[2] for r in out}),'empty',len(empty),'errors',len(errors))
+    if empty: print('server empty (closed/skipped)',','.join(empty[:40])+('...' if len(empty)>40 else ''))
+    if errors: print('server errors',';'.join(f'{n}:{e}' for n,e in errors[:10]))
     return out
+def _server_stale(V, R, d=None):
+    """True if this server snapshot looks frozen (byte-identical to previous day) or disagrees badly with today's global fetch."""
+    prevs=[f for f in sorted(glob.glob(os.path.join(PH,'servers','20*.json'))) if d is None or os.path.basename(f)[:10]!=d]
+    raw=json.dumps(V,ensure_ascii=False,separators=(',',':')).encode()
+    if prevs and open(prevs[-1],'rb').read()==raw:
+        print('server stale: identical to',os.path.basename(prevs[-1]));return True
+    S={(r[1],r[2]):r[4] for r in V}
+    match=sum(1 for r in R if (r[1],r[2]) in S and S[(r[1],r[2])]==r[4])
+    mism=sum(1 for r in R if (r[1],r[2]) in S and S[(r[1],r[2])]!=r[4])
+    print('server vs global overlap match',match,'mismatch',mism)
+    if match+mism>=50 and mism>match:
+        print('server stale: mismatches global');return True
+    return False
 def series():
     S={};add=lambda n,sv,t,p,src:(n and sv and p) and S.setdefault(f'{n}|{sv}',{}).setdefault(t[:10],[int(p),src])
     for f in sorted(glob.glob(os.path.join(PH,'20*.json'))):
@@ -99,6 +128,10 @@ if __name__=='__main__':
         if len(R)>=500: json.dump(R,open(os.path.join(PH,d+'.json'),'w'),ensure_ascii=False,separators=(',',':'))
         print('ranking rows',len(R))
         V=fetch_servers();os.makedirs(os.path.join(PH,'servers'),exist_ok=True)
-        if len(V)>=1000: json.dump(V,open(os.path.join(PH,'servers',d+'.json'),'w'),ensure_ascii=False,separators=(',',':'))
-        print('server rows',len(V))
+        nserv=len({r[2] for r in V})
+        if len(V)>=1000 and nserv>=MIN_SERVERS and not _server_stale(V,R,d):
+            json.dump(V,open(os.path.join(PH,'servers',d+'.json'),'w'),ensure_ascii=False,separators=(',',':'))
+        else:
+            print('server snapshot not written (rows',len(V),'servers',nserv,')')
+        print('server rows',len(V),'servers',nserv)
     S,days=series();print('characters',len(S),'with 2+ points',sum(1 for v in S.values() if len(v)>=2),'ranking days',days)
