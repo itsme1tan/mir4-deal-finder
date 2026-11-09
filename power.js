@@ -18,8 +18,13 @@ PW.DIP=.02;PW.peak=L=>{let m=-1;return L.map(p=>m=Math.max(m,p[1]))};
 PW.grow=(J,w)=>{const d=J.days||[],last=d[d.length-1];if(d.length<2)return[];const cut=new Date(Date.parse(last+'T12:00:00')-w*864e5).toISOString().slice(0,10),o=[];
  for(const k in J.s){const r=J.s[k].filter(p=>p[2]=='r');if(r.length<2||r[r.length-1][0]!=last)continue;const pk=PW.peak(r);let i=r.findIndex(p=>p[0]>=cut);if(i<0||i==r.length-1)continue;
   const g=pk[pk.length-1]-pk[i];if(g>0)o.push([k,g,r[i][0],pk[pk.length-1]])}return o.sort((a,b)=>b[1]-a[1]).slice(0,50)};
-PW.top=J=>{const d=J.days||[],last=d[d.length-1],cut=new Date(Date.parse(last+'T12:00:00')-7*864e5).toISOString().slice(0,10),o=[];
- for(const k in J.s){const r=J.s[k].filter(p=>p[2]=='r'&&p[0]>=cut);if(!r.length||r[r.length-1][0]!=last)continue;o.push([k,Math.max(...r.map(p=>p[1])),r[r.length-1][1]])}return o.sort((a,b)=>b[1]-a[1]).slice(0,50)};
+// Top power: best ranking power in the last 7 days, still on the latest day. Optional server filter. Top 100.
+PW.top=(J,sv)=>{const d=J.days||[],last=d[d.length-1],cut=new Date(Date.parse(last+'T12:00:00')-7*864e5).toISOString().slice(0,10),o=[];
+ for(const k in J.s){if(sv&&k.split('|')[1]!==sv)continue;const r=J.s[k].filter(p=>p[2]=='r'&&p[0]>=cut);if(!r.length||r[r.length-1][0]!=last)continue;o.push([k,Math.max(...r.map(p=>p[1])),r[r.length-1][1]])}return o.sort((a,b)=>b[1]-a[1]).slice(0,100)};
+// Servers that appear in the latest daily rankings (global + per-server top 100), sorted for the picker.
+PW.svs=J=>{const d=J.days||[],last=d[d.length-1],S=new Set();
+ for(const k in J.s){if((J.s[k]||[]).some(p=>p[2]=='r'&&p[0]==last)){const s=k.split('|')[1];if(s)S.add(s)}}
+ return [...S].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true,sensitivity:'base'}))};
 // On a character page, below Past names / Owners
 PW.box=function(x,bd){PW.load().then(J=>{if(!J)return;const p=bd.parentNode;if(!p)return;let k=x.name+'|'+(x.server||''),L=pts(J,k);
  const w=window.FH&&FH.who&&FH.who(x);if(w&&w.now&&w.now.server){const L2=pts(J,w.now.name+'|'+w.now.server);if(L2&&(!L||L2.length>L.length))L=L2}
@@ -31,7 +36,7 @@ PW.box=function(x,bd){PW.load().then(J=>{if(!J)return;const p=bd.parentNode;if(!
 // Search key: decorations dropped, accents removed, lookalike letters (Cyrillic, Greek, small caps) read as Latin, so 'Archer' finds '・Archєr・'.
 const LK={'а':'a','в':'b','е':'e','є':'e','ё':'e','э':'e','к':'k','м':'m','н':'h','о':'o','р':'p','с':'c','т':'t','у':'y','х':'x','і':'i','ї':'i','ј':'j','ѕ':'s','ԁ':'d','п':'n','и':'n','л':'l','г':'r','ь':'b','α':'a','β':'b','ε':'e','η':'n','ι':'i','κ':'k','ν':'v','ο':'o','ρ':'p','τ':'t','υ':'u','χ':'x','ω':'w','ø':'o','ß':'ss','ł':'l','đ':'d','ħ':'h','ŧ':'t','ɑ':'a','ɢ':'g','ʀ':'r','ʏ':'y','ᴀ':'a','ʙ':'b','ᴄ':'c','ᴅ':'d','ᴇ':'e','ғ':'f','ʜ':'h','ɪ':'i','ᴊ':'j','ᴋ':'k','ʟ':'l','ᴍ':'m','ɴ':'n','ᴏ':'o','ᴘ':'p','ǫ':'q','ᴛ':'t','ᴜ':'u','ᴠ':'v','ᴡ':'w','ᴢ':'z','£':'e','€':'e','$':'s','@':'a'};
 const sq=t=>[...String(t??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase()].map(c=>LK[c]??c).join('').replace(/[^\p{L}\p{N}]/gu,'');
-PW.tool=function(){const q=document.getElementById('pwq'),L=document.getElementById('pwls'),R=document.getElementById('pwr'),G=document.getElementById('pwg');if(!q||PW._t)return;PW._t=1;let win='7',K=null;
+PW.tool=function(){const q=document.getElementById('pwq'),L=document.getElementById('pwls'),R=document.getElementById('pwr'),G=document.getElementById('pwg');if(!q||PW._t)return;PW._t=1;let win='7',K=null,srv='',shown=25;
  const show=k=>PW.load().then(J=>{const[n,s]=k.split('|');R.innerHTML=`<div style="margin:8px 0;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;max-width:100%;box-sizing:border-box"><b style="color:#e8c872;overflow-wrap:anywhere">${E(n)}</b> <small style="color:#b9a3bd">${E(s)}</small>${PW.chart(J.s[k])}</div>`;L.innerHTML=''});
  const run=()=>PW.load().then(J=>{if(!J){L.innerHTML='<div style="font-size:12px;color:#b9a3bd">Power data not available yet.</div>';return}if(!K)K=Object.keys(J.s).map(k=>[k,sq(k.split('|')[0])]);const v=sq(q.value);R.innerHTML='';
   if(v.length<2){L.innerHTML='<div style="font-size:12px;color:#b9a3bd;margin-top:6px">Search a character name, at least 2 letters or digits.</div>';return}
@@ -43,13 +48,22 @@ PW.tool=function(){const q=document.getElementById('pwq'),L=document.getElementB
  const row=(k,i,big,small)=>{const[n,s]=k.split('|');return `<button data-k="${E(k)}" style="display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #3a2040;color:#f2e8f2;padding:8px 2px;font-size:13px"><span style="min-width:0;overflow-wrap:anywhere">#${i+1} ${E(n)} <small style="color:#b9a3bd">${E(s)}</small></span><span style="white-space:nowrap;text-align:right"><b style="color:#e8c872">${big}</b>${small?`<br><small style="color:#b9a3bd">${small}</small>`:''}</span></button>`};
  const grow=()=>PW.load().then(J=>{if(!J)return;const nd=(J.days||[]).length;let body,foot;
   const head='<div style="display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 6px">'+btn(mode=='top','data-m="top"','🏆 Top power')+btn(mode=='grow','data-m="grow"','🚀 Fastest growing')+'</div>';
-  if(mode=='top'){const T=PW.top(J);body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">🏆 Top power</div>'+(T.length?T.map((r,i)=>row(r[0],i,'⚡ '+fm(r[1]),r[2]<r[1]*(1-PW.DIP)?'now '+fm(r[2])+', deck swap':'')).join(''):'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Power data not available yet.</div>');
-   foot='Highest power in the latest daily rankings. A sudden drop usually means an EXP spirit and magic stone setup, so we rank by the best power of the last 7 days.'}
+  if(mode=='top'){const T=PW.top(J,srv||null),S=PW.svs(J),n=Math.min(shown,T.length);
+   const opts='<option value="">All servers</option>'+S.map(s=>`<option value="${E(s)}"${s==srv?' selected':''}>${E(s)}</option>`).join('');
+   const pick=`<label style="display:block;margin:4px 0 8px;font-size:12px;color:#b9a3bd">Server<select id="pwsv" style="display:block;width:100%;max-width:100%;box-sizing:border-box;margin-top:4px;padding:9px 12px;border-radius:10px;border:1px solid #5a2550;background:#1a0f1e;color:#f2e8f2;font-size:15px">${opts}</select></label>`;
+   const more=T.length>n?`<button data-more style="display:block;width:100%;margin:8px 0 2px;padding:9px 12px;border-radius:10px;border:1px solid #5a3a5e;background:#1c1020;color:#e8c872;font:inherit;font-size:13px;font-weight:600">Show more (${n} of ${T.length})</button>`:'';
+   const title=srv?`🏆 Top power · ${E(srv)}`:'🏆 Top power';
+   body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">'+title+'</div>'+pick+(T.length?T.slice(0,n).map((r,i)=>row(r[0],i,'⚡ '+fm(r[1]),r[2]<r[1]*(1-PW.DIP)?'now '+fm(r[2])+', deck swap':'')).join('')+more:'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">No characters on this server in the latest rankings yet.</div>');
+   foot=srv?'Highest power on '+E(srv)+' in the latest daily rankings. A sudden drop usually means an EXP spirit and magic stone setup, so we rank by the best power of the last 7 days.':'Highest power in the latest daily rankings. Pick a server to rank its top 100. A sudden drop usually means an EXP spirit and magic stone setup, so we rank by the best power of the last 7 days.'}
   else{const rows=PW.grow(J,+win),tabs=['7','30'].map(w=>btn(w==win,`data-w="${w}"`,`Last ${w} days`)).join(' ');
    body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">🚀 Fastest growing</div><div style="display:flex;gap:6px;margin-bottom:6px">'+tabs+'</div>'+(nd<2?`<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Collecting data (${nd} of 2 days so far).</div>`:rows.length?rows.slice(0,20).map((r,i)=>row(r[0],i,'+'+fm(r[1]),'⚡ '+fm(r[3]))).join(''):'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Not enough days in this window yet.</div>');
    foot='Power gained in the daily rankings, measured from each character\'s best power so far. Deck swap dips and the bounce back after them do not count.'}
   G.innerHTML=head+body+`<div style="font-size:11px;color:#b9a3bd;margin-top:4px">${foot}</div>`;
-  G.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mode=b.dataset.m;grow()});G.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{win=b.dataset.w;grow()});G.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{show(b.dataset.k);R.scrollIntoView({block:'start'})})});
+  G.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mode=b.dataset.m;shown=25;grow()});
+  G.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{win=b.dataset.w;grow()});
+  const sel=G.querySelector('#pwsv');if(sel)sel.onchange=()=>{srv=sel.value;shown=25;grow()};
+  const mb=G.querySelector('[data-more]');if(mb)mb.onclick=()=>{shown=Math.min(shown+25,100);grow()};
+  G.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{show(b.dataset.k);R.scrollIntoView({block:'start'})})});
  q.addEventListener('input',run);run();grow()};
 const ti=()=>{if(document.getElementById('pwq'))PW.tool();else setTimeout(ti,500)};ti();
 })();

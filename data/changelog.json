@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-09",
+    "emoji": "🏆",
+    "text": "Top power now shows the top 100 characters and adds a server picker so you can rank within one server (All servers is still the default). Same deck swap handling as before.",
+    "ts": "2026-11-09T11:20:00-08:00"
+  },
+  {
     "date": "2026-11-03",
     "emoji": "🪙",
     "text": "The WEMIX price at the top now shows 4 decimals and updates live every minute while the page is open. Dollar prices for listings still use the price from the last data update, so every figure stays consistent.",
