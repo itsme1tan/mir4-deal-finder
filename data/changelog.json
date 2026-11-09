@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-09",
+    "emoji": "🚀",
+    "text": "Fastest growing now only ranks characters who stayed in the top 100 by power on every tracked day in the window (per server when a server is picked). Server tags stay tappable.",
+    "ts": "2026-11-09T11:45:00-08:00"
+  },
+  {
+    "date": "2026-11-09",
     "emoji": "🖥",
     "text": "Server tags on characters in the Power tool are now tappable. Tap one to open Top power ranked for that server.",
     "ts": "2026-11-09T11:42:00-08:00"

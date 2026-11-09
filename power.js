@@ -15,8 +15,12 @@ PW.chart=function(pts){if(!pts||!pts.length)return '';const W=340,H=110,t=pts.ma
 const pts=(J,k)=>J&&J.s[k];
 // Deck swaps: a sudden drop is a temporary EXP spirit and magic stone setup, not a real loss. Growth uses the running peak, so dips and the bounce back are both ignored.
 PW.DIP=.02;PW.peak=L=>{let m=-1;return L.map(p=>m=Math.max(m,p[1]))};
-PW.grow=(J,w)=>{const d=J.days||[],last=d[d.length-1];if(d.length<2)return[];const cut=new Date(Date.parse(last+'T12:00:00')-w*864e5).toISOString().slice(0,10),o=[];
- for(const k in J.s){const r=J.s[k].filter(p=>p[2]=='r');if(r.length<2||r[r.length-1][0]!=last)continue;const pk=PW.peak(r);let i=r.findIndex(p=>p[0]>=cut);if(i<0||i==r.length-1)continue;
+// Fastest growing: only characters in the top 100 by power on every tracked day in the window (All servers = global top 100; with a server picked = that server's top 100). Deck swaps still ignored via peak.
+PW.grow=(J,w,sv)=>{const d=J.days||[],last=d[d.length-1];if(d.length<2)return[];const cut=new Date(Date.parse(last+'T12:00:00')-w*864e5).toISOString().slice(0,10),wd=d.filter(x=>x>=cut),by={};
+ for(const k in J.s){if(sv&&k.split('|')[1]!==sv)continue;for(const p of J.s[k]){if(p[2]=='r'&&p[0]>=cut)(by[p[0]]=by[p[0]]||[]).push([k,p[1]])}}
+ const top={};for(const day of wd){const best={};for(const[k,pw] of(by[day]||[]))best[k]=Math.max(best[k]||0,pw);top[day]=new Set(Object.entries(best).sort((a,b)=>b[1]-a[1]).slice(0,100).map(x=>x[0]))}
+ const daysWith=wd.filter(x=>top[x]&&top[x].size);if(!daysWith.length)return[];const o=[];
+ for(const k in J.s){if(sv&&k.split('|')[1]!==sv)continue;if(!daysWith.every(day=>top[day].has(k)))continue;const r=J.s[k].filter(p=>p[2]=='r');if(r.length<2||r[r.length-1][0]!=last)continue;const pk=PW.peak(r);let i=r.findIndex(p=>p[0]>=cut);if(i<0||i==r.length-1)continue;
   const g=pk[pk.length-1]-pk[i];if(g>0)o.push([k,g,r[i][0],pk[pk.length-1]])}return o.sort((a,b)=>b[1]-a[1]).slice(0,50)};
 // Top power: best ranking power in the last 7 days, still on the latest day. Optional server filter. Top 100.
 PW.top=(J,sv)=>{const d=J.days||[],last=d[d.length-1],cut=new Date(Date.parse(last+'T12:00:00')-7*864e5).toISOString().slice(0,10),o=[];
@@ -58,9 +62,12 @@ PW.tool=function(){const q=document.getElementById('pwq'),L=document.getElementB
    const title=srv?`🏆 Top power · ${E(srv)}`:'🏆 Top power';
    body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">'+title+'</div>'+pick+(T.length?T.slice(0,n).map((r,i)=>row(r[0],i,'⚡ '+fm(r[1]),r[2]<r[1]*(1-PW.DIP)?'now '+fm(r[2])+', deck swap':'')).join('')+more:'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">No characters on this server in the latest rankings yet.</div>');
    foot=srv?'Highest power on '+E(srv)+' in the latest daily rankings. A sudden drop usually means an EXP spirit and magic stone setup, so we rank by the best power of the last 7 days.':'Highest power in the latest daily rankings. Pick a server to rank its top 100. A sudden drop usually means an EXP spirit and magic stone setup, so we rank by the best power of the last 7 days.'}
-  else{const rows=PW.grow(J,+win),tabs=['7','30'].map(w=>btn(w==win,`data-w="${w}"`,`Last ${w} days`)).join(' ');
-   body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">🚀 Fastest growing</div><div style="display:flex;gap:6px;margin-bottom:6px">'+tabs+'</div>'+(nd<2?`<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Collecting data (${nd} of 2 days so far).</div>`:rows.length?rows.slice(0,20).map((r,i)=>row(r[0],i,'+'+fm(r[1]),'⚡ '+fm(r[3]))).join(''):'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Not enough days in this window yet.</div>');
-   foot='Power gained in the daily rankings, measured from each character\'s best power so far. Deck swap dips and the bounce back after them do not count.'}
+  else{const rows=PW.grow(J,+win,srv||null),S=PW.svs(J),tabs=['7','30'].map(w=>btn(w==win,`data-w="${w}"`,`Last ${w} days`)).join(' ');
+   const opts='<option value="">All servers</option>'+S.map(s=>`<option value="${E(s)}"${s==srv?' selected':''}>${E(s)}</option>`).join('');
+   const pick=`<label style="display:block;margin:4px 0 8px;font-size:12px;color:#b9a3bd">Server<select id="pwsv" style="display:block;width:100%;max-width:100%;box-sizing:border-box;margin-top:4px;padding:9px 12px;border-radius:10px;border:1px solid #5a2550;background:#1a0f1e;color:#f2e8f2;font-size:15px">${opts}</select></label>`;
+   const title=srv?`🚀 Fastest growing · ${E(srv)}`:'🚀 Fastest growing';
+   body='<div style="font-weight:700;color:#e8c872;font-size:14px;margin-bottom:4px">'+title+'</div>'+pick+'<div style="display:flex;gap:6px;margin-bottom:6px">'+tabs+'</div>'+(nd<2?`<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Collecting data (${nd} of 2 days so far).</div>`:rows.length?rows.slice(0,20).map((r,i)=>row(r[0],i,'+'+fm(r[1]),'⚡ '+fm(r[3]))).join(''):'<div style="font-size:13px;color:#b9a3bd;padding:8px 0">No qualifying characters in this window yet.</div>');
+   foot=(srv?'Only characters in '+E(srv)+'\'s top 100 by power on every tracked day in this window. ':'Only characters in the global top 100 by power on every tracked day in this window. ')+'Growth is from each character\'s best power so far; deck swap dips and the bounce back do not count.'}
   G.innerHTML=head+body+`<div style="font-size:11px;color:#b9a3bd;margin-top:4px">${foot}</div>`;
   G.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mode=b.dataset.m;shown=25;grow()});
   G.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>{win=b.dataset.w;grow()});
