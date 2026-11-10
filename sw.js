@@ -1,5 +1,5 @@
 // Service worker: fast repeat visits and offline support. Also handles notification clicks.
-const V='mir4-v64',SHELL=['./','index.html','classes.html','guide.html','changelog.html','offline.html','manifest.json',
+const V='mir4-v65',SHELL=['./','index.html','classes.html','guide.html','changelog.html','offline.html','manifest.json',
 'icons/ui/listed.svg','nav.js?v=31','age.js?v=6','strength.js?v=2','premium.js?v=34','share.js?v=11','icons/ui/share.svg','trend.js?v=3','wemix1h.js?v=6','wemixlive.js?v=1','wemixhist.js?v=3','history.js?v=11','power.js?v=14','top20.js?v=54','boss.js?v=20','soldsearch.js?v=9',
 'icons/banner-m.jpg?v=1','icons/app-192.png?v=4','icons/spirit-header.png?v=6','icons/spirit-head-chunryu.png?v=6','icons/spirit-head-rabbit.png?v=6','icons/spirit-head-haeryeong.png?v=6','icons/spirit-head-haeryu.png?v=6','icons/spirit-head-fox.png?v=6','icons/spirit-head-tiger.png?v=6','icons/spirit-head-eagle.png?v=6','icons/spirit-head-dragon.png?v=6','icons/spirit-head-angel.png?v=6','icons/spirit-head-fire.png?v=6','icons/spirit-head-hydra.png?v=6','icons/spirit-head-cat.png?v=6'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>Promise.all(SHELL.map(u=>c.add(u).catch(()=>{})))))});
