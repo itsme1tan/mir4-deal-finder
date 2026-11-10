@@ -1,5 +1,5 @@
 /* Boss timers (MS = Magic Square; Frenzy 02/08/14/20 per RaidHours, Leader III 3h cycle per GameWith): next spawn countdowns in PT. Times are regional server time (official MIR4 forum + community intel). */
-(function(){
+(function(){if(!document.getElementById("spicoss")){const y=document.createElement("style");y.id="spicoss";y.textContent=".spico{flex:none;width:30px;height:30px;object-fit:contain;vertical-align:-8px;margin-right:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55)) drop-shadow(0 0 4px rgba(244,114,182,.28))}";document.head.appendChild(y)}
 const OFF={ASIA:8,INMENA:6,EU:2,SA:-3,NA:-4};// server region UTC offsets (official forum post 43)
 // [name, icon, days (0=Sun..6=Sat, null=daily), hours (server time), note]
 const B=[
@@ -47,6 +47,6 @@ function render(){const r=reg(),o=OFF[r],n=Date.now();
  bsel.onchange=()=>{localStorage.mir4breg=bsel.value;render()}}
 const tick=()=>{let re=0;el.querySelectorAll('b.cd').forEach(b=>{if(b.dataset.u){b.textContent=cd(Date.now()-b.dataset.t)+' ago';return}const ms=+b.dataset.t-Date.now();if(ms<-6e4)re=1;b.textContent=(b.dataset.p||'')+cd(ms)});if(re)render()};
 const t=setInterval(()=>{const a=document.getElementById('padv');if(!a)return;clearInterval(t);
- const d=document.createElement('details');d.className='pro';d.id='ptimer';d.open=localStorage.mir4timer=='1';d.innerHTML='<summary>⏰ Timer</summary>';d.append(el);a.before(d);
+ const d=document.createElement('details');d.className='pro';d.id='ptimer';d.open=localStorage.mir4timer=='1';d.innerHTML='<summary><img class="spico" src="icons/spirit-head-fire.png?v=5" alt="" width="30" height="30" decoding="async" loading="lazy"> Timer</summary>';d.append(el);a.before(d);
  d.ontoggle=()=>{localStorage.mir4timer=d.open?'1':'0';if(d.open)render()};render();setInterval(()=>{if(d.open)tick()},1000)},200);
 })();

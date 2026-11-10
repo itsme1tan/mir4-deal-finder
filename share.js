@@ -1,5 +1,5 @@
 /* Share links (?c=listing id), Top deal right now spotlight, and per-character price history chart. Display only. */
-(function(){
+(function(){const _s=document.createElement("style");_s.textContent=".spico{flex:none;width:30px;height:30px;object-fit:contain;background:transparent;border:0;border-radius:0;box-shadow:none;vertical-align:-8px;margin-right:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55)) drop-shadow(0 0 4px rgba(244,114,182,.28))}.spico.lg{width:42px;height:42px;vertical-align:-11px}";document.head.appendChild(_s);
 const BASE='https://itsme1tan.github.io/mir4-deal-finder/';
 const fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
@@ -67,11 +67,11 @@ function pick(){const h=slot(Date.now());let s={};try{s=JSON.parse(localStorage.
 function left(){const n=new Date(),s=3600-(n.getMinutes()*60+n.getSeconds()),q=v=>String(v).padStart(2,'0');return q(Math.floor(s/60))+':'+q(s%60)}
 function dotd(){const x=pick();let o=document.getElementById('dotd');
  if(!o){o=document.createElement('div');o.id='dotd';document.getElementById('t20').before(o)}
- if(!x){o.innerHTML=`<div class="dh"><span>🏆 Top deal right now</span><small title="Every hour we check for a better deal. Only characters under our fair value.">Rechecks in <span id="dotdc">${left()}</span></small></div><div class="dem">No characters under fair value right now. Check back after the next recheck.</div><div class="dlg">Fair value is our model of what similar characters sell for. Top deal only shows picks priced under that.</div>`;return}
+ if(!x){o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=5" alt="" width="30" height="30" decoding="async" loading="lazy"> Top deal right now</span><small title="Every hour we check for a better deal. Only characters under our fair value.">Rechecks in <span id="dotdc">${left()}</span></small></div><div class="dem">No characters under fair value right now. Check back after the next recheck.</div><div class="dlg">Fair value is our model of what similar characters sell for. Top deal only shows picks priced under that.</div>`;return}
  const W=JSON.parse(localStorage.mir4watch||'{}'),w=W[key(x)],st=document.querySelector('.hwk .strong');
  const sav=saveUsd(x),rs=sav!=null?roundSave(sav):null;
  const badge=rs!=null&&rs>0?`<div class="dsv" title="Asking price vs our fair value">−$${fm(rs)} under fair (${x.discount}%)</div>`:`<div class="dsv">${x.discount}% under fair</div>`;
- o.innerHTML=`<div class="dh"><span>🏆 Top deal right now</span><small title="Every hour we check for a better deal. Picks the best under-fair character under $25k. The pick only changes if a better one is found, or if this character sells or is delisted.">Rechecks in <span id="dotdc">${left()}</span></small></div>
+ o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=5" alt="" width="30" height="30" decoding="async" loading="lazy"> Top deal right now</span><small title="Every hour we check for a better deal. Picks the best under-fair character under $25k. The pick only changes if a better one is found, or if this character sells or is delisted.">Rechecks in <span id="dotdc">${left()}</span></small></div>
 <div class="db" data-id="${x.id}"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}" width="48" height="48"><div class="dm"><div class="dn">${x.name}</div><div class="ds"><span>${x.cls}</span><span>${IC('server')} ${x.server}</span><span>⚡ ${fm(x.ps/1000)}k</span><span>${IC('swords')} ${fm(x.atk/1000)}k</span><span>${IC('gauge')} ${x.build_score}</span></div></div>
 <div class="dp"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small></div></div>
 ${badge}<div class="dlg">Gold badge = dollars under our fair value, with the % under fair.</div>
