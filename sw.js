@@ -1,7 +1,7 @@
 // Service worker: fast repeat visits and offline support. Also handles notification clicks.
-const V='mir4-v52',SHELL=['./','index.html','classes.html','guide.html','changelog.html','offline.html','manifest.json',
+const V='mir4-v53',SHELL=['./','index.html','classes.html','guide.html','changelog.html','offline.html','manifest.json',
 'icons/ui/listed.svg','nav.js?v=30','age.js?v=6','strength.js?v=2','premium.js?v=34','share.js?v=9','icons/ui/share.svg','trend.js?v=3','wemix1h.js?v=6','wemixlive.js?v=1','history.js?v=11','power.js?v=7','top20.js?v=47','boss.js?v=18','soldsearch.js?v=9',
-'icons/banner-m.jpg?v=1','icons/app-192.png?v=4'];
+'icons/banner-m.jpg?v=1','icons/app-192.png?v=4','icons/spirit-header.png?v=1'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>Promise.all(SHELL.map(u=>c.add(u).catch(()=>{})))))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('mir4-')&&k!==V&&k!==V+'-data').map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 const isData=u=>u.pathname.endsWith('.json');
