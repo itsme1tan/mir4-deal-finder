@@ -32,7 +32,7 @@ st.textContent=`#wxp,#w1hdr{cursor:pointer;-webkit-tap-highlight-color:transpare
 #${ID} .scrub .tip .p{display:block;font-size:13px;font-weight:800;color:#ffe08a;margin-top:2px}
 #${ID} .err,#${ID} .load{color:#b9a3bd;font-size:13px;padding:18px 4px;text-align:center}
 #${ID} .foot{font-size:11px;color:#b9a3bd;margin-top:10px;line-height:1.45}`;
-document.head.appendChild(st);
+st.textContent+=`.spico{flex:none;width:30px;height:30px;object-fit:contain;background:transparent;border:0;border-radius:0;box-shadow:none;vertical-align:-8px;margin-right:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55)) drop-shadow(0 0 4px rgba(244,114,182,.28))}.spico.lg{width:42px;height:42px;vertical-align:-11px}`;document.head.appendChild(st);
 
 const fmt$=n=>'$'+Number(n).toFixed(4);
 function fmtPT(ms, days){
@@ -45,7 +45,7 @@ function fmtPT(ms, days){
 
 function panel(){let el=document.getElementById(ID);if(el)return el;
  el=document.createElement('div');el.id=ID;
- el.innerHTML=`<div class="top"><button type="button" data-x>← Back</button><b>WEMIX price</b></div>
+ el.innerHTML=`<div class="top"><button type="button" data-x>← Back</button><b><img class="spico lg" src="icons/spirit-head-hydra.png?v=5" alt="" width="42" height="42" decoding="async" loading="lazy"> WEMIX price</b></div>
  <div class="body"><div class="load">Loading…</div></div>`;
  document.body.appendChild(el);
  el.addEventListener('click',e=>{if(e.target.closest('[data-x]'))close()});
