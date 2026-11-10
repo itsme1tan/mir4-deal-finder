@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-09",
+    "emoji": "🐉",
+    "text": "Cute spirit icons now show in the header and Top sections (Top 20 strongest and Top power). Tap the WEMIX price at the top to open its price history.",
+    "ts": "2026-11-09T17:19:02-08:00"
+  },
+  {
+    "date": "2026-11-09",
     "emoji": "🚀",
     "text": "Fastest growing now only ranks characters who stayed in the top 100 by power on every tracked day in the window (per server when a server is picked). Server tags stay tappable.",
     "ts": "2026-11-09T11:45:00-08:00"
