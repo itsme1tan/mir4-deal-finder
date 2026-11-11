@@ -3,7 +3,7 @@
    the marketplace's own listing time for the current listing, the first listing date worked out from its listing number (market.py on_since),
    and sold records (data/sold_archive.json + recent sales). $ uses the WEMIX price of that day (data/wemix_daily.json). Display only. */
 (function(){
-const PT=t=>Date.parse(t.replace(' ','T')+':00-07:00'),H8=t=>Date.parse(t.replace(' ','T')+':00+08:00');
+const PT=t=>window.parsePT(t),H8=t=>Date.parse(t.replace(' ','T')+':00+08:00');
 const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 let P=null;
 window.FH={
@@ -104,7 +104,7 @@ const _ti=()=>{if(document.getElementById('phq'))FH.tool();else setTimeout(_ti,5
 FH.load();
 
 // Past names on a character page: every name we know for this character (same NFT token), newest first. Hidden when only one name is known.
-FH.past=function(x,S){const w=FH.who(x,S);if(!w)return [];const PT=t=>Date.parse(t.replace(' ','T')+':00-07:00'),H8=t=>Date.parse(t.replace(' ','T')+':00+08:00'),R={};
+FH.past=function(x,S){const w=FH.who(x,S);if(!w)return [];const PT=t=>window.parsePT(t),H8=t=>Date.parse(t.replace(' ','T')+':00+08:00'),R={};
  const put=(n,t,ty,wm,src)=>{if(!n)return;const o=R[n];if(!o||t>o.t)R[n]={name:n,t,ty,w:wm,src}};const ks=new Set(w.keys),key=y=>y.name+'|'+(y.server||'')+'|'+y.cls;
  [...S.SA,...((typeof D!='undefined'&&D.sales)||[])].forEach(s=>{if(s.sold&&ks.has(key(s)))put(s.name,H8(s.sold),'sold',s.wemix)});
  ((typeof D!='undefined'&&D.listings)||[]).forEach(l=>{if(ks.has(key(l))&&l.listed)put(l.name,H8(l.listed),'listed',null)});
@@ -121,7 +121,7 @@ FH.pastBox=function(x,bd,S){const p=bd.parentNode;if(!p)return;p.querySelectorAl
 // Owners on a character page: wallets that held this character (public WEMIX chain transfers). "usually" is a guess from character names, not an identity.
 FH.owners=()=>FH._ow||(FH._ow=fetch('data/owners.json?'+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null));
 FH.ownersBox=function(x,bd,S){const w=FH.who(x,S);if(!w)return;FH.owners().then(O=>{if(!O)return;const runs=O.tokens[w.token];if(!runs||!runs.length)return;const p=bd.parentNode;if(!p)return;p.querySelectorAll('.pown').forEach(e=>e.remove());
- const E=t=>String(t??'').replace(/[<>&"]/g,''),fm=n=>Math.round(n).toLocaleString('en-US'),sh=a=>a.slice(0,4)+'…'+a.slice(-3),dy=t=>t?new Date(Date.parse(t.replace(' ','T')+':00-07:00')).toLocaleDateString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',year:'numeric'}):'now';
+ const E=t=>String(t??'').replace(/[<>&"]/g,''),fm=n=>Math.round(n).toLocaleString('en-US'),sh=a=>a.slice(0,4)+'…'+a.slice(-3),dy=t=>t?new Date(window.parsePT(t)).toLocaleDateString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',year:'numeric'}):'now';
  const how={minted:'Became an NFT',bought:'Bought','moved in':'Moved in','first seen':'First seen'};
  const el=document.createElement('div');el.className='pown';el.style.cssText='margin:8px 0;padding:10px 12px;background:#1a0f1e;border:1px solid #3a2040;border-radius:10px;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere';
  const row=r=>{const W=O.wallets[r.w]||{},n=W.tokens?W.tokens.length:1,fl=n>1?` <span style="font-size:10px;font-weight:800;background:#c2185b;color:#fff0f6;border-radius:999px;padding:2px 6px">${n} characters</span>`:'';

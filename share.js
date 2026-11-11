@@ -21,6 +21,35 @@ document.head.insertAdjacentHTML('beforeend',`<style>
 #dotd .ds{font-size:12px;color:#d9c6dc;display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:2px}
 #dotd .dp{text-align:right;flex:none}#dotd .dp b{display:block;font-size:17px;color:#fff}#dotd .dp small{display:block;font-size:12px;color:#b9a3bd}#dotd .dp .u{color:#e8c872;font-weight:700}
 #dotd .df{display:flex;align-items:center;gap:6px;margin-top:8px;flex-wrap:wrap}#dotd .wst{padding:2px 9px}#dotd .dsv{display:inline-block;background:linear-gradient(90deg,#3a2a08,#5a4810);border:1px solid #e8c872;color:#e8c872;font-weight:700;font-size:13px;padding:4px 10px;border-radius:999px;margin-top:8px}#dotd .dlg{font-size:11px;color:#b9a3bd;margin-top:6px;line-height:1.35}#dotd .dem{padding:8px 2px 4px;color:#d9c6dc;font-size:14px;line-height:1.4}
+#dotd .dsv.over{background:linear-gradient(90deg,#2a1030,#3a2040);border-color:#c9a7ff;color:#f9a8d4}
+#bgt4{margin:10px 12px 10px;padding:10px 12px;background:linear-gradient(180deg,#2a1030,#1c1020);border:1px solid #6b2a5a;border-radius:12px;min-width:0;overflow:hidden}
+#bgt4 .bgh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px;font-size:14px;font-weight:700;color:#e8c872;flex-wrap:wrap;min-width:0}
+#bgt4 .bgh small{font-weight:400;font-size:11px;color:#d9c6dc}
+#bgt4 .bgg{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+#bgt4 .bgc{display:flex;gap:8px;align-items:center;min-width:0;padding:8px;background:#1c1020;border:1px solid #3a2040;border-radius:10px;cursor:pointer}
+#bgt4 .bgc img{width:36px;height:36px;flex:none;border-radius:8px}
+#bgt4 .bgm{min-width:0;flex:1}
+#bgt4 .bgn{font-weight:700;color:#e8c872;font-size:12px}
+#bgt4 .bgx{color:#fff;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bgt4 .bgp{font-size:11px;color:#d9c6dc;margin-top:1px}
+#bgt4 .bgp .pos{color:#e8c872;font-weight:700}#bgt4 .bgp .neg{color:#f87171;font-weight:700}
+#bgt4 .bgc.empty{cursor:default;opacity:.75}
+#bgt4 .bge{font-size:11px;color:#b9a3bd}
+#bgt4 .dlg{font-size:11px;color:#b9a3bd;margin-top:6px;line-height:1.35}
+.simb{margin:10px 0 4px;min-width:0}
+.simbtn{font:inherit;font-size:13px;font-weight:700;border:1px solid #e8c872;background:rgba(232,200,114,.08);color:#e8c872;border-radius:999px;padding:6px 12px;cursor:pointer}
+.siml{margin-top:8px;border:1px solid #3a2040;border-radius:10px;background:#1c1020;padding:6px 0;min-width:0;overflow:hidden}
+.simr{display:flex;align-items:center;gap:8px;padding:8px 10px;cursor:pointer;min-width:0}
+.simr + .simr{border-top:1px solid #2a1730}
+.simr img{width:36px;height:36px;flex:none;border-radius:8px}
+.simr .sm{min-width:0;flex:1}
+.simr .sn{font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.simr .ss{font-size:11px;color:#d9c6dc}
+.simr .sp{flex:none;text-align:right;font-weight:700;color:#fff}
+.simr .sp small{display:block;font-weight:600;font-size:11px}
+.siml .dlg{padding:6px 10px 4px;font-size:11px;color:#b9a3bd;line-height:1.35}
+.siml .mt{padding:8px 10px;color:#d9c6dc;font-size:13px}
+
 .phc{margin:6px 0 12px;padding:10px;background:#1c1020;border:1px solid #3a2040;border-radius:12px}.phc h4{margin:0 0 6px;color:#e8c872;font-size:13px}
 .phc svg{display:block;width:100%;height:auto}.phl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:#d9c6dc;margin-top:6px}.phl span{display:inline-flex;align-items:center;gap:4px}.phl .ico{width:12px;height:12px;background:#e8c872}
 .phrl{display:inline-block;font-size:9px;font-weight:600;line-height:1;padding:1px 4px;border-radius:999px;border:1px solid #6b2a5a;color:#f9a8d4;background:rgba(42,15,46,.7)}
@@ -59,22 +88,29 @@ function saveUsd(y){const f=fairUsd(y);return f!=null?f-y.usd:null}
 function roundSave(n){const a=Math.abs(n);if(a>=1000)return Math.round(n/50)*50;if(a>=200)return Math.round(n/10)*10;return Math.round(n)}
 // Top deal: best under-fair pick under $25k (biggest discount), hourly recheck. No % floor.
 function pick(){const h=slot(Date.now());let s={};try{s=JSON.parse(localStorage.mir4dotd||'{}')}catch(e){}
- const L=D.listings.filter(y=>y.usd<25000&&y.discount!=null&&y.discount>0&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a)),best=L[0];
- let x=L.find(y=>y.id==s.id&&y.discount>0);
+ const under=D.listings.filter(y=>y.usd<25000&&y.discount!=null&&y.discount>0&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a));
+ const close=D.listings.filter(y=>y.usd<25000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a));
+ const best=under[0],fb=best?null:close[0];
+ let x=best?under.find(y=>y.id==s.id&&y.discount>0):null;
  if(!x||(s.h!=h&&best&&bb(best)>bb(x)))x=best||null;
+ if(!x&&fb){const prev=close.find(y=>y.id==s.id);if(prev&&s.h==h)x=prev;else if(prev&&s.h!=h&&bb(fb)>bb(prev))x=fb;else x=prev||fb}
  if(x)localStorage.mir4dotd=JSON.stringify({h,id:x.id});
- return x}
+ return x?{x,closest:!best}:null}
 function left(){const n=new Date(),s=3600-(n.getMinutes()*60+n.getSeconds()),q=v=>String(v).padStart(2,'0');return q(Math.floor(s/60))+':'+q(s%60)}
-function dotd(){const x=pick();let o=document.getElementById('dotd');
+function dotd(){const p=pick();let o=document.getElementById('dotd');
  if(!o){o=document.createElement('div');o.id='dotd';document.getElementById('t20').before(o)}
- if(!x){o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=6" alt="" width="45" height="45" decoding="async" loading="lazy"> Top deal right now</span><small title="Every hour we check for a better deal. Only characters under our fair value.">Rechecks in <span id="dotdc">${left()}</span></small></div><div class="dem">No characters under fair value right now. Check back after the next recheck.</div><div class="dlg">Fair value is our model of what similar characters sell for. Top deal only shows picks priced under that.</div>`;return}
+ if(!p){o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=6" alt="" width="45" height="45" decoding="async" loading="lazy"> Top deal right now</span><small title="Every hour we check for a better deal under $25k, including the closest to fair if none is under fair.">Rechecks in <span id="dotdc">${left()}</span></small></div><div class="dem">No characters under $25k with a fair value right now. Check back after the next recheck.</div><div class="dlg">Fair value is our model of what similar characters sell for. If none is under fair, Top deal shows the closest to fair under $25k.</div>`;return}
+ const x=p.x,closest=p.closest;
  const W=JSON.parse(localStorage.mir4watch||'{}'),w=W[key(x)],st=document.querySelector('.hwk .strong');
  const sav=saveUsd(x),rs=sav!=null?roundSave(sav):null;
- const badge=rs!=null&&rs>0?`<div class="dsv" title="Asking price vs our fair value">−$${fm(rs)} under fair (${x.discount}%)</div>`:`<div class="dsv">${x.discount}% under fair</div>`;
- o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=6" alt="" width="45" height="45" decoding="async" loading="lazy"> Top deal right now</span><small title="Every hour we check for a better deal. Picks the best under-fair character under $25k. The pick only changes if a better one is found, or if this character sells or is delisted.">Rechecks in <span id="dotdc">${left()}</span></small></div>
+ const vs=x.discount>0?x.discount+'% under fair':x.discount===0?'at fair':Math.abs(x.discount)+'% over fair';
+ const badge=closest?`<div class="dsv over" title="No under-fair pick under $25k. This is the closest to fair.">Closest to fair: ${vs}</div>`:(rs!=null&&rs>0?`<div class="dsv" title="Asking price vs our fair value">−$${fm(rs)} under fair (${x.discount}%)</div>`:`<div class="dsv">${x.discount}% under fair</div>`);
+ const tip=closest?'Every hour we check for a better deal. No character is under fair right now, so this is the closest to fair under $25k. The pick only changes if a better one is found, or if this character sells or is delisted.':'Every hour we check for a better deal. Picks the best under-fair character under $25k. The pick only changes if a better one is found, or if this character sells or is delisted.';
+ const dlg=closest?'No character is under fair value right now. This is the closest to fair under $25k. Gaps under 10% can be noise in our model.':'Gold badge = dollars under our fair value, with the % under fair.';
+ o.innerHTML=`<div class="dh"><span><img class="spico" src="icons/spirit-head-tiger.png?v=6" alt="" width="45" height="45" decoding="async" loading="lazy"> Top deal right now</span><small title="${tip}">Rechecks in <span id="dotdc">${left()}</span></small></div>
 <div class="db" data-id="${x.id}"><img src="icons/class/${x.cls.toLowerCase()}.webp" alt="${x.cls}" width="48" height="48"><div class="dm"><div class="dn">${x.name}</div><div class="ds"><span>${x.cls}</span><span>${IC('server')} ${x.server}</span><span>⚡ ${fm(x.ps/1000)}k</span><span>${IC('swords')} ${fm(x.atk/1000)}k</span><span>${IC('gauge')} ${x.build_score}</span></div></div>
 <div class="dp"><b>$${fm(x.usd)}</b><small>${fm(x.wemix)} W</small></div></div>
-${badge}<div class="dlg">Gold badge = dollars under our fair value, with the % under fair.</div>
+${badge}<div class="dlg">${dlg}</div>
 <div class="df">${x.strong&&st?st.outerHTML:''}<button class="wst ${w?'on':''}" data-w="${encodeURIComponent(key(x))}" title="${w?'Watching. Tap to stop':'Watch this character'}">${w?'★':'☆'}</button>${btn(x.id)}</div>`;
  o.querySelector('.db').onclick=()=>T20.solo(x.id,D.listings);
  o.querySelector('.wst').addEventListener('click',()=>setTimeout(dotd,50))}
@@ -87,7 +123,7 @@ function chart(){const s=document.getElementById('solo');if(!s||!s.classList.con
  if(RH===1)return;
  const box=document.createElement('div');box.className='phc';const htp=s.querySelector('.bd .tp[data-p=hist]');if(htp)htp.prepend(box);else s.querySelector('.bd').prepend(box);
  const FE=FH.build(x,RH),pts=[];const ob=[{t:FE.tracked?new Date(FE.tracked).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).slice(0,16):''}];
- const T=t=>Date.parse(t.replace(' ','T')+':00-07:00'),EST=FE.est;
+ const T=t=>window.parsePT(t),EST=FE.est;
  FE.events.forEach(e=>{if(e.past||!e.w||e.type=='sold'||e.type=='delisted')return;if(FE.chain){pts.push(pts.length?{t:e.t,w:e.w,k:'re',old:e.from||pts[pts.length-1].w}:{t:e.t,w:e.w,k:'first'});return}if(e.est)pts.push({t:e.t,w:(FE.events.find(z=>z.type=='seen')||{}).w,k:'first',est:1});else if(e.type=='seen')pts.push({t:e.t,w:e.w,k:'seen'});else if(e.type=='listed')pts.push({t:e.t,w:e.w,k:'first'});else pts.push({t:e.t,w:e.w,k:'re',old:e.from})});
  const sold=FE.events.filter(e=>e.type=='sold').map(e=>({t:e.t,w:e.w,k:'sold'}));
  const now=Date.now();pts.push({t:now,w:x.wemix,k:'now'});
@@ -114,5 +150,18 @@ function chart(){const s=document.getElementById('solo');if(!s||!s.classList.con
  box.innerHTML=`<h4>📈 Price history</h4>${head}<svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Price history chart"><line x1="${L}" x2="${W0-R}" y1="${H0-B+6}" y2="${H0-B+6}" stroke="#3a2040"/><path d="${line}" fill="none" stroke="#e8c872" stroke-width="2.5" stroke-linejoin="round"/>${m}${lb}${dl}</svg>
 <div class="phl"><span>${IC('listed')} First listed</span><span><span class="phrl">↻</span> Price cut or relist</span>${sold.length?'<span>🏷️ Sold</span>':''}${EST?'<span><b style="color:#e8c872">○</b> First seen</span>':''}<span><b style="color:#e8c872">●</b> Now</span></div>
 <div class="phn">Each step is one price change, evenly spaced (not to time scale). ${cuts?`${cuts} price cut${cuts>1?'s':''}. `:''}${EST?`First listed about ${pd.format(T(x.on_since))}, worked out from its listing number; we started tracking it ${pd.format(T(ob[0].t))}. `:''}$ here uses today's WEMIX price so only the seller's changes show; History below shows $ at each day's WEMIX price. Tap or hold a marker for the date.</div>`}
-ready(()=>{dotd();inject();openShared()});
+
+function budget4(){const CLASSES=['Taoist','Arbalist','Warrior','Lancer'];
+ let o=document.getElementById('bgt4');
+ if(!o){o=document.createElement('div');o.id='bgt4';const d=document.getElementById('dotd');(d||document.getElementById('t20')).after(o)}
+ const cells=CLASSES.map(cls=>{
+  const L=(D.listings||[]).filter(y=>y.cls===cls&&y.usd<25000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a)||a.usd-b.usd);
+  const x=L[0];
+  if(!x)return `<div class="bgc empty"><img src="icons/class/${cls.toLowerCase()}.webp" alt="" width="36" height="36"><div class="bgm"><div class="bgn">${cls}</div><div class="bge">None under $25k</div></div></div>`;
+  const vs=x.discount>0?`<span class="pos">${x.discount}% under</span>`:x.discount===0?`<span class="pos">at fair</span>`:`<span class="neg">${Math.abs(x.discount)}% over</span>`;
+  return `<div class="bgc" data-id="${x.id}" role="button" tabindex="0"><img src="icons/class/${cls.toLowerCase()}.webp" alt="" width="36" height="36"><div class="bgm"><div class="bgn">${cls}</div><div class="bgx">${x.name}</div><div class="bgp">$${fm(x.usd)} · ${vs}</div></div></div>`;
+ }).join('');
+ o.innerHTML=`<div class="bgh"><span>Best under $25k</span><small>Taoist, Arbalist, Warrior and Lancer</small></div><div class="bgg">${cells}</div><div class="dlg">One closest-to-fair listing under $25k per class. Tap to open the character.</div>`;
+ o.querySelectorAll('.bgc[data-id]').forEach(el=>{el.onclick=()=>T20.solo(el.dataset.id,D.listings)})}
+ready(()=>{dotd();budget4();inject();openShared()});
 })();

@@ -1,17 +1,34 @@
+// Parse a Pacific wall-clock stamp (YYYY-MM-DD HH:MM or with T) as America/Los_Angeles, including daylight saving.
+window.parsePT=function(s){
+  if(s==null||s==='')return NaN;
+  if(typeof s==='number')return s;
+  const m=String(s).match(/(\d+)-(\d+)-(\d+)[T ](\d+):(\d+)/);
+  if(!m)return Date.parse(s);
+  const pad=n=>String(+n).padStart(2,'0');
+  const want=Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],0);
+  if(!isFinite(want))return Date.parse(s);
+  const fmt=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
+  const parts=ms=>Object.fromEntries(fmt.formatToParts(new Date(ms)).filter(x=>x.type!='literal').map(x=>[x.type,x.value]));
+  const asUTC=p=>Date.UTC(+p.year,+p.month-1,+p.day,+p.hour,+p.minute,+p.second);
+  let t=want;
+  for(let i=0;i<4;i++)t=t-(asUTC(parts(t))-want);
+  return t;
+};
 // Listing age + market note helpers (data from market.py). Shared by index, Top 20 and Top by class.
 const AGE={
  txt:x=>{if(x.age_d==null)return '?';const d=x.age_d,s=d<1?Math.max(1,Math.round(d*24))+'h':Math.floor(d)+'d';return s+(x.age_plus?'+':'')},
  tip:x=>x.age_d==null?'Listing time unknown':`First listed ${AGE.txt(x)} ago. `+(AGE.relH(x)!=null?`Relisted ${AGE.ago(AGE.relH(x))} (current listing). `:'')+`On the market since ${x.on_since} PT`+(x.age_src=='chain'?' (from the public WEMIX chain record)':x.age_est!=null?' (first listing date worked out from its listing number)':'')+(x.age_plus?' or earlier (our tracker started '+((typeof D!='undefined'&&D.age&&D.age.tracking_since)||'Oct 20')+' and the seller relisted since)':'')+(x.cut_n?`, price cut ${x.cut_n}x`:''),
- relH:x=>{if(!x.listed||!x.on_since)return null;const L=Date.parse(x.listed.replace(' ','T')+':00+08:00'),F=Date.parse(x.on_since.replace(' ','T')+':00-07:00');if(!(L-F>36e5))return null;return Math.max(0,(Date.now()-L)/36e5)},
+ relH:x=>{if(!x.listed||!x.on_since)return null;const L=Date.parse(x.listed.replace(' ','T')+':00+08:00'),F=window.parsePT(x.on_since);if(!(L-F>36e5))return null;return Math.max(0,(Date.now()-L)/36e5)},
  ago:h=>h<1?Math.max(1,Math.round(h*60))+'m ago':h<24?Math.round(h)+'h ago':Math.floor(h/24)+'d ago',
  lbl:x=>{const h=AGE.relH(x);return h==null?'Listed '+AGE.txt(x):'Relisted '+AGE.ago(h)+' · first listed '+AGE.txt(x)+' ago'},
  ic:n=>`<i class="ico aic" style="--i:url(icons/ui/${n}.svg)"></i>`,
  ico:x=>{if(x.age_d==null)return '';const h=AGE.relH(x);return `<span class="agei" title="${AGE.tip(x)}">${AGE.ic('listed')}${AGE.txt(x)}${h==null?'':`<span class="agesp"></span><span class="agerl">↻</span>${AGE.ago(h).replace(' ago','')}`}</span>`},
  chip:x=>x.age_d==null?'':AGE.ico(x),
+ isNew:x=>{if(x.listed){const L=Date.parse(String(x.listed).replace(' ','T')+':00+08:00');if(isFinite(L)&&Date.now()-L<864e5)return true}const h=AGE.relH(x);return h!=null&&h<24},
  badges:x=>{let o='';
   if(x.fresh)o+=`<span class="ageb fr" title="Listed under 24h ago and already ${x.discount}% under fair. Most good deals sell within hours (median sale is about 7h after listing).">⚡ FRESH</span>`;
-  if(x.stale)o+=`<span class="ageb st" title="On the market ${AGE.txt(x)}. Only about 7% of characters take 7+ days to sell, so the ask is likely above what buyers pay. The seller may cut the price or take an offer.">🕰 STALE${x.cut_n?' · cut '+x.cut_n+'x':''}</span>`;
-  else if(x.cut_n>=2&&x.age_d>=3)o+=`<span class="ageb ct" title="Price cut ${x.cut_n} times in ${AGE.txt(x)} (${x.cut_pct}% overall). This seller is motivated and may go lower.">✂️ CUTTING</span>`;
+  if(x.stale&&!AGE.isNew(x))o+=`<span class="ageb st" title="On the market ${AGE.txt(x)}. Only about 7% of characters take 7+ days to sell, so the ask is likely above what buyers pay. The seller may cut the price or take an offer.">🕰 STALE${x.cut_n?' · cut '+x.cut_n+'x':''}</span>`;
+  else if(!AGE.isNew(x)&&x.cut_n>=2&&x.age_d>=3)o+=`<span class="ageb ct" title="Price cut ${x.cut_n} times in ${AGE.txt(x)} (${x.cut_pct}% overall). This seller is motivated and may go lower.">✂️ CUTTING</span>`;
   return o},
  note:d=>d&&d.market?`<span class="mkt" title="Median of the last ${d.market.days} days of sales (${d.market.n}) vs our model's fair value. Fair values and % under/over are scaled by this, so they match what similar characters sell for now.">📉 ${d.market.note}</span>`:''
 };

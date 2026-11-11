@@ -95,7 +95,7 @@ function solo(id,L){const x=L.find(y=>y.id==id);if(!x)return;let o=document.getE
  o.classList.add('on');box.style.display='none';o.scrollTop=0;
  sback.onclick=()=>{if(window.FH&&FH._phd)return;if(window._homeSolo){history.back();return}closeSoloLocal(tmp)}}
 let CH=null;const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const pt=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);const ms=Date.UTC(+m[1],m[2]-1,+m[3],+m[4]+7,+m[5]);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
+const pt=t=>{const ms=window.parsePT(t);const f=o=>new Intl.DateTimeFormat(o[0],Object.assign({timeZone:'America/Los_Angeles'},o[1])).format;const d=x=>f(['en-CA',{}])(x),n=Date.now();
  return (d(ms)==d(n)?'Today':d(ms)==d(n-864e5)?'Yesterday':f(['en-US',{month:'short',day:'numeric'}])(ms))+' at '+f(['en-US',{hour:'numeric',minute:'2-digit'}])(ms)};
 const ptOld=t=>{const m=t.match(/(\d+)-(\d+)-(\d+) (\d+):(\d+)/);let h=+m[4];const ap=h<12?'AM':'PM';h=h%12||12;return `${MO[m[2]-1]} ${+m[3]} ${h}:${m[5]} ${ap}`};
 window.hist20=(x,bd)=>hist20(x,bd);function hist20(x,bd){FH.load().then(S=>{try{FH.pastBox&&FH.pastBox(x,bd,S)}catch(e){}try{FH.ownersBox&&FH.ownersBox(x,bd,S)}catch(e){}try{window.PW&&PW.box(x,bd)}catch(e){}const H=FH.build(x,S);if(!H.events.length)return;
