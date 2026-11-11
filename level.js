@@ -8,22 +8,25 @@ const fm=n=>Math.round(n).toLocaleString('en-US');
 let P=null;
 const LV=window.LV={load(){return P||(P=fetch('data/level_history/latest.json?'+Math.floor(Date.now()/36e5)).then(r=>r.ok?r.json():null).catch(()=>null))}};
 const SP='icons/spirit-head-dragon.png?v=6';
+function listings(){return (typeof D!=='undefined'&&D&&D.listings)||[]}
 function liveMap(){
-  const byId={},byK={},L=(window.D&&D.listings)||[];
+  const byId={},byK={},L=listings();
   for(const x of L){
-    if(x&&x.id)byId[x.id]=x;
+    if(x&&x.id!=null)byId[String(x.id)]=x;
     if(x&&x.name&&x.server)byK[x.name+'|'+x.server]=x;
   }
-  return {byId,byK};
+  return {byId,byK,ready:L.length>0};
 }
 function merge(rows){
-  const {byId,byK}=liveMap();
+  const {byId,byK,ready}=liveMap();
   return (rows||[]).map(r=>{
-    const x=(r.id&&byId[r.id])||byK[(r.name||'')+'|'+(r.server||'')];
-    if(!x)return Object.assign({},r,{live:false});
-    return Object.assign({},r,{
+    const x=(r.id!=null&&byId[String(r.id)])||byK[(r.name||'')+'|'+(r.server||'')];
+    if(x)return Object.assign({},r,{
       live:true,src:'listed',lv:x.lv??r.lv,ps:x.ps??r.ps,id:x.id,usd:x.usd,cls:x.cls||r.cls,has_snap:true
     });
+    // Listings not loaded yet: trust the snapshot. Once they are loaded, drop For sale if the character is gone.
+    const live=!ready&&r.src==='listed';
+    return Object.assign({},r,{live,src:ready&&r.src==='listed'?'seen':r.src});
   }).sort((a,b)=>b.lv-a.lv||(b.ps||0)-(a.ps||0)||String(a.name).localeCompare(String(b.name))||String(a.server).localeCompare(String(b.server)));
 }
 function servers(rows){
@@ -41,7 +44,7 @@ LV.tool=function(){
   const bindSv=el=>{if(!el)return;el.querySelectorAll('[data-sv]').forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();goServer(b.dataset.sv)})};
   const goServer=s=>{if(!s)return;srv=s;shown=25;draw().then(()=>{try{G.scrollIntoView({block:'start'})}catch(e){}})};
   const openRow=r=>{
-    if(r.live&&r.id&&window.T20&&window.D){T20.solo(r.id,D.listings);return}
+    if(r.live&&r.id&&window.T20&&listings().length){T20.solo(r.id,listings());return}
     if(r.id&&window.soloSold){soloSold(r.id,r.name||'')}
   };
   const row=(r,i)=>{
@@ -77,7 +80,7 @@ LV.tool=function(){
   });
   G.innerHTML='<div style="font-size:13px;color:#b9a3bd;padding:8px 0">Loading level ranking...</div>';
   draw();
-  let n=0;const w=setInterval(()=>{n++;if((window.D&&D.listings)||n>40){clearInterval(w);if(window.D&&D.listings)draw()}},200);
+  let n=0;const w=setInterval(()=>{n++;if(listings().length||n>40){clearInterval(w);if(listings().length)draw()}},200);
 };
 const ti=()=>{if(document.getElementById('lvg'))LV.tool();else setTimeout(ti,500)};ti();
 })();
