@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-10",
+    "emoji": "✨",
+    "text": "Times now follow Pacific daylight saving, so the header clock matches real Pacific time. STALE and NEW no longer appear together; a current listing from the last 24 hours shows only NEW. If no Top deal is under fair, we show the closest to fair under $25k and label it that way. Home has a best-under-$25k strip for Taoist, Arbalist, Warrior and Lancer. Character details add similar listings, a per-stat comparison with sold comps, and an extractable bag estimate (labeled as an estimate, with the method shown). Watchlist can alert you on this phone, with no sign-in, for new listings and price cuts in classes you pick under your budget. The Arbalist class guide now includes sourced PvP notes from Item Level Gaming (Sep 2022) and mir4db, and says when no source gives a combo or leveling order.",
+    "ts": "2026-11-10T16:59:20-08:00"
+  },
+  {
+    "date": "2026-11-10",
     "emoji": "🐉",
     "text": "The Top power tab now uses the same spirit as the Top power title. The Top by class link uses the same spirit as the Top by class title.",
     "ts": "2026-11-10T02:48:02-08:00"
