@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11 14:28",
+ "updated": "2026-11-11 15:41",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
