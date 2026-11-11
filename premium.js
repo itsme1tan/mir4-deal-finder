@@ -110,11 +110,57 @@ const dPT=t=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}).f
 const relPT=t=>{const d=dPT(t),n=Date.now(),hm=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'}).format(t),md=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric'}).format(t);return (d==dPT(n)?'Today':d==dPT(n-864e5)?'Yesterday':md)+' at '+hm};
 const PT=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 const ci=c=>`<img loading="lazy" decoding="async" src="icons/class/${(c||'').toLowerCase()}.webp" alt="${c}" title="${c}" style="width:28px;height:28px;vertical-align:-9px;margin-right:5px;border-radius:4px" onerror="this.replaceWith(document.createTextNode('${c} '))">`;
-function wl(){const ks=Object.keys(W);wcnt.textContent=ks.length;if(!ks.length){wlist.innerHTML='Tap ☆ Watch on any character. You will see price changes, relists and sales here after each refresh, about every 30 minutes (not real time).';return}
- wlist.innerHTML=ks.map(k=>{const w=W[k],[n,sv2,c]=k.split('|');const x=D.listings.find(z=>key(z)==k);
+const ALLC=['Warrior','Sorcerer','Taoist','Arbalist','Lancer','Darkist'];
+function loadCA(){try{return JSON.parse(localStorage.mir4calert||'{}')}catch(e){return {}}}
+function saveCA(S){localStorage.mir4calert=JSON.stringify(S)}
+function normCA(S){S=S||{};if(!Array.isArray(S.classes))S.classes=[];if(S.max==null||!isFinite(+S.max))S.max=25000;if(!S.snap||typeof S.snap!='object')S.snap={};if(!Array.isArray(S.inbox))S.inbox=[];return S}
+function caHtml(S){S=normCA(S);const boxes=ALLC.map(c=>`<label><input type="checkbox" data-ca="${c}" ${S.classes.includes(c)?'checked':''}> ${c}</label>`).join('');
+ const hits=(S.inbox||[]).slice(0,12).map(h=>{const kind=h.kind==='cut'?'Price cut':'New listing';const cut=h.kind==='cut'&&h.old!=null?` · ${f(h.old)} → ${f(h.wemix)} W`:'';return `<div class="cahit" data-id="${h.id||''}"><b>${kind}</b> · ${h.name||''} · ${h.cls||''} · $${f(h.usd)}${cut}</div>`}).join('')||'<div class="mt">No class alerts yet. After you pick classes, new listings and seller price cuts show up here on the next data refresh in this browser.</div>';
+ const nperm=typeof Notification==='undefined'?'unsupported':Notification.permission;
+ const nlab=S.notify&&nperm==='granted'?'Browser notifications: on':'Browser notifications: off';
+ return `<div class="caw"><div class="cahh">Class alerts</div><div class="dlg">Saved on this phone. No sign-in. We check when this page loads your latest data, not in the background if the tab is closed. New listings and seller price cuts (WEMIX ask down about 0.5% or more) in the classes you pick, at or under your max $.</div><div class="cacls">${boxes}</div><div class="caline"><label>Max $ <input type="number" id="camax" value="${S.max}" inputmode="decimal" min="0" style="width:7em"></label><button type="button" id="canotif">${nlab}</button></div><div class="cain">${hits}</div></div>`}
+function bindCA(S){S=normCA(S);
+ wlist.querySelectorAll('[data-ca]').forEach(b=>b.onchange=()=>{S.classes=ALLC.filter(c=>wlist.querySelector(`[data-ca="${c}"]`)?.checked);saveCA(S);runCA(false)});
+ const mx=wlist.querySelector('#camax');if(mx)mx.onchange=mx.oninput=()=>{const v=+mx.value;if(isFinite(v)&&v>=0){S.max=v;saveCA(S)}};
+ const nb=wlist.querySelector('#canotif');if(nb)nb.onclick=()=>{if(typeof Notification==='undefined'){nb.textContent='Browser notifications are not available';return}
+  const go=ok=>{S.notify=!!ok;saveCA(S);nb.textContent=S.notify?'Browser notifications: on':'Browser notifications: off'};
+  if(Notification.permission==='granted'){go(!S.notify);return}
+  if(Notification.permission==='denied'){go(false);nb.textContent='Notifications blocked in this browser';return}
+  Notification.requestPermission().then(p=>go(p==='granted'))};
+ wlist.querySelectorAll('.cahit[data-id]').forEach(r=>r.onclick=()=>{if(r.dataset.id&&window.T20)T20.solo(r.dataset.id,D.listings)})}
+function showCABanner(hits,S){let o=document.getElementById('calert');
+ if(!hits.length){if(o)o.remove();return}
+ if(!o){o=document.createElement('div');o.id='calert';const host=document.getElementById('dotd')||document.getElementById('t20');if(host)host.before(o);else document.body.prepend(o)}
+ const n=hits.filter(h=>h.kind==='new').length,c=hits.filter(h=>h.kind==='cut').length;
+ const parts=[n?`${n} new listing${n>1?'s':''}`:'',c?`${c} price cut${c>1?'s':''}`:''].filter(Boolean).join(' and ');
+ o.innerHTML=`<b>Class alerts</b> · ${parts} in your watched classes at or under $${f(S.max)}.<div class="caact"><button type="button" id="caview">View in Watchlist</button><button type="button" id="cadism">Dismiss</button></div>`;
+ o.querySelector('#caview').onclick=()=>{const d=document.getElementById('pwl');if(d){d.open=true;d.scrollIntoView({block:'start'})}o.remove()};
+ o.querySelector('#cadism').onclick=()=>o.remove()}
+function runCA(announce){const S=normCA(loadCA());
+ const match=x=>S.classes.includes(x.cls)&&x.usd!=null&&x.usd<=S.max;
+ const hits=[];
+ if(S.inited&&S.classes.length){
+  D.listings.forEach(x=>{if(!match(x))return;const prev=S.snap[x.id];
+   if(!prev)hits.push({kind:'new',id:x.id,name:x.name,cls:x.cls,usd:x.usd,wemix:x.wemix,t:Date.now()});
+   else if(x.wemix!=null&&prev.wemix!=null&&x.wemix<prev.wemix*0.995)hits.push({kind:'cut',id:x.id,name:x.name,cls:x.cls,usd:x.usd,wemix:x.wemix,old:prev.wemix,t:Date.now()})})}
+ const snap={};D.listings.forEach(x=>{snap[x.id]={usd:x.usd,wemix:x.wemix,cls:x.cls,name:x.name}});
+ S.snap=snap;S.inited=1;
+ const k=h=>h.kind+'|'+h.id+'|'+(h.wemix||'');
+ const have=new Set((S.inbox||[]).map(k));
+ hits.forEach(h=>{if(!have.has(k(h)))S.inbox.unshift(h)});
+ S.inbox=S.inbox.slice(0,30);saveCA(S);
+ if(announce!==false){
+  showCABanner(hits,S);
+  if(S.notify&&hits.length&&typeof Notification!=='undefined'&&Notification.permission==='granted'){
+   hits.slice(0,3).forEach(h=>{try{new Notification(h.kind==='cut'?'Price cut in a watched class':'New listing in a watched class',{body:`${h.name} · ${h.cls} · $${Math.round(h.usd)}`,tag:k(h)})}catch(e){}})}}
+ return S}
+function wl(){const S=runCA(true);const ks=Object.keys(W);wcnt.textContent=ks.length;
+ const empty='Tap ☆ Watch on any character. You will see price changes, relists and sales here after each refresh, about every 30 minutes (not real time).';
+ const body=ks.length?ks.map(k=>{const w=W[k],[n,sv2,c]=k.split('|');const x=D.listings.find(z=>key(z)==k);
   if(x){const p=Math.round((x.wemix/w.wemix-1)*1000)/10;return `<div class="xc"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span>${ci(c)}<b><a class="fn" data-l="${x.id}">${n}</a></b> · ${sv2}</span><span style="text-align:right;white-space:nowrap"><small class="mt">Listed now</small><br><b>${f(x.wemix)} W</b> ($${f(x.usd)})</span></div>${p?`${p>0?'Up':'Down'} ${Math.abs(p)}% since ${w.t}.`:'No price change since '+w.t+'.'}${x.id!=w.id?' Relisted under a new listing.':''}</div>`}
   const s=D.sales.find(z=>z.name==n&&z.cls==c&&(!z.server||z.server==sv2));
-  return `<div class="xc">${ci(c)}<b>${s&&s.id?`<span class="fs" data-s="${s.id}">${n}</span>`:n}</b> · ${sv2}<br>${s?`Sold for ${f(s.wemix)} WEMIX on ${PT.format(sms(s.sold))} PT.`:'Not listed right now (delisted or sold outside our sales sample).'} <button class="wst on" data-w="${encodeURIComponent(k)}">Remove</button></div>`}).join('');lk(wlist)}
+  return `<div class="xc">${ci(c)}<b>${s&&s.id?`<span class="fs" data-s="${s.id}">${n}</span>`:n}</b> · ${sv2}<br>${s?`Sold for ${f(s.wemix)} WEMIX on ${PT.format(sms(s.sold))} PT.`:'Not listed right now (delisted or sold outside our sales sample).'} <button class="wst on" data-w="${encodeURIComponent(k)}">Remove</button></div>`}).join(''):empty;
+ wlist.innerHTML=caHtml(S)+body;bindCA(S);lk(wlist)}
 const med=a=>{a=[...a].sort((x,y)=>x-y);const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2},q=(a,p)=>{a=[...a].sort((x,y)=>x-y);return a[Math.min(a.length-1,Math.floor(p*a.length))]};
 function prices(){const now=window.parsePT(D.updated),S=D.sales.filter(s=>s.wemix&&s.sold),u=D.wemix_usd;
  const cls=[...new Set(S.map(s=>s.cls))].sort();

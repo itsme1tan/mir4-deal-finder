@@ -49,6 +49,31 @@ document.head.insertAdjacentHTML('beforeend',`<style>
 .simr .sp small{display:block;font-weight:600;font-size:11px}
 .siml .dlg{padding:6px 10px 4px;font-size:11px;color:#b9a3bd;line-height:1.35}
 .siml .mt{padding:8px 10px;color:#d9c6dc;font-size:13px}
+.exb{margin:10px 0 4px;min-width:0;border:1px solid #3a2040;border-radius:10px;background:#1c1020;overflow:hidden}
+.exb>summary{cursor:pointer;font-weight:700;color:#e8c872;padding:8px 10px;list-style:none}
+.exb>summary::-webkit-details-marker{display:none}
+.exb .est{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;letter-spacing:.04em;color:#2a1030;background:#e8c872;border-radius:999px;padding:1px 7px;vertical-align:2px}
+.vct{padding:0 10px 6px;min-width:0}
+.vcr{display:grid;grid-template-columns:1fr auto;grid-template-areas:"lab val" "med pct";gap:0 10px;padding:6px 0;border-top:1px solid #2a1730;min-width:0}
+.vcr>span:first-child{grid-area:lab;color:#d9c6dc;font-size:12px;min-width:0}
+.vcr>b{grid-area:val;color:#fff;font-size:13px;text-align:right;overflow-wrap:anywhere}
+.vcr .vm{grid-area:med;font-size:11px;color:#b9a3bd;min-width:0}
+.vcr .pos,.vcr .neg{grid-area:pct;text-align:right;font-size:12px;font-weight:700}
+.vcr .pos{color:#e8c872}.vcr .neg{color:#f87171}
+.exb .dlg{padding:6px 10px 10px;font-size:11px;color:#b9a3bd;line-height:1.35}
+#calert{margin:10px 12px 0;padding:10px 12px;background:linear-gradient(180deg,#2a1030,#1c1020);border:1px solid #e8c872;border-radius:12px;color:#f2e8f2;font-size:13px;line-height:1.4;min-width:0}
+#calert b{color:#e8c872}
+#calert .caact{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+#calert button,.caw button,.caw input[type=number]{font:inherit;font-size:12px;font-weight:700;border:1px solid #e8c872;background:rgba(232,200,114,.08);color:#e8c872;border-radius:999px;padding:5px 10px;cursor:pointer}
+.caw{margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid #3a2040;min-width:0}
+.caw .cahh{font-weight:700;color:#e8c872;margin-bottom:4px}
+.caw .cacls{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.caw .cacls label{display:inline-flex;align-items:center;gap:4px;border:1px solid #3a2040;border-radius:999px;padding:4px 8px;font-size:12px;color:#e3d3e6}
+.caw .caline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+.caw .cain{margin-top:8px}
+.caw .cahit{padding:6px 0;border-top:1px solid #2a1730;font-size:13px;min-width:0;overflow-wrap:anywhere}
+.caw .cahit b{color:#e8c872}
+
 
 .phc{margin:6px 0 12px;padding:10px;background:#1c1020;border:1px solid #3a2040;border-radius:12px}.phc h4{margin:0 0 6px;color:#e8c872;font-size:13px}
 .phc svg{display:block;width:100%;height:auto}.phl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:#d9c6dc;margin-top:6px}.phl span{display:inline-flex;align-items:center;gap:4px}.phl .ico{width:12px;height:12px;background:#e8c872}
