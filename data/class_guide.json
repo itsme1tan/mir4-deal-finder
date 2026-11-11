@@ -1492,12 +1492,12 @@
       "i": [
        "icons/skills/arbalist-arrow-rain.webp"
       ],
-      "note": ""
+      "note": "Have this ready before a fight. 10s cooldown. Item Level Gaming, Sep 2022."
      },
      {
       "s": [],
       "i": [],
-      "note": "Use ranged skills while keeping distance"
+      "note": "Use other skills, then back off and keep your distance. The guide does not name those other skills."
      },
      {
       "s": [
@@ -1506,15 +1506,16 @@
       "i": [
        "icons/skills/arbalist-arrow-rain.webp"
       ],
-      "note": ""
+      "note": "Return with Arrow Rain, and always end the combo with it so the enemy is unprepared and defensive buffs drop."
      }
     ],
-    "prio": "No source gives a leveling order. Guides agree Arrow Rain (10s cooldown) is the core skill in every fight.",
+    "prio": "No source gives a skill-by-skill leveling order. Item Level Gaming (Sep 2022) and mir4db treat Arrow Rain (the Ultimate, 10s cooldown) as the core skill in every fight.",
     "src": [
      "ilA",
      "mdb"
     ],
-    "pvp_bonus": "No sourced damage bonus. Guides say to end every combo with Arrow Rain (10s cooldown), its main damage skill."
+    "pvp_bonus": "Item Level Gaming (Sep 2022) calls Arbalist a high-damage, low-survivability class. It says to turn off auto-attack, have Arrow Rain ready before a fight, use other skills, back off, then return with Arrow Rain, always end combos with Arrow Rain so the enemy is unprepared and defensive buffs drop, and not to repeat the same combos. In PvE it says to keep distance and stack mobs for Arrow Rain. It does not name a skill-by-skill combo or a leveling order, and it may be older than recent patches.",
+    "note": "No sourced named combo beyond Arrow Rain as the start and end of a fight. The Item Level guide is from September 2022. Check in game before spending skill books."
    }
   },
   "Lancer": {
