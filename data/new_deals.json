@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12 06:07",
+ "updated": "2026-11-12 08:01",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,10 +10,10 @@
    "cls": "Arbalist",
    "ps": 754170,
    "build_score": 100,
-   "usd": 9375,
-   "fair_usd": 10289,
+   "usd": 9434,
+   "fair_usd": 10354,
    "pct_under": 8.9,
-   "usd_under": 914,
+   "usd_under": 920,
    "link": "https://nft.hofgamer.com/mir4/nft/2373943"
   }
  ]
