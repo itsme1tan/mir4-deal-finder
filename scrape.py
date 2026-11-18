@@ -234,9 +234,10 @@ def draco():
         p=req('https://webapi.mir4global.com/wallet/prices/draco/lastest','POST')['data']; dby=req('https://webapi.mir4global.com/wallet/prices/derby','POST')['data'][-1]
         return {'usd':float(p['USDDracoRate']),'wemix':float(p['DracoPriceWemix']),'derby_ds':int(dby['DS']),'smelt_ds':int(dby['SmeltingCost']),'date':dby['CreatedDate']}
     except Exception as e: print('draco price failed',e); return None
-def main(ps_min=600000, max_new=400):
+def main(ps_min=500000, max_new=400):
     usd=json.loads(get('https://api.coingecko.com/api/v3/simple/price?ids=wemix-token&vs_currencies=usd'))['wemix-token']['usd']
-    lst=cards('sale',ps_min); sold=cards('sold',int(ps_min*0.85))
+    # Sold floor stays at 510k (the old 600k listing floor * 0.85) so the comparable-sales window does not jump down to 425k.
+    lst=cards('sale',ps_min); sold=cards('sold',510000)
     cut=(dt.date.today()-dt.timedelta(days=90)).isoformat()
     sold=[s for s in sold if s['sold'] and s['sold'][:10]>=cut and s['wemix']]
     cache=load_cache()

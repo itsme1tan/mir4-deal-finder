@@ -66,7 +66,7 @@ const css=`#tnav{position:fixed;left:0;right:0;bottom:0;z-index:1100;display:fle
 #tsh .fok b{display:block;color:#e8c872;font-size:19px;margin:10px 0 6px}#tsh .fok p{color:#cdb8d0;font-size:14px;margin:0 0 16px}
 #fbbtn{display:block;margin:6px auto 18px;background:none;border:1px solid #e8c87255!important;color:#e8c872;border-radius:999px;padding:7px 16px;font-size:12px;opacity:.85}
 details.pro,.ctl{display:none!important}
-body[data-nv=ctl] .ctl{display:flex!important}body[data-nv=ctl] #padv{display:block!important}
+body[data-nv=ctl] .ctl{display:flex!important}@media (max-width:767px){body[data-nv=ctl] .ctl{display:grid!important}}body[data-nv=ctl] #padv{display:block!important}
 #nvx{position:fixed;right:max(12px,env(safe-area-inset-right,0px));top:max(10px,env(safe-area-inset-top,0px));z-index:1300;display:none;background:#2a1030;color:#e8c872;border:1px solid #e8c87266;border-radius:999px;padding:7px 14px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.5)}
 html,body{max-width:100%;overflow-x:hidden}body[data-nv]{overflow-x:hidden}body[data-nv] #nvx{display:block}body[data-nv=ctl] #nvx,body:has(#solo.on) #nvx{display:none!important}.nva>*:not(.nva):not(.nvp):not(#fbbtn):not(#tnav):not(#tsh):not(#nvx):not(#solo):not(script):not(style){display:none!important}body.nva{padding-top:44px}body[data-nv]:not([data-nv=ctl]) #xnav{display:none!important}
 #tsh .fl .it{padding:10px 2px}#tsh .it span{flex:1;text-align:left}#tsh .fl .it i{font-style:normal;color:#b9a3bd}#tsh .it{border:0!important;border-bottom:1px solid #3a1a3c!important;border-radius:0!important;box-shadow:none!important;outline:none;margin:0}#tsh .it>b{width:24px;text-align:center;font-weight:400;font-size:16px;color:#e8c872;flex:none}`;
@@ -134,8 +134,10 @@ function more(){pn.innerHTML=`<div class="gr"></div>
  pn.querySelector('#tfb').onclick=()=>feedback();
  pn.querySelector('#thow').onclick=()=>{if(!IDX){location.href='index.html#nv=how';return}closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='how';const n=document.querySelector('.note');n.classList.add('show');n.classList.add('nvp');for(let q=n.parentElement;q;q=q.parentElement){q.classList.add('nva');if(q==document.body)break}close();mark('more');setTimeout(()=>scrollTo({top:0,behavior:'instant'}),60)};
  sh.classList.add('show');mark('more')}
-if(IDX){const m=location.hash.match(/nv=([a-z]+)/);if(m){let k=m[1];const toSold=k=='ppr';if(toSold)k='pfeed';history.replaceState(null,'',location.pathname+location.search);let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
- if(k=='ctl'){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';mark('browse');scrollTo(0,0)}
+if(IDX){const m=location.hash.match(/nv=([a-z]+)/);const qs=new URLSearchParams(location.search),hp=new URLSearchParams((location.hash||'').replace(/^#/,'').replace(/;/g,'&'));
+ const want=(qs.get('preset')||hp.get('preset')||qs.get('cls')||qs.get('class')||qs.get('pmin')||qs.get('pmax')||hp.get('cls')||hp.get('class')||hp.get('pmin')||hp.get('pmax'));
+ if(m||want){let k=m?m[1]:'ctl';const toSold=k=='ppr';if(toSold)k='pfeed';['preset','cls','class','pmin','pmax','sort'].forEach(key=>{const v=hp.get(key);if(v&&!qs.get(key))qs.set(key,v)});history.replaceState(null,'',location.pathname+(qs.toString()?'?'+qs.toString():''));let n=0;const tm=setInterval(()=>{n++;const ready=document.querySelector('#t20 .tr20')&&(k=='ctl'||k=='how'||document.getElementById(k));if(ready||n>60){clearInterval(tm);if(!ready)return;
+ if(k=='ctl'){closeOv();unmark();document.body.classList.remove('simple');document.body.dataset.nv='ctl';mark('browse');const el=document.querySelector('.ctl');scrollTo(0,el?Math.max(0,el.getBoundingClientRect().top+scrollY-8):0)}
  else if(k=='how'){more();pn.querySelector('#thow').click()}else{openF(k);if(toSold)setTimeout(()=>{const f=document.getElementById('fsold');if(f)scrollTo(0,f.getBoundingClientRect().top+scrollY-56)},800)}}},150)}}
 else mark(/classes/.test(location.pathname)?'browse':'');
 nav.onclick=e=>{const b=e.target.closest('button');if(!b)return;const t=b.dataset.t;
