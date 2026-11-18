@@ -1,805 +1,811 @@
 [
-  {
-    "date": "2026-11-12",
-    "emoji": "🏯",
-    "text": "Top power rows now show each player's clan. Tap the clan name to see members we know in that clan, with power, class and server. The list only includes players who appear in our daily rankings (the global top 1000 or that server's top 100).",
-    "ts": "2026-11-12T11:30:25-08:00"
-  },
-  {
-    "date": "2026-11-10",
-    "emoji": "✨",
-    "text": "Times now follow Pacific daylight saving, so the header clock matches real Pacific time. STALE and NEW no longer appear together; a current listing from the last 24 hours shows only NEW. If no Top deal is under fair, we show the closest to fair under $25k and label it that way. Home has a best-under-$25k strip for Taoist, Arbalist, Warrior and Lancer. Character details add similar listings, a per-stat comparison with sold comps, and an extractable bag estimate (labeled as an estimate, with the method shown). Watchlist can alert you on this phone, with no sign-in, for new listings and price cuts in classes you pick under your budget. The Arbalist class guide now includes sourced PvP notes from Item Level Gaming (Sep 2022) and mir4db, and says when no source gives a combo or leveling order.",
-    "ts": "2026-11-10T16:59:20-08:00"
-  },
-  {
-    "date": "2026-11-10",
-    "emoji": "🐉",
-    "text": "The Top power tab now uses the same spirit as the Top power title. The Top by class link uses the same spirit as the Top by class title.",
-    "ts": "2026-11-10T02:48:02-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "✨",
-    "text": "Spirit art is now bigger and themed, with forward-facing spirits in the header, Top 20, Top power, Class guide, and more. Hold and swipe on the WEMIX price history chart to see the price at each time.",
-    "ts": "2026-11-09T17:54:07-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "🐉",
-    "text": "Cute spirit icons now show in the header and Top sections (Top 20 strongest and Top power). Tap the WEMIX price at the top to open its price history.",
-    "ts": "2026-11-09T17:19:02-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "🚀",
-    "text": "Fastest growing now only ranks characters who stayed in the top 100 by power on every tracked day in the window (per server when a server is picked). Server tags stay tappable.",
-    "ts": "2026-11-09T11:45:00-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "🖥",
-    "text": "Server tags on characters in the Power tool are now tappable. Tap one to open Top power ranked for that server.",
-    "ts": "2026-11-09T11:42:00-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "🏆",
-    "text": "Top power ranks for characters now use the same gold circle badges as the class lists (plain numbers, no hash). Applies to All servers, per-server, and Fastest growing.",
-    "ts": "2026-11-09T11:30:00-08:00"
-  },
-  {
-    "date": "2026-11-09",
-    "emoji": "🏆",
-    "text": "Top power now shows the top 100 characters and adds a server picker so you can rank within one server (All servers is still the default). Same deck swap handling as before.",
-    "ts": "2026-11-09T11:20:00-08:00"
-  },
-  {
-    "date": "2026-11-03",
-    "emoji": "🪙",
-    "text": "The WEMIX price at the top now shows 4 decimals and updates live every minute while the page is open. Dollar prices for listings still use the price from the last data update, so every figure stays consistent.",
-    "ts": "2026-11-03T10:30:00-08:00"
-  },
-  {
-    "date": "2026-11-02",
-    "emoji": "🏆",
-    "text": "Power tool now opens with a Top power leaderboard, with Fastest growing one tap away. Charts show each character's highest power and date. Sudden power drops are marked as deck swaps (EXP spirit and magic stone setups) and no longer count as losses or inflate growth.",
-    "ts": "2026-11-02T04:30:00-08:00"
-  },
-  {
-    "date": "2026-10-31",
-    "emoji": "📖",
-    "text": "Class guide polish: Darkist skills now show damage and summaries, Arbalist skills have short summaries, and the Debuff guide adds Burn, Darkness, Marker, Freeze, Silence, Blind and Stun plus Bash values for every class.",
-    "ts": "2026-10-31T09:00:00-07:00"
-  },
-  {
-    "date": "2026-10-31",
-    "emoji": "🔑",
-    "text": "Class guide upgrade: 68 skills now list their key effects by tier, like stun and debuff removal, immunities, knockdown, freeze, heals, revives and buff durations. Guardian Circle now shows it removes party Stun from Tier 8.",
-    "ts": "2026-10-31T08:30:00-07:00"
-  },
-  {
-    "date": "2026-10-31",
-    "emoji": "📘",
-    "text": "New Class guide in Tools: every skill for all six classes with its icon, type, cooldown and full in-game description, plus a PvP combo and a skill leveling priority for each class, with links to the sources.",
-    "ts": "2026-10-31T06:00:00-07:00"
-  },
-  {
-    "date": "2026-10-29",
-    "emoji": "🔎",
-    "text": "Power now saves every server's top 100 each day, not only the global top 1000. Power search ignores decorative symbols and reads lookalike letters as normal ones, so typing Archer finds ・Archєr・. When nothing matches, it says No match yet.",
-    "ts": "2026-10-29T10:15:00-07:00"
-  },
-  {
-    "date": "2026-10-29",
-    "emoji": "⚡",
-    "text": "New Power tool: search any character to see its power score over time, from the daily global top 1000 ranking and our marketplace records. Character pages show a Power progression chart when we have two or more points. A Fastest growing list for the last 7 and 30 days starts once we have two days of rankings.",
-    "ts": "2026-10-29T10:00:00-07:00"
-  },
-  {
-    "date": "2026-10-29",
-    "emoji": "👛",
-    "text": "Character pages now have an Owners list: the wallets that held that character over time, from public WEMIX chain records, with what they paid and sold for. Each wallet shows the character name it usually used, which is a guess and not who owns it. Tap a wallet to see every character it held.",
-    "ts": "2026-10-29T05:30:00-07:00"
-  },
-  {
-    "date": "2026-10-29",
-    "emoji": "🏷️",
-    "text": "Character pages now have a Past names section listing every name we know for that character, newest first, with the date and the sold price. Feed shows current names too, with the old name in small text. Old sales are only linked to a character when the sale is on that character's own WEMIX record.",
-    "ts": "2026-10-29T05:00:00-07:00"
-  },
-  {
-    "date": "2026-10-29",
-    "emoji": "🔙",
-    "text": "Price history now shows each character's current name, with the old name in small text when it was renamed. Back from a character page now returns you to the page you opened it from, like Price history or Feed, instead of the home page.",
-    "ts": "2026-10-29T04:00:00-07:00"
-  },
-  {
-    "date": "2026-10-28",
-    "emoji": "🗂️",
-    "text": "Older sold characters now open a full page from Price history and search, with gear, skills, spirits and magic stones. These details were fetched after the sale, so the page says they may differ from when it sold. New sales that sell before a snapshot is saved get their details fetched automatically.",
-    "ts": "2026-10-28T21:05:00-07:00"
-  },
-  {
-    "date": "2026-10-28",
-    "emoji": "🔗",
-    "text": "Sold characters now have a Share button at the top of their page, and a shared link to a sold character opens its saved page. Open on XDRACO at the bottom of character pages is no longer hidden under the bottom menu, so it opens on phones.",
-    "ts": "2026-10-28T18:20:00-07:00"
-  },
-  {
-    "date": "2026-10-27",
-    "emoji": "⏰",
-    "text": "Timer: World boss rows now name the Abaddon map, so Tuesday's Nerkan shows as Nerkan · Black Flame Abaddon (portal on Redmoon Valley 4F). Turkan, Krukan and Utukan show Violet, Shackling and Crimson Abaddon.",
-    "ts": "2026-10-27T19:05:00-07:00"
-  },
-  {
-    "date": "2026-10-27",
-    "emoji": "🛠️",
-    "text": "Magic Stones: identical stones on the same characters no longer share one set of stats. Each equipped stone now shows its own substats, read from the character's own inventory on XDRACO.",
-    "ts": "2026-10-27T16:59:00-07:00"
-  },
-  {
-    "date": "2026-10-27",
-    "emoji": "🛠️",
-    "text": "Magic Stones on character pages now show the deck the character has equipped in game, in slot order, with each stone's stats read from its own item detail. Tier II stones use the right scale, and the +N on a stone is labeled as its Trance step.",
-    "ts": "2026-10-27T16:08:00-07:00"
-  },
-  {
-    "date": "2026-10-27",
-    "emoji": "🛠️",
-    "text": "Feed 36h now shows characters pulled from the market next to sold ones. A gold Sold or magenta Pulled tag shows how each one left, with the last price and time, and a 🏆 badge marks characters that were in the Top 20 strongest when they left.",
-    "ts": "2026-10-27T15:30:00-07:00"
-  },
-  {
-    "date": "2026-10-27",
-    "emoji": "🛠️",
-    "text": "Closing a character opened from Home puts you back at the same scroll spot, so a Top 20 row like #15 stays in view. Works with Back, Close, and returning from another tab.",
-    "ts": "2026-10-27T04:20:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🛠️",
-    "text": "Home Top strongest is now the Top 20, so every MIR4 class can show up (Darkist was sitting just outside the old Top 10). Class chips on that list cover all six classes and wrap on a phone. Browse and price-trend filters always keep Warrior, Sorcerer, Taoist, Arbalist, Lancer and Darkist.",
-    "ts": "2026-10-26T21:15:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🛠️",
-    "text": "Top by class now lists all six MIR4 classes (Warrior, Sorcerer, Taoist, Arbalist, Lancer, Darkist) with chips and Top 3 sections. Empty classes show a short note instead of vanishing, and the chips wrap on a phone so nothing slides sideways.",
-    "ts": "2026-10-26T21:05:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🛠️",
-    "text": "Price history resets when you Close and open it again, so you are not stuck on the last character. A Back to search control also returns you to the list while you stay in the tool.",
-    "ts": "2026-10-26T19:35:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🛠️",
-    "text": "Top deal now shows how many dollars a character is under fair value, picking the best under-fair ask under $25k. Price history is steadier on phones: no sideways slide, Close stays reachable, and coming back from XDRACO no longer leaves you stuck.",
-    "ts": "2026-10-26T19:29:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🧹",
-    "text": "Cleanup across the site: character details now open only on XDRACO, Home no longer repeats the Top deal in Newly listed, Feed 36h is listings only with a link to Price history, and icons, price-cut sashes and price-down labels are clearer.",
-    "ts": "2026-10-26T18:53:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🕘",
-    "text": "Character details are tidier: the price chart now sits at the top of the History tab with one History list below it. In Price history, characters without saved details link to XDRACO instead, and Back returns you to the tool with your pick kept.",
-    "ts": "2026-10-26T16:26:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🏆",
-    "text": "Price history now opens with the Top 3 strongest sold characters of all time by power score at sale, with class, server, price in W and USD, and date. Typos now always suggest the 3 closest characters with their class icon and last price.",
-    "ts": "2026-10-26T15:45:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🔎",
-    "text": "Price history search is more forgiving: it now covers all tracked characters, ignores case, accents and symbols like 丨 or ツ, matches ø as o, and suggests the closest names when you make a typo.",
-    "ts": "2026-10-26T15:36:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "📈",
-    "text": "New Price history tool in the Tools menu: search characters by current or old name, for sale or sold, and see their price line and full listing and sale history.",
-    "ts": "2026-10-26T15:25:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "📌",
-    "text": "Character details now keep the name, portrait, price, class and power pinned at the top while you scroll, so screenshots of characters always show who they are and what they cost.",
-    "ts": "2026-10-26T15:24:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🏰",
-    "text": "Cleaner Conquest and Training tiles on character details: the label now sits under the icon, the grid is evenly spaced, and the summary line uses the site's gold icons.",
-    "ts": "2026-10-26T15:05:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🎒",
-    "text": "Removed the Bag section from character details and Compare. Conquest and Training stay; use Open on XDRACO for the full bag.",
-    "ts": "2026-10-26T15:00:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🕘",
-    "text": "The History tab in character details now shows the full record (listings, relists, price cuts, sales and renames), the same as the History box.",
-    "ts": "2026-10-26T14:55:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "⭐",
-    "text": "Ultimate skills are now the same size as other skills, marked with a gold star. The star is explained under Skills.",
-    "ts": "2026-10-26T14:54:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🧩",
-    "text": "Character details now show Gear, Spirits and Skills together, one under the other. Stones, Stats, Value and History stay as tabs below.",
-    "ts": "2026-10-26T14:50:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🪪",
-    "text": "Renamed characters: History shows a sold character's current name (Now known as) and the names it had before (Formerly), with one joined timeline. Search finds characters by their old or new name.",
-    "ts": "2026-10-26T14:45:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "👆",
-    "text": "Tapping a character name in Feed 36h or Watchlist now opens that character's details.",
-    "ts": "2026-10-26T14:40:00-07:00"
-  },
-  {
-    "date": "2026-10-26",
-    "emoji": "🕘",
-    "text": "Full history for characters: History now shows every listing, relist, delist, sale and wallet move from the public WEMIX chain record, back to the day each character became an NFT. The price chart, listing age and History now agree. Older rows are in a collapsed Older records section.",
-    "ts": "2026-10-26T13:20:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "🧹",
-    "text": "Simpler site: removed the Extras tabs (Deals, Events, Leaders, Trends, Upgrade, Guide), the monthly sold price chart and the top-up countdown. Characters, Top 10, Browse, Feed 36h and Watchlist work as before.",
-    "ts": "2026-10-25T11:59:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "🔕",
-    "text": "Removed the Alerts tool. Use Watchlist and Feed 36h to follow characters and price changes.",
-    "ts": "2026-10-25T11:47:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "🏆",
-    "text": "Deal of the day is now Top deal right now: every hour we check for a better deal among characters under $25k and switch only if one is found. The share button is also smaller.",
-    "ts": "2026-10-25T11:02:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "📈",
-    "text": "Easier to read price history: the price now and how much it dropped sit on top, each price change gets its own space with its price, and markers no longer overlap.",
-    "ts": "2026-10-25T08:12:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "💜",
-    "text": "The share icon on characters is now lavender, so it stands apart from the gold watch star.",
-    "ts": "2026-10-25T08:08:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "📈",
-    "text": "Character details now show a price history chart with the first listing, relists, price cuts and the price now.",
-    "ts": "2026-10-25T08:01:00-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "🏆",
-    "text": "New Deal of the day at the top of Home: the best buy under $25k, with a fresh pick every midnight Pacific time.",
-    "ts": "2026-10-25T08:00:30-07:00"
-  },
-  {
-    "date": "2026-10-25",
-    "emoji": "🔗",
-    "text": "Share any character: tap the share icon to copy or send a link that opens the site on that character.",
-    "ts": "2026-10-25T08:00:00-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🕰️",
-    "text": "Characters now show their real first-listed age, even if they were listed before our tracker started, with a tag-clock icon and a pink ↻ for the latest relist.",
-    "ts": "2026-10-24T23:20:00-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "⚔️",
-    "text": "Timer: countdowns now read like a clock, and Altar of Darkness, the Black Dragon field boss and the Battlefield bosses were added. Clan Challenge was removed.",
-    "ts": "2026-10-24T23:19:00-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "💰",
-    "text": "Sold prices and the price trend chart now sit at the bottom of Feed 36h.",
-    "ts": "2026-10-24T22:53:46-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🔎",
-    "text": "Icons and badges now explains every icon, including the ↻ relisted marker and the Today summary chips.",
-    "ts": "2026-10-24T22:53:46-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📈",
-    "text": "Sold prices now has a weekly price trend chart by class and power, with a rising, falling or flat note.",
-    "ts": "2026-10-24T22:41:03-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "⚡",
-    "text": "Faster repeat visits, and the site now opens offline with the last data it saw.",
-    "ts": "2026-10-24T21:20:10-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📰",
-    "text": "Feed 36h now lets you pick the power cutoff, so you can see sales under 650k.",
-    "ts": "2026-10-24T18:39:06-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🔎",
-    "text": "Browse now starts empty until you pick a filter or search, with For sale now and Recently sold sections.",
-    "ts": "2026-10-24T18:36:22-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏷️",
-    "text": "Browse now shows recently sold characters XDRACO hides, with the sold price and date.",
-    "ts": "2026-10-24T18:27:48-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📱",
-    "text": "Sold prices is back to pictures only and now fits fully on your phone.",
-    "ts": "2026-10-24T18:13:51-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏷️",
-    "text": "Sold prices now shows a short class name under each picture.",
-    "ts": "2026-10-24T18:07:11-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📊",
-    "text": "Sold prices now fits your phone with no sideways swipe, with short icons for changes and a legend.",
-    "ts": "2026-10-24T18:05:49-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "💪",
-    "text": "The STRONG badge icon is now dark plum so it stands out on the gold.",
-    "ts": "2026-10-24T17:56:25-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🔎",
-    "text": "New Icons and badges guide in How this works, Send feedback on every page, times on What's new, and the feedback thank-you screen fits iPhone.",
-    "ts": "2026-10-24T17:51:07-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🔧",
-    "text": "Feedback sign-in fixed on iPhone: Google now opens in a popup.",
-    "ts": "2026-10-24T17:16:32-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "💬",
-    "text": "Send feedback: sign in with Google from More or the button on Home, and tell us your ideas or bugs.",
-    "ts": "2026-10-24T17:10:37-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📖",
-    "text": "How this works now opens on its own, with no character cards underneath, and the More tab stays lit while it's open.",
-    "ts": "2026-10-24T16:20:24-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🧭",
-    "text": "Close and Back now take you to the top of Home, and the Home, Tools and More bar is on every page, including Top by class and What's new.",
-    "ts": "2026-10-24T16:01:08-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📖",
-    "text": "How this works is now easy to read: short tap-to-open sections with plain bullets, and the icon credit line at the bottom is gone.",
-    "ts": "2026-10-24T15:56:22-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏠",
-    "text": "Tapping Home on a character page now takes you back to Home, and opening a tool closes the character page first.",
-    "ts": "2026-10-24T15:48:47-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "📱",
-    "text": "On iPhone the tab bar and menus now sit above the home line, so the last item isn't squeezed and taps at the bottom work.",
-    "ts": "2026-10-24T15:39:36-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏷️",
-    "text": "Filters+ matches on Home now say where they came from and show your active filters as small chips, with an Edit button.",
-    "ts": "2026-10-24T15:35:16-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🎯",
-    "text": "Filters+ matches on Home are now simple Top 10-style rows that show only the stats you searched for. Tap a row to open the full page.",
-    "ts": "2026-10-24T15:33:25-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🧹",
-    "text": "Tidier menu: swipe down to close sheets, tools open on their own, one Browse item, no duplicate links, gold badges instead of green, centered STRONG pill, and Feed now covers 36 hours.",
-    "ts": "2026-10-24T15:27:14-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🧰",
-    "text": "Bottom tabs are now Home, Tools and More with new minimal icons. Tools lists every feature (Browse, Timer, Filters+, Alerts, Watchlist, Sold prices, Feed 48h, Top by class) so the page stays tidy.",
-    "ts": "2026-10-24T15:16:08-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🧭",
-    "text": "New bottom tab bar (Top, Browse, More) tidies up the page. Sort, class and info options now live in the Browse and More sheets.",
-    "ts": "2026-10-24T15:04:39-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "➡️",
-    "text": "Newly listed autoscroll slowed to 3 pixels a second.",
-    "ts": "2026-10-24T14:52:26-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "➡️",
-    "text": "Newly listed autoscroll is slower and uses a smoother glide on phones.",
-    "ts": "2026-10-24T14:51:24-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "➡️",
-    "text": "Newly listed autoscroll is now half as fast and glides smoothly on phones.",
-    "ts": "2026-10-24T14:50:15-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "➡️",
-    "text": "Newly listed now scrolls slowly by itself and pauses while you touch or swipe it.",
-    "ts": "2026-10-24T14:48:13-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏷️",
-    "text": "Relisted characters with a price cut now show the old price crossed out on a slim corner ribbon in Newly listed.",
-    "ts": "2026-10-24T14:44:15-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏆",
-    "text": "Top by class rank numbers now match the gold-ringed Top 10 circles.",
-    "ts": "2026-10-24T13:48:48-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🏆",
-    "text": "Top 10 rank numbers now sit in small gold-ringed circles that are easier to see.",
-    "ts": "2026-10-24T13:46:10-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "⚖️",
-    "text": "Compare now works from Top 10 character pages: tap Compare on two characters, then Compare in the bottom bar.",
-    "ts": "2026-10-24T13:37:54-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "👉",
-    "text": "Newly listed 650k+ now swipes sideways through the last 7 days, with a small price-cut mark on relisted characters.",
-    "ts": "2026-10-24T10:52:06-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🔢",
-    "text": "Top 10 shows a small rank number on each photo. Stale and Cutting badges are smaller.",
-    "ts": "2026-10-24T10:42:24-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🕰",
-    "text": "Every card now shows how long the character has been listed. New badges: ⚡ FRESH (under 24h and already 10%+ under fair, act fast), 🕰 STALE (7+ days on the market, seller may cut or take an offer) and ✂️ CUTTING (price cut 2+ times). Fair values now follow the last 14 days of sales (shown as \"market -7% vs model\"), so % under is more realistic. New sort and filters by listing age.",
-    "ts": "2026-10-24T10:20:45-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🌸",
-    "text": "Top by class and What's new pages now match the magenta theme. Falling petals removed.",
-    "ts": "2026-10-24T07:52:26-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🌸",
-    "text": "New dark magenta theme with a banner wallpaper, glowing cards, gold accents and drifting petals.",
-    "ts": "2026-10-24T07:46:33-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🎨",
-    "text": "New app icon: an anime MIR4 spirit summoner in deep magenta, searching with a magnifying glass.",
-    "ts": "2026-10-24T07:40:15-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "🎨",
-    "text": "New anime-style app icon: a MIR4 warrior searching with a magnifying glass.",
-    "ts": "2026-10-24T06:50:18-07:00"
-  },
-  {
-    "date": "2026-10-24",
-    "emoji": "⏰",
-    "text": "Timer is now its own fold-out section in the features list.",
-    "ts": "2026-10-24T06:50:18-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "✂️",
-    "text": "Removed Clan Expedition from the Timer",
-    "ts": "2026-10-23T19:11:45-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "✨",
-    "text": "Timer shows what's live now, with Spawned badges on bosses that are up",
-    "ts": "2026-10-23T19:08:03-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⏰",
-    "text": "Timer adds Helbar, Rallying of Void, Redmoon Purgatory, Fury Chamber, Expedition, Domination, Clan Expedition, Clan Challenge and Server Reset",
-    "ts": "2026-10-23T19:02:51-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⏭️",
-    "text": "Timer now shows what's coming after the next event, so you can get ready",
-    "ts": "2026-10-23T18:23:03-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⏰",
-    "text": "New Timer card: next boss and event countdown (World boss, Bicheon Heist, Valley War, Castle Siege, Magic Square and more), pick your server region",
-    "ts": "2026-10-23T18:19:07-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🎨",
-    "text": "New Home Screen app icon",
-    "ts": "2026-10-23T17:56:54-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "📱",
-    "text": "iPhone Home Screen app: alert banners and a fixed alert sound",
-    "ts": "2026-10-23T17:50:40-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "💵",
-    "text": "Newly listed boxes now show just the $ price",
-    "ts": "2026-10-23T17:35:47-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🔧",
-    "text": "Fixed: character pages always show full details, even with filters on",
-    "ts": "2026-10-23T17:32:19-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🎯",
-    "text": "Filters+ now shows a Matches list right under the form",
-    "ts": "2026-10-23T17:23:12-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "✨",
-    "text": "Top 10 now shows the 2 newest 650k+ listings instead of feature boxes",
-    "ts": "2026-10-23T17:15:15-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🔧",
-    "text": "Fixed: refreshing no longer reopens the last character page",
-    "ts": "2026-10-23T17:06:30-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🏆",
-    "text": "New Top by class page: top Taoist, Arbalist, Warrior & Lancer with class filter",
-    "ts": "2026-10-23T15:35:06-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "👀",
-    "text": "Watchlist: tap a name to open the character, class pictures, and Listed now on the right",
-    "ts": "2026-10-23T13:11:29-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⭐",
-    "text": "Top 10 now shows the site's 4 best features instead of the long explanation",
-    "ts": "2026-10-23T13:04:00-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🔥",
-    "text": "Price drop tags now show the dollar change with a fire icon in green; price increases show in red",
-    "ts": "2026-10-23T12:43:21-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "📊",
-    "text": "Header status line is now simple gold icons with numbers",
-    "ts": "2026-10-23T12:31:04-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🎯",
-    "text": "Stat chips on character pages now use XDRACO's in-game stat icons",
-    "ts": "2026-10-23T12:24:47-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🕘",
-    "text": "Character pages now show a History card: when they were first seen, every relist, price change, delist and sale",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "📅",
-    "text": "Times now say Today and Yesterday in the feed and history",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⚡",
-    "text": "Feed 48h shows only characters with 650k+ power, for both listed and sold",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "👆",
-    "text": "Tap a name in Feed 48h to open that character's page",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🐉",
-    "text": "Yellow Dragon Wayfarer event added (Oct 25 to Nov 8)",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "💎",
-    "text": "Magic stones with full stats, sold characters included",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🛡",
-    "text": "Sold characters' gear shows in two rows, like live listings",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🎯",
-    "text": "Spirit and gear tier badges are XDRACO style with centered numbers",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "⚔",
-    "text": "Gear icons in XDRACO style, in two rows: weapon and armor, then accessories",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🏆",
-    "text": "New front page: Top 10 strongest with class pictures, tap one to open its page",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-23",
-    "emoji": "🔎",
-    "text": "Search also finds sold characters, tap one for its full saved details",
-    "ts": "2026-10-23T12:24:39-07:00"
-  },
-  {
-    "date": "2026-10-22",
-    "emoji": "🛠",
-    "text": "Maintenance window shown (market lock 5:30 PM PT)"
-  },
-  {
-    "date": "2026-10-22",
-    "emoji": "💱",
-    "text": "WEMIX price tag shows the change since 5 AM PT"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "📈",
-    "text": "Trends: monthly sold prices by power band"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "⚖",
-    "text": "Compare two characters slot by slot"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "💲",
-    "text": "Value per dollar ranking and badge"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "🧰",
-    "text": "Pro tools: advanced filters, watchlist, sold prices by class, 48h feed"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "🔁",
-    "text": "Relist and price cut tracker with badges"
-  },
-  {
-    "date": "2026-10-21",
-    "emoji": "🎒",
-    "text": "Conquest, Training and Bag shown as pictures"
-  },
-  {
-    "date": "2026-10-20",
-    "emoji": "🧮",
-    "text": "Smarter fair value using more of each build"
-  },
-  {
-    "date": "2026-10-20",
-    "emoji": "💪",
-    "text": "Build score and STRONG badge"
-  },
-  {
-    "date": "2026-10-20",
-    "emoji": "🔔",
-    "text": "Leaderboards, deal alerts and $25k budget filter"
-  },
-  {
-    "date": "2026-10-20",
-    "emoji": "📊",
-    "text": "Full stat sheet with Gear, Spirits, Skills and Stats tabs"
-  },
-  {
-    "date": "2026-10-20",
-    "emoji": "🚀",
-    "text": "MIR4 deal finder launched"
-  }
+ {
+  "date": "2026-11-18",
+  "emoji": "🔱",
+  "text": "New Lancer 500-600k preset on Browse, also as a shareable link (?preset=lancer500). You can filter any class by min and max power. The list ranks by strength first (build score, then ATK, skill damage, power), and still shows price vs fair, with DEAL at 15%+ under fair. A going-rate note shows recent sold medians for this Lancer band since Oct 20. Stale and relist flags are on the cards as usual. Listings from 500k power are now included in the 30-minute refresh.",
+  "ts": "2026-11-18T05:45:00-08:00"
+ },
+ {
+  "date": "2026-11-12",
+  "emoji": "🏯",
+  "text": "Top power rows now show each player's clan. Tap the clan name to see members we know in that clan, with power, class and server. The list only includes players who appear in our daily rankings (the global top 1000 or that server's top 100).",
+  "ts": "2026-11-12T11:30:25-08:00"
+ },
+ {
+  "date": "2026-11-10",
+  "emoji": "✨",
+  "text": "Times now follow Pacific daylight saving, so the header clock matches real Pacific time. STALE and NEW no longer appear together; a current listing from the last 24 hours shows only NEW. If no Top deal is under fair, we show the closest to fair under $25k and label it that way. Home has a best-under-$25k strip for Taoist, Arbalist, Warrior and Lancer. Character details add similar listings, a per-stat comparison with sold comps, and an extractable bag estimate (labeled as an estimate, with the method shown). Watchlist can alert you on this phone, with no sign-in, for new listings and price cuts in classes you pick under your budget. The Arbalist class guide now includes sourced PvP notes from Item Level Gaming (Sep 2022) and mir4db, and says when no source gives a combo or leveling order.",
+  "ts": "2026-11-10T16:59:20-08:00"
+ },
+ {
+  "date": "2026-11-10",
+  "emoji": "🐉",
+  "text": "The Top power tab now uses the same spirit as the Top power title. The Top by class link uses the same spirit as the Top by class title.",
+  "ts": "2026-11-10T02:48:02-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "✨",
+  "text": "Spirit art is now bigger and themed, with forward-facing spirits in the header, Top 20, Top power, Class guide, and more. Hold and swipe on the WEMIX price history chart to see the price at each time.",
+  "ts": "2026-11-09T17:54:07-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "🐉",
+  "text": "Cute spirit icons now show in the header and Top sections (Top 20 strongest and Top power). Tap the WEMIX price at the top to open its price history.",
+  "ts": "2026-11-09T17:19:02-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "🚀",
+  "text": "Fastest growing now only ranks characters who stayed in the top 100 by power on every tracked day in the window (per server when a server is picked). Server tags stay tappable.",
+  "ts": "2026-11-09T11:45:00-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "🖥",
+  "text": "Server tags on characters in the Power tool are now tappable. Tap one to open Top power ranked for that server.",
+  "ts": "2026-11-09T11:42:00-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "🏆",
+  "text": "Top power ranks for characters now use the same gold circle badges as the class lists (plain numbers, no hash). Applies to All servers, per-server, and Fastest growing.",
+  "ts": "2026-11-09T11:30:00-08:00"
+ },
+ {
+  "date": "2026-11-09",
+  "emoji": "🏆",
+  "text": "Top power now shows the top 100 characters and adds a server picker so you can rank within one server (All servers is still the default). Same deck swap handling as before.",
+  "ts": "2026-11-09T11:20:00-08:00"
+ },
+ {
+  "date": "2026-11-03",
+  "emoji": "🪙",
+  "text": "The WEMIX price at the top now shows 4 decimals and updates live every minute while the page is open. Dollar prices for listings still use the price from the last data update, so every figure stays consistent.",
+  "ts": "2026-11-03T10:30:00-08:00"
+ },
+ {
+  "date": "2026-11-02",
+  "emoji": "🏆",
+  "text": "Power tool now opens with a Top power leaderboard, with Fastest growing one tap away. Charts show each character's highest power and date. Sudden power drops are marked as deck swaps (EXP spirit and magic stone setups) and no longer count as losses or inflate growth.",
+  "ts": "2026-11-02T04:30:00-08:00"
+ },
+ {
+  "date": "2026-10-31",
+  "emoji": "📖",
+  "text": "Class guide polish: Darkist skills now show damage and summaries, Arbalist skills have short summaries, and the Debuff guide adds Burn, Darkness, Marker, Freeze, Silence, Blind and Stun plus Bash values for every class.",
+  "ts": "2026-10-31T09:00:00-07:00"
+ },
+ {
+  "date": "2026-10-31",
+  "emoji": "🔑",
+  "text": "Class guide upgrade: 68 skills now list their key effects by tier, like stun and debuff removal, immunities, knockdown, freeze, heals, revives and buff durations. Guardian Circle now shows it removes party Stun from Tier 8.",
+  "ts": "2026-10-31T08:30:00-07:00"
+ },
+ {
+  "date": "2026-10-31",
+  "emoji": "📘",
+  "text": "New Class guide in Tools: every skill for all six classes with its icon, type, cooldown and full in-game description, plus a PvP combo and a skill leveling priority for each class, with links to the sources.",
+  "ts": "2026-10-31T06:00:00-07:00"
+ },
+ {
+  "date": "2026-10-29",
+  "emoji": "🔎",
+  "text": "Power now saves every server's top 100 each day, not only the global top 1000. Power search ignores decorative symbols and reads lookalike letters as normal ones, so typing Archer finds ・Archєr・. When nothing matches, it says No match yet.",
+  "ts": "2026-10-29T10:15:00-07:00"
+ },
+ {
+  "date": "2026-10-29",
+  "emoji": "⚡",
+  "text": "New Power tool: search any character to see its power score over time, from the daily global top 1000 ranking and our marketplace records. Character pages show a Power progression chart when we have two or more points. A Fastest growing list for the last 7 and 30 days starts once we have two days of rankings.",
+  "ts": "2026-10-29T10:00:00-07:00"
+ },
+ {
+  "date": "2026-10-29",
+  "emoji": "👛",
+  "text": "Character pages now have an Owners list: the wallets that held that character over time, from public WEMIX chain records, with what they paid and sold for. Each wallet shows the character name it usually used, which is a guess and not who owns it. Tap a wallet to see every character it held.",
+  "ts": "2026-10-29T05:30:00-07:00"
+ },
+ {
+  "date": "2026-10-29",
+  "emoji": "🏷️",
+  "text": "Character pages now have a Past names section listing every name we know for that character, newest first, with the date and the sold price. Feed shows current names too, with the old name in small text. Old sales are only linked to a character when the sale is on that character's own WEMIX record.",
+  "ts": "2026-10-29T05:00:00-07:00"
+ },
+ {
+  "date": "2026-10-29",
+  "emoji": "🔙",
+  "text": "Price history now shows each character's current name, with the old name in small text when it was renamed. Back from a character page now returns you to the page you opened it from, like Price history or Feed, instead of the home page.",
+  "ts": "2026-10-29T04:00:00-07:00"
+ },
+ {
+  "date": "2026-10-28",
+  "emoji": "🗂️",
+  "text": "Older sold characters now open a full page from Price history and search, with gear, skills, spirits and magic stones. These details were fetched after the sale, so the page says they may differ from when it sold. New sales that sell before a snapshot is saved get their details fetched automatically.",
+  "ts": "2026-10-28T21:05:00-07:00"
+ },
+ {
+  "date": "2026-10-28",
+  "emoji": "🔗",
+  "text": "Sold characters now have a Share button at the top of their page, and a shared link to a sold character opens its saved page. Open on XDRACO at the bottom of character pages is no longer hidden under the bottom menu, so it opens on phones.",
+  "ts": "2026-10-28T18:20:00-07:00"
+ },
+ {
+  "date": "2026-10-27",
+  "emoji": "⏰",
+  "text": "Timer: World boss rows now name the Abaddon map, so Tuesday's Nerkan shows as Nerkan · Black Flame Abaddon (portal on Redmoon Valley 4F). Turkan, Krukan and Utukan show Violet, Shackling and Crimson Abaddon.",
+  "ts": "2026-10-27T19:05:00-07:00"
+ },
+ {
+  "date": "2026-10-27",
+  "emoji": "🛠️",
+  "text": "Magic Stones: identical stones on the same characters no longer share one set of stats. Each equipped stone now shows its own substats, read from the character's own inventory on XDRACO.",
+  "ts": "2026-10-27T16:59:00-07:00"
+ },
+ {
+  "date": "2026-10-27",
+  "emoji": "🛠️",
+  "text": "Magic Stones on character pages now show the deck the character has equipped in game, in slot order, with each stone's stats read from its own item detail. Tier II stones use the right scale, and the +N on a stone is labeled as its Trance step.",
+  "ts": "2026-10-27T16:08:00-07:00"
+ },
+ {
+  "date": "2026-10-27",
+  "emoji": "🛠️",
+  "text": "Feed 36h now shows characters pulled from the market next to sold ones. A gold Sold or magenta Pulled tag shows how each one left, with the last price and time, and a 🏆 badge marks characters that were in the Top 20 strongest when they left.",
+  "ts": "2026-10-27T15:30:00-07:00"
+ },
+ {
+  "date": "2026-10-27",
+  "emoji": "🛠️",
+  "text": "Closing a character opened from Home puts you back at the same scroll spot, so a Top 20 row like #15 stays in view. Works with Back, Close, and returning from another tab.",
+  "ts": "2026-10-27T04:20:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🛠️",
+  "text": "Home Top strongest is now the Top 20, so every MIR4 class can show up (Darkist was sitting just outside the old Top 10). Class chips on that list cover all six classes and wrap on a phone. Browse and price-trend filters always keep Warrior, Sorcerer, Taoist, Arbalist, Lancer and Darkist.",
+  "ts": "2026-10-26T21:15:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🛠️",
+  "text": "Top by class now lists all six MIR4 classes (Warrior, Sorcerer, Taoist, Arbalist, Lancer, Darkist) with chips and Top 3 sections. Empty classes show a short note instead of vanishing, and the chips wrap on a phone so nothing slides sideways.",
+  "ts": "2026-10-26T21:05:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🛠️",
+  "text": "Price history resets when you Close and open it again, so you are not stuck on the last character. A Back to search control also returns you to the list while you stay in the tool.",
+  "ts": "2026-10-26T19:35:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🛠️",
+  "text": "Top deal now shows how many dollars a character is under fair value, picking the best under-fair ask under $25k. Price history is steadier on phones: no sideways slide, Close stays reachable, and coming back from XDRACO no longer leaves you stuck.",
+  "ts": "2026-10-26T19:29:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🧹",
+  "text": "Cleanup across the site: character details now open only on XDRACO, Home no longer repeats the Top deal in Newly listed, Feed 36h is listings only with a link to Price history, and icons, price-cut sashes and price-down labels are clearer.",
+  "ts": "2026-10-26T18:53:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🕘",
+  "text": "Character details are tidier: the price chart now sits at the top of the History tab with one History list below it. In Price history, characters without saved details link to XDRACO instead, and Back returns you to the tool with your pick kept.",
+  "ts": "2026-10-26T16:26:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🏆",
+  "text": "Price history now opens with the Top 3 strongest sold characters of all time by power score at sale, with class, server, price in W and USD, and date. Typos now always suggest the 3 closest characters with their class icon and last price.",
+  "ts": "2026-10-26T15:45:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🔎",
+  "text": "Price history search is more forgiving: it now covers all tracked characters, ignores case, accents and symbols like 丨 or ツ, matches ø as o, and suggests the closest names when you make a typo.",
+  "ts": "2026-10-26T15:36:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "📈",
+  "text": "New Price history tool in the Tools menu: search characters by current or old name, for sale or sold, and see their price line and full listing and sale history.",
+  "ts": "2026-10-26T15:25:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "📌",
+  "text": "Character details now keep the name, portrait, price, class and power pinned at the top while you scroll, so screenshots of characters always show who they are and what they cost.",
+  "ts": "2026-10-26T15:24:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🏰",
+  "text": "Cleaner Conquest and Training tiles on character details: the label now sits under the icon, the grid is evenly spaced, and the summary line uses the site's gold icons.",
+  "ts": "2026-10-26T15:05:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🎒",
+  "text": "Removed the Bag section from character details and Compare. Conquest and Training stay; use Open on XDRACO for the full bag.",
+  "ts": "2026-10-26T15:00:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🕘",
+  "text": "The History tab in character details now shows the full record (listings, relists, price cuts, sales and renames), the same as the History box.",
+  "ts": "2026-10-26T14:55:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "⭐",
+  "text": "Ultimate skills are now the same size as other skills, marked with a gold star. The star is explained under Skills.",
+  "ts": "2026-10-26T14:54:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🧩",
+  "text": "Character details now show Gear, Spirits and Skills together, one under the other. Stones, Stats, Value and History stay as tabs below.",
+  "ts": "2026-10-26T14:50:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🪪",
+  "text": "Renamed characters: History shows a sold character's current name (Now known as) and the names it had before (Formerly), with one joined timeline. Search finds characters by their old or new name.",
+  "ts": "2026-10-26T14:45:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "👆",
+  "text": "Tapping a character name in Feed 36h or Watchlist now opens that character's details.",
+  "ts": "2026-10-26T14:40:00-07:00"
+ },
+ {
+  "date": "2026-10-26",
+  "emoji": "🕘",
+  "text": "Full history for characters: History now shows every listing, relist, delist, sale and wallet move from the public WEMIX chain record, back to the day each character became an NFT. The price chart, listing age and History now agree. Older rows are in a collapsed Older records section.",
+  "ts": "2026-10-26T13:20:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "🧹",
+  "text": "Simpler site: removed the Extras tabs (Deals, Events, Leaders, Trends, Upgrade, Guide), the monthly sold price chart and the top-up countdown. Characters, Top 10, Browse, Feed 36h and Watchlist work as before.",
+  "ts": "2026-10-25T11:59:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "🔕",
+  "text": "Removed the Alerts tool. Use Watchlist and Feed 36h to follow characters and price changes.",
+  "ts": "2026-10-25T11:47:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "🏆",
+  "text": "Deal of the day is now Top deal right now: every hour we check for a better deal among characters under $25k and switch only if one is found. The share button is also smaller.",
+  "ts": "2026-10-25T11:02:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "📈",
+  "text": "Easier to read price history: the price now and how much it dropped sit on top, each price change gets its own space with its price, and markers no longer overlap.",
+  "ts": "2026-10-25T08:12:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "💜",
+  "text": "The share icon on characters is now lavender, so it stands apart from the gold watch star.",
+  "ts": "2026-10-25T08:08:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "📈",
+  "text": "Character details now show a price history chart with the first listing, relists, price cuts and the price now.",
+  "ts": "2026-10-25T08:01:00-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "🏆",
+  "text": "New Deal of the day at the top of Home: the best buy under $25k, with a fresh pick every midnight Pacific time.",
+  "ts": "2026-10-25T08:00:30-07:00"
+ },
+ {
+  "date": "2026-10-25",
+  "emoji": "🔗",
+  "text": "Share any character: tap the share icon to copy or send a link that opens the site on that character.",
+  "ts": "2026-10-25T08:00:00-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🕰️",
+  "text": "Characters now show their real first-listed age, even if they were listed before our tracker started, with a tag-clock icon and a pink ↻ for the latest relist.",
+  "ts": "2026-10-24T23:20:00-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "⚔️",
+  "text": "Timer: countdowns now read like a clock, and Altar of Darkness, the Black Dragon field boss and the Battlefield bosses were added. Clan Challenge was removed.",
+  "ts": "2026-10-24T23:19:00-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "💰",
+  "text": "Sold prices and the price trend chart now sit at the bottom of Feed 36h.",
+  "ts": "2026-10-24T22:53:46-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🔎",
+  "text": "Icons and badges now explains every icon, including the ↻ relisted marker and the Today summary chips.",
+  "ts": "2026-10-24T22:53:46-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📈",
+  "text": "Sold prices now has a weekly price trend chart by class and power, with a rising, falling or flat note.",
+  "ts": "2026-10-24T22:41:03-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "⚡",
+  "text": "Faster repeat visits, and the site now opens offline with the last data it saw.",
+  "ts": "2026-10-24T21:20:10-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📰",
+  "text": "Feed 36h now lets you pick the power cutoff, so you can see sales under 650k.",
+  "ts": "2026-10-24T18:39:06-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🔎",
+  "text": "Browse now starts empty until you pick a filter or search, with For sale now and Recently sold sections.",
+  "ts": "2026-10-24T18:36:22-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏷️",
+  "text": "Browse now shows recently sold characters XDRACO hides, with the sold price and date.",
+  "ts": "2026-10-24T18:27:48-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📱",
+  "text": "Sold prices is back to pictures only and now fits fully on your phone.",
+  "ts": "2026-10-24T18:13:51-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏷️",
+  "text": "Sold prices now shows a short class name under each picture.",
+  "ts": "2026-10-24T18:07:11-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📊",
+  "text": "Sold prices now fits your phone with no sideways swipe, with short icons for changes and a legend.",
+  "ts": "2026-10-24T18:05:49-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "💪",
+  "text": "The STRONG badge icon is now dark plum so it stands out on the gold.",
+  "ts": "2026-10-24T17:56:25-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🔎",
+  "text": "New Icons and badges guide in How this works, Send feedback on every page, times on What's new, and the feedback thank-you screen fits iPhone.",
+  "ts": "2026-10-24T17:51:07-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🔧",
+  "text": "Feedback sign-in fixed on iPhone: Google now opens in a popup.",
+  "ts": "2026-10-24T17:16:32-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "💬",
+  "text": "Send feedback: sign in with Google from More or the button on Home, and tell us your ideas or bugs.",
+  "ts": "2026-10-24T17:10:37-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📖",
+  "text": "How this works now opens on its own, with no character cards underneath, and the More tab stays lit while it's open.",
+  "ts": "2026-10-24T16:20:24-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🧭",
+  "text": "Close and Back now take you to the top of Home, and the Home, Tools and More bar is on every page, including Top by class and What's new.",
+  "ts": "2026-10-24T16:01:08-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📖",
+  "text": "How this works is now easy to read: short tap-to-open sections with plain bullets, and the icon credit line at the bottom is gone.",
+  "ts": "2026-10-24T15:56:22-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏠",
+  "text": "Tapping Home on a character page now takes you back to Home, and opening a tool closes the character page first.",
+  "ts": "2026-10-24T15:48:47-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "📱",
+  "text": "On iPhone the tab bar and menus now sit above the home line, so the last item isn't squeezed and taps at the bottom work.",
+  "ts": "2026-10-24T15:39:36-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏷️",
+  "text": "Filters+ matches on Home now say where they came from and show your active filters as small chips, with an Edit button.",
+  "ts": "2026-10-24T15:35:16-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🎯",
+  "text": "Filters+ matches on Home are now simple Top 10-style rows that show only the stats you searched for. Tap a row to open the full page.",
+  "ts": "2026-10-24T15:33:25-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🧹",
+  "text": "Tidier menu: swipe down to close sheets, tools open on their own, one Browse item, no duplicate links, gold badges instead of green, centered STRONG pill, and Feed now covers 36 hours.",
+  "ts": "2026-10-24T15:27:14-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🧰",
+  "text": "Bottom tabs are now Home, Tools and More with new minimal icons. Tools lists every feature (Browse, Timer, Filters+, Alerts, Watchlist, Sold prices, Feed 48h, Top by class) so the page stays tidy.",
+  "ts": "2026-10-24T15:16:08-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🧭",
+  "text": "New bottom tab bar (Top, Browse, More) tidies up the page. Sort, class and info options now live in the Browse and More sheets.",
+  "ts": "2026-10-24T15:04:39-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "➡️",
+  "text": "Newly listed autoscroll slowed to 3 pixels a second.",
+  "ts": "2026-10-24T14:52:26-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "➡️",
+  "text": "Newly listed autoscroll is slower and uses a smoother glide on phones.",
+  "ts": "2026-10-24T14:51:24-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "➡️",
+  "text": "Newly listed autoscroll is now half as fast and glides smoothly on phones.",
+  "ts": "2026-10-24T14:50:15-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "➡️",
+  "text": "Newly listed now scrolls slowly by itself and pauses while you touch or swipe it.",
+  "ts": "2026-10-24T14:48:13-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏷️",
+  "text": "Relisted characters with a price cut now show the old price crossed out on a slim corner ribbon in Newly listed.",
+  "ts": "2026-10-24T14:44:15-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏆",
+  "text": "Top by class rank numbers now match the gold-ringed Top 10 circles.",
+  "ts": "2026-10-24T13:48:48-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🏆",
+  "text": "Top 10 rank numbers now sit in small gold-ringed circles that are easier to see.",
+  "ts": "2026-10-24T13:46:10-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "⚖️",
+  "text": "Compare now works from Top 10 character pages: tap Compare on two characters, then Compare in the bottom bar.",
+  "ts": "2026-10-24T13:37:54-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "👉",
+  "text": "Newly listed 650k+ now swipes sideways through the last 7 days, with a small price-cut mark on relisted characters.",
+  "ts": "2026-10-24T10:52:06-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🔢",
+  "text": "Top 10 shows a small rank number on each photo. Stale and Cutting badges are smaller.",
+  "ts": "2026-10-24T10:42:24-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🕰",
+  "text": "Every card now shows how long the character has been listed. New badges: ⚡ FRESH (under 24h and already 10%+ under fair, act fast), 🕰 STALE (7+ days on the market, seller may cut or take an offer) and ✂️ CUTTING (price cut 2+ times). Fair values now follow the last 14 days of sales (shown as \"market -7% vs model\"), so % under is more realistic. New sort and filters by listing age.",
+  "ts": "2026-10-24T10:20:45-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🌸",
+  "text": "Top by class and What's new pages now match the magenta theme. Falling petals removed.",
+  "ts": "2026-10-24T07:52:26-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🌸",
+  "text": "New dark magenta theme with a banner wallpaper, glowing cards, gold accents and drifting petals.",
+  "ts": "2026-10-24T07:46:33-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🎨",
+  "text": "New app icon: an anime MIR4 spirit summoner in deep magenta, searching with a magnifying glass.",
+  "ts": "2026-10-24T07:40:15-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "🎨",
+  "text": "New anime-style app icon: a MIR4 warrior searching with a magnifying glass.",
+  "ts": "2026-10-24T06:50:18-07:00"
+ },
+ {
+  "date": "2026-10-24",
+  "emoji": "⏰",
+  "text": "Timer is now its own fold-out section in the features list.",
+  "ts": "2026-10-24T06:50:18-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "✂️",
+  "text": "Removed Clan Expedition from the Timer",
+  "ts": "2026-10-23T19:11:45-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "✨",
+  "text": "Timer shows what's live now, with Spawned badges on bosses that are up",
+  "ts": "2026-10-23T19:08:03-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⏰",
+  "text": "Timer adds Helbar, Rallying of Void, Redmoon Purgatory, Fury Chamber, Expedition, Domination, Clan Expedition, Clan Challenge and Server Reset",
+  "ts": "2026-10-23T19:02:51-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⏭️",
+  "text": "Timer now shows what's coming after the next event, so you can get ready",
+  "ts": "2026-10-23T18:23:03-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⏰",
+  "text": "New Timer card: next boss and event countdown (World boss, Bicheon Heist, Valley War, Castle Siege, Magic Square and more), pick your server region",
+  "ts": "2026-10-23T18:19:07-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🎨",
+  "text": "New Home Screen app icon",
+  "ts": "2026-10-23T17:56:54-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "📱",
+  "text": "iPhone Home Screen app: alert banners and a fixed alert sound",
+  "ts": "2026-10-23T17:50:40-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "💵",
+  "text": "Newly listed boxes now show just the $ price",
+  "ts": "2026-10-23T17:35:47-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🔧",
+  "text": "Fixed: character pages always show full details, even with filters on",
+  "ts": "2026-10-23T17:32:19-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🎯",
+  "text": "Filters+ now shows a Matches list right under the form",
+  "ts": "2026-10-23T17:23:12-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "✨",
+  "text": "Top 10 now shows the 2 newest 650k+ listings instead of feature boxes",
+  "ts": "2026-10-23T17:15:15-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🔧",
+  "text": "Fixed: refreshing no longer reopens the last character page",
+  "ts": "2026-10-23T17:06:30-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🏆",
+  "text": "New Top by class page: top Taoist, Arbalist, Warrior & Lancer with class filter",
+  "ts": "2026-10-23T15:35:06-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "👀",
+  "text": "Watchlist: tap a name to open the character, class pictures, and Listed now on the right",
+  "ts": "2026-10-23T13:11:29-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⭐",
+  "text": "Top 10 now shows the site's 4 best features instead of the long explanation",
+  "ts": "2026-10-23T13:04:00-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🔥",
+  "text": "Price drop tags now show the dollar change with a fire icon in green; price increases show in red",
+  "ts": "2026-10-23T12:43:21-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "📊",
+  "text": "Header status line is now simple gold icons with numbers",
+  "ts": "2026-10-23T12:31:04-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🎯",
+  "text": "Stat chips on character pages now use XDRACO's in-game stat icons",
+  "ts": "2026-10-23T12:24:47-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🕘",
+  "text": "Character pages now show a History card: when they were first seen, every relist, price change, delist and sale",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "📅",
+  "text": "Times now say Today and Yesterday in the feed and history",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⚡",
+  "text": "Feed 48h shows only characters with 650k+ power, for both listed and sold",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "👆",
+  "text": "Tap a name in Feed 48h to open that character's page",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🐉",
+  "text": "Yellow Dragon Wayfarer event added (Oct 25 to Nov 8)",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "💎",
+  "text": "Magic stones with full stats, sold characters included",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🛡",
+  "text": "Sold characters' gear shows in two rows, like live listings",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🎯",
+  "text": "Spirit and gear tier badges are XDRACO style with centered numbers",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "⚔",
+  "text": "Gear icons in XDRACO style, in two rows: weapon and armor, then accessories",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🏆",
+  "text": "New front page: Top 10 strongest with class pictures, tap one to open its page",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-23",
+  "emoji": "🔎",
+  "text": "Search also finds sold characters, tap one for its full saved details",
+  "ts": "2026-10-23T12:24:39-07:00"
+ },
+ {
+  "date": "2026-10-22",
+  "emoji": "🛠",
+  "text": "Maintenance window shown (market lock 5:30 PM PT)"
+ },
+ {
+  "date": "2026-10-22",
+  "emoji": "💱",
+  "text": "WEMIX price tag shows the change since 5 AM PT"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "📈",
+  "text": "Trends: monthly sold prices by power band"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "⚖",
+  "text": "Compare two characters slot by slot"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "💲",
+  "text": "Value per dollar ranking and badge"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "🧰",
+  "text": "Pro tools: advanced filters, watchlist, sold prices by class, 48h feed"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "🔁",
+  "text": "Relist and price cut tracker with badges"
+ },
+ {
+  "date": "2026-10-21",
+  "emoji": "🎒",
+  "text": "Conquest, Training and Bag shown as pictures"
+ },
+ {
+  "date": "2026-10-20",
+  "emoji": "🧮",
+  "text": "Smarter fair value using more of each build"
+ },
+ {
+  "date": "2026-10-20",
+  "emoji": "💪",
+  "text": "Build score and STRONG badge"
+ },
+ {
+  "date": "2026-10-20",
+  "emoji": "🔔",
+  "text": "Leaderboards, deal alerts and $25k budget filter"
+ },
+ {
+  "date": "2026-10-20",
+  "emoji": "📊",
+  "text": "Full stat sheet with Gear, Spirits, Skills and Stats tabs"
+ },
+ {
+  "date": "2026-10-20",
+  "emoji": "🚀",
+  "text": "MIR4 deal finder launched"
+ }
 ]
