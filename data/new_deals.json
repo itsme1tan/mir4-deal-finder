@@ -1,20 +1,7 @@
 {
- "updated": "2026-11-19 11:19",
+ "updated": "2026-11-19 13:43",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
- "deals": [
-  {
-   "id": 2374982,
-   "name": "7K5CrTEVa",
-   "cls": "Warrior",
-   "ps": 635426,
-   "build_score": 88,
-   "usd": 2790,
-   "fair_usd": 2849,
-   "pct_under": 2.0,
-   "usd_under": 58,
-   "link": "https://nft.hofgamer.com/mir4/nft/2374982"
-  }
- ]
+ "deals": []
 }
