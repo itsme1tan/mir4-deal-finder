@@ -1,7 +1,20 @@
 {
- "updated": "2026-11-20 07:48",
+ "updated": "2026-11-20 08:28",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
- "deals": []
+ "deals": [
+  {
+   "id": 2375157,
+   "name": "sarigaa",
+   "cls": "Arbalist",
+   "ps": 727629,
+   "build_score": 99,
+   "usd": 6371,
+   "fair_usd": 6723,
+   "pct_under": 5.2,
+   "usd_under": 352,
+   "link": "https://nft.hofgamer.com/mir4/nft/2375157"
+  }
+ ]
 }
