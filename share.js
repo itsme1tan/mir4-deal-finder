@@ -180,13 +180,13 @@ function budget4(){const CLASSES=['Taoist','Arbalist','Warrior','Lancer'];
  let o=document.getElementById('bgt4');
  if(!o){o=document.createElement('div');o.id='bgt4';const d=document.getElementById('dotd');(d||document.getElementById('t20')).after(o)}
  const cells=CLASSES.map(cls=>{
-  const L=(D.listings||[]).filter(y=>y.cls===cls&&y.usd<25000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a)||a.usd-b.usd);
+  const L=(D.listings||[]).filter(y=>y.cls===cls&&y.usd<2000&&y.discount!=null&&y.build_score!=null).sort((a,b)=>b.discount-a.discount||bb(b)-bb(a)||a.usd-b.usd);
   const x=L[0];
-  if(!x)return `<div class="bgc empty"><img src="icons/class/${cls.toLowerCase()}.webp" alt="" width="36" height="36"><div class="bgm"><div class="bgn">${cls}</div><div class="bge">None under $25k</div></div></div>`;
+  if(!x)return `<div class="bgc empty"><img src="icons/class/${cls.toLowerCase()}.webp" alt="" width="36" height="36"><div class="bgm"><div class="bgn">${cls}</div><div class="bge">None under $2,000</div></div></div>`;
   const vs=x.discount>0?`<span class="pos">${x.discount}% under</span>`:x.discount===0?`<span class="pos">at fair</span>`:`<span class="neg">${Math.abs(x.discount)}% over</span>`;
   return `<div class="bgc" data-id="${x.id}" role="button" tabindex="0"><img src="icons/class/${cls.toLowerCase()}.webp" alt="" width="36" height="36"><div class="bgm"><div class="bgn">${cls}</div><div class="bgx">${x.name}</div><div class="bgp">$${fm(x.usd)} · ${vs}</div></div></div>`;
  }).join('');
- o.innerHTML=`<div class="bgh"><span>Best under $25k</span><small>Taoist, Arbalist, Warrior and Lancer</small></div><div class="bgg">${cells}</div><div class="dlg">One closest-to-fair listing under $25k per class. Tap to open the character.</div>`;
+ o.innerHTML=`<div class="bgh"><span>Best under $2,000</span><small>Taoist, Arbalist, Warrior and Lancer</small></div><div class="bgg">${cells}</div><div class="dlg">One closest-to-fair listing under $2,000 per class. Tap to open the character.</div>`;
  o.querySelectorAll('.bgc[data-id]').forEach(el=>{el.onclick=()=>T20.solo(el.dataset.id,D.listings)})}
 ready(()=>{dotd();budget4();inject();openShared()});
 })();
