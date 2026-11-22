@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22 07:47",
+ "updated": "2026-11-22 09:29",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -9,9 +9,9 @@
    "name": "Sieghart メ",
    "cls": "Warrior",
    "ps": 569451,
-   "build_score": 73,
-   "usd": 1006,
-   "fair_usd": 1072,
+   "build_score": 72,
+   "usd": 1005,
+   "fair_usd": 1071,
    "pct_under": 6.1,
    "usd_under": 66,
    "link": "https://nft.hofgamer.com/mir4/nft/2375416"
