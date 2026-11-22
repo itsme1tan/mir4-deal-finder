@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 23:35",
+ "updated": "2026-11-21 23:52",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -22,7 +22,7 @@
    "cls": "Lancer",
    "ps": 592496,
    "build_score": 72,
-   "usd": 1661,
+   "usd": 1660,
    "fair_usd": 1832,
    "pct_under": 9.4,
    "usd_under": 172,
