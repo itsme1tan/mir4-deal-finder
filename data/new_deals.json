@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 16:27",
+ "updated": "2026-11-21 19:12",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,11 +10,23 @@
    "cls": "Warrior",
    "ps": 569451,
    "build_score": 73,
-   "usd": 1005,
-   "fair_usd": 1069,
+   "usd": 997,
+   "fair_usd": 1060,
    "pct_under": 5.9,
-   "usd_under": 63,
+   "usd_under": 62,
    "link": "https://nft.hofgamer.com/mir4/nft/2375416"
+  },
+  {
+   "id": 2375432,
+   "name": "weirdflex",
+   "cls": "Lancer",
+   "ps": 592496,
+   "build_score": 72,
+   "usd": 1662,
+   "fair_usd": 1834,
+   "pct_under": 9.4,
+   "usd_under": 172,
+   "link": "https://nft.hofgamer.com/mir4/nft/2375432"
   }
  ]
 }
