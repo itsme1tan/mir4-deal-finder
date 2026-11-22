@@ -4,7 +4,7 @@ const BASE='https://itsme1tan.github.io/mir4-deal-finder/';
 const fm=n=>n==null?'–':Number(n).toLocaleString(undefined,{maximumFractionDigits:0});
 const key=x=>x.name+'|'+(x.server||'')+'|'+x.cls;
 const IC=n=>`<i class="ico" style="--i:url(icons/ui/${n}.svg)"></i>`;
-const ready=f=>{const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings&&document.getElementById('t20')){clearInterval(t);f()}},150)};
+const ready=f=>{const t=setInterval(()=>{if(typeof D!='undefined'&&D&&D.listings&&document.getElementById('t20')&&window.T20){clearInterval(t);f()}},150)};
 document.head.insertAdjacentHTML('beforeend',`<style>
 .shb{position:relative;display:inline-flex;align-items:center;justify-content:center;width:20px;height:18px;margin-left:6px;align-self:center;padding:0;border:1px solid #c9a7ff;border-radius:999px;background:rgba(201,167,255,.10);color:#d9c4ff;cursor:pointer;vertical-align:middle;flex:none}
 .shb .ico{width:10px;height:10px;background:#d9c4ff}.shb::before{content:'';position:absolute;inset:-5px}
@@ -99,11 +99,21 @@ const C=new URLSearchParams(location.search).get('c');
 function bar(){if(document.getElementById('shbar'))return;const b=document.createElement('div');b.id='shbar';b.innerHTML='<span>🔗 Shared character</span><button>See all deals</button>';document.body.prepend(b);
  b.querySelector('button').onclick=()=>{history.replaceState(null,'',location.pathname);b.remove();document.getElementById('shmsg')?.remove();const s=document.getElementById('sback');if(s&&document.getElementById('solo')?.classList.contains('on'))s.click();scrollTo(0,0)}}
 function glow(el){if(!el)return;el.scrollIntoView({block:'center'});el.classList.remove('shglow');void el.offsetWidth;el.classList.add('shglow')}
-function openShared(){if(!C)return;bar();const x=D.listings.find(y=>y.id==C);
+function qParam(){const qs=new URLSearchParams(location.search),hp=new URLSearchParams((location.hash||'').replace(/^#/,'').replace(/;/g,'&'));return qs.get('q')||hp.get('q')}
+function pickNamed(q,L){q=(q||'').trim().toLowerCase();if(!q||!L)return null;const hay=x=>(x.name+(x.server||'')+(window.FH&&FH.alias?FH.alias(x):'')).toLowerCase();const exact=L.filter(x=>(x.name||'').toLowerCase()===q);const pool=exact.length?exact:L.filter(x=>hay(x).includes(q));if(!pool.length)return null;return pool.slice().sort((a,b)=>{const as=(a.name||'').toLowerCase().startsWith(q)?0:1,bs=(b.name||'').toLowerCase().startsWith(q)?0:1;if(as!=bs)return as-bs;const ad=a.discount,bd=b.discount;if(ad!=null&&bd!=null&&ad!=bd)return bd-ad;return (a.usd||0)-(b.usd||0)})[0]}
+function openNamed(q){const x=pickNamed(q,D.listings||[]);document.body.classList.remove('simple');document.body.dataset.nv='ctl';
+ if(x){T20.solo(x.id,D.listings);setTimeout(()=>{const c=document.querySelector('#solo .card');if(c){c.classList.add('shglow');c.scrollIntoView({block:'start'})}},100);return}
+ const s=pickNamed(q,D.sales||[]);if(s&&window.soloSold){fetch('data/snaps/'+s.id+'.json',{method:'HEAD'}).then(r=>{if(r.ok)soloSold(s.id,s.name)}).catch(()=>{})}
+ const m=document.createElement('div');m.id='shmsg';
+ m.innerHTML=s?`🏷️ <b>${s.name}</b> (${s.cls}, ${fm(s.ps/1000)}k power) sold for ${fm(s.wemix)} WEMIX (~$${fm(s.wemix*D.wemix_usd)}). Here are today's best deals.`:'No character matching that name is listed right now. Here are today\'s best deals.';
+ document.getElementById('dotd')?document.getElementById('dotd').before(m):document.getElementById('t20').before(m)}
+function openShared(){if(C){
+bar();const x=D.listings.find(y=>y.id==C);
  if(x){const r=document.querySelector(`.tr20[data-id="${C}"]`);if(r){glow(r);return}T20.solo(C,D.listings);setTimeout(()=>{const c=document.querySelector('#solo .card');c&&c.classList.add('shglow')},100);return}
  const s=(D.sales||[]).find(y=>y.id==C);if(window.soloSold){fetch('data/snaps/'+C+'.json',{method:'HEAD'}).then(r=>{if(r.ok)soloSold(C,s?s.name:'')}).catch(()=>{})}const m=document.createElement('div');m.id='shmsg';
  m.innerHTML=s?`🏷️ <b>${s.name}</b> (${s.cls}, ${fm(s.ps/1000)}k power) sold for ${fm(s.wemix)} WEMIX (~$${fm(s.wemix*D.wemix_usd)}). Here are today's best deals.`:'This character is no longer listed. Here are today\'s best deals.';
- document.getElementById('dotd')?document.getElementById('dotd').before(m):document.getElementById('t20').before(m)}
+ document.getElementById('dotd')?document.getElementById('dotd').before(m):document.getElementById('t20').before(m);return}
+ const q=qParam();if(q)openNamed(q)}
 // ---------- deal of the day ----------
 const ptDay=t=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles'}).format(t);
 const bb=y=>y.build_score+1.5*y.discount;

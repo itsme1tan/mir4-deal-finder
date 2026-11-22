@@ -1,6 +1,12 @@
 [
  {
   "date": "2026-11-21",
+  "emoji": "🔗",
+  "text": "Tapping a deal-alert link with a character name now opens that character's card on phone and desktop. Name links no longer hide characters under the default 600k min power.",
+  "ts": "2026-11-21T20:50:13-08:00"
+ },
+ {
+  "date": "2026-11-21",
   "emoji": "💰",
   "text": "The home Best under box is now Best under $2,000 for Taoist, Arbalist, Warrior and Lancer. Top deal, Top 20, Similar listings, the Max $ filter, and deal alerts stay at $25k.",
   "ts": "2026-11-21T05:52:00-08:00"
