@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 19:46",
+ "updated": "2026-11-21 20:21",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -11,7 +11,7 @@
    "ps": 569451,
    "build_score": 73,
    "usd": 998,
-   "fair_usd": 1060,
+   "fair_usd": 1061,
    "pct_under": 5.9,
    "usd_under": 63,
    "link": "https://nft.hofgamer.com/mir4/nft/2375416"
@@ -22,8 +22,8 @@
    "cls": "Lancer",
    "ps": 592496,
    "build_score": 72,
-   "usd": 1663,
-   "fair_usd": 1835,
+   "usd": 1664,
+   "fair_usd": 1836,
    "pct_under": 9.4,
    "usd_under": 172,
    "link": "https://nft.hofgamer.com/mir4/nft/2375432"
