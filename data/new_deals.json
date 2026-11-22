@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22 09:29",
+ "updated": "2026-11-22 10:31",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,10 +10,10 @@
    "cls": "Warrior",
    "ps": 569451,
    "build_score": 72,
-   "usd": 1005,
-   "fair_usd": 1071,
+   "usd": 1002,
+   "fair_usd": 1067,
    "pct_under": 6.1,
-   "usd_under": 66,
+   "usd_under": 65,
    "link": "https://nft.hofgamer.com/mir4/nft/2375416"
   }
  ]
