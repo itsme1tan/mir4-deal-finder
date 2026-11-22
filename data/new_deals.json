@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21 20:21",
+ "updated": "2026-11-21 20:56",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,10 +10,10 @@
    "cls": "Warrior",
    "ps": 569451,
    "build_score": 73,
-   "usd": 998,
-   "fair_usd": 1061,
+   "usd": 989,
+   "fair_usd": 1051,
    "pct_under": 5.9,
-   "usd_under": 63,
+   "usd_under": 62,
    "link": "https://nft.hofgamer.com/mir4/nft/2375416"
   },
   {
@@ -22,10 +22,10 @@
    "cls": "Lancer",
    "ps": 592496,
    "build_score": 72,
-   "usd": 1664,
-   "fair_usd": 1836,
+   "usd": 1649,
+   "fair_usd": 1819,
    "pct_under": 9.4,
-   "usd_under": 172,
+   "usd_under": 170,
    "link": "https://nft.hofgamer.com/mir4/nft/2375432"
   }
  ]
