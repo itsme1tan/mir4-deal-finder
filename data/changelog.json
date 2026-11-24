@@ -1,5 +1,11 @@
 [
  {
+  "date": "2026-11-24",
+  "emoji": "💵",
+  "text": "Browse has a price range filter. Set Min $ and Max $ in USD or WEMIX, or tap Under $1k, $1k-5k, $5k-10k or $10k-25k. Tap the active chip to clear it. It works with the other filters and can be shared in a link.",
+  "ts": "2026-11-24T15:05:12-08:00"
+ },
+ {
   "date": "2026-11-21",
   "emoji": "🔗",
   "text": "Tapping a deal-alert link with a character name now opens that character's card on phone and desktop. Name links no longer hide characters under the default 600k min power.",
