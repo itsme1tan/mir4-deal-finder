@@ -1,7 +1,20 @@
 {
- "updated": "2026-11-25 09:24",
+ "updated": "2026-11-25 14:01",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
- "deals": []
+ "deals": [
+  {
+   "id": 2376012,
+   "name": "18k8at1808cd",
+   "cls": "Arbalist",
+   "ps": 605080,
+   "build_score": 71,
+   "usd": 1830,
+   "fair_usd": 1831,
+   "pct_under": 0.1,
+   "usd_under": 2,
+   "link": "https://nft.hofgamer.com/mir4/nft/2376012"
+  }
+ ]
 }
