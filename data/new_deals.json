@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 15:29",
+ "updated": "2026-11-27 15:50",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,11 +10,23 @@
    "cls": "Arbalist",
    "ps": 736792,
    "build_score": 98,
-   "usd": 7709,
-   "fair_usd": 7767,
+   "usd": 7707,
+   "fair_usd": 7765,
    "pct_under": 0.7,
    "usd_under": 58,
    "link": "https://nft.hofgamer.com/mir4/nft/2376276"
+  },
+  {
+   "id": 2376329,
+   "name": "ALLATTACKAcu",
+   "cls": "Darkist",
+   "ps": 628564,
+   "build_score": 81,
+   "usd": 2151,
+   "fair_usd": 2192,
+   "pct_under": 1.9,
+   "usd_under": 41,
+   "link": "https://nft.hofgamer.com/mir4/nft/2376329"
   }
  ]
 }
