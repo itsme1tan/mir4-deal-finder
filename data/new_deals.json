@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 14:25",
+ "updated": "2026-11-27 15:29",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -9,9 +9,9 @@
    "name": "夜沐小楼花听语",
    "cls": "Arbalist",
    "ps": 736792,
-   "build_score": 99,
-   "usd": 7695,
-   "fair_usd": 7753,
+   "build_score": 98,
+   "usd": 7709,
+   "fair_usd": 7767,
    "pct_under": 0.7,
    "usd_under": 58,
    "link": "https://nft.hofgamer.com/mir4/nft/2376276"
