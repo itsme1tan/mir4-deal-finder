@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 18:09",
+ "updated": "2026-11-27 18:39",
  "first_run": false,
  "budget_usd": 25000,
  "rule": "first seen in the last 24 hours, build score in top 20% of class, price at or under fair, at most $25000",
@@ -10,8 +10,8 @@
    "cls": "Arbalist",
    "ps": 736792,
    "build_score": 98,
-   "usd": 7719,
-   "fair_usd": 7778,
+   "usd": 7692,
+   "fair_usd": 7750,
    "pct_under": 0.7,
    "usd_under": 58,
    "link": "https://nft.hofgamer.com/mir4/nft/2376276"
@@ -22,8 +22,8 @@
    "cls": "Darkist",
    "ps": 628564,
    "build_score": 81,
-   "usd": 2155,
-   "fair_usd": 2196,
+   "usd": 2147,
+   "fair_usd": 2188,
    "pct_under": 1.9,
    "usd_under": 41,
    "link": "https://nft.hofgamer.com/mir4/nft/2376329"
